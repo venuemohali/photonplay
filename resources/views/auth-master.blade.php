@@ -7,25 +7,25 @@
     <meta name="author" content="_____Name_____">
     <link rel="icon" href="{{ asset('assets/logo/fav.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('assets/logo/fav.png') }}" type="image/x-icon">
-     <title>Welcome to Insurance - @yield('title')</title>
+     <title>Welcome to Photon play @yield('title')</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
-    
-    
+
+
     @include('layouts.css')
 
     {{-- toastr --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    @yield('style') 
+    @yield('style')
   </head>
   <body>
     <!-- login page start-->
-    @yield('content')  
+    @yield('content')
     <!-- latest jquery-->
-    @include('layouts.script') 
-    
-   
+    @include('layouts.script')
+
+
     @if ( session('failed'))
       <script>
         $(document).ready(function(){
@@ -42,8 +42,8 @@
       </script>
     @endif
 
-    
-    
+
+
     {{-- toastr --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   </body>
