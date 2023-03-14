@@ -34,15 +34,21 @@ return [
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
         'redirect'      => env('FACEBOOK_URL'),
     ],
-'twitter' => [
+    'twitter' => [
         'client_id'     => env('TWITTER_CLIENT_ID'),
         'client_secret' => env('TWITTER_CLIENT_SECRET'),
         'redirect'      => env('TWITTER_URL'),
     ],
-'google' => [
-        'client_id'     => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect'      => env('GOOGLE_URL'),
+    // 'google' => [
+    //         'client_id'     => env('GOOGLE_CLIENT_ID'),
+    //         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+    //         'redirect'      => env('GOOGLE_URL'),
+    //     ],
+
+    'google' => [
+        'client_id' => '446921002126-h3p69igef097s523te8sq8h7djiduhkc.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://localhost:8000/google/callback',
     ],
 
 ];
