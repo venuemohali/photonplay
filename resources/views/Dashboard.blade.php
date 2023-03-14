@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Welcome To Our Laravel Template')
+@section('title', 'Welcome To Photon Play')
 
 @section('css')
 
