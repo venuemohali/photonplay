@@ -11,13 +11,13 @@
 @endsection
 
 @section('breadcrumb-title')
-    <h3>{{Request::is('add-employee') ? 'Add':'Edit'}} Employee</h3>
+    <h3>{{Request::is('add-employee') ? 'Add':'Edit'}} User</h3>
 @endsection
 
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
     <li class="breadcrumb-item">Settings</li>
-    <li class="breadcrumb-item active">{{Request::is('add-employee') ? 'Add':'Edit'}} Employee</li>
+    <li class="breadcrumb-item active">{{Request::is('add-employee') ? 'Add':'Edit'}} User</li>
 @endsection
 
 @section('content')
@@ -26,11 +26,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>{{Request::is('add-employee') ? 'Add':'Edit'}} Employee Details</h5>
+                    <h5>{{Request::is('add-employee') ? 'Add':'Edit'}} User Details</h5>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ url('insert-employee') }}">
+                    <form method="POST" action="{{ url('admin/insert-employee') }}">
                         @csrf
                         @method('PUT')
                         <input type="hidden" name="id" value="{{ $employee->id ?? ''}}">
@@ -74,7 +74,7 @@
                         <div class="password_box">
                             <div class="row mb-3 form-group">
                                 <label for="password" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Password') }}</label>
-    
+
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') ?? $employee->show_password ?? ''}}" autocomplete="off">
@@ -87,10 +87,10 @@
                                     @enderror
                                 </div>
                             </div>
-    
+
                             <div class="row mb-3 form-group">
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Confirm Password') }}</label>
-    
+
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <input id="password-confirm" type="password" class="form-control" name="confirm_password" value="{{ old('confirm_password') ?? $employee->show_password ?? ''}}" autocomplete="off">
@@ -103,20 +103,7 @@
                                     @enderror
                                 </div>
                             </div>
-                        </div>  
-                        @if (Auth::user()->role_as == 'Admin')
-                        <div class="role_box">
-                            <div class="row mb-3 form-group">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-end"><span>* </span>User Role</label>
-                                <div class="col-md-6">
-                                    <select class="form-control" name="role_as" id="role">
-                                        <option selected disabled>Please Select...</option>
-                                        <option value="User" {{ (old('role_as') ?? $employee->role_as ?? '') == 'User' ? 'selected':''}}>User</option>
-                                    </select>
-                                </div>
-                            </div>
                         </div>
-                        @endif
                         {{-- <div class="row mb-3 form-group">
                             <label class="col-md-4 col-form-label text-md-end"><span>* </span> Status</label>
                             <div class="col-md-6 m-checkbox-inline radio-animated d-flex align-items-end">
@@ -132,7 +119,7 @@
                                 </label>
                             </div>
                         </div> --}}
-                 
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -166,6 +153,6 @@
             $(this).html('Hide');
         }
     });
-   
+
 </script>
 @endsection

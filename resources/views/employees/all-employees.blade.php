@@ -3,14 +3,14 @@
 @section('title', 'Manage Employees')
 
 @section('css')
-   
+
 @endsection
 
 @section('style')
 @endsection
 
 @section('breadcrumb-title')
-    <h3>Manage Employees</h3>
+    <h3>Manage Users</h3>
 @endsection
 
 @section('breadcrumb-items')
@@ -21,15 +21,15 @@
 @section('content')
     <div class="container-fluid">
 
-        
+
 
         <!-- All Client Table Start -->
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex">
-                    <h5 class="card-title">All Employees</h5>
-                    <a href="{{ url('add-employee')}}" class="btn btn-primary ms-auto">Add Employee</a>
+                    <h5 class="card-title">All Users</h5>
+                    <a href="{{ url('admin/add-employee')}}" class="btn btn-primary ms-auto">Add User</a>
                 </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
@@ -50,20 +50,12 @@
                                         <td>{{$Sr++}}</td>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->email }}</td>
-                                        <td>{{$item->users->name ?? ''}}</td>
-                                        {{-- <td>
-                                            <span class="text-success {{$item->status != 1 ? 'd-none':''}}">
-                                                <i data-feather="check-circle"></i>
-                                            </span>
-                                            <span class="text-danger {{$item->status != 0 ? 'd-none':''}}">
-                                                <i data-feather="x-circle"></i>
-                                            </span>
-                                        </td> --}}
+                                        <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                         <td>
-                                            <a href="{{ url('edit-employee/'.$item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                            <a href="{{ url('admin/edit-employee/'.$item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                 <i data-feather="edit"></i>
                                             </a>
-                                            
+
                                             <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
                                                 <i data-feather="trash-2"></i>
                                             </a>
@@ -80,7 +72,7 @@
                                                     confirmButtonText: 'Yes, delete it!'
                                                     }).then((result) => {
                                                     if (result.isConfirmed) {
-                                                        window.location.href = "{{ url('delete-employee/'.$item->id)}}";
+                                                        window.location.href = "{{ url('admin/delete-employee/'.$item->id)}}";
                                                     }
                                                     });
                                                 });
@@ -98,7 +90,7 @@
         </div>
         <!-- All Client Table End -->
 
-       
+
 
 
 
@@ -108,5 +100,5 @@
     @endsection
 
     @section('script')
-   
+
     @endsection

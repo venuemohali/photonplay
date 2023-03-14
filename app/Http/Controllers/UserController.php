@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $employee = User::whereIn('role_as', ['User'])->get();
+        $employee = Customer::get();
         $Sr = 1;
         return view('employees.all-employees', compact('employee','Sr'));
     }
@@ -24,7 +25,7 @@ class UserController extends Controller
 
     public function edit_employee($id){
 
-        $employee = User::find($id);
+        $employee = Customer::find($id);
         return view('employees.add_edit-employee', compact('employee'));
     }
 
@@ -32,37 +33,34 @@ class UserController extends Controller
         $request->validate([
             'name'=>'required',
             'email'=>'required|email|unique:users,email,'.$request->id,
-            'role_as'=>'required',
-            'password' => 'required|min:8',
-            'confirm_password' => 'required_with:password|same:password|min:8',
+            'password' => 'required|min:6',
+            'confirm_password' => 'required_with:password|same:password|min:6',
         ]);
 
-        if($employee = User::find($request->id)){
+        if($employee = Customer::find($request->id)){
             $employee->name = $request->name;
             $employee->email = $request->email;
             $employee->password = Hash::make($request->password);
-            $employee->role_as = $request->role_as;
             $employee->created_by = Auth::user()->id;
             $employee->update();
-            return redirect('/manage-employees')->with('status','Employee Update Successfully');
+            return redirect('admin/manage-employees')->with('status','Employee Update Successfully');
         }else{
-            $employee = New User;
+            $employee = New Customer;
             $employee->name = $request->name;
             $employee->email = $request->email;
             $employee->password = Hash::make($request->password);
-            $employee->role_as = $request->role_as;
             $employee->created_by = Auth::user()->id;
             $employee->save();
-            return redirect('/manage-employees')->with('status','Employee Added Successfully');
+            return redirect('admin/manage-employees')->with('status','Employee Added Successfully');
         }
     }
 
-    
+
 
     public function delete_employee($id)
     {
-        $employee = User::find($id);
+        $employee = Customer::find($id);
         $employee->delete();
-        return redirect('/manage-employees')->with('status','Employee Deleted Successfully');
+        return redirect('admin/manage-employees')->with('status','Employee Deleted Successfully');
     }
 }

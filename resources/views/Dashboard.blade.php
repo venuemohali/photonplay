@@ -3,11 +3,11 @@
 @section('title', 'Welcome To Our Laravel Template')
 
 @section('css')
-   
+
 @endsection
 
 @section('style')
-    
+
 @endsection
 
 @section('breadcrumb-title')
@@ -29,7 +29,7 @@
                         <div class="media static-top-widget">
                             <div class="align-self-center text-center"><i data-feather="user"></i></div>
                             <div class="media-body">
-                                <span class="m-0">Total Clients</span>
+                                <span class="m-0">Total Users</span>
                                 <h4 class="mb-0 counter">6659</h4>
                                 <i class="icon-bg" data-feather="users"></i>
                             </div>
@@ -43,7 +43,7 @@
                         <div class="media static-top-widget">
                             <div class="align-self-center text-center"><i data-feather="user-check"></i></div>
                             <div class="media-body">
-                                <span class="m-0">Return Completed</span>
+                                <span class="m-0">Categories</span>
                                 <h4 class="mb-0 counter">6000</h4>
                                 <i class="icon-bg" data-feather="user-check"></i>
                             </div>
@@ -57,7 +57,7 @@
                         <div class="media static-top-widget">
                             <div class="align-self-center text-center"><i data-feather="edit-3"></i></div>
                             <div class="media-body">
-                                <span class="m-0">Return Pendings</span>
+                                <span class="m-0">Products</span>
                                 <h4 class="mb-0 counter">600</h4>
                                 <i class="icon-bg" data-feather="edit-3"></i>
                             </div>
@@ -71,7 +71,7 @@
                         <div class="media static-top-widget">
                             <div class="align-self-center text-center"><i data-feather="user-x"></i></div>
                             <div class="media-body">
-                                <span class="m-0">Return Cancelled</span>
+                                <span class="m-0">Orders</span>
                                 <h4 class="mb-0 counter">59</h4>
                                 <i class="icon-bg" data-feather="user-x"></i>
                             </div>
@@ -87,24 +87,22 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">All Customer</h5>
+                        <h5 class="card-title">All Orders</h5>
                         <div class="table-responsive">
                             <div class="dt-ext table-responsive">
                                 <table class="display" id="basic-2">
                                     <thead>
                                         <tr>
                                             <th class="all">#</th>
+                                            <th class="all">Order ID</th>
                                             <th class="all">Name</th>
                                             <th class="desktop tablet">Email</th>
-                                            <th class="desktop">Phone Number</th>
-                                            <th class="desktop">Address</th>
-                                            <th class="desktop tablet">Progress</th>
-                                            <th class="desktop">Status</th>
+                                            <th class="desktop tablet">Status</th>
                                             <th class="all">Options</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                      
+
                                     </tbody>
                                 </table>
                             </div>
@@ -114,7 +112,7 @@
             </div>
         </div>
 
-   
+
 
         <script type="text/javascript">
             var session_layout = '{{ session()->get('layout') }}';

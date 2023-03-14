@@ -46,6 +46,7 @@ Route::group(['as'=>'customer.', 'namespace' => 'App\Http\Controllers\customer\A
     Route::post('register', 'LoginController@register')->name('register');
     Route::get('social-login/google', 'SocialLoginController@redirectToGoogle');
     Route::get('google/callback','SocialLoginController@handleGoogleCallback');
+    Route::post('forgot-password', 'PasswordController@forgotPassword');
 
     Route::group(['middleware' => 'customerCheck'], function () {
         Route::get('dashboard', function() {

@@ -26,18 +26,70 @@
                         </a>
                     </li>
                     @if(Auth::user()->role_as == 'Admin')
-                    <li class="sidebar-main-title">
-                        <div>
-                            <h6>Settings</h6>
-                            {{-- <p>API & Slides </p> --}}
-                        </div>
-                    </li>
+
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{Request::is('manage-employees','edit-employee*','add-employee') ? 'active':''}}" href="{{ url('admin/manage-employees') }}">
                             <i data-feather="users"></i>
-                            <span>Manage Employees</span>
+                            <span>Manage Users</span>
                         </a>
                     </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="categories"></i>
+                            <span>Manage Categories</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="products"></i>
+                            <span>Manage Products</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="orders"></i>
+                            <span>Manage Orders</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="payment"></i>
+                            <span>Payment</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="cms"></i>
+                            <span>CMS</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="email_templates"></i>
+                            <span>Email Templates</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="settings"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav ">
+                            <i data-feather="db_backup"></i>
+                            <span>DB Backup</span>
+                        </a>
+                    </li>
+
                     @endif
 
 
