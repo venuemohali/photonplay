@@ -36,42 +36,42 @@
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="categories"></i>
+                            <i data-feather="trello"> </i>
                             <span>Manage Categories</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="products"></i>
+                            <i data-feather="shopping-bag"></i>
                             <span>Manage Products</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="orders"></i>
+                            <i data-feather="shopping-cart"></i>
                             <span>Manage Orders</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="payment"></i>
+                            <i data-feather="dollar-sign"> </i>
                             <span>Payment</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="cms"></i>
+                            <i data-feather="file-minus"></i>
                             <span>CMS</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="email_templates"></i>
+                            <i data-feather="mail"></i>
                             <span>Email Templates</span>
                         </a>
                     </li>
@@ -85,7 +85,7 @@
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="db_backup"></i>
+                            <i data-feather="database"></i>
                             <span>DB Backup</span>
                         </a>
                     </li>
