@@ -1,6 +1,8 @@
 <?php
 
 // use App\Http\Controllers\customer\Auth\LoginController;
+use App\Http\Controllers\DBBackupController;
+use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeadController;
@@ -30,12 +32,19 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
     // ___________________________ Admin Route ____________________________
     Route::group(['middleware' => ['auth', 'is_Admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
         // manage-employees
         Route::get('manage-employees', [UserController::class, 'index']);
         Route::get('/delete-employee/{id}', [UserController::class, 'delete_employee']);
         Route::get('/add-employee', [UserController::class, 'add_employee']);
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
+
+        // db-backups
+        Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');
+        Route::get('/db-backup', [DBBackupController::class, 'db_backup_page'])->name('dbbackupform');
+        Route::get('/settings', [SettingsController::class, 'setting_home_page'])->name('setting-home-page');
+        Route::post('/settings', [SettingsController::class, 'store'])->name('store_setting_data');
     });
 });
 

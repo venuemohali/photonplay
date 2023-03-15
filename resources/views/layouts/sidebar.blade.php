@@ -77,17 +77,17 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav ">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('settings','settings') ? 'active':''}}" href="{{route('admin.setting-home-page') }}">
                             <i data-feather="settings"></i>
                             <span>Settings</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav ">
-                            <i data-feather="database"></i>
-                            <span>DB Backup</span>
-                        </a>
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('db-backup','db-backup') ? 'active':''}}" href="{{route('admin.dbbackupform') }}">
+                                <i data-feather="database"></i>
+                                <span>DB Backup</span>
+                            </a>
                     </li>
 
                     @endif
