@@ -2,6 +2,7 @@
 
 // use App\Http\Controllers\customer\Auth\LoginController;
 use App\Http\Controllers\DBBackupController;
+use App\Http\Controllers\Guest\HomePageController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -60,9 +61,12 @@ Route::group(['as'=>'customer.', 'namespace' => 'App\Http\Controllers\customer\A
     Route::post('forgot-password', 'PasswordController@forgotPassword')->name('forgot_password');
     Route::post('change-password', 'PasswordController@changePassword')->name('change_password');
 
+//    Route::get('/', [HomePageController::class,'index'])->name('homepage');
+
     Route::group(['middleware' => 'customerCheck'], function () {
         Route::get('dashboard', function() {
             dd(Auth::guard('customer')->user());
         })->name('dashboard');
     });
 });
+
