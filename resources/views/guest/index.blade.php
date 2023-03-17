@@ -119,7 +119,7 @@
             <h2 class="text-center pt-4"><b>Talk to our VMS Experts</b></h2>
             <p class="text-center">Contact our team of expert to suggest you the best product for your ITS project</p>
             <div class="row justify-content-center mt-4">
-                <div class="col-md-8 col-lg-7">
+                <div class="phpatrom col-md-8 col-lg-7">
                     <form class="text-left row" method="POST" id="query" novalidate="true">
                         <div class="col-md-6">
                             <span>Company Name / Organization </span>

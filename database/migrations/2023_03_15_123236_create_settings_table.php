@@ -15,6 +15,7 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('type')->nullable()->default(1);
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('sales_email',100)->nullable();
