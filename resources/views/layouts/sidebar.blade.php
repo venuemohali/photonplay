@@ -63,10 +63,17 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav ">
+
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('cms-home','cms-home') ? 'active':''}}" href="{{route('admin.cmshomepage') }}">
                             <i data-feather="file-minus"></i>
                             <span>CMS</span>
                         </a>
+
+                        <a class="sidebar-link sidebar-title link-nav ">
+
+                        </a>
+
+
                     </li>
 
                     <li class="sidebar-list">

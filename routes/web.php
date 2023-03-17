@@ -1,6 +1,8 @@
 <?php
 
 // use App\Http\Controllers\customer\Auth\LoginController;
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
 use App\Http\Controllers\SettingsController;
@@ -41,9 +43,16 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
+        //cms
+          Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
+        //blogs
+          Route::resource('blog-categories', BlogCategoryController::class);
+
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');
         Route::get('/db-backup', [DBBackupController::class, 'db_backup_page'])->name('dbbackupform');
+
+        //settings
         Route::get('/settings', [SettingsController::class, 'setting_home_page'])->name('setting-home-page');
         Route::post('/settings', [SettingsController::class, 'store'])->name('store_setting_data');
     });
