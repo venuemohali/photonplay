@@ -48,12 +48,13 @@ class PasswordController extends Controller
     }
 
     public function resetPassword($token){
-        $user = DB::table('password_resets')->where('token', $token)->first();
-        if ($user) {
-            $email = $user->email;
-            return view('customer.auth.change_password_form', compact('email'));
-        }
-        return redirect()->route('forgot-password')->with('failed', 'Password reset link is expired');
+        // $user = DB::table('password_resets')->where('token', $token)->first();
+        // if ($user) {
+        //     $email = $user->email;
+            // return view('customer.auth.change_password_form', compact('email'));
+            return view('customer.auth.change_password_form');
+        // }
+        // return redirect()->route('forgot-password')->with('failed', 'Password reset link is expired');
     }
 
     public function changePassword(Request $request){
