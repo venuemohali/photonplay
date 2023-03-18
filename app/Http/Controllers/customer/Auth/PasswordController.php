@@ -43,11 +43,12 @@ class PasswordController extends Controller
             'created_at' => now(),
         ];
         ResetPasswordJob::dispatch($data);
-
-        return back()->with('message', 'We have e-mailed your password reset link!');
+        notify()->success('We have e-mailed your password reset link!');
+        return back();
     }
 
-    public function resetPassword($token){
+    public function resetPassword($token)
+    {
         $user = DB::table('password_resets')->where('token', $token)->first();
         if ($user) {
             $email = $user->email;
@@ -56,11 +57,12 @@ class PasswordController extends Controller
         return redirect()->route('forgot-password')->with('failed', 'Password reset link is expired');
     }
 
-    public function changePassword(Request $request){
+    public function changePassword(Request $request)
+    {
         $request->validate([
             'email' => 'required',
             'password' => 'required|min:6',
-            'confirm_password' => 'required|same:password|min:6'            
+            'confirm_password' => 'required|same:password|min:6'
         ]);
         $user = Customer::where('email', $request->email)->first();
 
@@ -69,8 +71,10 @@ class PasswordController extends Controller
             $user->save();
 
             DB::table('password_resets')->where('email', $request->email)->delete();
-            return redirect()->route('customer.login')->with('success', 'Success! password has been changed');
+            notify()->success('Success! password has been changed');
+            return redirect('/');
         }
-        return redirect()->route('forgot-password')->with('failed', 'Failed! something went wrong');
+        notify()->success('Failed! something went wrong');
+        return redirect()->route('forgot-password');
     }
 }

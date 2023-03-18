@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -36,13 +36,14 @@ class LoginController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (!Auth::guard('customer')->attempt($credentials)) {
-            return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+            // return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+            notify()->error('Email or Password doesnt match');
+            return redirect("/");
         }
 
         Session::put('user', Auth::guard('customer')->user());
-            return redirect()->intended('dashboard');
-            // ->withSuccess('You have Successfully loggedin');
-
+        notify()->success('Login Successfully');
+        return redirect()->intended('dashboard');
     }
 
     public function registerForm()
@@ -57,14 +58,15 @@ class LoginController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
-
+        
         Customer::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('customer.loginForm')->withSuccess('Great! You have Successfully loggedin');
+        notify()->success('Your account has been registered successfully');
+        return redirect()->route('customer.loginForm');
     }
 
     public function redirect($provider)
@@ -79,7 +81,7 @@ class LoginController extends Controller
             Auth::login($users);
             return redirect('/');
         } else {
-            $user = User::create([
+            $user = Customer::create([
                 'name'          => $userSocial->getName(),
                 'email'         => $userSocial->getEmail(),
                 'image'         => $userSocial->getAvatar(),

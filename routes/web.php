@@ -59,7 +59,7 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
 });
 
 Route::group(['as'=>'customer.', 'namespace' => 'App\Http\Controllers\customer\Auth', ], function () {
-    Route::get('login', 'LoginController@loginForm')->name('loginForm');
+    Route::get('/', 'LoginController@loginForm')->name('loginForm');
     Route::get('register', 'LoginController@registerForm')->name('registerForm');
     Route::post('login', 'LoginController@login')->name('login');
     Route::post('register', 'LoginController@register')->name('register');
