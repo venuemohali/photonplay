@@ -16,13 +16,12 @@ class SocialLoginController extends Controller
 
     public function handleGoogleCallback(){
         try {
-
-            $user = Socialite::driver('google')->user();
+            return $user = Socialite::driver('google')->user();
             $finduser = Customer::where('provider_id', $user->id)->first();
-dd($finduser);
+
             if($finduser){
 
-                Auth::login($finduser);
+                Auth::guard('customer')->login($finduser);
 
                 return redirect()->intended('dashboard');
 
@@ -34,7 +33,7 @@ dd($finduser);
                     'provider_id'=> $user->id,
                 ]);
 
-                Auth::login($newUser);
+                Auth::guard('customer')->login($newUser);
 
                 return redirect()->intended('dashboard');
             }

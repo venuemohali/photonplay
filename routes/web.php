@@ -1,7 +1,10 @@
 <?php
 
 // use App\Http\Controllers\customer\Auth\LoginController;
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\DBBackupController;
+use App\Http\Controllers\Guest\HomePageController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -40,9 +43,16 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
+        //cms
+          Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
+        //blogs
+          Route::resource('blog-categories', BlogCategoryController::class);
+
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');
         Route::get('/db-backup', [DBBackupController::class, 'db_backup_page'])->name('dbbackupform');
+
+        //settings
         Route::get('/settings', [SettingsController::class, 'setting_home_page'])->name('setting-home-page');
         Route::post('/settings', [SettingsController::class, 'store'])->name('store_setting_data');
     });
@@ -53,12 +63,14 @@ Route::group(['as'=>'customer.', 'namespace' => 'App\Http\Controllers\customer\A
     Route::get('register', 'LoginController@registerForm')->name('registerForm');
     Route::post('login', 'LoginController@login')->name('login');
     Route::post('register', 'LoginController@register')->name('register');
-    Route::get('social-login/google', 'SocialLoginController@redirectToGoogle');
+    Route::get('social-login/google', 'SocialLoginController@redirectToGoogle')->name('social.login');
     Route::get('google/callback','SocialLoginController@handleGoogleCallback');
     Route::get('forgot-password', 'PasswordController@forepassPasswordForm');
     Route::get('reset-password/{token}', 'PasswordController@resetPassword')->name('reset_password');
     Route::post('forgot-password', 'PasswordController@forgotPassword')->name('forgot_password');
     Route::post('change-password', 'PasswordController@changePassword')->name('change_password');
+
+//    Route::get('/', [HomePageController::class,'index'])->name('homepage');
 
     Route::group(['middleware' => 'customerCheck'], function () {
         Route::get('dashboard', function() {
@@ -66,3 +78,4 @@ Route::group(['as'=>'customer.', 'namespace' => 'App\Http\Controllers\customer\A
         })->name('dashboard');
     });
 });
+

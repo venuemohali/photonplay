@@ -8,10 +8,8 @@
                     <div class="login-parent">
                         <div class="login-parent-inner">
                             <h2 class="mb-lg-5 mb-4">Enter your <br />Email</h2>
-                            <form action="{{ route('customer.change_password') }}" method="post">
+                            <form action="{{ route('customer.forgot_password') }}" method="post">
                                 @csrf
-                                <input type="hidden" name="email" >
-
                                 <label for="">Email</label>
                                 <div class="input-group input-cus-group mb-4">
                                     <input type="email" name="email" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
@@ -20,10 +18,6 @@
                                 <button class="btn btn-primary w-100">Send Verification Link</button>
                             </form>
 
-                            <div class="mt-5">
-                                <label class="d-block">have an account? <a href="#" class="text-colorr">Login here</a></label>
-                                <label class="d-block">Already have an account? <a href="#" class="text-colorr">Signup here.</a></label>
-                            </div>
                         </div>
                     </div>
                     <div class="slider d-none d-lg-block">

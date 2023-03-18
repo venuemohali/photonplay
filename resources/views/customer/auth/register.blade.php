@@ -9,6 +9,7 @@
                         <div class="login-parent-inner">    
                             <h2 class="mb-lg-5 mb-4">Create account</h2>
                             <form action="{{ route('customer.register') }}" method="post">
+                                @csrf
                                 <label for="">Name</label>
                                 <div class="input-group input-cus-group mb-4">
                                     <input type="text" name="name" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
@@ -24,13 +25,12 @@
                                         <img src="{{ asset('assets\customer\images\eye.png') }}" alt="eye"/>
                                     </span>
                                 </div>
-                                <label class="d-block mb-5"><a href="#" class="text-decoration-none text-colorr">Forgot password ?</a></label>
-                                <button class="btn btn-primary rounded py-2 w-100 mb-3 fw-normal">Register</button>
+                                <button type="submit" class="btn btn-primary rounded py-2 w-100 mb-3 fw-normal">Register</button>
                                 </form>
-                                <button class="btn btn-light rounded py-3 w-100 google-login d-flex align-items-center justify-content-center text-dark bg-white">
-                                    <img src="{{ asset('assets\customer\images\google.png') }}"> Login with google</button>
+                                <a href="{{ route('customer.social.login') }} "  class="btn btn-light rounded py-3 w-100 google-login d-flex align-items-center justify-content-center text-dark bg-white">
+                                    <img src="{{ asset('assets\customer\images\google.png') }}"> Login with google</a>
                                 <div class="mt-5 ">
-                                    <label class="d-block">Already have an account? <a href="#" class="text-colorr">Signup here.</a></label>
+                                    <label class="d-block">Already have an account? <a href="{{ route('customer.loginForm') }}" class="text-colorr">Login here.</a></label>
                                 </div>
 
                         </div>

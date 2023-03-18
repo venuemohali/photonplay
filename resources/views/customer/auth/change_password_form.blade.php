@@ -10,7 +10,7 @@
                             <h2 class="mb-lg-5 mb-4">Create new <br />password</h2>
                             <form action="{{ route('customer.change_password') }}" method="post">
                                 @csrf
-                                <input type="hidden" name="email" >
+                                <input type="hidden" name="email" value="{{$email}}">
 
                                 <label for="">New Password</label>
                                 <div class="input-group input-cus-group mb-4">
@@ -30,8 +30,7 @@
                             </form>
 
                             <div class="mt-5">
-                                <label class="d-block">have an account? <a href="#" class="text-colorr">Login here</a></label>
-                                <label class="d-block">Already have an account? <a href="#" class="text-colorr">Signup here.</a></label>
+                                <label class="d-block">have an account? <a href="{{ route('customer.loginForm') }}" class="text-colorr">Login here</a></label>
                             </div>
                         </div>
                     </div>
