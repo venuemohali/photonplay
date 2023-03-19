@@ -36,17 +36,18 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
     Route::group(['middleware' => ['auth', 'is_Admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        // manage-employees
+        // Manage-employees
         Route::get('manage-employees', [UserController::class, 'index']);
         Route::get('/delete-employee/{id}', [UserController::class, 'delete_employee']);
         Route::get('/add-employee', [UserController::class, 'add_employee']);
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
-        //cms
-          Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
+        //CMS
+        Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
+
         //blogs
-          Route::resource('blog-categories', BlogCategoryController::class);
+        Route::resource('blog-categories', BlogCategoryController::class);
 
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');
