@@ -33,15 +33,23 @@
 
                         <div class="row">
                             <div class="col-md-4 mb-3">
-                                <a href="{{url('admin/blog-categories')}}" class="btn btn-primary"> Blog Category</a>
+                                <a href="{{url('admin/blog-categories')}}" class="btn btn-primary btn-lg btn-block w-100">
+                                    <i data-feather="copy"></i>
+                                    Blog Category</a>
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="" class="btn btn-primary"> Blogs</a>
+                                <a href="{{url('admin/blogs')}}" class="btn btn-primary btn-lg btn-block w-100">
+
+                                    <i data-feather="share-2"></i>
+
+                                    Blogs</a>
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="" class="btn btn-primary"> Website Pages</a>
+                                <a href="" class="btn btn-primary btn-lg btn-block w-100">
+                                    <i data-feather="bookmark"></i>
+                                    Website Pages</a>
                             </div>
 
                         </div>

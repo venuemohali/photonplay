@@ -2,10 +2,12 @@
 
 // use App\Http\Controllers\customer\Auth\LoginController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -37,7 +39,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['middleware' => ['auth', 'is_Admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        // manage-employees
+        // Manage-Customer
+        //Here Customer === Employee (Syntax Only)
+
         Route::get('manage-employees', [UserController::class, 'index']);
         Route::get('/delete-employee/{id}', [UserController::class, 'delete_employee']);
         Route::get('/add-employee', [UserController::class, 'add_employee']);
@@ -45,9 +49,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
         //cms
-        Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
+          Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
         //blogs
-        Route::resource('blog-categories', BlogCategoryController::class);
+          Route::resource('blog-categories', BlogCategoryController::class);
 
         //categories
         Route::resource('category', CategoryController::class);
