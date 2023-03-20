@@ -39,6 +39,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['middleware' => ['auth', 'is_Admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+
+        Route::get('/edit-profile/{id}', [ProfileController::class, 'editProfileForm'])->name("edit_adminprofile_form");;
+        Route::put('/edit-profile', [ProfileController::class, 'editProfile'])->name("edit_adminprofile");
         // Manage-Customer
         //Here Customer === Employee (Syntax Only)
 
@@ -52,6 +55,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
           Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
         //blogs
           Route::resource('blog-categories', BlogCategoryController::class);
+         Route::resource('blogs', BlogsController::class);
 
         //categories
         Route::resource('category', CategoryController::class);
@@ -79,7 +83,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::post('forgot-password', 'PasswordController@forgotPassword')->name('forgot_password');
         Route::post('change-password', 'PasswordController@changePassword')->name('change_password');
     });
-    
+
 
     Route::get('radar-speed-signs', 'SignController@radarSigns');
 
