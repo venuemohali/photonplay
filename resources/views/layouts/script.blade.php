@@ -22,7 +22,7 @@
 
 @yield('script')
 
-@if(Route::current()->getName() != 'popover') 
+@if(Route::current()->getName() != 'popover')
 	<script src="{{asset('assets/js/tooltip-init.js')}}"></script>
 @endif
 
@@ -32,6 +32,9 @@
 <!-- <script src="{{asset('assets/js/theme-customizer/customizer.js')}}"></script>  -->
 
 
-{{-- @if(Route::current()->getName() == 'index') 
+{{-- @if(Route::current()->getName() == 'index')
 	<script src="{{asset('assets/js/layout-change.js')}}"></script>
 @endif --}}
+<!-- include summernote css/js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.js"></script>

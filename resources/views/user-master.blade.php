@@ -84,6 +84,9 @@
     @include('layouts.script')
     <!-- Plugin used-->
 
+
+
+
     <!-- Easy Tax Java Script -->
     <script src="{{ asset('assets/js/easy-tax.js') }}"></script>
 
@@ -105,6 +108,8 @@
             $(".sidebar-submenu").css("display", "block");
         }
     </script>
+
+
 
 </body>
 

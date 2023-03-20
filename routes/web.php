@@ -2,9 +2,11 @@
 
 // use App\Http\Controllers\customer\Auth\LoginController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -36,18 +38,26 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.'], function () {
     Route::group(['middleware' => ['auth', 'is_Admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        // Manage-employees
+        // Manage-Customer
+        //Here Customer === Employee (Syntax Only)
+
         Route::get('manage-employees', [UserController::class, 'index']);
         Route::get('/delete-employee/{id}', [UserController::class, 'delete_employee']);
         Route::get('/add-employee', [UserController::class, 'add_employee']);
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
+        Route::get('/edit-profile/{id}', [ProfileController::class, 'editProfileForm'])->name("edit_adminprofile_form");;
+        Route::put('/edit-profile', [ProfileController::class, 'editProfile'])->name("edit_adminprofile");
+
+
+
         //CMS
         Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
 
         //blogs
         Route::resource('blog-categories', BlogCategoryController::class);
+        Route::resource('blogs', BlogsController::class);
 
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');

@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="" class="btn btn-primary btn-lg btn-block w-100">
+                                <a href="{{url('admin/blogs')}}" class="btn btn-primary btn-lg btn-block w-100">
 
                                     <i data-feather="share-2"></i>
 
