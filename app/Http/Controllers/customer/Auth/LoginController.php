@@ -20,6 +20,12 @@ class LoginController extends Controller
             $this->user = Auth::guard('customer')->user();
             return $next($request);
         });
+
+        if(Session::get('user')){
+            return redirect()->route('customer.dashboard');
+        }else{
+            return redirect()->route('customer.loginForm');
+        }
     }
 
     public function loginForm()
