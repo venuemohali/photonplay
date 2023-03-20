@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Create Blog')
+@section('title', 'Edit Blog')
 
 @section('css')
 
@@ -16,7 +16,7 @@
 
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item">Blog </li>
+    <li class="breadcrumb-item">Edit Blog </li>
     {{--    <li class="breadcrumb-item active">{{Request::is('add-employee') ? 'Add':'Edit'}} User</li>--}}
 @endsection
 
@@ -26,12 +26,21 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5> New Blog  </h5>
+                        <h5> Edit Blog  </h5>
                     </div>
 
                     <div class="card-body ">
-                        <form method="POST" action="{{ url('/admin/blogs') }}"  enctype="multipart/form-data" >
+                        <div class="row mb-3 ">
+                            <div class="rounded p-1" style="width:100%;height:300px;background-color: grey;">
+                                <img src="{{url("storage/".$data->image)}}" class="img-fluid h-100 w-100 " />
+                            </div>
+
+                        </div>
+
+                        <hr/>
+                        <form method="POST" action="{{ route('admin.blogs.update',$data->id) }}"  enctype="multipart/form-data" >
                             @csrf
+                            @method("PUT")
                             <div class="row mb-3 form-group">
                                 <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Title') }}</label>
 
@@ -92,7 +101,7 @@
                                 <label for="image" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Image') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') ?? $data->image ?? ''}}" required autocomplete="image" autofocus>
+                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') ?? $data->image ?? ''}}"  autofocus>
 
                                     @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -111,9 +120,8 @@
                                     <select id="category" name="category_selected" class="form-select form-select" aria-label=".form-select-sm">
                                         <option selected disabled>--Select Category--</option>
                                         @foreach($blog_categories as $category)
-                                            <option value="{{$category->id}}">{{$category->category}}</option>
+                                            <option value="{{$category->id}}"  {{$data->blog_category_id==$category->id?"selected":" "}}>{{$category->category}}</option>
                                         @endforeach
-
                                     </select>
 
                                     @error('category_selected')

@@ -50,9 +50,11 @@
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
+                                        <i data-feather="save"> </i>
                                         Save
                                     </button>
                                     <a href="{{url('admin/blog-categories')}}" class="btn btn-dark">
+                                        <i data-feather="corner-down-right"> </i>
                                         Return Back
                                     </a>
                                 </div>
@@ -65,25 +67,4 @@
         </div>
     </div>
 
-    <script>
-        $('#eye_pass').click(function(){
-            if ($('#password').attr('type') == 'text') {
-                $('#password').attr('type', 'password');
-                $(this).html('Show');
-            } else {
-                $('#password').attr('type', 'text');
-                $(this).html('Hide');
-            }
-        });
-        $('#eye_c_pass').click(function(){
-            if ($('#password-confirm').attr('type') == 'text') {
-                $('#password-confirm').attr('type', 'password');
-                $(this).html('Show');
-            } else {
-                $('#password-confirm').attr('type', 'text');
-                $(this).html('Hide');
-            }
-        });
-
-    </script>
 @endsection
