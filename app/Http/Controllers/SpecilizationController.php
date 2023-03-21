@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Specilization;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class SpecilizationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('category.index', compact('categories'));
+        $specilizations = Specilization::all();
+        return view('specilization.index', compact('specilizations'));
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.add');
+        return view('specilization.add');
     }
 
     /**
@@ -40,11 +40,11 @@ class CategoryController extends Controller
             'title' => 'required|unique:categories'
         ]);
 
-        Category::create([
+        Specilization::create([
             'title' => $request->title,
         ]);
 
-        return redirect()->route('admin.category.index')->with('status', 'Category Successfully added');
+        return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully added');
     }
 
     /**
@@ -66,8 +66,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id)->first();
-        return view('category.edit', compact('category'));
+        $specilization = Specilization::find($id)->first();
+        return view('specilization.edit', compact('specilization'));
     }
 
     /**
@@ -79,13 +79,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
+        $specilization = Specilization::find($id);
 
-        $category->update([
+        $specilization->update([
             'title' => $request->title,
         ]);
 
-        return redirect()->route('admin.category.index')->with('status', 'Category Successfully updated');
+        return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully updated');
     }
 
     /**
@@ -98,13 +98,11 @@ class CategoryController extends Controller
     {
         //
     }
-
     public function delete($id)
     {
-        $category = Category::find($id);
+        $specilization = Specilization::find($id);
         
-        $category->delete();
-        return redirect()->route('admin.category.index')->with('status', 'Category Successfully deleted');
+        $specilization->delete();
+        return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully deleted');
     }
-    
 }

@@ -15,6 +15,7 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProspectController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SpecilizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -54,7 +55,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
           Route::resource('blog-categories', BlogCategoryController::class);
 
         //categories
+        Route::get('category/delete/{id}', [CategoryController::class, 'delete']);
         Route::resource('category', CategoryController::class);
+
+        //specilization
+        Route::get('specilization/delete/{id}', [SpecilizationController::class, 'delete']);
+        Route::resource('specilization', SpecilizationController::class);
 
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');

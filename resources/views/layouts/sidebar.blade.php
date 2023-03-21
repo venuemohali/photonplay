@@ -35,9 +35,16 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav ">
+                    <a class="sidebar-link sidebar-title link-nav {{Request::is('category') ? 'active':''}}" href="{{ url('admin/category') }}">
                             <i data-feather="trello"> </i>
                             <span>Manage Categories</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav {{Request::is('specilization') ? 'active':''}}" href="{{ url('admin/specilization') }}">
+                            <i data-feather="trello"> </i>
+                            <span>Manage Specilization</span>
                         </a>
                     </li>
 
