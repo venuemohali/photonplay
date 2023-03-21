@@ -6,6 +6,7 @@ use App\Jobs\SendEmailNotificationJob;
 use App\Models\Customer;
 use App\Models\Notification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class NotificationsController extends Controller
 {
@@ -32,7 +33,9 @@ class NotificationsController extends Controller
         //start and handle job dispatch ->onQueue('notifications')
         $job = (new SendEmailNotificationJob($record));
         dispatch($job);
-        echo "send";
+
+        Session::flash('notification_sent','1');
+        return redirect()->back();
     }
 
 

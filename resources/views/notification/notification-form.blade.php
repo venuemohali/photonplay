@@ -30,6 +30,15 @@
                     <div class="card-header">
                         <h5> New Notifications  </h5>
                     </div>
+                    @if(Session::get('notification_sent'))
+                        <script>
+                            Swal.fire(
+                                'Notifications!',
+                                'Email notifications sent!',
+                                'success'
+                            )
+                        </script>
+                    @endif
 
                     <div class="card-body ">
                         <form method="POST" action="{{ route('admin.send_email_notification') }}"  enctype="multipart/form-data" >
@@ -126,7 +135,6 @@
             });
 
         });
-
 
     </script>
 
