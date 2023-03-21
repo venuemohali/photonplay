@@ -107,6 +107,38 @@
             $(".according-menu.other").css("display", "none");
             $(".sidebar-submenu").css("display", "block");
         }
+
+
+
+        function load_emails(search){
+            $('#show_all_users').show();
+            // Define the API endpoint URL
+            const apiUrl = '{{route('admin.all_user_emails')}}';
+            let searchb=search!=undefined?search.value:'';
+            // Make an AJAX request to fetch the items
+            $.ajax({
+                url: apiUrl+"?search="+searchb,
+                dataType: 'json',
+                success: function(items) {
+                    // Populate the dropdown with the items
+                    let itm=items.emails;
+
+                    const $multiSelect = $('#selectusers_multi');
+                    $multiSelect.empty();
+                    itm.forEach(item => {
+                        $multiSelect.append(`<option value="${item.email}">${item.email}</option>`);
+                    });
+
+                },
+                error: function() {
+                    console.error('Failed to fetch emails from the API');
+
+                }
+            });
+        }
+        function remove_seleted_user(){
+            $('#show_all_users').hide();
+        }
     </script>
 
 
