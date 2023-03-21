@@ -78,6 +78,16 @@
                         </a>
                     </li>
 
+                        <li class="sidebar-list">
+
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('notifications','notifications') ? 'active':''}}" href="{{route('admin.notifications_form') }}">
+                                <i data-feather="mail"></i>
+                                <span>Notifications</span>
+                            </a>
+
+                        </li>
+
+
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{Request::is('settings','settings') ? 'active':''}}" href="{{route('admin.setting-home-page') }}">
                             <i data-feather="settings"></i>

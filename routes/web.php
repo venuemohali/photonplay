@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
+use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
@@ -67,6 +68,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         //settings
         Route::get('/settings', [SettingsController::class, 'setting_home_page'])->name('setting-home-page');
         Route::post('/settings', [SettingsController::class, 'store'])->name('store_setting_data');
+        //notifictions
+        Route::get('/notifications', [NotificationsController::class, 'notifications_form'])->name('notifications_form');
+        Route::get('/users-all-emails', [NotificationsController::class, 'user_emails'])->name('all_user_emails');
+        Route::post('/send-email-notification', [NotificationsController::class, 'send'])->name('send_email_notification');
+
+
     });
 });
 
