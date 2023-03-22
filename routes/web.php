@@ -53,6 +53,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/edit-employee/{id}', [UserController::class, 'edit_employee']);
         Route::put('/insert-employee', [UserController::class, 'insert_employee']);
 
+        require_once "admins/api.php";
+        require_once "admins/api2.php";
+
         //cms
           Route::get('/cms-home', [CMSHomeController::class, 'index'])->name('cmshomepage');
         //blogs
@@ -76,7 +79,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('/settings', [SettingsController::class, 'store'])->name('store_setting_data');
         //notifictions
         Route::get('/notifications', [NotificationsController::class, 'notifications_form'])->name('notifications_form');
-        Route::get('/users-all-emails', [NotificationsController::class, 'user_emails'])->name('all_user_emails');
+        Route::get('/customer-all-emails', [NotificationsController::class, 'user_emails'])->name('all_user_emails');
         Route::post('/send-email-notification', [NotificationsController::class, 'send'])->name('send_email_notification');
 
 
@@ -95,9 +98,12 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::get('reset-password/{token}', 'PasswordController@resetPassword')->name('reset_password');
         Route::post('forgot-password', 'PasswordController@forgotPassword')->name('forgot_password');
         Route::post('change-password', 'PasswordController@changePassword')->name('change_password');
+
+
+        require_once "customer/api.php";
+        require_once "customer/api2.php";
+
     });
-
-
     Route::get('radar-speed-signs', 'SignController@radarSigns');
 
     //    Route::get('/', [HomePageController::class,'index'])->name('homepage');

@@ -32,7 +32,7 @@ class UserController extends Controller
     public function insert_employee(Request $request){
         $request->validate([
             'name'=>'required',
-            'email'=>'required|email|unique:users,email,'.$request->id,
+            'email'=>'required|email|unique:customer,email,'.$request->id,
             'password' => 'required|min:6',
             'confirm_password' => 'required_with:password|same:password|min:6',
         ]);

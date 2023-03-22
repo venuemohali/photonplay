@@ -19,7 +19,7 @@ $(document).ready(function () {
     }
   });
 
-  // ensure default users are read on initialization
+  // ensure default customer are read on initialization
   engine.get('1090217586', '58502284', '10273252', '24477185')
 
   function engineWithDefaults(q, sync, async) {

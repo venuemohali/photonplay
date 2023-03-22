@@ -133,7 +133,7 @@
                         </li>
                         <li>
                             <a href="#!" data-original-title="" title=""> <i
-                                    data-feather="users"></i><span>Users</span></a>
+                                    data-feather="customer"></i><span>Users</span></a>
                             <ul class="header-level-sub-menu">
                                 <li>
                                     <a href="{{ url('user-profile') }}" data-original-title="" title=""> <i
@@ -235,7 +235,7 @@
                       <div class="row">
                         <div class="col-4 text-center"><i data-feather="file-text"></i></div>
                         <div class="col-4 text-center"><i data-feather="activity"></i></div>
-                        <div class="col-4 text-center"><i data-feather="users"></i></div>
+                        <div class="col-4 text-center"><i data-feather="customer"></i></div>
                         <div class="col-4 text-center"><i data-feather="clipboard"></i></div>
                         <div class="col-4 text-center"><i data-feather="anchor"></i></div>
                         <div class="col-4 text-center"><i data-feather="settings"></i></div>
