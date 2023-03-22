@@ -106,6 +106,9 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
     });
     Route::get('radar-speed-signs', 'SignController@radarSigns');
 
+    require_once "guest/api.php";
+    require_once "guest/api2.php";
+
     //    Route::get('/', [HomePageController::class,'index'])->name('homepage');
 
     Route::group(['middleware' => 'customerCheck'], function () {
