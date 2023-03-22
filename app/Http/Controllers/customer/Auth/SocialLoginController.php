@@ -20,7 +20,6 @@ class SocialLoginController extends Controller
             $finduser = Customer::where('provider_id', $user->id)->first();
 
             if($finduser){
-
                 Auth::guard('customer')->login($finduser);
 
                 return redirect()->intended('dashboard');

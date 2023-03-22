@@ -93,7 +93,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::post('login', 'LoginController@login')->name('login');
         Route::post('register', 'LoginController@register')->name('register');
         Route::get('social-login/google', 'SocialLoginController@redirectToGoogle')->name('social.login');
-        Route::get('google/callback', 'SocialLoginController@handleGoogleCallback');
+        Route::get('/google/callback', 'SocialLoginController@handleGoogleCallback');
         Route::get('forgot-password', 'PasswordController@forepassPasswordForm');
         Route::get('reset-password/{token}', 'PasswordController@resetPassword')->name('reset_password');
         Route::post('forgot-password', 'PasswordController@forgotPassword')->name('forgot_password');
