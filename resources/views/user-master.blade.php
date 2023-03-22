@@ -139,8 +139,40 @@
         function remove_seleted_user(){
             $('#show_all_users').hide();
         }
-    </script>
 
+
+//more options in sepcialization
+        function more_options(){
+            // alert("hi");
+            $('#dynamic_field').append('<div  id="row_" class="row mb-3 form-group"> <div class="col-md-12">' +
+                '<select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">'+
+            '<option selected disabled>--Option--</option>'+
+            '<option>3 Days</option>'+
+            '<option>5 Days</option>"'+
+            '</select>'+
+                '</div>');
+        }
+
+
+    </script>
+{{--    <div id="a" class="row mb-3 form-group"> <div class="col-md-12">"+--}}
+{{--            "<div class="row">"+--}}
+{{--                "<div class="col-md-5">"+--}}
+                    "<select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">"+
+                        "<option selected disabled>--Option--</option>"+
+                        "<option>3 Days</option>"+
+                        "<option>5 Days</option>"+
+                        "</select>"+
+{{--                    "</div>"+--}}
+{{--                "<div class="col-md-5">"+--}}
+{{--                    "<input type="text" class="form-control" placeholder="$">"+--}}
+{{--                    "</div>"+--}}
+{{--                "<div class="col-md-2 p-1">"+--}}
+{{--                    "<button  class="add btn btn-sm btn-dark">+ </button>"+--}}
+{{--                    "</div>"+--}}
+{{--                "</div>"+--}}
+{{--            "</div>"+--}}
+{{--        "</div>--}}
 
 
 </body>

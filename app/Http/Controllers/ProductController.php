@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Specilization;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +16,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        $products=Product::get();
+        $Sr = 1;
+        return view('product.index',compact('products','Sr'));
     }
 
     /**
@@ -23,7 +28,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.add');
+        $categories=Category::get();
+        return view('product.add',compact('categories'));
     }
 
     /**
@@ -34,7 +40,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'category_id' => 'required|max:255',
+            'title' => 'required|max:255',
+            'price' => 'required|max:255',
+        ]);
+
+        $product= new Product();
+        $product->category_id=$request->category_id;
+        $product->title=$request->title;
+        $product->price=$request->price;
+        $product->save();
+        return redirect('/admin/product');
     }
 
     /**
@@ -56,7 +73,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $specializations=Specilization::get();
+        $product=Product::find($id);
+        return view('product.edit',compact('specializations','product'));
     }
 
     /**

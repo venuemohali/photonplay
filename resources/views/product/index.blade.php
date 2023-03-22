@@ -45,12 +45,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($products as $product)
+
 
                                     <tr>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$Sr++}}</td>
+                                        <td>{{$product->title}}</td>
+                                        <td>{{$product->price}}</td>
+                                        <td>{{$product->created_at}}</td>
                                         <td>
-                                            <a href="" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                            <a href="{{route('admin.product.edit',$product->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                 <i data-feather="edit"></i>
                                             </a>
 
@@ -77,7 +81,7 @@
                                             </script>
                                         </td>
                                     </tr>
-
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
