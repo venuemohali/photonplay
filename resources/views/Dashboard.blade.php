@@ -30,7 +30,7 @@
                             <div class="align-self-center text-center"><i data-feather="user"></i></div>
                             <div class="media-body">
                                 <span class="m-0">Total Users</span>
-                                <h4 class="mb-0 counter">6659</h4>
+                                <h4 class="mb-0 counter">{{$users}}</h4>
                                 <i class="icon-bg" data-feather="users"></i>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             <div class="align-self-center text-center"><i data-feather="user-check"></i></div>
                             <div class="media-body">
                                 <span class="m-0">Categories</span>
-                                <h4 class="mb-0 counter">6000</h4>
+                                <h4 class="mb-0 counter">{{$category}}</h4>
                                 <i class="icon-bg" data-feather="user-check"></i>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="align-self-center text-center"><i data-feather="edit-3"></i></div>
                             <div class="media-body">
                                 <span class="m-0">Products</span>
-                                <h4 class="mb-0 counter">600</h4>
+                                <h4 class="mb-0 counter">{{$products}}</h4>
                                 <i class="icon-bg" data-feather="edit-3"></i>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                             <div class="align-self-center text-center"><i data-feather="user-x"></i></div>
                             <div class="media-body">
                                 <span class="m-0">Orders</span>
-                                <h4 class="mb-0 counter">59</h4>
+                                <h4 class="mb-0 counter">{{$orders}}</h4>
                                 <i class="icon-bg" data-feather="user-x"></i>
                             </div>
                         </div>
