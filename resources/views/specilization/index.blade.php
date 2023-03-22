@@ -46,6 +46,9 @@
                                         <td>{{$specilization->id}}</td>
                                         <td>{{$specilization->title}}</td>
                                         <td>
+                                            <a href="{{route('admin.specilization-option.show', $specilization->id)}}">
+                                                <i data-feather="eye"></i></a>
+
                                             <a href="{{route('admin.specilization.edit', $specilization->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                 <i data-feather="edit"></i>
                                             </a>
@@ -73,7 +76,7 @@
                                             </script>
                                         </td>
                                     </tr>
-                                 @endforeach  
+                                 @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -87,7 +90,7 @@
 
 
 
-        
+
     @endsection
 
     @section('script')

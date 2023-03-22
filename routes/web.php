@@ -1,6 +1,7 @@
 <?php
 
 // use App\Http\Controllers\customer\Auth\LoginController;
+
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoryController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProspectController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SpecilizationController;
+use App\Http\Controllers\SpecilizationOptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -68,7 +70,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //specilization
         Route::get('specilization/delete/{id}', [SpecilizationController::class, 'delete']);
+        Route::get('specilization-option/delete/{id}', [SpecilizationOptionController::class, 'delete']);
         Route::resource('specilization', SpecilizationController::class);
+        Route::resource('specilization-option', SpecilizationOptionController::class);
+
 
         // db-backups
         Route::get('/download-db-backup', [DBBackupController::class, 'download'])->name('dbbackup');

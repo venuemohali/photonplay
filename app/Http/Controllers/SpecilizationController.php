@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SpecializationOption;
 use App\Models\Specilization;
 use Illuminate\Http\Request;
 
@@ -66,7 +67,7 @@ class SpecilizationController extends Controller
      */
     public function edit($id)
     {
-        $specilization = Specilization::find($id)->first();
+        $specilization = Specilization::find($id);
         return view('specilization.edit', compact('specilization'));
     }
 
@@ -101,7 +102,9 @@ class SpecilizationController extends Controller
     public function delete($id)
     {
         $specilization = Specilization::find($id);
-        
+        if($specilization){
+            SpecializationOption::where('specialization_id', $id)->delete();
+        }
         $specilization->delete();
         return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully deleted');
     }
