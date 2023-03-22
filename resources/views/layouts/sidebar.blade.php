@@ -21,35 +21,35 @@
                                 aria-hidden="true"></i></div>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{Request::is('dashboard','admin-dashboard') ? 'active':''}}" href="{{route('admin.dashboard') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/dashboard','admin-dashboard') ? 'active':''}}" href="{{route('admin.dashboard') }}">
                             <i data-feather="home"> </i><span>Dashboard</span>
                         </a>
                     </li>
                     @if(Auth::user()->role_as == 'Admin')
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{Request::is('manage-employees','edit-employee*','add-employee') ? 'active':''}}" href="{{ url('admin/manage-employees') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/manage-employees','edit-employee*','add-employee') ? 'active':''}}" href="{{ url('admin/manage-employees') }}">
                             <i data-feather="users"></i>
                             <span>Manage Users</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav {{Request::is('category') ? 'active':''}}" href="{{ url('admin/category') }}">
+                    <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/category') ? 'active':''}}" href="{{ url('admin/category') }}">
                             <i data-feather="trello"> </i>
                             <span>Manage Categories</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav {{Request::is('specilization') ? 'active':''}}" href="{{ url('admin/specilization') }}">
+                    <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/specilization') ? 'active':''}}" href="{{ url('admin/specilization') }}">
                             <i data-feather="trello"> </i>
                             <span>Manage Specilization</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav ">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/product') ? 'active':''}}" href="{{ route('admin.product.index') }}">
                             <i data-feather="shopping-bag"></i>
                             <span>Manage Products</span>
                         </a>
@@ -71,7 +71,7 @@
 
                     <li class="sidebar-list">
 
-                        <a class="sidebar-link sidebar-title link-nav {{Request::is('cms-home','cms-home') ? 'active':''}}" href="{{route('admin.cmshomepage') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/cms-home','cms-home') ? 'active':''}}" href="{{route('admin.cmshomepage') }}">
                             <i data-feather="file-minus"></i>
                             <span>CMS</span>
                         </a>
@@ -87,7 +87,7 @@
 
                         <li class="sidebar-list">
 
-                            <a class="sidebar-link sidebar-title link-nav {{Request::is('notifications','notifications') ? 'active':''}}" href="{{route('admin.notifications_form') }}">
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/notifications','notifications') ? 'active':''}}" href="{{route('admin.notifications_form') }}">
                                 <i data-feather="mail"></i>
                                 <span>Notifications</span>
                             </a>
@@ -96,14 +96,14 @@
 
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{Request::is('settings','settings') ? 'active':''}}" href="{{route('admin.setting-home-page') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/settings','settings') ? 'active':''}}" href="{{route('admin.setting-home-page') }}">
                             <i data-feather="settings"></i>
                             <span>Settings</span>
                         </a>
                     </li>
 
                     <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title link-nav {{Request::is('db-backup','db-backup') ? 'active':''}}" href="{{route('admin.dbbackupform') }}">
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/db-backup','db-backup') ? 'active':''}}" href="{{route('admin.dbbackupform') }}">
                                 <i data-feather="database"></i>
                                 <span>DB Backup</span>
                             </a>

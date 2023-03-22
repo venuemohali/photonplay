@@ -17,6 +17,7 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProspectController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SpecilizationController;
 use App\Http\Controllers\SpecilizationOptionController;
 use Illuminate\Support\Facades\Auth;
@@ -71,8 +72,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         //specilization
         Route::get('specilization/delete/{id}', [SpecilizationController::class, 'delete']);
         Route::get('specilization-option/delete/{id}', [SpecilizationOptionController::class, 'delete']);
+
         Route::resource('specilization', SpecilizationController::class);
         Route::resource('specilization-option', SpecilizationOptionController::class);
+        Route::resource('product', ProductController::class);
 
 
         // db-backups
