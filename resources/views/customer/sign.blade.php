@@ -135,7 +135,7 @@
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                    <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -153,42 +153,15 @@
                                     </span>
                                     <span class="d-block">R1200</span>
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                    </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto"></div>
-                                <div class="speed-sign text-center mt-3">
-                                    <span class="d-block weight-font">
-                                        Radar Speed Sign
-                                    </span>
-                                    <span class="d-block">R1200</span>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
@@ -207,15 +180,15 @@
                                     </span>
                                     <span class="d-block">R1200</span>
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
@@ -234,15 +207,42 @@
                                     </span>
                                     <span class="d-block">R1200</span>
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
-                                        <img src="./assets/images/star.svg" alt="Not Found" class="img-fluid"
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                            width="14px">
+                                    </div>
+                                    <span class="d-block weight-font">$1000</span>
+                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-2">
+                            <div class="inner-product bg-white">
+                                <div class="w-100 h-100 light-product m-auto"></div>
+                                <div class="speed-sign text-center mt-3">
+                                    <span class="d-block weight-font">
+                                        Radar Speed Sign
+                                    </span>
+                                    <span class="d-block">R1200</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                            width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                            width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                            width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                            width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
@@ -269,7 +269,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/icon.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/icon.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>Solar Powered</h6>
                             <p class="mb-0"> Makes the device cost effective</p>
@@ -278,7 +278,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/WEATHER.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/WEATHER.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>All Weather Operation</h6>
                             <p class="mb-0"> The sign operates efficiently in all the weathers</p>
@@ -287,7 +287,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/TRAFIC.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/TRAFIC.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>Traffic Data Analysis</h6>
                             <p class="mb-0"> Cloud based powerful tool for traffic data analysis</p>
@@ -296,7 +296,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/BATTERY.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/BATTERY.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>Battery Backup</h6>
                             <p class="mb-0"> Long battery backup increases operational hours </p>
@@ -305,7 +305,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/COMPLIANCE.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/COMPLIANCE.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>Fully Compliance</h6>
                             <p class="mb-0"> Comply standard norms with other industries</p>
@@ -314,7 +314,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center bg-white feature-card p-4">
-                        <div class="me-3"><img src="./assets/images/CLUDE.png" alt="Not Found"></div>
+                        <div class="me-3"><img src="{{asset('assets/customer/images/CLUDE.png')}}" alt="Not Found"></div>
                         <div class="">
                             <h6>24x7 Cloud Connectivity</h6>
                             <p class="mb-0"> All time access to the device</p>
@@ -401,7 +401,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end position-absolute circle-stone">
-                                    <img src="./assets/images/circle_stone.png" alt="not-found" class="img-fluid">
+                                    <img src="{{asset('assets/customer/images/circle_stone.png')}}" alt="not-found" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -482,7 +482,7 @@
 
                             </div>
                             <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                <img src="./assets/images/object.png" class="img-fluid circle-image d-none d-md-block"
+                                <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block"
                                     alt="not-found">
                             </div>
                         </div>
@@ -499,7 +499,7 @@
                 <!-- option-one -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/your_speed.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/your_speed.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -518,7 +518,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -528,7 +528,7 @@
                 <!-- option-two -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/key-speed.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/key-speed.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -550,7 +550,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -560,7 +560,7 @@
                 <!-- option-three -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/Data-analysis-cloud-radar-sign.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/Data-analysis-cloud-radar-sign.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -581,7 +581,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -591,7 +591,7 @@
                 <!-- option-four -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/iMAGE-HOLDER.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/iMAGE-HOLDER.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -621,7 +621,7 @@
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/trans-canada.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -646,7 +646,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -656,7 +656,7 @@
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/ballon-HOLDER.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/ballon-HOLDER.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -676,7 +676,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -687,7 +687,7 @@
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="./assets/images/trans-canada.jpg" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.jpg')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -703,7 +703,7 @@
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
-                            <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
                 </div>
@@ -779,4 +779,46 @@
             </div>
         </div>
     </section>
+    
     @include('customer.layouts.footer')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
