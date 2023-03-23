@@ -165,7 +165,7 @@
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                                             width="14px">
                                     </div>
                                     <span class="d-block weight-font">$1000</span>
-                                    <button class="btn btn-primary text-capitalize mt-3">Shop Now</button>
+                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -779,7 +779,7 @@
             </div>
         </div>
     </section>
-    
+
     @include('customer.layouts.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
