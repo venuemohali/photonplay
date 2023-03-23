@@ -28,23 +28,8 @@
                     <div class="card-header">
                         <h5>Product Setup</h5>
                         <hr/>
-                        <div class="row">
+                            <x-Product.HeaderMenu :page="1" :pid="{{$product->id}}"/>
 
-                            <div class="col-md-3 mb-3">
-                                <a href="#" class="btn btn-primary w-100" >Options </a>
-                            </div>
-
-                            <div class="col-md-3 mb-3">
-                                <a href="#" class="btn btn-info w-100" >Images </a>
-                            </div>
-
-                            <div class="col-md-3 mb-3">
-                                <a href="#" class="btn btn-info w-100"  > Shipping </a>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <a href="#" class="btn btn-info w-100"> Vat/Tax </a>
-                            </div>
-                        </div>
                         <hr/>
                         <div class="row">
                             <div class="col-md-12 d-flex">
