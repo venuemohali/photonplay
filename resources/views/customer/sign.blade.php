@@ -103,7 +103,7 @@
     <!-- Photon play radar-end -->
     <!-- Our Product-start -->
     <section class="icop-series pt-4">
-        <div class="container">
+        <div class="container"  id="our_products">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
@@ -517,7 +517,7 @@
                             <li> Work Zone Safety - <span>12" and 15" Models are recommended</span></li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -549,7 +549,7 @@
                             <li> High Grade Batteries - <span>12" and 15" Models are recommended</span></li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -580,7 +580,7 @@
                             <li>Control - <span>Control and configure the radar signs</span></li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -611,7 +611,7 @@
                                     scenarios with
                                     maximum efficiency</span></li>
                             <div class="d-block mt-md-5">
-                                <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                                <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             </div>
                     </div>
                 </div>
@@ -645,7 +645,7 @@
                             <li> FCC Approved</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -675,7 +675,7 @@
                             </li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -702,7 +702,7 @@
                             <li> Instant - <span>15 minutes installation</span></li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">Shop Now</button>
+                            <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
