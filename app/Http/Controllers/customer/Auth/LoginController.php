@@ -61,7 +61,7 @@ class LoginController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:customer',
+            'email' => 'required|email|unique:customers',
             'password' => 'required|min:6',
         ]);
 

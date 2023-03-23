@@ -62,8 +62,8 @@
                                             <td>{{$item->specialization_price}}</td>
                                             <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                             <td>
-                                                <a href="{{ url('admin/product-specification-options/'.$product->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
-                                                    <i data-feather="eye"></i>
+                                                <a href="{{ url('admin/product-specification-options-edit/'.$item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                                    <i data-feather="edit"></i>
                                                 </a>
 
                                                 <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
@@ -90,7 +90,7 @@
 
                                                                 $.ajax({
                                                                     type:'DELETE',
-                                                                    url:'{{url('admin/productspcification/'.$item->id)}}',
+                                                                    url:'{{url('admin/product-specification-options-delete/'.$item->id)}}',
                                                                     data:'_token = {{ @csrf_token() }}',
                                                                     success:function(data) {
                                                                         $("#Item-{{$item->id}}").hide();

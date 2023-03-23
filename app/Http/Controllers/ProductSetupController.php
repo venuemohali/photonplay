@@ -70,4 +70,33 @@ class ProductSetupController extends Controller
 
     }
 
+    public function product_specification_options_edit_form($id){
+        $specialization_options=ProductSpcializationOption::with(['product','product_specilization'])->find($id);
+
+//        $specialization_options=SpecializationOption::find($specialization_options->specialization_option_id);
+//        $product=Product::find($pid);
+//        $product_special=ProductSpecilization::find($id);
+
+
+        $Sr=1;
+        return view('product.specific_option.edit',compact( 'Sr','specialization_options'));
+    }
+
+    public function product_specification_options_delete($id){
+        $item=ProductSpcializationOption::find($id);
+        if($item){
+            $is_delete=$item->delete();
+            return response()->json([
+                'success'=>true,
+                'message'=>'Deleted Successfully',
+                'data'=>$item
+            ],200);
+        }else {
+            return response()->json([
+                'success'=>false,
+                'message'=>'Unable to delete !',
+            ],404);
+        }
+    }
+
 }

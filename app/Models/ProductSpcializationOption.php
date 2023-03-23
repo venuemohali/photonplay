@@ -13,4 +13,12 @@ class ProductSpcializationOption extends Model
         return $this->belongsTo(SpecializationOption::class,'specialization_option_id');
     }
 
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id');
+    }
+
+    public function product_specilization(){
+        return $this->belongsTo(ProductSpecilization::class,'product_specilizations_id');
+    }
+
 }
