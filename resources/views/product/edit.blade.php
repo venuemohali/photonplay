@@ -26,11 +26,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>New Product</h5>
+                        <h5>Product Setup</h5>
+                        <hr/>
                         <div class="row">
 
                             <div class="col-md-3 mb-3">
-                                <a href="#" class="btn btn-info w-100" >Options </a>
+                                <a href="#" class="btn btn-primary w-100" >Options </a>
                             </div>
 
                             <div class="col-md-3 mb-3">
@@ -44,99 +45,84 @@
                                 <a href="#" class="btn btn-info w-100"> Vat/Tax </a>
                             </div>
                         </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-12 d-flex">
+                                <h5>Product Specifications</h5>
+                                <a href="{{ url('/admin/add/product-specification/'.$product->id)}}" class="btn btn-primary ms-auto">Add Specification</a>
+                            </div>
+
+                        </div>
                     </div>
+
 
                     <div class="card-body">
                         <div class="row">
 
                             <div class="col-md-12 p-2">
-                                <div class="border-2 shadow-lg p-4">
+                                <table class="display" id="basic-2">
+                                    <thead>
+                                    <tr>
+                                        <th class="all">#</th>
+                                        <th class="all">Specification</th>
+                                        <th class="all">Counts</th>
+                                        <th class="all">Created</th>
+                                        <th class="all">Options</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
 
-                                    <div class="col-md-12 ">
-                                        <h6> Product Colors</h6>
-                                    </div>
-                                    <form method="POST" action="{{route('admin.product.store')}}">
-                                        @csrf
+@foreach ($product_specilizations as $item)
+    <tr id="Item-{{$item->id}}">
+        <td>{{$Sr++}}</td>
+        <td>{{$item->specilization()->first()->title }}</td>
+        <td>2</td>
+        <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
+        <td>
+            <a href="{{ url('admin/product-specification-options/'.$product->id.'/'.$item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                <i data-feather="eye"></i>
+            </a>
 
-                                        <div class="row mb-3 form-group">
-                                            <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Colors') }}</label>
+            <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
+                <i data-feather="trash-2"></i>
+            </a>
+            <script>
+                $('#Delete-{{$item->id}}').click(function(){
+                    console.log("hello");
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
 
-                                            <div class="col-md-10  ">
+                            $.ajax({
+                                type:'DELETE',
+                                url:'{{url('admin/productspcification/'.$item->id)}}',
+                                data:'_token = {{ @csrf_token() }}',
+                                success:function(data) {
+                                    $("#Item-{{$item->id}}").hide();
+                                }
+                            });
 
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        Yellow
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        Red
-                                                    </label>
-                                                </div>
-
-                                                @error('title')
-                                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                                @enderror
-                                            </div>
-
-                                        </div>
-                                   <div class="col-md-12 mb-3">
-                                       <div class="border-2 shadow-lg p-4" id="dynamic_field_main">
-                                           <div class="col-md-12 ">
-                                               <h6> Product Specifications</h6>
-                                           </div>
-
-                                           <div class="row mb-3 form-group">
-                                               <div class="col-md-8 mb-3">
-
-                                                   <select id="color" name="color" onchange="more_options()" class="form-select form-select" aria-label=".form-select-sm">
-                                                       <option selected disabled>-- Select Specification --</option>
-                                                    @foreach($specializations as $category)
-                                                           <option value="{{$category->id}}"> {{$category->title}}</option>
-                                                    @endforeach
-
-
-
-                                                   </select>
-
-                                                   @error('color')
-                                                   <span class="invalid-feedback" role="alert">
-                                                                        <strong>{{ $message }}</strong>
-                                                                    </span>
-                                                   @enderror
-                                               </div>
-                                               <div class="col-md-2">
-                                                        <a  onclick="more_sepcialization_options()" class=" btn btn-primary">+</a>
-                                                   <script>
-
-                                                   </script>
-                                               </div>
-
-                                               <div id="dynamic_field_row_specialization_0">
-
-                                               </div>
-                                           </div>
-
-
-
-                                       </div>
-                                   </div>
-
-
-                                        <div class="row mb-0">
-                                            <div class="col-md-6 offset-md-4">
-                                                <button type="submit" class="btn btn-primary">
-                                                    {{ __('Add Product') }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
+                        }
+                    });
+                });
+            </script>
+        </td>
+    </tr>
+@endforeach
+                                    </tbody>
+                                </table>
 
                             </div>
 

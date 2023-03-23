@@ -17,8 +17,7 @@ class CreateProductSpecilizationsTable extends Migration
             $table->id();
             $table->foreignId('product_id')->nullable()->references('id')->on('products')->onDelete('cascade');
             $table->foreignId('specialization_id')->nullable();
-            $table->foreignId('specialization_option_id')->nullable();
-            $table->string('specialization_price')->nullable();
+
             $table->timestamps();
         });
     }

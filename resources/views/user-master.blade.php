@@ -139,13 +139,13 @@
         function remove_seleted_user(){
             $('#show_all_users').hide();
         }
-        //
+
         // let i=0;
         // var j=0;
         // //more options in specialization
-        // function more_options(k){
+        // function more_options(){
         //     i++;
-        //     $('#dynamic_field_'+j).append('<div  id="row_'+i+'" class="row mb-3 form-group"> <div class="col-md-12">' +
+        //     $('#dynamic_field').append('<div  id="row_'+i+'" class="row mb-3 form-group"> <div class="col-md-12">' +
         //         '<div class="row">'+
         //         '<div class="col-md-5">'+
         //         '<select id="row_id_'+i+'" name="row_'+i+'[]"  class="form-select form-select" aria-label=".form-select-sm">'+
@@ -158,14 +158,14 @@
         //     '<input type="text" class="form-control" placeholder="$">'+
         //     '</div>'+
         //     '<div class="col-md-2 p-1">'+
-        //     '<a  onclick="more_options('+k+')" class="add btn btn-sm btn-dark">+ </a>'+
+        //     '<a  onclick="more_options()" class="add btn btn-sm btn-dark">+ </a>'+
         //     '</div>'+
         //     '</div>'+
         //     '</div>' +
         //         '</div>');
         // }
 
-    {{--    //more options in specialization--}}
+        //more options in specialization
     {{--    function more_sepcialization_options(){--}}
     {{--        j++;--}}
     {{--        $('#dynamic_field_main').append('<div id="row_specialization_'+j+'" class="row mb-3 form-group">'+--}}
@@ -191,24 +191,6 @@
     {{--    }--}}
 
     </script>
-{{--    <div id="a" class="row mb-3 form-group"> <div class="col-md-12">"+--}}
-{{--            "<div class="row">"+--}}
-{{--                "<div class="col-md-5">"+--}}
-{{--                    "<select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">"+--}}
-{{--                        "<option selected disabled>--Option--</option>"+--}}
-{{--                        "<option>3 Days</option>"+--}}
-{{--                        "<option>5 Days</option>"+--}}
-{{--                        "</select>"+--}}
-{{--                    "</div>"+--}}
-{{--                "<div class="col-md-5">"+--}}
-{{--                    "<input type="text" class="form-control" placeholder="$">"+--}}
-{{--                    "</div>"+--}}
-{{--                "<div class="col-md-2 p-1">"+--}}
-{{--                    "<button  class="add btn btn-sm btn-dark">+ </button>"+--}}
-{{--                    "</div>"+--}}
-{{--                "</div>"+--}}
-{{--            "</div>"+--}}
-{{--        "</div>--}}
 
 
 </body>

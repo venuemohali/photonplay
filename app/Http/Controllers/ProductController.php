@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductSpecilization;
 use App\Models\Specilization;
 use Illuminate\Http\Request;
 
@@ -75,7 +76,11 @@ class ProductController extends Controller
     {
         $specializations=Specilization::get();
         $product=Product::find($id);
-        return view('product.edit',compact('specializations','product'));
+
+        $product_specilizations=ProductSpecilization::with('specilization')->get();
+
+        $Sr=1;
+        return view('product.edit',compact('specializations','product','product_specilizations','Sr'));
     }
 
     /**
