@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\customer\slick\slick-theme.css') }}" />
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 
 </head>
 <title>Photon Play</title>
@@ -38,16 +38,16 @@
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Home</a>
+                        <a class="nav-link text-uppercase" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">PRODUCTS</a>
+                        <a class="nav-link text-uppercase" href="/radar-sign">PRODUCTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">CONTACT US</a>
+                        <a class="nav-link text-uppercase" href="/">CONTACT US</a>
                     </li>
 
                 </ul>
@@ -63,7 +63,9 @@
                             <p class="text-capitalize mb-0">User name</p>
                         </div>
                         <div class="profile-circle">
+                            <a href="/">
                             <img src="{{ asset('assets\customer\images\profile.png') }}" alt="Not Found" class="img-fluid rounded-circle d-block" width="36" height="36">
+                            </a>
                         </div>
                     </div>
                 </form>
