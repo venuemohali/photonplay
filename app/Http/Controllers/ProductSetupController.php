@@ -31,7 +31,7 @@ class ProductSetupController extends Controller
 
     public function product_specification_options($pid,$id){
         $product=Product::find($pid);
-        $product_spcialization_options=ProductSpcializationOption::with('specialization_options')
+        $product_spcialization_options=ProductSpcializationOption::with('specializationoptions')
             ->where('product_specilizations_id',$id)
             ->get();
         $Sr=1;
@@ -55,23 +55,18 @@ class ProductSetupController extends Controller
             'product_specilizations_id' => 'required',
             'product_id'=>'required'
         ]);
-//        $post= new ProductSpcializationOption();
-//        $post->specialization_option_id  = $request->specialization_option_id;
-//        $post->specialization_price = $request->specialization_price;
-//        $post->product_specilizations_id = $request->product_specilizations_id;
-//        $post->product_id = $request->product_id;
 
         ProductSpcializationOption::updateOrCreate([
             'product_id'=> $request->product_id,
             'specialization_option_id'=>$request->product_specilizations_id
         ],$request->except('_token'));
 //        $post->save();
-        return redirect('admin/product-specification-options/'.$request->product_id.'/'.$request->specialization_option_id);
+        return redirect('admin/product-specification-options/'.$request->product_id.'/'.$request->product_specilizations_id);
 
     }
 
     public function product_specification_options_edit_form($id){
-        $specialization_options=ProductSpcializationOption::with(['product','product_specilization'])->find($id);
+        $specialization_options=ProductSpcializationOption::with(['specializationoptions'])->find($id);
 
 //        $specialization_options=SpecializationOption::find($specialization_options->specialization_option_id);
 //        $product=Product::find($pid);

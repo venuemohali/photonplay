@@ -32,21 +32,15 @@
                     <div class="card-body">
                         <form method="POST" action="#">
                             @csrf
-                            <input type="hidden" name="product_id" value="{{$product_special->product_id}}">
-                            <input type="hidden" name="product_specilizations_id" value="{{$product_special->id}}">
+                            <input type="hidden" name="product_id" value="{{$specialization_options->product_id}}">
+                            <input type="hidden" name="product_specilizations_id" value="{{$specialization_options->id}}">
 
                             <div class="row mb-3 form-group">
                                 <label for="specialization_option_id" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Option') }}</label>
-
                                 <div class="col-md-3">
                                     <select id="specialization_option_id" name="specialization_option_id" class="form-select form-select" aria-label=".form-select-sm">
-                                        <option selected disabled>  --Select--</option>
-                                        @foreach($specialization_options as $item)
-                                            <option value="{{$item->id}}">{{$item->option}}</option>
-                                        @endforeach
-
+                                        <option value="{{$specialization_options->specializationoptions()->first()->id}}">{{$specialization_options->specializationoptions()->first()->option}}</option>
                                     </select>
-
 
                                     @error('specialization_option_id')
                                     <span class="invalid-feedback" role="alert">
@@ -59,7 +53,7 @@
                                 <label for="specialization_price" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Price') }}</label>
 
                                 <div class="col-md-3">
-                                    <input id="specialization_price" type="text" class="form-control @error('specialization_price') is-invalid @enderror" name="specialization_price" value="{{ old('specialization_price') ?? $data->specialization_price ?? ''}}" required autocomplete="specialization_price" autofocus>
+                                    <input id="specialization_price" type="text" class="form-control @error('specialization_price') is-invalid @enderror" name="specialization_price" value="{{ old('specialization_price') ?? $specialization_options->specialization_price ?? ''}}" required autocomplete="specialization_price" autofocus>
 
 
                                     @error('specialization_price')
@@ -76,7 +70,8 @@
                                         <i data-feather="save"> </i>
                                         Save
                                     </button>
-                                    <a href="{{url('admin/blog-categories')}}" class="btn btn-dark">
+                                    <a href="{{route('admin.product_specification_options',[$specialization_options->product_id,
+                                        $specialization_options->product_specilizations_id])}}" class="btn btn-dark">
                                         <i data-feather="corner-down-right"> </i>
                                         Return Back
                                     </a>

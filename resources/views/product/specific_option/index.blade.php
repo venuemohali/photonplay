@@ -17,7 +17,7 @@
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
     <li class="breadcrumb-item">Settings</li>
-    <li class="breadcrumb-item active">Add Product</li>
+    <li class="breadcrumb-item active">Add Options</li>
 @endsection
 
 @section('content')
@@ -47,7 +47,7 @@
                                     <thead>
                                     <tr>
                                         <th class="all">#</th>
-                                        <th class="all">Specification</th>
+                                        <th class="all">Option</th>
                                         <th class="all">Price</th>
                                         <th class="all">Created</th>
                                         <th class="all">Options</th>
@@ -58,7 +58,7 @@
                                     @foreach ($product_spcialization_options as $item)
                                         <tr id="Item-{{$item->id}}">
                                             <td>{{$Sr++}}</td>
-                                            <td>{{$item->specialization_options()->first()->option }}</td>
+                                            <td>{{$item->specializationoptions()->first()->option }}</td>
                                             <td>{{$item->specialization_price}}</td>
                                             <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                             <td>

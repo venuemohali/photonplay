@@ -9,7 +9,7 @@ class ProductSpcializationOption extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    public function specialization_options(){
+    public function specializationoptions(){
         return $this->belongsTo(SpecializationOption::class,'specialization_option_id');
     }
 
