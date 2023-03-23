@@ -85,15 +85,15 @@
 
                                         </div>
                                    <div class="col-md-12 mb-3">
-                                       <div class="border-2 shadow-lg p-4">
+                                       <div class="border-2 shadow-lg p-4" id="dynamic_field_main">
                                            <div class="col-md-12 ">
                                                <h6> Product Specifications</h6>
                                            </div>
 
                                            <div class="row mb-3 form-group">
-                                               <div class="col-md-8">
+                                               <div class="col-md-8 mb-3">
 
-                                                   <select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">
+                                                   <select id="color" name="color" onchange="more_options()" class="form-select form-select" aria-label=".form-select-sm">
                                                        <option selected disabled>-- Select Specification --</option>
                                                     @foreach($specializations as $category)
                                                            <option value="{{$category->id}}"> {{$category->title}}</option>
@@ -110,10 +110,13 @@
                                                    @enderror
                                                </div>
                                                <div class="col-md-2">
-                                                        <a id="add" onclick="more_options()" class=" btn btn-primary">+</a>
+                                                        <a  onclick="more_sepcialization_options()" class=" btn btn-primary">+</a>
+                                                   <script>
+
+                                                   </script>
                                                </div>
 
-                                               <div id="dynamic_field">
+                                               <div id="dynamic_field_row_specialization_0">
 
                                                </div>
                                            </div>
@@ -154,6 +157,7 @@
 
     <script>
         $(document).ready(function() {
+
             $('#summernote').summernote({
                 placeholder: 'Hello Photon Play Systems',
                 tabsize: 2,
@@ -162,30 +166,6 @@
 
         });
 
-        function more_options(){
-            i++;
-            $('#dynamic_field').append('<div id="'+i+''" class="row mb-3 form-group">
-                <div class="col-md-12">
-                <div class="row">
-                <div class="col-md-5">
-                <select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">
-                <option selected disabled>--Option--</option>
-            <option>3 Days</option>
-            <option>5 Days</option>
 
-        </select>
-
-        </div>
-            <div class="col-md-5">
-                <input type="text" class="form-control" placeholder="$">
-            </div>
-
-            <div class="col-md-2 p-1">
-                <button  class="add btn btn-sm btn-dark">+ </button>
-            </div>
-        </div>
-        </div>
-        </div>d><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
-        }
     </script>
 @endsection
