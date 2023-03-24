@@ -28,8 +28,8 @@
                     <div class="card-header">
                         <h5>Product Setup</h5>
                         <hr/>
-                            <x-Product.HeaderMenu :page="1" :pid="{{$product->id}}"/>
 
+                        <x-Product.HeaderMenu  :pid="$product->id" :page="1"/>
                         <hr/>
                         <div class="row">
                             <div class="col-md-12 d-flex">

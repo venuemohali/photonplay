@@ -77,10 +77,10 @@
                                         @csrf
 
                                         <div class="row mb-3 form-group  d-flex align-items-center">
-                                            <label for="category" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Cover Image') }}</label>
+                                            <label for="moreimage" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('More Images') }}</label>
 
-                                            <div class="col-md-3">
-                                                <input type="file" name="cover_image" class="form-control" >
+                                            <div class="col-md-6">
+                                                <input  id="moreimage" type="file" name="more_images[]" class="form-control" multiple >
 
                                                 @error('category_selected')
                                                 <span class="invalid-feedback" role="alert">
@@ -93,13 +93,15 @@
                                                     {{ __('Upload') }}
                                                 </button>
                                             </div>
+                                            @for($i=0;$i<5;$i++)
 
-                                            <div class="col-md-4">
+
+                                            <div class="col-md-3 m-3">
                                                 <div style="height: 300px;width: 300px;">
-                                                    <img src="http://stagingserver.photonplay.com/assets/customer/images/Product-sign.png" class="w-100"
+                                                    <img src="http://stagingserver.photonplay.com/assets/customer/images/Product-sign.png" class="w-100"/>
                                                 </div>
                                             </div>
-
+                                            @endfor
                                         </div>
 
 
