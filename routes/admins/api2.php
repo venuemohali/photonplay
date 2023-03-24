@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductMediaController;
+use App\Http\Controllers\ProductPricingController;
 use App\Http\Controllers\ProductSetupController;
 
 Route::get('/add/product-specification/{id}', [ProductSetupController::class, 'add_specification_form'])->name("add_specification_form");
@@ -19,3 +20,4 @@ Route::delete('/product-specification-options-delete/{id}', [ProductSetupControl
 
 
 Route::get('/product/{id}/edit/media', [ProductMediaController::class, 'open_media_form'])->name("product_media_page");
+Route::get('/product/{id}/edit/pricing', [ProductPricingController::class, 'open_pricing_form'])->name("product_pricing_page");
