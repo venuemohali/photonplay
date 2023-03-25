@@ -49,7 +49,7 @@ class LoginController extends Controller
 
         Session::put('user', Auth::guard('customer')->user());
         notify()->success('Login Successfully');
-        return redirect()->intended('dashboard');
+        return redirect()->intended('radar-speed-signs');
     }
 
     public function registerForm()
@@ -61,7 +61,7 @@ class LoginController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:customer',
+            'email' => 'required|email|unique:customers',
             'password' => 'required|min:6',
         ]);
 
