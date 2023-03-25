@@ -49,7 +49,7 @@ class LoginController extends Controller
 
         Session::put('user', Auth::guard('customer')->user());
         notify()->success('Login Successfully');
-        return redirect()->intended('dashboard');
+        return redirect()->intended('radar-speed-signs');
     }
 
     public function registerForm()
