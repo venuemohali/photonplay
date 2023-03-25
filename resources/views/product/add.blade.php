@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Welcome to Photon Play')
+@section('title', 'Welcome to Photon Playa')
 
 @section('css')
 
@@ -27,20 +27,20 @@
             <div class="card">
                 <div class="card-header">
                     <h5>New Product</h5>
-{{--<div class="row">--}}
-{{--    <div class="col-md-3 mb-3">--}}
-{{--        <a href="#" class="btn btn-info w-100" > Product Information </a>--}}
-{{--    </div>--}}
-{{--    <div class="col-md-3 mb-3">--}}
-{{--        <a href="#" class="btn btn-info w-100" >Specifications </a>--}}
-{{--    </div>--}}
-{{--    <div class="col-md-3 mb-3">--}}
-{{--        <a href="#" class="btn btn-info w-100"  > Shipping </a>--}}
-{{--    </div>--}}
-{{--    <div class="col-md-3 mb-3">--}}
-{{--        <a href="#" class="btn btn-info w-100"> Vat/Tax </a>--}}
-{{--    </div>--}}
-{{--</div>--}}
+                    {{--<div class="row">--}}
+                    {{--    <div class="col-md-3 mb-3">--}}
+                    {{--        <a href="#" class="btn btn-info w-100" > Product Information </a>--}}
+                    {{--    </div>--}}
+                    {{--    <div class="col-md-3 mb-3">--}}
+                    {{--        <a href="#" class="btn btn-info w-100" >Specifications </a>--}}
+                    {{--    </div>--}}
+                    {{--    <div class="col-md-3 mb-3">--}}
+                    {{--        <a href="#" class="btn btn-info w-100"  > Shipping </a>--}}
+                    {{--    </div>--}}
+                    {{--    <div class="col-md-3 mb-3">--}}
+                    {{--        <a href="#" class="btn btn-info w-100"> Vat/Tax </a>--}}
+                    {{--    </div>--}}
+                    {{--</div>--}}
                 </div>
 
                 <div class="card-body">
