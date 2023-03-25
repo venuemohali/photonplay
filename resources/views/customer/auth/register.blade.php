@@ -5,8 +5,8 @@
         <div class="login-sec px-2">
             <div class="form-section p-3">
                 <div class="d-flex flex-lg-row form-section-inner">
-                    <div class="login-parent"> 
-                        <div class="login-parent-inner">    
+                    <div class="login-parent">
+                        <div class="login-parent-inner">
                             <h2 class="mb-lg-5 mb-4">Create account</h2>
                             <form action="{{ route('customer.register') }}" method="post">
                                 @csrf
@@ -68,4 +68,6 @@
             </div>
         </div>
     </div>
+
+    <x-Customer.Footer/>
 </body>

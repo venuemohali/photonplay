@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('category_id')->mullable();
             $table->string('title')->nullable();
             $table->string('price')->nullable();
+            $table->string('cover_image')->nullable();
             $table->string('color')->nullable();
             $table->text('description')->nullable();
             $table->string('specification')->nullable();

@@ -9,4 +9,5 @@ class SpecializationOption extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
 }

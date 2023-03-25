@@ -139,8 +139,58 @@
         function remove_seleted_user(){
             $('#show_all_users').hide();
         }
-    </script>
 
+        // let i=0;
+        // var j=0;
+        // //more options in specialization
+        // function more_options(){
+        //     i++;
+        //     $('#dynamic_field').append('<div  id="row_'+i+'" class="row mb-3 form-group"> <div class="col-md-12">' +
+        //         '<div class="row">'+
+        //         '<div class="col-md-5">'+
+        //         '<select id="row_id_'+i+'" name="row_'+i+'[]"  class="form-select form-select" aria-label=".form-select-sm">'+
+        //     '<option selected disabled>--Option--</option>'+
+        //     '<option>3 Days</option>'+
+        //     '<option>5 Days</option>"'+
+        //     '</select>'+
+        //         '</div>'+
+        //         '<div class="col-md-5">'+
+        //     '<input type="text" class="form-control" placeholder="$">'+
+        //     '</div>'+
+        //     '<div class="col-md-2 p-1">'+
+        //     '<a  onclick="more_options()" class="add btn btn-sm btn-dark">+ </a>'+
+        //     '</div>'+
+        //     '</div>'+
+        //     '</div>' +
+        //         '</div>');
+        // }
+
+        //more options in specialization
+    {{--    function more_sepcialization_options(){--}}
+    {{--        j++;--}}
+    {{--        $('#dynamic_field_main').append('<div id="row_specialization_'+j+'" class="row mb-3 form-group">'+--}}
+    {{--            '<div class="col-md-8 mb-3">'+--}}
+    {{--            '<select id="color" name="color" onchange="more_options()" class="form-select form-select" aria-label=".form-select-sm">'+--}}
+    {{--            '<option selected disabled>-- Select Specification --</option>'+--}}
+    {{--        @foreach($specializations as $category)--}}
+    {{--        '<option value="{{$category->id}}"> {{$category->title}}</option>'+--}}
+    {{--        @endforeach--}}
+    {{--    '</select>'+--}}
+    {{--        @error('color')--}}
+    {{--      '<span class="invalid-feedback" role="alert">'+--}}
+    {{--       ' <strong>{{ $message }}</strong>'+--}}
+    {{--       '</span>'+--}}
+    {{--        @enderror--}}
+    {{--    '</div>'+--}}
+    {{--     '<div class="col-md-2">'+--}}
+    {{--      '<a  onclick="more_sepcialization_options()" class=" btn btn-primary">+</a>'+--}}
+    {{--'</div>'+--}}
+    {{--'<div id="dynamic_field_row_specialization_'+j+'">'+--}}
+    {{--'</div>'+--}}
+    {{--    '</div>');--}}
+    {{--    }--}}
+
+    </script>
 
 
 </body>
