@@ -156,9 +156,6 @@
                     )
                 }}
             })
-
-            console.log('jitender is succeded')
-
         }
 
     </script>

@@ -28,4 +28,10 @@ Route::delete('/product/delete/media/images/{id}', [ProductMediaController::clas
 
 Route::get('/product/{id}/edit/pricing', [ProductPricingController::class, 'open_pricing_form'])->name("product_pricing_page");
 
+Route::post('/product/edit/pricing', [ProductPricingController::class, 'open_pricing_store'])->name("product_pricing_store");
+Route::post('/product/edit/quantity', [ProductPricingController::class, 'open_quantity_store'])->name("open_quantity_store");
+
+
 Route::get('/product/{id}/edit/seo', [ProductSeoController::class, 'open_seo_form'])->name("product_seo_page");
+
+

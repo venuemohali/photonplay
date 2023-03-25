@@ -41,14 +41,14 @@
                                         <h6> Product Pricing</h6>
                                     </div>
                                     <hr/>
-                                    <form method="POST" action="#">
+                                    <form method="POST" action="{{route('admin.product_pricing_store')}}">
                                         @csrf
-
+                                        <input type="hidden" name="product_id" value="{{$product->id}}"/>
                                         <div class="row mb-3 form-group  d-flex align-items-center">
                                             <label for="cost_price" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Cost Price') }}</label>
 
                                             <div class="col-md-8">
-                                                <input type="text" name="cost_price" class="form-control" placeholder="$$$" >
+                                                <input type="text" name="cost_price" class="form-control" placeholder="$$$" value="{{ old('cost_price') ??  $product_price->cost_price ?? ''}}" >
 
                                                 @error('cost_price')
                                                 <span class="invalid-feedback" role="alert">
@@ -58,19 +58,19 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mb-3 form-group  d-flex align-items-center">
-                                            <label for="retail_price" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Retail Price') }}</label>
+{{--                                        <div class="row mb-3 form-group  d-flex align-items-center">--}}
+{{--                                            <label for="sale_price" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Sale Price') }}</label>--}}
 
-                                            <div class="col-md-8">
-                                                <input type="text" name="retail_price" class="form-control" placeholder="$$$" >
+{{--                                            <div class="col-md-8">--}}
+{{--                                                <input type="text" name="sale_price" class="form-control" placeholder="$$$" value="{{ old('sale_price') ??  $product_price->sale_price ?? ''}}" >--}}
 
-                                                @error('retail_price')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
-                                            </div>
-                                        </div>
+{{--                                                @error('sale_price')--}}
+{{--                                                <span class="invalid-feedback" role="alert">--}}
+{{--                                                    <strong>{{ $message }}</strong>--}}
+{{--                                                </span>--}}
+{{--                                                @enderror--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
 
 
@@ -78,7 +78,7 @@
                                             <label for="discount" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Discount') }}</label>
 
                                             <div class="col-md-8">
-                                                <input type="text" name="discount" class="form-control" placeholder="%">
+                                                <input type="text" name="discount" class="form-control" placeholder="%" value="{{ old('discount') ??  $product_price->discount ?? ''}}">
 
                                                 @error('discount')
                                                 <span class="invalid-feedback" role="alert">
@@ -89,15 +89,16 @@
                                         </div>
 
                                         <div class="row mb-3 form-group  d-flex align-items-center">
-                                            <label for="retail_price" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Pricing Type') }}</label>
+                                            <label for="price_type_set" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Pricing Type') }}</label>
 
                                             <div class="col-md-8">
-                                                <select  name="pricing_type" class="form-select" >
-                                                    <option value="Normal"> Normal </option>
-                                                    <option value="Sale"> Sale </option>
+                                                <select  name="price_type_set" class="form-select" >
+                                                    <option selected disabled>--Select Pricing Type--</option>
+                                                    <option value="normal" {{$product_price->price_type_set=="normal"?'selected':''}}> Normal </option>
+                                                    <option value="sale"  {{$product_price->price_type_set=="sale"?'selected':''}}> Sale </option>
                                                 </select>
 
-                                                @error('retail_price')
+                                                @error('price_type_set')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -127,14 +128,15 @@
                                         <h6> Product Quantity</h6>
                                     </div>
                                     <hr/>
-                                    <form method="POST" action="#">
+                                    <form method="POST" action="{{route('admin.open_quantity_store')}}">
                                         @csrf
+                                        <input type="hidden" name="product_id" value="{{$product->id}}"/>
 
                                         <div class="row mb-3 form-group  d-flex align-items-center">
                                             <label for="quantity" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Quantity') }}</label>
 
                                             <div class="col-md-8">
-                                                <input type="text" name="quantity" class="form-control" placeholder="500" >
+                                                <input type="text" name="quantity" class="form-control" placeholder="500" value="{{ old('quantity') ??  $product_price->quantity ?? ''}}" >
 
                                                 @error('cost_price')
                                                 <span class="invalid-feedback" role="alert">
@@ -173,5 +175,19 @@
             </div>
         </div>
     </div>
+<script>
+    @if (session()->has('success'))
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: '{{ session('success') }}',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    @endif
 
+
+
+
+</script>
 @endsection
