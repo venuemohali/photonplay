@@ -44,7 +44,7 @@
                     <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/specilization') ? 'active':''}}" href="{{ url('admin/specilization') }}">
                             <i data-feather="trello"> </i>
-                            <span>Manage Specilization</span>
+                            <span>Manage Specifications</span>
                         </a>
                     </li>
 

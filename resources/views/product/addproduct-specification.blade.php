@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Add Specification')
+@section('title', 'Welcome to Photon Play')
 
 @section('css')
 

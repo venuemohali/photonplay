@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Welcome To Easy Returns Dashboard')
+@section('title', 'Welcome to Photon Play')
 
 @section('css')
 
@@ -35,9 +35,9 @@
                             <div class="col-md-12 d-flex">
                                 <h5>Product Specifications</h5>
                                 <a href="{{ url('/admin/add/product-specification/'.$product->id)}}" class="btn btn-primary ms-auto">
-                                    <div>
+                                    <div class="d-flex align-items-center">
                                         <i data-feather="plus-circle"> </i>
-                                        Add Specification
+                                       <span> Add Specification</span>
                                     </div>
                                    </a>
                             </div>

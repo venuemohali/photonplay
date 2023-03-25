@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Welcome To Easy Returns Dashboard')
+@section('title', 'Welcome to Photon Play')
 
 @section('css')
 
@@ -113,7 +113,7 @@
 
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
