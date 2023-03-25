@@ -34,7 +34,12 @@
                         <div class="row">
                             <div class="col-md-12 d-flex">
                                 <h5>Product Specifications</h5>
-                                <a href="{{ url('/admin/add/product-specification/'.$product->id)}}" class="btn btn-primary ms-auto">Add Specification</a>
+                                <a href="{{ url('/admin/add/product-specification/'.$product->id)}}" class="btn btn-primary ms-auto">
+                                    <div>
+                                        <i data-feather="plus-circle"> </i>
+                                        Add Specification
+                                    </div>
+                                   </a>
                             </div>
 
                         </div>

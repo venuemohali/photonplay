@@ -144,19 +144,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mb-3 form-group  d-flex align-items-center">
-                                            <label for="minimum_limit" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Minimum Limit') }}</label>
 
-                                            <div class="col-md-8">
-                                                <input type="text" name="minimum_limit" class="form-control" placeholder="50" >
-
-                                                @error('minimum_limit')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
-                                            </div>
-                                        </div>
 
                                         <div class="row ">
                                             <div class="col-md-12 d-flex justify-content-center ">
