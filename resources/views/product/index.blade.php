@@ -41,6 +41,7 @@
                                         <th>#</th>
                                         <th>Title</th>
                                         <th>Price</th>
+                                        <th>Status</th>
                                         <th>Created at</th>
                                         {{-- <th>Status </th> --}}
                                         <th>Options</th>
@@ -54,6 +55,7 @@
                                         <td>{{$Sr++}}</td>
                                         <td>{{$product->title}}</td>
                                         <td>{{$product->price}}</td>
+                                        <td>{{$product->status}}</td>
                                         <td>{{$product->created_at}}</td>
                                         <td>
                                             <a href="{{route('admin.product.edit',$product->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
