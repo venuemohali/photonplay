@@ -36,7 +36,7 @@
                             <label for="title" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" placeholder="Radar Speed Signs"   autofocus>
 
                                 @error('title')
                                     <span class="invalid-feedback" role="alert">
@@ -46,10 +46,11 @@
                             </div>
                         </div>
 
-                 
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary d-flex align-items-center">
+                                    <i data-feather="save"> </i>
                                     {{ __('Add Category') }}
                                 </button>
                             </div>

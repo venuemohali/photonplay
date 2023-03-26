@@ -15,7 +15,7 @@
 
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item active">Manage Specilization</li>
+    <li class="breadcrumb-item active">Manage Specifications</li>
 @endsection
 
 @section('content')
@@ -28,22 +28,29 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex">
-                    <h5 class="card-title">All Specilizations</h5>
-                    <a href="{{route('admin.specilization.create')}}" class="btn btn-primary ms-auto">Add Specilization</a>
+                    <h5 class="card-title">All Specifications</h5>
+                    <a href="{{route('admin.specilization.create')}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                        <i data-feather="plus-circle"> </i>
+                        Add Specifications</a>
                 </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
                             <table class="display" id="basic-2">
                                 <thead>
                                     <tr>
+
                                         <th>#</th>
+                                        <th>Image</th>
                                         <th>Specilization</th>                                        <th>Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                  @foreach ($specilizations as $specilization)
                                  <tr>
-                                        <td>{{$specilization->id}}</td>
+                                        <td>{{$Sr++}}</td>
+                                         <td>
+                                             <img src="{{asset('storage/'.$specilization->image)}}" style="max-height: 60px;"/>
+                                         </td>
                                         <td>{{$specilization->title}}</td>
                                         <td>
                                             <a href="{{route('admin.specilization-option.show', $specilization->id)}}">

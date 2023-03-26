@@ -16,6 +16,7 @@ class CreateSpecilizationsTable extends Migration
         Schema::create('specilizations', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

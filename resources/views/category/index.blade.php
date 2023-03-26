@@ -29,7 +29,9 @@
                 <div class="card">
                     <div class="card-header d-flex">
                     <h5 class="card-title">All Categories</h5>
-                    <a href="{{route('admin.category.create')}}" class="btn btn-primary ms-auto">Add Category</a>
+                    <a href="{{route('admin.category.create')}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                        <i data-feather="plus-circle"> </i>
+                        Add Category</a>
                 </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
@@ -73,7 +75,7 @@
                                             </script>
                                         </td>
                                     </tr>
-                                 @endforeach  
+                                 @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -87,7 +89,7 @@
 
 
 
-        
+
     @endsection
 
     @section('script')

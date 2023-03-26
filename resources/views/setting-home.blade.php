@@ -192,7 +192,7 @@
                                 <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('GST(%)') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="gst" type="text" class="form-control @error('company_email') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
+                                    <input id="gst" type="text" class="form-control @error('gst') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
 
                                     @error('gst')
                                     <span class="invalid-feedback" role="alert">
@@ -203,12 +203,12 @@
                             </div>
 
                             <div class="row mb-3 form-group">
-                                <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Shipping Time') }}</label>
+                                <label for="shipping_time" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Shipping Time') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="gst" type="text" class="form-control @error('company_email') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
+                                    <input id="shipping_time" type="text" class="form-control @error('shipping_time') is-invalid @enderror" name="shipping_time" value="{{ old('shipping_time') ?? $data->shipping_time ?? ''}}" required autocomplete="gst" autofocus>
 
-                                    @error('gst')
+                                    @error('shipping_time')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

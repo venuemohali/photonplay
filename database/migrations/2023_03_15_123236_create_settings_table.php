@@ -27,6 +27,9 @@ class CreateSettingsTable extends Migration
             $table->string('company_address')->nullable();
             $table->string('company_phone',15)->nullable();
             $table->string('company_email',100)->nullable();
+            $table->decimal('gst',5,2)->nullable();
+            $table->string('shipping_time')->nullable();
+
             $table->timestamps();
         });
     }

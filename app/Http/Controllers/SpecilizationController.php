@@ -15,8 +15,10 @@ class SpecilizationController extends Controller
      */
     public function index()
     {
-        $specilizations = Specilization::all();
-        return view('specilization.index', compact('specilizations'));
+
+        $specilizations = Specilization::orderBy('id','DESC')->get();
+        $Sr=1;
+        return view('specilization.index', compact('specilizations','Sr'));
     }
 
     /**
@@ -38,11 +40,13 @@ class SpecilizationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique:categories'
+            'title' => 'required|unique:categories',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:512',
         ]);
-
+        $image_path = $request->file('image')->store('image', 'public');
         Specilization::create([
             'title' => $request->title,
+            'image' => $image_path,
         ]);
 
         return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully added');
@@ -81,10 +85,16 @@ class SpecilizationController extends Controller
     public function update(Request $request, $id)
     {
         $specilization = Specilization::find($id);
-
-        $specilization->update([
-            'title' => $request->title,
-        ]);
+        $input = array();
+        $input['title']=$request->title;
+        if(isset($request->image)){
+            $request->validate([
+                'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:512',
+            ]);
+            $image_path = $request->file('image')->store('image', 'public');
+            $input['image']=$image_path;
+        }
+        $specilization->update($input);
 
         return redirect()->route('admin.specilization.index')->with('status', 'Specilization Successfully updated');
     }
