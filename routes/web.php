@@ -115,7 +115,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
 
     });
     Route::get('radar-speed-signs', 'SignController@radarSpeedSigns')->name('radar.speed.signs');
-    Route::get('radar-sign', 'SignController@radarSigns')->name('radar.sign');
+    Route::get('radar-sign/{productId}', 'SignController@radarSigns')->name('radar.sign');
 
     require_once "guest/api.php";
     require_once "guest/api2.php";

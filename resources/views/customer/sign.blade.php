@@ -113,6 +113,7 @@
                     </div>
                 </div>
                 <div class="responsive">
+                    @foreach ($products as $product)
                     <div>
                         <div class="p-2">
                             <div class="inner-product bg-white">
@@ -121,7 +122,7 @@
                                     <span class="d-block weight-font">
                                         Radar Speed Sign
                                     </span>
-                                    <span class="d-block">R1200</span>
+                                    <span class="d-block">{{$product->title}}</span>
                                     <div class="d-flex justify-content-center align-items-center">
                                         <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
@@ -134,123 +135,13 @@
                                         <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                     </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                    <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
+                                    <span class="d-block weight-font">{{$product->price}}</span>
+                                    <a href="{{route('customer.radar.sign', $product->id)}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto position-relative">
-                                    <button
-                                        class="btn btn-primary text-uppercase py-0 rounded-1 position-absolute top-0 start-50 translate-middle">Sale</button>
-                                </div>
-                                <div class="speed-sign text-center mt-3">
-                                    <span class="d-block weight-font">
-                                        Radar Speed Sign
-                                    </span>
-                                    <span class="d-block">R1200</span>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                    </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto"></div>
-                                <div class="speed-sign text-center mt-3">
-                                    <span class="d-block weight-font">
-                                        Radar Speed Sign
-                                    </span>
-                                    <span class="d-block">R1200</span>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                    </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto"></div>
-                                <div class="speed-sign text-center mt-3">
-                                    <span class="d-block weight-font">
-                                        Radar Speed Sign
-                                    </span>
-                                    <span class="d-block">R1200</span>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                    </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto"></div>
-                                <div class="speed-sign text-center mt-3">
-                                    <span class="d-block weight-font">
-                                        Radar Speed Sign
-                                    </span>
-                                    <span class="d-block">R1200</span>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
-                                            width="14px">
-                                    </div>
-                                    <span class="d-block weight-font">$1000</span>
-                                     <a href="{{route('customer.radar.sign')}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -439,46 +330,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="accordion-item border-0">
-                                    <h2 class="accordion-header" id="flush-headingTwo2">
-                                        <button
-                                            class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo2"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo2">
-                                            Accordion Item #2
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo2" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingTwo2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0"><code
-                                                class="d-block"> Overall Width - <span>2350 mm</span></code>
-                                            <code class="d-block">Operational Height - <span>4625 mm</span></code>
-                                            <code class="d-block">Travelling Height - <span>3250 mm</span></code>
-                                            <code class="d-block">Weight -<span>1132 kgs</span></code>
-                                            <code class="d-block"></code>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item border-0">
-                                    <h2 class="accordion-header" id="flush-headingThree3">
-                                        <button
-                                            class="accordion-button collapsed bg-white shadow-none text pb-2 shadow-none"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree1"
-                                            aria-expanded="false" aria-controls="flush-collapseThree1">
-                                            Accordion Item #3
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseThree1" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingThree3" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0"><code
-                                                class="d-block"> Overall Width - <span>2350 mm</span></code>
-                                            <code class="d-block">Operational Height - <span>4625 mm</span></code>
-                                            <code class="d-block">Travelling Height - <span>3250 mm</span></code>
-                                            <code class="d-block">Weight -<span>1132 kgs</span></code>
-                                            <code class="d-block"></code>
-                                        </div>
-                                    </div>
-                                </div> -->
 
                             </div>
                             <div class="stone-accordian position-absolute d-flex align-items-center ">

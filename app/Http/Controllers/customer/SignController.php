@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class SignController extends Controller
 {
     public function radarSpeedSigns(){
-        return view('customer.sign');
+        $products = Product::get();
+        return view('customer.sign', compact('products'));
     }
 
-    public function radarSigns(){
+    public function radarSigns($id){
+        $product = Product::with('images','specilizations.specilization')->find($id);
+        dd($product);
         return view('customer.radar_sign');
     }
 }
