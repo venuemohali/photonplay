@@ -60,7 +60,7 @@
                                         <i data-feather="save"> </i>
                                         Save
                                     </button>
-                                    <a href="{{url('admin/blog-categories')}}" class="btn btn-dark">
+                                    <a href="{{route('admin.product.edit',$product->id)}}" class="btn btn-dark">
                                         <i data-feather="corner-down-right"> </i>
                                         Return Back
                                     </a>

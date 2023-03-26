@@ -17,4 +17,7 @@ class ProductSpecilization extends Model
     public function specilization(){
         return $this->belongsTo(Specilization::class,'specialization_id');
     }
+
+
+
 }

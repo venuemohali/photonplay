@@ -188,6 +188,34 @@
                                 </div>
                             </div>
 
+                            <div class="row mb-3 form-group">
+                                <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('GST(%)') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="gst" type="text" class="form-control @error('company_email') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
+
+                                    @error('gst')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 form-group">
+                                <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Shipping Time') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="gst" type="text" class="form-control @error('company_email') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
+
+                                    @error('gst')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">

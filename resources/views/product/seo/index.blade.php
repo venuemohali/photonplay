@@ -41,16 +41,15 @@
                                         <h6> Product Pricing</h6>
                                     </div>
                                     <hr/>
-                                  <img src="https://mangools.com/blog/wp-content/uploads/2020/12/title-tag-and-meta-description.png" class="w-100"/>
 
-                                    <form method="POST" action="#">
+                                    <form method="POST" action="{{route('admin.product_seo_store')}}">
                                         @csrf
-
+                                        <input type="hidden" name="product_id" value="{{$product->id}}">
                                         <div class="row mb-3 form-group  d-flex align-items-center">
                                             <label for="meta_title" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Meta Title') }}</label>
 
                                             <div class="col-md-8">
-                                                <input type="text" name="meta_title" class="form-control" placeholder="Meta Title" >
+                                                <input type="text" name="meta_title" class="form-control" placeholder="Title must be within 70 Character"  value="{{ old('meta_title') ??  $product_seo->meta_title ?? ''}}">
 
                                                 @error('meta_title')
                                                 <span class="invalid-feedback" role="alert">
@@ -64,7 +63,7 @@
                                             <label for="meta_description" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Meta Description') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  name="meta_description" class="form-control" placeholder="Meta Description" ></textarea>
+                                                <textarea  name="meta_description" class="form-control" placeholder="Description must be within 150 Character" >{{ old('meta_description') ??  $product_seo->meta_description ?? ''}}</textarea>
 
                                                 @error('meta_description')
                                                 <span class="invalid-feedback" role="alert">
@@ -78,7 +77,7 @@
                                             <label for="meta_keywords" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Meta Keywords') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  name="meta_keywords" class="form-control" placeholder="Meta Keywords" ></textarea>
+                                                <textarea  name="meta_keywords" class="form-control" placeholder="Keyword1, keyword2, keyword3, keyword4" >{{ old('meta_keywords') ??  $product_seo->meta_keywords ?? ''}}</textarea>
 
                                                 @error('meta_keywords')
                                                 <span class="invalid-feedback" role="alert">
@@ -91,7 +90,8 @@
 
                                         <div class="row ">
                                             <div class="col-md-12 d-flex justify-content-center ">
-                                                <button type="submit" class="btn btn-primary">
+                                                <button type="submit" class="btn btn-primary d-flex align-items-center">
+                                                    <i data-feather="save"> </i>
                                                     {{ __('Save') }}
                                                 </button>
                                             </div>
@@ -99,6 +99,9 @@
 
 
                                     </form>
+
+                                    <img src="{{asset('assets/admin/product_seo.png')}}" class="w-100"/>
+
 
                                 </div>
 

@@ -94,8 +94,14 @@
                                             <div class="col-md-8">
                                                 <select  name="price_type_set" class="form-select" >
                                                     <option selected disabled>--Select Pricing Type--</option>
-                                                    <option value="normal" {{$product_price->price_type_set=="normal"?'selected':''}}> Normal </option>
-                                                    <option value="sale"  {{$product_price->price_type_set=="sale"?'selected':''}}> Sale </option>
+
+                                                    @if($product_price)
+                                                        <option value="normal" {{$product_price->price_type_set=="normal"?'selected':''}}> Normal </option>
+                                                        <option value="sale"  {{$product_price->price_type_set=="sale"?'selected':''}}> Sale </option>
+                                                    @else
+                                                        <option value="normal"> Normal </option>
+                                                        <option value="sale"> Sale </option>
+                                                    @endif
                                                 </select>
 
                                                 @error('price_type_set')
@@ -109,7 +115,8 @@
 
                                         <div class="row ">
                                             <div class="col-md-12 d-flex justify-content-center ">
-                                                <button type="submit" class="btn btn-primary">
+                                                <button type="submit" class="btn btn-primary d-flex align-items-center">
+                                                    <i data-feather="save"> </i>
                                                     {{ __('Save') }}
                                                 </button>
                                             </div>
@@ -150,7 +157,8 @@
 
                                         <div class="row ">
                                             <div class="col-md-12 d-flex justify-content-center ">
-                                                <button type="submit" class="btn btn-primary">
+                                                <button type="submit" class="btn btn-primary d-flex justify-content-center  align-items-center">
+                                                    <i data-feather="save"> </i>
                                                     {{ __('Save') }}
                                                 </button>
                                             </div>

@@ -29,7 +29,9 @@
                 <div class="card">
                     <div class="card-header d-flex">
                     <h5 class="card-title">All Products</h5>
-                    <a href="{{route('admin.product.create')}}" class="btn btn-primary ms-auto">Add Product</a>
+                    <a href="{{route('admin.product.create')}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                        <i data-feather="plus-circle"> </i>
+                        Add Product</a>
                 </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
@@ -39,7 +41,7 @@
                                         <th>#</th>
                                         <th>Title</th>
                                         <th>Price</th>
-                                        <th>Created By</th>
+                                        <th>Created at</th>
                                         {{-- <th>Status </th> --}}
                                         <th>Options</th>
                                     </tr>

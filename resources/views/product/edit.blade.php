@@ -66,7 +66,7 @@
     <tr id="Item-{{$item->id}}">
         <td>{{$Sr++}}</td>
         <td>{{$item->specilization()->first()->title }}</td>
-        <td>2</td>
+        <td>{{$item->counts}}</td>
         <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
         <td>
             <a href="{{ url('admin/product-specification-options/'.$product->id.'/'.$item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">

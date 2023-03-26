@@ -63,8 +63,12 @@
                                             </div>
 
                                             <div class="col-md-4">
-                                                <div style="height: 300px;width: 300px;" class="border">
+                                                <div style="height: 300px;width: 300px;" class="border d-flex align-items-center justify-content-center">
+                                                    @if(isset($product->cover_image))
                                                     <img src="{{asset('storage/'.$product->cover_image)}}" class="w-100"/>
+                                                    @else
+                                                        <p> No Image uploaded yet</p>
+                                                    @endif
                                                 </div>
                                             </div>
 

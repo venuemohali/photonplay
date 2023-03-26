@@ -26,13 +26,22 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5> Setup</h5>
+                        <div>
+                            <a href="{{route('admin.product.edit',$product->id)}}" class="d-flex align-items-center">
+                                <i data-feather="corner-down-right"> </i>
+                               Back</a>
+
+                        </div>
+
                         <hr/>
 
                         <div class="row">
                             <div class="col-md-12 d-flex">
                                 <h5>Product Specifications Options</h5>
-                                <a href="{{ url('/admin/product-specification-options/'.$product->id.'/'.$specialization_id).'/form'}}" class="btn btn-primary ms-auto">Add  Options</a>
+                                <a href="{{ url('/admin/product-specification-options/'.$product->id.'/'.$specialization_id).'/form'}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                                    <i data-feather="plus-circle"> </i>
+                                    Add  Options</a>
+
                             </div>
 
                         </div>

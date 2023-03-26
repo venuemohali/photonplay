@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductSpcializationOption;
 use App\Models\ProductSpecilization;
 use App\Models\Specilization;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products=Product::get();
+        $products=Product::orderBy('id','DESC')->get();
         $Sr = 1;
         return view('product.index',compact('products','Sr'));
     }
@@ -78,7 +79,9 @@ class ProductController extends Controller
         $product=Product::find($id);
 
         $product_specilizations=ProductSpecilization::with('specilization')->get();
-
+         foreach ($product_specilizations as $prd){
+             $prd['counts']=ProductSpcializationOption::where('product_specilizations_id',$prd->id)->count();
+         }
         $Sr=1;
         return view('product.edit',compact('specializations','product','product_specilizations','Sr'));
     }
