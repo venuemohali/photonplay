@@ -20,7 +20,7 @@ class customerCheck
     {
         if (!Session::get('user'))
         {
-            return redirect('login')->withErrors('Invalid Creds');
+            return redirect('/')->withErrors('Invalid Creds');
         }
         return $next($request);
     }

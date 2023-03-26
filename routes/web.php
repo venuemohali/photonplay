@@ -6,6 +6,8 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CMSHomeController;
+use App\Http\Controllers\customer\Auth\LoginController;
+use App\Http\Controllers\customer\CustomerProfileController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
 use App\Http\Controllers\NotificationsController;
@@ -121,6 +123,8 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
     //    Route::get('/', [HomePageController::class,'index'])->name('homepage');
 
     Route::group(['middleware' => 'customerCheck'], function () {
+        Route::get('edit-profile', [CustomerProfileController::class, 'editProfile'])->name('edit.profile.form');
+        Route::get('logout', [LoginController::class, 'logout'])->name('logout');
         Route::get('dashboard', function () {
             dd(Auth::guard('customer')->user());
         })->name('dashboard');
