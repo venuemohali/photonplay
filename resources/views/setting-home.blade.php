@@ -192,7 +192,7 @@
                                 <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('GST(%)') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="gst" type="text" class="form-control @error('gst') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->company_email ?? ''}}" required autocomplete="gst" autofocus>
+                                    <input id="gst" type="text" class="form-control @error('gst') is-invalid @enderror" name="gst" value="{{ old('gst') ?? $data->gst ?? ''}}" required autocomplete="gst" autofocus>
 
                                     @error('gst')
                                     <span class="invalid-feedback" role="alert">
