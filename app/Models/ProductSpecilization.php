@@ -18,6 +18,8 @@ class ProductSpecilization extends Model
         return $this->belongsTo(Specilization::class,'specialization_id');
     }
 
-
+    public function options(){
+        return $this->hasMany(ProductSpcializationOption::class);
+    }
 
 }
