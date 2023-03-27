@@ -21,7 +21,7 @@
                         <div>
                             <div class="p-2">
                                 <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
+                                    <img src="{{ url('storage/'.$product->cover_image) }}" alt="Not Found" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -71,9 +71,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="multiple-optionn pb-0 pt-lg-0 pt-5 pb-0">
-                        <h4>RADAR SPEED SIGN</h4>
+                        <h4>{{$product->category->title}}</h4>
                         <span class="text-capitalize d-block">
-                            RADAR SPEED SIGN
+                            {{$product->title}}
                         </span>
                         <div class="d-flex justify-content-start align-items-center">
                             <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
@@ -83,7 +83,7 @@
                             <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                             <span>( 150+ Customers Reviews)</span>
                         </div>
-                        <p class="fw-bold fs-5">$1000</p>
+                        <p class="fw-bold fs-5">${{$product->price}}</p>
                         <div>
                             <p class="specific-heading">Select Specification</p>
                             <div class="d-md-flex justify-content-between align-items-center gap-3 mb-3">
