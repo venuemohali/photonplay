@@ -27,20 +27,21 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach($carts as $cart)
                             <tr>
                                 <td class="border border-end">
                                     <div class="d-flex align-items-center">
                                         <img src="./assets/images/Product-sign.png" alt="Not Found"
                                             class="profile-table me-2">
                                         <div class="d-flex flex-column">
-                                            <h6 class="text-uppercase">dummy product name</h6>
-                                            <span>Brand : RSS</span>
-                                            <span>Model: iCop 1200</span>
-                                            <span>Color : Yellow</span>
+                                            <h6 class="text-uppercase">{{$cart->category}}</h6>
+                                            <span>Brand : {{$cart->title}}</span>
+                                            {{-- <span>Model: iCop 1200</span> --}}
+                                            <span>Color : {{$cart->color}}</span>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="border border-end text-center">$1000.00</td>
+                                <td class="border border-end text-center">${{$cart->price}}</td>
                                 <td class="border border-end text-center"><button>-</button><input type="text"
                                         class="inputt-table" placeholder="02"><button>+</button></td>
                                 <td class="border border-end text-center">$2000.00</td>
@@ -48,90 +49,7 @@
                                         alt="Not Found">
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="border border-end">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./assets/images/Product-sign.png" alt="Not Found"
-                                            class="profile-table me-2">
-                                        <div class="d-flex flex-column">
-                                            <h6 class="text-uppercase">dummy product name</h6>
-                                            <span>Brand : RSS</span>
-                                            <span>Model: iCop 1200</span>
-                                            <span>Color : Yellow</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="border border-end text-center">$1000.00</td>
-                                <td class="border border-end text-center"><button>-</button><input type="text"
-                                        class="inputt-table" placeholder="02"><button>+</button></td>
-                                <td class="border border-end text-center">$2000.00</td>
-                                <td class="border border-end text-center"><img src="./assets/images/crosss.png"
-                                        alt="Not Found">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-end">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./assets/images/Product-sign.png" alt="Not Found"
-                                            class="profile-table me-2">
-                                        <div class="d-flex flex-column">
-                                            <h6 class="text-uppercase">dummy product name</h6>
-                                            <span>Brand : RSS</span>
-                                            <span>Model: iCop 1200</span>
-                                            <span>Color : Yellow</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="border border-end text-center">$1000.00</td>
-                                <td class="border border-end text-center"><button>-</button><input type="text"
-                                        class="inputt-table" placeholder="02"><button>+</button></td>
-                                <td class="border border-end text-center">$2000.00</td>
-                                <td class="border border-end text-center"><img src="./assets/images/crosss.png"
-                                        alt="Not Found">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-end">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./assets/images/Product-sign.png" alt="Not Found"
-                                            class="profile-table me-2">
-                                        <div class="d-flex flex-column">
-                                            <h6 class="text-uppercase">dummy product name</h6>
-                                            <span>Brand : RSS</span>
-                                            <span>Model: iCop 1200</span>
-                                            <span>Color : Yellow</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="border border-end text-center">$1000.00</td>
-                                <td class="border border-end text-center"><button>-</button><input type="text"
-                                        class="inputt-table" placeholder="02"><button>+</button></td>
-                                <td class="border border-end text-center">$2000.00</td>
-                                <td class="border border-end text-center"><img src="./assets/images/crosss.png"
-                                        alt="Not Found">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-end">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./assets/images/Product-sign.png" alt="Not Found"
-                                            class="profile-table me-2">
-                                        <div class="d-flex flex-column">
-                                            <h6 class="text-uppercase">dummy product name</h6>
-                                            <span>Brand : RSS</span>
-                                            <span>Model: iCop 1200</span>
-                                            <span>Color : Yellow</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="border border-end text-center">$1000.00</td>
-                                <td class="border border-end text-center "><button>-</button><input type="text"
-                                        class="inputt-table" placeholder="02"><button>+</button></td>
-                                <td class="border border-end text-center">$2000.00</td>
-                                <td class="border border-end text-center"><img src="./assets/images/crosss.png"
-                                        alt="Not Found">
-                                </td>
-                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
