@@ -117,7 +117,9 @@
                     <div>
                         <div class="p-2">
                             <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto"></div>
+                                <div class="w-100 h-100 light-product m-auto">
+                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="">
+                                </div>
                                 <div class="speed-sign text-center mt-3">
                                     <span class="d-block weight-font">
                                         Radar Speed Sign
