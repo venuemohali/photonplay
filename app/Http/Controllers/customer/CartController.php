@@ -10,24 +10,32 @@ use Illuminate\Support\Facades\Session;
 class CartController extends Controller
 {
     public function shoppingBag(){
-        $carts = Cart::get();
+        $carts =  json_decode($_COOKIE['cart_cookie']);
         return view('customer.cart.shopping_bag', compact('carts'));
     }
 
     public function addShoppingBag(Request $request){
+        if(!Session::get('user')){
+            $cart = array();
+            if(!empty($_COOKIE['cart_cookie'])){
+                $cart = json_decode($_COOKIE['cart_cookie'], true);
+            }
 
-        $product = Cart::updateOrCreate([
-            'user_id' => Session::get('user')->id,
-            'product_id' => $request->product_id,
-            'price' => $request->price,
-        ],[
-            'title' => $request->title,
-            'category' => $request->category,
-            'quantity' => $request->quantity,
-            'cover_image' => $request->cover_image,
-        ]);
-
-        return view('customer.cart.shopping_bag');
+            array_push($cart, $request->except('_token'));
+            setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
+        }else{
+            Cart::updateOrCreate([
+                'user_id' => Session::get('user')->id,
+                'product_id' => $request->product_id,
+                'price' => $request->price,
+            ],[
+                'title' => $request->title,
+                'category' => $request->category,
+                'quantity' => $request->quantity,
+                'cover_image' => $request->cover_image,
+            ]);
+        }
+        return redirect()->route('customer.shopping.bag');
     }
 
     public function confirmation(){
