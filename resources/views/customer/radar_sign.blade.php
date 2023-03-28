@@ -93,6 +93,25 @@
                         <p class="fw-bold fs-5">${{$product->price}}</p>
                         <div>
                             <p class="specific-heading">Select Specification</p>
+                            <div class="row mt-3">
+
+                                {{-- Loop to Start Specifications--}}
+                                @for($i=0;$i<10;$i++)
+                                <div class="col-md-6 mb-3">
+                                    <div class="specification p-3 ">
+                                        <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 " > Batteries </h6>
+                                        <p> <input type="checkbox" > 3 Days (+$0)
+                                        </p>
+                                        <p class="mb-0"><input type="checkbox"> 6 Days
+                                            (+$50)
+                                        </p>
+                                    </div>
+                                </div>
+                                @endfor
+                                {{-- Loop to end Specifications--}}
+                            </div>
+
+
                             <div class="d-md-flex justify-content-between align-items-center gap-3 mb-3">
                                 <div class="specification p-3 w-100">
                                     <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2"> Batteries </h6>
@@ -113,6 +132,9 @@
                                     </p>
                                 </div>
                             </div>
+
+
+
                             <div class="d-md-flex justify-content-between align-items-center gap-3 mb-3">
                                 <div class="specification p-3 w-100">
                                     <h6> <img src="{{asset('assets\customer\images\power-button.png')}}" alt="Not Found" class="me-2">
