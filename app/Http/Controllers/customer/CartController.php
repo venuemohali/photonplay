@@ -11,6 +11,10 @@ class CartController extends Controller
         return view('customer.cart.shopping_bag');
     }
 
+    public function addShoppingBag(Request $request){
+        dd($request->all());
+    }
+
     public function confirmation(){
         return view('customer.cart.confirmation');
     }

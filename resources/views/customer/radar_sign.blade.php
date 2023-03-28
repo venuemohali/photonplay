@@ -16,7 +16,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-
+                <form action="{{route('customer.store.shopping.bag')}}" method="post">
+                    @csrf
+                    <input type="text" name="product_id" id="product_id" value="{{$product->id}}">
+                    <input type="text" name="title" id="title" value="{{$product->title}}">
+                    <input type="text" name="category" id="category" value="{{$product->category->title}}">
+                    <input type="text" name="price" id="price" value="{{$product->price}}">
+                    <input type="text" name="quantity" id="quantity" value="1">
+                    <input type="text" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
                     <div class="responsive-two">
                         <div>
                             <div class="p-2">
@@ -163,7 +170,7 @@
                         <span class="border-1 border-right d-block  pe-lg-5 pe-4">Order
                             Summary</span>
                         <div class="border-left  ">
-                            <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">RADAR SPEED SIGN | R1200</p>
+                            <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">{{$product->category->title}} | {{$product->title}}</p>
                             <p class="mb-0 opacity-50">Yellow | 3 Days Batteries | Solar Powered | Pole Mount | 2
                                 years
                                 warranty</p>
@@ -174,16 +181,18 @@
                     <div class="d-md-flex  justify-content-end mt-lg-0 mt-4 buy-right align-items-center">
                         <div class="d-flex order-input">
                             <button class="btn border rounded-0 px-3">-</button>
-                            <input type="text" name="text" id="" placeholder="1"
+                            <input type="text" id="" placeholder="1"
                                 class="w-100 h-100 rounded-0 border-1 text-center border-light border-1">
                             <button class="btn border rounded-0 px-3">+</button>
                         </div>
                         <div class=" px-4 py-lg-0 py-4">
-                            <span class="one-thoshand">1000</span>
+                            <span class="one-thoshand">${{$product->price}}</span>
                         </div>
-                        <button class="btn btn-dark rounded-0 text-nowrap align-self-center px-4">Buy Now</button>
+                        <button type="submit" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4">Buy Now</button>
                     </div>
                 </div>
+            </form>
+
                 <!-- </div> -->
             </div>
         </div>
