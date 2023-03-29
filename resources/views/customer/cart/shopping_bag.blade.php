@@ -48,7 +48,9 @@
                             </td>
                         </tr>
                         @empty
-                        <th>No Item in cart</th>
+                        <tr >
+                        <td colspan="5" align="center" > <span class="h6"> No Item in cart </span></td>
+                        </tr>
                         @endforelse
                     </tbody>
                 </table>
