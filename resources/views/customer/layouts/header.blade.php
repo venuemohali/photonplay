@@ -1,3 +1,16 @@
+@php
+if(isset($_COOKIE['cart_cookie'])){
+    $currency = '$';
+    $cartPrice = 0;
+    foreach(json_decode($_COOKIE['cart_cookie'], true) as $item){
+        $cartPrice += $item['price'] * $item['quantity'];
+    }
+}else{
+    $currency = '';
+    $cartPrice = '';
+}
+
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,9 +80,12 @@
                     </ul>
                     <form class="d-none  d-lg-flex header-side mt-lg-0 mt-4" role="search">
                         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                        
+
                         @if (!Session::get('user'))
                         <div class="d-flex align-items-center">
+
+                            <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
+
                             <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5">
                         </div>
                         <a href="{{route('customer.loginForm')}}"> <img src="{{asset('assets\customer\images\user.png')}}" alt="Not Found" class="img-fluid "> </a>
@@ -89,7 +105,7 @@
                             </div>
                         </div>
                         @endif
-                       
+
                     </form>
                 </div>
             </div>
