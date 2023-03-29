@@ -41,7 +41,7 @@
                                 </div>
                             </td>
                             <td class="border border-end text-center">${{$cart->price}}</td>
-                            <td class="border border-end text-center"><button>-</button><input type="text" class="inputt-table" placeholder="02"><button>+</button></td>
+                            <td class="border border-end text-center">{{$cart->quantity}}</td>
                             <td class="border border-end text-center">${{$cart->price * $cart->quantity}}</td>
                             <td class="border border-end text-center"><a href="{{route('customer.remove.cartitem', $key)}}"><img src="{{asset('assets/customer/images/crosss.png')}}" alt="Not Found" class="cartItem"></a>
 

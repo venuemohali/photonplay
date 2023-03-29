@@ -18,12 +18,11 @@
                 <div class="col-lg-6">
                 <form action="{{route('customer.store.shopping.bag')}}" method="post">
                     @csrf
-                    <input type="text" name="product_id" id="product_id" value="{{$product->id}}">
-                    <input type="text" name="title" id="title" value="{{$product->title}}">
-                    <input type="text" name="category" id="category" value="{{$product->category->title}}">
-                    <input type="text" name="price" id="price" value="{{$product->price}}">
-                    <input type="text" name="quantity" id="quantity" value="1">
-                    <input type="text" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
+                    <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
+                    <input type="hidden" name="title" id="title" value="{{$product->title}}">
+                    <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
+                    <input type="hidden" name="price" id="price" value="{{$product->price}}">
+                    <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
                     <div class="responsive-two">
                         <div>
                             <div class="p-2">
@@ -201,12 +200,9 @@
                 </div>
                 <div class=" col-lg-4 col-md-4">
                     <div class="d-md-flex  justify-content-end mt-lg-0 mt-4 buy-right align-items-center">
-                        <div class="d-flex order-input">
-                            <button class="btn border rounded-0 px-3">-</button>
-                            <input type="text" id="" placeholder="1"
-                                class="w-100 h-100 rounded-0 border-1 text-center border-light border-1">
-                            <button class="btn border rounded-0 px-3">+</button>
-                        </div>
+                        <a class="btn" onclick="increment()">+</a>
+                        <input id=demoInput type=number name="quantity" value="1" min=1 max=100>
+                            <a class="btn" onclick="decrement()">-</a>
                         <div class=" px-4 py-lg-0 py-4">
                             <span class="one-thoshand">${{$product->price}}</span>
                         </div>
@@ -286,4 +282,11 @@
             autoplay: true,
             arrows: false
         });
-    </script>
+
+   function increment() {
+      document.getElementById('demoInput').stepUp();
+   }
+   function decrement() {
+      document.getElementById('demoInput').stepDown();
+   }
+</script>
