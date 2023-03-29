@@ -45,4 +45,19 @@ class CartController extends Controller
     public function checkout(){
         return view('customer.cart.checkout');
     }
+
+    public function removeCartItem($id){
+        //  json_decode($_COOKIE['cart_cookie'])[$id];
+
+        $arrays = json_decode($_COOKIE['cart_cookie'], true);
+        unset($arrays[$id]);
+
+        // return json_decode($_COOKIE['cart_cookie'], true);
+        // foreach($arrays as $key => $array){
+        //     unset($array[$key][$id]);
+        // }
+
+        setcookie('cart_cookie', json_encode($arrays), time() + 3600, "/");
+        return redirect()->route('customer.shopping.bag');
+    }
 }
