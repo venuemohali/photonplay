@@ -27,6 +27,8 @@ class Customer extends Authenticatable
         'provider',
         'provider_id',
         'created_by',
+        'phone_number',
+        'company_name',
     ];
     /**
      * The attributes that should be hidden for serialization.
