@@ -31,7 +31,7 @@
                         <h5 class="card-title">All Coupons</h5>
                         <a href="{{route('admin.coupons.create')}}" class="btn btn-primary ms-auto d-flex align-items-center">
                             <i data-feather="plus-circle"> </i>
-                            Add Coupons</a>
+                            Add Coupon</a>
                     </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
