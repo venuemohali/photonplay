@@ -69,7 +69,7 @@
                             <h3>coupon discount</h3>
                             <label class="d-block mb-3 opacity-50">Enter your coupon code if you have one!</label>
                             <input type="text" class="form-control rounded-0 mb-4" placeholder="Enter your code here.">
-                            <button class="btn btn-primary rounded-0 ">apply coupon</button>
+                            <button class="btn btn-primary rounded-0 ">Apply Coupon</button>
                         </div>
                     </div>
                     <div class="col-md-6">

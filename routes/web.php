@@ -123,7 +123,16 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
     //    Route::get('/', [HomePageController::class,'index'])->name('homepage');
 
     Route::group(['middleware' => 'customerCheck'], function () {
-        Route::get('edit-profile', [CustomerProfileController::class, 'editProfile'])->name('edit.profile.form');
+        Route::get('edit-overview', [CustomerProfileController::class, 'overview'])->name('overview');
+        Route::get('edit-address', [CustomerProfileController::class, 'address'])->name('address');
+        Route::get('edit-history', [CustomerProfileController::class, 'history'])->name('history');
+        Route::get('edit-profile', [CustomerProfileController::class, 'editProfileForm'])->name('edit.profile');
+        Route::get('edit-saved-card', [CustomerProfileController::class, 'savedCard'])->name('edit.saved.card');
+        Route::get('add-new-address', [CustomerProfileController::class, 'addAddressForm'])->name('add.address.form');
+
+        Route::post('update-profile', [CustomerProfileController::class, 'profileUpdate'])->name('update.profile');
+        Route::post('add-address', [CustomerProfileController::class, 'storeAddress'])->name('add.address');
+
         Route::get('logout', [LoginController::class, 'logout'])->name('logout');
         Route::get('dashboard', function () {
             dd(Auth::guard('customer')->user());
