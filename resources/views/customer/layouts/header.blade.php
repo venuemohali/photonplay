@@ -114,10 +114,11 @@ if(isset($_COOKIE['cart_cookie'])){
 </head>
 
 <body>
-    @notifyCss
-    @include('notify::components.notify')
-    <x:notify-messages />
-    @notifyJs
+{{--    @notifyCss--}}
+{{--    @include('notify::components.notify')--}}
+{{--    <x:notify-messages />--}}
+{{--    @notifyJs--}}
+
 
 </body>
 
