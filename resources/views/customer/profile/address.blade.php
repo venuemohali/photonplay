@@ -11,21 +11,25 @@
 
                             </div>
                             <div class="d-md-flex gap-4 mt-5">
-                                <div
+                               <a href="{{route('customer.add.address.form')}}"> <div
                                     class="order-address text-center bg-white p-4 border d-flex flex-column align-items-center justify-content-center">
                                     <img src="{{asset('assets/customer/images/pluse-add.png')}}" alt="Not Found" class="mb-4">
                                     <h6 class="text-grey">ADD NEW ADDRESS</h6>
                                     <p>Check your order status</p>
-                                </div>
+                                </div></a>
+                                @foreach ($user->address as $address)
                                 <div class="order-address text-center bg-white p-4 border mt-4 mt-md-0">
                                     <img src="{{asset('assets/customer/images/address-review.png')}}" alt="Not Found" class="mb-4">
-                                    <h6>CUSTOMER NAME</h6>
-                                    <p class="mb-0">H. N. 87, st. N. 9</p>
-                                    <p class="mb-0">Vasant colony</p>
-                                    <p>Jaipur, RAJASTHAN</p>
-                                    <p>Mobile: 00000 00000</p>
+                                    <h6>{{$user->name}}</h6>
+                                    <p class="mb-0">{{$address->street_number}}</p>
+                                    <p class="mb-0">{{$address->flat_suite}}</p>
+                                    <p class="mb-0">{{$address->city}} , {{$address->state}}</p>
+                                    <p class="mb-0">{{$address->country}}</p>
+                                    <p class="mb-0">{{$address->postcode}}</p>
+                                    @if($user->phone_numner)<p>Mobile: {{$user->phone_numner}}</p>@endif
                                     <p class="text-grey">Edit | Remove | Set as Default</p>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

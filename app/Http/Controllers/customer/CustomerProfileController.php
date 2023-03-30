@@ -4,6 +4,7 @@ namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\User;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -17,7 +18,8 @@ class CustomerProfileController extends Controller
     }
 
     public function address(){
-        return view('customer.profile.address');
+        $user = User::with('address')->find(Session::get('user')->id);
+        return view('customer.profile.address', compact('user'));
     }
 
     public function history(){
