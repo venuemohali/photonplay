@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CouponController;
 use App\Http\Controllers\ProductMediaController;
 use App\Http\Controllers\ProductPricingController;
 use App\Http\Controllers\ProductSeoController;
@@ -35,4 +36,5 @@ Route::post('/product/edit/quantity', [ProductPricingController::class, 'open_qu
 Route::get('/product/{id}/edit/seo', [ProductSeoController::class, 'open_seo_form'])->name("product_seo_page");
 Route::post('/product/edit/seo', [ProductSeoController::class, 'open_seo_edit_store'])->name("product_seo_store");
 
+Route::resource('coupons', CouponController::class);
 

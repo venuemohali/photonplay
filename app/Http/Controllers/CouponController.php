@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Coupon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CouponController extends Controller
 {
@@ -14,8 +15,9 @@ class CouponController extends Controller
      */
     public function index()
     {
-        $coupon = Coupon::paginate(10);
-
+        $coupons = Coupon::paginate(10);
+        $Sr=1;
+        return view('coupon.index',compact('coupons','Sr'));
     }
 
     /**
@@ -25,7 +27,7 @@ class CouponController extends Controller
      */
     public function create()
     {
-        //
+        return view('coupon.create');
     }
 
     /**
@@ -36,19 +38,17 @@ class CouponController extends Controller
      */
     public function store(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'coupon_name' => 'required|unique:coupons',
             'type' => 'required|in:1,2',
             'value' => 'required|integer',
-            'expiry_date' => 'required|date_format:m-d-Y|after_or_equal:now',
+            'expiry_date' => 'required|date_format:Y-m-d|after_or_equal:now',
             'is_used' => 'nullable|integer',
         ]);
 
         if($validator->fails()){
-            return response()->json([
-                'status' => false,
-                'message' => $validator->errors()->first(),
-            ]);
+            return redirect()->back()->with('error',  $validator->errors()->first());
         }
 
         $coupon = Coupon::create([
@@ -59,6 +59,9 @@ class CouponController extends Controller
             'is_used' => $request->is_used,
             'status' => 1,
         ]);
+
+        return redirect()->route('admin.coupons.index')->with('success', 'New coupon successfully added !');;
+
     }
 
     /**
@@ -80,7 +83,11 @@ class CouponController extends Controller
      */
     public function edit($id)
     {
-        //
+        $coupon = Coupon::find($id);
+        if(!isset($coupon)){
+            abort(404);
+        }
+        return view('coupon.edit',compact('coupon',));
     }
 
     /**
@@ -93,18 +100,14 @@ class CouponController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'coupon_name' => 'unique:coupons,coupon_name',
             'type' => 'in:1,2',
             'value' => 'integer',
-            'expiry_date' => 'date_format:m-d-Y|after_or_equal:now',
+            'expiry_date' => 'required|date_format:Y-m-d|after_or_equal:now',
             'is_used' => 'nullable|integer',
         ]);
 
         if($validator->fails()){
-            return response()->json([
-                'status' => false,
-                'message' => $validator->errors()->first(),
-            ]);
+            return redirect()->back()->with('error',  $validator->errors()->first());
         }
 
         $coupon = Coupon::find($id);
@@ -125,10 +128,17 @@ class CouponController extends Controller
             if($request->is_used){
                 $input['is_used'] = $request->is_used;
             }
+
+            if($request->status){
+                $input['status'] = $request->status;
+            }
+
+
             $coupon->update($input);
 
         }
-      return redirect()->back();
+
+        return redirect()->back()->with('success', 'Coupon successfully updated');
     }
 
     /**
@@ -142,8 +152,10 @@ class CouponController extends Controller
         $coupon = Coupon::find($id);
         if($coupon){
             $coupon->delete();
-
         }
-        return redirect()->back();
+        return response()->json([
+            "success"=>true,
+            "message"=>"deleted successfully !"
+        ]);
     }
 }

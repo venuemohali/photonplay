@@ -194,8 +194,5 @@
     })
     @endif
 
-
-
-
 </script>
 @endsection
