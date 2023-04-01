@@ -2,6 +2,7 @@
 
 namespace App\View\Components\customer;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\View\Component;
 
 class ProfileSidebar extends Component
@@ -11,6 +12,7 @@ class ProfileSidebar extends Component
      *
      * @return void
      */
+    
     public function __construct()
     {
         //
@@ -23,6 +25,7 @@ class ProfileSidebar extends Component
      */
     public function render()
     {
-        return view('components.customer.profile-sidebar');
+        $username = Session::get('user')->name;
+        return view('components.customer.profile-sidebar', compact('username'));
     }
 }

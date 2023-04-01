@@ -27,7 +27,8 @@
                                     <p class="mb-0">{{$address->country}}</p>
                                     <p class="mb-0">{{$address->postcode}}</p>
                                     @if($user->phone_numner)<p>Mobile: {{$user->phone_numner}}</p>@endif
-                                    <p class="text-grey">Edit | Remove | Set as Default</p>
+                                    <p class="text-grey"><a href="{{ route('customer.edit.address', $address->id) }}"> Edit </a> 
+                                     | <a href="{{ route('customer.delete.address', $address->id) }}"> Remove </a> @if (!$address->is_default)| <a href="{{ route('customer.default.address', $address->id) }}"> Set as Default </a></p>@endif
                                 </div>
                                 @endforeach
                             </div>

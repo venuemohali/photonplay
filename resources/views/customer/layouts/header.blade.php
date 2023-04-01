@@ -100,8 +100,8 @@ if(isset($_COOKIE['cart_cookie'])){
                                 <p class="text-capitalize mb-0">{{Session::get('user')->name}}</p>
                             </div>
                             <div class="profile-circle">
-                                <img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
-                                    class="img-fluid rounded-circle d-block" width="36" height="36">
+                            <a href="{{route('customer.edit.profile')}}"><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
+                                    class="img-fluid rounded-circle d-block" width="36" height="36"></a>
                             </div>
                         </div>
                         @endif

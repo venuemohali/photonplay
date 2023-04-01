@@ -18,7 +18,7 @@ class CustomerProfileController extends Controller
     }
 
     public function address(){
-        $user = User::with('address')->find(Session::get('user')->id);
+        $user = Customer::with('address')->find(Session::get('user')->id);
         return view('customer.profile.address', compact('user'));
     }
 
@@ -61,7 +61,7 @@ class CustomerProfileController extends Controller
             'city' => 'required',
             'state' => 'required',
             'country' => 'required',
-            'postcode' => 'required',
+            'postcode' => 'required|integer',
         ]);
 
         $data = $request->except('_token');
@@ -69,6 +69,44 @@ class CustomerProfileController extends Controller
 
         UserAddress::create($data);
 
+        return redirect()->route('customer.address');
+    }
+
+    public function editAddress($id){
+        $address = UserAddress::find($id);
+        return view('customer.profile.edit_address', compact('address'));
+    }
+
+    public function updateAddress(Request $request){
+        $address = UserAddress::find($request->id);
+        $request->validate([
+            'postcode' => 'nullable|integer',
+        ]);
+
+        $address->update([
+            'street_number' => $request->street_number,
+            'flat_suite' => $request->flat_suite,
+            'city' => $request->city,
+            'state' => $request->state,
+            'country' => $request->country,
+            'postcode' => $request->postcode,
+        ]);
+
+        return redirect()->route('customer.address');
+    }
+
+    public function deleteAddress($id){
+        $address = UserAddress::find($id);
+        $address->delete();
+        return redirect()->route('customer.address');
+    }
+    
+    public function defaultAddress($id){
+        UserAddress::where('user_id', Session::get('user')->id)->update(['is_default' => null]);
+        $address = UserAddress::find($id);
+        $address->update([
+            'is_default' => 1,
+        ]);
         return redirect()->route('customer.address');
     }
 }

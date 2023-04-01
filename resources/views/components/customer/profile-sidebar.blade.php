@@ -1,7 +1,7 @@
 <div class="col-lg-12">
                             <div class="overview-headingh border-bottom border-2 pb-3">
                                 <h6 class="mb-0">Account</h6>
-                                <span class="f-6">User Name</span>
+                                <span class="f-6">{{$username}}</span>
                             </div>
                         </div>
                         <div class="col-lg-4  col-md-6 col-12 border-end border-2">

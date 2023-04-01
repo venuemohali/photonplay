@@ -132,6 +132,12 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
 
         Route::post('update-profile', [CustomerProfileController::class, 'profileUpdate'])->name('update.profile');
         Route::post('add-address', [CustomerProfileController::class, 'storeAddress'])->name('add.address');
+        Route::get('edit-address/{id}', [CustomerProfileController::class, 'editAddress'])->name('edit.address');
+        Route::post('update-address', [CustomerProfileController::class, 'updateAddress'])->name('update.address');
+        Route::get('delete-address/{id}', [CustomerProfileController::class, 'deleteAddress'])->name('delete.address');
+        Route::get('default-address/{id}', [CustomerProfileController::class, 'defaultAddress'])->name('default.address');
+
+
 
         Route::get('logout', [LoginController::class, 'logout'])->name('logout');
         Route::get('dashboard', function () {
