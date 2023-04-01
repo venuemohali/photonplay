@@ -17,7 +17,7 @@
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
     <li class="breadcrumb-item">Settings</li>
-    <li class="breadcrumb-item active">Edit About us</li>
+    <li class="breadcrumb-item active">Edit {{$record->title}}</li>
 @endsection
 
 @section('content')
