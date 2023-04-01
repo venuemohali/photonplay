@@ -85,6 +85,23 @@
 
                     </li>
 
+                        <li class="sidebar-list">
+
+                            <a href="#" class="sidebar-link sidebar-title link-nav" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                <i data-feather="file-minus"></i>
+                                <span> Content</span>
+                            </a>
+
+                            <div class="collapse" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav fw-normal pb-1">
+                                    <li class="p-2"><a href="/admin/content-page/about-us" class="link-dark rounded " >1. About us</a></li>
+                                    <li class="p-2"><a href="/admin/content-page/term-conditions" class="link-dark rounded">2. Terms & Conditions</a></li>
+                                    <li class="p-2"><a href="/admin/content-page/privacy-policy" class="link-dark rounded">3. Privacy Policy</a></li>
+
+                                </ul>
+                            </div>
+
+                        </li>
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav ">
                             <i data-feather="mail"></i>

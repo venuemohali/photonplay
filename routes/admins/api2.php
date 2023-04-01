@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContentPageController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\ProductMediaController;
 use App\Http\Controllers\ProductPricingController;
@@ -38,3 +39,6 @@ Route::post('/product/edit/seo', [ProductSeoController::class, 'open_seo_edit_st
 
 Route::resource('coupons', CouponController::class);
 
+Route::get('/content-page/{page_name}/', [ContentPageController::class, 'index'])->name("show_page_content");
+Route::post('/content-page/{page_name}/', [ContentPageController::class, 'store'])->name("content_store_update");
+Route::get('/content-page/{page_name}/edit', [ContentPageController::class, 'edit'])->name("show_page_content_edit");
