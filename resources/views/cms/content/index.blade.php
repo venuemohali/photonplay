@@ -26,7 +26,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Edit - About us</h5>
+                        <h5>Edit - {{$record->title}}</h5>
                     </div>
 
                     <div class="card-body">
