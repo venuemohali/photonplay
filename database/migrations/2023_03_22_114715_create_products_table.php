@@ -21,11 +21,11 @@ class CreateProductsTable extends Migration
             $table->string('cover_image')->nullable();
             $table->string('color')->nullable();
             $table->text('description')->nullable();
-            $table->string('specification')->nullable();
-            $table->string('feature')->nullable();
-            $table->string('power_option')->nullable();
-            $table->string('visibility')->nullable();
-            $table->string('ideal_for')->nullable();
+            $table->text('specification')->nullable();
+            $table->text('feature')->nullable();
+            $table->text('power_option')->nullable();
+            $table->text('visibility')->nullable();
+            $table->text('ideal_for')->nullable();
             $table->string('warranty')->nullable();
             $table->timestamps();
         });

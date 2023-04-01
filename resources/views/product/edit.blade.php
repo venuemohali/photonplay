@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Welcome to Photon Play')
+@section('title', 'Photon Play System')
 
 @section('css')
 
@@ -97,7 +97,7 @@
 
                             $.ajax({
                                 type:'DELETE',
-                                url:'{{url('admin/productspcification/'.$item->id)}}',
+                                url:'{{url('admin/delete/product-specification/'.$item->id)}}',
                                 data:'_token = {{ @csrf_token() }}',
                                 success:function(data) {
                                     $("#Item-{{$item->id}}").hide();

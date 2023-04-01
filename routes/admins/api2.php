@@ -5,11 +5,15 @@ use App\Http\Controllers\CouponController;
 use App\Http\Controllers\ProductDescriptionController;
 use App\Http\Controllers\ProductMediaController;
 use App\Http\Controllers\ProductPricingController;
+use App\Http\Controllers\ProductPublishController;
 use App\Http\Controllers\ProductSeoController;
 use App\Http\Controllers\ProductSetupController;
 
 Route::get('/add/product-specification/{id}', [ProductSetupController::class, 'add_specification_form'])->name("add_specification_form");
+
 Route::post('/add/product-specification/{id}', [ProductSetupController::class, 'add_specification_store'])->name("add_specification_store");
+
+Route::delete('/delete/product-specification/{id}', [ProductSetupController::class, 'destroy_specification'])->name("delete_specification_product");
 
 
 Route::get('/product-specification-options/{pid}/{id}', [ProductSetupController::class, 'product_specification_options'])->name("product_specification_options");
@@ -44,7 +48,8 @@ Route::get('/content-page/{page_name}/', [ContentPageController::class, 'index']
 Route::post('/content-page/{page_name}/', [ContentPageController::class, 'store'])->name("content_store_update");
 Route::get('/content-page/{page_name}/edit', [ContentPageController::class, 'edit'])->name("show_page_content_edit");
 
-Route::get('/product/{id}/edit/description', [ProductDescriptionController::class, '    open_description_form'])->name("open_product_description_form");
+Route::get('/product/{id}/edit/description', [ProductDescriptionController::class,'open_description_form'])->name("open_product_description_form");
 Route::post('/product/edit/description', [ProductDescriptionController::class, 'open_description_store'])->name("product_description_store");
 
-
+Route::get('/product/{id}/edit/publish', [ProductPublishController::class,'open_publish_form'])->name("open_product_publish_form");
+Route::post('/product/edit/publish', [ProductPublishController::class, 'product_publish_update'])->name("product_publish_update");

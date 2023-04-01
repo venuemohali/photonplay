@@ -28,6 +28,22 @@ class ProductSetupController extends Controller
         return redirect('admin/product/'.$request->product_id.'/edit');
     }
 
+    public  function destroy_specification($id){
+        $item= ProductSpecilization::find($id);
+        if($item){
+            $is_delete=$item->delete();
+            return response()->json([
+                'success'=>true,
+                'message'=>'Deleted Successfully',
+                'data'=>$item
+            ],200);
+        }else {
+            return response()->json([
+                'success'=>false,
+                'message'=>'Unable to delete !',
+            ],404);
+        }
+    }
 
     public function product_specification_options($pid,$id){
         $product=Product::find($pid);

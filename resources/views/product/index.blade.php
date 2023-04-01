@@ -31,7 +31,7 @@
                     <h5 class="card-title">All Products</h5>
                     <a href="{{route('admin.product.create')}}" class="btn btn-primary ms-auto d-flex align-items-center">
                         <i data-feather="plus-circle"> </i>
-                        Add Product</a>
+                        Add New Product</a>
                 </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
