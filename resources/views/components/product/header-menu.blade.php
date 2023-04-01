@@ -23,7 +23,7 @@
 
 
     <div class="col-md-2 mb-3">
-        <a href="{{route('admin.product_seo_page',$pid)}}" class="btn btn-outline-{{$page==4?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="globe"> </i> Details </a>
+        <a href="{{route('admin.open_product_description_form',$pid)}}" class="btn btn-outline-{{$page==5?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="globe"> </i> Details </a>
     </div>
 
     <div class="col-md-2 mb-3">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContentPageController;
 use App\Http\Controllers\CouponController;
+use App\Http\Controllers\ProductDescriptionController;
 use App\Http\Controllers\ProductMediaController;
 use App\Http\Controllers\ProductPricingController;
 use App\Http\Controllers\ProductSeoController;
@@ -42,3 +43,8 @@ Route::resource('coupons', CouponController::class);
 Route::get('/content-page/{page_name}/', [ContentPageController::class, 'index'])->name("show_page_content");
 Route::post('/content-page/{page_name}/', [ContentPageController::class, 'store'])->name("content_store_update");
 Route::get('/content-page/{page_name}/edit', [ContentPageController::class, 'edit'])->name("show_page_content_edit");
+
+Route::get('/product/{id}/edit/description', [ProductDescriptionController::class, '    open_description_form'])->name("open_product_description_form");
+Route::post('/product/edit/description', [ProductDescriptionController::class, 'open_description_store'])->name("product_description_store");
+
+
