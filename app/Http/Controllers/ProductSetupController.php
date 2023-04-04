@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class ProductSetupController extends Controller
 {
+        public function product_edit_basic(){
+
+
+        }
+
+
     public  function add_specification_form($id){
         $specializations=Specilization::get();
         $product=Product::find($id);

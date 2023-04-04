@@ -49,15 +49,16 @@
                                 </thead>
                                 <tbody>
                                 @foreach($products as $product)
-
-
                                     <tr>
                                         <td>{{$Sr++}}</td>
                                         <td>{{$product->title}}</td>
                                         <td>{{$product->price}}</td>
-                                        <td>{{$product->status}}</td>
-                                        <td>{{$product->created_at}}</td>
+                                        <td><span class="text-{{$product->status=='Listed'?'success':($product->status=='Unlisted'?'warning':'danger')}}">{{$product->status}} </span></td>
+                                        <td>{{$product->created_at->format('d/m/Y')}}</td>
                                         <td>
+                                            <a href="{{route('admin.product.edit',$product->id)}}" class="text-success p-1" data-toggle="tooltip" title="Edit">
+                                                <i data-feather="edit-3"></i>
+                                            </a>
                                             <a href="{{route('admin.product.edit',$product->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                 <i data-feather="edit"></i>
                                             </a>

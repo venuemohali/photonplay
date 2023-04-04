@@ -9,6 +9,8 @@ use App\Http\Controllers\ProductPublishController;
 use App\Http\Controllers\ProductSeoController;
 use App\Http\Controllers\ProductSetupController;
 
+Route::get('/product/edit/{id}', [ProductSetupController::class, 'product_edit_basic'])->name("product_basic_update");
+
 Route::get('/add/product-specification/{id}', [ProductSetupController::class, 'add_specification_form'])->name("add_specification_form");
 
 Route::post('/add/product-specification/{id}', [ProductSetupController::class, 'add_specification_store'])->name("add_specification_store");
