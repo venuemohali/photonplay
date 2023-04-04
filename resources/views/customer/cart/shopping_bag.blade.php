@@ -1,4 +1,5 @@
 @include('customer.layouts.header')
+
 <!-- header-end -->
 <!-- Tabber-start -->
 <section class="stepper-form-tabber pt-3 pb-0">
@@ -107,20 +108,20 @@
                             <ul class="order-details p-0 mb-5">
                                 <li class="d-flex justify-content-between">
                                     <span class="text">Cart Subtotal</span>
-                                    <span class="text-amount">$1855.00</span>
+                                    <span class="text-amount">${{Session::get('cart_price') ?? 0}}</span>
                                 </li>
                                 <li class="d-flex justify-content-between">
                                     <span class="text text-capitalize">Shipping and Handing</span>
-                                    <span class="text-amount">$1855.00</span>
+                                    <span class="text-amount">${{$taxes->shipping_time ?? 00.00}}</span>
                                 </li>
                                 <li class="d-flex justify-content-between">
                                     <span class="text text-capitalize">Tax/GST</span>
-                                    <span class="text-amount">$1855.00</span>
+                                    <span class="text-amount">${{$taxes->gst ?? 00.00}}</span>
                                 </li>
 
                                 <li class="d-flex justify-content-between active">
                                     <span class="text text-capitalize fw-bold">Order total</span>
-                                    <span class="text-amount">$6500.00</span>
+                                    <span class="text-amount">${{Session::get('cart_price') + ($taxes->gst ?? 00.00) + ($taxes->shipping_time ?? 00.00)}}</span>
                                 </li>
                             </ul>
                         </div>

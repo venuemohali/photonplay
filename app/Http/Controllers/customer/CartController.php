@@ -6,17 +6,20 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
     public function shoppingBag(){
+        $taxes = DB::table('settings')->select('shipping_time','gst')->first();
+
         if(!Session::get('user')){
             $carts =  json_decode($_COOKIE['cart_cookie']);
-            return view('customer.cart.shopping_bag', compact('carts'));
+            return view('customer.cart.shopping_bag', compact('carts','taxes'));
         }else{
             $cart_table =  Cart::all();
-            return view('customer.cart.shopping_bag', compact('cart_table'));
+            return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
         }
     }
 
@@ -30,7 +33,7 @@ class CartController extends Controller
             array_push($cart, $request->except('_token'));
             setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
         }else{
-            $cart = Cart::where(['user_id' => Auth::id(), 'product_id' => $request->product_id, 'price' => $request->price,])->first();
+            $cart = Cart::where(['user_id' => Session::get('user')->id, 'product_id' => $request->product_id, 'price' => $request->price,])->first();
             if($cart){
                 $cart->update(['quantity' => $cart->quantity + $request->quantity]);
             }else{

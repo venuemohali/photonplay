@@ -11,20 +11,18 @@ if(!Session::get('user')){
         $cartPrice = '';
     }
 }else {
-    $cart = \DB::table('carts')->where('user_id', Auth::id())->get();
-    if($cart){
+    $cart = \DB::table('carts')->where('user_id', Session::get('user')->id)->get();
+
         $cartPrice = 0;
         foreach($cart as $i){
             $cartPrice += $i->price * $i->quantity;
         }
         $currency = '$';
-    }else{
-        $currency = '';
-        $cartPrice = '';
-    }
 
 }
+Session::put('cart_price', $cartPrice);
 @endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +95,7 @@ if(!Session::get('user')){
 
                         @if (!Session::get('user'))
                         <div class="d-flex align-items-center">
-
+<input type="hidden" name="grand_total" value="{{$currency .''.$cartPrice}}">
                             <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
 
                             <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5">
