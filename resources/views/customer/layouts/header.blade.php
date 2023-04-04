@@ -1,15 +1,29 @@
 @php
-if(isset($_COOKIE['cart_cookie'])){
-    $currency = '$';
-    $cartPrice = 0;
-    foreach(json_decode($_COOKIE['cart_cookie'], true) as $item){
-        $cartPrice += $item['price'] * $item['quantity'];
+if(!Session::get('user')){
+    if(isset($_COOKIE['cart_cookie'])){
+        $currency = '$';
+        $cartPrice = 0;
+        foreach(json_decode($_COOKIE['cart_cookie'], true) as $item){
+            $cartPrice += $item['price'] * $item['quantity'];
+        }
+    }else{
+        $currency = '';
+        $cartPrice = '';
     }
-}else{
-    $currency = '';
-    $cartPrice = '';
-}
+}else {
+    $cart = \DB::table('carts')->where('user_id', Auth::id())->get();
+    if($cart){
+        $cartPrice = 0;
+        foreach($cart as $i){
+            $cartPrice += $i->price * $i->quantity;
+        }
+        $currency = '$';
+    }else{
+        $currency = '';
+        $cartPrice = '';
+    }
 
+}
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +105,7 @@ if(isset($_COOKIE['cart_cookie'])){
                         <a href="{{route('customer.loginForm')}}"> <img src="{{asset('assets\customer\images\user.png')}}" alt="Not Found" class="img-fluid "> </a>
                         @else
                         <div class="d-flex align-items-center">
-                            <p class="me-2 mb-0">$1000.00</p>
+                            <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
                             <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5">
                         </div>
                         <div class="d-flex align-items-center">

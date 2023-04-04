@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CMSHomeController;
 use App\Http\Controllers\customer\Auth\LoginController;
+use App\Http\Controllers\customer\CartController;
 use App\Http\Controllers\customer\CustomerProfileController;
 use App\Http\Controllers\DBBackupController;
 use App\Http\Controllers\Guest\HomePageController;
@@ -137,6 +138,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::get('delete-address/{id}', [CustomerProfileController::class, 'deleteAddress'])->name('delete.address');
         Route::get('default-address/{id}', [CustomerProfileController::class, 'defaultAddress'])->name('default.address');
 
+        Route::get('delete-cart-item/{id}', [CartController::class, 'deleteCartTableItem'])->name('delete.cart.table.item');
 
 
         Route::get('logout', [LoginController::class, 'logout'])->name('logout');

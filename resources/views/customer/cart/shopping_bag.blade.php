@@ -27,6 +27,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @if (!Session::get('user'))
                         @forelse ($carts as $key => $cart)
                         <tr>
                             <td class="border border-end">
@@ -52,6 +53,34 @@
                         <td colspan="5" align="center" > <span class="h6"> No Item in cart </span></td>
                         </tr>
                         @endforelse
+                        @else
+
+                        @forelse ($cart_table as $key => $cart)
+                        <tr>
+                            <td class="border border-end">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{asset('storage/'.$cart->cover_image)}}" alt="Not Found" class="profile-table me-2" width="50px">
+                                    <div class="d-flex flex-column">
+                                        <h6 class="text-uppercase">{{$cart->category}}</h6>
+                                        <span>Brand : {{$cart->title}}</span>
+                                        {{-- <span>Model: ---</span> --}}
+                                        <span>Color : ----</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="border border-end text-center">${{$cart->price}}</td>
+                            <td class="border border-end text-center">{{$cart->quantity}}</td>
+                            <td class="border border-end text-center">${{$cart->price * $cart->quantity}}</td>
+                            <td class="border border-end text-center"><a href="{{route('customer.delete.cart.table.item', $cart->id)}}"><img src="{{asset('assets/customer/images/crosss.png')}}" alt="Not Found" class="cartItem"></a>
+
+                            </td>
+                        </tr>
+                        @empty
+                        <tr >
+                        <td colspan="5" align="center" > <span class="h6"> No Item in cart </span></td>
+                        </tr>
+                        @endforelse
+                        @endif
                     </tbody>
                 </table>
             </div>

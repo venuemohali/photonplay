@@ -10,8 +10,13 @@ use Illuminate\Support\Facades\Session;
 class CartController extends Controller
 {
     public function shoppingBag(){
-        $carts =  json_decode($_COOKIE['cart_cookie']);
-        return view('customer.cart.shopping_bag', compact('carts'));
+        if(!Session::get('user')){
+            $carts =  json_decode($_COOKIE['cart_cookie']);
+            return view('customer.cart.shopping_bag', compact('carts'));
+        }else{
+            $cart_table =  Cart::all();
+            return view('customer.cart.shopping_bag', compact('cart_table'));
+        }
     }
 
     public function addShoppingBag(Request $request){
@@ -58,6 +63,11 @@ class CartController extends Controller
         // }
 
         setcookie('cart_cookie', json_encode($arrays), time() + 3600, "/");
+        return redirect()->route('customer.shopping.bag');
+    }
+
+    public function deleteCartTableItem($id){
+        Cart::find($id)->delete();
         return redirect()->route('customer.shopping.bag');
     }
 }

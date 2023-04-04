@@ -15,7 +15,7 @@ class SignController extends Controller
 
     public function radarSigns($id){
         $product = Product::with('images','specilizations.specilization','specilizations.options','specilizations.options.specializationoptions','category')->find($id);
-        dd($product);
+        // dd($product);
         return view('customer.radar_sign', compact('product'));
     }
 }
