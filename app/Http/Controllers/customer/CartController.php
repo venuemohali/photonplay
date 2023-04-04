@@ -5,6 +5,7 @@ namespace App\Http\Controllers\customer;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -29,16 +30,21 @@ class CartController extends Controller
             array_push($cart, $request->except('_token'));
             setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
         }else{
-            Cart::updateOrCreate([
-                'user_id' => Session::get('user')->id,
-                'product_id' => $request->product_id,
-                'price' => $request->price,
-            ],[
-                'title' => $request->title,
-                'category' => $request->category,
-                'quantity' => $request->quantity,
-                'cover_image' => $request->cover_image,
-            ]);
+            $cart = Cart::where(['user_id' => Auth::id(), 'product_id' => $request->product_id, 'price' => $request->price,])->first();
+            if($cart){
+                $cart->update(['quantity' => $cart->quantity + $request->quantity]);
+            }else{
+                Cart::create([
+                    'user_id' => Session::get('user')->id,
+                    'product_id' => $request->product_id,
+                    'price' => $request->price,
+                    'title' => $request->title,
+                    'category' => $request->category,
+                    'quantity' => $request->quantity,
+                    'cover_image' => $request->cover_image,
+                ]);
+            }
+
         }
         return redirect()->route('customer.shopping.bag');
     }
