@@ -1,1 +1,1 @@
-<x-admin.layout.Sidebar/>
+<x-Admin.Layout.Sidebar/>
