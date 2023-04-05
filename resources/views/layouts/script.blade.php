@@ -15,10 +15,10 @@
 <script src="{{asset('assets/js/tooltip-init.js')}}"></script>
 
 {{-- <script src="{{ asset('assets/js/sweet-alert/sweetalert.min.js') }}"></script> --}}
-<script src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
-<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.responsive.min.js')}}"></script>
+<script async src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
+<script async src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
+{{--<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.bootstrap4.min.js')}}"></script>--}}
+{{--<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.responsive.min.js')}}"></script>--}}
 
 @yield('script')
 
@@ -41,3 +41,24 @@
 
 <!-- JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+<script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            // document.querySelector(
+                // "body").style.visibility = "hidden";
+            document.querySelector(
+                "#basic-2").style.visibility = "hidden";
+
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+            document.querySelector(
+                "#basic-2").style.visibility = "visible";
+
+        }
+    };
+</script>

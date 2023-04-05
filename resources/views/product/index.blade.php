@@ -34,8 +34,8 @@
                         Add New Product</a>
                 </div>
                     <div class="card-body">
-                        <div class="dt-ext table-responsive">
-                            <table class="display" id="basic-2">
+                        <div class="dt-ext table-responsive table-bordered responsive ">
+                            <table class="display w-100" id="basic-2"   >
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -96,13 +96,11 @@
         </div>
         <!-- All Client Table End -->
 
-
-
-
-
         <script type="text/javascript">
             var session_layout = '{{ session()->get('layout') }}';
+
         </script>
+
     @endsection
 
     @section('script')

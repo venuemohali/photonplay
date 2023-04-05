@@ -18,15 +18,17 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
         rel="stylesheet">
-    @include('layouts.css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\custome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\easy-tax.css') }}">
+
+    @include('layouts.css')
 
     @yield('style')
 
 </head>
 
 <body @if (Route::current()->getName() == 'index') onload="startTime()" @endif>
+
     @if (Route::current()->getName() == 'index')
         <div class="loader-wrapper">
             <div class="loader-index"><span></span></div>
@@ -71,6 +73,7 @@
                     </div>
                 </div>
                 <!-- Container-fluid starts-->
+                <div id="loader" class="centergifloader"></div>
                 @yield('content')
                 <!-- Container-fluid Ends-->
                 @include('layouts.footer')
