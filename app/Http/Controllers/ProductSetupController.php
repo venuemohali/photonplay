@@ -79,8 +79,9 @@ class ProductSetupController extends Controller
         ]);
 
         ProductSpcializationOption::updateOrCreate([
+            'specialization_option_id'=> $request->specialization_option_id,
             'product_id'=> $request->product_id,
-            'specialization_option_id'=>$request->product_specilizations_id
+            'product_specilizations_id'=>$request->product_specilizations_id
         ],$request->except('_token'));
 //        $post->save();
         return redirect('admin/product-specification-options/'.$request->product_id.'/'.$request->product_specilizations_id);
