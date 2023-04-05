@@ -80,7 +80,7 @@ class ProductController extends Controller
 
         $product_specilizations=ProductSpecilization::with('specilization')->get();
          foreach ($product_specilizations as $prd){
-             $prd['counts']=ProductSpcializationOption::where('product_specilizations_id',$prd->id)->count();
+             $prd['counts']=ProductSpcializationOption::where('product_specilizations_id',$prd->id) ->where('product_id',$id)->count();
          }
         $Sr=1;
         return view('product.edit',compact('specializations','product','product_specilizations','Sr'));

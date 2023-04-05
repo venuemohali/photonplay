@@ -55,6 +55,7 @@ class ProductSetupController extends Controller
         $product=Product::find($pid);
         $product_spcialization_options=ProductSpcializationOption::with('specializationoptions')
             ->where('product_specilizations_id',$id)
+            ->where('product_id',$pid)
             ->get();
         $Sr=1;
         $specialization_id=$id;
