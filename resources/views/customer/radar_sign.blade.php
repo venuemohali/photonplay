@@ -107,7 +107,7 @@ foreach($specilization->options as $option){
                                 <div class="specification p-3 ">
                                     <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
                                     @foreach($specilization->options as $option)
-                                        <p> <input type="checkbox"> {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
+                                        <p> <input type="checkbox" name="chklistitem" type="button" value="{{$option->specialization_price}}" onclick="GetSelected()" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
                                         </p>
                                     @endforeach
                                     <!-- <p class="mb-0"><input type="checkbox"> 6 Days
@@ -238,4 +238,14 @@ foreach($specilization->options as $option){
     function decrement() {
         document.getElementById('demoInput').stepDown();
     }
+
+    function GetSelected() {
+            var chected = new Array();
+            $("[name='chklistitem']").each(function (index, data) {
+                if (data.checked) {
+                    chected.push(data.value +"---"+data.nextSibling.textContent);
+                }
+            });
+            alert(chected);
+        }
 </script>
