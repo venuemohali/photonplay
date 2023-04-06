@@ -32,11 +32,11 @@
 
 
     <div class="col-md-2 mb-3">
-        <a href="{{route('admin.open_product_description_form',$pid)}}" class="btn btn-outline-{{$page==5?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="globe"> </i> Details </a>
+        <a href="{{route('admin.open_product_description_form',$pid)}}" class="btn btn-outline-{{$page==5?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="align-left"> </i> Details </a>
     </div>
 
     <div class="col-md-2 mb-3">
-        <a href="{{route('admin.open_product_publish_form',$pid)}}" class="btn btn-outline-{{$page==6?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="globe"> </i> Publish </a>
+        <a href="{{route('admin.open_product_publish_form',$pid)}}" class="btn btn-outline-{{$page==6?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="toggle-left"> </i> Publish </a>
     </div>
 
 </div>

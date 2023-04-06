@@ -95,7 +95,18 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'category_id' => 'required|max:255',
+            'title' => 'required|max:255',
+            'price' => 'required|max:255',
+        ]);
+
+        $product= Product::find($id);
+        $product->category_id=$request->category_id;
+        $product->title=$request->title;
+        $product->price=$request->price;
+        $product->save();
+        return redirect('/admin/product');
     }
 
     /**

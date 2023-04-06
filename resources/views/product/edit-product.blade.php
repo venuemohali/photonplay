@@ -11,7 +11,7 @@
 @endsection
 
 @section('breadcrumb-title')
-    <h3>Add Specilization</h3>
+    <h3>Edit Product</h3>
 @endsection
 
 @section('breadcrumb-items')
@@ -26,21 +26,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>New Product</h5>
-                        {{--<div class="row">--}}
-                        {{--    <div class="col-md-3 mb-3">--}}
-                        {{--        <a href="#" class="btn btn-info w-100" > Product Information </a>--}}
-                        {{--    </div>--}}
-                        {{--    <div class="col-md-3 mb-3">--}}
-                        {{--        <a href="#" class="btn btn-info w-100" >Specifications </a>--}}
-                        {{--    </div>--}}
-                        {{--    <div class="col-md-3 mb-3">--}}
-                        {{--        <a href="#" class="btn btn-info w-100"  > Shipping </a>--}}
-                        {{--    </div>--}}
-                        {{--    <div class="col-md-3 mb-3">--}}
-                        {{--        <a href="#" class="btn btn-info w-100"> Vat/Tax </a>--}}
-                        {{--    </div>--}}
-                        {{--</div>--}}
+                        <h5>Edit Product</h5>
+
                     </div>
 
                     <div class="card-body">
@@ -50,10 +37,13 @@
                                 <div class="border-2 shadow-lg p-4">
 
                                     <div class="col-md-12 ">
+                                        <a href="/admin/product" > Back</a>
                                         <h6> Product Information</h6>
+                                        <hr/>
                                     </div>
-                                    <form method="POST" action="{{route('admin.product.store')}}">
+                                    <form method="POST" action="{{route('admin.product.update',$product->id)}}">
                                         @csrf
+                                        @method('PUT')
                                         <div class="row mb-3 form-group">
                                             <label for="category" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Category') }}</label>
 
@@ -61,7 +51,7 @@
                                                 <select id="category" name="category_id" class="form-select form-select" aria-label=".form-select-sm">
                                                     <option selected disabled> Product Category</option>
                                                     @foreach($categories as $category)
-                                                        <option value="{{$category->id}}">{{$category->title}}</option>
+                                                        <option value="{{$category->id}}" {{$category->id==$product->category_id?"selected":""}}>{{$category->title}}</option>
                                                     @endforeach
 
                                                 </select>
@@ -78,7 +68,7 @@
                                             <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Name') }}</label>
 
                                             <div class="col-md-10    ">
-                                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{$product->title}}" required autocomplete="title" autofocus>
 
                                                 @error('title')
                                                 <span class="invalid-feedback" role="alert">
@@ -92,7 +82,7 @@
                                             <label for="price" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Price') }}</label>
 
                                             <div class="col-md-10">
-                                                <input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                                                <input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{$product->price}}" required autocomplete="price" autofocus>
 
                                                 @error('price')
                                                 <span class="invalid-feedback" role="alert">
@@ -109,71 +99,20 @@
 
                                         <div class="row mb-0">
                                             <div class="col-md-6 offset-md-4">
-                                                <button type="submit" class="btn btn-primary">
-                                                    {{ __('Add Product') }}
+                                                <button type="submit" class="btn btn-primary d-flex justify-content-center ">
+                                                    <i data-feather="save"> </i>
+                                                    {{ __('Update') }}
                                                 </button>
+
                                             </div>
+
                                         </div>
                                     </form>
 
                                 </div>
 
                             </div>
-                                    <div class="col-md-5">
-                                        <div class="border-2 shadow-lg p-4">
-                                            <div class="col-md-12 ">
-                                                <h6> Product Specifications</h6>
-                                            </div>
 
-                                            <div class="row mb-3 form-group">
-                                                <div class="col-md-12">
-
-                                                    <select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">
-                                                        <option selected disabled>-- Select Specification --</option>
-                                                        <option>Batteries</option>
-                                                        <option>Power</option>
-
-                                                    </select>
-
-                                                    @error('color')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            @for($i=0;$i<3;$i++)
-                                                <div class="row mb-3 form-group">
-                                                    <div class="col-md-12">
-                                                        <div class="row">
-
-                                                            <div class="col-md-5">
-                                                                <select id="color" name="color" class="form-select form-select" aria-label=".form-select-sm">
-                                                                    <option selected disabled>--Option--</option>
-                                                                    <option>3 Days</option>
-                                                                    <option>5 Days</option>
-
-                                                                </select>
-
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <input type="text" class="form-control" placeholder="$">
-                                                            </div>
-
-                                                            <div class="col-md-2 p-1">
-                                                                <button class="btn btn-sm btn-dark">+ </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endfor
-
-
-                                        </div>
-
-
-
-                                    </div>
                         </div>
 
 

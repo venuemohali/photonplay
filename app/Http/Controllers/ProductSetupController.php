@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductSpcializationOption;
 use App\Models\ProductSpecilization;
@@ -11,9 +12,10 @@ use Illuminate\Http\Request;
 
 class ProductSetupController extends Controller
 {
-        public function product_edit_basic(){
-
-
+        public function product_edit_basic($id){
+            $categories=Category::get();
+            $product=Product::find($id);
+            return view('product.edit-product',compact('categories','product'));
         }
 
 
