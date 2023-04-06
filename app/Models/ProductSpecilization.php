@@ -19,7 +19,7 @@ class ProductSpecilization extends Model
     }
 
     public function options(){
-        return $this->hasMany(ProductSpcializationOption::class, 'specialization_option_id', 'id');
+        return $this->hasMany(ProductSpcializationOption::class, 'product_specilizations_id', 'id');
     }
 
 }
