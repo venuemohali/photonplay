@@ -107,7 +107,8 @@ foreach($specilization->options as $option){
                                 <div class="specification p-3 ">
                                     <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
                                     @foreach($specilization->options as $option)
-                                        <p> <input type="checkbox" name="chklistitem" type="button" value="{{$option->specialization_price}}" onclick="GetSelected()" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
+                                        <p> <input type="checkbox" name="{{$specilization->id}}"
+                                                   id="{{$specilization->id}}" type="button" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
                                         </p>
                                     @endforeach
                                     <!-- <p class="mb-0"><input type="checkbox"> 6 Days
@@ -239,13 +240,39 @@ foreach($specilization->options as $option){
         document.getElementById('demoInput').stepDown();
     }
 
-    function GetSelected() {
+    var dict = {};
+    function GetSelected(radio) {
             var chected = new Array();
-            $("[name='chklistitem']").each(function (index, data) {
-                if (data.checked) {
-                    chected.push(data.value +"---"+data.nextSibling.textContent);
+            if(radio.checked){
+                dict[radio.id] = radio.value;
+            }else {
+               let val= dict[radio.id];
+               if(val==radio.value){
+                   delete dict[radio.id];
+               }
+            }
+            console.log(dict);
+        const checkboxes = document.querySelectorAll(`input[name="${radio.id}"]`);
+            // console.log(checkboxes);
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('click', () => {
+                if (checkbox.checked) {
+                    checkboxes.forEach((otherCheckbox) => {
+                        if (otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
                 }
             });
-            alert(chected);
+        });
+
+
+        // $("[name='chklistitem']").each(function (index, data) {
+            //     if (data.checked) {
+            //
+            //         chected.push(data.value +"---"+data.nextSibling.textContent);
+            //     }
+            // });
+
         }
 </script>
