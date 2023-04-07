@@ -1,4 +1,7 @@
 @php
+
+// dd($_COOKIE["laravel_session"]);
+
 foreach($product->specilizations as $specilization){
 foreach($specilization->options as $option){
     //dd($option);
@@ -25,6 +28,10 @@ foreach($specilization->options as $option){
             <div class="col-lg-6">
                 <form action="{{route('customer.store.shopping.bag')}}" method="post">
                     @csrf
+                    <div id="dynamic_specs">
+
+                    </div>
+                    <meta name="csrf-token" content="{{ csrf_token() }}">
                     <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
                     <input type="hidden" name="title" id="title" value="{{$product->title}}">
                     <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
@@ -245,13 +252,48 @@ foreach($specilization->options as $option){
             var chected = new Array();
             if(radio.checked){
                 dict[radio.id] = radio.value;
+                $.ajax({
+                    url: '{{ route('customer.specification.ajax') }}',
+                    type: 'GET',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {dict: dict},
+                    success: function(response) {
+                        // console.log(response);
+                        $('#dynamic_specs').html("");
+                        var input = document.createElement("input");
+                        input.type = "hidden";
+                        input.name = "dynamic_spec[]";
+                        input.value = response;
+                        document.getElementById("dynamic_specs").appendChild(input);
+
+                    },
+                });
             }else {
                let val= dict[radio.id];
                if(val==radio.value){
                    delete dict[radio.id];
                }
+               $.ajax({
+                    url: '{{ route('customer.specification.ajax') }}',
+                    type: 'GET',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {dict: dict},
+                    success: function(response) {
+                        $('#dynamic_specs').html("");
+                        var input = document.createElement("input");
+                        input.type = "hidden";
+                        input.name = "spec[]";
+                        input.value = response;
+                        document.getElementById("dynamic_specs").appendChild(input);
+                    },
+                });
             }
-            console.log(dict);
+            // console.log('specfications', dict);
+
         const checkboxes = document.querySelectorAll(`input[name="${radio.id}"]`);
             // console.log(checkboxes);
         checkboxes.forEach((checkbox) => {

@@ -11,27 +11,56 @@ use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
-    public function shoppingBag(){
+    public function shoppingBag(Request $request){
         $taxes = DB::table('settings')->select('shipping_time','gst')->first();
 
         if(!Session::get('user')){
-            $carts =  json_decode($_COOKIE['cart_cookie']);
-            return view('customer.cart.shopping_bag', compact('carts','taxes'));
+            $cart_table =  Cart::where('session_id', $_COOKIE['laravel_session'])->get();
+            return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
         }else{
-            $cart_table =  Cart::all();
+            $cart_table =  Cart::where('user_id', Auth::id())->get();
             return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
         }
     }
 
     public function addShoppingBag(Request $request){
+
+        $specPrice = 0;
+        if(isset($request->dynamic_spec)){
+            foreach($request->dynamic_spec as $specs){
+                foreach(explode(',', $specs) as $spec){
+                    $specPrice += DB::table('product_spcialization_options')->where('id', $spec)->value('specialization_price');
+                }
+            }
+        }
+
         if(!Session::get('user')){
-            $cart = array();
-            if(!empty($_COOKIE['cart_cookie'])){
-                $cart = json_decode($_COOKIE['cart_cookie'], true);
+            // $cart = array();
+            // if(!empty($_COOKIE['cart_cookie'])){
+            //     $cart = json_decode($_COOKIE['cart_cookie'], true);
+            // }
+
+            // array_push($cart, $request->except('_token'));
+            // setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
+            // dd($_COOKIE['laravel_session']);
+
+
+        $cart = Cart::where(['session_id' => $_COOKIE['laravel_session'], 'product_id' => $request->product_id, 'price' => $request->price,])->first();
+            if($cart){
+                $cart->update(['quantity' => $cart->quantity + $request->quantity]);
+            }else{
+                Cart::create([
+                    'session_id' => $_COOKIE['laravel_session'],
+                    'option_ids' => $specs ?? null,
+                    'product_id' => $request->product_id,
+                    'price' => $request->price + $specPrice,
+                    'title' => $request->title,
+                    'category' => $request->category,
+                    'quantity' => $request->quantity,
+                    'cover_image' => $request->cover_image,
+                ]);
             }
 
-            array_push($cart, $request->except('_token'));
-            setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
         }else{
             $cart = Cart::where(['user_id' => Session::get('user')->id, 'product_id' => $request->product_id, 'price' => $request->price,])->first();
             if($cart){
