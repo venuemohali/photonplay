@@ -93,7 +93,7 @@
 
                                 <li class="d-flex justify-content-between active">
                                     <span class="text text-capitalize fw-bold">Order total</span>
-                                    <span class="text-amount">${{Session::get('cart_price') + ($taxes->gst ?? 00.00) + ($taxes->shipping_time ?? 00.00)}}</span>
+                                    <span class="text-amount">$0</span>
                                 </li>
                             </ul>
                         </div>
