@@ -138,7 +138,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::get('delete-address/{id}', [CustomerProfileController::class, 'deleteAddress'])->name('delete.address');
         Route::get('default-address/{id}', [CustomerProfileController::class, 'defaultAddress'])->name('default.address');
 
-        Route::get('delete-cart-item/{id}', [CartController::class, 'deleteCartTableItem'])->name('delete.cart.table.item');
+
 
 
         Route::get('logout', [LoginController::class, 'logout'])->name('logout');
@@ -146,4 +146,5 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
             dd(Auth::guard('customer')->user());
         })->name('dashboard');
     });
+    Route::get('delete-cart-item/{id}', [CartController::class, 'deleteCartTableItem'])->name('delete.cart.table.item');
 });
