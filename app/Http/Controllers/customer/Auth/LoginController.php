@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\customer\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
 use App\Models\Customer;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
@@ -31,7 +32,8 @@ class LoginController extends Controller
     public function loginForm(Request $request)
     {
         $p = $request->p;
-        return view('customer.auth.login', compact('p'));
+        $s = $request->s;
+        return view('customer.auth.login', compact('p', 's'));
     }
 
     public function login(Request $request)
@@ -51,6 +53,7 @@ class LoginController extends Controller
         Session::put('user', Auth::guard('customer')->user());
         notify()->success('Login Successfully');
         if($request->p == 1){
+            Cart::where('session_id', $request->s)->update(['user_id' => Session::get('user')->id]);
             return redirect()->route('customer.shopping.bag');    
         }else{
             return redirect()->intended('radar-speed-signs');

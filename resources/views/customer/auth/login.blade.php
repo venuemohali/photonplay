@@ -13,6 +13,7 @@
                             <form action="{{ route('customer.login') }}" method="post">
                                 @csrf
                                 <input type="hidden" name="p" value="{{$p ?? 0}}">
+                                <input type="hidden" name="s" value="{{$s ?? 0}}">
                                 <label for="">Email Address</label>
                                 <div class="input-group input-cus-group mb-4">
                                     <input type="text" name="email" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">

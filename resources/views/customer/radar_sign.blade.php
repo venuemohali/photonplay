@@ -1,7 +1,4 @@
 @php
-
-// dd($_COOKIE["laravelsession"]);
-
 foreach($product->specilizations as $specilization){
 foreach($specilization->options as $option){
     //dd($option);

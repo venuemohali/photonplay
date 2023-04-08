@@ -113,9 +113,9 @@
                             <h3>Checkout</h3>
                             <label for="" class=" d-block mb-4 opacity-50">any short ingo line if </label>
                             @if (!Session::get('user'))
-                                <a href="{{route('customer.loginForm', ['p' => 1])}}" class=" btn btn-primary rounded-0">Proceed to buy</a>
+                                <a href="{{route('customer.loginForm', ['p' => 1, 's' => Session::getId()])}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
                             @else
-                                <a href="{{route('customer.checkout')}}" class=" btn btn-primary rounded-0">Proceed to buy</a>
+                                <a href="{{route('customer.checkout')}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
                             @endif
                         </div>
                     </div>

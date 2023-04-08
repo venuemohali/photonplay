@@ -40,7 +40,7 @@ class CartController extends Controller
             }
             $grand_total = $total - $discount;
         }else{
-            $cart_table =  Cart::where('user_id', Auth::id())->get();
+            $cart_table =  Cart::where('user_id', Session::get('user')->id)->get();
             $total = 0;
             foreach($cart_table as $cart_t){
                 $total += ($cart_t->price * $cart_t->quantity);
@@ -51,7 +51,6 @@ class CartController extends Controller
     }
 
     public function addShoppingBag(Request $request){
-
         $specPrice = 0;
         if(isset($request->dynamic_spec)){
             foreach($request->dynamic_spec as $specs){
@@ -62,16 +61,6 @@ class CartController extends Controller
         }
 
         if(!Session::get('user')){
-            // $cart = array();
-            // if(!empty($_COOKIE['cart_cookie'])){
-            //     $cart = json_decode($_COOKIE['cart_cookie'], true);
-            // }
-
-            // array_push($cart, $request->except('_token'));
-            // setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
-            // dd(Session::getId());
-
-
         $cart = Cart::where(['session_id' => Session::getId(), 'product_id' => $request->product_id, 'price' => $request->price,])->first();
             if($cart){
                 $cart->update(['quantity' => $cart->quantity + $request->quantity]);
