@@ -28,9 +28,10 @@ class LoginController extends Controller
         }
     }
 
-    public function loginForm()
+    public function loginForm(Request $request)
     {
-        return view('customer.auth.login');
+        $p = $request->p;
+        return view('customer.auth.login', compact('p'));
     }
 
     public function login(Request $request)
@@ -49,7 +50,11 @@ class LoginController extends Controller
 
         Session::put('user', Auth::guard('customer')->user());
         notify()->success('Login Successfully');
-        return redirect()->intended('radar-speed-signs');
+        if($request->p == 1){
+            return redirect()->route('customer.shopping.bag');    
+        }else{
+            return redirect()->intended('radar-speed-signs');
+        }
     }
 
     public function registerForm()
