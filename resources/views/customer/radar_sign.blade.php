@@ -1,6 +1,6 @@
 @php
 
-// dd($_COOKIE["laravel_session"]);
+// dd($_COOKIE["laravelsession"]);
 
 foreach($product->specilizations as $specilization){
 foreach($specilization->options as $option){

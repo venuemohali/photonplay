@@ -15,7 +15,7 @@ class CartController extends Controller
         $taxes = DB::table('settings')->select('shipping_time','gst')->first();
 
         if(!Session::get('user')){
-            $cart_table =  Cart::where('session_id', $_COOKIE['laravel_session'])->get();
+            $cart_table =  Cart::where('session_id', Session::getId())->get();
             return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
         }else{
             $cart_table =  Cart::where('user_id', Auth::id())->get();
@@ -42,15 +42,15 @@ class CartController extends Controller
 
             // array_push($cart, $request->except('_token'));
             // setcookie('cart_cookie', json_encode($cart), time() + 3600, "/");
-            // dd($_COOKIE['laravel_session']);
+            // dd(Session::getId());
 
 
-        $cart = Cart::where(['session_id' => $_COOKIE['laravel_session'], 'product_id' => $request->product_id, 'price' => $request->price,])->first();
+        $cart = Cart::where(['session_id' => Session::getId(), 'product_id' => $request->product_id, 'price' => $request->price,])->first();
             if($cart){
                 $cart->update(['quantity' => $cart->quantity + $request->quantity]);
             }else{
                 Cart::create([
-                    'session_id' => $_COOKIE['laravel_session'],
+                    'session_id' => Session::getId(),
                     'option_ids' => $specs ?? null,
                     'product_id' => $request->product_id,
                     'price' => $request->price + $specPrice,
