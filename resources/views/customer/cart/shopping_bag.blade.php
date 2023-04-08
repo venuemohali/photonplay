@@ -44,7 +44,7 @@
                             </td>
                             <td class="border border-end text-center">${{$cart->price}}</td>
                             <td class="border border-end text-center">{{$cart->quantity}}</td>
-                            <td class="border border-end text-center">${{$cart->price * $cart->quantity}}</td>
+                            <td class="border border-end text-center">${{$total_price =  $cart->price * $cart->quantity}}</td>
                             <td class="border border-end text-center"><a href="{{route('customer.delete.cart.table.item', $cart->id ?? $cart->id)}}"><img src="{{asset('assets/customer/images/crosss.png')}}" alt="Not Found" class="cartItem"></a>
 
                             </td>
@@ -67,12 +67,16 @@
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-md-6">
+                        <form action="{{route('customer.shopping.bag')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="total" value="{{$grand_total}}">
                         <div class="box-coupon bg-white p-3 py-4 h-100">
-                            <h3>coupon discount</h3>
+                            <h3>Coupon Discount</h3>
                             <label class="d-block mb-3 opacity-50">Enter your coupon code if you have one!</label>
-                            <input type="text" class="form-control rounded-0 mb-4" placeholder="Enter your code here.">
+                            <input type="text" name="coupon" class="form-control rounded-0 mb-4" placeholder="Enter your code here.">
                             <button class="btn btn-primary rounded-0 ">Apply Coupon</button>
                         </div>
+                        </form>
                     </div>
                     <div class="col-md-6">
                         <div class="payment-details bg-white p-3 py-4">
@@ -80,20 +84,26 @@
                             <ul class="order-details p-0 mb-5">
                                 <li class="d-flex justify-content-between">
                                     <span class="text">Cart Subtotal</span>
-                                    <span class="text-amount">${{Session::get('cart_price') ?? 0}}</span>
+                                    <span class="text-amount">${{$grand_total}}</span>
                                 </li>
+                                @if($discounted_amount != 0)
+                                <li class="d-flex justify-content-between">
+                                    <span class="text">Discount</span>
+                                    <span class="text-amount">${{$discounted_amount}}</span>
+                                </li>
+                                @endif
                                 <li class="d-flex justify-content-between">
                                     <span class="text text-capitalize">Shipping and Handing</span>
-                                    <span class="text-amount">${{$taxes->shipping_time ?? 00.00}}</span>
+                                    <span class="text-amount">${{$shipping = $taxes->shipping_time ?? 00.00}}</span>
                                 </li>
                                 <li class="d-flex justify-content-between">
                                     <span class="text text-capitalize">Tax/GST</span>
-                                    <span class="text-amount">${{$taxes->gst ?? 00.00}}</span>
+                                    <span class="text-amount">${{$gst = $taxes->gst ?? 00.00}}</span>
                                 </li>
 
                                 <li class="d-flex justify-content-between active">
                                     <span class="text text-capitalize fw-bold">Order total</span>
-                                    <span class="text-amount">$0</span>
+                                    <span class="text-amount">${{$grand_total + $shipping + $gst}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +112,11 @@
                         <div class="box-coupon bg-white p-3 py-4 my-5">
                             <h3>Checkout</h3>
                             <label for="" class=" d-block mb-4 opacity-50">any short ingo line if </label>
-                            <button class=" btn btn-primary rounded-0">Proceed to buy</button>
+                            @if (!Session::get('user'))
+                                <a href="{{route('customer.loginForm')}}" class=" btn btn-primary rounded-0">Proceed to buy</a>
+                            @else
+                                <a href="{{route('customer.checkout')}}" class=" btn btn-primary rounded-0">Proceed to buy</a>
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
+use App\Models\Coupon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -13,14 +14,40 @@ class CartController extends Controller
 {
     public function shoppingBag(Request $request){
         $taxes = DB::table('settings')->select('shipping_time','gst')->first();
-
+        $coupon = Coupon::where('coupon_name', $request->coupon)->first();
+        $discount = 0;
+        $discounted_amount = 0;
+        if($coupon){
+            if ($coupon->expiry_date < date('Y-m-d')) {
+                return redirect()->back()->with('error', 'Coupon expired! Please try another one');
+            }
+            if ($coupon->type == '1') {
+                $discount = $coupon->value;
+                $discounted_amount = $coupon->value;
+            } else if ($coupon->type == '2') {
+                $discount = ($request->total * $coupon->value) / 100;
+                $discounted_amount = ($request->total * $coupon->value) / 100;
+            }else{
+                $discount = $request->total;
+                $discounted_amount = 0;
+            }
+        }
         if(!Session::get('user')){
             $cart_table =  Cart::where('session_id', Session::getId())->get();
-            return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
+            $total = 0;
+            foreach($cart_table as $cart_t){
+                $total += ($cart_t->price * $cart_t->quantity);
+            }
+            $grand_total = $total - $discount;
         }else{
             $cart_table =  Cart::where('user_id', Auth::id())->get();
-            return view('customer.cart.shopping_bag', compact('cart_table','taxes'));
+            $total = 0;
+            foreach($cart_table as $cart_t){
+                $total += ($cart_t->price * $cart_t->quantity);
+            }
+            $grand_total = $total - $discount;
         }
+        return view('customer.cart.shopping_bag', compact('cart_table','taxes','grand_total', 'discounted_amount'));
     }
 
     public function addShoppingBag(Request $request){

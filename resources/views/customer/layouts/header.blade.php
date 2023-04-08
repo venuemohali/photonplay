@@ -1,26 +1,17 @@
 @php
+$currency = '$';
+$cartPrice = 0;
 if(!Session::get('user')){
-    if(isset($_COOKIE['cart_cookie'])){
-        $currency = '$';
-        $cartPrice = 0;
-        foreach(json_decode($_COOKIE['cart_cookie'], true) as $item){
-            $cartPrice += $item['price'] * $item['quantity'];
-        }
-    }else{
-        $currency = '';
-        $cartPrice = '';
-    }
-}else {
-    $cart = \DB::table('carts')->where('user_id', Session::get('user')->id)->get();
-
-        $cartPrice = 0;
+    $cart = \DB::table('carts')->where('session_id', Session::getId())->get();
         foreach($cart as $i){
             $cartPrice += $i->price * $i->quantity;
         }
-        $currency = '$';
-
+}else {
+    $cart = \DB::table('carts')->where('user_id', Session::get('user')->id)->get();
+        foreach($cart as $i){
+            $cartPrice += $i->price * $i->quantity;
+        }
 }
-Session::put('cart_price', $cartPrice);
 @endphp
 
 <!DOCTYPE html>
@@ -95,16 +86,16 @@ Session::put('cart_price', $cartPrice);
 
                         @if (!Session::get('user'))
                         <div class="d-flex align-items-center">
-<input type="hidden" name="grand_total" value="{{$currency .''.$cartPrice}}">
+                        <input type="hidden" name="grand_total" value="{{$currency .''.$cartPrice}}">
                             <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
 
-                            <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5">
+                          <a href="{{route('customer.shopping.bag')}}">  <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
                         </div>
                         <a href="{{route('customer.loginForm')}}"> <img src="{{asset('assets\customer\images\user.png')}}" alt="Not Found" class="img-fluid "> </a>
                         @else
                         <div class="d-flex align-items-center">
                             <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
-                            <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5">
+                            <a href="{{route('customer.shopping.bag')}}"> <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
                         </div>
                         <div class="d-flex align-items-center">
                             <div class="me-2">
