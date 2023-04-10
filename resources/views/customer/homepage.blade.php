@@ -1,5 +1,107 @@
-@include('customer.layout2.homelayout')
-@section('content')
+<!doctype html>
+<html>
+<head>
+    @php
+        $currency = '$';
+        $cartPrice = 0;
+        if(!Session::get('user')){
+            $cart = \DB::table('carts')->where('session_id', Session::getId())->get();
+                foreach($cart as $i){
+                    $cartPrice += $i->price * $i->quantity;
+                }
+        }else {
+            $cart = \DB::table('carts')->where('user_id', Session::get('user')->id)->get();
+                foreach($cart as $i){
+                    $cartPrice += $i->price * $i->quantity;
+                }
+        }
+    @endphp
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/customer/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/assets/customer/css/style.css">
+
+    <title>Home Page</title>
+
+</head>
+<body>
+<div>
+    <header class="header bg-white py-3">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/assets/customer/images/logo-dark.png" alt="Not Found"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse header-font navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5 mx-4">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">COMPANY</a>
+                        </li>
+
+                        <li class="nav-item dropdown position-relative solution-pos">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                SOLUTIONS
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">SOLUTIONS</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                            <div class="position-absolute down-image">
+                                <img src="/assets/customer/images/Down-Arrow.png" alt="Not Found">
+                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">NEWS & EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                    <form class=" d-flex header-side mt-lg-0 mt-4 align-items-center" role="search">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <div class="hease-user">
+                            <!-- <div class="dropdown">
+                                <button class="btn dropdown-toggle border-0 shadow-none p-0" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="/assets/customer/images/user.png" alt="Not Found" class="img-fluid me-5">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-capitalize" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item text-capitalize py-3" href="#">Change Password</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="#">Log Out</a></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                        <img src="/assets/customer/images/search.png" alt="Not Found" class="img-fluid" width="18px"
+                             height="18px">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <!-- banner-text-start -->
     <section class="pt-0 pb-sm-4 pb-lg-5">
         <div class="tokoyo-banner">
@@ -662,4 +764,189 @@
             </div>
         </div>
     </section>
-    @stop
+    <footer class="footer-section px-2">
+        <div class="footer-section-inner d-lg-flex">
+            <div class="footer-item footer-item-1">
+                <div class="logo-bottom">
+                    <img src="/assets/customer/images/logo-dark.png" alt="">
+                </div>
+                <div class="description">
+                    PHOTONPLAY is a family owned, India based design, develop and manufacturing of Systems for the ITS
+                    industry since 2006. With subsidiary offices in US, Australia and Norway plus distribution facility
+                    in
+                    the US and representatives all over the world, PHOTONPLAY has satisfied customers (System
+                    integrators,
+                    Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
+                </div>
+                <ul class="social-media pt-md-5 py-4">
+                    <li><a href="#"><img src="/assets/customer/images/facebook.svg" /></a></li>
+                    <li><a href="#"><img src="/assets/customer/images/twitter.jpg" /></a></li>
+                    <li><a href="#"><img src="/assets/customer/images/linkdin.jpg" /></a></li>
+                    <li><a href="#"><img src="/assets/customer/images/instagram.png" /></a></li>
+                    <!-- <li><a href="#"><img src="/assets/customer/images/facebook.svg" /></a></li> -->
+                </ul>
+            </div>
+            <div class="footer-item footer-item-2">
+                <h2>SOLUTIONS</h2>
+                <ul class="ps-3">
+                    <li><a href="#">Variable Message Signs</a></li>
+                    <li><a href="#">Radar Speed Signs</a></li>
+                    <li><a href="#">LED Destination Signs</a></li>
+                    <li><a href="#">Variable Speed Limit Signs</a></li>
+                    <li><a href="#">Toll Booths</a></li>
+                </ul>
+            </div>
+            <div class="footer-item footer-item-3">
+                <h2>PUBLIC TRANSPORT</h2>
+                <ul class="ps-3">
+                    <li><a href="#">Bus Systems</a></li>
+                    <li><a href="#">Train Systems</a></li>
+                </ul>
+            </div>
+            <div class="footer-item footer-item-4">
+                <h2>NEWS & EVENTS</h2>
+                <ul class="ps-3">
+                    <li><a href="#">7 Benefits of Using Speed Sign...</a></li>
+                    <li><a href="#">How Does a Speed Radar Sign Wo...</a></li>
+                    <li><a href="#">What are Electronic Speed Limi...</a></li>
+                    <li><a href="#">Importance of digital speed si...</a></li>
+                </ul>
+            </div>
+            <div class="footer-item footer-item-5">
+                <h2>Get in Touch with Us</h2>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <a href="#"><img src="/assets/customer/images/phone.svg" /> 800.966.9329 (US)</a>
+                        <a href="#"><img src="/assets/customer/images/phone.svg" /> 800.966.9329 (US)</a>
+                        <a href="#"><img src="/assets/customer/images/message.png" /> sales@photonplay.com</a>
+                    </div>
+                    <button class="btn btn-primary mt-3">Contact</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="sec-copyright py-3 border-top px-2 text-center">
+        <div>Photon Play Systems - © 2023 All Rights Reserved <a href="#">Privacy Policy</a></div>
+    </section>
+    <script src="/assets/customer/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/customer/js/jquery.js"></script>
+    <script src="/assets/customer/slick/slick.min.js"></script>
+    <script>
+
+        $('.clint-wrapperr').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.key-slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.clints-content').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+        window.addEventListener('click', function (e) {
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('.navbar-toggler').click();
+            }
+        })
+    </script>
+</div>
+</body>
+</html>
+
