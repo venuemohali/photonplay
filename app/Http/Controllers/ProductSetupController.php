@@ -73,7 +73,7 @@ class ProductSetupController extends Controller
         return view('product.specific_option.create',compact( 'Sr','specialization_options','product','product_special'));
     }
 
-    public function product_specification_options_add_store(Request  $request){
+    public function     product_specification_options_add_store(Request  $request){
         $request->validate([
             'specialization_option_id' => 'required',
             'specialization_price' => 'required',
@@ -91,6 +91,24 @@ class ProductSetupController extends Controller
 
     }
 
+    public function     product_specification_options_edit_store(Request  $request){
+        $request->validate([
+            'specialization_option_id' => 'required',
+            'specialization_price' => 'required',
+            'product_specilizations_id' => 'required',
+            'product_id'=>'required'
+        ]);
+
+
+        $item=ProductSpcializationOption::find($request->product_specilizations_id);
+        if(!isset($item)){
+            abort(404);
+        }
+        $item->specialization_price=$request->specialization_price;
+        $item->save();
+        return redirect('admin/product-specification-options/'.$request->product_id.'/'.$item->product_specilizations_id);
+
+    }
     public function product_specification_options_edit_form($id){
         $specialization_options=ProductSpcializationOption::with(['specializationoptions'])->find($id);
 

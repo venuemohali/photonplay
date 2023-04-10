@@ -30,9 +30,9 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{route('admin.product_specification_options_add_store') }}">
+                        <form method="POST" action="{{route('admin.product_specification_options_edit_store') }}">
                             @csrf
-                            <input type="hidden" name="product_id" value="{{$specialization_options->product_id}}">
+                            <input type="hidden" name="product_id"  value="{{$specialization_options->product_id}}">
                             <input type="hidden" name="product_specilizations_id" value="{{$specialization_options->id}}">
 
                             <div class="row mb-3 form-group">
