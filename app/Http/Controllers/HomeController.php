@@ -33,4 +33,8 @@ class HomeController extends Controller
     }
 
 
+    public function home_page(){
+        return view('customer.homepage');
+    }
+
 }
