@@ -17,6 +17,7 @@ class CartController extends Controller
         $coupon = Coupon::where('coupon_name', $request->coupon)->first();
         $discount = 0;
         $discounted_amount = 0;
+        $coupon_name = '0';
         if($coupon){
             if ($coupon->expiry_date < date('Y-m-d')) {
                 return redirect()->back()->with('error', 'Coupon expired! Please try another one');
@@ -24,9 +25,11 @@ class CartController extends Controller
             if ($coupon->type == '1') {
                 $discount = $coupon->value;
                 $discounted_amount = $coupon->value;
+                $coupon_name = $coupon->coupon_name;
             } else if ($coupon->type == '2') {
                 $discount = ($request->total * $coupon->value) / 100;
                 $discounted_amount = ($request->total * $coupon->value) / 100;
+                $coupon_name = $coupon->coupon_name;
             }else{
                 $discount = $request->total;
                 $discounted_amount = 0;
@@ -47,7 +50,7 @@ class CartController extends Controller
             }
             $grand_total = $total - $discount;
         }
-        return view('customer.cart.shopping_bag', compact('cart_table','taxes','grand_total', 'discounted_amount'));
+        return view('customer.cart.shopping_bag', compact('cart_table','taxes','grand_total', 'discounted_amount', 'coupon_name'));
     }
 
     public function addShoppingBag(Request $request){

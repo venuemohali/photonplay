@@ -32,8 +32,8 @@
                         @forelse ($cart_table as $key => $cart)
                         <tr>
                             <td class="border border-end">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{asset('storage/'.$cart->cover_image)}}" alt="Not Found" class="profile-table me-2" width="50px">
+                                <div class="d-flex align-items-center p-1">
+                                    <img src="{{asset('storage/'.$cart->cover_image)}}" alt="Not Found" class="profile-table me-2 h-25 w-25">
                                     <div class="d-flex flex-column">
                                         <h6 class="text-uppercase">{{$cart->category}}</h6>
                                         <span>Brand : {{$cart->title}}</span>
@@ -73,8 +73,13 @@
                         <div class="box-coupon bg-white p-3 py-4 h-100">
                             <h3>Coupon Discount</h3>
                             <label class="d-block mb-3 opacity-50">Enter your coupon code if you have one!</label>
-                            <input type="text" name="coupon" class="form-control rounded-0 mb-4" placeholder="Enter your code here.">
-                            <button class="btn btn-primary rounded-0 ">Apply Coupon</button>
+                            <input type="text" name="coupon" class="form-control rounded-0 mb-4" placeholder="Enter your coupon here" @if ($coupon_name != 0) readonly @endif value="@if ($coupon_name != 0) {{strtoupper($coupon_name)}} @endif">
+                            @if ($coupon_name == 0)
+                                <button class="btn btn-primary rounded-0 ">Apply Coupon</button>
+                            @else
+                                <span class="text-success"><b> Coupon Successfully Applied</b></span>
+                                <button class="btn btn-sm bg-danger text-white mx-4">Remove</button>
+                            @endif
                         </div>
                         </form>
                     </div>
@@ -89,7 +94,7 @@
                                 @if($discounted_amount != 0)
                                 <li class="d-flex justify-content-between">
                                     <span class="text">Discount</span>
-                                    <span class="text-amount">${{$discounted_amount}}</span>
+                                    <span class="text-amount text-danger        ">${{$discounted_amount}}</span>
                                 </li>
                                 @endif
                                 <li class="d-flex justify-content-between">
