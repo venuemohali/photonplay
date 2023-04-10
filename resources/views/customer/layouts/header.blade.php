@@ -43,7 +43,7 @@ if(!Session::get('user')){
 <header class="header bg-white py-3">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
+                <a class="navbar-brand" href="/"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@ if(!Session::get('user')){
                             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Home</a>
+                            <a class="nav-link text-uppercase" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
