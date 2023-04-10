@@ -69,14 +69,15 @@
                     <div class="col-md-6">
                         <form action="{{route('customer.shopping.bag')}}" method="post">
                             @csrf
-                            <input type="hidden" name="total" value="{{$grand_total}}">
                             <div class="box-coupon bg-white p-3 py-4 h-100">
                             <h3>Coupon Discount</h3>
                             <label class="d-block mb-3 opacity-50">Enter your coupon code if you have one!</label>
                             <input type="text" name="coupon" class="form-control rounded-0 mb-4" placeholder="Enter your coupon here" @if ($coupon_name != 0) readonly @endif value="@if ($coupon_name != 0) {{strtoupper($coupon_name)}} @endif">
                             @if ($coupon_name == 0)
+                            <input type="hidden" name="total" value="{{$grand_total}}">
                                 <button class="btn btn-primary rounded-0 ">Apply Coupon</button>
                             @else
+                            <input type="hidden" name="remove_coupon" value="1">
                                 <span class="text-success"><b> Coupon Successfully Applied</b></span>
                                 <button class="btn btn-sm bg-danger text-white mx-4">Remove</button>
                             @endif

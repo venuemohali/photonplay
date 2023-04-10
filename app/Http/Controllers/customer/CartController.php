@@ -35,6 +35,12 @@ class CartController extends Controller
                 $discounted_amount = 0;
             }
         }
+        if(isset($request->remove_coupon)){
+            $discount = 0;
+            $discounted_amount = 0;
+            $coupon_name = '0';
+        }
+
         if(!Session::get('user')){
             $cart_table =  Cart::where('session_id', Session::getId())->get();
             $total = 0;
