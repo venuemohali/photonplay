@@ -342,7 +342,8 @@
                     </div>
                 </div>
             </div>
-            <img class="dotted-imag img-fluid d-none d-md-inline" src="./assets/images/dotted-tran.png" alt="not-found">
+            <img class="dotted-imag img-fluid d-none d-md-inline" src="/assets/customer/images/dotted-tran.png" alt="not-found">
+        </div>
     </section>
     <!-- Dimension section -->
     <!-- Multiple Size Options-start -->
