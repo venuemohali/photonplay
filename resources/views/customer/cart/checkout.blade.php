@@ -49,28 +49,32 @@
                 <div class="col-md-6">
                     <h3>our order</h3>
                     <ul class="order-details p-0 mb-5">
+                        @foreach ($cart_table as $item)
                         <li class="d-flex justify-content-between">
-                            <span class="text">Dummy Product Name x 2</span>
-                            <span class="text-amount">$1855.00</span>
+                            <span class="text">{{$item->title}} x {{$item->quantity}}</span>
+                            <span class="text-amount">${{$item->price * $item->quantity}}</span>
+                        </li>
+                        @endforeach
+                        <li class="d-flex justify-content-between">
+                            <span class="text">Shipping Charges</span>
+                            <span class="text-amount">${{$shipping = $taxes->shipping_time ?? 00}}</span>
                         </li>
                         <li class="d-flex justify-content-between">
-                            <span class="text">Dummy Product Name x 2</span>
-                            <span class="text-amount">$1855.00</span>
+                            <span class="text">GST</span>
+                            <span class="text-amount">${{$gst = $taxes->gst ?? 00}}</span>
                         </li>
+                        @if($discount != 0)
                         <li class="d-flex justify-content-between">
-                            <span class="text">Dummy Product Name x 2</span>
-                            <span class="text-amount">$1855.00</span>
+                            <span class="text">Discount</span>
+                            <span class="text-amount text-danger">${{$discount}}</span>
                         </li>
+                        @endif
                         <li class="d-flex justify-content-between">
-                            <span class="text">Dummy Product Name x 2</span>
-                            <span class="text-amount">$1855.00</span>
-                        </li>
-                        <li class="d-flex justify-content-between active">
-                            <span class="text">Dummy Product Name x 2</span>
-                            <span class="text-amount">$1855.00</span>
+                            <span class="text">Grand Total</span>
+                            <span class="text-amount">${{$total + $shipping + $gst}}</span>
                         </li>
                     </ul>
-                    <h3>payment method</h3>
+                    <h3>Payment Method</h3>
                     <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
                         <div class="accordion-item mb-3 border-0">
                             <h2 class="accordion-header border" id="flush-headingOne">

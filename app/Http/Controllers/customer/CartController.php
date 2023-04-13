@@ -110,8 +110,16 @@ class CartController extends Controller
         return view('customer.cart.confirmation');
     }
 
-    public function checkout(){
-        return view('customer.cart.checkout');
+    public function checkout(Request $request){
+        $coupon_name = $request->coupon_s;
+        $discount = $request->discount_s;
+        $taxes = DB::table('settings')->select('shipping_time','gst')->first();
+        $cart_table =  Cart::where('user_id', Session::get('user')->id)->get();
+        $total = 0;
+            foreach($cart_table as $cart_t){
+                $total += ($cart_t->price * $cart_t->quantity);
+            }
+        return view('customer.cart.checkout', compact('taxes','cart_table','total','coupon_name','discount'));
     }
 
     public function removeCartItem($id){

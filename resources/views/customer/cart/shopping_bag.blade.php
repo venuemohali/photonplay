@@ -12,6 +12,7 @@
     </div>
 </section>
 
+
 <!-- Form -->
 <section class="step-formation bg-light pb-3">
     <div class="container">
@@ -117,11 +118,19 @@
                     <div class="col-md-12">
                         <div class="box-coupon bg-white p-3 py-4 my-5">
                             <h3>Checkout</h3>
-                            <label for="" class=" d-block mb-4 opacity-50">any short ingo line if </label>
+                            <label for="" class=" d-block mb-4 opacity-50">Click to proceed</label>
                             @if (!Session::get('user'))
                                 <a href="{{route('customer.loginForm', ['p' => 1, 's' => Session::getId()])}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
                             @else
-                                <a href="{{route('customer.checkout')}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
+                            <!-- confirmation form -->
+                                <form action="{{route('customer.checkout')}}" method="any">
+                                    @csrf
+                                    <input type="hidden" name="coupon_s" value="{{$coupon_name}}">
+                                    <input type="hidden" name="discount_s" value="{{$discounted_amount}}">
+                                    <button type="submit" class=" btn btn-primary rounded-0" >Proceed to buy</button>
+                                </form>
+                            <!-- confirmation form ends-->
+
                             @endif
                         </div>
                     </div>
@@ -130,6 +139,7 @@
         </div>
     </div>
 </section>
+
 @include('customer.layouts.footer')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
