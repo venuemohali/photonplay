@@ -14,6 +14,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                <form action="{{route('customer.place.order')}}" method="post">
+                    @csrf
                     <h3>billing details</h3>
                     <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
                     <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
@@ -132,6 +134,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary rounded-0">Place Order</button>
+                </form>
                 </div>
             </div>
         </div>

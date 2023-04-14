@@ -141,6 +141,7 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
         Route::get('default-address/{id}', [CustomerProfileController::class, 'defaultAddress'])->name('default.address');
 
         Route::any('shipping-and-checkout', [CartController::class, 'checkout'])->name('checkout');
+        Route::any('place-order', [CartController::class, 'placeOrder'])->name('place.order');
 
 
 

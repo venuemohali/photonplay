@@ -56,7 +56,7 @@ class CartController extends Controller
             }
             $grand_total = $total - $discount;
         }
-        return view('customer.cart.shopping_bag', compact('cart_table','taxes','grand_total', 'discounted_amount', 'coupon_name'));
+        return view('customer.cart.shopping_bag', compact('cart_table','taxes','grand_total', 'discounted_amount', 'coupon_name','total'));
     }
 
     public function addShoppingBag(Request $request){
@@ -94,7 +94,8 @@ class CartController extends Controller
                 Cart::create([
                     'user_id' => Session::get('user')->id,
                     'product_id' => $request->product_id,
-                    'price' => $request->price,
+                    'option_ids' => $specs ?? null,
+                    'price' => $request->price + $specPrice,
                     'title' => $request->title,
                     'category' => $request->category,
                     'quantity' => $request->quantity,
@@ -140,5 +141,9 @@ class CartController extends Controller
     public function deleteCartTableItem($id){
         Cart::find($id)->delete();
         return redirect()->route('customer.shopping.bag');
+    }
+
+    public function placeOrder(Request $request){
+        dd($request->all());
     }
 }

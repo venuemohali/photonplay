@@ -87,16 +87,16 @@
                     </div>
                     <div class="col-md-6">
                         <div class="payment-details bg-white p-3 py-4">
-                            <h3>payment details</h3>
+                            <h3>Payment Details</h3>
                             <ul class="order-details p-0 mb-5">
                                 <li class="d-flex justify-content-between">
                                     <span class="text">Cart Subtotal</span>
-                                    <span class="text-amount">${{$grand_total}}</span>
+                                    <span class="text-amount">${{$total}}</span>
                                 </li>
                                 @if($discounted_amount != 0)
                                 <li class="d-flex justify-content-between">
                                     <span class="text">Discount</span>
-                                    <span class="text-amount text-danger        ">${{$discounted_amount}}</span>
+                                    <span class="text-amount text-danger">${{$discounted_amount}}</span>
                                 </li>
                                 @endif
                                 <li class="d-flex justify-content-between">
@@ -123,7 +123,7 @@
                                 <a href="{{route('customer.loginForm', ['p' => 1, 's' => Session::getId()])}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
                             @else
                             <!-- confirmation form -->
-                                <form action="{{route('customer.checkout')}}" method="any">
+                                <form action="{{route('customer.place.order')}}" method="any">
                                     @csrf
                                     <input type="hidden" name="coupon_s" value="{{$coupon_name}}">
                                     <input type="hidden" name="discount_s" value="{{$discounted_amount}}">
