@@ -123,7 +123,7 @@
                                 <a href="{{route('customer.loginForm', ['p' => 1, 's' => Session::getId()])}}" class=" btn btn-primary rounded-0" >Proceed to buy</a>
                             @else
                             <!-- confirmation form -->
-                                <form action="{{route('customer.place.order')}}" method="any">
+                                <form action="{{route('customer.checkout')}}" method="any">
                                     @csrf
                                     <input type="hidden" name="coupon_s" value="{{$coupon_name}}">
                                     <input type="hidden" name="discount_s" value="{{$discounted_amount}}">

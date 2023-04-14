@@ -17,35 +17,20 @@
                 <form action="{{route('customer.place.order')}}" method="post">
                     @csrf
                     <h3>billing details</h3>
-                    <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
-                    <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
-                    <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
-                    <input type="text" class="form-control rounded-0 px-3" placeholder="Your name is here...">
-                    <select class="form-control rounded-0 px-3">
-                        <option value="">Step 1</option>
-                        <option value="">Step 2</option>
-                        <option value="">Step 3</option>
-                        <option value="">Step 4</option>
-                    </select>
-                    <select class="form-control rounded-0 px-3">
-                        <option value="">Step 1</option>
-                        <option value="">Step 2</option>
-                        <option value="">Step 3</option>
-                        <option value="">Step 4</option>
-                    </select>
-                    <select class="form-control rounded-0 px-3">
-                        <option value="">Step 1</option>
-                        <option value="">Step 2</option>
-                        <option value="">Step 3</option>
-                        <option value="">Step 4</option>
-                    </select>
-                    <textarea class="form-control rounded-0 mt-2" rows="5"
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_city"
+                    placeholder="City">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_state" placeholder="State">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_country" placeholder="Country">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_postcode" placeholder="Postcode">
+                    <textarea name="address" class="form-control rounded-0 mt-2" rows="5"
                         placeholder="Your address here..."></textarea>
-                    <h3 class="mt-5 mb-2">SHIPPING ADDRESS</h3>
-                    <label for=""> <input type="checkbox" class="me-2 d-inline-block">SHIP TO A DIFFERENT
-                        ADDRESS?</label>
+                    {{-- <h3 class="mt-5 mb-2">SHIPPING ADDRESS</h3> --}}
+                    {{-- <label for=""> <input type="checkbox" class="me-2 d-inline-block">SHIP TO A DIFFERENT
+                        ADDRESS?</label> --}}
                     <label class="d-block mt-3">Order notes (optional)</label>
-                    <textarea class="form-control rounded-0 mt-2" rows="5"
+                    <textarea name="order_notes" class="form-control rounded-0 mt-2" rows="5"
                         placeholder="Your address here..."></textarea>
                 </div>
                 <div class="col-md-6">
@@ -53,6 +38,7 @@
                     <ul class="order-details p-0 mb-5">
                         @foreach ($cart_table as $item)
                         <li class="d-flex justify-content-between">
+                            <input type="hidden" name="product_id" value="{{$item->id}}">
                             <span class="text">{{$item->title}} x {{$item->quantity}}</span>
                             <span class="text-amount">${{$item->price * $item->quantity}}</span>
                         </li>
@@ -73,9 +59,13 @@
                         @endif
                         <li class="d-flex justify-content-between">
                             <span class="text">Grand Total</span>
-                            <span class="text-amount">${{$total + $shipping + $gst}}</span>
+                            <span class="text-amount">${{$grand_total = $total + $shipping + $gst}}</span>
                         </li>
                     </ul>
+                    <input type="hidden" name="shipping" value="{{$shipping}}">
+                    <input type="hidden" name="gst" value="{{$gst}}">
+                    <input type="hidden" name="discount" value="{{$discount}}">
+                    <input type="hidden" name="grand_total" value="{{$grand_total}}">
                     <h3>Payment Method</h3>
                     <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
                         <div class="accordion-item mb-3 border-0">

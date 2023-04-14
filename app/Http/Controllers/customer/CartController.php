@@ -144,6 +144,6 @@ class CartController extends Controller
     }
 
     public function placeOrder(Request $request){
-        dd($request->all());
+        // dd($request->all());
     }
 }
