@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Socialite;
+use Stripe;
 
 class LoginController extends Controller
 {
@@ -67,13 +68,19 @@ class LoginController extends Controller
 
     public function register(Request $request)
     {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:customers',
             'password' => 'required|min:6',
         ]);
 
+        $customer = \Stripe\Customer::create([
+            'email' => $request->email,
+            'name' => $request->name,
+        ]);
         Customer::create([
+            'stripe_id' => $customer->id,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

@@ -20,6 +20,7 @@ class Customer extends Authenticatable
 
      protected $guard = 'customer';
     protected $fillable = [
+        'stripe_id',
         'name',
         'email',
         'password',

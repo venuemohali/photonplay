@@ -141,7 +141,8 @@ class CartController extends Controller
     }
 
     public function placeOrder(Request $request){
-        
+        dd('stripe');
+        exit;
         $order = Order::create([
             'user_id' => Session::get('user')->id,
             'order_number' => '#'.mt_rand(1111, 99999),
