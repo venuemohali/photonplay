@@ -16,6 +16,7 @@
                 <div class="col-md-6">
                 <form action="{{route('customer.place.order')}}" method="post">
                     @csrf
+                    
                     <h3>billing details</h3>
                     <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number">
                     <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite">
@@ -37,8 +38,9 @@
                     <h3>our order</h3>
                     <ul class="order-details p-0 mb-5">
                         @foreach ($cart_table as $item)
+                        <input type="hidden" name="product_ids[]" value="{{$item->id}}">
+
                         <li class="d-flex justify-content-between">
-                            <input type="hidden" name="product_id" value="{{$item->id}}">
                             <span class="text">{{$item->title}} x {{$item->quantity}}</span>
                             <span class="text-amount">${{$item->price * $item->quantity}}</span>
                         </li>
@@ -65,6 +67,7 @@
                     <input type="hidden" name="shipping" value="{{$shipping}}">
                     <input type="hidden" name="gst" value="{{$gst}}">
                     <input type="hidden" name="discount" value="{{$discount}}">
+                    <input type="hidden" name="coupon" value="{{$coupon_name}}">
                     <input type="hidden" name="grand_total" value="{{$grand_total}}">
                     <h3>Payment Method</h3>
                     <div class="accordion accordion-flush position-relative" id="accordionFlushExample">

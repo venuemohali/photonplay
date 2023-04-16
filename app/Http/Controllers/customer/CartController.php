@@ -5,6 +5,8 @@ namespace App\Http\Controllers\customer;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Coupon;
+use App\Models\Order;
+use App\Models\OrderedProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -129,11 +131,6 @@ class CartController extends Controller
         $arrays = json_decode($_COOKIE['cart_cookie'], true);
         unset($arrays[$id]);
 
-        // return json_decode($_COOKIE['cart_cookie'], true);
-        // foreach($arrays as $key => $array){
-        //     unset($array[$key][$id]);
-        // }
-
         setcookie('cart_cookie', json_encode($arrays), time() + 3600, "/");
         return redirect()->route('customer.shopping.bag');
     }
@@ -144,6 +141,35 @@ class CartController extends Controller
     }
 
     public function placeOrder(Request $request){
-        // dd($request->all());
+        
+        $order = Order::create([
+            'user_id' => Session::get('user')->id,
+            'order_number' => '#'.mt_rand(1111, 99999),
+            'coupon' => $request->coupon,
+            'discounted_amount' => $request->discount,
+            'shipping' => $request->shipping,
+            'gst' => $request->gst,
+            'grand_total' => $request->grand_total,
+            'billing_street' => $request->billing_street,
+            'billing_flat_suite' => $request->billing_flat_suite,
+            'billing_city' => $request->billing_city,
+            'billing_state' => $request->billing_state,
+            'billing_country' => $request->billing_country,
+            'billing_postcode' => $request->billing_postcode,
+            'address' => $request->address,
+            'order_notes' => $request->order_notes,
+        ]);
+        if($order){
+            foreach($request->product_ids as $product){
+                $carts = Cart::find($product);
+                OrderedProduct::create([
+                    'order_id' => $order->id,
+                    'product_id' => $carts->product_id,
+                    'option_ids' => $carts->option_ids,
+                    'quantity' => $carts->quantity,
+                    'price' => $carts->price,
+                ]);
+            }
+        }
     }
 }

@@ -16,14 +16,12 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable();
-            $table->foreignId('product_id')->nullable();
-            $table->string('order_id')->nullable();
+            $table->string('order_number')->nullable();
             $table->string('coupon')->nullable();
             $table->string('discounted_amount')->nullable();
             $table->string('shipping')->nullable();
             $table->string('gst')->nullable();
             $table->string('grand_total')->nullable();
-            $table->string('option_id')->nullable();
             $table->string('billing_street')->nullable();
             $table->string('billing_flat_suite')->nullable();
             $table->string('billing_city')->nullable();
