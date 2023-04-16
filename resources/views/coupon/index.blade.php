@@ -106,30 +106,6 @@
         <!-- All Client Table End -->
 
 
-        <script>
-            @if (session()->has('success'))
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: '{{ session('success') }}',
-                showConfirmButton: false,
-                timer: 1500
-            })
-            @endif
-
-            @if (session()->has('error'))
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: '{{ session('success') }}',
-                showConfirmButton: false,
-                timer: 1500
-            })
-            @endif
-
-        </script>
-
-
 
 @endsection
 

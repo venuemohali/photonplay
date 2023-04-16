@@ -193,7 +193,51 @@
     {{--    '</div>');--}}
     {{--    }--}}
 
+
+
+
     </script>
+
+
+
+    <script>
+        @if (session()->has('success'))
+        Toastify({
+            text: '{{ session('success') }}',
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "green",
+                color:"text",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
+        @endif
+
+        @if (session()->has('error'))
+        Toastify({
+            text: '{{ session('error') }}',
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "red",
+                color:"text",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
+        @endif
+
+    </script>
+
+
 
 
 </body>
