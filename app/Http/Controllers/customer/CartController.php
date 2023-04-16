@@ -9,8 +9,10 @@ use App\Models\Order;
 use App\Models\OrderedProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Stripe\StripeClient;
 
 class CartController extends Controller
 {
@@ -109,8 +111,10 @@ class CartController extends Controller
         return redirect()->route('customer.shopping.bag');
     }
 
-    public function confirmation(){
-        return view('customer.cart.confirmation');
+    public function confirmation($order_id){
+        $orders = Order::with('orderedProducts', 'user', 'orderedProducts.product')->where('order_number', Crypt::decrypt($order_id))->first();
+        // dd($orders);
+        return view('customer.cart.confirmation', compact('orders'));
     }
 
     public function checkout(Request $request){
@@ -141,36 +145,73 @@ class CartController extends Controller
     }
 
     public function placeOrder(Request $request){
-        dd('stripe');
-        exit;
-        $order = Order::create([
-            'user_id' => Session::get('user')->id,
-            'order_number' => '#'.mt_rand(1111, 99999),
-            'coupon' => $request->coupon,
-            'discounted_amount' => $request->discount,
-            'shipping' => $request->shipping,
-            'gst' => $request->gst,
-            'grand_total' => $request->grand_total,
-            'billing_street' => $request->billing_street,
-            'billing_flat_suite' => $request->billing_flat_suite,
-            'billing_city' => $request->billing_city,
-            'billing_state' => $request->billing_state,
-            'billing_country' => $request->billing_country,
-            'billing_postcode' => $request->billing_postcode,
-            'address' => $request->address,
-            'order_notes' => $request->order_notes,
+        $stripe = new StripeClient(env('STRIPE_SECRET'));
+
+        $payment_method =  $stripe->paymentMethods->create([
+            'type' => 'card',
+            'card' => [
+                'number' => $request->cardNumber,
+                'exp_month' => $request->expMonth,
+                'exp_year' => $request->expYear,
+                'cvc' => $request->cvc,
+            ],
         ]);
-        if($order){
-            foreach($request->product_ids as $product){
-                $carts = Cart::find($product);
-                OrderedProduct::create([
-                    'order_id' => $order->id,
-                    'product_id' => $carts->product_id,
-                    'option_ids' => $carts->option_ids,
-                    'quantity' => $carts->quantity,
-                    'price' => $carts->price,
-                ]);
+
+        $stripe =  $stripe->paymentIntents->create([
+            'amount' => $request->grand_total * 100,
+            'currency' => 'usd',
+            'customer' => Session::get('user')->stripe_id,
+            'payment_method' => $payment_method->id,
+            'description' => 'Donation',
+            'shipping' => [
+                'name' => Session::get('user')->name,
+                'address' => [
+                    'line1' => $request->billing_street,
+                    'line2' => $request->billing_flat_suite,
+                    'city' => $request->billing_city,
+                    'state' => $request->billing_state,
+                    'postal_code' => $request->billing_postcode,
+                    'country' => $request->billing_country,
+                ],
+            ],
+            'confirm' => true,
+        ]);
+        if($stripe->status == "succeeded"){
+            $order = Order::create([
+                'user_id' => Session::get('user')->id,
+                'trx_id' => $stripe->id,
+                'order_number' => '#'.mt_rand(1111, 99999),
+                'coupon' => $request->coupon,
+                'cart_subtotal' => $request->cart_subtotal,
+                'discounted_amount' => $request->discount,
+                'shipping' => $request->shipping,
+                'gst' => $request->gst,
+                'grand_total' => $request->grand_total,
+                'billing_street' => $request->billing_street,
+                'billing_flat_suite' => $request->billing_flat_suite,
+                'billing_city' => $request->billing_city,
+                'billing_state' => $request->billing_state,
+                'billing_country' => $request->billing_country,
+                'billing_postcode' => $request->billing_postcode,
+                'address' => $request->address,
+                'order_notes' => $request->order_notes,
+                'status' => $stripe->status,
+            ]);
+            if($order){
+                foreach($request->product_ids as $product){
+                    $carts = Cart::find($product);
+                    OrderedProduct::create([
+                        'order_id' => $order->id,
+                        'product_id' => $carts->product_id,
+                        'option_ids' => $carts->option_ids,
+                        'quantity' => $carts->quantity,
+                        'price' => $carts->price,
+                    ]);
+                }
             }
+
+            return redirect()->route('customer.confirmation',  Crypt::encrypt($order->order_number));
         }
+        
     }
 }

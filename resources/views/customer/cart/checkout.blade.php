@@ -18,15 +18,15 @@
                     @csrf
                     
                     <h3>billing details</h3>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number">
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite">
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite" >
                     <input type="text" class="form-control rounded-0 px-3" name="billing_city"
-                    placeholder="City">
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_state" placeholder="State">
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_country" placeholder="Country">
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_postcode" placeholder="Postcode">
+                    placeholder="City" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_state" placeholder="State" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_country" placeholder="Country" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_postcode" placeholder="Postcode" required>
                     <textarea name="address" class="form-control rounded-0 mt-2" rows="5"
-                        placeholder="Your address here..."></textarea>
+                        placeholder="Your address here..." required></textarea>
                     {{-- <h3 class="mt-5 mb-2">SHIPPING ADDRESS</h3> --}}
                     {{-- <label for=""> <input type="checkbox" class="me-2 d-inline-block">SHIP TO A DIFFERENT
                         ADDRESS?</label> --}}
@@ -50,6 +50,10 @@
                             <span class="text-amount">${{$shipping = $taxes->shipping_time ?? 00}}</span>
                         </li>
                         <li class="d-flex justify-content-between">
+                            <span class="text"><b>Cart Subtotal</b></span>
+                            <span class="text-amount">${{$total}}</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
                             <span class="text">GST</span>
                             <span class="text-amount">${{$gst = $taxes->gst ?? 00}}</span>
                         </li>
@@ -60,12 +64,13 @@
                         </li>
                         @endif
                         <li class="d-flex justify-content-between">
-                            <span class="text">Grand Total</span>
-                            <span class="text-amount">${{$grand_total = $total + $shipping + $gst}}</span>
+                            <span class="text"><b>Grand Total</b></span>
+                            <span class="text-amount">${{$grand_total = ($total - $discount) + $shipping + $gst}}</span>
                         </li>
                     </ul>
                     <input type="hidden" name="shipping" value="{{$shipping}}">
                     <input type="hidden" name="gst" value="{{$gst}}">
+                    <input type="hidden" name="cart_subtotal" value="{{$total}}">
                     <input type="hidden" name="discount" value="{{$discount}}">
                     <input type="hidden" name="coupon" value="{{$coupon_name}}">
                     <input type="hidden" name="grand_total" value="{{$grand_total}}">
@@ -110,15 +115,16 @@
                                 <button class="accordion-button collapsed bg-white shadow-none tex3 py-2 shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                                     aria-expanded="false" aria-controls="flush-collapseThree">
-                                    direct bank transfer
+                                    Stripe
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body pt-0 opacity-50 pt-3">Lorem Ipsum is simply in dummy text of
-                                    the
-                                    printing and
-                                    type se
+                                <div class="accordion-body pt-0 opacity-50 pt-3">
+                                    card : <input type="text" name="cardNumber">
+                                    month : <input type="text" name="expMonth">
+                                    year : <input type="text" name="expYear">
+                                    cvc : <input type="password" name="cvc">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-end position-absolute circle-stone">

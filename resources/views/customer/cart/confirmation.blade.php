@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="py-4 border-top border-bottom">
-                                <p class="text-center mb-0">Thank you. Your order has been received.</p>
+                                <p class="text-center mb-0 text-success">Thank you. Your order has been received.</p>
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -25,20 +25,20 @@
                                 <ul
                                     class="product-delievery__ d-flex flex-wrap justify-content-center align-items-center p-0 m-0">
                                     <li class="d-flex flex-column align-items-center px-5">
-                                        <span class="text-uppercase">order no</span>
-                                        <span class="text-uppercase">PP 2303001</span>
+                                        <span class="text-uppercase">Order no</span>
+                                        <span class="text-uppercase">{{$orders->order_number}}</span>
                                     </li>
                                     <li class="d-flex flex-column align-items-center px-5">
                                         <span class="text-uppercase">date</span>
-                                        <span class="text-uppercase"> March 13, 2023</span>
+                                        <span class="text-uppercase">{{date('M-d-Y',strtotime($orders->created_at))}}</span>
                                     </li>
                                     <li class="d-flex flex-column align-items-center px-5">
                                         <span class="text-uppercase">total</span>
-                                        <span class="text-uppercase">$ 6500.00</span>
+                                        <span class="text-uppercase">${{$orders->grand_total}}</span>
                                     </li>
                                     <li class="d-flex flex-column align-items-center px-5">
-                                        <span class="text-uppercase">payment method</span>
-                                        <span class="text-uppercase">check payment</span>
+                                        <span class="text-uppercase">Payment Method</span>
+                                        <span class="text-uppercase">Online</span>
                                     </li>
                                 </ul>
                             </div>
@@ -48,49 +48,53 @@
                             <div class="payment-details bg-white p-3 pb-4 h-100">
                                 <h3 class="text-uppercase">our order</h3>
                                 <ul class="order-details p-0 mb-5">
+                                    @foreach ($orders->orderedProducts as $product)
                                     <li class="d-flex justify-content-between py-3">
-                                        <span class="text">Dummy Product Name x 2 </span>
-                                        <span class="text-amount">$1855.00</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between py-3">
-                                        <span class="text text-capitalize">Dummy Product Name</span>
-                                        <span class="text-amount">$555.00</span>
-                                    </li>
+                                        <span class="text">{{$product->product->title}} x {{$product->quantity}} </span>
+                                        <span class="text-amount">${{$product->price}}</span>
+                                    </li> 
+                                    @endforeach
                                     <li class="d-flex justify-content-between py-3">
                                         <span class="text text-capitalize">Cart Subtotal</span>
-                                        <span class="text-amount">$2410.00</span>
+                                        <span class="text-amount">${{$orders->cart_subtotal}}</span>
                                     </li>
                                     <li class="d-flex justify-content-between py-3">
                                         <span class="text text-capitalize"> Shipping and Handing</span>
-                                        <span class="text-amount">$15.00</span>
+                                        <span class="text-amount">${{$orders->shipping}}</span>
                                     </li>
                                     <li class="d-flex justify-content-between py-3">
-                                        <span class="text text-capitalize">Vat</span>
-                                        <span class="text-amount">$00.00</span>
+                                        <span class="text text-capitalize">GST</span>
+                                        <span class="text-amount">${{$orders->gst}}</span>
                                     </li>
+                                    @if($orders->discounted_amount != 0)
+                                    <li class="d-flex justify-content-between py-3">
+                                        <span class="text text-capitalize">Discount</span>
+                                        <span class="text-amount text-danger">${{$orders->discounted_amount}}</span>
+                                    </li>
+                                    @endif
 
                                     <li class="d-flex justify-content-between py-3 active">
                                         <span class="text text-capitalize fw-bold">Order total</span>
-                                        <span class="text-amount">$6500.00</span>
+                                        <span class="text-amount">${{$orders->grand_total}}</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="box-coupon bg-white p-3 pt-4 pb-0 h-100">
-                                <h3 class="text-uppercase">billing details</h3>
+                                <h3 class="text-uppercase">Billing Details</h3>
                                 <ul class="order-details p-0 mb-5">
                                     <li class="d-flex justify-content-between border-0 ">
                                         <span class="text-amount text-uppercase">Address : </span>
-                                        <span class="text">Customer Address</span>
+                                        <span class="text">{{$orders->address}}</span>
                                     </li>
                                     <li class="d-flex justify-content-between border-0">
                                         <span class="text-amount text-uppercase">email : </span>
-                                        <span class="text">info@companyname.com</span>
+                                        <span class="text">{{$orders->user->email}}</span>
                                     </li>
                                     <li class="d-flex justify-content-between border-0">
                                         <span class="text-amount text-uppercase">phone : </span>
-                                        <span class="text">(+000) 00000 00000</span>
+                                        <span class="text">{{$orders->user->phone_number}}</span>
                                     </li>
                                 </ul>
                                 <ul class="order-details p-0 mb-5">
