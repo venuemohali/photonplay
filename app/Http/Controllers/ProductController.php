@@ -78,7 +78,7 @@ class ProductController extends Controller
         $specializations=Specilization::get();
         $product=Product::find($id);
 
-        $product_specilizations=ProductSpecilization::with('specilization')->get();
+        $product_specilizations=ProductSpecilization::with('specilization')->where('product_id',$product->id)->get();
          foreach ($product_specilizations as $prd){
              $prd['counts']=ProductSpcializationOption::where('product_specilizations_id',$prd->id) ->where('product_id',$id)->count();
          }
