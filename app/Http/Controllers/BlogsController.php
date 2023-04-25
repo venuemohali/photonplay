@@ -60,7 +60,7 @@ class BlogsController extends Controller
         $post->body  = $request->body;
         $post->image  = $image_path;
         $post->save();
-        session()->flash('success', 'Image Upload successfully');
+        session()->flash('success', 'Blog added successfully !');
         return redirect()->route('admin.blogs.index');
     }
 
@@ -110,6 +110,7 @@ class BlogsController extends Controller
 
         $status=Blog::find($id)->update($input);
         if($status){
+            session()->flash('success', 'Blog updated successfully !');
             return redirect()->route('admin.blogs.index');
 
         }
