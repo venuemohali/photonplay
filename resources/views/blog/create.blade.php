@@ -109,7 +109,10 @@
                                     <div class="col-md-10">
 
                                         <select id="category" name="category_selected" class="form-select form-select" aria-label=".form-select-sm">
-                                            <option selected disabled>--Select User--</option>
+                                            <option selected disabled>--Select Category--</option>
+                                            @foreach($blog_categories as $b_cate)
+                                                <option value="{{$b_cate->id}}"> {{$b_cate->category}}</option>
+                                            @endforeach
                                         </select>
 
                                         @error('category_selected')
