@@ -72,7 +72,14 @@
                                 <label for="keywords" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Keywords') }}</label>
 
                                 <div class="col-md-10">
-                                    <textarea id="keywords" type="text" class="form-control @error('keywords') is-invalid @enderror" name="keywords" required autocomplete="keywords" autofocus>{{ old('keywords') ?? $data->keywords ?? ''}}</textarea>
+{{--                                    <textarea id="keywords" type="text" class="form-control @error('keywords') is-invalid @enderror" name="keywords" required autocomplete="keywords" autofocus>{{ old('keywords') ?? $data->keywords ?? ''}}</textarea>--}}
+
+                                    <input
+                                        id="keywords" type="text" class="form-control @error('keywords') is-invalid @enderror" name="keywords" required autocomplete="keywords"
+                                        value="{{ old('keywords') ?? $data->keywords ?? ''}}"
+                                        class="form-control p-4"
+                                        data-role="tagsinput"
+                                    />
 
                                     @error('keywords')
                                     <span class="invalid-feedback" role="alert">
@@ -176,4 +183,34 @@
             });
         });
     </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+
+    <script>
+        $(function () {
+            $('input')
+                .on('change', function (event) {
+                    var $element = $(event.target);
+                    var $container = $element.closest('.example');
+
+                    if (!$element.data('tagsinput')) return;
+
+                    var val = $element.val();
+                    if (val === null) val = 'null';
+                    var items = $element.tagsinput('items');
+
+                    $('code', $('pre.val', $container)).html(
+                        $.isArray(val)
+                            ? JSON.stringify(val)
+                            : '"' + val.replace('"', '\\"') + '"'
+                    );
+                    $('code', $('pre.items', $container)).html(
+                        JSON.stringify($element.tagsinput('items'))
+                    );
+                })
+                .trigger('change');
+        });
+    </script>
+
 @endsection

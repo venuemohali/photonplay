@@ -20,7 +20,18 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\custome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\css\easy-tax.css') }}">
-
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css"
+        rel="stylesheet"
+    />
+    <style type="text/css">
+        .bootstrap-tagsinput .tag {
+            margin-right: 2px;
+            color: white !important;
+            background-color: #0d6efd;
+            padding: 0.2rem;
+        }
+    </style>
     @include('layouts.css')
 
     @yield('style')
