@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\customer\CartController;
+use App\Http\Controllers\customer\ContactUsController;
 use App\Http\Controllers\customer\CustomerProfileController;
 use App\Http\Controllers\customer\SignController;
 use App\Http\Controllers\customer\SolutionController;
@@ -15,3 +16,5 @@ Route::get('solution-highway', [SolutionController::class, 'solutionHighway'])->
 Route::get('solution-tunnels', [SolutionController::class, 'solutionTunnel'])->name('solution.tunnel');
 Route::get('solution-city', [SolutionController::class, 'solutionCity'])->name('solution.city');
 Route::get('solution-transit', [SolutionController::class, 'solutionTransit'])->name('solution.transit');
+Route::get('contact-us', [ContactUsController::class, 'contactUs'])->name('contact.us');
+Route::get('about-us', [ContactUsController::class, 'aboutUs'])->name('about.us');
