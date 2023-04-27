@@ -55,7 +55,7 @@ class LoginController extends Controller
         notify()->success('Login Successfully');
         if($request->p == 1){
             Cart::where('session_id', $request->s)->update(['user_id' => Session::get('user')->id]);
-            return redirect()->route('customer.shopping.bag');    
+            return redirect()->route('customer.shopping.bag');
         }else{
             return redirect()->intended('radar-speed-signs');
         }
@@ -112,7 +112,7 @@ class LoginController extends Controller
             return redirect()->route('home');
         }
     }
-    
+
     public function logout(Request $request) {
         Auth::logout();
         $request->session()->flush();
