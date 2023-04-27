@@ -208,10 +208,11 @@ class CartController extends Controller
                         'price' => $carts->price,
                     ]);
                 }
+                Cart::where('user_id', Session::get('user')->id)->delete();
             }
 
             return redirect()->route('customer.confirmation',  Crypt::encrypt($order->order_number));
         }
-        
+
     }
 }
