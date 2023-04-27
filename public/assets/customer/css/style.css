@@ -50,6 +50,122 @@ body .text-primary {
     font-size: 16px;
     color: #036eb1;
     font-weight: 600;
+}
+
+.header-side img {
+    color: #036eb1;
+}
+
+.header-side .profile-circle img {
+    height: 36px;
+}
+
+.header-side p {
+    font-weight: 600;
+}
+
+.text-colorr {
+    color: #036eb1;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container-cus {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.input-cus-group .form-control,
+.input-cus-group .input-group-text {
+    background: var(--dark-gray-color);
+    height: 60px;
+}
+
+.input-cus-group .form-control:focus {
+    box-shadow: none;
+    outline: 0;
+    background-color: white;
+    border-color: white;
+}
+
+.zigzack {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    /* top: 3px; */
+    bottom: -64px;
+    left: -55px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    border: 3px solid #036eb1 !important;
+}
+
+.banner-two .carousel-indicators [data-bs-target] {
+    display: none !important;
+}
+
+.banner-threee .carousel-indicators [data-bs-target] {
+    display: none !important;
+}
+
+.banner-threee .carousel.slide,
+.banner-threee .carousel-inner,
+.banner-threee .carousel-inner .carousel-item,
+.banner-threee .carousel-inner .carousel-item .banner-three {
+    height: inherit;
+}
+
+.heading-sec {
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100px;
+}
+
+.heading-sec ::before {
+    /* content: '';
+      background-image: url(./assets/images/headingbg.png);
+      position: absolute;
+      width: 80px;
+      height: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50px;
+      background-repeat: no-repeat; */
+}
+
+.solution-pos .down-image {
+    width: 100%;
+    max-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    top: 14px;
+    left: 56px;
+    /* right: -10px; */
+}
+
+p {
+    font-size: 14px;
+}
+
+body .text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-light {
+    font-size: 16px;
+    color: #036eb1;
+    font-weight: 600;
 
 }
 
@@ -2142,3 +2258,6 @@ input:focus {
 }
 
 /* our-clints-end */
+.header .navbar .header-font li {
+    font-size: 14px;
+}

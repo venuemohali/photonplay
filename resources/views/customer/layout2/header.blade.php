@@ -75,7 +75,7 @@
                             <a class="nav-link text-uppercase" href="#">NEWS & EVENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT</a>
+                            <a class="nav-link text-uppercase" href="#">CONTACT</a>
                         </li>
                     </ul>
                     <form class=" d-flex header-side mt-lg-0 mt-4 align-items-center" role="search">
