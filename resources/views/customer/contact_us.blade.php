@@ -1,5 +1,4 @@
 @include('customer.layout2.header')
-    <!-- header-end -->
     <!-- Contact Us Banner start -->
     <section class="contact us">
         <div class="container-fluid">
@@ -56,24 +55,33 @@
                             <h6 class="mb-4">Send us a message</h6>
                             <div class="">
                                 <div class="d-flex justify-content-between ">
-                                    <div>
+                                    <div class="placeholder-names">
                                         <span class="d-block text-secondary">Full Name</span>
-                                        <b>Jimmy Newtron</b>
+                                        <b><input type="text" placeholder="Jimmy Newtron" class="border-0 shadow-none">
+                                        </b>
                                     </div>
                                     <div>
-                                        <span class="d-block text-secondary">Email Address</span>
-                                        <b>jimmynewtron@mail.com</b>
+                                        <div class="placeholder-names">
+                                            <span class="d-block text-secondary">Email Address</span>
+                                            <span class="d-block text-secondary"></span>
+                                            <b><input type="text" placeholder="jimmynewtron@mail.com" class="border-0 shadow-none">
+                                            </b>
+                                           
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between my-4">
-                                    <div>
+                                    <div class="placeholder-names">
                                         <span class="d-block text-secondary">Phone Number</span>
-                                        <b>+12 3456 789</b>
+                                        <b><input type="text" placeholder="+12 3456 789" class="border-0 shadow-none">
+                                        </b>
                                     </div>
-                                    <div>
+                                    <div class="placeholder-names">
                                         <span class="d-block text-secondary">Company Name</span>
-                                        <b>Workgroup Studios</b>
+                                        <b><input type="text" placeholder="Workgroup Studios" class="border-0 shadow-none">
+                                        </b>
                                     </div>
+                                    
                                 </div>
                                 <div class="message-last py-5">
                                     <span class="d-block text-secondary">Full Name</span>
@@ -96,9 +104,6 @@
             </div>
         </div>
     </section>
-    <!-- map-Contact-end -->
-    <!-- footer-start -->
-
     @include('customer.layout2.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
@@ -213,28 +218,73 @@
             ]
         })
         window.addEventListener('click', function (e) {
-            if ($('.navbar-collapse').hasClass('show')) {
-                $('.navbar-toggler').click();
+            if (window.innerWidth > 992) {
+                if ($('.navbar-collapse').hasClass('show')) {
+                    $('.navbar-toggler').click();
+                }
             }
+
         })
 
         // Hover attribute
         $('.dropdown .dropdown-toggle').mouseenter(function () {
-            $(this).addClass('show');
-            $(this).attr({
-                'aria-expanded': true
-            })
-            $(this).siblings('.dropdown-menu').addClass('show');
-            $(this).siblings('.dropdown-menu').attr({
-                'data-bs-popper': "static"
-            })
+            if (window.innerWidth > 991) {
+                $(this).addClass('show');
+                $(this).attr({
+                    'aria-expanded': true
+                })
+                $(this).siblings('.dropdown-menu').addClass('show');
+                $(this).siblings('.dropdown-menu').attr({
+                    'data-bs-popper': "static"
+                })
+            }
+
         });
         $('.dropdown-menu').mouseleave(function () {
-            $(this).removeAttr('data-bs-popper');
-            $(this).siblings('.nav-link ').removeClass('show');
-            $(this).removeClass('show');
-            $(this).siblings('.nav-link').attr({
-                'aria-expanded': false
-            });
+            if (window.innerWidth > 991) {
+                $(this).removeAttr('data-bs-popper');
+                $(this).siblings('.nav-link ').removeClass('show');
+                $(this).removeClass('show');
+                $(this).siblings('.nav-link').attr({
+                    'aria-expanded': false
+                });
+            }
+
         })
+        $('.mega-menu h4').click(function () {
+            // $(this).siblings('ul').slideDown();
+            if ($(this).parent().hasClass('active')) {
+                $(this).parent().removeClass('active')
+            } else {
+                $(this).parent().addClass('active');
+            }
+            $(this).parent().siblings().removeClass('active');
+        });
+
+        $('.toggler-mega').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active')
+                $('.mega-menu').slideUp();
+            } else {
+                $(this).addClass('active');
+                $('.mega-menu').slideDown();
+            }
+
+        })
+        $('.mega-menu-parent > h4').click(function () {
+            var bodyColor = $('.drop-downs').attr("style");
+            // console.log(bodyColor)
+            if (bodyColor === 'display: block;') {
+                $('.drop-downs').slideUp(200);
+                $('.mega-menu-item').removeClass('active');
+                // $('.toggler-mega').removeClass('active')
+                return;
+            }
+            $('.drop-downs').slideDown(200);
+
+        })
+        // $('.mega-menu .col-md-2 > h4').click( function(){
+        //     $(this).siblings('ul').slideDown();
+        //     console.log(this)
+        // })
     </script>

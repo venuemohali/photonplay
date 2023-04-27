@@ -1898,3 +1898,247 @@ input:focus {
         flex-direction: row-reverse;
     } */
 }
+
+/* Smart city */
+.banner-sec-smart-city {
+    background-image: url('../images/aerial-view-shanghai-overpass-night.png');
+}
+
+.thumb-image-item {
+    position: relative;
+    margin-right: 10px;
+}
+
+.thumb-image-item .zoom-in {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.feature-list {
+    max-width: 1055px;
+    margin: 30px auto 0;
+}
+
+.feature-list ul li {
+    position: relative;
+    padding-left: 30px;
+    list-style: none;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    max-width: 450px;
+}
+
+.feature-list ul li .content-feature strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.feature-list ul li::before {
+    content: '';
+    background-image: url('../images/start-blue.png');
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    background-size: 100%;
+
+}
+
+.smart-links a {
+    font-size: 18px;
+    color: #bababa;
+    font-weight: 300;
+}
+
+.smart-links a:hover {
+    color: #ffffff;
+
+}
+
+.application-section {
+    background-color: #f9f9fa;
+}
+
+.imaged {
+    max-width: 180px;
+    min-width: 180px;
+}
+
+.application-section .application-images-list {}
+
+.application-item img {
+    max-width: 160px;
+    margin: 0 auto -85px;
+    display: block;
+}
+
+.application-item .content-application-item {
+    box-shadow: 0px 7px 12.5px rgba(143, 134, 195, 0.03);
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: #544e5d;
+    border-radius: 15px;
+    padding-top: 130px;
+    min-height: 302px;
+}
+
+.content-application-items {
+    box-shadow: 0px 7px 12.5px rgba(143, 134, 195, 0.03);
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: #544e5d;
+    border-radius: 15px;
+    padding-top: 130px;
+
+}
+
+.content-application-items h4 {
+    font-size: 18px;
+}
+
+.application-item .content-application-item h4 {
+    font-size: 18px;
+}
+
+.application-item .content-application-item p {}
+
+.con-sec {
+    background-image: url('../images/con-bg.png');
+    min-height: 215px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-sec-info {
+    max-width: 420px;
+}
+
+.inner-banner-bg {
+    background-image: url('../images/inner-banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post-item .post-info {
+    border-bottom: 1px solid #6c6c6c;
+}
+
+.post-info h2 {
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.post-action-fire ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.post-action-fire ul li img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.sec-sidebar .sidebar-item {
+    margin-bottom: 35px;
+}
+
+.sec-sidebar .sidebar-item .side-bar-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.sec-sidebar .sidebar-item li {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.sec-sidebar .sidebar-item .tags span {
+    margin-right: 7px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.search ::placeholder {
+    font-size: 14px;
+    color: #404040;
+    font-weight: 400;
+}
+
+.search input {
+    opacity: 0.6;
+    border-bottom: 1px solid #4b4e53 !important;
+}
+
+.search img {
+    right: 52%;
+    /* opacity: 0.400; */
+}
+
+.latest-post li a .latest-post-content h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.latest-post li a img {
+    width: 60px;
+    height: 60px;
+}
+
+.latest-post-content span {
+    font-size: 12px;
+}
+
+.font-blog {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.slick-prev:before {
+    content: unset;
+}
+
+.slick-next:before {
+    content: unset;
+}
+
+.content-rules .slick-arrow {
+    display: none !important;
+}
+
+.text-lights {
+    opacity: 0.600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #544e5d;
+    font-weight: 400;
+}
+/* our-clints-start */
+.qutess {
+    right: 16px;
+}
+
+.clint-wrapperr .slick-list {
+    padding-top: 18px;
+}
+
+.qutess img {
+    max-width: 40px;
+    min-width: 40px;
+}
+
+/* our-clints-end */
