@@ -77,42 +77,32 @@
                         <div class="sidebar-item">
                             <div class="side-bar-title">categoriEs</div>
                             <ul class="m-0 p-0">
-                                <li><a hre="">Highway</a></li>
-                                <li><a hre="">SmartCities</a></li>
-                                <li><a hre="">Transit</a></li>
-                                <li><a hre="">Tunnels</a></li>
+
+                                @foreach($categories as $category)
+                                    <li><a href="/blogs/category/{{$category->slug}}">{{$category->category}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="sidebar-item">
                             <div class="side-bar-title text-uppercase">RECENT POSTS</div>
                             <ul class="m-0 p-0 latest-post">
-                                <li>
-                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
-                                        <img src="./assets/images/gray-box.png" />
-                                        <div class="latest-post-content ms-2">
-                                            <h4>POST WITH A PREVIEW IMAGE</h4>
-                                            <span>21 June, 2023 </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
-                                        <img src="./assets/images/gray-box.png" />
-                                        <div class="latest-post-content ms-2">
-                                            <h4 class="text-uppercase">Slide show post</h4>
-                                            <span>16 June, 2023</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
-                                        <img src="./assets/images/gray-box.png" />
-                                        <div class="latest-post-content ms-2">
-                                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                                            <span>10 June, 2023</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                @foreach($latestBlogRecords as $lt_blog)
+                                    <li>
+                                        <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
+                                            <img src="{{asset("storage/".$lt_blog->image)}}" />
+                                            <div class="latest-post-content ms-2">
+                                                <h4>{{$lt_blog->title}}</h4>
+                                                <span>
+                                                <?php
+                                                        $date = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$lt_blog->created_at);
+                                                        $blog_created_date = $date->format('d F, Y');
+                                                        echo $blog_created_date;
+                                                    ?>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="sidebar-item">
@@ -123,7 +113,8 @@
                                 @foreach($tags as $tag)
                                         <span>  {{$tag}}</span>
                                     @if($i%3==0)
-                                        <br/>
+                                </div>
+                                            <div class="mb-3">
                                     @endif
                                     <?php $i++; ?>
                                 @endforeach
