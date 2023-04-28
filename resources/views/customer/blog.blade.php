@@ -3,7 +3,7 @@
     <!-- Banner sec -->
     <section class="inner-banner-bg">
         <h3 class="text-white text-center mb-0">NEWS & EVENTS</h3>
-        <h6 class="text-white text-center text-uppercase mt-2">Blog Name Title</h6>
+        <h6 class="text-white text-center text-uppercase mt-2">{{$blog->title}}</h6>
     </section>
     <!-- Banner Sec End -->
     <section class="blog-content-list position-relative pb-4">
@@ -14,50 +14,16 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="post-item mb-5">
-                        <img src="./assets/images/image-bg.png" alt="" class="mb-4 img-fluid w-100">
+                        <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 img-fluid w-100">
                         <div class="pb-3 post-info border-0">
-                            <h2 class="text-uppercase">POST WITH image and text </h2>
+                            <h2 class="text-uppercase"> {{$blog->title}} </h2>
                             <div>
-                                21 December, 2023 by Admin 10 Comments Website Design, Responsive, Clean
+                              {{$blog_created_date}} by {{$blog->author}}
+                                @foreach($tags as $tag)
+                                    {{$tag}},
+                                @endforeach
                             </div>
-                            <p>
-                                Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis elementum et,
-                                dignissim non atino ipsum. Pesque habitant morbi tristique senectus et netus et
-                                malesuada
-                                fames ac turpis egestas. Donec sed mauris lorem. Sed sit ammauris eu purus consectetur
-                                blandit sed et lacus.
-                            </p>
-                            <p>
-                                Cras tellus enim, sagittis aer varius faucibus, molestie in dolor. Mauris molliadipisg
-                                elit,
-                                in vulputate est volutpat vitae. Pellentesque convallis nisl sit amet lacus luctus vel
-                                consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna.
-                                Fusce
-                                in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero
-                                ac
-                                mattis. Aliquam congue malesuada mauris vitae dignissim.
-                            </p>
-                            <h4 class="fw-normal">Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis
-                                elit varius rhoncus. Etiam
-                                ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</h4>
-                        </div>
-                        <p class="mb-4"><span class="text-uppercase font-blog">- john doe</span> CEO Company</p>
-                        <div>
-                            <p>
-                                Donec sed mauris lorem. Sed sit ammauris eu purus consectetur blandit sed et lacus. Cras
-                                tellus enim, sagittis aer varius faucibus, molestie in dolor. Mauris molliadipisg elit,
-                                in vulputate est volutpat vitae. Pellentesque convallis nisl sit amet lacus luctus vel
-                                consequat ligula suscipit. Aliqua et metus sed tortor eleifend pretium non id urna.
-                                Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum
-                                libero ac mattis. Aliquam congue malesuada mauris vitae dignissim.
-                            </p>
-                            <p>
-                                Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus.
-                                Etiam ut tellus at ligula eleifend malesuada. Aenean et etus sapien. Craes vulputate est
-                                volutpat vitae. Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula
-                                suscipit. Aliqua et metus sed tortor eleifend pretium non id urna. Fusce in augue leo,
-                                sed cursus nisl.
-                            </p>
+                            {!! $blog->body !!}
                         </div>
 
                         <div class="post-action d-flex justify-content-between pt-4">
@@ -65,11 +31,15 @@
                                 <div class="sidebar-item">
                                     <!-- <div class="side-bar-title">Tags</div> -->
                                     <div class="tags">
-                                        <span>design</span>
-                                        <span>development</span>
-                                        <span>ui</span>
-                                        <span>photography</span>
-                                        <span>template</span>
+
+                                        @foreach($tags as $tag)
+                                            <span>{{$tag}}</span>
+                                        @endforeach
+
+{{--                                        <span>development</span>--}}
+{{--                                        <span>ui</span>--}}
+{{--                                        <span>photography</span>--}}
+{{--                                        <span>template</span>--}}
                                         <!-- <span>branding</span> -->
                                     </div>
                                 </div>
@@ -149,13 +119,17 @@
                             <div class="side-bar-title">Tags</div>
                             <div class="tags">
                                 <div class="mb-3">
-                                    <span>design</span>
-                                    <span>development</span>
-                                    <span>ui</span>
+                                    <?php $i=1;?>
+                                @foreach($tags as $tag)
+                                        <span>  {{$tag}}</span>
+                                    @if($i%3==0)
+                                        <br/>
+                                    @endif
+                                    <?php $i++; ?>
+                                @endforeach
                                 </div>
-                                <span>photography</span>
-                                <span>template</span>
-                                <div class="mt-3"> <span>branding</span></div>
+
+{{--                                <div class="mt-3"> <span>branding</span></div>--}}
                             </div>
                         </div>
                         <div class="sidebar-item">
