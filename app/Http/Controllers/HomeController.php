@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\customer\SignController;
+use App\Models\Product;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 
@@ -34,7 +36,8 @@ class HomeController extends Controller
 
 
     public function home_page(){
-        return view('customer.homepage');
+        $products = Product::with('category')->take(2)->get();
+        return view('customer.homepage', compact('products'));
     }
 
 }

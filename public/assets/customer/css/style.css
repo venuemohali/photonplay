@@ -1031,7 +1031,7 @@ ul.slick-dots {
 /* Multiple Size Options End */
 /* messge-sign-start-radar */
 .banner-three {
-    background-image: url("./assets/images/banner-three.png");
+    background-image: url("../images/banner-three.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

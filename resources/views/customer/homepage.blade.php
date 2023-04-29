@@ -7,7 +7,7 @@
                     <div class="col-lg-12 text-center">
                         <h1>From Tokyo to Los Angles</h1>
                         <p class="text-capitalize">contributing to a efficient road and transit network</p>
-                        <button class="btn btn-primary text-uppercase border-0 rounded-0 button-slice">About US</button>
+                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-uppercase ">About US</a>
                     </div>
                 </div>
             </div>
@@ -86,11 +86,12 @@
                             aria-label="Slide 2"></button>
                 </div>
                 <div class="carousel-inner">
+                    @foreach($products as $product)
                     <div class="carousel-item active">
                         <div class="products-two d-lg-flex justify-content-between">
                             <div class="common-wdth common-wdth_ inner-col align-self-center">
-                                <h6>Radar Speed Sign</h6>
-                                <p class="mb-0">R1200</p>
+                                <h6>{{$product->category->title}}</h6>
+                                <p class="mb-0">{{$product->title}}</p>
                             </div>
                             <div class="mask-layer common-wdth inner-col text-center">
                                 <img src="/assets/customer/images/KEPLER-US-12.png" alt="Not Found" class="">
@@ -100,14 +101,7 @@
                             <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
                                 <div class="ms-md-5">
                                     <h6 class="text-capitalize">Description</h6>
-                                    <p>Product description here Product description here <br>
-                                        Product description here Product description here<br>
-                                        Product description here Product description here<br>
-                                        Product description here</p>
-
-                                    <p>Product description here Product description here<br>
-                                        Product description here Product description here<br>
-                                        Product description here </p>
+                                    <p>{{$product->description}}</p>
                                     <div class="social-two">
                                         <p class="text-capitalize fs-5">share:</p>
                                         <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="Not Found">
@@ -119,39 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="products-two d-lg-flex justify-content-between">
-                            <div class="common-wdth common-wdth_ inner-col align-self-center">
-                                <h6>Radar Speed Sign</h6>
-                                <p class="mb-0">R1200</p>
-                            </div>
-                            <div class="mask-layer common-wdth inner-col text-center">
-                                <img src="/assets/customer/images/KEPLER-US-12.png" alt="Not Found" class="">
-                                <button class="btn btn-primary text-capitalize d-block py-0 px-3 m-auto mt-3 mb-4">Shop
-                                    Now</button>
-                            </div>
-                            <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
-                                <div class="ms-md-5">
-                                    <h6 class="text-capitalize">Description</h6>
-                                    <p>Product description here Product description here <br>
-                                        Product description here Product description here<br>
-                                        Product description here Product description here<br>
-                                        Product description here</p>
-
-                                    <p>Product description here Product description here<br>
-                                        Product description here Product description here<br>
-                                        Product description here </p>
-                                    <div class="social-two">
-                                        <p class="text-capitalize fs-5">share:</p>
-                                        <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="Not Found">
-                                        <img src="/assets/customer/images/twitter2.png" alt="Not Found">
-                                        <img src="/assets/customer/images/instagram2.png" alt="Not Found">
-                                        <img src="/assets/customer/images/pintrest2.png" alt="Not Found">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
@@ -180,6 +142,7 @@
             </div>
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                    <a href="{{route('customer.solution.highway')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/factory.png" alt="Not Found">
@@ -191,8 +154,10 @@
                             </p>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0 gap-5">
+                <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/freedom.png" alt="Not Found">
@@ -204,8 +169,10 @@
                             </p>
                         </div>
                     </div>
+                </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                <a href="{{route('customer.solution.city')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/growth-graph.png"
@@ -219,8 +186,10 @@
                             </p>
                         </div>
                     </div>
+                </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/branch.png" alt="Not Found">
@@ -232,6 +201,7 @@
                             </p>
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
         </div>
