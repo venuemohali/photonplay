@@ -25,6 +25,7 @@ use App\Http\Controllers\SpecilizationController;
 use App\Http\Controllers\SpecilizationOptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\CommonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -152,3 +153,5 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
     });
     Route::get('delete-cart-item/{id}', [CartController::class, 'deleteCartTableItem'])->name('delete.cart.table.item');
 });
+
+Route::post('/upload-photo', [CommonController::class, 'upload'])->name('upload-photo-summernote');

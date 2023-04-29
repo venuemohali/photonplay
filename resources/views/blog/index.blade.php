@@ -52,6 +52,9 @@
                                             <td>{{$item->status }}</td>
                                             <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                             <td>
+                                                <a href="{{ url('blog/'.$item->slug)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                                    <i data-feather="eye"></i>
+                                                </a>
                                                 <a href="{{ url('admin/blogs/'.$item->id)}}/edit" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                     <i data-feather="edit"></i>
                                                 </a>

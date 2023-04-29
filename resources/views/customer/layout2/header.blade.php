@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick-theme.css" />
     <link rel="stylesheet" href="/assets/customer/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Home Page</title>
 
 </head>
@@ -66,7 +66,7 @@
                                 <li><a class="dropdown-item" href="{{route('customer.solution.tunnel')}}">Solution Tunnel</a></li>
                                 <li><a class="dropdown-item" href="{{route('customer.solution.city')}}">Solution City</a></li>
                                 <li><a class="dropdown-item" href="{{route('customer.solution.transit')}}">Solution Transit</a></li>
-                                
+
                             </ul>
                             <div class="position-absolute down-image">
                                 <img src="{{asset('assets/customer/images/Down-Arrow.png')}}" alt="Not Found">

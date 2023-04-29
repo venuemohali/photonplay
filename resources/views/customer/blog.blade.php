@@ -47,13 +47,17 @@
                             <div class="post-action-fire">
                                 <ul class="d-flex p-0 m-0 align-items-center">
                                     <!-- <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li> -->
-                                    <li class="text-secondary"> <img src="./assets/images/heart.png" />35 </li>
-                                    <li class="text-secondary d-flex align-items-center"> <img
-                                            src="./assets/images/share-org.png" /> </li>
+                                    <li class="text-secondary" ><span id="like-totals">{{$count}} </span>  </li>
+                                    <li class="text-secondary d-flex align-items-center">
+                                        <i id="like-unlike-btn" class="bi bi-suit-heart{{$like?"-fill text-danger":""}}"  style="font-size: 25px;"></i>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+
+
                     <div
                         class="d-flex justify-content-between align-items-center border-0 border-top border-bottom py-4 mb-4">
                         <div class="d-flex justify-content-between align-items-center"> <img
@@ -70,7 +74,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="search mb-5 position-relative">
                         <input type="text" placeholder="Search" class="border-0 ">
-                        <img src="./assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16"
+                        <img src="/ assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16"
                             height="16">
                     </div>
                     <div class="sec-sidebar">
@@ -120,7 +124,6 @@
                                 @endforeach
                                 </div>
 
-{{--                                <div class="mt-3"> <span>branding</span></div>--}}
                             </div>
                         </div>
                         <div class="sidebar-item">
@@ -144,60 +147,21 @@
                     <h6 class="mb-4 text-uppercase">Related Posts</h6>
                 </div>
                 <div class="rules-content mb-0 d-flex align-items-center border-0 border-bottom pb-5">
+
+                   @foreach($relatedBlogRecords as $relatedBlog)
+
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png " class="d-block mx-auto w-100" />
+                            <img src="{{asset("storage/".$relatedBlog->image)}}" class="d-block mx-auto w-100" />
                             <div class="py-4">
-                                <h6 class="text-uppercase mb-0">new trends in web design</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
+                                <h6 class="text-uppercase mb-0">{{$relatedBlog->title}}</h6>
+                                <span class="text-lights">May 21, 2015 / {{$relatedBlog->author}} </span>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH A PREVIEW IMAGE</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH SLIDER GALLERY</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png " class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">new trends in web design</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH A PREVIEW IMAGE</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH SLIDER GALLERY</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
+
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -505,3 +469,29 @@
         //     console.log(this)
         // })
     </script>
+<script>
+    $(document).ready(function() {
+        $('#like-unlike-btn').click(function() {
+            $.ajax({
+                url: '/blog/{{$blog->id}}/like-unlike',
+                method: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    console.log(response);
+                    $('#like-totals').text(response.total);
+                    if (response.liked) {
+                        $('#like-unlike-btn').attr('class','bi bi-suit-heart-fill text-danger');
+                    } else {
+                        $('#like-unlike-btn').attr('class','bi bi-suit-heart');
+                    }
+
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

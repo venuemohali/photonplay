@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/datatables.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/datatable-extension.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/select2.css')}}">
-<link rel="stylesheet" type="text/css" href="../assets/css/vendors/summernote.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/vendors/summernote.css">
 
 
 
