@@ -6,6 +6,7 @@ $setting = Setting::first();
 $categories = Category::select('title')->take(3)->get();
 $blogs = Blog::select('slug','title')->take(4)->get();
 @endphp
+
 <!-- _____________________ourclint-last-end___________________ -->
     <section class="subscribe-section">
         <div class="container">
@@ -13,11 +14,12 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                 <div class="subscribe-wrapper text-center">
                     <h3 class="subscribe-title">Don’t miss our weekly updates about <br>
                         New Products</h3>
-                    <form action="" class="subscribr-form">
+                    <form action="{{route('customer.newsletter.store')}}" class="subscribr-form" method="post">
+                        @csrf
                         <div class="col-lg-4 mx-auto">
                             <div class="d-flex border-bottom">
                                 <input type="text" placeholder="Enter your email address..."
-                                       class="bg-transparent w-100 border-0 text-white outline-0 border-0 shadow-none">
+                                       class="bg-transparent w-100 border-0 text-white outline-0 border-0 shadow-none" name="email" autocomplete="off">
                                 <button class="bg-transparent border-0 text-white p-2">SUBSCRIBE</button>
                             </div>
                         </div>
@@ -88,7 +90,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         @endif
                         <a href="mailto:{{$setting->sales_email}}"><img src="{{asset('assets\customer\images\message.png')}}" /> {{$setting->sales_email}}</a>
                     </div>
-                    <button class="btn btn-primary mt-3">Contact Now</button>
+                    <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>
                 </div>
             </div>
         </div>

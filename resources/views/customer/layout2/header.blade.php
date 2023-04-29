@@ -66,7 +66,7 @@
                             <ul class="dropdown-menu mega-menu">
                                 <li class="d-flex flex-wrap gap-5">
                                     <div class="col-md-2">
-                                        <h4>Highways</h4>
+                                        <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.highway')}}">Highways</a></h4>
                                         <ul>
                                             <li>
                                                 <hr class="dropdown-divider">
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <ul>
-                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">Smart
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.city')}}">Smart
                                                     Cities</a>
                                             </h4>
                                             <li>
@@ -120,7 +120,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <ul>
-                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">Tunnels</a>
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.tunnel')}}">Tunnels</a>
                                             </h4>
                                             <li>
                                                 <hr class="dropdown-divider">
@@ -153,7 +153,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <ul>
-                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">TRANSIT</a>
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.transit')}}">TRANSIT</a>
                                             </h4>
                                             <li>
                                                 <hr class="dropdown-divider">

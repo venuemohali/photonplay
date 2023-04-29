@@ -3,8 +3,10 @@
 use App\Http\Controllers\customer\CartController;
 use App\Http\Controllers\customer\ContactUsController;
 use App\Http\Controllers\customer\CustomerProfileController;
+use App\Http\Controllers\customer\NewsletterController;
 use App\Http\Controllers\customer\SignController;
 use App\Http\Controllers\customer\SolutionController;
+use App\Models\Newsletter;
 
 Route::any('shopping-bag', [CartController::class, 'shoppingBag'])->name('shopping.bag');
 
@@ -23,3 +25,4 @@ Route::get('blog', [ContactUsController::class, 'blog'])->name('blog');
 Route::get('signages', [ContactUsController::class, 'signal'])->name('signal');
 Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartcity');
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
+Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');

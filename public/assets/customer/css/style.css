@@ -142,7 +142,7 @@ form label {
 
 .heading-sec ::before {
     /* content: '';
-      background-image: url(./assets/images/headingbg.png);
+      background-image: url(../images/headingbg.png);
       position: absolute;
       width: 80px;
       height: 60px;
@@ -394,7 +394,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .products-two {
-    background-image: url("./assets/images/Mask-products.png");
+    background-image: url("../images/Mask-products.png");
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -428,7 +428,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .about-wrapper {
-    background-image: url("./assets/images/aboutBAnner.png");
+    background-image: url("../images/aboutBAnner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -438,7 +438,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .about-segmet {
-    background-image: url("./assets/images/segmet-banner.png");
+    background-image: url("../images/segmet-banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -448,7 +448,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .banner-image {
-    background-image: url("./assets/images/banner-one.png");
+    background-image: url("../images/banner-one.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -458,7 +458,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .banner-imageses {
-    background-image: url("./assets/images/solution-trash.png");
+    background-image: url("../images/solution-trash.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -468,7 +468,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .tunels-imageses {
-    background-image: url("./assets/images/tunels-bg.png");
+    background-image: url("../images/tunels-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -478,7 +478,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .security-imageses {
-    background-image: url("./assets/images/hong-kong-aerial-night.png");
+    background-image: url("../images/hong-kong-aerial-night.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -488,7 +488,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .highyway-imageses {
-    background-image: url("./assets/images/shanghai-overpass-night.png");
+    background-image: url("../images/shanghai-overpass-night.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -508,7 +508,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .carousel-control-prev-icon {
-    background-image: url("./assets/images/leftarrow.png");
+    background-image: url("../images/leftarrow.png");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 18px;
@@ -517,7 +517,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .carousel-control-next-icon {
-    background-image: url("./assets/images/rightaroow.png");
+    background-image: url("../images/rightaroow.png");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 18px;
@@ -743,7 +743,7 @@ div#accordionFlushExample1 {
 /* radar-template-style-start */
 /* radarspeed-bootstrap-slider-start */
 .banner-two {
-    background-image: url("./assets/images/banner-radar.png");
+    background-image: url("../images/banner-radar.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -902,7 +902,7 @@ ul.slick-dots {
 
 /*---- SUBSCRIBE-FORM-SECTION--- */
 .subscribe-section {
-    background-image: url(./assets/images/subscribe_bg.jpg);
+    background-image: url(../images/subscribe_bg.jpg);
 }
 
 .subscribe-title {
@@ -1734,7 +1734,7 @@ input:focus {
 
 /* Smart city */
 .banner-sec-smart-city {
-    background-image: url(./assets/images/aerial-view-shanghai-overpass-night.png);
+    background-image: url(../images/aerial-view-shanghai-overpass-night.png);
 }
 
 .thumb-image-item {
@@ -1774,7 +1774,7 @@ input:focus {
 
 .feature-list ul li::before {
     content: '';
-    background-image: url(./assets/images/start-blue.png);
+    background-image: url(../images/start-blue.png);
     position: absolute;
     left: 2px;
     top: 2px;
@@ -1845,7 +1845,7 @@ input:focus {
 .application-item .content-application-item p {}
 
 .con-sec {
-    background-image: url(./assets/images/con-bg.png);
+    background-image: url(../images/con-bg.png);
     min-height: 215px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1856,7 +1856,7 @@ input:focus {
 }
 
 .inner-banner-bg {
-    background-image: url(./assets/images/inner-banner-bg.png);
+    background-image: url(../images/inner-banner-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -2050,7 +2050,7 @@ input:focus {
     .mega-menu-parent h4:before,
     .mega-menu-item h4:before {
         content: "\e232";
-        background-image: url(./assets/images/Down-Arrow.png);
+        background-image: url(../images/Down-Arrow.png);
         background-repeat: no-repeat;
         color: transparent !important;
         right: 16px;
