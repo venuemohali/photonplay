@@ -18,6 +18,10 @@ class ContactUsController extends Controller
         return view('customer.about_us');
     }
 
+    public function blogDetail(){
+        return view('customer.blog_detail');
+    }
+
     public function blog(){
         return view('customer.blog');
     }

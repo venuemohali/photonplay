@@ -1,12 +1,13 @@
 @include('customer.layout2.header')
 
+<body>
+
     <!-- Banner sec -->
     <section class="inner-banner-bg">
         <h3 class="text-white text-center mb-0">NEWS & EVENTS</h3>
-        <h6 class="text-white text-center text-uppercase mt-2">{{$blog->title}}</h6>
     </section>
     <!-- Banner Sec End -->
-    <section class="blog-content-list position-relative pb-4">
+    <section class="blog-content-list position-relative">
         <div class="social-icons position-absolute start-0">
             <img src="./assets/images/social-media iconss.png" alt="">
         </div>
@@ -14,39 +15,16 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="post-item mb-5">
-                        <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 img-fluid w-100">
-                        <div class="pb-3 post-info border-0">
-                            <h2 class="text-uppercase"> {{$blog->title}} </h2>
-                            <div>
-                              {{$blog_created_date}} by {{$blog->author}}
-                                @foreach($tags as $tag)
-                                    {{$tag}},
-                                @endforeach
-                            </div>
-                            {!! $blog->body !!}
+                        <img src="./assets/images/image-bg.png" alt="" class="mb-4 img-fluid w-100">
+                        <div class="mb-4 pb-4 post-info">
+                            <h2 class="text-uppercase">POST WITH image and text </h2>
+                            <div>21 December, 2023 by Admin 10 Comments Website Design, Responsive, Clean</div>
                         </div>
-
-                        <div class="post-action d-flex justify-content-between pt-4">
-                            <div class="sec-sidebar">
-                                <div class="sidebar-item">
-                                    <!-- <div class="side-bar-title">Tags</div> -->
-                                    <div class="tags">
-
-                                        @foreach($tags as $tag)
-                                            <span>{{$tag}}</span>
-                                        @endforeach
-
-{{--                                        <span>development</span>--}}
-{{--                                        <span>ui</span>--}}
-{{--                                        <span>photography</span>--}}
-{{--                                        <span>template</span>--}}
-                                        <!-- <span>branding</span> -->
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="post-action d-flex justify-content-between">
+                            <a href="" class="text-decoration-none text-secondary">READ MORE</a>
                             <div class="post-action-fire">
                                 <ul class="d-flex p-0 m-0 align-items-center">
-                                    <!-- <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li> -->
+                                    <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li>
                                     <li class="text-secondary"> <img src="./assets/images/heart.png" />35 </li>
                                     <li class="text-secondary d-flex align-items-center"> <img
                                             src="./assets/images/share-org.png" /> </li>
@@ -54,73 +32,156 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="d-flex justify-content-between align-items-center border-0 border-top border-bottom py-4 mb-4">
-                        <div class="d-flex justify-content-between align-items-center"> <img
-                                src="./assets/images/arrowlight.jpg" alt="">
-                            <p class="text-uppercase ms-3 mb-0">POST WITH TEXT ONLY</p>
+                    <div class="post-item mb-5">
+                        <img src="./assets/images/image-bg.png" alt="" class="mb-4 img-fluid w-100">
+                        <div class="mb-4 pb-4 post-info">
+                            <h2 class="text-uppercase">POST WITH MEDIA GALLERY </h2>
+                            <div>21 December, 2023 by Admin 10 Comments Website Design, Responsive, Clean</div>
+                            <p class="mt-4">Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis
+                                elementum et,
+                                dignissim non atino ipsum. Pesque habitant morbi tristique senectus et netus et
+                                malesuada fames ac turpis egestas. Donec sed mauris lorem. Sed sit ammauris eu purus
+                                consectetur blandit sed et lacus. Cras tellus enim, sagittis aer varius faucibus,
+                                molestie in dolor. Mauris molliadipisg elit, in vulputate est volutpat vitae.
+                                Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam
+                                et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl.
+                                Nullam vel tellus massa.
+                                Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae
+                                dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius
+                                rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</p>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="text-uppercase me-3 mb-0">pOST WITH video</p><img
-                                src="./assets/images/arrowlightright.png" alt="">
+                        <div class="post-action d-flex justify-content-between">
+                            <a href="" class="text-decoration-none text-secondary">READ MORE</a>
+                            <div class="post-action-fire">
+                                <ul class="d-flex p-0 m-0 align-items-center">
+                                    <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li>
+                                    <li class="text-secondary"> <img src="./assets/images/heart.png" />35 </li>
+                                    <li class="text-secondary d-flex align-items-center"> <img
+                                            src="./assets/images/share-org.png" /> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-4 pb-4 post-info mt-lg-5 pt-4">
+                            <h2 class="text-uppercase">POST WITH TEXT ONLY </h2>
+                            <div>21 December, 2023 by Admin 10 Comments Website Design, Responsive, Clean</div>
+                            <p class="mt-4">Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis
+                                elementum et,
+                                dignissim non atino ipsum. Pesque habitant morbi tristique senectus et netus et
+                                malesuada fames ac turpis egestas. Donec sed mauris lorem. Sed sit ammauris eu purus
+                                consectetur blandit sed et lacus. Cras tellus enim, sagittis aer varius faucibus,
+                                molestie in dolor. Mauris molliadipisg elit, in vulputate est volutpat vitae.
+                                Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam
+                                et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl.
+                                Nullam vel tellus massa.
+                                Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae
+                                dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius
+                                rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</p>
+                        </div>
+                        <div class="post-action d-flex justify-content-between">
+                            <a href="" class="text-decoration-none text-secondary">READ MORE</a>
+                            <div class="post-action-fire">
+                                <ul class="d-flex p-0 m-0 align-items-center">
+                                    <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li>
+                                    <li class="text-secondary"> <img src="./assets/images/heart.png" />35 </li>
+                                    <li class="text-secondary d-flex align-items-center"> <img
+                                            src="./assets/images/share-org.png" /> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item mb-5">
+                        <div class="position-relative">
+                            <img src="./assets/images/image-bg.png" alt="" class=" img-fluid w-100">
+                            <div class="position-absolute top-50 start-50 translate-middle"> <img
+                                    src="./assets/images/music-button.png" alt="Not FOund"></div>
+                        </div>
+                        <div class="mb-4 pb-4 post-info mt-4">
+                            <h2 class="text-uppercase">POST WITH video </h2>
+                            <div>21 December, 2023 by Admin 10 Comments Website Design, Responsive, Clean</div>
+                            <p class="mt-4">Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis
+                                elementum et,
+                                dignissim non atino ipsum. Pesque habitant morbi tristique senectus et netus et
+                                malesuada fames ac turpis egestas. Donec sed mauris lorem. Sed sit ammauris eu purus
+                                consectetur blandit sed et lacus. Cras tellus enim, sagittis aer varius faucibus,
+                                molestie in dolor. Mauris molliadipisg elit, in vulputate est volutpat vitae.
+                                Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam
+                                et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl.
+                                Nullam vel tellus massa.
+                                Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae
+                                dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius
+                                rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</p>
+                        </div>
+                        <div class="post-action d-flex justify-content-between">
+                            <a href="" class="text-decoration-none text-secondary">READ MORE</a>
+                            <div class="post-action-fire">
+                                <ul class="d-flex p-0 m-0 align-items-center">
+                                    <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li>
+                                    <li class="text-secondary"> <img src="./assets/images/heart.png" />35 </li>
+                                    <li class="text-secondary d-flex align-items-center"> <img
+                                            src="./assets/images/share-org.png" /> </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-12">
                     <div class="search mb-5 position-relative">
                         <input type="text" placeholder="Search" class="border-0 ">
-                        <img src="./assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16"
-                            height="16">
+                        <img src="./assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16" height="16">
                     </div>
                     <div class="sec-sidebar">
                         <div class="sidebar-item">
                             <div class="side-bar-title">categoriEs</div>
                             <ul class="m-0 p-0">
-
-                                @foreach($categories as $category)
-                                    <li><a href="/blogs/category/{{$category->slug}}">{{$category->category}}</a></li>
-                                @endforeach
+                                <li><a hre="">Highway</a></li>
+                                <li><a hre="">SmartCities</a></li>
+                                <li><a hre="">Transit</a></li>
+                                <li><a hre="">Tunnels</a></li>
                             </ul>
                         </div>
                         <div class="sidebar-item">
                             <div class="side-bar-title text-uppercase">RECENT POSTS</div>
                             <ul class="m-0 p-0 latest-post">
-                                @foreach($latestBlogRecords as $lt_blog)
-                                    <li>
-                                        <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
-                                            <img src="{{asset("storage/".$lt_blog->image)}}" />
-                                            <div class="latest-post-content ms-2">
-                                                <h4>{{$lt_blog->title}}</h4>
-                                                <span>
-                                                <?php
-                                                        $date = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$lt_blog->created_at);
-                                                        $blog_created_date = $date->format('d F, Y');
-                                                        echo $blog_created_date;
-                                                    ?>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                @endforeach
+                                <li>
+                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
+                                        <img src="./assets/images/gray-box.png" />
+                                        <div class="latest-post-content ms-2">
+                                            <h4>POST WITH A PREVIEW IMAGE</h4>
+                                            <span>21 June, 2023 </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
+                                        <img src="./assets/images/gray-box.png" />
+                                        <div class="latest-post-content ms-2">
+                                            <h4 class="text-uppercase">Slide show post</h4>
+                                            <span>16 June, 2023</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a hre="" class="d-flex align-items-center text-decoration-none text-secondary">
+                                        <img src="./assets/images/gray-box.png" />
+                                        <div class="latest-post-content ms-2">
+                                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                            <span>10 June, 2023</span>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="sidebar-item">
                             <div class="side-bar-title">Tags</div>
                             <div class="tags">
                                 <div class="mb-3">
-                                    <?php $i=1;?>
-                                @foreach($tags as $tag)
-                                        <span>  {{$tag}}</span>
-                                    @if($i%3==0)
+                                    <span>design</span>
+                                    <span>development</span>
+                                    <span>ui</span>
                                 </div>
-                                            <div class="mb-3">
-                                    @endif
-                                    <?php $i++; ?>
-                                @endforeach
-                                </div>
-
-{{--                                <div class="mt-3"> <span>branding</span></div>--}}
+                                <span>photography</span>
+                                <span>template</span>
+                               <div class="mt-3"> <span>branding</span></div>
                             </div>
                         </div>
                         <div class="sidebar-item">
@@ -133,77 +194,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- related posted-start -->
-    <section class="content-rules pt-0">
-        <div class="container">
-            <div class="px-4 col-lg-8">
-                <div>
-                    <h6 class="mb-4 text-uppercase">Related Posts</h6>
-                </div>
-                <div class="rules-content mb-0 d-flex align-items-center border-0 border-bottom pb-5">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png " class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">new trends in web design</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH A PREVIEW IMAGE</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH SLIDER GALLERY</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png " class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">new trends in web design</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH A PREVIEW IMAGE</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/rules-banner.png" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">POST WITH SLIDER GALLERY</h6>
-                                <span class="text-lights">May 21, 2015 / john doe </span>
-                            </div>
-                        </div>
+                <!-- </div> -->
+                <div class="col-md-12 px-0">
+                    <div class="paginations">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination border-0">
+                                <li class="page-item">
+                                    <a class="page-link border-0 text-dark" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><img src="./assets/images/arrowlight.jpg"
+                                                alt=""></span> </a>
+                                </li>
+                                <li class="page-item"><a class="page-link border-0 text-dark" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link border-0 text-dark" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link border-0 text-dark" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link border-0 text-dark" href="#">_</a></li>
+                                <li class="page-item"><a class="page-link border-0 text-dark" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link border-0 text-dark" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><img src="./assets/images/arrowlightright.png"
+                                                alt=""></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- related posted-end -->
     <!-- blog-banner end  -->
     <section class="our-clints-last">
         <div class="mb-lg-5 text-center">
@@ -229,7 +247,7 @@
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="./assets/images/CTU.png" class="d-block mx-auto" />
+                            <img src="./assets/images/BRO.png" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
@@ -249,17 +267,18 @@
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="./assets/images/CTU.png" class="d-block mx-auto" />
+                            <img src="./assets/images/BRO.png" class="d-block mx-auto" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-@include('customer.layout2.footer')
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    @include('customer.layout2.footer')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
 
         $('.clint-wrapperr').slick({
@@ -345,37 +364,6 @@
             infinite: false,
             speed: 300,
             slidesToShow: 4,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
-            slidesToScroll: 1,
-            arrows: true,
-            autoplay: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        })
-        $('.rules-content').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
