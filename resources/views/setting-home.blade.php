@@ -187,6 +187,58 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="row mb-3 form-group">
+                                <label for="facebook" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Facebook') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') ?? $data->facebook ?? ''}}" required autocomplete="facebook" autofocus>
+
+                                    @error('facebook')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mb-3 form-group">
+                                <label for="instagram" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Instagram') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="instagram" type="text" class="form-control @error('instagram') is-invalid @enderror" name="instagram" value="{{ old('instagram') ?? $data->instagram ?? ''}}" required autocomplete="instagram" autofocus>
+
+                                    @error('instagram')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mb-3 form-group">
+                                <label for="twitter" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Twitter') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="twitter" type="text" class="form-control @error('twitter') is-invalid @enderror" name="twitter" value="{{ old('twitter') ?? $data->twitter ?? ''}}" required autocomplete="twitter" autofocus>
+
+                                    @error('twitter')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mb-3 form-group">
+                                <label for="linkedin" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Linkedin') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="linkedin" type="text" class="form-control @error('linkedin') is-invalid @enderror" name="linkedin" value="{{ old('linkedin') ?? $data->linkedin ?? ''}}" required autocomplete="linkedin" autofocus>
+
+                                    @error('linkedin')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="row mb-3 form-group">
                                 <label for="gst" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('GST(%)') }}</label>
