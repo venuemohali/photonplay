@@ -35,13 +35,13 @@
 </head>
 <body>
 <div>
-    <header class="header bg-white py-3">
-        <nav class="navbar navbar-expand-lg">
+<header class="header bg-white py-3 sticky-top">
+        <nav class="navbar navbar-expand-lg custome-mega-amenu">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="/assets/customer/images/logo-dark.png" alt="Not Found"></a>
+                <a class="navbar-brand" href="{{route('customer.homePage')}}"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse header-font navbar-collapse " id="navbarSupportedContent">
@@ -53,51 +53,486 @@
                             <a class="nav-link text-uppercase" href="{{route('customer.homePage')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">COMPANY</a>
+                            <a class="nav-link text-uppercase" href="{{route('customer.about.us')}}">COMPANY</a>
                         </li>
+                        <!-- hjgjhkl -->
 
                         <li class="nav-item dropdown position-relative solution-pos">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                SOLUTIONS
+                                aria-expanded="false">
+                                SOLUTIONS <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found" class="ms-1 mb-">
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{route('customer.solution.highway')}}">Solution Highway</a></li>
-                                <li><a class="dropdown-item" href="{{route('customer.solution.tunnel')}}">Solution Tunnel</a></li>
-                                <li><a class="dropdown-item" href="{{route('customer.solution.city')}}">Solution City</a></li>
-                                <li><a class="dropdown-item" href="{{route('customer.solution.transit')}}">Solution Transit</a></li>
 
+                            <ul class="dropdown-menu mega-menu">
+                                <li class="d-flex flex-wrap gap-5">
+                                    <div class="col-md-2">
+                                        <h4>Highways</h4>
+                                        <ul>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
+                                                    href="#">Variable
+                                                    Message
+                                                    Sign (VMS)</a>
+                                            </li>
+                                            <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2 text-wrap"
+                                                    href="#">Variable
+                                                    Speed Limit
+                                                    Sign
+                                                    (VSLS)</a></li>
+                                            <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
+                                                    href="#">Portable
+                                                    Variable
+                                                    Message Sign
+                                                    (PVMS) </a></li>
+                                            <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
+                                                    href="#">Vehicle
+                                                    Actuated
+                                                    Speed Display
+                                                    (VASD) </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">Smart
+                                                    Cities</a>
+                                            </h4>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
+                                                        Speed Sign </a></li>
+                                                <li><a href="#"
+                                                        class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
+                                                        Variable Message Sign (PVMS)</a></li>
+                                                <li><a href="#"
+                                                        class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                        Message Sign (VMS) </a></li>
+                                                <li><a href="#"
+                                                        class="text-wrap dropdown-item px-0 text-uppercase mb-2">LED
+                                                        Tickers </a></li>
+
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">Tunnels</a>
+                                            </h4>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                    Message
+                                                    Sign (VMS)</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                    Speed
+                                                    Limit Sign
+                                                    (VSLS)</a></li>
+                                            <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
+                                                    Finders
+                                                </a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
+                                                    – Emergency
+                                                    Exit Sign ,
+                                                    Emergency Telephone Sign</a></li>
+                                            <li><a href="#"
+                                                    class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
+                                                    Control
+                                                    System (LCS) </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <h4><a class="dropdown-item px-0 text-uppercase" href="#">TRANSIT</a>
+                                            </h4>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-wrap dropdown-item px-0 text-uppercase mb-2">Passenger
+                                                    Information Display
+                                                    System <br> (PIDS) </a></li>
+                                            <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Bus
+                                                    Signs</a></li>
+                                            <li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
-                            <div class="position-absolute down-image">
-                                <img src="{{asset('assets/customer/images/Down-Arrow.png')}}" alt="Not Found">
-                            </div>
+                        </li>
+
+
+                        <!-- end -->
+                        <!-- <div class="position-absolute down-image">
+
+                            </div> -->
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">NEWS & EVENTS</a>
+                            <a class="nav-link text-uppercase" href="{{route('customer.blog')}}">NEWS & EVENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">CONTACT</a>
+                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT</a>
                         </li>
                     </ul>
                     <form class=" d-flex header-side mt-lg-0 mt-4 align-items-center" role="search">
-                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
                         <div class="hease-user">
-                            <!-- <div class="dropdown">
-                                <button class="btn dropdown-toggle border-0 shadow-none p-0" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="/assets/customer/images/user.png" alt="Not Found" class="img-fluid me-5">
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-capitalize" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item text-capitalize py-3" href="#">Change Password</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="#">Log Out</a></li>
-                                </ul>
-                            </div> -->
+
                         </div>
-                        <img src="{{asset('assets/customer/images/search.png')}}" alt="Not Found" class="img-fluid" width="18px"
-                             height="18px">
+                        <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid" width="18px"
+                            height="18px">
                     </form>
                 </div>
             </div>
         </nav>
+        <div class="ul-mega">
+            <!-- <div class="hamburger"> -->
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a class="mega-brand" href="#"><img src="./assets/images/logo-dark.png" alt="Not Found"></a>
+                            <div class="toggler-mega "><img src="./assets/images/icons8-menu-50.png" alt=""></div>
+                            <!-- <img class="img-menus" src="./assets/images/icons-menu.gif" alt="Not Found"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <ul class="">
+                <li>
+                    <!-- About -->
+                    <div class="mega-menu mt-4">
+                        <div class="mega-menu-item">
+                            <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
+                            <h4 class="text-uppercase">Home</h4>
+                        </div>
+                        <div class="mega-menu-item">
+                            <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
+                            <h4 class="text-uppercase">Company</h4>
+                        </div>
+                        <div class="mega-menu-parent">
+                            <!-- <ul class="ps-0"><li class="text-uppercase">Company</li></ul> -->
+                            <h4>SOLUTIONS</h4>
+                            <div class="drop-downs">
+                                <div class="mega-menu-item">
+                                    <h4>Highways</h4>
+                                    <ul>
+                                        <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
+                                                href="#">Variable
+                                                Message
+                                                Sign (VMS)</a>
+                                        </li>
+                                        <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2 text-wrap"
+                                                href="#">Variable
+                                                Speed Limit
+                                                Sign
+                                                (VSLS)</a></li>
+                                        <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
+                                                href="#">Portable
+                                                Variable
+                                                Message Sign
+                                                (PVMS) </a></li>
+                                        <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2" href="#">Vehicle
+                                                Actuated
+                                                Speed Display
+                                                (VASD) </a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h4 class="text-uppercase">Smart Cities</h4>
+                                    <ul>
+                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
+                                                Speed Sign </a></li>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
+                                                Variable Message Sign (PVMS)</a></li>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                Message Sign (VMS) </a></li>
+                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">LED
+                                                Tickers </a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h4 class="text-uppercase">Tunnels</h4>
+                                    <ul>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                Message
+                                                Sign (VMS)</a>
+                                        </li>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
+                                                Speed
+                                                Limit Sign
+                                                (VSLS)</a></li>
+                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
+                                                Finders
+                                            </a>
+                                        </li>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
+                                                – Emergency
+                                                Exit Sign ,
+                                                Emergency Telephone Sign</a></li>
+                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
+                                                Control
+                                                System (LCS) </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h4 class="text-uppercase">TRANSIT</h4>
+                                    <ul>
+                                        <li><a href="#"
+                                                class="text-wrap dropdown-item px-0 text-uppercase mb-2">Passenger
+                                                Information Display
+                                                System <br> (PIDS) </a></li>
+                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Bus
+                                                Signs</a></li>
+                                        <li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-menu-item">
+                            <!-- <ul><li>NEWS & EVENTS</li></ul> -->
+                            <h4>NEWS & EVENTS</h4>
+                        </div>
+                        <div class="mega-menu-item">
+                            <!-- <ul><li>CONTACT</li></ul> -->
+                            <h4>CONTACT</h4>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </header>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+
+$('.clint-wrapperr').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                arrows: false,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+});
+$('.key-slider').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+});
+
+$('.clints-content').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+})
+
+$('.clints-content-gallery').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+})
+
+window.addEventListener('click', function (e) {
+    if (window.innerWidth > 992) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    }
+
+})
+
+// Hover attribute
+$('.dropdown .dropdown-toggle').mouseenter(function () {
+    if (window.innerWidth > 991) {
+        $(this).addClass('show');
+        $(this).attr({
+            'aria-expanded': true
+        })
+        $(this).siblings('.dropdown-menu').addClass('show');
+        $(this).siblings('.dropdown-menu').attr({
+            'data-bs-popper': "static"
+        })
+    }
+
+});
+$('.dropdown-menu').mouseleave(function () {
+    if (window.innerWidth > 991) {
+        $(this).removeAttr('data-bs-popper');
+        $(this).siblings('.nav-link ').removeClass('show');
+        $(this).removeClass('show');
+        $(this).siblings('.nav-link').attr({
+            'aria-expanded': false
+        });
+    }
+
+})
+$('.mega-menu h4').click(function () {
+    // $(this).siblings('ul').slideDown();
+    if ($(this).parent().hasClass('active')) {
+        $(this).parent().removeClass('active')
+    } else {
+        $(this).parent().addClass('active');
+    }
+    $(this).parent().siblings().removeClass('active');
+});
+
+$('.toggler-mega').click(function () {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active')
+        $('.mega-menu').slideUp();
+    } else {
+        $(this).addClass('active');
+        $('.mega-menu').slideDown();
+    }
+
+})
+$('.mega-menu-parent > h4').click(function () {
+    var bodyColor = $('.drop-downs').attr("style");
+    // console.log(bodyColor)
+    if (bodyColor === 'display: block;') {
+        $('.drop-downs').slideUp(200);
+        $('.mega-menu-item').removeClass('active');
+        // $('.toggler-mega').removeClass('active')
+        return;
+    }
+    $('.drop-downs').slideDown(200);
+
+})
+// $('.mega-menu .col-md-2 > h4').click( function(){
+//     $(this).siblings('ul').slideDown();
+//     console.log(this)
+// })
+</script>
