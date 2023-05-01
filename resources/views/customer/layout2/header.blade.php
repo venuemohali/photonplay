@@ -183,13 +183,22 @@
                             <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT</a>
                         </li>
                     </ul>
-                    <form class=" d-flex header-side mt-lg-0 mt-4 align-items-center" role="search">
-                        <div class="hease-user">
+                    <form class=" d-flex mt-lg-0 mt-4 align-items-center" role="search">
+{{--                        <div class="hease-user">--}}
 
-                        </div>
-                        <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid" width="18px"
-                            height="18px">
+{{--                        </div>--}}
+
+
+
                     </form>
+                    <div class="position-relative search-heading">
+                        <input class="form-control me-2 shadow-none border" type="search" aria-label="Search" />
+                        <div class="position-absolute top-50 end-0 translate-middle">
+                            {{-- <img src={SearchBg.src} alt="Not Found" /> --}}
+                            <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid me-2" width="18px"
+                                 height="18px">
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

@@ -407,12 +407,12 @@ a.nav-link.dropdown-toggle.show img,
     object-fit: contain;
 }
 
-/* 
-  
+/*
+
   .mask-layer {
       text-align: center;
   }
-  
+
   .mask-layer button {
       margin: auto;
       font-size: 12px;
@@ -1960,7 +1960,27 @@ input:focus {
     color: #544e5d;
     font-weight: 400;
 }
-
+/*// home page header-start*/
+.search-heading input {
+    /*// display: none;*/
+    transition: 0.5s;
+    width: 45px;
+    border: 0px;
+    opacity: 0;
+    z-index: 2;
+    position: inherit;
+    cursor: pointer;
+}
+.search-heading input:focus,
+.search-heading input:active {
+    display: block !important;
+    width: 300px;
+    border: 2px solid red;
+    border-radius: 24px;
+    opacity: 1;
+    /*background: transparent;*/
+    /*//z-index: 99;*/
+}
 /* mega-menu-end */
 @media (min-width: 1600px) {
     .container-cus {
@@ -1987,40 +2007,40 @@ input:focus {
 }
 
 /* @media (min-width:992px) {
-  
+
       .circle-stone {
           max-width: 100%;
       }
-  
+
       .slider-nav .slider-item {
           height: 110px;
       }
-  
+
       .login-parent {
           padding: 80px 15px;
       }
-  
+
       .option-chose img {
           max-width: 600px;
           width: 100%;
       }
-  
+
       .message-box .app-box {
           font-size: 20px;
       }
   } */
 
 /* @media (max-width:1200px) {
-  
-  
+
+
       .roundedd-image img {
           height: 200px;
       }
-  
+
       .message-box .app-box {
           font-size: 20px;
       }
-  
+
   } */
 @media only screen and (max-width: 1024px) {
     .custome-mega-amenu {
@@ -2193,7 +2213,7 @@ input:focus {
           background: #FFF;
           min-width: 320px;
       }
-  
+
       .header .navbar-collapse.show {
           left: 0;
           z-index: 1;
@@ -2472,3 +2492,6 @@ input:focus {
         opacity: 1;
     }
 }
+
+
+
