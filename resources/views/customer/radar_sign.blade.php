@@ -10,11 +10,11 @@ foreach($specilization->options as $option){
 <!-- Our Product-start -->
 <section class="pt-0 pb-0">
     <ul class="list-style-ul pt-2 m-0 pb-2 d-flex justify-content-center align-items-center flex-wrap">
-        <li>iCop 1200 </li>
-        <li>iCop1200M</li>
-        <li>iCop1500</li>
-        <li>iCop1500M</li>
-        <li>iCop1800M</li>
+        @forelse ($productLists as $list)
+            <a href="{{route('customer.radar.sign', $list->id)}}" style="text-decoration: none;"><li class="p-4">{{$list->title}}</li></a>
+        @empty
+            
+        @endforelse
     </ul>
 </section>
 <!-- End Varient Section -->
@@ -145,9 +145,8 @@ foreach($specilization->options as $option){
                         Summary</span>
                     <div class="border-left  ">
                         <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">{{$product->category->title}} | {{$product->title}}</p>
-                        <p class="mb-0 opacity-50">Yellow | 3 Days Batteries | Solar Powered | Pole Mount | 2
-                            years
-                            warranty</p>
+                        <p class="mb-0 opacity-50">{{$product->color}} | {{$product->warranty}}
+                            Warranty</p>
                     </div>
                 </div>
             </div>
@@ -173,46 +172,14 @@ foreach($specilization->options as $option){
     <div class="container">
         <!-- Tabber -->
         <div class="tabber-item opacity-50">
-            Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis elementum et, dignissim non
-            atino ipsum. Pesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Donec sed mauris lorem. Sed sit ammauris eu purus consectetur blandit sed et lacus.
-            Cras tellus enim, sagittis aer varius faucibus, molestie in dolor. Mauris molliadipisg elit, in
-            vulputate est volutpat vitae. Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula
-            suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl.
-            Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris
-            vitae dignissim.
-            Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. Etiam ut tellus
-            at ligula eleifend malesuada. Aenean et metus sapien.
+            {{$product->description}}
         </div>
         <!-- End Tabber -->
     </div>
 </section>
 <!-- improving-section-start -->
-<section class="imroving">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="d-md-flex align-items-center justify-content-between">
-                    <div class="text-white">
-                        <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">RADAR SPEED SIGN | R1200</p>
-                        <span>Our team of experts will help you out with the deployment strategy</span>
-                    </div>
-                    <div class="py-4">
-                        <button class="btn btn-light rounded-5 px-4 py-3">Contact Us</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- improving-section-end -->
-<!-- Our Product -->
 
-<section class="sec-copyright py-3 border-top px-2 text-center">
-    <div>Photon Play Systems - © 2023 All Rights Reserved <a href="#">Privacy Policy</a></div>
-</section>
-
-@include('customer.layouts.footer')
+@include('customer.layout2.footer')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

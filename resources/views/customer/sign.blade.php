@@ -571,71 +571,8 @@
     </section>
     <!-- Multiple Size Options-end -->
     <!--  -->
-    <section class="contact-form pt-3">
-        <div class="text-center pb-4">
-            <h2 class="fs-md-2 mt-3">Talk to our Experts</h2>
-            <p>Lets talk about improving the traffic in your city. For any queries
-                Our team of experts will help you out with the deployment strategy</p>
-        </div>
-        <div class="container">
-            <div class="col-md-10 mx-auto">
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Company Name / Organization*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Country*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="First Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Last Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Email Address*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Phone Number*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="form-control rounded-0 mb-4" rows="4" placeholder="Message"
-                            aria-describedby="passwordHelpBlock"></textarea>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary px-5 fw-bold rounded-pill">Send Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="subscribe-section">
-        <div class="container">
-            <div class="row">
-                <div class="subscribe-wrapper text-center">
-                    <h3 class="subscribe-title">Don’t miss our weekly updates about <br>
-                        New Products</h3>
-                    <form action="" class="subscribr-form">
-                        <div class="col-lg-4 mx-auto">
-                            <div class="d-flex border-bottom">
-                                <input type="text" placeholder="Enter your email address..."
-                                    class="bg-transparent w-100 border-0 text-white outline-0 border-0 shadow-none">
-                                <button class="bg-transparent border-0 text-white p-2">SUBSCRIBE</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    @include('customer.layouts.footer')
+@include('customer.layout2.get_in_touch')
+    @include('customer.layout2.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

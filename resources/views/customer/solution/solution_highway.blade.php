@@ -340,49 +340,7 @@
     </section>
     <!--system-bus-end  -->
     <!--form-export-start  -->
-    <section class="contact-form">
-        <div class="text-center pb-4">
-            <h2 class="fs-md-2 mt-3">Talk to our Experts</h2>
-            <p>Contact our team of expert to suggest you the best product for your ITS project</p>
-        </div>
-        <div class="container">
-            <div class="col-md-10 mx-auto">
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Company Name / Organization*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Country*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="First Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Last Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Email Address*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Phone Number*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="form-control rounded-0 mb-4" rows="4" placeholder="Message"
-                            aria-describedby="passwordHelpBlock"></textarea>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary px-5 fw-bold rounded-pill">Send </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.get_in_touch')
     <!-- _____________________ourclint-last-end___________________ -->
 @include('customer.layout2.footer')
  

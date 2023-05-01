@@ -14,25 +14,22 @@
                         class="d-flex justify-content-center align-items-center gap-5 contact-peraa my-lg-5 contact-wrapper">
                         <div
                             class="d-flex justify-lg-content-center justify-content-start align-items-center gap-3 w-100">
-                            <img src="./assets//images/iconmap.png" alt="Not Found">
-                            <p class="mb-0"> Photonplay Systems (P) Ltd. <br>
-                                Advant Navis Business Park, B 1010, <br>
-                                Noida-Greater Noida Expy, Sector 142,<br>
-                                Noida, Uttar Pradesh 201305, India
+                            <img src="{{asset('assets\customer\images\iconmap.png')}}" alt="Not Found">
+                            <p class="mb-0">{{$setting->company_address}}
                             </p>
                         </div>
                         <div
                             class="d-flex justify-lg-content-center justify-content-start align-items-center gap-3 w-100">
-                            <img src="./assets//images/iconTelephone.png" alt="Not Found">
+                            <img src="{{asset('assets\customer\images\iconTelephone.png')}}" alt="Not Found">
                             <p class="mb-0">
-                                +91 989 969 0347
+                            {{$setting->sales_phone}}
                             </p>
                         </div>
                         <div
                             class="d-flex justify-lg-content-center justify-content-start align-items-center gap-3 w-100">
-                            <img src="./assets//images/iconmessagesss.png" alt="Not Found">
+                            <img src="{{asset('assets\customer\images\iconmessagesss.png')}}" alt="Not Found">
                             <p class="mb-0">
-                                larry@photonplay.com
+                            {{$setting->support_email}}
                             </p>
                         </div>
                     </div>
@@ -51,54 +48,57 @@
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13686.924581218746!2d75.88485906787676!3d30.950072544206556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a84a965aaa167%3A0x5b0c9401857ab0e8!2sMeharban%2C%20Punjab%20141007!5e0!3m2!1sen!2sin!4v1681919215477!5m2!1sen!2sin"
                             height="700" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="map-messanger shadow p-5 my-4">
-                            <h6 class="mb-4">Send us a message</h6>
-                            <div class="">
-                                <div class="d-flex justify-content-between ">
-                                    <div class="placeholder-names">
-                                        <span class="d-block text-secondary">Full Name</span>
-                                        <b><input type="text" placeholder="Jimmy Newtron" class="border-0 shadow-none">
-                                        </b>
-                                    </div>
-                                    <div>
-                                        <div class="placeholder-names">
-                                            <span class="d-block text-secondary">Email Address</span>
-                                            <span class="d-block text-secondary"></span>
-                                            <b><input type="text" placeholder="jimmynewtron@mail.com" class="border-0 shadow-none">
-                                            </b>
-                                           
+                            <form action="{{route('customer.inquery.submit')}}" method="post">
+                                @csrf
+                                <div class="map-messanger shadow p-5 my-4">
+                                    <h6 class="mb-4">Send us a message</h6>
+                                    <div class="">
+                                        <div class="d-flex justify-content-between ">
+                                            <div class="placeholder-names">
+                                                <span class="d-block text-secondary">Full Name</span>
+                                                <b><input name="first_name" type="text" placeholder="Jimmy Newtron" class="border-0 shadow-none">
+                                                </b>
+                                            </div>
+                                            <div>
+                                                <div class="placeholder-names">
+                                                    <span class="d-block text-secondary">Email Address</span>
+                                                    <span class="d-block text-secondary"></span>
+                                                    <b><input name="email" type="text" placeholder="jimmynewtron@mail.com" class="border-0 shadow-none">
+                                                    </b>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between my-4">
+                                            <div class="placeholder-names">
+                                                <span class="d-block text-secondary">Phone Number</span>
+                                                <b><input name="phone_number" type="text" placeholder="+12 3456 789" class="border-0 shadow-none">
+                                                </b>
+                                            </div>
+                                            <div class="placeholder-names">
+                                                <span class="d-block text-secondary">Company Name</span>
+                                                <b><input name="company_name" type="text" placeholder="Workgroup Studios" class="border-0 shadow-none">
+                                                </b>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="message-last py-5">
+                                            <textarea name="message" class="form-control rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="textHelpBlock"></textarea>
+                                        </div>
+                                        
+                                        <div class="d-flex align-items-center justify-content-between pt-5">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                                    checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Accept terms & conditions
+                                                </label>
+                                            </div>
+                                            <button class="btn btn-primary text-uppercase">Send</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between my-4">
-                                    <div class="placeholder-names">
-                                        <span class="d-block text-secondary">Phone Number</span>
-                                        <b><input type="text" placeholder="+12 3456 789" class="border-0 shadow-none">
-                                        </b>
-                                    </div>
-                                    <div class="placeholder-names">
-                                        <span class="d-block text-secondary">Company Name</span>
-                                        <b><input type="text" placeholder="Workgroup Studios" class="border-0 shadow-none">
-                                        </b>
-                                    </div>
-                                    
-                                </div>
-                                <div class="message-last py-5">
-                                    <span class="d-block text-secondary">Full Name</span>
-                                    <b>Jimmy Newtron</b>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between pt-5">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                            checked>
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                            Accept terms & conditions
-                                        </label>
-                                    </div>
-                                    <button class="btn btn-primary text-uppercase">Send</button>
-                                </div>
-                            </div>
-                        </div>
+                            </form>
                     </div>
                 </div>
             </div>

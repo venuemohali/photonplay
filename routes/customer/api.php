@@ -3,6 +3,7 @@
 use App\Http\Controllers\customer\CartController;
 use App\Http\Controllers\customer\ContactUsController;
 use App\Http\Controllers\customer\CustomerProfileController;
+use App\Http\Controllers\customer\InqueryController;
 use App\Http\Controllers\customer\NewsletterController;
 use App\Http\Controllers\customer\SignController;
 use App\Http\Controllers\customer\SolutionController;
@@ -26,3 +27,4 @@ Route::get('signages', [ContactUsController::class, 'signal'])->name('signal');
 Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartcity');
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
 Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');
+Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');

@@ -28,32 +28,36 @@ $setting = Setting::first();
                     <h2 class="fs-md-2 mt-3">GET IN TOUCH</h2>
                     <p class="opacity-50">Empowering connections that drive your success.</p>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Company Name / Organization*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
+                <form action="{{route('customer.inquery.submit')}}" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input name="company_name" type="text" id="inputtext5" placeholder="Company Name / Organization*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-6">
+                            <input name="country" type="text" id="inputtext5" placeholder="Country*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-6">
+                            <input name="first_name" type="text" id="inputtext5" placeholder="First Name*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-6">
+                            <input name="last_name" type="text" id="inputtext5" placeholder="Last Name*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-6">
+                            <input name="email" type="text" id="inputtext5" placeholder="Email Address*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-6">
+                            <input name="phone_number" type="text" id="inputtext5" placeholder="Phone Number*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea name="message" class="form-control rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="textHelpBlock"></textarea>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Country*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="First Name*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Last Name*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Email Address*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Phone Number*" class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="form-control rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="passwordHelpBlock"></textarea>
-                    </div>
+                    <div class="text-start">
+                    <button type="submit" class="btn btn-primary px-5 rounded-0">Send Now</button>
                 </div>
-                <div class="text-start">
-                    <button class="btn btn-primary px-5 rounded-0">Send Now</button>
-                </div>
+                </form>
+                
             </div>
         </div>
     </div>

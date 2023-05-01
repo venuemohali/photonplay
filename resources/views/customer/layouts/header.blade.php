@@ -12,6 +12,10 @@ if(!Session::get('user')){
             $cartPrice += $i->price * $i->quantity;
         }
 }
+
+$products = '';
+//dd($products);
+
 @endphp
 
 <head>
@@ -75,7 +79,7 @@ if(!Session::get('user')){
                                 <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
                             </div>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">CONTACT US</a>
+                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT US</a>
                         </li>
                     </ul>
                     <form class="d-none  d-lg-flex header-side mt-lg-0 mt-4" role="search">
@@ -111,3 +115,4 @@ if(!Session::get('user')){
             </div>
         </nav>
     </header>
+    

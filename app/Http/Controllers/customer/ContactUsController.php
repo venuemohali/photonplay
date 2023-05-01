@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\BlogLike;
+use App\Models\Setting;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -15,7 +16,8 @@ use Illuminate\Http\Request;
 class ContactUsController extends Controller
 {
     public function contactUs(){
-        return view('customer.contact_us');
+        $setting = Setting::first();
+        return view('customer.contact_us', compact('setting'));
     }
 
     public function aboutUs(){

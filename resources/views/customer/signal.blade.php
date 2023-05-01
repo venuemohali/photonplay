@@ -140,70 +140,7 @@
     <!-- Application end -->
 
     <!-- contact form -->
-    <section class="contact-form bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-sec-info">
-                        <div class="text-start pb-2">
-                            <h2 class="fs-md-2 mt-3">Request a Demo</h2>
-                            <p class="opacity-50">We're dedicated to creating meaningful connections
-                                that propel your success forward.</p>
-                        </div>
-                        <div class="contact-info">
-                            <div class="contact-info-item">
-                                <a class="text-decoration-none" href="#"><img src="{{asset('assets/customer/images/phone-color.png')}}">
-                                    800.966.9329 (US)</a>
-                                <a class="text-decoration-none" href="#"><img src="{{asset('assets/customer/images/phone-color.png')}}">
-                                    800.966.9329 (US)</a>
-                                <a class="text-decoration-none" href="#"><img src="{{asset('assets/customer/images/message-color.png')}}">
-                                    sales@photonplay.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="text-start pb-2">
-                        <h2 class="fs-md-2 mt-3">GET IN TOUCH</h2>
-                        <p class="opacity-50">Empowering connections that drive your success.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="Company Name / Organization*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="Country*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="First Name*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="Last Name*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="Email Address*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" id="inputPassword5" placeholder="Phone Number*"
-                                class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                        </div>
-                        <div class="col-md-12">
-                            <textarea class="form-control rounded-0 mb-4" rows="4" placeholder="Message"
-                                aria-describedby="passwordHelpBlock"></textarea>
-                        </div>
-                    </div>
-                    <div class="text-start">
-                        <button class="btn btn-primary px-5 rounded-0">Send Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.get_in_touch')
     <!-- Contact form end -->
     <!-- _____________________ourclint-last-start___________________ -->
     <section class="our-clints-last">

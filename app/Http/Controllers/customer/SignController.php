@@ -16,8 +16,9 @@ class SignController extends Controller
 
     public function radarSigns($id){
         $product = Product::with('images','specilizations.specilization','specilizations.options','specilizations.options.specializationoptions','category')->find($id);
+        $productLists = Product::where('id', '!=', $id)->take(5)->get();
         // dd($product);
-        return view('customer.radar_sign', compact('product'));
+        return view('customer.radar_sign', compact('product','productLists'));
     }
 
     public function specificationAjax(Request $request){

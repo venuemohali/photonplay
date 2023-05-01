@@ -102,7 +102,7 @@
                                                 <hr class="dropdown-divider">
                                             </li>
                                             <ul>
-                                                <li><a href="#"
+                                                <li><a href="{{route('customer.radar.speed.signs')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
                                                         Speed Sign </a></li>
                                                 <li><a href="#"

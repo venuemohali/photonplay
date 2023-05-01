@@ -211,7 +211,9 @@
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-md-6 mx-auto">
-                    <div class="row bg-grant p-lg-5  p-3">
+                    <form action="{{route('customer.inquery.submit')}}" method="post">
+                        @csrf
+                        <div class="row bg-grant p-lg-5  p-3">
                         <div class="col-lg-12">
                             <div class="text-start text-white pb-4">
                                 <h4 class="mt-3">Request a Quote</h4>
@@ -219,26 +221,27 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="password" id="inputPassword5" placeholder="Your Name* / Organization*"
-                                   class="form-control rounded-2 mb-4" aria-describedby="passwordHelpBlock">
+                            <input name="first_name" type="text" id="inputtext5" placeholder="Your Name* / Organization*"
+                                   class="form-control rounded-2 mb-4" aria-describedby="textHelpBlock">
                         </div>
                         <div class="col-md-12">
-                            <input type="password" id="inputPassword5" placeholder="Email Address*"
-                                   class="form-control rounded-2 mb-4" aria-describedby="passwordHelpBlock">
+                            <input name="email" type="text" id="inputtext5" placeholder="Email Address*"
+                                   class="form-control rounded-2 mb-4" aria-describedby="textHelpBlock">
                         </div>
                         <div class="col-md-12">
-                            <input type="password" id="inputPassword5" placeholder="Subject*"
-                                   class="form-control rounded-2 mb-4" aria-describedby="passwordHelpBlock">
+                            <input name="subject" type="text" id="inputtext5" placeholder="Subject*"
+                                   class="form-control rounded-2 mb-4" aria-describedby="textHelpBlock">
                         </div>
 
                         <div class="col-md-12">
-                            <textarea class="form-control rounded-2 mb-4 " rows="4" placeholder="Message"
+                            <textarea name="message" class="form-control rounded-2 mb-4 " rows="4" placeholder="Message"
                                       aria-describedby="passwordHelpBlock"></textarea>
                         </div>
                         <div class="text-start">
-                            <button class="btn text-colorr bg-white px-5 fw-bold py-3 rounded-pill">Contact</button>
+                            <button type="submit" class="btn text-colorr bg-white px-5 fw-bold py-3 rounded-pill">Contact</button>
                         </div>
-                    </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-md-5">
                     <div class="imge-qutes h-100">
