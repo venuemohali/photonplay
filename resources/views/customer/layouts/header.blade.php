@@ -14,9 +14,6 @@ if(!Session::get('user')){
 }
 @endphp
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -39,7 +36,7 @@ if(!Session::get('user')){
 </head>
 
 <!-- <title>login</title> -->
-
+<body>
 <header class="header bg-white py-3">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -114,15 +111,3 @@ if(!Session::get('user')){
             </div>
         </nav>
     </header>
-</head>
-
-<body>
-{{--    @notifyCss--}}
-{{--    @include('notify::components.notify')--}}
-{{--    <x:notify-messages />--}}
-{{--    @notifyJs--}}
-
-
-</body>
-
-</html>

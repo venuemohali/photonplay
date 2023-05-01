@@ -219,11 +219,11 @@
                 <li>
                     <!-- About -->
                     <div class="mega-menu mt-4">
-                        <div class="mega-menu-item">
+                        <div class="mega-menu-items">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
                             <h4 class="text-uppercase">Home</h4>
                         </div>
-                        <div class="mega-menu-item">
+                        <div class="mega-menu-items">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
                             <h4 class="text-uppercase">Company</h4>
                         </div>
@@ -313,11 +313,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mega-menu-item">
+                        <div class="mega-menu-items">
                             <!-- <ul><li>NEWS & EVENTS</li></ul> -->
                             <h4>NEWS & EVENTS</h4>
                         </div>
-                        <div class="mega-menu-item">
+                        <div class="mega-menu-items">
                             <!-- <ul><li>CONTACT</li></ul> -->
                             <h4>CONTACT</h4>
                         </div>

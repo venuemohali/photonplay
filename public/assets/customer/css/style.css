@@ -1484,7 +1484,10 @@ input:focus {
     /* background-color: #036eb1; */
     border-bottom: 2px solid #0a11e0;
 }
-
+.mega-menu-items h4{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
 /****************************************** Abbout Us End **************************************** */
 /****************************************** Contact Us Start**************************************** */
 .contact-peraa p {
@@ -2062,6 +2065,7 @@ input:focus {
     }
 
     .mega-menu-parent h4,
+
     .mega-menu-item h4 {
         font-size: 14px;
         margin-bottom: 30px;
@@ -2080,6 +2084,19 @@ input:focus {
 }
 
 @media only screen and (max-width: 991px) {
+    .search-heading{
+        width: 100%;
+        margin-right: 15px;
+    }
+    input.form-control{
+        width: 100%;
+    }
+    .search-heading input:focus,
+    .search-heading input:active {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
     .application-item img {
         max-width: 100%;
         margin: auto;
