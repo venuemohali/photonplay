@@ -189,16 +189,15 @@
 {{--                        </div>--}}
 
 
-
-                    </form>
-                    <div class="position-relative search-heading">
-                        <input class="form-control me-2 shadow-none border" type="search" placeholder="Search" aria-label="Search" />
-                        <div class="position-absolute top-50 end-0 translate-middle">
-                            {{-- <img src={SearchBg.src} alt="Not Found" /> --}}
-                            <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid me-2" width="18px"
-                                 height="18px">
+                        <div class="position-relative search-heading">
+                            <input class="form-control me-2 shadow-none border" type="search" placeholder="Search" aria-label="Search" />
+                            <div class="position-absolute top-50 end-0 translate-middle">
+                                {{-- <img src={SearchBg.src} alt="Not Found" /> --}}
+                                <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid me-2" width="18px"
+                                     height="18px">
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -208,7 +207,7 @@
                 <div class="row ">
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a class="mega-brand" href="#"><img src="./assets/images/logo-dark.png" alt="Not Found"></a>
+                            <a class="mega-brand" href="#"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
                             <div class="toggler-mega "><img src="./assets/images/icons8-menu-50.png" alt=""></div>
                             <!-- <img class="img-menus" src="./assets/images/icons-menu.gif" alt="Not Found"> -->
                         </div>
@@ -322,6 +321,22 @@
                             <!-- <ul><li>CONTACT</li></ul> -->
                             <h4>CONTACT</h4>
                         </div>
+
+                        <form class=" d-flex mt-lg-0 mt-4 align-items-center" role="search">
+                            {{--                        <div class="hease-user">--}}
+
+                            {{--                        </div>--}}
+
+
+                            <div class="position-relative search-heading">
+                                <input class="form-control me-2 shadow-none border" type="search" placeholder="Search" aria-label="Search" />
+                                <div class="position-absolute top-50 end-0 translate-middle">
+                                    {{-- <img src={SearchBg.src} alt="Not Found" /> --}}
+                                    <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid me-2" width="18px"
+                                         height="18px">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </li>
             </ul>
