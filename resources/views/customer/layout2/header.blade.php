@@ -192,7 +192,7 @@
 
                     </form>
                     <div class="position-relative search-heading">
-                        <input class="form-control me-2 shadow-none border" type="search" aria-label="Search" />
+                        <input class="form-control me-2 shadow-none border" type="search" placeholder="Search" aria-label="Search" />
                         <div class="position-absolute top-50 end-0 translate-middle">
                             {{-- <img src={SearchBg.src} alt="Not Found" /> --}}
                             <img src="{{asset('assets\customer\images\search.png')}}" alt="Not Found" class="img-fluid me-2" width="18px"
