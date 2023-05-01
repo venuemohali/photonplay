@@ -31,6 +31,10 @@ class ContactUsController extends Controller
         return view('customer.blog');
     }
 
+    public function blogDetail(){
+        return view('customer.blog_detail');
+    }
+
     /**
      * @param $page_name
      * @return Application|Factory|View

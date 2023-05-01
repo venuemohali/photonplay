@@ -1,4 +1,5 @@
 @php
+use App\Models\Product;
 $currency = '$';
 $cartPrice = 0;
 if(!Session::get('user')){
@@ -13,8 +14,7 @@ if(!Session::get('user')){
         }
 }
 
-$products = '';
-//dd($products);
+$productLists = Product::take(5)->get();
 
 @endphp
 
@@ -68,12 +68,12 @@ $products = '';
                                 PRODUCTS
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                @forelse ($productLists as $list)
+                                    <li><a class="dropdown-item" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>    
+                                @empty
+                                    
+                                @endforelse
+                                
                             </ul>
                             <div class="position-absolute down-image">
                                 <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
