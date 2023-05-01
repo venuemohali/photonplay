@@ -11,12 +11,12 @@
 @endsection
 
 @section('breadcrumb-title')
-    <h3>Blog Category</h3>
+    <h3> Our Clients</h3>
 @endsection
 
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item active">Blog Category</li>
+    <li class="breadcrumb-item active">Our Clients</li>
 @endsection
 
 @section('content')
@@ -27,30 +27,32 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex">
-                        <h5 class="card-title">All Categories</h5>
-                        <a href="{{ url('/admin/blog-categories/create')}}" class="btn btn-primary ms-auto">Add Category</a>
+                        <h5 class="card-title">Our Clients</h5>
+                        <a href="{{ route('admin.clients_create')}}" class="btn btn-primary ms-auto">Add Clients</a>
                     </div>
                     <div class="card-body">
 
                         <div class="table-responsive">
                             <div class="dt-ext table-responsive">
-                                <table class="display" id="basic-2">
+                                <table class="display table-bordered" id="basic-2">
                                     <thead>
                                     <tr>
                                         <th class="all">#</th>
-                                        <th class="all">Category</th>
+                                        <th class="all">Client</th>
+                                        <th class="all">Title</th>
                                         <th class="all">Created</th>
                                         <th class="all">Options</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($blog_category as $item)
+                                    @foreach ($records as $item)
                                         <tr id="Item-{{$item->id}}">
                                             <td>{{$Sr++}}</td>
-                                            <td>{{$item->category }}</td>
+                                            <td> <img src="/storage/{{$item->image }}" class="img-fluid" style="height: 100px;"/></td>
+                                            <td> {{$item->name }}</td>
                                             <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                             <td>
-                                                <a href="{{ url('admin/blog-categories/'.$item->id)}}/edit" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                                <a href="{{route("admin.clients_edit",$item->id) }}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                     <i data-feather="edit"></i>
                                                 </a>
 
@@ -78,7 +80,7 @@
 
                                                                 $.ajax({
                                                                     type:'DELETE',
-                                                                    url:'{{url('admin/blog-categories/'.$item->id)}}',
+                                                                    url:'{{url('admin/cms/clients/'.$item->id)}}',
                                                                     data:'_token = {{ @csrf_token() }}',
                                                                     success:function(data) {
                                                                         $("#Item-{{$item->id}}").hide();

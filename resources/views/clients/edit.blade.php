@@ -30,13 +30,14 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{route("admin.clients_store") }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{route("admin.clients_update",$record->id) }}" enctype="multipart/form-data">
                             @csrf
+                            @method("put")
                             <div class="row mb-3 form-group">
                                 <label for="name" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') ?? $data->name ?? ''}}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') ?? $record->name ?? ''}}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -49,7 +50,10 @@
                                 <label for="image" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Clients') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') ?? $data->image ?? ''}}" required autocomplete="image" autofocus>
+
+                                    <img src="{{asset("storage/".$record->image)}}" class="img-fluid" />
+                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') ?? $data->image ?? ''}}"  autocomplete="image" autofocus>
+                                    <span> If you need to change image , then upload from here.</span>
 
                                     @error('image')
                                     <span class="invalid-feedback" role="alert">

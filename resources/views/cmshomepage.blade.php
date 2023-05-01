@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="#" class="btn btn-primary btn-lg btn-block w-100 d-flex align-items-center justify-content-center">
+                                <a href="/admin/cms/clients" class="btn btn-primary btn-lg btn-block w-100 d-flex align-items-center justify-content-center">
                                     <i data-feather="command"></i>
                                     Our Clients</a>
                             </div>

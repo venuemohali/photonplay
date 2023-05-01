@@ -63,4 +63,18 @@ Route::post('/product/edit/publish', [ProductPublishController::class, 'product_
 
 Route::get('/cms/clients', [ClientsLogosController::class,'index'])->name("clients_index");
 
+Route::get('/cms/clients/create', [ClientsLogosController::class,'create'])
+    ->name("clients_create");
+
+Route::post('/cms/clients/create', [ClientsLogosController::class,'store'])
+    ->name("clients_store");
+
+Route::get('/cms/clients/{id}/edit', [ClientsLogosController::class,'edit'])
+    ->name("clients_edit");
+
+Route::put('/cms/clients/{id}', [ClientsLogosController::class,'update'])
+    ->name("clients_update");
+
+Route::delete('/cms/clients/{id}', [ClientsLogosController::class,'destroy'])->name("clients_delete");
+
 
