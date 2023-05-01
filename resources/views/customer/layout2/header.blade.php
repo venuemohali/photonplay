@@ -208,7 +208,7 @@
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-between align-items-center">
                             <a class="mega-brand" href="#"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
-                            <div class="toggler-mega "><img src="./assets/images/icons8-menu-50.png" alt=""></div>
+                            <div class="toggler-mega "><img src="{{asset('assets\customer\images\icons8-menu-50.png')}}" alt=""></div>
                             <!-- <img class="img-menus" src="./assets/images/icons-menu.gif" alt="Not Found"> -->
                         </div>
                     </div>
