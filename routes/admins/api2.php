@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientsLogosController;
 use App\Http\Controllers\ContentPageController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\ProductDescriptionController;
@@ -59,3 +60,7 @@ Route::post('/product/edit/description', [ProductDescriptionController::class, '
 
 Route::get('/product/{id}/edit/publish', [ProductPublishController::class,'open_publish_form'])->name("open_product_publish_form");
 Route::post('/product/edit/publish', [ProductPublishController::class, 'product_publish_update'])->name("product_publish_update");
+
+Route::get('/cms/clients', [ClientsLogosController::class,'index'])->name("clients_index");
+
+

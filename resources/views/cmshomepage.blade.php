@@ -33,13 +33,13 @@
 
                         <div class="row">
                             <div class="col-md-4 mb-3">
-                                <a href="{{url('admin/blog-categories')}}" class="btn btn-primary btn-lg btn-block w-100">
+                                <a href="{{url('admin/blog-categories')}}" class="btn btn-primary btn-lg btn-block w-100  d-flex align-items-center justify-content-center">
                                     <i data-feather="copy"></i>
                                     Blog Category</a>
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="{{url('admin/blogs')}}" class="btn btn-primary btn-lg btn-block w-100">
+                                <a href="{{url('admin/blogs')}}" class="btn btn-primary btn-lg btn-block w-100  d-flex align-items-center justify-content-center">
 
                                     <i data-feather="share-2"></i>
 
@@ -47,9 +47,15 @@
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="" class="btn btn-primary btn-lg btn-block w-100">
+                                <a href="#" class="btn btn-primary btn-lg btn-block w-100  d-flex align-items-center justify-content-center">
                                     <i data-feather="bookmark"></i>
                                     Website Pages</a>
+                            </div>
+
+                            <div class="col-md-4  mb-3">
+                                <a href="#" class="btn btn-primary btn-lg btn-block w-100 d-flex align-items-center justify-content-center">
+                                    <i data-feather="command"></i>
+                                    Our Clients</a>
                             </div>
 
                         </div>
