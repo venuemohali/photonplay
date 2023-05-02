@@ -154,16 +154,17 @@ class CartController extends Controller
                    'unit_amount' => $request->grand_total * 100,
                    'currency' => 'usd',
                    'product_data' => [
-                     'name' => 'My Product',
+                     'name' => 'Total Amount',
                    ],
                  ]);
 
 
            $checkout_session = \Stripe\Checkout\Session::create([
            'line_items' => [[
-              'price' => $price->id,
-               'quantity' => 1,
+                'price' => $price->id,
+                'quantity' => 1,
            ]],
+           'customer_email' => Session::get('user')->email,
            'mode' => 'payment',
            'success_url' => route('customer.success.response', ['order_id' => $orderId]),
            'cancel_url' => route('customer.cancel.response'),
