@@ -63,7 +63,7 @@
                         </li>
 
                         <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title link-nav ">
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/orders') ? 'active':''}}" href="{{ route('admin.orders_index') }}">
                                 <i data-feather="shopping-cart"></i>
                                 <span>Manage Orders</span>
                             </a>

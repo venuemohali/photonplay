@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientsLogosController;
 use App\Http\Controllers\ContentPageController;
 use App\Http\Controllers\CouponController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductDescriptionController;
 use App\Http\Controllers\ProductMediaController;
 use App\Http\Controllers\ProductPricingController;
@@ -77,4 +78,5 @@ Route::put('/cms/clients/{id}', [ClientsLogosController::class,'update'])
 
 Route::delete('/cms/clients/{id}', [ClientsLogosController::class,'destroy'])->name("clients_delete");
 
-
+Route::get('/orders', [OrderController::class,'index'])->name("orders_index");
+Route::get('/orders/{id}', [OrderController::class,'show'])->name("orders_show");
