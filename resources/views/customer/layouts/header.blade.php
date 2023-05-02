@@ -69,11 +69,11 @@ $productLists = Product::take(5)->get();
                             </a>
                             <ul class="dropdown-menu">
                                 @forelse ($productLists as $list)
-                                    <li><a class="dropdown-item" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>    
+                                    <li><a class="dropdown-item" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
                                 @empty
-                                    
+
                                 @endforelse
-                                
+
                             </ul>
                             <div class="position-absolute down-image">
                                 <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
@@ -90,13 +90,13 @@ $productLists = Product::take(5)->get();
                         <input type="hidden" name="grand_total" value="{{$currency .''.$cartPrice}}">
                             <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
 
-                          <a href="{{route('customer.shopping.bag')}}">  <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
+                          <a href="{{route('customer.shopping.bag')}}" @if($cartPrice == 0) style="pointer-events: none" @endif>  <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
                         </div>
                         <a href="{{route('customer.loginForm')}}"> <img src="{{asset('assets\customer\images\user.png')}}" alt="Not Found" class="img-fluid "> </a>
                         @else
                         <div class="d-flex align-items-center">
                             <p class="me-2 mb-0">{{$currency .''.$cartPrice}}</p>
-                            <a href="{{route('customer.shopping.bag')}}"> <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
+                            <a href="{{route('customer.shopping.bag')}}" @if($cartPrice == 0) style="pointer-events: none" @endif> <img src="{{asset('assets\customer\images\shoping.png')}}" alt="Not Found" class="img-fluid me-5"></a>
                         </div>
                         <div class="d-flex align-items-center">
                             <div class="me-2">
@@ -115,4 +115,4 @@ $productLists = Product::take(5)->get();
             </div>
         </nav>
     </header>
-    
+
