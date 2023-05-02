@@ -4,6 +4,7 @@ namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\Order;
 use App\Models\User;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
@@ -23,7 +24,9 @@ class CustomerProfileController extends Controller
     }
 
     public function history(){
-        return view('customer.profile.history');
+        $orders = Order::with('orderedProducts', 'orderedProducts.product', 'orderedProducts.product.category')->where('user_id', Session::get('user')->id)->paginate(3);
+        // dd($orders);
+        return view('customer.profile.history', compact('orders'));
     }
 
     public function overview(){
