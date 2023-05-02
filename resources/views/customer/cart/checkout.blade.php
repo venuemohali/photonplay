@@ -1,4 +1,8 @@
 @include('customer.layouts.header')
+<head>
+    <title>Buy cool new product</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
 <section class="stepper-form-tabber pt-3 pb-0">
         <div>
             <ul class="d-flex justify-content-center justify-content-md-between tabber-list-container flex-wrap">
@@ -16,7 +20,7 @@
                 <div class="col-md-6">
                 <form action="{{route('customer.place.order')}}" method="post">
                     @csrf
-                    
+
                     <h3>billing details</h3>
                     <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number" required>
                     <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite" >
@@ -68,72 +72,11 @@
                             <span class="text-amount">${{$grand_total = ($total - $discount) + $shipping + $gst}}</span>
                         </li>
                     </ul>
-                    <input type="hidden" name="shipping" value="{{$shipping}}">
-                    <input type="hidden" name="gst" value="{{$gst}}">
-                    <input type="hidden" name="cart_subtotal" value="{{$total}}">
-                    <input type="hidden" name="discount" value="{{$discount}}">
-                    <input type="hidden" name="coupon" value="{{$coupon_name}}">
+
                     <input type="hidden" name="grand_total" value="{{$grand_total}}">
-                    <h3>Payment Method</h3>
-                    <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
-                        <div class="accordion-item mb-3 border-0">
-                            <h2 class="accordion-header border" id="flush-headingOne">
-                                <button class="accordion-button  collapsed bg-white shadow-none py-2 pb-2 shadow-none"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                    aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Dimensions and weight
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body pt-0 opacity-50 pt-3"> Lorem Ipsum is simply in dummy text of
-                                    the
-                                    printing
-                                    and type se
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 border-0">
-                            <h2 class="accordion-header border" id="flush-headingTwo">
-                                <button class="accordion-button collapsed bg-white shadow-none ty-3 py-2 shadow-none"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                    aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    direct bank transfer
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body pt-0 opacity-50 pt-3">Lorem Ipsum is simply in dummy text of
-                                    the
-                                    printing and
-                                    type se
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 border-0">
-                            <h2 class="accordion-header border" id="flush-headingThree">
-                                <button class="accordion-button collapsed bg-white shadow-none tex3 py-2 shadow-none"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                    aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Stripe
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body pt-0 opacity-50 pt-3">
-                                    card : <input type="text" name="cardNumber">
-                                    month : <input type="text" name="expMonth">
-                                    year : <input type="text" name="expYear">
-                                    cvc : <input type="password" name="cvc">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end position-absolute circle-stone">
-                                <img src="./assets/images/circle_stone.png" alt="not-found" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary rounded-0">Place Order</button>
+                    <button type="submit" id="checkout-button">Checkout</button>
                 </form>
+
                 </div>
             </div>
         </div>

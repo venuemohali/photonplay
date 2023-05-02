@@ -8,6 +8,8 @@ use App\Http\Controllers\customer\NewsletterController;
 use App\Http\Controllers\customer\SignController;
 use App\Http\Controllers\customer\SolutionController;
 use App\Models\Newsletter;
+use App\Models\Order;
+use Illuminate\Http\Request;
 
 Route::any('shopping-bag', [CartController::class, 'shoppingBag'])->name('shopping.bag');
 
@@ -28,3 +30,5 @@ Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartc
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
 Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');
 Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');
+Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');
+Route::any('cancel-response', [CartController::class, 'checkoutCancel'])->name('cancel.response');

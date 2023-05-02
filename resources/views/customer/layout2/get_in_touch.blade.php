@@ -14,11 +14,13 @@ $setting = Setting::first();
                     </div>
                     <div class="contact-info">
                         <div class="contact-info-item">
+                            @if ($setting)
                             <a href="tel:{{$setting->sales_phone}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->sales_phone}}</a>
-                            @if ($setting->support_phone !=null)
-                            <a href="tel:{{$setting->support_phone}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->support_phone}}</a>
+
+                            <a href="tel:{{$setting->support_phone ?? ''}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->support_phone}}</a>
+
+                            <a href="mailto:{{$setting->sales_email ?? ''}}"><img src="{{asset('assets\customer\images\message.png')}}" /> {{$setting->sales_email}}</a>
                             @endif
-                            <a href="mailto:{{$setting->sales_email}}"><img src="{{asset('assets\customer\images\message.png')}}" /> {{$setting->sales_email}}</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +59,7 @@ $setting = Setting::first();
                     <button type="submit" class="btn btn-primary px-5 rounded-0">Send Now</button>
                 </div>
                 </form>
-                
+
             </div>
         </div>
     </div>

@@ -44,10 +44,10 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
                 </div>
                 <ul class="social-media pt-md-5 py-4">
-                    <li><a href="{{$setting->facebook}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
-                    <li><a href="{{$setting->twitter}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
-                    <li><a href="{{$setting->twitter}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
-                    <li><a href="{{$setting->instagram}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
+                    <li><a href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
+                    <li><a href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
+                    <li><a href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
+                    <li><a href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
                 </ul>
             </div>
             <div class="footer-item mb-0 mb-md-5 footer-item-2">
@@ -65,7 +65,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     @forelse ($categories as $category)
                     <li><a>{{$category->title}}</a></li>
                     @empty
-                        
+
                     @endforelse
                 </ul>
             </div>
@@ -73,22 +73,24 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                 <h2>NEWS & EVENTS</h2>
                 <ul class="p-0">
                     @forelse ($blogs as $blog)
-                    <li><a href="{{$blog->slug}}">{{$blog->title}}</a></li>    
+                    <li><a href="{{$blog->slug}}">{{$blog->title}}</a></li>
                     @empty
-                        
+
                     @endforelse
-                    
+
                 </ul>
             </div>
             <div class="footer-item mb-0 mb-md-5 footer-item-5">
                 <h2>Get in Touch with Us</h2>
                 <div class="contact-info">
                     <div class="contact-info-item">
+                        @if ($setting)
                         <a href="tel:{{$setting->sales_phone}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->sales_phone}}</a>
                         @if ($setting->support_phone !=null)
                         <a href="tel:{{$setting->support_phone}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->support_phone}}</a>
                         @endif
                         <a href="mailto:{{$setting->sales_email}}"><img src="{{asset('assets\customer\images\message.png')}}" /> {{$setting->sales_email}}</a>
+                        @endif
                     </div>
                     <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>
                 </div>
