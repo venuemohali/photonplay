@@ -49,7 +49,7 @@
                         <li class="nav-item">
                             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item">l
                             <a class="nav-link text-uppercase" href="{{route('customer.homePage')}}">Home</a>
                         </li>
                         <li class="nav-item">

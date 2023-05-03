@@ -17,8 +17,7 @@ class OrderController extends Controller
     }
     public function show(Request $request,$id){
         $order=Order::with(['orderedProducts','user'])->find($id);
-//        $temp_order_hold=OrderedProduct::find($id);
-//
+
 
         return view('order.show',compact('order'));
     }
