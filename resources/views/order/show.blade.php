@@ -27,17 +27,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header d-flex justify-content-around">
-                        <h5 class="card-title shadow-lg p-2">Order : {{$order->order_number}}</h5>
-                        <h5  > <span class="{{$order->payment_status=='paid'?'bg-success':'bg-warning'}} p-2">
-                                    {{ucfirst($order->payment_status)}}</span>  </h5>
+                    <div class="card-header">
+                        <h2 class="card-title shadow-lg p-1">  Order : {{$order->order_number}}</h2>
+                        <div class="shadow-sm p-3">
+                        <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
+                                    {{ucfirst($order->payment_status)}} </span>   </p>
+
+                        <p> Trasaction No. : <span>
+                                {{$order->trx_id}}</span> </p>
+                        <p>  <b> Order Note: </b>  {{$order->order_notes??'Order notes not available.'}}</p>
+                        </div>
                     </div>
                     <div class="card-body">
+
                         <div class="dt-ext table-responsive">
 
                             <h2> </h2>
-
-                            <table class="table table-bordered">
+                            <div class="shadow-lg p-4 ">
+                                <h2> Product </h2>
+                                <hr/>
+                            <table class="table table-bordered  table-hover">
                                 <thead>
                                 <tr>
                                     <th>Product Id</th>
@@ -72,8 +81,13 @@
                                 </tr>
                                 </tbody>
                             </table>
+                        </div>
+                            <br/>
 
-                            <table class="table table-bordered">
+                            <div class="shadow-lg p-4 ">
+                                <h2> Customer </h2>
+                                <hr/>
+                            <table class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>User Id</th>
@@ -97,8 +111,40 @@
 
                                 </tbody>
                             </table>
+                            </div>
+                            <br/>
+                            <div class="shadow-lg p-4 ">
+                                <h2> Billing Address </h2>
+                                <hr/>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Billing Street</th>
+                                        <th>Billing Flat Suite</th>
+                                        <th>Billing City</th>
+                                        <th>Billing State</th>
+                                        <th>Billing Countryr</th>
+                                        <th>Billing Postcode</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>{{$order->billing_street }}</td>
+                                        <td>{{$order->billing_flat_suite}}</td>
+                                        <td>{{ $order->billing_city }}</td>
+                                        <td>{{ $order->billing_state}}</td>
+                                        <td>{{ $order->billing_country }}</td>
+                                        <td>{{ $order->billing_postcode }}</td>
+                                    </tr>
 
 
+                                    </tbody>
+                                </table>
+                                <div class="shadow-sm p-3">
+                                    <p>  <b> Address Note: </b>  {{$order->address}}</p>
+                                </div>
+
+                            </div>
 
                         </div>
                     </div>
