@@ -113,13 +113,13 @@ $productLists = Product::take(5)->get();
                                         data-mdb-toggle="dropdown"
                                         aria-expanded="false"
                                     >
-                                        <a href="{{route('customer.edit.profile')}}"><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
+                                        <a ><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
                                                                                           class="img-fluid rounded-circle d-block" width="36" height="36"></a>
                                     </button>
                                     <ul class="dropdown-menu position-absolute end-0" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="{{route('customer.edit.profile')}}">Account</a></li>
+                                        <li><a class="dropdown-item" href="{{route('customer.logout')}}">Logout</a></li>
+
                                     </ul>
                                 </div>
                             </div>
