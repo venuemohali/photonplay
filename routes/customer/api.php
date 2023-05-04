@@ -28,6 +28,8 @@ Route::get('blog', [ContactUsController::class, 'blog'])->name('blog');
 Route::get('signages', [ContactUsController::class, 'signal'])->name('signal');
 Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartcity');
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
+Route::get('variable-speed-limit-signs', [ContactUsController::class, 'variableSpeedLimit'])->name('variable.speed.limit');
+Route::get('passenger-information-display-system', [ContactUsController::class, 'pasengerInformationDisplay'])->name('pasenger.information.display.system');
 Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');
 Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');
 Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');
