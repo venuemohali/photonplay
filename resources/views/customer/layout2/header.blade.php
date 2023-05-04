@@ -72,17 +72,17 @@
                                                 <hr class="dropdown-divider">
                                             </li>
                                             <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                    href="#">Variable
+                                                    href="{{route('customer.variable.message')}}">Variable
                                                     Message
                                                     Sign (VMS)</a>
                                             </li>
                                             <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2 text-wrap"
-                                                    href="#">Variable
+                                                    href="{{route('customer.variable.speed.limit')}}">Variable
                                                     Speed Limit
                                                     Sign
                                                     (VSLS)</a></li>
                                             <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                    href="#">Portable
+                                                    href="{{route('customer.portable.variable.message.signs')}}">Portable
                                                     Variable
                                                     Message Sign
                                                     (PVMS) </a></li>
@@ -105,10 +105,10 @@
                                                 <li><a href="{{route('customer.radar.speed.signs')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
                                                         Speed Sign </a></li>
-                                                <li><a href="#"
+                                                <li><a href="{{route('customer.portable.variable.message.signs')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
                                                         Variable Message Sign (PVMS)</a></li>
-                                                <li><a href="#"
+                                                <li><a href="{{route('customer.variable.message')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                         Message Sign (VMS) </a></li>
                                                 <li><a href="#"
@@ -125,12 +125,12 @@
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.variable.message')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                     Message
                                                     Sign (VMS)</a>
                                             </li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.variable.speed.limit')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                     Speed
                                                     Limit Sign
@@ -139,12 +139,12 @@
                                                     Finders
                                                 </a>
                                             </li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.signal')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
                                                     – Emergency
                                                     Exit Sign ,
                                                     Emergency Telephone Sign</a></li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.lane.control.system')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
                                                     Control
                                                     System (LCS) </a>
@@ -158,7 +158,7 @@
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.pasenger.information.display.system')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase mb-2">Passenger
                                                     Information Display
                                                     System <br> (PIDS) </a></li>
@@ -235,7 +235,7 @@
                                     <h4>Highways</h4>
                                     <ul>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                href="#">Variable
+                                                href="{{route('customer.variable.message')}}">Variable
                                                 Message
                                                 Sign (VMS)</a>
                                         </li>

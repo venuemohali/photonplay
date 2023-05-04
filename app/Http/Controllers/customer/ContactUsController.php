@@ -69,4 +69,17 @@ class ContactUsController extends Controller
     public function variableMessage(){
         return view('customer.variable_message');
     }
+    public function variableSpeedLimit(){
+        return view('customer.variable_speed_limit');
+    }
+    public function pasengerInformationDisplay(){
+        return view('customer.pessenger_information');
+    }
+    public function portableVariableMessageSigns(){
+        return view('customer.portable_variable_message_signs');
+    }
+
+    public function laneControlSystem(){
+        return view('customer.lane_control_system');
+    }
 }
