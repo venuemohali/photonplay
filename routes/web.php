@@ -101,8 +101,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer',], function () {
     Route::group(['namespace' => 'Auth'], function() {
         Route::get('/login', 'LoginController@loginForm')->name('loginForm');
-        Route::get('/home', [HomeController::class ,'home_page'])->name('homePage');
-
+        Route::get('/', [HomeController::class ,'home_page'])->name('homePage');
         Route::get('register', 'LoginController@registerForm')->name('registerForm');
         Route::post('login', 'LoginController@login')->name('login');
         Route::post('register', 'LoginController@register')->name('register');
