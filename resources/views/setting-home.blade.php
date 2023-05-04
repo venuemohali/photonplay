@@ -255,7 +255,7 @@
                             </div>
 
                             <div class="row mb-3 form-group">
-                                <label for="shipping_time" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Shipping Time') }}</label>
+                                <label for="shipping_time" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Shipping Charges') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="shipping_time" type="text" class="form-control @error('shipping_time') is-invalid @enderror" name="shipping_time" value="{{ old('shipping_time') ?? $data->shipping_time ?? ''}}" required autocomplete="gst" autofocus>

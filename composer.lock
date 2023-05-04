@@ -3220,16 +3220,16 @@
         },
         {
             "name": "spatie/db-dumper",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/db-dumper.git",
-                "reference": "129b8254b2c9f10881a754a692bd9507b09a1893"
+                "reference": "3b9fd47899bf6a59d3452392121c9ce675d55d34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/db-dumper/zipball/129b8254b2c9f10881a754a692bd9507b09a1893",
-                "reference": "129b8254b2c9f10881a754a692bd9507b09a1893",
+                "url": "https://api.github.com/repos/spatie/db-dumper/zipball/3b9fd47899bf6a59d3452392121c9ce675d55d34",
+                "reference": "3b9fd47899bf6a59d3452392121c9ce675d55d34",
                 "shasum": ""
             },
             "require": {
@@ -3237,7 +3237,7 @@
                 "symfony/process": "^5.0|^6.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5"
+                "pestphp/pest": "^1.22"
             },
             "type": "library",
             "autoload": {
@@ -3267,7 +3267,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/db-dumper/tree/3.3.0"
+                "source": "https://github.com/spatie/db-dumper/tree/3.3.1"
             },
             "funding": [
                 {
@@ -3279,7 +3279,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-01T20:20:26+00:00"
+            "time": "2023-05-02T11:05:31+00:00"
         },
         {
             "name": "srmklive/paypal",
