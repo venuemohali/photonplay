@@ -1,7 +1,7 @@
 
 @extends('auth-master')
 @section('title')
-    Login 
+    Login
 @endsection
 @section('css')
 @endsection
@@ -15,7 +15,7 @@
 @endsection
 
 @section('content')
-    
+
 {{-- Login Page Body Start --}}
     <div class="container-fluid p-0">
         <div class="row m-0">
@@ -85,7 +85,7 @@
 
 {{--
 @section('name')
-    
+
  <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

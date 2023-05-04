@@ -1,7 +1,9 @@
 <script src="{{ asset('assets\customer\js\bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets\customer\js\bootstrap.jquery.js') }}"></script>
     <script src="{{ asset('assets\customer\js\bootstrap.slick.min.js') }}"></script>
-    <script>
+
+
+<script>
         $('.responsive').slick({
             dots: true,
             infinite: false,
@@ -39,3 +41,4 @@
             ]
         });
     </script>
+

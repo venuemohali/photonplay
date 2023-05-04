@@ -21,8 +21,8 @@
                                 <label for="">Password</label>
                                 <div class="input-group input-cus-group mb-1">
                                     <input type="password" name="password" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
-                                    <span class="input-group-text">
-                                        <img src="{{ asset('assets\customer\images\eye.png') }}" alt="eye"/>
+                                    <span class="input-group-text toggle-password">
+                                     <i class="bi bi-eye"></i>
                                     </span>
                                 </div>
                                 <button type="submit" class="btn btn-primary rounded py-2 w-100 mb-3 fw-normal">Register</button>
@@ -69,5 +69,21 @@
         </div>
     </div>
 
-    <x-Customer.Footer/>
-</body>
+    @include('customer.layouts.footer')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var eye = document.querySelector('.toggle-password');
+            var password = document.querySelector('input[name="password"]');
+
+            eye.addEventListener('click', function() {
+                if (password.type === 'password') {
+                    password.type = 'text';
+                    eye.innerHTML = '<i class="bi bi-eye-slash"></i>';
+                } else {
+                    password.type = 'password';
+                    eye.innerHTML = '<i class="bi bi-eye"></i>';
+                }
+            });
+        });
+
+    </script>
