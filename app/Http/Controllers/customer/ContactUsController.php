@@ -75,4 +75,11 @@ class ContactUsController extends Controller
     public function pasengerInformationDisplay(){
         return view('customer.pessenger_information');
     }
+    public function portableVariableMessageSigns(){
+        return view('customer.portable_variable_message_signs');
+    }
+
+    public function laneControlSystem(){
+        return view('customer.lane_control_system');
+    }
 }

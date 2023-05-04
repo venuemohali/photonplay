@@ -30,6 +30,8 @@ Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartc
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
 Route::get('variable-speed-limit-signs', [ContactUsController::class, 'variableSpeedLimit'])->name('variable.speed.limit');
 Route::get('passenger-information-display-system', [ContactUsController::class, 'pasengerInformationDisplay'])->name('pasenger.information.display.system');
+Route::get('portable-variable-message-signs', [ContactUsController::class, 'portableVariableMessageSigns'])->name('portable.variable.message.signs');
+Route::get('lane-control-system', [ContactUsController::class, 'laneControlSystem'])->name('lane.control.system');
 Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');
 Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');
 Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');

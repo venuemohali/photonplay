@@ -26,16 +26,9 @@
                         <div>
                             <h4 class="text-capitalize">Description</h4>
                             <p>
-                                <b>Variable Message Signs</b> are the devices which are used to display the messages,
-                                warning signals or information about specific events to the people commuting on roads.
-                                These signs are efficiently used to warn the people of traffic congestion, speed limits,
-                                road work zones, accidents and other incidents. VMS is a part of the Parking Guidance
-                                and Information System which is used to manage the modern city traffic and parking. In
-                                special cases, the Variable Message Sign is used to warn the duration and location of
-                                the accidents, inform about the traffic congestions, route modification, limited travel
-                                speeds and other important information. VMS Board is known by different names in
-                                different regions. Variable Message Signs also known as Dynamic Message Signs, Matrix
-                                Signs, and Electronic Traffic Displays.
+                                <b>Photonplay's Variable Speed Limit Signs (VSLS)</b> is a revolutionary product designed to generate instant recognition of centrally regulated speed limits from ITS systems. Equipped with a full matrix display area, these signs can display practically any speed and graphics.
+
+With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 operation using either AC or independent solar power. Strobe lights are also available for flashing LEDs. The signs are easy to maintain, highly reliable, power-efficient, and simple to install, making them the perfect option for harsh environments. They meet compliance with MRWA/CDOT/FHWA standards and can be adapted to all specifications of the road authority. Photonplay's VSLS is a game-changing product that enhances road safety and helps prevent accidents by providing drivers with real-time speed limit information.
                             </p>
                             <div class="thumb-image">
                                 <div class="row">

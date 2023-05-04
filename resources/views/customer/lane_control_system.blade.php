@@ -7,10 +7,10 @@
         <div class="container">
             <div class="slider-content ">
                 <div class="image-smart">
-                    <h2 class="text-center text-white fw-normal mb-5">Passenger Information Display System (PIDS)</h2>
+                    <h2 class="text-center text-white fw-normal mb-5">Lane Control System (LCS)</h2>
                     <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <h6 class="text-center text-white fw-normal mt-3 mb-3">Lane Control System (LCS)</h6>
                 </div>
-                <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
                 <div class="text-center pt-4">
                     <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
                 </div>
@@ -28,9 +28,9 @@
                         <div>
                             <h4 class="text-capitalize">Description</h4>
                             <p>
-                                <b>Passenger Information Display</b> Systems (PIDS) are electronic displays that provide real-time information to passengers in public transportation systems. These systems are essential to ensuring the safety and efficiency of transportation systems. Photonplay offers a range of customizable PIDS products, including concourse displays, metro platform displays, and major overview train information display diagrams. They use advanced LED RGB technology to provide clear and visible information to passengers 24/7.
+                                <b>Lane Control Signs (LCS)</b>Lane Control Signs (LCS) are essential for controlling vehicular and pedestrian movement, ensuring safety and efficiency on open streets. Despite the availability of advanced navigational tools such as GPS, LCS plays a critical role in traffic control systems. It is crucial that LCS be noticeable and placed in the best possible spot, and drivers and pedestrians should give them proper attention to ensure their safety and the safety of others.
 
-                                Photonplay's PIDS are highly reliable and designed to be energy-efficient, reducing both energy consumption and costs for transportation authorities. They are built with high-quality materials and components, ensuring durability and longevity even in harsh environments. Photonplay's PIDS are completely programmable and come with software created by their team for all necessary settings and parameters. By enhancing the safety, efficiency, and overall passenger experience of transportation systems, Photonplay's PIDS makes a significant contribution to road and traffic safety, benefiting humanity as a whole.
+                                LCS are specific types of traffic light pattern changes that offer directions to drivers heading to lanes. They are used to manage traffic on multi-way streets, alert drivers to reversible lane changes, and represent predefined symbols to indicate the correct use of lanes. LCS can be used in various applications, including highways, bridges, tunnels, and toll roads, to indicate speed limits, lane closures, lane merges, and lane shifts, among others. As a provider of LCS products, we offer high-quality signs that are durable, visible, and easy to install. Contact us today to learn more about our LCS products and how they can benefit your roadways.
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
@@ -141,20 +141,8 @@
                     <ul class="w-100">
                         <li>
                             <div class="content-feature">
-                                <strong>MAINTENANCE FREE</strong>
-                                <span>Maintenance Free Operation with dry cell sealed batteries.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>CERTIFICATIONS</strong>
-                                <span>IP65 & EN12966</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>CLOUD CONNECTED</strong>
-                                <span>Onboard GSM/4G based Connectivity</span>
+                                <strong>MAINTAINENECE FREE</strong>
+                                <span>Maintainance Free Operations with dry cell sealed batteries</span>
                             </div>
                         </li>
                         <li>
@@ -163,28 +151,23 @@
                                 <span>Supports NTCIP Protocol as well as Photonplay’s Standard SignCom.</span>
                             </div>
                         </li>
+
                     </ul>
                     <ul class="w-100">
                         <li>
                             <div class="content-feature">
-                                <strong>Protocol CERTIFICATIONS</strong>
+                                <strong>CERTIFICATIONS</strong>
                                 <span>IP65 & EN12966</span>
                             </div>
                         </li>
-
                         <li>
                             <div class="content-feature">
-                                <strong>ULTRA LOW POWER CONSUMPTION</strong>
-                                <!-- <span>Maintenance Free Operation with dry cell sealed batteries.</span> -->
+                                <strong>100% UPTIME</strong>
+                                <span>Gives 100% uptime with no dependency on Grid Power and broken wires.</span>
                             </div>
                         </li>
 
-                        <li>
-                            <div class="content-feature">
-                                <strong>MULTILINGUAL SUPPORT</strong>
-                                <!-- <span>Maintenance Free Operation with dry cell sealed batteries.</span> -->
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
                 <!-- </ul> -->
@@ -198,25 +181,16 @@
         <div class="container">
             <h2 class="fs-md-2 mt-3 mb-5 text-center">APPLICATION</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="application-item">
                         <img src="{{asset('assets/customer/images/application-img-1.png')}}" alt="image">
                         <div class="content-application-item">
-                            <h4 class="text-uppercase">Real time traffic information </h4>
-                            <p>Traffic congestion , Accidents incidents, route options useful to the road user, Ongoing
-                                Roadwork zones, Speed Limits</p>
+                            <h4 class="text-uppercase">Tunnels</h4>
+                            <p>Lane use and Control in Tunnels</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="application-item">
-                        <img src="{{asset('assets/customer/images/standrooms.png')}}" alt="image">
-                        <div class="content-application-item">
-                            <h4 class="text-uppercase">Parking Lots </h4>
-                            <p>Parking availability information</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -226,7 +200,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
+                    <h4 class="text-white text-center">STANDARD VMS - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
                     <button class="btn btn-primary rounded-0">Download Now</button>

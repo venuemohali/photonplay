@@ -82,7 +82,7 @@
                                                     Sign
                                                     (VSLS)</a></li>
                                             <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                    href="#">Portable
+                                                    href="{{route('customer.portable.variable.message.signs')}}">Portable
                                                     Variable
                                                     Message Sign
                                                     (PVMS) </a></li>
@@ -105,7 +105,7 @@
                                                 <li><a href="{{route('customer.radar.speed.signs')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
                                                         Speed Sign </a></li>
-                                                <li><a href="#"
+                                                <li><a href="{{route('customer.portable.variable.message.signs')}}"
                                                         class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
                                                         Variable Message Sign (PVMS)</a></li>
                                                 <li><a href="{{route('customer.variable.message')}}"
@@ -144,7 +144,7 @@
                                                     – Emergency
                                                     Exit Sign ,
                                                     Emergency Telephone Sign</a></li>
-                                            <li><a href="#"
+                                            <li><a href="{{route('customer.lane.control.system')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
                                                     Control
                                                     System (LCS) </a>
