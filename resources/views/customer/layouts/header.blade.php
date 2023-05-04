@@ -104,8 +104,24 @@ $productLists = Product::take(5)->get();
                                 <p class="text-capitalize mb-0">{{Session::get('user')->name}}</p>
                             </div>
                             <div class="profile-circle">
-                            <a href="{{route('customer.edit.profile')}}"><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
-                                    class="img-fluid rounded-circle d-block" width="36" height="36"></a>
+
+                                <div class="dropdown">
+                                    <button
+                                        class="btn dropdown-toggle"
+                                        type="button"
+                                        id="dropdownMenuButton"
+                                        data-mdb-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        <a href="{{route('customer.edit.profile')}}"><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
+                                                                                          class="img-fluid rounded-circle d-block" width="36" height="36"></a>
+                                    </button>
+                                    <ul class="dropdown-menu position-absolute end-0" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         @endif
