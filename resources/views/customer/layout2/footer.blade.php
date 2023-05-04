@@ -30,9 +30,9 @@ $blogs = Blog::select('slug','title')->take(4)->get();
     </section>
 
     <footer class="footer-section px-2">
-        <div class="footer-section-inner d-lg-flex">
+        <div class="footer-section-inner d-lg-flex justify-content-center">
             <div class="footer-item mb-0 mb-md-5 footer-item-1">
-                <div class="logo-bottom mb-lg-4">
+                <div class="logo-bottom mb-lg-4 w-100">
                     <img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="">
                 </div>
                 <div class="description">
@@ -50,6 +50,31 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <li><a href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
                 </ul>
             </div>
+            <!-- <div class="footer-item mb-0 mb-md-5 footer-item-three">
+                <h2>SHOP</h2>
+                <ul class="p-0">
+                    @forelse ($categories as $category)
+                    <li><a>{{$category->title}}</a></li>
+                    @empty
+
+                    @endforelse
+                </ul>
+            </div> -->
+            <div class="footer-item mb-0 mb-md-5 footer-item-2">
+                <h2>QUICK LINKS</h2>
+                <ul class="p-0">
+                    <li><a href="" class="text-capitalize">Home</a></li>
+                    <li><a href="" class="text-capitalize">About us</a></li>
+                    <li><a href="" class="text-capitalize">Contact us</a></li>
+                    <li><a href="" class="text-capitalize">News & Events</a></li>
+                    <li><a href="" class="text-capitalize">Sitemap</a></li>
+                    <!-- @forelse ($categories as $category)
+                    <li><a>{{$category->title}}</a></li>
+                    @empty
+
+                    @endforelse -->
+                </ul>
+            </div>
             <div class="footer-item mb-0 mb-md-5 footer-item-2">
                 <h2 class="text-uppercase">SOLUTIONS</h2>
                 <ul class="p-0">
@@ -59,17 +84,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <li><a href="{{route('customer.solution.transit')}}">Transit</a></li>
                 </ul>
             </div>
-            <div class="footer-item mb-0 mb-md-5 footer-item-three">
-                <h2>SHOP</h2>
-                <ul class="p-0">
-                    @forelse ($categories as $category)
-                    <li><a>{{$category->title}}</a></li>
-                    @empty
-
-                    @endforelse
-                </ul>
-            </div>
-            <div class="footer-item mb-0 mb-md-5 footer-item-four">
+            <!-- <div class="footer-item mb-0 mb-md-5 footer-item-four">
                 <h2>NEWS & EVENTS</h2>
                 <ul class="p-0">
                     @forelse ($blogs as $blog)
@@ -79,7 +94,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     @endforelse
 
                 </ul>
-            </div>
+            </div> -->
             <div class="footer-item mb-0 mb-md-5 footer-item-5">
                 <h2>Get in Touch with Us</h2>
                 <div class="contact-info">

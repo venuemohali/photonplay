@@ -51,25 +51,25 @@ $productLists = Product::take(5)->get();
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse header-font navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-5 gap-2 px-4">
                         <li class="nav-item">
                             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.homePage')}}">Home</a>
+                            <a class="nav-link text-uppercasen text-dark" href="{{route('customer.homePage')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
+                            <a class="nav-link text-uppercase text-dark" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
                         </li>
 
                         <li class="nav-item dropdown position-relative solution-pos">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 PRODUCTS
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu bg-light mt-lg-4 borderes">
                                 @forelse ($productLists as $list)
-                                    <li><a class="dropdown-item" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
+                                    <li><a class="dropdown-item text-dark px-lg-3 px-0 pb-4 pb-lg-3" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
                                 @empty
 
                                 @endforelse
@@ -79,7 +79,7 @@ $productLists = Product::take(5)->get();
                                 <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
                             </div>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT US</a>
+                            <a class="nav-link text-uppercase text-dark" href="{{route('customer.contact.us')}}">CONTACT US</a>
                         </li>
                     </ul>
                     <form class="d-none  d-lg-flex header-side mt-lg-0 mt-4" role="search">

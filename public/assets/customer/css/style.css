@@ -189,6 +189,15 @@ h2 {
 }
 
 /* .accordion-collapse.collapse, */
+/* slider-start */
+.clints-content {
+    height: 580px;
+}
+.clints-content img{
+    height: 550px;
+}
+
+/* slider-end */
 .accordion-collapse.show {
     box-shadow: 0px 20px 20px #ececec;
     position: relative;
@@ -942,10 +951,13 @@ ul.slick-dots {
 .footer-section-inner .footer-item {
     width: 20%;
     padding: 0 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer-section-inner .footer-item-three {
-    width: 16%;
+    width: 25%;
 }
 
 .footer-section-inner .footer-item-four {
@@ -1484,10 +1496,12 @@ input:focus {
     /* background-color: #036eb1; */
     border-bottom: 2px solid #0a11e0;
 }
-.mega-menu-items h4{
+
+.mega-menu-items h4 {
     font-size: 14px;
     margin-bottom: 30px;
 }
+
 /****************************************** Abbout Us End **************************************** */
 /****************************************** Contact Us Start**************************************** */
 .contact-peraa p {
@@ -1697,9 +1711,10 @@ input:focus {
   } */
 /* solution-trash-end */
 /* mega-menu-start */
-.mega-menu{
+.mega-menu {
     display: none;
 }
+
 .mega-menu-item,
 .mega-menu-parent {
     position: relative;
@@ -1963,6 +1978,7 @@ input:focus {
     color: #544e5d;
     font-weight: 400;
 }
+
 /*// home page header-start*/
 .search-heading input {
     /*// display: none;*/
@@ -1974,6 +1990,7 @@ input:focus {
     position: inherit;
     cursor: pointer;
 }
+
 .search-heading input:focus,
 .search-heading input:active {
     display: block !important;
@@ -1984,6 +2001,7 @@ input:focus {
     /*background: transparent;*/
     /*//z-index: 99;*/
 }
+
 /* mega-menu-end */
 @media (min-width: 1600px) {
     .container-cus {
@@ -2084,19 +2102,30 @@ input:focus {
 }
 
 @media only screen and (max-width: 991px) {
-    .search-heading{
+    .footer-section-inner .footer-item {
+        align-items: start;
+    }
+
+    .borderes {
+        border: 0px;
+    }
+
+    .search-heading {
         width: 100%;
         margin-right: 15px;
     }
-    input.form-control{
+
+    input.form-control {
         width: 100%;
     }
+
     .search-heading input:focus,
     .search-heading input:active {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
     }
+
     .application-item img {
         max-width: 100%;
         margin: auto;
