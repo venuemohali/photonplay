@@ -114,7 +114,7 @@ $productLists = Product::take(5)->get();
                                         aria-expanded="false"
                                     >
                                         <a ><img src="{{asset('assets\customer\images\profile.png')}}" alt="Not Found"
-                                                                                          class="img-fluid rounded-circle d-block" width="36" height="36"></a>
+                                                 class="img-fluid rounded-circle d-block" width="36" height="36"></a>
                                     </button>
                                     <ul class="dropdown-menu position-absolute end-0" aria-labelledby="dropdownMenuButton">
                                         <li><a class="dropdown-item" href="{{route('customer.edit.profile')}}">Account</a></li>

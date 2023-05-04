@@ -28,7 +28,20 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title shadow-lg p-1">  Order : {{$order->order_number}}</h2>
+                        <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
+                            <span>   Order : {{$order->order_number}}</span>
+                            <span>
+                                <select class="form-select  shadow-none m-2">
+                                    <option value="Pending"> Pending</option>
+                                    <option  value="payment_received"> Payment Received</option>
+                                     <option value="Pending"> Pending</option>
+                                    <option  value="payment_received"> Payment Received</option>
+                                     <option value="Pending"> Pending</option>
+                                    <option  value="payment_received"> Payment Received</option>
+                                </select>
+
+                            </span>
+                        </h4>
                         <div class="shadow-sm p-3">
                         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
                                     {{ucfirst($order->payment_status)}} </span>   </p>
