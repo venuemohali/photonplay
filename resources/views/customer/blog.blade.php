@@ -74,8 +74,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="search mb-5 position-relative">
                         <input type="text" placeholder="Search" class="border-0 ">
-                        <img src="/ assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16"
-                            height="16">
+                        <i class="bi bi-search"></i>
                     </div>
                     <div class="sec-sidebar">
                         <div class="sidebar-item">

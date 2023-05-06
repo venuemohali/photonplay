@@ -11,7 +11,7 @@ $clients = Client::get();
                 <div class="clints-content mb-0 d-flex align-items-center">
                     @forelse ($clients as $client)
                     <div>
-                        <div class="px-2 branding-diss">
+                        <div class="px-2 branding-diss" id="{{$client->index}}">
                             <img src="{{asset('storage/'.$client->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
