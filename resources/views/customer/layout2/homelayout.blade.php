@@ -918,6 +918,7 @@
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
+            autoplay:true;
             arrows: true,
             responsive: [
                 {
