@@ -12,11 +12,11 @@ $clients = Client::get();
                     @forelse ($clients as $client)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets\customer\images\ . "$client->image" . ')}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$client->image)}}" class="d-block mx-auto" />
                         </div>
-                    </div>    
+                    </div>
                     @empty
-                        
+
                     @endforelse
                 </div>
             </div>

@@ -408,14 +408,14 @@
                                 </div>
                             </div>
                             <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                <img src="./assets/images/object.png" class="img-fluid circle-image d-none d-md-block"
+                                <img src="{{asset('assets\customer\images\object.png')}}" class="img-fluid circle-image d-none d-md-block"
                                     alt="not-found">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <img class="dotted-imag img-fluid d-none d-md-inline" src="./assets/images/dotted-tran.png" alt="not-found">
+            <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets\customer\images\dotted-tran.png')}}" alt="not-found">
     </section>
     <!-- Dimension section -->
     <section class="connectivity bg-light">

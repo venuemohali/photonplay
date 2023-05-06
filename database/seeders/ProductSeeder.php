@@ -24,15 +24,6 @@ class ProductSeeder extends Seeder
         SpecializationOption::query()->delete();
         Product::query()->delete();
 
-        $cat1=Category::create([
-            'title'=>'Radar Speed Signs'
-        ]);
-        $cat2=Category::create([
-            'title'=>'Portable Variable Signs'
-        ]);
-
-
-
         $s1=Specilization::create([
             'title'=>'Batteries'
         ]);
@@ -82,7 +73,7 @@ class ProductSeeder extends Seeder
         ]);
 
         $product1= Product::create([
-            'category_id'=>$cat1->id,
+            'category_id'=>1,
             'title'=>'iCop1200',
             'price'=>1000,
             'description'=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -95,7 +86,7 @@ class ProductSeeder extends Seeder
         ]);
 
         $product2=Product::create([
-            'category_id'=>$cat1->id,
+            'category_id'=>1,
             'title'=>'iCop1200M',
             'price'=>1000,
             'description'=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -108,7 +99,7 @@ class ProductSeeder extends Seeder
         ]);
 
         $product3=Product::create([
-            'category_id'=>$cat1->id,
+            'category_id'=>1,
             'title'=>'iCop1500',
             'price'=>1000,
             'description'=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -121,7 +112,7 @@ class ProductSeeder extends Seeder
         ]);
 
         $product4=Product::create([
-            'category_id'=>$cat1->id,
+            'category_id'=>1,
             'title'=>'iCop1500M',
             'price'=>1000,
             'description'=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -134,7 +125,7 @@ class ProductSeeder extends Seeder
         ]);
 
         $product5=Product::create([
-            'category_id'=>$cat1->id,
+            'category_id'=>1,
             'title'=>'iCop1800M',
             'price'=>1000,
             'description'=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
