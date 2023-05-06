@@ -163,7 +163,7 @@
                 </div>
                 <div class="carousel-inner">
                     @foreach($products as $product)
-                    
+
                     <div class="carousel-item {{ $loop->index === 0 ? 'active' : ''}}">
                         <div class="products-two d-lg-flex justify-content-between">
                             <div class="common-wdth common-wdth_ inner-col align-self-center">
@@ -599,57 +599,64 @@
                     <div class="mb-5">
                         <h2 class="fs-md-2 mt-3">Latest News</h2>
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
-                            <p class="text-mutedd">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod
+                            <p class="text-mutedd">
+                                "Stay up-to-date with the latest news and events in photon play systems with our comprehensive news and events section.
+
                                 <br>
-                                tempor incididunt ut labore et dolore magna aliqua
+                            Check back regularly for the latest updates and insights!"
                             </p>
-                            <button class="btn btn-outline rounded-2">Load More</button>
+                            <a href="{{route('customer.blog')}}" class="btn btn-outline rounded-2">Load More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory mb-lg-0 mb-4">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
+
+                @foreach($blogs as $blog)
+                    <div class="col-lg-4">
+                        <div class="inner-cqategory mb-lg-0 mb-4">
+                            <div class="">
+                                <a href="{{route("customer.blog_show",$blog->slug)}}" > <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 category-image img-fluid w-100"> </a>
+                            </div>
+                            <div class="p-4">
+                                <p class="btn-light">{{$blog->category}}</p>
+                                <a href="{{route("customer.blog_show",$blog->slug)}}"  class="text-decoration-none">  <p class="dollor-seat"> {{$blog->title}}
+                                    </p>
+                                </a>
+                                <p>
+                                    {{$blog->description}}  <a href="{{route("customer.blog_show",$blog->slug)}}" >Read More..</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory mb-lg-0 mb-4">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
+{{--                <div class="col-lg-4">--}}
+{{--                    <div class="inner-cqategory mb-lg-0 mb-4">--}}
+{{--                        <div class="category-image"></div>--}}
+{{--                        <div class="p-4">--}}
+{{--                            <p class="btn-light">CATEGORY</p>--}}
+{{--                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here--}}
+{{--                            </p>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt--}}
+{{--                                ut--}}
+{{--                                labore et dolore magna aliqua.--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4">--}}
+{{--                    <div class="inner-cqategory">--}}
+{{--                        <div class="category-image"></div>--}}
+{{--                        <div class="p-4">--}}
+{{--                            <p class="btn-light">CATEGORY</p>--}}
+{{--                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here--}}
+{{--                            </p>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt--}}
+{{--                                ut--}}
+{{--                                labore et dolore magna aliqua.--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
