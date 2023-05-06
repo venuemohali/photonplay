@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\BlogLike;
+use App\Models\Category;
+use App\Models\Product;
 use App\Models\Setting;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
@@ -76,6 +78,8 @@ class ContactUsController extends Controller
         return view('customer.pessenger_information');
     }
     public function portableVariableMessageSigns(){
+        $products = Category::with('products')->where('title','Portable Variable Signs')->get();
+        dd($products);
         return view('customer.portable_variable_message_signs');
     }
 
