@@ -32,6 +32,7 @@ Route::get('variable-speed-limit-signs', [ContactUsController::class, 'variableS
 Route::get('passenger-information-display-system', [ContactUsController::class, 'pasengerInformationDisplay'])->name('pasenger.information.display.system');
 Route::get('portable-variable-message-signs', [ContactUsController::class, 'portableVariableMessageSigns'])->name('portable.variable.message.signs');
 Route::get('lane-control-system', [ContactUsController::class, 'laneControlSystem'])->name('lane.control.system');
+Route::get('pvms-i-cop', [ContactUsController::class, 'pvmsICop'])->name('pvms.i.cop');
 Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('newsletter.store');
 Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');
 Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');
