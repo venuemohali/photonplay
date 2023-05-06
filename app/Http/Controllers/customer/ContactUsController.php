@@ -33,8 +33,19 @@ class ContactUsController extends Controller
         return view('customer.blog');
     }
 
-    public function blogDetail(){
-        return view('customer.blog_detail');
+    public function blog_listing(){
+        $blogs=Blog::paginate(5);
+        foreach ($blogs as $blog){
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at);
+            $blog_created_date = $date->format('d F, Y');
+            $blog["blog_created_date"]=$blog_created_date;
+            $blog["likes"]=BlogLike::where('blog_id',$blog->id)->count();
+
+        }
+        $categories=BlogCategory::take(5)->get();
+        $latestBlogRecords = Blog::latest()->take(3)->get();
+
+        return view('customer.blog_listing',compact('blogs','categories','latestBlogRecords'));
     }
 
     /**
@@ -54,7 +65,6 @@ class ContactUsController extends Controller
         $blog_created_date = $date->format('d F, Y');
         $latestBlogRecords = Blog::latest()->take(3)->get();
         $relatedBlogRecords = Blog::where('blog_category_id',$blog->blog_category_id)->latest()->take(5)->get();
-
         $like=BlogLike::where('session_id',$request->getSession()->getId())
             ->where('blog_id',$blog->id)->exists();
         $count=BlogLike::where('blog_id',$blog->id)->count();
