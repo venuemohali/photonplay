@@ -76,7 +76,7 @@
                             <li> Radar Speed Signs</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -102,14 +102,14 @@
                             able to display speed limits and graphics, allowing virtually any speed to be displayed.
                         </p>
                         <ul class="ps-3">
+                            <!-- <li> Point head <span> - details</span></li>
                             <li> Point head <span> - details</span></li>
                             <li> Point head <span> - details</span></li>
                             <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
+                            <li> Point head <span> - details</span></li> -->
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                             <li> Radar Speed Signs</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>

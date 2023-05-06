@@ -11,13 +11,14 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
+                @for ($i=1; $i<=3; $i++)
                 <div class="carousel-item active">
                     <div class="banner">
                         <div
                             class="banner-image d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-around p-2">
                             <div class="position-relative heading-banner ">
-                                <h2 class="">iCOP High Runner
-                                    <p class="mb-0"><span> Portable Variable</span></p>
+                                <h2 class="">{{$product->title}}
+                                    <p class="mb-0"><span> {{$product->category->title}}</span></p>
                                     <p class="mb-0"><span> Message Sign-MTO</span></p>
                                 </h2>
                                 <div class="fs-6 mt-md-4">
@@ -44,69 +45,8 @@
 
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="banner">
-                        <div
-                            class="banner-image d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-around p-2">
-                            <div class=" position-relative heading-banner ">
-                                <h2 class="">iCOP High Runner
-                                    <p class="mb-0"><span> Portable Variable</span></p>
-                                    <p class="mb-0"><span> Message Sign-MTO</span></p>
-                                </h2>
-                                <div class="fs-6 mt-md-4">
-                                    <p class="text-dark">No. 1 in Traffic Calming Solution</p>
-                                </div>
-                                <button type="button"
-                                    class="py-2 rounded border-0 px-4 mt-5 bg-white outline-0 btn-light">Download
-                                    Brochure <img class="fs-4 ms-2" width="10" src="{{asset('assets\customer\images\downarrow.png')}}"
-                                        alt=""></button>
-                                <div class="zigzack d-flex justify-content-start"><img src="{{asset('assets\customer\images\ziczac.png')}}"
-                                        class="img-fluid d-none d-md-block" alt="not-found"></div>
-                                <div
-                                    class="circle-dotted position-absolute w-100 d-none d-md-flex align-items-center justify-content-start">
-                                    <img src="{{asset('assets\customer\images\circles.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                            <!-- <div class="position-absolute top-50 start-0 translate-middle"> -->
-                            <img src="{{asset('assets\customer\images\MTO.png')}}" alt="Not Found" class="img-fluid mt-3 mt-sm-0">
-                            <!-- </div> -->
-                            <img src="{{asset('assets\customer\images\circlecolor.png')}}" alt="Not Found"
-                                class="img-fluid d-none d-md-block">
-                            <!-- <img src="./assets/images/sky-sights.jpg" alt="Not Found"> -->
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="banner">
-                        <div
-                            class="banner-image d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-around p-2">
-                            <div class=" position-relative heading-banner ">
-                                <h2 class="">iCOP High Runner
-                                    <p class="mb-0"><span> Portable Variable</span></p>
-                                    <p class="mb-0"><span> Message Sign-MTO</span></p>
-                                </h2>
-                                <div class="fs-6 mt-md-4">
-                                    <p class="text-dark">No. 1 in Traffic Calming Solution</p>
-                                </div>
-                                <button type="button"
-                                    class="py-2 rounded border-0 px-4 mt-5 bg-white outline-0 btn-light">Download
-                                    Brochure <img class="fs-4 ms-2" width="10" src="{{asset('assets\customer\images\downarrow.png')}}"
-                                        alt=""></button>
-                                <div class="zigzack d-flex justify-content-start"><img src="{{asset('assets\customer\images\ziczac.png')}}"
-                                        class="img-fluid d-none d-md-block" alt="not-found"></div>
-                                <div
-                                    class="circle-dotted position-absolute w-100 d-none d-md-flex align-items-center justify-content-start">
-                                    <img src="{{asset('assets\customer\images\circles.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                            <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid mt-3 mt-sm-0">
-                            <img src="{{asset('assets\customer\images\circlecolor.png')}}" alt="Not Found"
-                                class="img-fluid d-none d-md-block">
-                        </div>
-
-                    </div>
-                </div>
+                @endfor
+                
             </div>
             <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -290,7 +230,7 @@
                     <div class="dimention-box d-flex align-items-center justify-content-center flex-column px-2 py-4">
                         <img src="./assets/images/MTO-ST-F.png" alt="" class="img-fluid">
                         <div class="plus-search">
-                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="Not Found">
+                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}    " width="18px" height="18px" alt="Not Found">
                         </div>
                     </div>
                 </div>

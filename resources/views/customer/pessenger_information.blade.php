@@ -6,9 +6,9 @@
     <section class="banner-sec-smart-city py-4">
         <div class="container">
             <div class="slider-content ">
-                <div class="image-smart">
+                <div class="imaged m-auto">
                     <h2 class="text-center text-white fw-normal mb-5">Passenger Information Display System (PIDS)</h2>
-                    <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('assets/customer/images/PIDS.webp')}}" alt="alt" class="d-block mx-auto img-fluid">
                 </div>
                 <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
                 <div class="text-center pt-4">

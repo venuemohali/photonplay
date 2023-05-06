@@ -88,16 +88,20 @@ class ContactUsController extends Controller
         return view('customer.pessenger_information');
     }
     public function portableVariableMessageSigns(){
-        $products = Category::with('products')->where('title','Portable Variable Signs')->get();
-        dd($products);
-        return view('customer.portable_variable_message_signs');
+        $products = Category::with('products', 'products.specilizations.options.specializationoptions')->where('title','Portable Variable Signs')->whereHas('products', function($query) {
+            $query->where('status', 'Listed');
+        })->get();
+        // dd($products);
+        return view('customer.portable_variable_message_signs', compact('products'));
     }
 
     public function laneControlSystem(){
         return view('customer.lane_control_system');
     }
 
-    public function pvmsICop(){
-        return view('customer.pvms_icop');
+    public function pvmsICop($id){
+        $product = Product::with('category')->find($id);
+        // dd($product);
+        return view('customer.pvms_icop', compact('product'));
     }
 }
