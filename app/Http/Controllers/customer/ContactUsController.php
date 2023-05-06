@@ -92,4 +92,8 @@ class ContactUsController extends Controller
     public function laneControlSystem(){
         return view('customer.lane_control_system');
     }
+
+    public function pvmsICop(){
+        return view('customer.pvms_icop');
+    }
 }
