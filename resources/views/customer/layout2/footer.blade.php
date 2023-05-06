@@ -43,12 +43,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     integrators,
                     Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
                 </div>
-                <ul class="social-media pt-md-5 py-4">
-                    <li><a href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
-                    <li><a href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
-                    <li><a href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
-                    <li><a href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
-                </ul>
+              
             </div>
             <!-- <div class="footer-item mb-0 mb-md-5 footer-item-three">
                 <h2>SHOP</h2>
@@ -96,9 +91,9 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                 </ul>
             </div> -->
             <div class="footer-item mb-0 mb-md-5 footer-item-5">
-                <h2>Get in Touch with Us</h2>
-                <div class="contact-info">
-                    <div class="contact-info-item">
+                <h2 class="w-100">Get in Touch with Us</h2>
+                <div class="contact-info w-100">
+                    <div class="contact-info-item w-100">
                         @if ($setting)
                         <a href="tel:{{$setting->sales_phone}}"><img src="{{asset('assets\customer\images\phone.svg')}}" /> {{$setting->sales_phone}}</a>
                         @if ($setting->support_phone !=null)
@@ -108,11 +103,21 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         @endif
                     </div>
                     <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>
+                    <ul class="social-media pt-md-4 py-4 ps-0 w-100">
+                    <li><a class="" href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
+                    <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
+                    <li><a class="" href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
+                    <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
+                    <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\images\social05.png')}}" /></a></li>
+                    <li><a class="" href=""><img src="{{asset('assets\images\social06.png')}}" /></a></li>
+                </ul>
                 </div>
             </div>
         </div>
     </footer>
-
-    <section class="sec-copyright py-3 border-top px-2 text-center">
-        <div>Photon Play Systems - © 2023 All Rights Reserved <a href="#">Privacy Policy</a></div>
-    </section>
+       <div class="container-fluid">
+          <div class="sec-copyright py-3 text-center m-auto d-flex justify-content-between align-items-center">
+              <p>Terms | Privacy | Shipping | Refund/Return Policy</p>
+              <p>© 2023 Photonplay Systems Inc. All right reserved</p>
+          </div>
+       </div>

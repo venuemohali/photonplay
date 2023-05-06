@@ -193,7 +193,8 @@ h2 {
 .clints-content {
     height: 580px;
 }
-.clints-content img{
+
+.clints-content img {
     height: 550px;
 }
 
@@ -996,6 +997,16 @@ ul.slick-dots {
 
 .footer-section-inner .footer-item ul li a {
     color: #544e5d;
+    font-size: 16px;
+    /* color: #544e5d; */
+    font-weight: 400;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 23px;
+    color: #06040a;
+    font-weight: 400;
 }
 
 .contact-info .contact-info-item a {
@@ -1033,9 +1044,27 @@ ul.slick-dots {
     overflow: hidden;
 }
 
+
 .sec-copyright a {
     text-decoration: none;
     color: #544e5d;
+}
+
+.sec-copyright {
+    border-top: 2px solid #6d6d6d;
+    max-width: 1440px;
+}
+
+.sec-copyright p {
+    font-size: 16px;
+    color: #544e5d;
+    font-weight: 500;
+}
+
+.footer-item ul li a {
+    font-size: 16px;
+    color: #544e5d;
+    font-weight: 400;
 }
 
 /* End Footer */
@@ -1656,6 +1685,7 @@ input:focus {
     /* max-width: 100%; */
     min-height: 152px;
     max-height: 250px;
+    z-index: 1;
 }
 
 /* latest-wrapper-end */
