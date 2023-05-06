@@ -16,8 +16,8 @@
                         <div
                             class="banner-image d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-around p-2">
                             <div class="position-relative heading-banner ">
-                                <h2 class="">iCOP High Runner
-                                    <p class="mb-0"><span> Portable Variable</span></p>
+                                <h2 class="">{{$product->title}}
+                                    <p class="mb-0"><span> {{$product->category->title}}</span></p>
                                     <p class="mb-0"><span> Message Sign-MTO</span></p>
                                 </h2>
                                 <div class="fs-6 mt-md-4">
@@ -290,7 +290,7 @@
                     <div class="dimention-box d-flex align-items-center justify-content-center flex-column px-2 py-4">
                         <img src="./assets/images/MTO-ST-F.png" alt="" class="img-fluid">
                         <div class="plus-search">
-                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="Not Found">
+                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}    " width="18px" height="18px" alt="Not Found">
                         </div>
                     </div>
                 </div>
