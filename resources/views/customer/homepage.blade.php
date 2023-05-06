@@ -1,6 +1,6 @@
 @include('customer.layout2.header')
     <!-- banner-text-start -->
-    <section class="pt-0 pb-sm-4 pb-lg-5">
+    <section class="pt-0 pb-sm-4 pb-lg-5" >
     <div class="clints-content mb-0">
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -9,7 +9,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -18,7 +18,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -27,7 +27,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -36,7 +36,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -45,7 +45,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <div>
                 <div class="clider-content-wrapper position-relative">
@@ -54,7 +54,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
                     <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>  
+                </div>
             </div>
             <!-- <div>
                 <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
@@ -73,17 +73,17 @@
             </div> -->
 
         </div>
-        <div class="tokoyo-banner">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-12 text-center">
-                        <h1>From Tokyo to Los Angles</h1>
-                        <p class="text-capitalize">contributing to a efficient road and transit network</p>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-uppercase ">About US</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--        <div class="tokoyo-banner">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row justify-content-center align-items-center">--}}
+{{--                    <div class="col-lg-12 text-center">--}}
+{{--                        <h1>From Tokyo to Los Angles</h1>--}}
+{{--                        <p class="text-capitalize">contributing to a efficient road and transit network</p>--}}
+{{--                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-uppercase ">About US</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </section>
     <!-- enddd -->
     <!-- undefeated-section-start -->
@@ -745,7 +745,7 @@
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: false,
-            autoplay:true,  
+            autoplay:true,
             fade:true,
             responsive: [
                 {
