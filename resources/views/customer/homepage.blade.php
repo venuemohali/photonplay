@@ -1,7 +1,7 @@
 @include('customer.layout2.header')
     <!-- banner-text-start -->
     <section class="pt-0 pb-sm-4 pb-lg-5" >
-    <div class="clints-content mb-0">
+    <div class="clints-content clints-content-banner mb-0">
             <div>
                 <div class="clider-content-wrapper position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
@@ -741,7 +741,7 @@
                 // instead of a settings object
             ]
         });
-        $('.clints-content').slick({
+        $('.clints-content-banner').slick({
             dots: false,
             infinite: false,
             speed: 300,
@@ -756,7 +756,39 @@
                 {
                     breakpoint: 1024,
                     settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
                         slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+        $('.clints-content-branding').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay:true,
+            // fade:true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
                     }
                 },
                 {
