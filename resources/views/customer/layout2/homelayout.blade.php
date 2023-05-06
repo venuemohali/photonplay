@@ -919,26 +919,26 @@
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: true,
-            // responsive: [
-            //     {
-            //         breakpoint: 1024,
-            //         settings: {
-            //             slidesToShow: 3,
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 600,
-            //         settings: {
-            //             slidesToShow: 1,
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 480,
-            //         settings: {
-            //             slidesToShow: 1,
-            //         }
-            //     }
-            // ]
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
         })
         window.addEventListener('click', function (e) {
             if ($('.navbar-collapse').hasClass('show')) {
