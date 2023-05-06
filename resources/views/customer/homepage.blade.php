@@ -1,14 +1,15 @@
 @include('customer.layout2.header')
     <!-- banner-text-start -->
     <section class="pt-0 pb-sm-4 pb-lg-5" >
-    <div class="clints-content mb-0">
+    <div class="clints-content clints-content-banner mb-0">
             <div>
                 <div class="clider-content-wrapper position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
                         </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
             </div>
             <div>
@@ -16,6 +17,27 @@
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
+                        </div>
+                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
+                </div>
+            </div>
+            <div>
+                <div class="clider-content-wrapper position-relative">
+                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
+                         <h1>From Tokyo to Los Angles</h1>
+                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
+                        </div>
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
+                </div>
+            </div>
+            <div>
+                <div class="clider-content-wrapper position-relative">
+                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
+                         <h1>From Tokyo to Los Angles</h1>
+                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
                         </div>
                     <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
@@ -26,25 +48,7 @@
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
             </div>
             <div>
@@ -57,7 +61,7 @@
                 </div>
             </div>
             <!-- <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
             </div>
             <div>
                 <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
@@ -159,7 +163,8 @@
                 </div>
                 <div class="carousel-inner">
                     @foreach($products as $product)
-                    <div class="carousel-item active">
+                    
+                    <div class="carousel-item {{ $loop->index === 0 ? 'active' : ''}}">
                         <div class="products-two d-lg-flex justify-content-between">
                             <div class="common-wdth common-wdth_ inner-col align-self-center">
                                 <h6>{{$product->category->title}}</h6>
@@ -202,7 +207,7 @@
     </section>
     <!-- slider-end -->
     <!-- ______________Our Solution Start-----______________ -->
-    <section class="team-members pt-0">
+    <section class="team-members ">
         <div class="container">
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
@@ -324,7 +329,7 @@
         </div>
     </section>
     <!-- team-members-start -->
-    <section class="team-members pb-0 pt-0">
+    <section class="team-members">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -736,7 +741,7 @@
                 // instead of a settings object
             ]
         });
-        $('.clints-content').slick({
+        $('.clints-content-banner').slick({
             dots: false,
             infinite: false,
             speed: 300,
@@ -751,7 +756,39 @@
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+        $('.clints-content-branding').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay:true,
+            // fade:true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
                     }
                 },
                 {

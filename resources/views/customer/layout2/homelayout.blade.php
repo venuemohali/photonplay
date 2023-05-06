@@ -714,7 +714,7 @@
         </div>
         <div class="container">
             <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
+                <div class="clints-content   mb-0 d-flex align-items-center">
                     <div>
                         <div class="px-2 branding-diss">
                             <img src="/assets/customer/images/brand-logo.png" class="d-block mx-auto" />
@@ -910,14 +910,15 @@
                 // instead of a settings object
             ]
         });
-        $('.clints-content').slick({
-            dots: false,
+         $('.clints-content-branding').slick({
+        dots: false,
             infinite: false,
             speed: 300,
-            slidesToShow: 4,
+            slidesToShow: 5,
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
+            autoplay:true;
             arrows: true,
             responsive: [
                 {
