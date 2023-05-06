@@ -23,8 +23,10 @@ Route::get('solution-city', [SolutionController::class, 'solutionCity'])->name('
 Route::get('solution-transit', [SolutionController::class, 'solutionTransit'])->name('solution.transit');
 Route::get('contact-us', [ContactUsController::class, 'contactUs'])->name('contact.us');
 Route::get('about-us', [ContactUsController::class, 'aboutUs'])->name('about.us');
-Route::get('blog-detail', [ContactUsController::class, 'blogDetail'])->name('blog.detail');
-Route::get('blog', [ContactUsController::class, 'blog'])->name('blog');
+//Route::get('blog-detail', [ContactUsController::class, 'blogDetail'])->name('blog.detail');
+//
+//
+//Route::get('blog', [ContactUsController::class, 'blog'])->name('blog');
 Route::get('signages', [ContactUsController::class, 'signal'])->name('signal');
 Route::get('smartcity', [ContactUsController::class, 'smartcity'])->name('smartcity');
 Route::get('variable-sign-language', [ContactUsController::class, 'variableMessage'])->name('variable.message');
