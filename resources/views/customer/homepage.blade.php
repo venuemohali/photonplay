@@ -7,8 +7,9 @@
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
                         </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
             </div>
             <div>
@@ -16,6 +17,27 @@
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
+                        </div>
+                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
+                </div>
+            </div>
+            <div>
+                <div class="clider-content-wrapper position-relative">
+                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
+                         <h1>From Tokyo to Los Angles</h1>
+                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
+                        </div>
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
+                </div>
+            </div>
+            <div>
+                <div class="clider-content-wrapper position-relative">
+                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
+                         <h1>From Tokyo to Los Angles</h1>
+                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
+                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
                         </div>
                     <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
@@ -26,25 +48,7 @@
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
             </div>
             <div>
@@ -57,7 +61,7 @@
                 </div>
             </div>
             <!-- <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
+                <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
             </div>
             <div>
                 <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
@@ -159,7 +163,8 @@
                 </div>
                 <div class="carousel-inner">
                     @foreach($products as $product)
-                    <div class="carousel-item active">
+                    
+                    <div class="carousel-item {{ $loop->index === 0 ? 'active' : ''}}">
                         <div class="products-two d-lg-flex justify-content-between">
                             <div class="common-wdth common-wdth_ inner-col align-self-center">
                                 <h6>{{$product->category->title}}</h6>
@@ -202,7 +207,7 @@
     </section>
     <!-- slider-end -->
     <!-- ______________Our Solution Start-----______________ -->
-    <section class="team-members pt-0">
+    <section class="team-members ">
         <div class="container">
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
@@ -324,7 +329,7 @@
         </div>
     </section>
     <!-- team-members-start -->
-    <section class="team-members pb-0 pt-0">
+    <section class="team-members">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -751,7 +756,7 @@
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 1,
                     }
                 },
                 {
