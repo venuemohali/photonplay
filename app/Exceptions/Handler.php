@@ -2,7 +2,6 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -36,17 +35,7 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            return redirect()->guest(route('home'));
         });
     }
-
-    public function render($request, Exception $exception)
-    {
-        if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
-            return redirect()->guest(route('home'));
-        }
-
-        return parent::render($request, $exception);
-    }
-
 }
