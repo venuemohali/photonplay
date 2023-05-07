@@ -124,7 +124,7 @@
                                 <div class="d-flex mt-0">
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
                                         <h3>120+</h3>
-                                        <p>Experts, One Mission: To Deliver Outstanding Results For You</p>
+                                        <p>120+ Experts, One Mission: To Deliver Outstanding Results For You</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
                                         <h3>$82M</h3>
