@@ -218,9 +218,7 @@
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
                     <h2 class="fs-md-2 mt-3">OUR SOLUTIONS</h2>
-                    <p class="text-mutedd">Our innovative and reliable ITS solutions empower governments, transit
-                        authorities, <br> and businesses to enhance safety, efficiency, and connectivity in the
-                        transportation ecosystem.</p>
+                    <p class="text-mutedd"> Transforming Transportation with Cutting-Edge ITS Solutions for Enhanced Safety, Efficiency, and Connectivity</p>
                 </div>
             </div>
             <div class="row">
@@ -230,10 +228,7 @@
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/factory.png" alt="Not Found">
                             <h6 class="text-capitalize">Highways</h6>
-                            <p class="mb-0 text-center">Experience improved traffic flow and safer journeys with our
-                                cutting-edge
-                                ITS
-                                solutions tailored to highways and tunnels.
+                            <p class="mb-0 text-center"> Drive confidently on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety.
                             </p>
                         </div>
                     </div>
@@ -245,10 +240,7 @@
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/freedom.png" alt="Not Found">
                             <h6 class="text-capitalize">Tunnels</h6>
-                            <p class="mb-0 text-center">Navigate through tunnels with ease and confidence with our
-                                advanced ITS
-                                solutions
-                                designed for optimal safety and efficiency.
+                            <p class="mb-0 text-center"> Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management.
                             </p>
                         </div>
                     </div>
@@ -261,11 +253,7 @@
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/growth-graph.png"
                                  alt="Not Found">
                             <h6 class="text-capitalize">Smart Cities</h6>
-                            <p class="mb-0 text-center">Transform urban mobility and drive sustainable growth with our
-                                comprehensive
-                                ITS
-                                solutions that enable seamless integration and smarter decision-making for cities of the
-                                future.
+                            <p class="mb-0 text-center"> From intelligent traffic management to efficient public transportation, we provide innovative solutions that improve urban mobility and reduce environmental impacts.
                             </p>
                         </div>
                     </div>
@@ -277,10 +265,7 @@
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/branch.png" alt="Not Found">
                             <h6 class="text-capitalize">Transits</h6>
-                            <p class="mb-0 text-center">Revolutionize public transportation systems with our advanced
-                                ITS solutions
-                                that offer
-                                real-time data, enhanced safety features, and improved passenger experience.
+                            <p class="mb-0 text-center"> Our ITS solutions for transit authorities offer real-time information to commuters, improving the overall transit experience.
                             </p>
                         </div>
                     </div>
@@ -408,6 +393,7 @@
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
                     <h2 class="fs-md-2 mt-3">Key Projects</h2>
+                    <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
                 </div>
             </div>
         </div>
@@ -432,9 +418,7 @@
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
                         <h2 class="fs-md-2 mt-3">Our Client Says</h2>
-                        <p class="text-mutedd">A break from all your worries sure would help a lot and you know <br>
-                            then a
-                            tale of a fateful trip this tropic port</p>
+                        <p class="text-mutedd"> See What Our Satisfied Clients Have to Say About Our Innovative ITS Solutions</p>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -606,8 +590,7 @@
                         <h2 class="fs-md-2 mt-3">Latest News</h2>
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <p class="text-mutedd">
-                                "Stay up-to-date with the latest news and events in photon play systems with our comprehensive news and events section.
-
+                                "Stay Up-to-Date on the Latest Innovations and Industry News in Transportation with Our Latest News Section.
                                 <br>
                             Check back regularly for the latest updates and insights!"
                             </p>
