@@ -23,7 +23,7 @@
                 <hr/>
                 @forelse($data_page as $item)
                     <div class="post-item mb-4">
-                        <img src="{{asset("storage/".$item['image'])}}" class="mb-4 w-100">
+                        <img src="{{asset("storage/".$item['image'])}}" class="mb-4 w-100" style="max-height: 300px;">
                         <div class="mb-4 pb-4 post-info">
                             @if($item['type']==2)
                             <a href="{{route("customer.blog_show",$item['slug'])}}"   class="text-decoration-none">   <h2 class="text-uppercase"> <b>   {{$item['title']}} </b></h2></a>
