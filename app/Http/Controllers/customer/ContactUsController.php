@@ -7,8 +7,10 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\BlogLike;
 use App\Models\Category;
+use App\Models\ClientTestimonial;
 use App\Models\Product;
 use App\Models\Setting;
+use App\Models\TeamMember;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -23,7 +25,13 @@ class ContactUsController extends Controller
     }
 
     public function aboutUs(){
-        return view('customer.about_us');
+
+        $blogs = Blog::latest()->take(3)->get();
+        foreach ($blogs as $blog){
+            $blog["category"]=BlogCategory::find($blog->blog_category_id)->category;
+        }
+
+        return view('customer.about_us',compact('blogs'));
     }
 
     /**

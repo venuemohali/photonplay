@@ -130,59 +130,7 @@
 </section>
 
 <!-- blog-banner end  -->
-<section class="our-clints-last">
-    <div class="mb-lg-5 text-center">
-        <h2 class="fs-md-2 mt-3">Our Clients</h2>
-    </div>
-    <div class="container">
-        <div class="px-4">
-            <div class="clints-content mb-0 d-flex align-items-center">
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/adani.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/afkons.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/ASHOKA.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/BRO.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/adani.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/afkons.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/ASHOKA.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-                <div>
-                    <div class="px-2 branding-diss">
-                        <img src="./assets/images/BRO.png" class="d-block mx-auto" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+@include('customer.layout2.our_clients')
 @include('customer.layout2.footer')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
@@ -431,4 +379,44 @@
     //     $(this).siblings('ul').slideDown();
     //     console.log(this)
     // })
+</script>
+
+<script>
+    $('.clints-content-branding').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay:true,
+        // fade:true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+    window.addEventListener('click', function (e) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    })
 </script>

@@ -18,27 +18,17 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-8 pe-lg-0">
                             <div class="about-undeafeted text-dark text-center">
-                                <h4 class="text-uppercase text-dark mb-4">EXPERIENCE, KNOW-HOW AND FLEXIBILITY</h4>
-                                <!-- <p class="text-uppercase">EXPERIENCE, KNOW-HOW AND FLEXIBILITY</p> -->
+                                <h4 class="text-uppercase text-dark mb-4">About us </h4>
+                                <p class="text-uppercase">Driving Smarter Transportation Solutions for 16+ Years</p>
                                 <p class="mb-4">
-                                    Icop range of Traffic solutions including RADAR SPEED SIGNS by Photonplay Group.
-                                    PHOTONPLAY, a globally renowned ITS(Intelligent Transport Systems) system provider,
-                                    with a group revenue of over 82 Millions (FYI18-19)
+                                    At PhotonPlay, we are a family-owned Indian company that has been delivering intelligent transportation systems (ITS) to clients worldwide for over 16 years. Our focus on creating safer, more efficient, and sustainable mobility solutions has earned us a reputation as a trusted partner for system integrators, government authorities, OEMs, and corporations across 30+ countries.
+
+
                                 </p>
                                 <p class="mb-5">
-                                    PHOTONPLAY is a family owned, India based design, develop and manufacturing of
-                                    Systems for the ITS industry since 2006. With subsidiary offices in US, Australia
-                                    and Norway plus distribution facility in the US and representatives all over the
-                                    world,
+                                    We take pride in our expertise, innovation, and commitment to excellence in every aspect of our work. From the initial idea to implementation, we strive to provide unparalleled service to our clients. Our passion for smarter transportation solutions has enabled us to stay at the forefront of our industry for 16+ years, and we look forward to continuing to drive innovation and create value for our clients for years to come.
                                 </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -55,20 +45,16 @@
                 <div class="col-lg-10">
                     <div class="text-center mb-lg-5">
                         <h2 class="fs-md-2 mt-3">PHOTONPLAY AT A GLANCE</h2>
-                        <p class="text-mutedd">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor <br> incididunt ut labore et dolore magna aliqua
+                        <p class="text-mutedd"> PhotonPlay is a financially independent, global technology company established in 2006 with wholly-owned subsidiaries in the USA, Norway, and Australia. With a group revenue of over $82 million, we deliver cutting-edge intelligent transportation systems worldwide.
                         </p>
                     </div>
                     <div class="row">
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                             <div class="members-profile h-100">
                                 <div class="p-4 ">
-                                    <img class="profile-placeholderss mb-5" src="./assets/images/factory.png"
-                                        alt="Not Found">
-                                    <h6 class="text-capitalize">ESTABLISHED</h6>
+                                    <h1 class="text-capitalize text-dark">1K+</h1>
                                     <p class="mb-0 text-center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore.
+                                        Global Expertise with 1K+ Successful Projects
                                     </p>
                                 </div>
                             </div>
@@ -76,12 +62,9 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0 gap-5">
                             <div class="members-profile h-100">
                                 <div class="p-4 ">
-                                    <img class="profile-placeholderss mb-5" src="./assets/images/freedom.png"
-                                        alt="Not Found">
-                                    <h6 class="text-capitalize">FINANCIALLY INDEPENDENT</h6>
+                                    <h1 class="text-capitalize text-dark">17+</h1>
                                     <p class="mb-0 text-center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore.
+                                        Executing Excellence Worldwide for 17+ Years and Counting
                                     </p>
                                 </div>
                             </div>
@@ -89,12 +72,9 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                             <div class="members-profile h-100">
                                 <div class="p-4 ">
-                                    <img class="profile-placeholderss mb-5" src="./assets/images/growth-graph.png"
-                                        alt="Not Found">
-                                    <h6 class="text-capitalize">GROUP REVENUE OVER 82 MILLION</h6>
+                                    <h1 class="text-capitalize text-dark">120+</h1>
                                     <p class="mb-0 text-center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore.
+                                        120+ Experts, One Mission: To Deliver Outstanding Results For You
                                     </p>
                                 </div>
                             </div>
@@ -102,13 +82,11 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                             <div class="members-profile h-100">
                                 <div class="p-4 ">
-                                    <img class="profile-placeholderss mb-5" src="./assets/images/branch.png"
-                                        alt="Not Found">
-                                    <h6 class="text-capitalize">WHOLY OWNED SUBSIDIARIES IN USA, NORWAY AND AUSTRALIA
-                                    </h6>
+
+                                    <h1 class="text-capitalize text-dark"> $82M
+                                    </h1>
                                     <p class="mb-0 text-center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore.
+                                        An Accomplished Company with a Turnover of $82 Million
                                     </p>
                                 </div>
                             </div>
@@ -120,144 +98,179 @@
     </section>
     <!-- market-segmet-start -->
     <section class="segmet-market pb-4">
+{{--start--}}
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="text-center mb-lg-5">
-                        <h2 class="fs-md-2 mt-3">MARKET SEGMENTS</h2>
-                        <div class="light-about d-flex justify-content-between py-4">
-                            <div class="">
-                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">
-                                <p>PUBLIC TRANSPORT</p>
-                            </div>
-                            <div class="">
-                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">
-                                <p>PUBLIC TRANSPORT</p>
-                            </div>
-                            <div class="">
-                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">
-                                <p>PUBLIC TRANSPORT</p>
+            <div class="col-lg-12">
+                <div class="text-center mb-lg-5">
+                    <h2 class="fs-md-2 mt-3">MARKET SEGMENTS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                    <a href="{{route('customer.solution.highway')}}" style="text-decoration: none;">
+                        <div class="members-profile h-100">
+                            <div class="p-4 ">
+                                <img class="profile-placeholderss mb-5" src="/assets/customer/images/factory.png" alt="Not Found">
+                                <h6 class="text-capitalize">Highways</h6>
+                                <p class="mb-0 text-center"> Drive confidently on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety.
+                                </p>
                             </div>
                         </div>
-                        <p class="text-mutedd px-">
-                            PHOTONPLAY is developing and delivering technology with tangible benefits
-                            to public transport ecosystem is strategically positioned to provide solutions to connect
-                            passengers/drivers to crucial information while contributing to the operational objectives
-                            of a safe road network around the globe. Supporting governments, transit authorities, system
-                            integrators as well as business around the globe, PHOTONPLAY is developing and delivering
-                            technology with tangible benefits to public transport ecosystem.
-                        </p>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0 gap-5">
+                    <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
+                        <div class="members-profile h-100">
+                            <div class="p-4 ">
+                                <img class="profile-placeholderss mb-5" src="/assets/customer/images/freedom.png" alt="Not Found">
+                                <h6 class="text-capitalize">Tunnels</h6>
+                                <p class="mb-0 text-center"> Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                    <a href="{{route('customer.solution.city')}}" style="text-decoration: none;">
+                        <div class="members-profile h-100">
+                            <div class="p-4 ">
+                                <img class="profile-placeholderss mb-5" src="/assets/customer/images/growth-graph.png"
+                                     alt="Not Found">
+                                <h6 class="text-capitalize">Smart Cities</h6>
+                                <p class="mb-0 text-center"> From intelligent traffic management to efficient public transportation, we provide innovative solutions that improve urban mobility and reduce environmental impacts.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
+                    <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
+                        <div class="members-profile h-100">
+                            <div class="p-4 ">
+                                <img class="profile-placeholderss mb-5" src="/assets/customer/images/branch.png" alt="Not Found">
+                                <h6 class="text-capitalize">Transits</h6>
+                                <p class="mb-0 text-center"> Our ITS solutions for transit authorities offer real-time information to commuters, improving the overall transit experience.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="banner">
+
+{{--        end--}}
+
+
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-lg-11">--}}
+{{--                    <div class="text-center mb-lg-5">--}}
+{{--                        <h2 class="fs-md-2 mt-3">MARKET SEGMENTS</h2>--}}
+{{--                        <div class="light-about d-flex justify-content-between py-4">--}}
+{{--                            <div class="">--}}
+{{--                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">--}}
+{{--                                <p>PUBLIC TRANSPORT</p>--}}
+{{--                            </div>--}}
+{{--                            <div class="">--}}
+{{--                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">--}}
+{{--                                <p>PUBLIC TRANSPORT</p>--}}
+{{--                            </div>--}}
+{{--                            <div class="">--}}
+{{--                                <img class="mb-4" src="./assets/images/about-light.png" alt="Not Found">--}}
+{{--                                <p>PUBLIC TRANSPORT</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <p class="text-mutedd px-">--}}
+{{--                            PHOTONPLAY is developing and delivering technology with tangible benefits--}}
+{{--                            to public transport ecosystem is strategically positioned to provide solutions to connect--}}
+{{--                            passengers/drivers to crucial information while contributing to the operational objectives--}}
+{{--                            of a safe road network around the globe. Supporting governments, transit authorities, system--}}
+{{--                            integrators as well as business around the globe, PHOTONPLAY is developing and delivering--}}
+{{--                            technology with tangible benefits to public transport ecosystem.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+        <{{--div class="banner">
             <div class="about-segmet">
 
             </div>
-        </div>
+        </div>--}}
     </section>
-    <!-- market-segmet-end -->
-    <!-- _____________________latest News start______________________ -->
-    <section class="latest-wrapper pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="mb-5 text-center">
-                        <h2 class="fs-md-2 mt-3">News & Events</h2>
-                        <!-- <div class="d-flex flex-wrap align-items-center justify-content-between">
-                            <p class="text-mutedd">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod
-                                <br>
-                                tempor incididunt ut labore et dolore magna aliqua
-                            </p>
-                            <button class="btn btn-outline rounded-2">Load More</button>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory mb-lg-0 mb-4">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory mb-lg-0 mb-4">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="inner-cqategory">
-                        <div class="category-image"></div>
-                        <div class="p-4">
-                            <p class="btn-light">CATEGORY</p>
-                            <p class="dollor-seat">Topic here Topic here Topic here Topic here Topic here Topic here
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.
-                            </p>
-                        </div>
+
+
+<section class="key-project pb-0">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="text-center mb-lg-5">
+                <h2 class="fs-md-2 mt-3">Key Projects</h2>
+                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
+            </div>
+        </div>
+    </div>
+    <div class="key-slider mb-0">
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+
+    </div>
+</section>
+<!--___________________ key-project-end_________________ -->
+<!-- _____________________Our clint Says start______________________ -->
+
+@include('customer.layout2.client_testimonials')
+
+<!-- _____________________Our clint Says End______________________ -->
+<!-- _____________________latest News start______________________ -->
+<section class="latest-wrapper pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-5">
+                    <h2 class="fs-md-2 mt-3">Latest News</h2>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between">
+                        <p class="text-mutedd">
+                            "Stay Up-to-Date on the Latest Innovations and Industry News in Transportation with Our Latest News Section.
+                            <br>
+                            Check back regularly for the latest updates and insights!"
+                        </p>
+                        <a href="{{route('customer.blog')}}" class="btn btn-outline rounded-2">Load More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- _____________________latest News end______________________ -->
-    <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/brand-logo.png" class="d-block mx-auto" />
+
+            @foreach($blogs as $blog)
+                <div class="col-lg-4">
+                    <div class="inner-cqategory mb-lg-0 mb-4">
+                        <div class="">
+                            <a href="{{route("customer.blog_show",$blog->slug)}}" > <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 category-image img-fluid w-100"> </a>
                         </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/brand-logo.png" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/brand-logo.png" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="./assets/images/brand-logo.png" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="./assets/images/brand-logo.png" class="d-block mx-auto" />
+                        <div class="p-4">
+                            <p class="btn-light">{{$blog->category}}</p>
+                            <a href="{{route("customer.blog_show",$blog->slug)}}"  class="text-decoration-none">  <p class="dollor-seat"> {{$blog->title}}
+                                </p>
+                            </a>
+                            <p>
+                                {{$blog->description}}  <a href="{{route("customer.blog_show",$blog->slug)}}" >Read More..</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+
         </div>
-    </section>
+    </div>
+</section>
+<!-- _____________________latest News end______________________ -->
+<!-- _____________________ourclint-last-start___________________ -->
+@include('customer.layout2.our_clients')
 
     @include('customer.layout2.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -389,4 +402,45 @@
                 'data-bs-popper': "static"
             })
         });
+
+
     </script>
+<script>
+    $('.clints-content-branding').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay:true,
+        // fade:true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+    window.addEventListener('click', function (e) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    })
+</script>
