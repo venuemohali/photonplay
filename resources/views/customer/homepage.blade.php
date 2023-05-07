@@ -98,7 +98,7 @@
                 <div class="col-lg-10">
                     <div class="row align-items-center">
                         <div class="col-lg-6 pe-lg-0">
-                            <div class="sucess-undeafeted p-4 text-white">
+                            <div class="sucess-undeafeted p-4 py-5 text-white">
                                 <p class="text-uppercase">From Idea to Implementation</p>
                                 <h4 class="text-uppercase">Our 16+ Years of Undefeated Success</h4>
                                 <p>
