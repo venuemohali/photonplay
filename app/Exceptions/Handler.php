@@ -35,7 +35,7 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            return redirect()->guest(route('customer.home'));
+            return redirect()->route('customer.home');
         });
     }
 }
