@@ -5,7 +5,7 @@
             <div>
                 <div class="clider-content-wrapper position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
+                         <h1>FROM TOKYO TO LOS ANGLES</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
                         </div>
@@ -16,7 +16,7 @@
             <div>
                 <div class="clider-content-wrapper position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
+                         <h1>FROM TOKYO TO LOS ANGLES</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
                         </div>
