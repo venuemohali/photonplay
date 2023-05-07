@@ -9,6 +9,7 @@
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
                         <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</a>
                         </div>
+
                     <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
                 </div>
             </div>
