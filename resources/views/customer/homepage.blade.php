@@ -145,10 +145,8 @@
         <div class="container overflow-hidden pb-4 pt-0">
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
-                    <h2 class="fs-md-2 mt-3">Our Products</h2>
-                    <h6 class="fs-6 text-colorr">Our product offers innovative solutions to meet your needs and exceed
-                        your
-                        expectations.</h6>
+                    <h2 class="fs-md-2 mt-3 text-uppercase">Our Products</h2>
+                    <h6 class="fs-6 text-colorr">Empowering Smarter Mobility with Innovative Product Solutions that Exceed Expectations.</h6>
                 </div>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide">
@@ -169,8 +167,8 @@
                             </div>
                             <div class="mask-layer common-wdth inner-col text-center">
                                 <img src="/assets/customer/images/KEPLER-US-12.png" alt="Not Found" class="">
-                                <button class="btn btn-primary text-capitalize d-block py-0 px-3 m-auto mt-3 mb-4">Shop
-                                    Now</button>
+                                <a href="{{route('customer.radar.sign',$product->id)}}" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4">Shop
+                                    Now</a>
                             </div>
                             <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
                                 <div class="ms-md-5">
@@ -178,10 +176,21 @@
                                     <p>{{$product->description}}</p>
                                     <div class="social-two">
                                         <p class="text-capitalize fs-5">share:</p>
-                                        <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="Not Found">
-                                        <img src="/assets/customer/images/twitter2.png" alt="Not Found">
-                                        <img src="/assets/customer/images/instagram2.png" alt="Not Found">
-                                        <img src="/assets/customer/images/pintrest2.png" alt="Not Found">
+                                        <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                        <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                            <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                        <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                            <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                        <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+
+
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -815,6 +824,34 @@
             }
         })
     </script>
+
+
+<script>
+    function shareOnSocialMedia(url,mode) {
+        // Define the social media share URL based on the platform
+        var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+        var twitterUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url);
+        var linkedinUrl = "https://www.linkedin.com/shareArticle?url=" + encodeURIComponent(url);
+        var pinterestUrl = "https://pinterest.com/pin/create/button/?url=" + encodeURIComponent(url);
+
+        // Open the social media share dialog based on the platform
+        if(mode==1){
+            window.open(facebookUrl, "_blank", "width=600,height=400");
+        }else if(mode==2){
+            window.open(twitterUrl, "_blank", "width=600,height=400");
+        }
+        else if(mode==3){
+            window.open(linkedinUrl, "_blank", "width=600,height=400");
+        }
+        else if(mode==4){
+            window.open(pinterestUrl, "_blank", "width=600,height=400");
+        }
+
+
+
+
+    }
+</script>
 </div>
 </body>
 
