@@ -331,58 +331,20 @@
                             tale of a fateful trip this tropic port</p>
                     </div>
                 </div>
+                @foreach($team_members as $member)
+
                 <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
-                            <img class="profile-placeholder" src="/assets/customer/images/download.png" alt="Not Found">
-                            <h6 class="text-capitalize">Full Name</h6>
-                            <p class="text-center">Detials Here Detials Here Detials <br> Here Detials Here Detials Here
-                                <br> Detials
-                                Here
+                            <img class="profile-placeholder" src="{{asset('storage/'.$member->image)}}" alt="{{$member->name}}">
+                            <h6 class="text-capitalize">{{$member->name}}</h6>
+                            <p class="text-center"> {{$member->detail}}
                             </p>
                             <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
-                    <div class="members-profile h-100">
-                        <div class="p-4 ">
-                            <img class="profile-placeholder" src="/assets/customer/images/download.png" alt="Not Found">
-                            <h6 class="text-capitalize">Full Name</h6>
-                            <p class="text-center">Detials Here Detials Here Detials <br> Here Detials Here Detials Here
-                                <br> Detials
-                                Here
-                            </p>
-                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
-                    <div class="members-profile h-100">
-                        <div class="p-4 ">
-                            <img class="profile-placeholder" src="/assets/customer/images/download.png" alt="Not Found">
-                            <h6 class="text-capitalize">Full Name</h6>
-                            <p class="text-center">Detials Here Detials Here Detials <br> Here Detials Here Detials Here
-                                <br> Detials
-                                Here
-                            </p>
-                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
-                    <div class="members-profile h-100">
-                        <div class="p-4 ">
-                            <img class="profile-placeholder" src="/assets/customer/images/download.png" alt="Not Found">
-                            <h6 class="text-capitalize">Full Name</h6>
-                            <p class="text-center">Detials Here Detials Here Detials <br> Here Detials Here Detials Here
-                                <br> Detials
-                                Here
-                            </p>
-                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -449,6 +411,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-lg-4">
                             <div class="members-profile h-100 mx-3 h-100">
                                 <div class="p-4 position-re lative h-100 inner-max-width">
@@ -474,6 +438,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4">
                             <div class="members-profile h-100 mx-3 h-100">
                                 <div class="p-4 position-re lative h-100 inner-max-width">

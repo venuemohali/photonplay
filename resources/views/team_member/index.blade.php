@@ -80,7 +80,7 @@
 
                                                                 $.ajax({
                                                                     type:'DELETE',
-                                                                    url:'{{route('team_member_delete'.$item->id)}}',
+                                                                    url:'{{route('admin.team_member_delete',$item->id)}}',
                                                                     data:'_token = {{ @csrf_token() }}',
                                                                     success:function(data) {
                                                                         $("#Item-{{$item->id}}").hide();

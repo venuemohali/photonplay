@@ -6,6 +6,7 @@ use App\Http\Controllers\customer\SignController;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Product;
+use App\Models\TeamMember;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 
@@ -43,7 +44,10 @@ class HomeController extends Controller
         foreach ($blogs as $blog){
             $blog["category"]=BlogCategory::find($blog->blog_category_id)->category;
         }
-        return view('customer.homepage', compact('products','blogs'));
+        $team_members = TeamMember::take(4)->get();
+
+
+        return view('customer.homepage', compact('products','blogs','team_members'));
     }
 
 }
