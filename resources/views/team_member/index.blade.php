@@ -38,8 +38,11 @@
                                     <thead>
                                     <tr>
                                         <th class="all">#</th>
-                                        <th class="all">Client</th>
-                                        <th class="all">Title</th>
+                                        <th class="all">Profile </th>
+                                        <th class="all">Name</th>
+                                        <th class="all">Detail</th>
+                                        <th class="all">Social</th>
+
                                         <th class="all">Created</th>
                                         <th class="all">Options</th>
                                     </tr>
@@ -50,6 +53,12 @@
                                             <td>{{$Sr++}}</td>
                                             <td> <img src="/storage/{{$item->image }}" class="img-fluid" style="height: 100px;"/></td>
                                             <td> {{$item->name }}</td>
+                                            <td> {{$item->detail }}</td>
+                                            <td> <a href="{{$item->facebook}}">Facebook</a>
+                                                <a href="{{$item->linkedin}}">Linkedin</a>
+                                                <a href="{{$item->twitter}}">Twitter</a>
+                                            </td>
+
                                             <td>{{ date('d-m-Y',strtotime($item->created_at)) ?? ''}}</td>
                                             <td>
                                                 <a href="{{route("admin.team_member_edit",$item->id) }}" class="text-warning p-1" data-toggle="tooltip" title="Edit">

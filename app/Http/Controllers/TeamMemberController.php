@@ -79,13 +79,13 @@ class TeamMemberController extends Controller
      */
     public function edit($id)
     {
-        $record = TeamMember::find($id);
+        $data = TeamMember::find($id);
 
-        if(!isset($record)){
+        if(!isset($data)){
             return abort(404);
         }
 
-        return view('team_member.edit',compact('record'));
+        return view('team_member.edit',compact('data'));
     }
 
     /**
@@ -110,7 +110,7 @@ class TeamMemberController extends Controller
         if(isset($request->twitter)){$input['twitter']=$request->twitter;}
         if(isset($request->image)){
             $image_path = $request->file('image')->store('image', 'public');
-            $input['name']=$image_path;
+            $input['image']=$image_path;
         }
         $cat->update($input);
         return redirect()->route('admin.team_member_index')->with('status', 'Team Member information successfully updated');
