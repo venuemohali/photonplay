@@ -163,7 +163,7 @@
                         <div class="products-two d-lg-flex justify-content-between">
                             <div class="common-wdth common-wdth_ inner-col align-self-center">
                                 <h6>{{$product->category->title}}</h6>
-                                <p class="mb-0">{{$product->title}}</p>
+{{--                                <p class="mb-0">{{$product->title}}</p>--}}
                             </div>
                             <div class="mask-layer common-wdth inner-col text-center">
                                 <img src="/assets/customer/images/KEPLER-US-12.png" alt="Not Found" class="">
