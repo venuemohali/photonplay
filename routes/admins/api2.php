@@ -10,6 +10,7 @@ use App\Http\Controllers\ProductPricingController;
 use App\Http\Controllers\ProductPublishController;
 use App\Http\Controllers\ProductSeoController;
 use App\Http\Controllers\ProductSetupController;
+use App\Http\Controllers\TeamMemberController;
 
 Route::get('/product/edit/{id}', [ProductSetupController::class, 'product_edit_basic'])->name("product_basic_update");
 
@@ -80,3 +81,20 @@ Route::delete('/cms/clients/{id}', [ClientsLogosController::class,'destroy'])->n
 
 Route::get('/orders', [OrderController::class,'index'])->name("orders_index");
 Route::get('/orders/{id}', [OrderController::class,'show'])->name("orders_show");
+
+
+
+
+
+Route::get('/cms/team-members', [TeamMemberController::class,'index'])->name("team_member_index");
+Route::get('/cms/team-members/create', [TeamMemberController::class,'create'])
+    ->name("team_member_create");
+Route::post('/cms/team-members/create', [TeamMemberController::class,'store'])
+    ->name("team_member_store");
+Route::get('/cms/team-members/{id}/edit', [TeamMemberController::class,'edit'])
+    ->name("team_member_edit");
+Route::put('/cms/team-members/{id}', [TeamMemberController::class,'update'])
+    ->name("team_member_update");
+
+
+Route::delete('/cms/team-members/{id}', [TeamMemberController::class,'destroy'])->name("team_member_delete");

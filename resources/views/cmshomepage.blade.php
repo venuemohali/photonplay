@@ -58,6 +58,12 @@
                                     Our Clients</a>
                             </div>
 
+                            <div class="col-md-4  mb-3">
+                                <a href="{{route('admin.team_member_index')}}" class="btn btn-primary btn-lg btn-block w-100 d-flex align-items-center justify-content-center">
+                                    <i data-feather="user"></i>
+                                    Our Team Member</a>
+                            </div>
+
                         </div>
 
                     </div>
