@@ -99,40 +99,36 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 pe-lg-0">
                             <div class="sucess-undeafeted p-4 text-white">
-                                <p class="text-uppercase">EXPERIENCE, KNOW-HOW AND FLEXIBILITY</p>
-                                <h4 class="text-uppercase">16+ YEARS OF UNDEFEATED SUCESS</h4>
+                                <p class="text-uppercase">From Idea to Implementation</p>
+                                <h4 class="text-uppercase">Our 16+ Years of Undefeated Success</h4>
                                 <p>
-                                    PHOTONPLAY is a family owned, India based design, develop and manufacturing of
-                                    Systems for the ITS industry since 2006. With subsidiary offices in US, Australia
-                                    and Norway plus distribution facility in the US and representatives all over the
-                                    world, PHOTONPLAY has satisfied customers (System integrators, Govt Authorities,
-                                    OEMs and corporates) in over 30 countries worldwide.
+                                    PhotonPlay, a family-owned Indian company, delivers high-quality intelligent transportation systems (ITS) worldwide. For over 16 years, we've catered to system integrators, government authorities, OEMs, and corporations across 30+ countries, focusing on safer, more efficient, and sustainable mobility solutions. Our expertise, innovation, and commitment to smarter transportation make us a trusted partner.
                                 </p>
-                                <button class="btn btn-whites bg-white rounded-0 text-uppercase btn-light px-4">WORK
+                                <a href="{{route('customer.contact.us')}}" class="btn btn-whites bg-white rounded-0 text-uppercase btn-light px-4">WORK
                                     WITH
-                                    US</button>
+                                    US</a>
                             </div>
                         </div>
-                        <div class="col-lg-6 ps-lg-0 ">
+                        <div class="col-lg-6 ps-lg-0">
                             <div class="project-details d-flex d-lg-block flex-column align-items-center">
                                 <div class="d-flex mt-md-5 mt-lg-0 mt-4">
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h4>1K</h4>
-                                        <p>Projects</p>
+                                        <h3>1K+</h3>
+                                        <p>Global Expertise with 1K+ Successful Projects</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h4>17+</h4>
-                                        <p class="mb-0">Experience</p>
+                                        <h3>17+</h3>
+                                        <p class="mb-0">Executing Excellence Worldwide for 17+ Years and Counting</p>
                                     </div>
                                 </div>
                                 <div class="d-flex mt-0">
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h4>120+</h4>
-                                        <p>Projects</p>
+                                        <h3>120+</h3>
+                                        <p>Experts, One Mission: To Deliver Outstanding Results For You</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h4>$82 M</h4>
-                                        <p class="mb-0">Experience</p>
+                                        <h3>$82M</h3>
+                                        <p class="mb-0">An Accomplished Company with a Turnover of $82 Million</p>
                                     </div>
                                 </div>
                             </div>
