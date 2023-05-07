@@ -13,7 +13,9 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6 col-md-12">
 
                 <form class="mt-lg-0 mt-4 align-items-center" role="search">
                     <div class="form-group">
