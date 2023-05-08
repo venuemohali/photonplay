@@ -207,7 +207,8 @@
                 <div class="row ">
                     <div class="col-lg-12">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a class="mega-brand" href="#"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
+
+                            <a class="mega-brand" href="{{route('customer.homePage')}}"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
                             <div class="toggler-mega "><img src="{{asset('assets\customer\images\icons8-menu-50.png')}}" alt=""></div>
                             <!-- <img class="img-menus" src="./assets/images/icons-menu.gif" alt="Not Found"> -->
                         </div>
@@ -221,11 +222,12 @@
                     <div class="mega-menu mt-4">
                         <div class="mega-menu-items">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
-                            <h4 class="text-uppercase">Home</h4>
+                            <a href="{{route('customer.homePage')}}"> <h4 class="text-uppercase">Home</h4> </a>
                         </div>
                         <div class="mega-menu-items">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Home</li></ul> -->
-                            <h4 class="text-uppercase">Company</h4>
+
+                            <a href="{{route('customer.about.us')}}"> <h4 class="text-uppercase">Company</h4></a>
                         </div>
                         <div class="mega-menu-parent">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Company</li></ul> -->
