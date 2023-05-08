@@ -74,7 +74,7 @@
                     </ul>
 
                     <input type="hidden" name="grand_total" value="{{$grand_total}}">
-                    <button type="submit" id="checkout-button">Checkout</button>
+                    <button type="submit" id="checkout-button" class="btn btn-primary">Checkout</button>
                 </form>
 
                 </div>

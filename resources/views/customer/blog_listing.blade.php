@@ -101,30 +101,6 @@
                 </div>
             </div>
             <!-- </div> -->
-{{--            <div class="col-md-12 px-0">--}}
-{{--                <div class="paginations">--}}
-{{--                    <nav aria-label="Page navigation example">--}}
-{{--                        <ul class="pagination border-0">--}}
-{{--                            <li class="page-item">--}}
-{{--                                <a class="page-link border-0 text-dark" href="#" aria-label="Previous">--}}
-{{--                                        <span aria-hidden="true"><img src="./assets/images/arrowlight.jpg"--}}
-{{--                                                                      alt=""></span> </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="page-item"><a class="page-link border-0 text-dark" href="#">1</a></li>--}}
-{{--                            <li class="page-item"><a class="page-link border-0 text-dark" href="#">2</a></li>--}}
-{{--                            <li class="page-item"><a class="page-link border-0 text-dark" href="#">3</a></li>--}}
-{{--                            <li class="page-item"><a class="page-link border-0 text-dark" href="#">_</a></li>--}}
-{{--                            <li class="page-item"><a class="page-link border-0 text-dark" href="#">3</a></li>--}}
-{{--                            <li class="page-item">--}}
-{{--                                <a class="page-link border-0 text-dark" href="#" aria-label="Next">--}}
-{{--                                        <span aria-hidden="true"><img src="./assets/images/arrowlightright.png"--}}
-{{--                                                                      alt=""></span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </nav>--}}
-{{--                </div>--}}
-{{--            </div>--}}
         </div>
     </div>
 </section>
