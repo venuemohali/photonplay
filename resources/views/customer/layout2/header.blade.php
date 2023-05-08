@@ -231,7 +231,7 @@
                             <h4>SOLUTIONS</h4>
                             <div class="drop-downs">
                                 <div class="mega-menu-item">
-                                    <h4>Highways</h4>
+                                    <a href="{{route('customer.solution.highway')}}"> <h4>Highways</h4></a>
                                     <ul>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
                                                 href="{{route('customer.variable.message')}}">Variable
