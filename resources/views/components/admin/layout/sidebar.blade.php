@@ -78,6 +78,15 @@
 
                         <li class="sidebar-list">
 
+                            <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/manage-pages','manage-pages') ? 'active':''}}" href="{{route('admin.manage.solution.pages') }}">
+                                <i data-feather="file-minus"></i>
+                                <span>Manage Pages</span>
+                            </a>
+
+                        </li>
+
+                        <li class="sidebar-list">
+
                             <a class="sidebar-link sidebar-title link-nav {{Request::is('admin/cms-home','cms-home') ? 'active':''}}" href="{{route('admin.cmshomepage') }}">
                                 <i data-feather="file-minus"></i>
                                 <span>CMS</span>
