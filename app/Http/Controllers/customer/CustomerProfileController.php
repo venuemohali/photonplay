@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContentPage;
 use App\Models\Customer;
 use App\Models\Order;
 use App\Models\User;
@@ -103,7 +104,7 @@ class CustomerProfileController extends Controller
         $address->delete();
         return redirect()->route('customer.address');
     }
-    
+
     public function defaultAddress($id){
         UserAddress::where('user_id', Session::get('user')->id)->update(['is_default' => null]);
         $address = UserAddress::find($id);
@@ -111,5 +112,11 @@ class CustomerProfileController extends Controller
             'is_default' => 1,
         ]);
         return redirect()->route('customer.address');
+    }
+
+
+    public function page_show($page_name){
+        $page=ContentPage::where('page_name',$page_name)->first();
+        return view('customer.profile.content_template',compact('page'));
     }
 }
