@@ -173,7 +173,7 @@
                             <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
                                 <div class="ms-md-5">
                                     <h6 class="text-capitalize">Description</h6>
-                                    <p>{{$product->description}}</p>
+                                    <p>{!!$product->description!!}</p>
                                     <div class="social-two">
                                         <p class="text-capitalize fs-5">share:</p>
                                         <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
