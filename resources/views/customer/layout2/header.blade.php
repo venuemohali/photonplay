@@ -221,10 +221,10 @@
                     <!-- About -->
                     <div class="mega-menu mt-4">
                         <div class="mega-menu-items">
-                            <a href="{{route('customer.homePage')}}" class="text-decoration-none"> <h4 class="text-uppercase">Home</h4> </a>
+                            <a href="{{route('customer.homePage')}}" class="text-decoration-none text-dark"> <h4 class="text-uppercase">Home</h4> </a>
                         </div>
                         <div class="mega-menu-items">
-                            <a href="{{route('customer.about.us')}}"  class="text-decoration-none"> <h4 class="text-uppercase">Company</h4></a>
+                            <a href="{{route('customer.about.us')}}"  class="text-decoration-none text-dark"> <h4 class="text-uppercase">Company</h4></a>
                         </div>
                         <div class="mega-menu-parent">
                             <!-- <ul class="ps-0"><li class="text-uppercase">Company</li></ul> -->
