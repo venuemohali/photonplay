@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             StaticContentSeeder::class,
             SettingSeeder::class,
             CategorySeeder::class,
+            PageTypeSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

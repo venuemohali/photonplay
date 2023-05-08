@@ -26,6 +26,7 @@ use App\Http\Controllers\SpecilizationOptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +94,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/notifications', [NotificationsController::class, 'notifications_form'])->name('notifications_form');
         Route::get('/customer-all-emails', [NotificationsController::class, 'user_emails'])->name('all_user_emails');
         Route::post('/send-email-notification', [NotificationsController::class, 'send'])->name('send_email_notification');
+        Route::get('manage-pages', [PagesController::class, 'index'])->name('manage.solution.pages');
+        Route::get('sub-page/{id}', [PagesController::class, 'subPage'])->name('manage.solution.sub.page');
+        Route::get('create-sub-page/{id}', [PagesController::class, 'createSubPage'])->name('manage.solution.create.sub.page');
 
 
     });
