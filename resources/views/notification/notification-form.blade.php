@@ -68,12 +68,15 @@
 
                                 <div class="col-md-10">
                                     <input type="text" placeholder="Search emails" class="form-control" onkeyup="load_emails(this)"/>
-                                    <select id="selectusers_multi" name="mySelect[]" class="form-select form-select" multiple></select>
+                                    <select id="selectusers_multi" name="mySelect[]" class="form-select form-select" onchange="onSelectedKey(this)"></select>
                                     @error('selectusers_multi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
+                                </div>
+                                <div class="col-12 d-flex mt-2" id="selectedUserEmail">
+
                                 </div>
                             </div>
 
