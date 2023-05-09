@@ -11,79 +11,56 @@
 @endsection
 
 @section('breadcrumb-title')
-    <h3> Model </h3>
+    <h3> All Features </h3>
 @endsection
 
 @section('breadcrumb-items')
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item">Create/Edit Model</li>
+    <li class="breadcrumb-item">All Featues</li>
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>Create/Edit Model </h5>
-                    </div>
-                    <div class="container">x`
-                        <x-Admin.PageNavigator :page="3" :pid="$id"/>
-                    </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Specifications</h5>
+                </div>
+                <div class="container">x`
+                    <x-Admin.PageNavigator :page="2" :pid="$id"/>
+                </div>
 
-                    <div class="card-body ">
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="https://stagingserver.photonplay.com/assets/customer/images/zero-mentence.png"  class="img-fluid"/>
-                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-12">
+                <div class="card-body">
+                    <div class="dt-ext table-responsive">
+                        <table class="display" id="basic-2">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Sub Pages<th>                                        <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    @foreach ($features as $feature)
+                                    <tr>
+                                        <td>{{$feature->id}}</td>
+                                        <td>{{$feature->feature}}</td>
+                                        <td>{{$feature->description}}</td>
+                                        <td>
+                                            <a href="{{route('admin.manage.solution.edit.features.page', $feature->id)}}">
+                                                <i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
 
-                        <form method="POST" action="{{ url('/admin/blogs') }}"  enctype="multipart/form-data" >
-                            @csrf
-                            <div class="row mb-3 form-group">
-                                <label for="spec" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Specification') }}</label>
-
-                                <div class="col-md-10">
-                                    <input id="spec" type="text" class="form-control @error('spec') is-invalid @enderror" name="spec" value="{{ old('spec') ?? $data->spec ?? ''}}" required autocomplete="spec" autofocus>
-
-                                    @error('title')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-
-
-                            <div class="row mb-3 form-group">
-                                <label for="features" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Description') }}</label>
-
-                                <div class="col-md-10">
-                                    <textarea id="features" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ old('description') ?? $data->description ?? ''}}</textarea>
-
-                                    @error('description')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-
-
-                            <div class="row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        <i data-feather="save"> </i>
-                                        Save
-                                    </button>
-                                    <a href="{{url('admin/blogs')}}" class="btn btn-dark">
-                                        <i data-feather="corner-down-right"> </i>
-                                        Return Back
-                                    </a>
-                                </div>
-                            </div>
-                        </form>
-
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

@@ -32,13 +32,11 @@
                     </div>
 
                     <div class="card-body ">
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="https://stagingserver.photonplay.com/assets/customer/images/zero-mentence.png"  class="img-fluid"/>
-                        </div>
 
-                        <form method="POST" action="#" enctype="multipart/form-data">
+
+                        <form method="POST" action="{{route('admin.manage.solution.update.single.image')}}" enctype="multipart/form-data">
                             @csrf
-
+                            <input type="hidden" name="page_id" value="{{$id}}">
                             <div class="row mb-3 form-group  d-flex align-items-center">
                                 <label for="category" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Cover Image') }}</label>
 
@@ -68,11 +66,9 @@
 
                         </form>
 
-
-
-                        <form method="POST" action="#" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('admin.manage.solution.update.multi.image')}}" enctype="multipart/form-data">
                             @csrf
-                            <input type="hidden" name="product_id" value="">
+                            <input type="hidden" name="page_id" value="{{$id}}">
                             <div class="row mb-3 form-group  d-flex align-items-center">
                                 <label for="moreimage" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('More Images') }}</label>
 
@@ -96,11 +92,6 @@
                             {{--                                        /admin/product/delete/media/images/{id}--}}
 
                         </form>
-
-
-
-
-
 
                     </div>
                 </div>

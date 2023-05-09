@@ -7,7 +7,7 @@
         <div class="container">
             <div class="slider-content ">
                 <div class="imaged m-auto">
-                    <h2 class="text-center text-white fw-normal mb-5">Passenger Information Display System (PIDS)</h2>
+                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
                     <img src="{{asset('assets/customer/images/PIDS.webp')}}" alt="alt" class="d-block mx-auto img-fluid">
                 </div>
                 <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
@@ -28,9 +28,7 @@
                         <div>
                             <h4 class="text-capitalize">Description</h4>
                             <p>
-                                <b>Passenger Information Display</b> Systems (PIDS) are electronic displays that provide real-time information to passengers in public transportation systems. These systems are essential to ensuring the safety and efficiency of transportation systems. Photonplay offers a range of customizable PIDS products, including concourse displays, metro platform displays, and major overview train information display diagrams. They use advanced LED RGB technology to provide clear and visible information to passengers 24/7.
-
-                                Photonplay's PIDS are highly reliable and designed to be energy-efficient, reducing both energy consumption and costs for transportation authorities. They are built with high-quality materials and components, ensuring durability and longevity even in harsh environments. Photonplay's PIDS are completely programmable and come with software created by their team for all necessary settings and parameters. By enhancing the safety, efficiency, and overall passenger experience of transportation systems, Photonplay's PIDS makes a significant contribution to road and traffic safety, benefiting humanity as a whole.
+                                {{$page->description}}
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
@@ -62,26 +60,24 @@
                         </div>
                         <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
+                                @foreach ($page->specs as $spec)
+
                                 <div class="accordion-item border-0 position-inherit ">
                                     <h2 class="accordion-header" id="flush-headingOne1">
                                         <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
                                             <!-- <p class="accordion-button  shadow-none te-3 p-0 mb-1 shadow-none bg-white">Optics </p> -->
-                                            Optic
+                                            {{$spec->spec}}
                                         </button>
                                     </h2>
                                     <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
                                         <div class="accordion-body pt-0">
 
-                                            <code class="d-block">BEAM WIDTH <span>- B1 to B7 (optional)</span></code>
-                                            <code class="d-block">COLOR CLASS <span>- C1 </span></code>
-                                            <code class="d-block">LUMINANCE CLASS <span>- L3 </span></code>
-                                            <code class="d-block">LUMINANCE RATIO <span>- R3 </span></code>
-                                            <code class="d-block">CONTRAST RATIO <span>- 30:1 (PERPENDICULAR), 10:1 (70°to Median)</span> </code>
-                                            <code class="d-block">VIEWING DISTANCE <span>- >300 metres </span></code>
-                                            <code class="d-block">AUTO DIMMING <span>- Dual Sensor based, Auto brightness adjustment</span></code>
+                                            {!! $spec->description !!}
                                         </div>
                                     </div>
                                 </div>
+
+                                @endforeach
 
                                 <div class="accordion-item border-0 position-inherit ">
                                     <h2 class="accordion-header" id="flush-headingOne2">
@@ -139,52 +135,14 @@
                 <!-- <ul class=" m-0 p-0 "> -->
                 <div class="d-lg-flex justify-content-between">
                     <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>MAINTENANCE FREE</strong>
-                                <span>Maintenance Free Operation with dry cell sealed batteries.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>CERTIFICATIONS</strong>
-                                <span>IP65 & EN12966</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>CLOUD CONNECTED</strong>
-                                <span>Onboard GSM/4G based Connectivity</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>NTCIP PROTOCOL</strong>
-                                <span>Supports NTCIP Protocol as well as Photonplay’s Standard SignCom.</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>Protocol CERTIFICATIONS</strong>
-                                <span>IP65 & EN12966</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content-feature">
-                                <strong>ULTRA LOW POWER CONSUMPTION</strong>
-                                <!-- <span>Maintenance Free Operation with dry cell sealed batteries.</span> -->
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="content-feature">
-                                <strong>MULTILINGUAL SUPPORT</strong>
-                                <!-- <span>Maintenance Free Operation with dry cell sealed batteries.</span> -->
-                            </div>
-                        </li>
+                        @foreach($page->features as $feature)
+                            <li>
+                                <div class="content-feature">
+                                    <strong>{{$feature->feature}}</strong>
+                                    <span>{{$feature->description}}</span>
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- </ul> -->

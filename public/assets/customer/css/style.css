@@ -607,6 +607,10 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 /* end */
+.borded-bang {
+    border: 1px solid #c4c4c4a3;
+    height: 50px;
+}
 
 /* Application Box */
 .app-box {
@@ -2344,6 +2348,11 @@ input:focus {
     .radar-icop-images::before {
         display: none;
         margin-top: 20px;
+    }
+
+    .selected-anc {
+        max-width: 100px;
+        min-width: 100px;
     }
 
     li {
