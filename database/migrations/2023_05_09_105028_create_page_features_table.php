@@ -17,7 +17,7 @@ class CreatePageFeaturesTable extends Migration
             $table->id();
             $table->foreignId('page_id')->references('id')->on('pages')->cascade('delete');
             $table->string('feature')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

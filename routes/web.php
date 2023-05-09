@@ -105,6 +105,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('store-sub-page', [PagesController::class, 'store'])->name('manage.solution.store');
         Route::get('edit-specification-page/{id}', [PagesController::class, 'EditSpecificationSubPage'])->name('manage.solution.edit.specification.page');
         Route::post('update-specification-page', [PagesController::class, 'UpdateSpecificationSubPage'])->name('manage.solution.update.specification.page');
+        Route::get('edit-features-page/{id}', [PagesController::class, 'editFeaturesSubPage'])->name('manage.solution.edit.features.page');
+        Route::post('update-features-page', [PagesController::class, 'updateFeaturesSubPage'])->name('manage.solution.update.features.page');
+        Route::post('store-sub-page-image', [PagesController::class, 'updateSingleImage'])->name('manage.solution.update.single.image');
+        Route::any('store-sub-page-multi-image', [PagesController::class, 'updateMultiImage'])->name('manage.solution.update.multi.image');
 
 
     });

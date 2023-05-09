@@ -17,7 +17,7 @@ class CreatePageSpecsTable extends Migration
             $table->id();
             $table->foreignId('page_id')->references('id')->on('pages')->cascade('delete');
             $table->string('spec')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
