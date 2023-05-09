@@ -98,7 +98,7 @@ foreach($specilization->options as $option){
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
-                        <span>( 150+ Customers Reviews)</span>
+                        <span>( 150+ Customers Revddddddddddddiews)</span>
                     </div>
                     <p class="fw-bold fs-5">${{$product->price}}</p>
                     <div>
@@ -122,7 +122,34 @@ foreach($specilization->options as $option){
                             </div>
                             @endforeach
                             {{-- Loop to end Specifications--}}
-                        </div>
+                           
+                            <div class="mt-4">
+                                <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
+                             <div class="d-flex align-items-center justify-content-between">
+                           <div class="selected-anc">
+                           <select class="form-select shadow-none border" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> One</option>
+  <option value="2"> <img src="{{ URL::to('/') }}/assets/images/verifyyellow.png" /> Two</option>
+  <option value="3"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> Three</option>
+</select>  
+                           </div>
+                         
+<div class="d-flex justify-content-center align-items-center">
+<img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
+<div class="borded-bang"></div>
+<img src="{{ URL::to('/') }}/assets/images/mesenges.png" class="mx-3"/>
+<div class="borded-bang"></div>
+<img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
+    <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
+   
+</div>
+</div>
+<p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
+Shipping:7-10 Working Days.
+</p>
+                            </div>
+                        </dsiv>
                     </div>
                 </div>
             </div>
@@ -170,6 +197,26 @@ foreach($specilization->options as $option){
 
 <section class="">
     <div class="container">
+    <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active text-uppercase" aria-current="page" href="#">description</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark text-uppercase" href="#">Specifications</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-dark text-uppercase" href="#">FEATURES</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-dark text-uppercase">POWER OPTIONS</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-dark text-uppercase">VISIBILITY</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-dark text-uppercase">IDEAL FOR</a>
+  </li>
+</ul>
         <!-- Tabber -->
         <div class="tabber-item opacity-50">
             {{$product->description}}
