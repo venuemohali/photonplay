@@ -8,6 +8,7 @@ use App\Models\BlogCategory;
 use App\Models\BlogLike;
 use App\Models\Category;
 use App\Models\ClientTestimonial;
+use App\Models\Page;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\TeamMember;
@@ -93,7 +94,9 @@ class ContactUsController extends Controller
         return view('customer.variable_speed_limit');
     }
     public function pasengerInformationDisplay(){
-        return view('customer.pessenger_information');
+        $page = Page::with('specs','images','features')->where('page_type_id', 8)->first();
+        // dd($page);
+        return view('customer.pessenger_information', compact('page'));
     }
     public function portableVariableMessageSigns(){
         $products = Category::with('products', 'products.specilizations.options.specializationoptions')->where('title','Portable Variable Signs')->whereHas('products', function($query) {

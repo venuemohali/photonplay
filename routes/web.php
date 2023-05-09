@@ -26,6 +26,7 @@ use App\Http\Controllers\SpecilizationOptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +94,21 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/notifications', [NotificationsController::class, 'notifications_form'])->name('notifications_form');
         Route::get('/customer-all-emails', [NotificationsController::class, 'user_emails'])->name('all_user_emails');
         Route::post('/send-email-notification', [NotificationsController::class, 'send'])->name('send_email_notification');
+        Route::get('manage-pages', [PagesController::class, 'index'])->name('manage.solution.pages');
+        Route::get('sub-page/{id}', [PagesController::class, 'subPage'])->name('manage.solution.sub.page');
+
+
+        Route::get('create-sub-page/{id}', [PagesController::class, 'createSubPage'])->name('manage.solution.create.sub.page');
+        Route::get('create-specification-page/{id}', [PagesController::class, 'createSpecificationSubPage'])->name('manage.solution.create.specification.page');
+        Route::get('create-features-page/{id}', [PagesController::class, 'createFeaturesSubPage'])->name('manage.solution.create.features.page');
+        Route::get('create-images-page/{id}', [PagesController::class, 'createImagesSubPage'])->name('manage.solution.create.images.page');
+        Route::post('store-sub-page', [PagesController::class, 'store'])->name('manage.solution.store');
+        Route::get('edit-specification-page/{id}', [PagesController::class, 'EditSpecificationSubPage'])->name('manage.solution.edit.specification.page');
+        Route::post('update-specification-page', [PagesController::class, 'UpdateSpecificationSubPage'])->name('manage.solution.update.specification.page');
+        Route::get('edit-features-page/{id}', [PagesController::class, 'editFeaturesSubPage'])->name('manage.solution.edit.features.page');
+        Route::post('update-features-page', [PagesController::class, 'updateFeaturesSubPage'])->name('manage.solution.update.features.page');
+        Route::post('store-sub-page-image', [PagesController::class, 'updateSingleImage'])->name('manage.solution.update.single.image');
+        Route::any('store-sub-page-multi-image', [PagesController::class, 'updateMultiImage'])->name('manage.solution.update.multi.image');
 
 
     });

@@ -21,8 +21,9 @@
                                 </div>
                                 <div class="py-3">
                                     <span class="text-capitalize">LEGAL</span>
-                                    <p class="mb-0">Terms of Use</p>
-                                    <p class="mb-0">Privacy Policy</p>
+                                    <a href="{{route('customer.page_show_content','about-us')}}" class="mb-0 text-decoration-none"><p class="mb-0">About us</p></a>
+                                    <a href="{{route('customer.page_show_content','term-conditions')}}" class="mb-0 text-decoration-none"><p class="mb-0">Terms of Use </p></a>
+                                    <a href="{{route('customer.page_show_content','privacy-policy')}}" class="mb-0 text-decoration-none"><p class="mb-0">Privacy Policy </p></a>
                                 </div>
                             </div>
                         </div>

@@ -65,7 +65,7 @@
                                                     <span class="d-block text-secondary"></span>
                                                     <b><input name="email" type="text" placeholder="jimmynewtron@mail.com" class="border-0 shadow-none">
                                                     </b>
-                                                
+
                                                 </div>
                                             </div>
                                         </div>
@@ -80,12 +80,12 @@
                                                 <b><input name="company_name" type="text" placeholder="Workgroup Studios" class="border-0 shadow-none">
                                                 </b>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="message-last py-5">
                                             <textarea name="message" class="form-control rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="textHelpBlock"></textarea>
                                         </div>
-                                        
+
                                         <div class="d-flex align-items-center justify-content-between pt-5">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
@@ -104,6 +104,86 @@
             </div>
         </div>
     </section>
+
+<!-- Key-projects-start -->
+<section class="key-project pb-0">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="text-center mb-lg-5">
+                <h2 class="fs-md-2 mt-3">Key Projects</h2>
+                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions
+                   </p>
+                <p>
+                    are Changing the Game!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="key-slider mb-0">
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+        <div>
+            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
+        </div>
+
+    </div>
+</section>
+<!--___________________ key-project-end_________________ -->
+
+<!-- _____________________Our clint Says start______________________ -->
+@include('customer.layout2.client_testimonials')
+
+<!-- _____________________Our clint Says End______________________ -->
+<!-- _____________________latest News start______________________ -->
+<section class="latest-wrapper pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-5">
+                    <h2 class="fs-md-2 mt-3">Latest News</h2>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between">
+                        <p class="text-mutedd">
+                            "Stay Up-to-Date on the Latest Innovations and Industry News in Transportation with Our Latest News Section.
+                            <br>
+                            Check back regularly for the latest updates and insights!"
+                        </p>
+                        <a href="{{route('customer.blog')}}" class="btn btn-outline rounded-2">Load More</a>
+                    </div>
+                </div>
+            </div>
+            @php
+                use App\Models\Blog;
+                $blogs = Blog::latest()->take(3)->get();
+            @endphp
+            @foreach($blogs as $blog)
+                <div class="col-lg-4">
+                    <div class="inner-cqategory mb-lg-0 mb-4">
+                        <div class="">
+                            <a href="{{route("customer.blog_show",$blog->slug)}}" > <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 category-image img-fluid w-100"> </a>
+                        </div>
+                        <div class="p-4">
+                            <p class="btn-light">{{$blog->category}}</p>
+                            <a href="{{route("customer.blog_show",$blog->slug)}}"  class="text-decoration-none">  <p class="dollor-seat"> {{$blog->title}}
+                                </p>
+                            </a>
+                            <p>
+                                {{$blog->description}}  <a href="{{route("customer.blog_show",$blog->slug)}}" >Read More..</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
+<!-- _____________________latest News end______________________ -->
+<!-- _____________________ourclint-last-start___________________ -->
+@include('customer.layout2.our_clients')
     @include('customer.layout2.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>

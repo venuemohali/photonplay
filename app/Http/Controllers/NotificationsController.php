@@ -26,6 +26,9 @@ class NotificationsController extends Controller
             'subject' => 'required',
             'body'=>'required',
         ]);
+
+
+        return $request->selected_email_receiver;
         $record= new Notification;
         $record->subject=$request->subject;
         $record->body=$request->body;

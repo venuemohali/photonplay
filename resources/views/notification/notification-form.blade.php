@@ -63,18 +63,23 @@
                                     </div>
                             </div>
 
-                            <div class="row mb-3 form-group" id="show_all_users">
+                            <div class="row mb-3 form-group justify-content-end" id="show_all_users">
                                 <label for="selectusers_multi" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Select Users') }}</label>
 
                                 <div class="col-md-10">
                                     <input type="text" placeholder="Search emails" class="form-control" onkeyup="load_emails(this)"/>
-                                    <select id="selectusers_multi" name="mySelect[]" class="form-select form-select" multiple></select>
+                                    <select id="selectusers_multi" name="mySelect[]" class="form-select form-select" onchange="onSelectedKey(this)" multiple>
+                                        <option class="text-center">No Data Found</option>
+                                    </select>
                                     @error('selectusers_multi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
+                                <div class="col-10  d-flex  mt-2 flex-wrap" id="selectedUserEmail">
+                                </div>
+
                             </div>
 
                             <div class="row mb-3 form-group">
