@@ -39,6 +39,7 @@
 
                         <form method="POST" action="{{route('admin.manage.solution.store')}}"  enctype="multipart/form-data" >
                             @csrf
+                            <input type="hidden" name="sub_page_id" value="{{$page->id}}">
                             <input type="hidden" value="{{$id}}" name="page_id">
                             <div class="row mb-3 form-group">
                                 <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Title') }}</label>
@@ -88,7 +89,7 @@
                                 <label for="cover_image" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Cover image') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="cover_image" type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" value="" required autocomplete="cover_image" autofocus>
+                                    <input id="cover_image" type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" value="" autocomplete="cover_image" autofocus>
 
                                     @error('cover_image')
                                     <span class="invalid-feedback" role="alert">
@@ -135,10 +136,6 @@
                                         <i data-feather="save"> </i>
                                         Save
                                     </button>
-                                    <a href="{{url('admin/blogs')}}" class="btn btn-dark">
-                                        <i data-feather="corner-down-right"> </i>
-                                        Return Back
-                                    </a>
                                 </div>
                             </div>
                         </form>

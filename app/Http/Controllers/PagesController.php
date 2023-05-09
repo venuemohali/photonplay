@@ -119,4 +119,27 @@ class PagesController extends Controller
         return redirect()->back()->with('success', 'Images are successfully uploaded');
     }
 
+    public function store(Request $request){
+        $request->validate([
+            'cover_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        ]);
+
+        $sub_page = Page::find($request->sub_page_id);
+        if($request->file('cover_image')){
+            $image_path = $request->file('cover_image')->store('image', 'public') ?? null;
+        }else{
+            $image_path = $sub_page->cover_image;
+        }
+
+        $sub_page->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'meta_title' => $request->meta_title,
+            'meta_keyword' => $request->meta_keyword,
+            'schema' => $request->schema,
+            'cover_image' => $image_path,
+        ]);
+
+        return redirect()->back()->with('success', 'Page successfully updated');
+    }
 }
