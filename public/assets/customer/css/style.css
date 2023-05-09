@@ -612,6 +612,20 @@ a.nav-link.dropdown-toggle.show img,
     height: 50px;
 }
 
+.bodered-classes {
+    border-bottom: 1px solid #06040a;
+}
+
+.dealership-perra {
+    font-size: 16px;
+    color: #06040a;
+    font-weight: 400;
+}
+
+.dealership {
+    background-color: #f9f9fa;
+}
+
 /* Application Box */
 .app-box {
     border-radius: 10px;
