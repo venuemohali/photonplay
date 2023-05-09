@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             CategorySeeder::class,
             PageTypeSeeder::class,
-            SubPageSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
