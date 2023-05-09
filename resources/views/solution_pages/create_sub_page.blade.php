@@ -37,13 +37,14 @@
                                 <img src="https://stagingserver.photonplay.com/assets/customer/images/zero-mentence.png"  class="img-fluid"/>
                             </div>
 
-                        <form method="POST" action="{{ url('/admin/blogs') }}"  enctype="multipart/form-data" >
+                        <form method="POST" action="{{route('admin.manage.solution.store')}}"  enctype="multipart/form-data" >
                             @csrf
+                            <input type="hidden" value="{{$id}}" name="page_id">
                             <div class="row mb-3 form-group">
                                 <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Title') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') ?? $data->title ?? ''}}" required autocomplete="title" autofocus>
+                                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{$page->title}}" required autocomplete="title" autofocus>
 
                                     @error('title')
                                     <span class="invalid-feedback" role="alert">
@@ -59,7 +60,7 @@
                                 <label for="description" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Description') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') ?? $data->description ?? ''}}" required autocomplete="description" autofocus>
+                                    <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{$page->description}}" required autocomplete="description" autofocus>
 
                                     @error('description')
                                     <span class="invalid-feedback" role="alert">
@@ -73,7 +74,7 @@
                                 <label for="meta_title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Meta Title') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{ old('meta_title') ?? $data->meta_title ?? ''}}" required autocomplete="meta_title" autofocus>
+                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{$page->meta_title}}" required autocomplete="meta_title" autofocus>
 
                                     @error('meta_title')
                                     <span class="invalid-feedback" role="alert">
@@ -87,7 +88,7 @@
                                 <label for="cover_image" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Cover image') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="cover_image" type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" value="{{ old('cover_image') ?? $data->description ?? ''}}" required autocomplete="cover_image" autofocus>
+                                    <input id="cover_image" type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" value="" required autocomplete="cover_image" autofocus>
 
                                     @error('cover_image')
                                     <span class="invalid-feedback" role="alert">
@@ -101,7 +102,7 @@
                                 <label for="meta_keyword" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Meta Keyword') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="meta_keyword" type="text" class="form-control @error('meta_keyword') is-invalid @enderror" name="meta_keyword" value="{{ old('meta_keyword') ?? $data->description ?? ''}}" required autocomplete="meta_keyword" data-role="tagsinput" autofocus>
+                                    <input id="meta_keyword" type="text" class="form-control @error('meta_keyword') is-invalid @enderror" name="meta_keyword" value="{{$page->meta_keyword}}" required autocomplete="meta_keyword" data-role="tagsinput" autofocus>
 
                                     @error('meta_keyword')
                                     <span class="invalid-feedback" role="alert">
@@ -116,7 +117,7 @@
                                 <label for="schema" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Schema') }}</label>
 
                                 <div class="col-md-10">
-                                    <textarea id="schema" type="text" class="form-control @error('schema') is-invalid @enderror" name="schema" required autocomplete="schema" autofocus>{{ old('schema') ?? $data->description ?? ''}}</textarea>
+                                    <textarea id="schema" type="text" class="form-control @error('schema') is-invalid @enderror" name="schema" required autocomplete="schema" autofocus>{{$page->schema}}</textarea>
 
                                     @error('schema')
                                     <span class="invalid-feedback" role="alert">
