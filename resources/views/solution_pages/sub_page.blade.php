@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Manage Specilization')
+@section('title', 'Manage Pages')
 
 @section('css')
 
@@ -26,13 +26,13 @@
         <!-- All Client Table Start -->
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                {{-- <div class="card">
                     <div class="card-header d-flex">
                     <h5 class="card-title">All Sub Pages</h5>
-                    <a href="{{route('admin.manage.solution.create.sub.page', $id)}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                    <a href="#" class="btn btn-primary ms-auto d-flex align-items-center">
                         <i data-feather="plus-circle"> </i>
                         Add Sub Page</a>
-                </div>
+                </div> --}}
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
                             <table class="display" id="basic-2">
@@ -43,7 +43,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                        @foreach ($subPages as $page)
+                                            <tr>
+                                                <td>{{$page->id}}</td>
+                                                <td>{{$page->title}}</td>
+                                                <td>
+                                                    <a href="{{route('admin.manage.solution.create.sub.page', $page->id)}}">
+                                                        <i data-feather="eye"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                 </tbody>
                             </table>
                         </div>
