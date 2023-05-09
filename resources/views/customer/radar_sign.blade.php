@@ -13,7 +13,7 @@ foreach($specilization->options as $option){
         @forelse ($productLists as $list)
             <a href="{{route('customer.radar.sign', $list->id)}}" style="text-decoration: none;"><li class="p-4">{{$list->title}}</li></a>
         @empty
-            
+
         @endforelse
     </ul>
 </section>
@@ -112,7 +112,7 @@ foreach($specilization->options as $option){
                                     <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
                                     @foreach($specilization->options as $option)
                                         <p> <input type="checkbox" name="{{$specilization->id}}"
-                                                   id="{{$specilization->id}}" type="button" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
+                                                   id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
                                         </p>
                                     @endforeach
                                     <!-- <p class="mb-0"><input type="checkbox"> 6 Days
@@ -156,7 +156,7 @@ foreach($specilization->options as $option){
                     <input id=demoInput type=number name="quantity" value="1" min=1 max=100>
                     <a class="btn" onclick="decrement()">-</a>
                     <div class=" px-4 py-lg-0 py-4">
-                        <span class="one-thoshand">${{$product->price}}</span>
+                        <span class="one-thoshand" id="total_price">${{$product->price}}</span>
                     </div>
                     <button type="submit" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4">Buy Now</button>
                 </div>
@@ -215,6 +215,8 @@ foreach($specilization->options as $option){
     function GetSelected(radio) {
             var chected = new Array();
             if(radio.checked){
+                // console.log(radio.value)
+                // return
                 dict[radio.id] = radio.value;
                 $.ajax({
                     url: '{{ route('customer.specification.ajax') }}',
@@ -231,9 +233,11 @@ foreach($specilization->options as $option){
                         input.name = "dynamic_spec[]";
                         input.value = response;
                         document.getElementById("dynamic_specs").appendChild(input);
-
+                        let innerPrice=document.getElementById("total_price")
+                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+Number(radio.title)}`
                     },
                 });
+                console.log(radio.innerHTML)
             }else {
                let val= dict[radio.id];
                if(val==radio.value){
@@ -253,6 +257,8 @@ foreach($specilization->options as $option){
                         input.name = "spec[]";
                         input.value = response;
                         document.getElementById("dynamic_specs").appendChild(input);
+                        let innerPrice=document.getElementById("total_price")
+                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-Number(radio.title)}`
                     },
                 });
             }
