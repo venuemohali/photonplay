@@ -136,7 +136,30 @@
             $('#summernote').summernote({
                 placeholder: 'Hello Photon Play Systems',
                 tabsize: 2,
-                height: 500
+                height: 500,
+                // toolbar: [
+                //     ['insert', ['picture']]
+                // ],
+                callbacks: {
+                    onImageUpload: function(files) {
+                        var formData = new FormData();
+                        formData.append('photo', files[0]);
+                        formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                        $.ajax({
+                            url: '{{ route('upload-photo-summernote') }}',
+                            method: 'POST',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(data) {
+                                $('#summernote').summernote('insertImage', data.url);
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                console.error(textStatus + ': ' + errorThrown);
+                            }
+                        });
+                    }
+                }
             });
 
         });
