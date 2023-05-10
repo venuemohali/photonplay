@@ -93,6 +93,8 @@ class ContactUsController extends Controller
         return view('customer.variable_message', compact('page'));
     }
     public function variableSpeedLimit(){
+        $page = Page::where('page_type_id', Page::VSLS)->get();
+        dd($page);
         return view('customer.variable_speed_limit');
     }
     public function pasengerInformationDisplay(){
