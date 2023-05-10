@@ -94,7 +94,7 @@ class ContactUsController extends Controller
     }
     public function variableSpeedLimit(){
         $page = Page::where('page_type_id', Page::VSLS)->get();
-        dd($page);
+        // dd($page);
         return view('customer.variable_speed_limit');
     }
     public function pasengerInformationDisplay(){
@@ -122,6 +122,6 @@ class ContactUsController extends Controller
 
     public function vmsSubPage($slug){
         $page = Page::with('specs','images','features')->where('slug', $slug)->first();
-        dd($page);
+        // dd($page);
     }
 }
