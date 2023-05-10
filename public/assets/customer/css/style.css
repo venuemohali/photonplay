@@ -607,6 +607,24 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 /* end */
+.borded-bang {
+    border: 1px solid #c4c4c4a3;
+    height: 50px;
+}
+
+.bodered-classes {
+    border-bottom: 1px solid #06040a;
+}
+
+.dealership-perra {
+    font-size: 16px;
+    color: #06040a;
+    font-weight: 400;
+}
+
+.dealership {
+    background-color: #f9f9fa;
+}
 
 /* Application Box */
 .app-box {
@@ -2344,6 +2362,11 @@ input:focus {
     .radar-icop-images::before {
         display: none;
         margin-top: 20px;
+    }
+
+    .selected-anc {
+        max-width: 100px;
+        min-width: 100px;
     }
 
     li {
