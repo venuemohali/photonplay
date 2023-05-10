@@ -31,8 +31,8 @@
             <i data-feather="image"> </i>
             Images </a>
     </div>
-
     <div class="col-md-2 mb-3">
-        <a href="#" class="btn btn-outline-{{$page==5?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="toggle-left"> </i> Publish </a>
+        <a href="{{route('admin.manage.solution.create.gallery.page',$pid)}}" class="btn btn-outline-{{$page==5?'success':'dark'}} w-100  d-flex align-items-center"  >  <i data-feather="toggle-left"> </i> Gallery </a>
     </div>
+
 </div>
