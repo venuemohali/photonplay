@@ -33,7 +33,7 @@ class pidsSeeder extends Seeder
             ],
             [
                 'page_id' => $page1->id,
-                'spec' => 'Display Metric',
+                'spec' => 'Display Metrix',
                 'description' => 'test_desc',
             ],
             [

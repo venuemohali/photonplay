@@ -88,13 +88,15 @@ class ContactUsController extends Controller
         return view('customer.smartcity');
     }
     public function variableMessage(){
-        return view('customer.variable_message');
+        $page = Page::where('page_type_id', Page::VMS)->get();
+        // dd($page);
+        return view('customer.variable_message', compact('page'));
     }
     public function variableSpeedLimit(){
         return view('customer.variable_speed_limit');
     }
     public function pasengerInformationDisplay(){
-        $page = Page::with('specs','images','features')->where('page_type_id', 8)->first();
+        $page = Page::with('specs','images','features')->where('page_type_id', Page::PIDS)->first();
         // dd($page);
         return view('customer.pessenger_information', compact('page'));
     }
@@ -114,5 +116,10 @@ class ContactUsController extends Controller
         $product = Product::with('category')->find($id);
         // dd($product);
         return view('customer.pvms_icop', compact('product'));
+    }
+
+    public function vmsSubPage($slug){
+        $page = Page::with('specs','images','features')->where('slug', $slug)->first();
+        dd($page);
     }
 }

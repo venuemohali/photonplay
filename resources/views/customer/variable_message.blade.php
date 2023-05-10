@@ -8,11 +8,12 @@
         <div class="container">
             <div class="slider-content">
                 <div class="imaged m-auto">
-                    <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{ asset('assets/customer/images/banner-image-smart-city.png') }}" alt="alt"
+                        class="d-block mx-auto img-fluid">
                     <div class="d-flex mt-4 justify-content-center gap-4 align-items-end">
-                        <img src="{{asset('assets/customer/images/zero-mentence.png')}}" alt="alt"
+                        <img src="{{ asset('assets/customer/images/zero-mentence.png') }}" alt="alt"
                             class="d-block mx-auto img-fluid">
-                        <img src="{{asset('assets/customer/images/dawrka.png')}}" alt="alt"
+                        <img src="{{ asset('assets/customer/images/dawrka.png') }}" alt="alt"
                             class="d-block mx-auto img-fluid">
                     </div>
                 </div>
@@ -62,43 +63,23 @@
 
                 <div class="col-lg-10">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imagese">
-                                    <img src="{{asset('assets/customer/images/congation.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 list-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Standard VMS</h5>
-                                    <p>Full Color Variable Message Signs for highway and road safety.</p>
-                                    <h6 class="text-colorr">Explore More >></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imagese">
-                                    <img src="{{asset('assets/customer/images/zero-mentence.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 list-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Solar VMS</h5>
-                                    <p>Independent Solar Based Operation with a power backup of upto 7 days.</p>
-                                    <h6 class="text-colorr">Explore More >></h6>
+                        @foreach ($page as $i)
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="text-start p-4 list-unsorted">
+                                    <div class="roundedd-imagese">
+                                        <img src="{{ asset('assets/customer/images/congation.png') }}" alt="Not Found"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="my-3 list-bacgunded px-4 py-4">
+                                        <h5 class="fw-bold text-capitalize">{{ $i->title }}</h5>
+                                        <p>{{ substr($i->description, 0, 60) }} ... </p>
+                                        <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;">
+                                            <h6 class="text-colorr">Explore More >></h6>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imagese">
-                                    <img src="{{asset('assets/customer/images/dawrka.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 list-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Smart City VMS</h5>
-                                    <p>Designed to display information like parking lots, travel times, traffic
-                                        advisories for smart cities.</p>
-                                    <h6 class="text-colorr">Explore More >></h6>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -119,7 +100,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="application-item">
-                        <img src="{{asset('assets/customer/images/Highway-Icons.png')}}" alt="image">
+                        <img src="{{ asset('assets/customer/images/Highway-Icons.png') }}" alt="image">
                         <div class="content-application-items">
                             <h4 class="text-uppercase">Highways </h4>
                         </div>
@@ -127,7 +108,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="application-item">
-                        <img src="{{asset('assets/customer/images/Tunnels-Icons.png')}}" alt="image">
+                        <img src="{{ asset('assets/customer/images/Tunnels-Icons.png') }}" alt="image">
                         <div class="content-application-items">
                             <h4 class="text-uppercase">Tunnels </h4>
                         </div>
@@ -135,7 +116,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="application-item">
-                        <img src="{{asset('assets/customer/images/Smart-cities-icon.png')}}" alt="image">
+                        <img src="{{ asset('assets/customer/images/Smart-cities-icon.png') }}" alt="image">
                         <div class="content-application-items">
                             <h4 class="text-uppercase">Smart Cities </h4>
                         </div>
@@ -143,7 +124,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="application-item">
-                        <img src="{{asset('assets/customer/images/Transits-Icons.png')}}" alt="image">
+                        <img src="{{ asset('assets/customer/images/Transits-Icons.png') }}" alt="image">
                         <div class="content-application-items">
                             <h4 class="text-uppercase">Transits </h4>
                         </div>
@@ -159,7 +140,8 @@
             <div class="row">
                 <div class="col-lg-6 ">
                     <div class="d-flex justify-content-center align-items-center">
-                        <img src="{{asset('assets/customer/images/VMS_Gantry.png')}}" alt="Not Found" class="img-fluid bg-white">
+                        <img src="{{ asset('assets/customer/images/VMS_Gantry.png') }}" alt="Not Found"
+                            class="img-fluid bg-white">
                     </div>
                 </div>
                 <div class="col-lg-6 ">
@@ -191,42 +173,42 @@
                 <div class="clints-content mb-0 d-flex align-items-center">
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/adani.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/afkons.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/ASHOKA.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/CTU.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/adani.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/afkons.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/ASHOKA.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
+                            <img src="{{ asset('assets/customer/images/CTU.png') }}" class="d-block mx-auto" />
                         </div>
                     </div>
                 </div>
@@ -240,7 +222,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-
         $('.clint-wrapperr').slick({
             dots: false,
             infinite: true,
@@ -250,8 +231,7 @@
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
             arrows: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 2,
@@ -289,8 +269,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 1,
@@ -328,8 +307,7 @@
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
@@ -359,8 +337,7 @@
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
@@ -381,7 +358,7 @@
             ]
         })
 
-        window.addEventListener('click', function (e) {
+        window.addEventListener('click', function(e) {
             if (window.innerWidth > 992) {
                 if ($('.navbar-collapse').hasClass('show')) {
                     $('.navbar-toggler').click();
@@ -391,7 +368,7 @@
         })
 
         // Hover attribute
-        $('.dropdown .dropdown-toggle').mouseenter(function () {
+        $('.dropdown .dropdown-toggle').mouseenter(function() {
             if (window.innerWidth > 991) {
                 $(this).addClass('show');
                 $(this).attr({
@@ -404,7 +381,7 @@
             }
 
         });
-        $('.dropdown-menu').mouseleave(function () {
+        $('.dropdown-menu').mouseleave(function() {
             if (window.innerWidth > 991) {
                 $(this).removeAttr('data-bs-popper');
                 $(this).siblings('.nav-link ').removeClass('show');
@@ -415,7 +392,7 @@
             }
 
         })
-        $('.mega-menu h4').click(function () {
+        $('.mega-menu h4').click(function() {
             // $(this).siblings('ul').slideDown();
             if ($(this).parent().hasClass('active')) {
                 $(this).parent().removeClass('active')
@@ -425,7 +402,7 @@
             $(this).parent().siblings().removeClass('active');
         });
 
-        $('.toggler-mega').click(function () {
+        $('.toggler-mega').click(function() {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active')
                 $('.mega-menu').slideUp();
@@ -435,7 +412,7 @@
             }
 
         })
-        $('.mega-menu-parent > h4').click(function () {
+        $('.mega-menu-parent > h4').click(function() {
             var bodyColor = $('.drop-downs').attr("style");
             // console.log(bodyColor)
             if (bodyColor === 'display: block;') {
