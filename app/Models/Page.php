@@ -12,6 +12,11 @@ class Page extends Model
 
     protected $guarded = ['id'];
 
+    const VMS = 1;
+    const VSLS = 2;
+    const PIDS = 8;
+
+
     public function specs(){
         return $this->hasMany(PageSpec::class);
     }

@@ -39,3 +39,4 @@ Route::post('newsletter', [NewsletterController::class, 'newsletter'])->name('ne
 Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquery.submit');
 Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');
 Route::any('cancel-response', [CartController::class, 'checkoutCancel'])->name('cancel.response');
+Route::get('{slug}', [ContactUsController::class, 'vmsSubPage'])->name('vms.sub.page');

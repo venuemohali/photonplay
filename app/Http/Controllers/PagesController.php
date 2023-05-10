@@ -44,6 +44,10 @@ class PagesController extends Controller
         return view('solution_pages.page_images', compact('id'));
     }
 
+    public function createGallerySubPage($id){
+        return view('solution_pages.page_gallery', compact('id'));
+    }
+
     public function index(){
         $pages = PageType::all();
         return view('solution_pages.index', compact('pages'));

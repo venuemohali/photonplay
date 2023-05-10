@@ -1,6 +1,6 @@
 @include('customer.layout2.header')
     <!-- Contact Us Banner start -->
-    <section class="contact us">
+    <!-- <section class="contact us">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
@@ -36,8 +36,51 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Contact Us Banner End -->
+     <!-- banner-text-start -->
+     <section class="pt-0 pb-sm-4 pb-lg-5">
+        <div class="banner">
+            <div class="about-wrapper">
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+     <!-- undefeated-section-start -->
+     <section class="undefeated-wrapper pt-lg-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10 pe-lg-0">
+                            <div class="about-undeafeted text-dark">
+                                <div class="text-center">
+                                <h4 class="text-uppercase text-dark mb-4">Reach Our Team </h4>
+                                <p class="text-uppercase">We love the questions & feedback and we are always happy to help! <br/> Here are some ways to contact us.</p>
+                                </div>
+                               <div class="justify-content-around d-flex">
+                                <div>
+                                    <h5 class="text-upercase"><u>Talk to Sales</u></h5>
+                                    <p>Chat with our sales team to discover how <br> our product can work best for you.</p>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-upercase"><u>Contact Customer Support</u></h5>
+                                    <p>We are waiting to help you and your team  <br> – so don't hesitate to reach out!</p>
+                                  <button class="btn btn-primary text-uppercase rounded-0 py-0">CONTACT SUPPORT</button>
+                                </div>
+                               </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- undefeated-section-send -->
     <!-- map-Contact-start -->
     <section class="map-wrapper pt-0">
         <div class="container-fluid">
@@ -104,9 +147,75 @@
             </div>
         </div>
     </section>
+<!-- area-section-start -->
+<section class="dealership">
+<div class="container">
+            <div class="row bodered-classes pb-4">
+                <div class="col-lg-12">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10 pe-lg-0">
+                            <div class="row">
+                            <!-- <div class="col-lg- mb-5"> -->
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+                                    <h5 class="text-upercase"><u>AUSTRALIA</u></h5>
+                                   <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/> 
+                                    <p class=""> Photonplay Systems Pty Ltd.
+                                          <br> 4 Perrin circuit Tarneit, Vic-3029 Australia.</p></div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+                                    <h5 class="text-upercase"><u>CANADA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/> 
+                                    <p class="">Photonplay Systems Ltd. <br>23 Overstone road, Georgetown, Ontario, <br> L7G 0M9 Canada.Photonplay Systems Ltd</p>
+</div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+                               <!-- </div> -->
+                               <!-- <div class="col-lg-"> -->
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+                                    <h5 class="text-upercase"><u>EUROPE</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/> 
+                                    <p class="">Photonplay Systems AS
+                                      <br> Hilton 157 2040 klofta Ullensaker municipality</p>
+</div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+                                    <h5 class="text-upercase"><u>INDIA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/> 
+                                    <p class="">Photonplay Systems (P) Ltd.
+                                     <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
+</div>
+                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+                               <!-- </div> -->
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="text-center">
+    <div class="container">
+    <h5 class="text-upercase"><u>DEALERSHIP / TRADE INQUIRIES</u></h5>
+    <p class="dealership-perra">Larry Kaura, Global Trade Manager</p>
+    <div>
+    <span class="text-dark"><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+    <span class="text-dark"><img src="{{asset('assets\customer\images\message.png')}}" class="mx-2"/> sales@photonplay.com</span>
+    </div>
+    </div>
+</section>
+</section>
+<!-- area-section-END -->
+<!-- dealership-start -->
 
+<!-- end -->
 <!-- Key-projects-start -->
-<section class="key-project pb-0">
+<section class="key-project pb-0 bg-white">
     <div class="container-fluid">
         <div class="col-lg-12">
             <div class="text-center mb-lg-5">

@@ -7,7 +7,7 @@ use App\Models\PageFeature;
 use App\Models\PageSpec;
 use Illuminate\Database\Seeder;
 
-class pidsSeeder extends Seeder
+class vslsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,9 +16,9 @@ class pidsSeeder extends Seeder
      */
     public function run()
     {
-        $page1 = Page::create([
-            'page_type_id' => 8,
-            'title' => 'Passenger Information Display System (PIDS)',
+        $vsls = Page::create([
+            'page_type_id' => 2,
+            'title' => 'Variable Speed Limit Signs (VSLS)',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             'meta_title' => 'enter your meta title',
             'meta_keyword' => 'enter your meta keyword',
@@ -27,22 +27,22 @@ class pidsSeeder extends Seeder
 
         $data = [
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'spec' => 'Optic',
                 'description' => 'test_desc',
             ],
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'spec' => 'Display Metrix',
                 'description' => 'test_desc',
             ],
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'spec' => 'Mechanical',
                 'description' => 'test_desc',
             ],
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'spec' => 'ELectronics and Electrical',
                 'description' => 'test_desc',
             ]
@@ -54,38 +54,28 @@ class pidsSeeder extends Seeder
 
         $data1 = [
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'feature' => 'MAINTAINENCE FREE',
                 'description' => 'Maintainance Free Operation with dry cell sealed batteries',
             ],
             [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'feature' => 'CERTIFICATIONS',
                 'description' => 'IP65 & EN12966',
             ],
             [
-                'page_id' => $page1->id,
-                'feature' => 'CLOUD CONNECTED',
-                'description' => 'Onboard GSM/4G Based Connectivity',
+                'page_id' => $vsls->id,
+                'feature' => '100% UPTIME',
+                'description' => 'Gives 100% uptime with no dependency on Grid Power and broken wires',
             ],
             [
-                'page_id' => $page1->id,
-                'feature' => 'NTCIP PROTOCOL',
-                'description' => 'Supports NTCIP Protocol as well as Photonplay`s Standard SignCom',
+                'page_id' => $vsls->id,
+                'feature' => 'EXCELLENT READABILITY - FOR HIGH SPPED DRIVERS',
+                'description' => 'Intelligent intensity control. Automatic adjustment of luminosity',
             ],
             [
-                'page_id' => $page1->id,
-                'feature' => 'PROTOCOL CERTIFICATIONS',
-                'description' => 'IP65 & EN12966',
-            ],
-            [
-                'page_id' => $page1->id,
+                'page_id' => $vsls->id,
                 'feature' => 'ULTRA LOW POWER CONSUMPTION',
-                'description' => '',
-            ],
-            [
-                'page_id' => $page1->id,
-                'feature' => 'MULTILINGUAL SUPPORT',
                 'description' => '',
             ],
         ];
@@ -93,6 +83,5 @@ class pidsSeeder extends Seeder
         foreach($data1 as $i){
             PageFeature::create($i);
         }
-
     }
 }

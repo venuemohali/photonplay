@@ -102,6 +102,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('create-specification-page/{id}', [PagesController::class, 'createSpecificationSubPage'])->name('manage.solution.create.specification.page');
         Route::get('create-features-page/{id}', [PagesController::class, 'createFeaturesSubPage'])->name('manage.solution.create.features.page');
         Route::get('create-images-page/{id}', [PagesController::class, 'createImagesSubPage'])->name('manage.solution.create.images.page');
+
+        Route::get('create-gallery-page/{id}', [PagesController::class, 'createGallerySubPage'])->name('manage.solution.create.gallery.page');
+
         Route::post('store-sub-page', [PagesController::class, 'store'])->name('manage.solution.store');
         Route::get('edit-specification-page/{id}', [PagesController::class, 'EditSpecificationSubPage'])->name('manage.solution.edit.specification.page');
         Route::post('update-specification-page', [PagesController::class, 'UpdateSpecificationSubPage'])->name('manage.solution.update.specification.page');
@@ -109,6 +112,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('update-features-page', [PagesController::class, 'updateFeaturesSubPage'])->name('manage.solution.update.features.page');
         Route::post('store-sub-page-image', [PagesController::class, 'updateSingleImage'])->name('manage.solution.update.single.image');
         Route::any('store-sub-page-multi-image', [PagesController::class, 'updateMultiImage'])->name('manage.solution.update.multi.image');
+
+
 
 
     });
