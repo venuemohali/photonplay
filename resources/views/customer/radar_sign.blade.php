@@ -122,20 +122,20 @@ foreach($specilization->options as $option){
                             </div>
                             @endforeach
                             {{-- Loop to end Specifications--}}
-                           
+
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
                              <div class="d-flex align-items-center justify-content-between">
                            <div class="selected-anc">
                             <!-- <label for="select-color" class="form-select shadow-none border">Open this select menu</label> -->
                            <select class="form-select shadow-none border" id="select-color" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> One</option>
-  <option value="2"> <img src="{{ URL::to('/') }}/assets/images/verifyyellow.png" /> Two</option>
-  <option value="3"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> Three</option>
-</select>  
+                                  <option selected>Open this select menu</option>
+                                  <option value="1"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> One</option>
+                                  <option value="2"> <img src="{{ URL::to('/') }}/assets/images/verifyyellow.png" /> Two</option>
+                                  <option value="3"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> Three</option>
+                           </select>
                            </div>
-                         
+
 <div class="d-flex justify-content-center align-items-center">
 <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
 <div class="borded-bang"></div>
@@ -143,7 +143,7 @@ foreach($specilization->options as $option){
 <div class="borded-bang"></div>
 <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
     <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
-   
+
 </div>
 </div>
 <p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
