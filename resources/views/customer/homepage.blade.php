@@ -508,13 +508,14 @@
         $('.clints-content-banner').slick({
             dots: false,
             infinite: false,
-            speed: 300,
+           // speed: 3000,
             slidesToShow: 1,
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: false,
             autoplay:true,
+            autoplaySpeed: 3000,
             fade:true,
         })
         $('.clints-content-branding').slick({

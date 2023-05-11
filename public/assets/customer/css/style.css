@@ -626,7 +626,7 @@ a.nav-link.dropdown-toggle.show img,
     background-color: #f9f9fa;
 }
 
-.cicles img {
+.cicles {
     width: 100%;
     height: 100%;
     max-width: 70px;
@@ -1715,8 +1715,8 @@ input:focus {
     width: 100%;
     height: 100%;
     /* max-width: 100%; */
-    min-height: 186px;
-    max-height: 186px;
+    min-height: 200px;
+    max-height: 200px;
     z-index: 1;
 }
 
