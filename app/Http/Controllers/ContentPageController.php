@@ -24,6 +24,18 @@ class ContentPageController extends Controller
 
     }
 
+
+    public function index_guest($page)
+    {
+        $record=ContentPage::where('page_name',$page)->first();
+        if(!isset($record)){
+            abort(404);
+        }
+        return view('customer.policy_page', compact('record'));
+
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -44,7 +56,7 @@ class ContentPageController extends Controller
     {
 //        dd($request->all());
         $validator= Validator::make($request->all(),[
-            'page_name' => 'required|in:about-us,term-conditions,privacy-policy',
+            'page_name' => 'required|in:about-us,term-conditions,privacy-policy,shipping,return-policy',
             'description' => 'required',
         ]);
         #IF VALIDATION FAIL SEND RESPONSE
