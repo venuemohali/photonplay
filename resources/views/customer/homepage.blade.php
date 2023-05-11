@@ -1,95 +1,9 @@
 @include('customer.layout2.header')
     <!-- banner-text-start -->
-    <section class="pt-0 pb-sm-4 pb-lg-5" >
-    <div class="clints-content clints-content-banner mb-0">
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>FROM TOKYO TO LOS ANGLES</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
-                        </div>
+{{--    Banner Start --}}
+<x-Customer.HomePageBanner/>
+{{--Banner end--}}
 
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>FROM TOKYO TO LOS ANGLES</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
-                        </div>
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <!-- <div>
-                <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-            </div> -->
-
-        </div>
-{{--        <div class="tokoyo-banner">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row justify-content-center align-items-center">--}}
-{{--                    <div class="col-lg-12 text-center">--}}
-{{--                        <h1>From Tokyo to Los Angles</h1>--}}
-{{--                        <p class="text-capitalize">contributing to a efficient road and transit network</p>--}}
-{{--                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-uppercase ">About US</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-    </section>
     <!-- enddd -->
     <!-- undefeated-section-start -->
     <section class="undefeated-wrapper pt-lg-0">
@@ -349,30 +263,12 @@
         </div>
     </section>
     <!-- team-members-end -->
-    <!-- Key-projects-start -->
-    <section class="key-project pb-0">
-        <div class="container-fluid">
-            <div class="col-lg-12">
-                <div class="text-center mb-lg-5">
-                    <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                    <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
-                </div>
-            </div>
-        </div>
-        <div class="key-slider mb-0">
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
 
-        </div>
-    </section>
+    <!-- Key-projects-start -->
+
+    <x-Customer.KeyProject/>
     <!--___________________ key-project-end_________________ -->
+
     <!-- _____________________Our clint Says start______________________ -->
 @include('customer.layout2.client_testimonials')
 
@@ -549,7 +445,7 @@
                     }
                 }
             ]
-        })      
+        })
     })
         window.addEventListener('click', function (e) {
             if ($('.navbar-collapse').hasClass('show')) {
