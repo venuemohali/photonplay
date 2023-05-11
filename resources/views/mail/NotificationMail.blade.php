@@ -2,7 +2,7 @@
     <table style="width: 100%;">
         <tr>
             <td>
-                <img src='{{ asset('assets/customer/images/logo-dark.png') }}' style="width: 200px; height: 100px;"  style="width:100%;" alt="Logo"/>
+                <img src="https://www.photonplay.com/img/logo-dark.png"  style="width:100%;" alt="Logo"/>
             </td>
         </tr>
     </table>
