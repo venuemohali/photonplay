@@ -274,13 +274,30 @@ Shipping:7-10 Working Days.
         autoplay: true,
         arrows: false
     });
-
+let totalPrice=0
     function increment() {
-        document.getElementById('demoInput').stepUp();
+        let inputV=document.getElementById('demoInput')
+        inputV.stepUp();
+        let innerPrice=document.getElementById("total_price")
+        const totl=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
+        if(!totalPrice) totalPrice=totl
+        innerPrice.innerHTML=`$${totl+totalPrice}`
     }
 
     function decrement() {
-        document.getElementById('demoInput').stepDown();
+        let inputV=document.getElementById('demoInput')
+        console.log(inputV.value)
+        if(inputV.value==1) return
+        inputV.stepDown();
+
+        let innerPrice=document.getElementById("total_price")
+        const totl=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
+
+        if(!totalPrice) totalPrice=totl
+
+        innerPrice.innerHTML=`$${totl-totalPrice}`
+        // if(!totalPrice) totalPrice=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
+        // document.getElementById('demoInput').stepDown();
     }
 
     var dict = {};
@@ -306,7 +323,9 @@ Shipping:7-10 Working Days.
                         input.value = response;
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
-                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+Number(radio.title)}`
+                        let inputV=document.getElementById('demoInput')
+
+                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
                     },
                 });
                 console.log(radio.innerHTML)
@@ -330,7 +349,9 @@ Shipping:7-10 Working Days.
                         input.value = response;
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
-                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-Number(radio.title)}`
+                        let inputV=document.getElementById('demoInput')
+
+                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-(Number(radio.title)*(Number(inputV.value)))}`
                     },
                 });
             }
