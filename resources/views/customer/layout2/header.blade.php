@@ -31,7 +31,11 @@
     <link rel="stylesheet" href="/assets/customer/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Home Page</title>
-
+    <style>
+        .product-pvms-icop{
+            transform: scale(2);
+        }
+    </style>
 </head>
 <body>
 <div>

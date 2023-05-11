@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 @endfor
-                
+
             </div>
             <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"
                 data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -207,7 +207,7 @@
                                         </div>
                                     </div>
                                 </div>
-                              
+
                             </div>
                             <div class="stone-accordian position-absolute d-flex align-items-center ">
                                 <img src="./assets/images/object.png" class="img-fluid circle-image d-none d-md-block"
@@ -228,7 +228,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="dimention-box d-flex align-items-center justify-content-center flex-column px-2 py-4">
-                        <img src="./assets/images/MTO-ST-F.png" alt="" class="img-fluid">
+                        <img src="./assets/images/MTO-ST-F.png" alt="" class="img-fluid product-pvms-icop">
                         <div class="plus-search">
                             <img src="{{asset('assets\customer\images\zoom-copyr.png')}}    " width="18px" height="18px" alt="Not Found">
                         </div>
@@ -236,7 +236,15 @@
                 </div>
                 <div class="col-md-3">
                     <div class="dimention-box d-flex align-items-center justify-content-center flex-column px-2 py-4">
-                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid product-pvms-icop">
+                        <div class="plus-search">
+                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="zoom">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dimention-box d-flex align-items-center justify-content-center px-2 py-4 flex-column">
+                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid product-pvms-icop">
                         <div class="plus-search">
                             <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="Not Found">
                         </div>
@@ -244,15 +252,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="dimention-box d-flex align-items-center justify-content-center px-2 py-4 flex-column">
-                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid">
-                        <div class="plus-search">
-                            <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="dimention-box d-flex align-items-center justify-content-center px-2 py-4 flex-column">
-                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('assets\customer\images\MTO-R-F.png')}}" alt="" class="img-fluid product-pvms-icop">
                         <div class="plus-search">
                             <img src="{{asset('assets\customer\images\zoom-copyr.png')}}" width="18px" height="18px" alt="Not Found">
                         </div>
@@ -302,7 +302,7 @@
             </div>
         </div>
     </section>
-    
+
     @include('customer.layout2.get_in_touch')
 
     @include('customer.layout2.footer')
