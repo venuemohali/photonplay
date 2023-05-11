@@ -494,7 +494,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
@@ -519,7 +519,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
@@ -544,7 +544,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
@@ -569,7 +569,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
@@ -594,7 +594,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
@@ -619,7 +619,7 @@
                                         <img src="/assets/customer/images/quotion.png" alt="Not Found">
                                     </div>
                                     <div class="d-flex">
-                                        <img class="profile-placeholder w-25 h-25 rounded-circle"
+                                        <img class="profile-placeholder rounded-circle cicles"
                                              src="/assets/customer/images/download.png" alt="Not Found">
                                         <div class="ms-2 d-flex flex-column align-items-center justify-content-start">
                                             <div class="five-star text-left w-100">
