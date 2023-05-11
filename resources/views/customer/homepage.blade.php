@@ -3,7 +3,7 @@
     <section class="pt-0 pb-sm-4 pb-lg-5" >
     <div class="clints-content clints-content-banner mb-0">
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>FROM TOKYO TO LOS ANGLES</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>FROM TOKYO TO LOS ANGLES</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div>
-                <div class="clider-content-wrapper position-relative">
+                <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                          <h1>From Tokyo to Los Angles</h1>
                         <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
@@ -427,7 +427,7 @@
     <script src="/assets/customer/js/jquery.js"></script>
     <script src="/assets/customer/slick/slick.min.js"></script>
     <script>
-
+        $(document ).ready( function(){
         $('.clint-wrapperr').slick({
             dots: false,
             infinite: true,
@@ -516,26 +516,6 @@
             arrows: false,
             autoplay:true,
             fade:true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 6,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
         })
         $('.clints-content-branding').slick({
             dots: false,
@@ -568,7 +548,8 @@
                     }
                 }
             ]
-        })
+        })      
+    })
         window.addEventListener('click', function (e) {
             if ($('.navbar-collapse').hasClass('show')) {
                 $('.navbar-toggler').click();
