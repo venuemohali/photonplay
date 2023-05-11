@@ -2164,6 +2164,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 991px) {
+
     .footer-section-inner .footer-item {
         align-items: start;
     }
@@ -2410,6 +2411,15 @@ input:focus {
 }
 
 @media (max-width: 578px) {
+    .one-kk {
+        flex-direction: column !important;
+    }
+
+    .order-address {
+        margin-bottom: 20px !important;
+        border-top: 1px solid #dee2e6 !important;
+    }
+
     .banner {
         height: 320px;
         padding-bottom: 0px !important;

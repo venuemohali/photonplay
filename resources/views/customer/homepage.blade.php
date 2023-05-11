@@ -109,25 +109,25 @@
                                     US</a>
                             </div>
                         </div>
-                        <div class="col-lg-6 ps-lg-0">
+                        <div class="col-lg-6 ps-lg-0 col-md-12">
                             <div class="project-details d-flex d-lg-block flex-column align-items-center">
-                                <div class="d-flex mt-md-5 mt-lg-0 mt-4">
+                                <div class="d-flex mt-md-5 mt-lg-0 mt-4 one-kk">
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h3>1K+</h3>
+                                        <h3 class="fw-bold">1K+</h3>
                                         <p>Global Expertise with 1K+ Successful Projects</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h3>17+</h3>
+                                        <h3 class="fw-bold">17+</h3>
                                         <p class="mb-0">Executing Excellence Worldwide for 17+ Years and Counting</p>
                                     </div>
                                 </div>
-                                <div class="d-flex mt-0">
-                                    <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h3>120+</h3>
+                                <div class="d-flex mt-0 one-kk">
+                                    <div class="order-address text-center bg-white p-4 border px-5 border-top-0 ">
+                                        <h3 class="fw-bold">120+</h3>
                                         <p>120+ Experts, One Mission: To Deliver Outstanding Results For You</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h3>$82M</h3>
+                                        <h3 class="fw-bold">$82M</h3>
                                         <p class="mb-0">An Accomplished Company with a Turnover of $82 Million</p>
                                     </div>
                                 </div>
