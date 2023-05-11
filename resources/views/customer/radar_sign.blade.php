@@ -126,22 +126,28 @@ foreach($specilization->options as $option){
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
                              <div class="d-flex align-items-center justify-content-between">
-                           <div class="selected-anc">
+                           <div class="selected-anc d-flex border-1 p-2" style="border: 1px solid black;">
                             <!-- <label for="select-color" class="form-select shadow-none border">Open this select menu</label> -->
-                           <select class="form-select shadow-none border" id="select-color" aria-label="Default select example">
-                                  <option selected>Open this select menu</option>
-                                  <option value="1"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> One</option>
-                                  <option value="2"> <img src="{{ URL::to('/') }}/assets/images/verifyyellow.png" /> Two</option>
-                                  <option value="3"> <img src="http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> Three</option>
+                               <i class="bi bi-check-circle-fill" style="font-size: 35px;color: blue;margin-right: 10px;"></i>
+                           <select class="form-select shadow-none border" id="select-color" aria-label="Default select example" style="background-color: transparent;border:none;">
+    {{--                                  <option selected>Open this select menu</option>--}}
+                                  <option value="1">
+                                      <span>
+                                         d <i class="bi bi-check-circle-fill" style="color: yellow;" ></i>
+                                          Yellow
+                                      </span>
+                                  </option>
+                                  <option value="2">  <i class="bi bi-check-circle-fill"></i> Two</option>
+                                  <option value="3">  <i class="bi bi-check-circle-fill"></i> Three</option>
                            </select>
                            </div>
 
-<div class="d-flex justify-content-center align-items-center">
-<img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
-<div class="borded-bang"></div>
-<img src="{{ URL::to('/') }}/assets/images/mesenges.png" class="mx-3"/>
-<div class="borded-bang"></div>
-<img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
+                            <div class="d-flex justify-content-center align-items-center">
+                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
+                            <div class="borded-bang"></div>
+                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png" class="mx-3"/>
+                            <div class="borded-bang"></div>
+                            <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
     <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
 
 </div>
