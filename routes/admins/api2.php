@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ClientsLogosController;
 use App\Http\Controllers\ContentPageController;
 use App\Http\Controllers\CouponController;
@@ -98,3 +99,17 @@ Route::put('/cms/team-members/{id}', [TeamMemberController::class,'update'])
 
 
 Route::delete('/cms/team-members/{id}', [TeamMemberController::class,'destroy'])->name("team_member_delete");
+
+
+Route::get('/cms/banners', [BannerController::class,'index'])->name("banners_index");
+Route::get('/cms/banners/create', [BannerController::class,'create'])
+    ->name("banners_create");
+Route::post('/cms/banners/create', [BannerController::class,'store'])
+    ->name("banners_store");
+Route::get('/cms/banners/{id}/edit', [BannerController::class,'edit'])
+    ->name("banners_edit");
+Route::put('/cms/banners/{id}', [BannerController::class,'update'])
+    ->name("banners_update");
+
+
+Route::delete('/cms/banners/{id}', [BannerController::class,'destroy'])->name("banners_delete");

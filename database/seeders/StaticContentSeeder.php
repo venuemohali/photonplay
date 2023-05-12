@@ -34,6 +34,18 @@ class StaticContentSeeder extends Seeder
                 'image'=>'privacy.png',
                 'description'=>'just description'
         ]);
+        ContentPage::create([
+            'page_name'=>'shipping',
+            'title'=>'Shipping',
+            'image'=>'privacy.png',
+            'description'=>'just description'
+        ]);
+        ContentPage::create([
+            'page_name'=>'return-policy',
+            'title'=>'Refund/Return-Policy',
+            'image'=>'privacy.png',
+            'description'=>'just description'
+        ]);
 
     }
 }

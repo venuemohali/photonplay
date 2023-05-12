@@ -137,9 +137,6 @@
                 placeholder: 'Hello Photon Play Systems',
                 tabsize: 2,
                 height: 500,
-                // toolbar: [
-                //     ['insert', ['picture']]
-                // ],
                 callbacks: {
                     onImageUpload: function(files) {
                         var formData = new FormData();

@@ -64,6 +64,12 @@
                                     Our Team Member</a>
                             </div>
 
+                            <div class="col-md-4  mb-3">
+                                <a href="{{route('admin.banners_index')}}" class="btn btn-primary btn-lg btn-block w-100 d-flex align-items-center justify-content-center">
+                                    <i data-feather="user"></i>
+                                    Banners</a>
+                            </div>
+
                         </div>
 
                     </div>
