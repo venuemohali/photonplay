@@ -2,11 +2,11 @@
 <body>
 
 <!-- Banner Sec End -->
-<section class="blog-content-list position-relative">
+<section class="blog-content-list position-relative ">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-12 col-md-12">
-               <h1 class="text-dark">  {{$record->title}}</h1>
+            <div class="col-lg-12 col-md-12 mb-2">
+               <h4 class="text-dark">  {{$record->title}}</h4>
                 <hr/>
                <img src="{{asset('storage/'.$record->image)}}"  class="img-fluid w-100 shadow-lg"/>
             </div>
