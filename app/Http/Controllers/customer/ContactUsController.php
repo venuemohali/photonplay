@@ -81,7 +81,9 @@ class ContactUsController extends Controller
     }
 
     public function signal(){
-        return view('customer.signal');
+        $pages = Page::where('page_type_id', Page::SIGNAGES)->get();
+        // dd($page);
+        return view('customer.signal', compact('pages'));
     }
 
     public function smartcity(){
@@ -124,4 +126,12 @@ class ContactUsController extends Controller
         $page = Page::with('specs','images','features')->where('slug', $slug)->first();
         // dd($page);
     }
+
+    public function signagesSubPage($slug){
+        $page = Page::with('specs','images','features')->where('page_type_id', Page::SIGNAGES)->first();
+        // dd($page);
+        return view('customer.signages_sub_page', compact('page'));
+    }
+
+
 }
