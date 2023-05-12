@@ -41,7 +41,7 @@
                                                 <td><?php echo e($page->id); ?></td>
                                                 <td><?php echo e($page->title); ?></td>
                                                 <td>
-                                                    <a href="">
+                                                    <a href="<?php echo e(route('admin.manage.solution.sub.page', $page->id)); ?>">
                                                         <i data-feather="eye"></i></a>
                                                 </td>
                                             </tr>

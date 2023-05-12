@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use App\Models\PageFeature;
+use App\Models\PageGallery;
 use App\Models\PageImage;
 use App\Models\PageSpec;
 use App\Models\PageType;
@@ -138,5 +139,22 @@ class PagesController extends Controller
         return redirect()->back()->with('success', 'Page successfully updated');
     }
 
-    
+    public function subPageGallery(Request $request){
+        $product = Page::find($request->page_id);
+        $files = [];
+        if($request->hasfile('images'))
+        {
+            PageGallery::where('page_id', $request->page_id)->delete();
+            foreach($request->file('images') as $file) {
+                $image_path = $file->store('image', 'public');
+                $files[] = $image_path;
+                if(isset($image_path)){
+                    PageGallery::create([
+                        'page_id' => $request->page_id,
+                        'image' => $image_path,
+                    ]);
+                }
+            }}
+        return redirect()->back()->with('success', 'Gallery Image are successfully uploaded');
+    }
 }

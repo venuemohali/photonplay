@@ -112,7 +112,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('update-features-page', [PagesController::class, 'updateFeaturesSubPage'])->name('manage.solution.update.features.page');
         Route::post('store-sub-page-image', [PagesController::class, 'updateSingleImage'])->name('manage.solution.update.single.image');
         Route::any('store-sub-page-multi-image', [PagesController::class, 'updateMultiImage'])->name('manage.solution.update.multi.image');
-
+        Route::post('store-sub-page-gallery', [PagesController::class, 'subPageGallery'])->name('sub.page.gallery');
 
 
 

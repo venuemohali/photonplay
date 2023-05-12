@@ -139,10 +139,10 @@
                                                     Speed
                                                     Limit Sign
                                                     (VSLS)</a></li>
-                                            <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
+                                            <!-- <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
                                                     Finders
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <li><a href="{{route('customer.signal')}}"
                                                     class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
                                                     – Emergency
