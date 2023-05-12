@@ -256,7 +256,7 @@
             const $multiSelect = $('#selectusers_multi');
             $multiSelect.empty();
             if(![...arr].filter((res)=>!selectedUser.includes(res.email)).length){
-                $multiSelect.append(`<option class="text-center">No Data Found</option>`);
+                $multiSelect.append(`<option class="text-center" value="no_data">No Data Found</option>`);
             }else{
                 [...arr].filter((res)=>!selectedUser.includes(res.email)).forEach(item => {
                     $multiSelect.append(`<option value="${item.email}">${item.email}</option>`);
@@ -267,6 +267,7 @@
 
         function onSelectedKey(select){
             let val=select.value
+            if(val ==="no_data") return
             selectedUser.push(val)
             commonArray(loadedUser)
             const addSelected=$('#selectedUserEmail')
