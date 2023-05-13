@@ -83,7 +83,7 @@ class PagesController extends Controller
 
     public function updateSingleImage(Request $request){
         $request->validate([
-            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:5048',
         ]);
         $product=Page::find($request->page_id);
         $image_path = $request->file('cover_image')->store('image', 'public');
@@ -126,7 +126,6 @@ class PagesController extends Controller
         }else{
             $image_path = $sub_page->cover_image;
         }
-
         $sub_page->update([
             'title' => $request->title,
             'description' => $request->description,

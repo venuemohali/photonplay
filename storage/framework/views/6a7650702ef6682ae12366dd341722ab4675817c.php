@@ -34,22 +34,14 @@
                             <div class="thumb-image">
                                 <div class="row">
                                     <div class="col-4">
+                                        <?php $__empty_1 = true; $__currentLoopData = $page->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                         <div class="thumb-image-item mb-3">
-                                            <img src="<?php echo e(asset('assets/customer/images/black-box.png')); ?>" alt="" class="img-fluid">
+                                            <img src="<?php echo e(asset('storage/'.$image->image)); ?>" alt="" class="img-fluid">
                                             <img src="<?php echo e(asset('assets/customer/images/zoom-in.png')); ?>" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="<?php echo e(asset('assets/customer/images/black-box.png')); ?>" alt="" class="img-fluid">
-                                            <img src="<?php echo e(asset('assets/customer/images/zoom-in.png')); ?>" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="<?php echo e(asset('assets/customer/images/black-box.png')); ?>" alt="" class="img-fluid">
-                                            <img src="<?php echo e(asset('assets/customer/images/zoom-in.png')); ?>" alt="" class="zoom-in">
-                                        </div>
+                                        </div> 
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
@@ -81,46 +73,6 @@
                                 </div>
 
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Display Matrix
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Mechanical
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item border-0 position-inherit ">
-                                        <h2 class="accordion-header" id="flush-headingOne2">
-                                            <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                                Electronics and Electrical
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                            <div class="accordion-body pt-0">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                    <img src="<?php echo e(asset('assets/customer/images/object.png')); ?>" class="img-fluid circle-image d-none d-md-block" alt="not-found">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -204,31 +156,13 @@
         <div class="container">
             <div class="px-4">
                 <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                    <?php $__currentLoopData = $page->galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="<?php echo e(asset('assets/customer/images/gray-box.png')); ?>" class="d-block mx-auto" />
+                            <img src="<?php echo e(asset('storage/'.$gallery->image)); ?>" class="d-block mx-auto" />
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="<?php echo e(asset('assets/customer/images/gray-box.png')); ?>" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="<?php echo e(asset('assets/customer/images/gray-box.png')); ?>" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="<?php echo e(asset('assets/customer/images/gray-box.png')); ?>" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="<?php echo e(asset('assets/customer/images/gray-box.png')); ?>" class="d-block mx-auto" />
-                        </div>
-                    </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
@@ -304,8 +238,8 @@
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='<?php echo e(asset('assets/customer/images/left-chevron.png')); ?>/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='<?php echo e(asset('assets/customer/images/right-chevron.png')); ?> /></button>",
             arrows: true,
             responsive: [{
                     breakpoint: 1024,
@@ -379,8 +313,8 @@
             infinite: false,
             speed: 300,
             slidesToShow: 4,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='<?php echo e(asset('assets/customer/images/left-chevron.png')); ?>/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='<?php echo e(asset('assets/customer/images/right-chevron.png')); ?> /></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [{
@@ -409,8 +343,8 @@
             infinite: false,
             speed: 300,
             slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='<?php echo e(asset('assets/customer/images/left-chevron.png')); ?>/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='<?php echo e(asset('assets/customer/images/right-chevron.png')); ?> /></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [{

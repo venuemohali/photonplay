@@ -6,7 +6,7 @@
         <div class="container">
             <div class="slider-content ">
                 <div class="image-smart">
-                    <h2 class="text-center text-white fw-normal mb-5">Variable Speed Limit Signs (VSLS)</h2>
+                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
                     <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
                 </div>
                 <div class="text-center pt-4">
@@ -26,29 +26,20 @@
                         <div>
                             <h4 class="text-capitalize">Description</h4>
                             <p>
-                                <b>Photonplay's Variable Speed Limit Signs (VSLS)</b> is a revolutionary product designed to generate instant recognition of centrally regulated speed limits from ITS systems. Equipped with a full matrix display area, these signs can display practically any speed and graphics.
-
-With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 operation using either AC or independent solar power. Strobe lights are also available for flashing LEDs. The signs are easy to maintain, highly reliable, power-efficient, and simple to install, making them the perfect option for harsh environments. They meet compliance with MRWA/CDOT/FHWA standards and can be adapted to all specifications of the road authority. Photonplay's VSLS is a game-changing product that enhances road safety and helps prevent accidents by providing drivers with real-time speed limit information.
+                            {{$page->description}}
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
                                     <div class="col-4">
+                                        @forelse ($page->images as $image)
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
+                                        @empty
+                                            
+                                        @endforelse
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -60,86 +51,23 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
                         </div>
                         <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
+                                @foreach ($page->specs as $spec)
                                 <div class="accordion-item border-0 position-inherit ">
                                     <h2 class="accordion-header" id="flush-headingOne1">
-                                        <button
-                                            class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1"
-                                            aria-expanded="false" aria-controls="flush-collapseOne1">
+                                        <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
                                             <!-- <p class="accordion-button  shadow-none te-3 p-0 mb-1 shadow-none bg-white">Optics </p> -->
-                                            Optic
+                                            {{$spec->spec}}
                                         </button>
                                     </h2>
-                                    <div id="flush-collapseOne1" class="accordion-collapse collapse show"
-                                        aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
+                                    <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
                                         <div class="accordion-body pt-0">
-
-                                            <code class="d-block">BEAM WIDTH <span>- B1 to B7 (optional)</span></code>
-                                            <code class="d-block">COLOR CLASS  <span>- C1 </span></code>
-                                            <code class="d-block">LUMINANCE CLASS <span>- L3 </span></code>
-                                            <code class="d-block">LUMINANCE RATIO  <span>- R3 </span></code>
-                                            <code
-                                                class="d-block">CONTRAST RATIO  <span>- 30:1 (PERPENDICULAR), 10:1 (70°to Median)</span> </code>
-                                            <code class="d-block">VIEWING DISTANCE   <span>- >300 metres </span></code>
-                                            <code
-                                                class="d-block">AUTO DIMMING  <span>- Dual Sensor based, Auto brightness adjustment</span></code>
+                                            {{$spec->description}}
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button
-                                            class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2"
-                                            aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Display Matrix
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show"
-                                        aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button
-                                            class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2"
-                                            aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Mechanical
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show"
-                                        aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item border-0 position-inherit ">
-                                        <h2 class="accordion-header" id="flush-headingOne2">
-                                            <button
-                                                class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark"
-                                                type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseOne2" aria-expanded="false"
-                                                aria-controls="flush-collapseOne2">
-                                                Electronics and Electrical
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne2" class="accordion-collapse collapse show"
-                                            aria-labelledby="flush-headingOne2"
-                                            data-bs-parent="#accordionFlushExample1">
-                                            <div class="accordion-body pt-0">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                    <img src="{{asset('assets/customer/images/object.png')}}"
-                                        class="img-fluid circle-image d-none d-md-block" alt="not-found">
+                                    <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
                                 </div>
                             </div>
                         </div>
@@ -159,42 +87,14 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
                 <!-- <ul class=" m-0 p-0 "> -->
                 <div class="d-lg-flex justify-content-between">
                     <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>EXCELLENT READABILITY - FOR HIGH SPPED DRIVERS</strong>
-                                <span>Intelligent intensity control. Automatic adjustment of luminosity</span>
-                            </div>
-                        </li>
-                       
-                        <li>
-                            <div class="content-feature">
-                                <strong>MAINTAINENECE FREE</strong>
-                                <span>Maintainance Free Operations with dry cell sealed batteries</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>100% UPTIME</strong>
-                                <span>Gives 100% uptime with no dependency on Grid Power and broken wires</span>
-                            </div>
-                        </li>
-                       
-                    </ul>
-                    <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>CERTIFICATIONS</strong>
-                                <span>IP65 & EN12966</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>ULTRA LOW POWER CONSUMPTION</strong>
-                                <span></span>
-                            </div>
-                        </li>
-
-                        
+                        @foreach($page->features as $feature)
+                            <li>
+                                <div class="content-feature">
+                                    <strong>{{$feature->feature}}</strong>
+                                    <span>{{$feature->description}}</span>
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- </ul> -->
@@ -254,31 +154,13 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
         <div class="container">
             <div class="px-4">
                 <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                    @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$gallery->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -290,57 +172,7 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
     <!-- Contact form end -->
    
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+@include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
@@ -355,8 +187,8 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             arrows: true,
             responsive: [
                 {
@@ -432,8 +264,8 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
             infinite: false,
             speed: 300,
             slidesToShow: 4,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [
@@ -463,8 +295,8 @@ With ultra-bright and high-quality LED lights, the VSLS is designed for 24/7 ope
             infinite: false,
             speed: 300,
             slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [

@@ -7,7 +7,7 @@
         <div class="container">
             <div class="slider-content ">
                 <div class="image-smart">
-                    <h2 class="text-center text-white fw-normal mb-5">Lane Control System (LCS)</h2>
+                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
                     <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
                     <h6 class="text-center text-white fw-normal mt-3 mb-3">Lane Control System (LCS)</h6>
                 </div>
@@ -28,29 +28,19 @@
                         <div>
                             <h4 class="text-capitalize">Description</h4>
                             <p>
-                                <b>Lane Control Signs (LCS)</b>Lane Control Signs (LCS) are essential for controlling vehicular and pedestrian movement, ensuring safety and efficiency on open streets. Despite the availability of advanced navigational tools such as GPS, LCS plays a critical role in traffic control systems. It is crucial that LCS be noticeable and placed in the best possible spot, and drivers and pedestrians should give them proper attention to ensure their safety and the safety of others.
-
-                                LCS are specific types of traffic light pattern changes that offer directions to drivers heading to lanes. They are used to manage traffic on multi-way streets, alert drivers to reversible lane changes, and represent predefined symbols to indicate the correct use of lanes. LCS can be used in various applications, including highways, bridges, tunnels, and toll roads, to indicate speed limits, lane closures, lane merges, and lane shifts, among others. As a provider of LCS products, we offer high-quality signs that are durable, visible, and easy to install. Contact us today to learn more about our LCS products and how they can benefit your roadways.
+                            {{$page->description}}
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
                                     <div class="col-4">
+                                        @forelse ($page->images as $image)
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
+                                        </div> 
+                                        @empty
+
+                                        @endforelse
                                     </div>
                                 </div>
                             </div>
@@ -62,66 +52,24 @@
                         </div>
                         <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
+                                @foreach ($page->specs as $spec)
+
                                 <div class="accordion-item border-0 position-inherit ">
                                     <h2 class="accordion-header" id="flush-headingOne1">
                                         <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
                                             <!-- <p class="accordion-button  shadow-none te-3 p-0 mb-1 shadow-none bg-white">Optics </p> -->
-                                            Optic
+                                            {{$spec->spec}}
                                         </button>
                                     </h2>
                                     <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
                                         <div class="accordion-body pt-0">
 
-                                            <code class="d-block">BEAM WIDTH <span>- B1 to B7 (optional)</span></code>
-                                            <code class="d-block">COLOR CLASS <span>- C1 </span></code>
-                                            <code class="d-block">LUMINANCE CLASS <span>- L3 </span></code>
-                                            <code class="d-block">LUMINANCE RATIO <span>- R3 </span></code>
-                                            <code class="d-block">CONTRAST RATIO <span>- 30:1 (PERPENDICULAR), 10:1 (70°to Median)</span> </code>
-                                            <code class="d-block">VIEWING DISTANCE <span>- >300 metres </span></code>
-                                            <code class="d-block">AUTO DIMMING <span>- Dual Sensor based, Auto brightness adjustment</span></code>
+                                            {!! $spec->description !!}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Display Matrix
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne2">
-                                        <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                            Mechanical
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item border-0 position-inherit ">
-                                        <h2 class="accordion-header" id="flush-headingOne2">
-                                            <button class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
-                                                Electronics and Electrical
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne2" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample1">
-                                            <div class="accordion-body pt-0">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                    <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -137,37 +85,16 @@
             <h2 class="fs-md-2 mt-3 text-center">Feature</h2>
             <div class="feature-list">
                 <!-- <ul class=" m-0 p-0 "> -->
-                <div class="d-lg-flex justify-content-between">
+                <<div class="d-lg-flex justify-content-between">
                     <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>MAINTAINENECE FREE</strong>
-                                <span>Maintainance Free Operations with dry cell sealed batteries</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>NTCIP PROTOCOL</strong>
-                                <span>Supports NTCIP Protocol as well as Photonplay’s Standard SignCom.</span>
-                            </div>
-                        </li>
-
-                    </ul>
-                    <ul class="w-100">
-                        <li>
-                            <div class="content-feature">
-                                <strong>CERTIFICATIONS</strong>
-                                <span>IP65 & EN12966</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="content-feature">
-                                <strong>100% UPTIME</strong>
-                                <span>Gives 100% uptime with no dependency on Grid Power and broken wires.</span>
-                            </div>
-                        </li>
-
-
+                        @foreach($page->features as $feature)
+                            <li>
+                                <div class="content-feature">
+                                    <strong>{{$feature->feature}}</strong>
+                                    <span>{{$feature->description}}</span>
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- </ul> -->
@@ -217,31 +144,13 @@
         <div class="container">
             <div class="px-4">
                 <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                    @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$gallery->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
