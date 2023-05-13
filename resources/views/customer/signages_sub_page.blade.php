@@ -33,22 +33,14 @@
                             <div class="thumb-image">
                                 <div class="row">
                                     <div class="col-4">
+                                        @forelse ($page->images as $image)
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
+                                        </div> 
+                                        @empty
+
+                                        @endforelse
                                     </div>
                                 </div>
                             </div>
@@ -61,6 +53,7 @@
                         <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
                                 @foreach ($page->specs as $spec)
+
                                 <div class="accordion-item border-0 position-inherit ">
                                     <h2 class="accordion-header" id="flush-headingOne1">
                                         <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
@@ -70,14 +63,13 @@
                                     </h2>
                                     <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
                                         <div class="accordion-body pt-0">
-                                            {{$spec->description}}
+
+                                            {!! $spec->description !!}
                                         </div>
                                     </div>
-                                    </div>
-                                @endforeach
-                                <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                    <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
                                 </div>
+
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -161,31 +153,13 @@
         <div class="container">
             <div class="px-4">
                 <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                    @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$gallery->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -197,57 +171,7 @@
     <!-- Contact form end -->
 
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')

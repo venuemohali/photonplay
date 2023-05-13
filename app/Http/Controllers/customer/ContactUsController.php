@@ -131,7 +131,7 @@ class ContactUsController extends Controller
     }
 
     public function signagesSubPage($slug){
-        $page = Page::with('specs','images','features')->where('slug', $slug)->where('page_type_id', Page::SIGNAGES)->first();
+        $page = Page::with('specs','images','features','galleries')->where('slug', $slug)->where('page_type_id', Page::SIGNAGES)->first();
         // dd($page);
         return view('customer.signages_sub_page', compact('page'));
     }
