@@ -234,34 +234,34 @@
         </div>
     </section>
     <!-- team-members-start -->
-    <section class="team-members">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center mb-lg-5">
-                        <h2 class="fs-md-2 mt-3">Team Members</h2>
-                        <p class="text-mutedd">A break from all your worries sure would help a lot and you know <br>
-                            then a
-                            tale of a fateful trip this tropic port</p>
-                    </div>
-                </div>
-                @foreach($team_members as $member)
+{{--    <section class="team-members">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12">--}}
+{{--                    <div class="text-center mb-lg-5">--}}
+{{--                        <h2 class="fs-md-2 mt-3">Team Members</h2>--}}
+{{--                        <p class="text-mutedd">A break from all your worries sure would help a lot and you know <br>--}}
+{{--                            then a--}}
+{{--                            tale of a fateful trip this tropic port</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @foreach($team_members as $member)--}}
 
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
-                    <div class="members-profile h-100">
-                        <div class="p-4 ">
-                            <img class="profile-placeholder" src="{{asset('storage/'.$member->image)}}" alt="{{$member->name}}">
-                            <h6 class="text-capitalize">{{$member->name}}</h6>
-                            <p class="text-center"> {{$member->detail}}
-                            </p>
-                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+{{--                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">--}}
+{{--                    <div class="members-profile h-100">--}}
+{{--                        <div class="p-4 ">--}}
+{{--                            <img class="profile-placeholder" src="{{asset('storage/'.$member->image)}}" alt="{{$member->name}}">--}}
+{{--                            <h6 class="text-capitalize">{{$member->name}}</h6>--}}
+{{--                            <p class="text-center"> {{$member->detail}}--}}
+{{--                            </p>--}}
+{{--                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- team-members-end -->
 
     <!-- Key-projects-start -->

@@ -58,11 +58,24 @@
                                                 Homepage
                                                 @elseif($item->type==2)
                                                     Key Projects
+                                                @elseif($item->type==3)
+                                                        Solution-Highways
+                                                @elseif($item->type==4)
+                                                        Solution-Smart Cities
+                                                @elseif($item->type==5)
+                                                        Solution-Tunnels
+                                                @elseif($item->type==6)
+                                                        Solution-Transit
+                                                @elseif($item->type==7)
+                                                        Radar Speed Sign
+                                                @elseif($item->type==8)
+                                                        Portable Variable Message Sign
                                                 @endif
                                                 </p>
 
                                             </td>
-                                            <td> <img src="/storage/{{$item->image }}" class="img-fluid p-1 m-2" style="height: 100px;"/></td>
+                                            <td>
+                                                <img src="/storage/{{$item->image }}" class="img-fluid p-1 m-2" style="height: 100px;width: 200px;"/></td>
 
                                             <td>{{ $item->tagline?? '-'}}</td>
                                             <td>{{  $item->sub_tagline?? '-'}}</td>

@@ -40,9 +40,16 @@
                                 <label for="type" class="col-md-4 col-form-label text-md-end"><span>* </span>{{ __('Type') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="type"   class="form-select @error('type') is-invalid @enderror" name="type">
-                                    <option value="1">Homepage</option>
+                                    <select id="type"   class="form-select @error('type') is-invalid @enderror" name="type" required>
+                                        <option value="" selected disabled> --Select Type-- </option>
+                                        <option value="1">Homepage</option>
                                         <option value="2">Key Project</option>
+                                        <option value="3">Solution-Highways</option>
+                                        <option value="4">Solution-Smart Cities     </option>
+                                        <option value="5">Solution-Tunnels</option>
+                                        <option value="6">Solution-Transit</option>
+                                        <option value="7">Radar Speed Sign</option>
+                                        <option value="8">Portable Variable Message Sign</option>
                                     </select>
 
                                     @error('sub_tagline')
