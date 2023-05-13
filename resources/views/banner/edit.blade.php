@@ -45,12 +45,8 @@
                                         <option value="" selected disabled> --Select Type-- </option>
                                         <option value="1">Homepage</option>
                                         <option value="2">Key Project</option>
-                                        <option value="3">Solution-Highways</option>
-                                        <option value="4">Solution-Smart Cities     </option>
-                                        <option value="5">Solution-Tunnels</option>
-                                        <option value="6">Solution-Transit</option>
-                                        <option value="7">Radar Speed Sign</option>
-                                        <option value="8">Portable Variable Message Sign</option>
+                                        <option value="3">Radar Speed Sign</option>
+                                        <option value="4">Portable Variable Message Sign</option>
                                     </select>
 
                                     @error('sub_tagline')

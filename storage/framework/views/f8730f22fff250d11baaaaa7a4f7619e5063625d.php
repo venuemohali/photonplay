@@ -1,25 +1,25 @@
-@extends('user-master')
 
-@section('title', 'Welcome To Photon Play')
 
-@section('css')
+<?php $__env->startSection('title', 'Welcome To Photon Play'); ?>
 
-@endsection
+<?php $__env->startSection('css'); ?>
 
-@section('style')
+<?php $__env->stopSection(); ?>
 
-@endsection
+<?php $__env->startSection('style'); ?>
 
-@section('breadcrumb-title')
-    <h3> Banner</h3>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('breadcrumb-items')
+<?php $__env->startSection('breadcrumb-title'); ?>
+    <h3>Blog Category</h3>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb-items'); ?>
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item active">Banners</li>
-@endsection
+    <li class="breadcrumb-item active">Blog Category</li>
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div class="container-fluid">
         <!-- All Client Table Start -->
@@ -27,62 +27,38 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex">
-                        <h5 class="card-title">Banner</h5>
-                        <a href="{{ route('admin.banners_create')}}" class="btn btn-primary ms-auto">Add New Banner</a>
+                        <h5 class="card-title">All Categories</h5>
+                        <a href="<?php echo e(url('/admin/blog-categories/create')); ?>" class="btn btn-primary ms-auto">Add Category</a>
                     </div>
                     <div class="card-body">
 
                         <div class="table-responsive">
                             <div class="dt-ext table-responsive">
-                                <table class="display table-bordered w-100" id="basic-1">
+                                <table class="display" id="basic-2">
                                     <thead>
                                     <tr>
                                         <th class="all">#</th>
-                                        <th class="all">Type </th>
-                                        <th class="all">Image </th>
-                                        <th class="all">Tagline </th>
-                                        <th class="all">Sub Tagline </th>
-                                        <th class="all">Order </th>
+                                        <th class="all">Category</th>
                                         <th class="all">Created</th>
                                         <th class="all">Options</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach ($records as $item)
-                                        <tr id="Item-{{$item->id}}">
-                                            <td>{{$Sr++}}</td>
+                                    <?php $__currentLoopData = $blog_category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <tr id="Item-<?php echo e($item->id); ?>">
+                                            <td><?php echo e($Sr++); ?></td>
+                                            <td><?php echo e($item->category); ?></td>
+                                            <td><?php echo e(date('d-m-Y',strtotime($item->created_at)) ?? ''); ?></td>
                                             <td>
-                                                <p class="p-2 m-2">
-                                                @if($item->type==1)
-                                                Homepage
-                                                @elseif($item->type==2)
-                                                    Key Projects
-                                                @elseif($item->type==3)
-                                                        Radar Speed Sign
-                                                @elseif($item->type==4)
-                                                        Portable Variable Message Sign
-                                                @endif
-                                                </p>
-
-                                            </td>
-                                            <td>
-                                                <img src="/storage/{{$item->image }}" class="img-fluid p-1 m-2" style="height: 100px;width: 200px;"/></td>
-
-                                            <td>{{ $item->tagline?? '-'}}</td>
-                                            <td>{{  $item->sub_tagline?? '-'}}</td>
-                                            <td>{{ $item->order?? '0'}}</td>
-                                            <td>{{ $item->created_at}}</td>
-                                            <td>
-                                                <a href="{{route("admin.banners_edit",$item->id) }}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                                <a href="<?php echo e(url('admin/blog-categories/'.$item->id)); ?>/edit" class="text-warning p-1" data-toggle="tooltip" title="Edit">
                                                     <i data-feather="edit"></i>
                                                 </a>
 
-                                                <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
+                                                <a id="Delete-<?php echo e($item->id); ?>" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
                                                     <i data-feather="trash-2"></i>
                                                 </a>
                                                 <script>
-                                                    $('#Delete-{{$item->id}}').click(function(){
+                                                    $('#Delete-<?php echo e($item->id); ?>').click(function(){
                                                         console.log("hello");
                                                         Swal.fire({
                                                             title: 'Are you sure?',
@@ -102,10 +78,10 @@
 
                                                                 $.ajax({
                                                                     type:'DELETE',
-                                                                    url:'{{route('admin.banners_delete',$item->id)}}',
-                                                                    data:'_token = {{ @csrf_token() }}',
+                                                                    url:'<?php echo e(url('admin/blog-categories/'.$item->id)); ?>',
+                                                                    data:'_token = <?php echo e(@csrf_token()); ?>',
                                                                     success:function(data) {
-                                                                        $("#Item-{{$item->id}}").hide();
+                                                                        $("#Item-<?php echo e($item->id); ?>").hide();
                                                                     }
                                                                 });
 
@@ -115,7 +91,7 @@
                                                 </script>
                                             </td>
                                         </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                     </tbody>
                                 </table>
@@ -129,10 +105,12 @@
 
 
         <script type="text/javascript">
-            var session_layout = '{{ session()->get('layout') }}';
+            var session_layout = '<?php echo e(session()->get('layout')); ?>';
         </script>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
+<?php $__env->startSection('script'); ?>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('user-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\photon_main\main_photo\photonplay\resources\views/blog/category/index.blade.php ENDPATH**/ ?>

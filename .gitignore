@@ -5,6 +5,7 @@
 /public/thumbnail
 /public/storage
 /storage/*.key
+/storage/framework/views
 /vendor
 .env
 .env.backup
