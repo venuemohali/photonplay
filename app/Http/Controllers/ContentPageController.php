@@ -27,10 +27,12 @@ class ContentPageController extends Controller
 
     public function index_guest($page)
     {
+
         $record=ContentPage::where('page_name',$page)->first();
         if(!isset($record)){
             abort(404);
         }
+
         return view('customer.policy_page', compact('record'));
 
     }
