@@ -2411,6 +2411,14 @@ input:focus {
 }
 
 @media (max-width: 578px) {
+    .clints-content {
+        height: 268px;
+    }
+
+    .clints-content img {
+        height: 285px;
+    }
+
     .one-kk {
         flex-direction: column !important;
     }

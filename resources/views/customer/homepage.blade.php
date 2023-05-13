@@ -226,9 +226,10 @@
                     <a href="{{route('customer.solution.highway')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
-                            <img class="profile-placeholderss mb-5" src="/assets/customer/images/factory.png" alt="Not Found">
-                            <h6 class="text-capitalize">Highways</h6>
-                            <p class="mb-0 text-center"> Drive confidently on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety.
+                            <img class="profile-placeholderss mb-5" src="/assets/images/highway-Icon.png" alt="Not Found">
+                            <h6 class="text-uppercase">Highways</h6>
+                            <p class="mb-0 text-center"> 
+                            Drive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety. 
                             </p>
                         </div>
                     </div>
@@ -238,9 +239,10 @@
                 <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
-                            <img class="profile-placeholderss mb-5" src="/assets/customer/images/freedom.png" alt="Not Found">
-                            <h6 class="text-capitalize">Tunnels</h6>
-                            <p class="mb-0 text-center"> Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management.
+                            <img class="profile-placeholderss mb-5" src="/assets/images/tunnels-Icon.png" alt="Not Found">
+                            <h6 class="text-uppercase">Tunnels</h6>
+                            <p class="mb-0 text-center">
+                            Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management. 
                             </p>
                         </div>
                     </div>
@@ -250,11 +252,12 @@
                 <a href="{{route('customer.solution.city')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
-                            <img class="profile-placeholderss mb-5" src="/assets/customer/images/growth-graph.png"
+                            <img class="profile-placeholderss mb-5" src="/assets/customer/images/Smart-cities-icon.png"
                                  alt="Not Found">
-                            <h6 class="text-capitalize">Smart Cities</h6>
-                            <p class="mb-0 text-center"> From intelligent traffic management to efficient public transportation, we provide innovative solutions that improve urban mobility and reduce environmental impacts.
-                            </p>
+                            <h6 class="text-uppercase">Smart Cities</h6>
+                            <p class="mb-0 text-center">
+                            From intelligent traffic management to efficient public transportation, we provide innovative solutions that improve urban mobility and reduce environmental impact.
+                           </p>
                         </div>
                     </div>
                 </a>
@@ -263,9 +266,10 @@
                 <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
                     <div class="members-profile h-100">
                         <div class="p-4 ">
-                            <img class="profile-placeholderss mb-5" src="/assets/customer/images/branch.png" alt="Not Found">
-                            <h6 class="text-capitalize">Transits</h6>
-                            <p class="mb-0 text-center"> Our ITS solutions for transit authorities offer real-time information to commuters, improving the overall transit experience.
+                            <img class="profile-placeholderss mb-5" src="/assets/images/Transits-Icon-bus.png" alt="Not Found">
+                            <h6 class="text-uppercase">Transits</h6>
+                            <p class="mb-0 text-center">
+                            Our ITS solutions for transit authorities offer real-time information to commuters, improving the overall transit experience. 
                             </p>
                         </div>
                     </div>
