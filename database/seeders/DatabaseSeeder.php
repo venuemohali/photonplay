@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             CategorySeeder::class,
             PageTypeSeeder::class,
+            lcsSeeder::class,
+            pidsSeeder::class,
+            signagesSeeder::class,
+            vmsSeeder::class,
+            vslsSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

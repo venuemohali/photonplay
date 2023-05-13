@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use App\Models\PageFeature;
+use App\Models\PageGallery;
 use App\Models\PageImage;
 use App\Models\PageSpec;
 use App\Models\PageType;
@@ -12,16 +13,6 @@ use Illuminate\Support\Str;
 
 class PagesController extends Controller
 {
-//
-//
-//
-//
-//Route::get('create-sub-page/{id}', [PagesController::class, 'createSubPage'])->name('manage.solution.create.sub.page');
-//Route::get('create-specification-page/{id}', [PagesController::class, 'createSpecificationSubPage'])->name('manage.solution.create.specification.page');
-//Route::get('create-features-page/{id}', [PagesController::class, 'createFeaturesSubPage'])->name('manage.solution.create.features.page');
-//Route::get('create-images-page/{id}', [PagesController::class, 'createImagesSubPage'])->name('manage.solution.create.images.page');
-//
-
 
     public function createSpecificationSubPage($id){
         $specs = PageSpec::where('page_id', $id)->get();
@@ -49,7 +40,8 @@ class PagesController extends Controller
     }
 
     public function index(){
-        $pages = PageType::all();
+        $pages = PageType::get();
+        // dd($pages);
         return view('solution_pages.index', compact('pages'));
     }
 
@@ -91,7 +83,7 @@ class PagesController extends Controller
 
     public function updateSingleImage(Request $request){
         $request->validate([
-            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:5048',
         ]);
         $product=Page::find($request->page_id);
         $image_path = $request->file('cover_image')->store('image', 'public');
@@ -134,7 +126,6 @@ class PagesController extends Controller
         }else{
             $image_path = $sub_page->cover_image;
         }
-
         $sub_page->update([
             'title' => $request->title,
             'description' => $request->description,
@@ -145,5 +136,24 @@ class PagesController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Page successfully updated');
+    }
+
+    public function subPageGallery(Request $request){
+        $product = Page::find($request->page_id);
+        $files = [];
+        if($request->hasfile('images'))
+        {
+            PageGallery::where('page_id', $request->page_id)->delete();
+            foreach($request->file('images') as $file) {
+                $image_path = $file->store('image', 'public');
+                $files[] = $image_path;
+                if(isset($image_path)){
+                    PageGallery::create([
+                        'page_id' => $request->page_id,
+                        'image' => $image_path,
+                    ]);
+                }
+            }}
+        return redirect()->back()->with('success', 'Gallery Image are successfully uploaded');
     }
 }

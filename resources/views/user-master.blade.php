@@ -117,42 +117,42 @@
     @endif
 
     <script type="text/javascript">
-        if ($(".page-wrapper").hasClass("horizontal-wrapper")) {
-            $(".according-menu.other").css("display", "none");
-            $(".sidebar-submenu").css("display", "block");
-        }
+        // if ($(".page-wrapper").hasClass("horizontal-wrapper")) {
+        //     $(".according-menu.other").css("display", "none");
+        //     $(".sidebar-submenu").css("display", "block");
+        // }
 
 
 
-        function load_emails(search){
-            $('#show_all_users').show();
-            // Define the API endpoint URL
-            const apiUrl = '{{route('admin.all_user_emails')}}';
-            let searchb=search!=undefined?search.value:'';
-            // Make an AJAX request to fetch the items
-            $.ajax({
-                url: apiUrl+"?search="+searchb,
-                dataType: 'json',
-                success: function(items) {
-                    // Populate the dropdown with the items
-                    let itm=items.emails;
+        {{--function load_emails(search){--}}
+        {{--    $('#show_all_users').show();--}}
+        {{--    // Define the API endpoint URL--}}
+        {{--    const apiUrl = '{{route('admin.all_user_emails')}}';--}}
+        {{--    let searchb=search!=undefined?search.value:'';--}}
+        {{--    // Make an AJAX request to fetch the items--}}
+        {{--    $.ajax({--}}
+        {{--        url: apiUrl+"?search="+searchb,--}}
+        {{--        dataType: 'json',--}}
+        {{--        success: function(items) {--}}
+        {{--            // Populate the dropdown with the items--}}
+        {{--            let itm=items.emails;--}}
 
-                    const $multiSelect = $('#selectusers_multi');
-                    $multiSelect.empty();
-                    itm.forEach(item => {
-                        $multiSelect.append(`<option value="${item.email}">${item.email}</option>`);
-                    });
+        {{--            const $multiSelect = $('#selectusers_multi');--}}
+        {{--            $multiSelect.empty();--}}
+        {{--            itm.forEach(item => {--}}
+        {{--                $multiSelect.append(`<option value="${item.email}">${item.email}</option>`);--}}
+        {{--            });--}}
 
-                },
-                error: function() {
-                    console.error('Failed to fetch emails from the API');
+        {{--        },--}}
+        {{--        error: function() {--}}
+        {{--            console.error('Failed to fetch emails from the API');--}}
 
-                }
-            });
-        }
-        function remove_seleted_user(){
-            $('#show_all_users').hide();
-        }
+        {{--        }--}}
+        {{--    });--}}
+        {{--}--}}
+        {{--function remove_seleted_user(){--}}
+        {{--    $('#show_all_users').hide();--}}
+        {{--}--}}
 
         // let i=0;
         // var j=0;
@@ -209,6 +209,78 @@
 
     </script>
 
+
+
+    <script type="text/javascript">
+        if ($(".page-wrapper").hasClass("horizontal-wrapper")) {
+            $(".according-menu.other").css("display", "none");
+            $(".sidebar-submenu").css("display", "block");
+        }
+
+
+        let selectedUser=[]
+        let loadedUser=[]
+        function load_emails(search){
+            $('#show_all_users').show();
+
+            const apiUrl = '<?php echo e(route('admin.all_user_emails')); ?>';
+            // Define the API endpoint URL
+            let searchb=search!=undefined?search.value:'';
+            // Make an AJAX request to fetch the items
+            $.ajax({
+                url: apiUrl+"?search="+searchb,
+                dataType: 'json',
+                success: function(items) {
+                    // Populate the dropdown with the items
+                    let itm=items.emails.filter((res)=>!selectedUser.includes(res.email));
+                    loadedUser=[...items.emails]
+                    commonArray(itm)
+                },
+                error: function() {
+                    console.error('Failed to fetch emails from the API');
+
+                }
+            });
+        }
+        function remove_seleted_user(){
+            $('#show_all_users').hide();
+        }
+        function deleteThis(email){
+            const find=selectedUser.indexOf(email)
+            selectedUser.splice(find,1)
+            const id=`selected ${email}`
+            document.getElementById(id).remove()
+            commonArray(loadedUser)
+        }
+        function commonArray(arr){
+            const $multiSelect = $('#selectusers_multi');
+            $multiSelect.empty();
+            if(![...arr].filter((res)=>!selectedUser.includes(res.email)).length){
+                $multiSelect.append(`<option class="text-center" value="no_data">No Data Found</option>`);
+            }else{
+                [...arr].filter((res)=>!selectedUser.includes(res.email)).forEach(item => {
+                    $multiSelect.append(`<option value="${item.email}">${item.email}</option>`);
+                })
+            }
+
+        }
+
+        function onSelectedKey(select){
+            let val=select.value
+            if(val ==="no_data") return
+            selectedUser.push(val)
+            commonArray(loadedUser)
+            const addSelected=$('#selectedUserEmail')
+            addSelected.append(`<div class="d-flex  m-2" id="selected ${val}">
+<input class="border-0 bg-primary text-white w-auto" style="min-width: 100%;max-width: 100%" name="selected_email_receiver[]" value="${val}" readonly />
+<span class="text-white bg-danger"  onclick="deleteThis('${val}')" role="button" ">X</span>
+</div>`);
+
+        }
+
+
+
+    </script>
 
 
     <script>

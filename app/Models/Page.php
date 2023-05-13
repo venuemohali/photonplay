@@ -16,6 +16,7 @@ class Page extends Model
     const VSLS = 2;
     const SIGNAGES = 7;
     const PIDS = 8;
+    const LCS = 10;
 
 
     public function specs(){
@@ -23,7 +24,7 @@ class Page extends Model
     }
 
     public function images(){
-        return $this->hasMany(PageImage::class);
+        return $this->hasMany(PageImage::class)->take(3);
     }
 
     public function features(){
@@ -32,6 +33,9 @@ class Page extends Model
 
     public function pageType(){
         return $this->belongsTo(PageType::class);
+    }
+    public function galleries(){
+        return $this->hasMany(PageGallery::class);
     }
 
 }

@@ -1,95 +1,9 @@
 @include('customer.layout2.header')
     <!-- banner-text-start -->
-    <section class="pt-0 pb-sm-4 pb-lg-5" >
-    <div class="clints-content clints-content-banner mb-0">
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>FROM TOKYO TO LOS ANGLES</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
-                        </div>
+{{--    Banner Start --}}
+<x-Customer.HomePageBanner/>
+{{--Banner end--}}
 
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>FROM TOKYO TO LOS ANGLES</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
-                        </div>
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        <button class="btn btn-primary text-capitalize d-block py-0 px-4 m-auto mt-4 mb-4 rounded-0">About US</button>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <div>
-                <div class="clider-content-wrapper w-100 position-relative">
-                    <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                         <h1>From Tokyo to Los Angles</h1>
-                        <h6 class="text-white">Contributing To A Efficient Road And Transit Network</h6>
-                        </div>
-                    <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-                </div>
-            </div>
-            <!-- <div>
-                <img src="/assets/images/Banner-Image.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/aboutBAnner.png" alt="Not-Found" class="img-fluid w-100">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid w-100">
-            </div> -->
-
-        </div>
-{{--        <div class="tokoyo-banner">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row justify-content-center align-items-center">--}}
-{{--                    <div class="col-lg-12 text-center">--}}
-{{--                        <h1>From Tokyo to Los Angles</h1>--}}
-{{--                        <p class="text-capitalize">contributing to a efficient road and transit network</p>--}}
-{{--                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-uppercase ">About US</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-    </section>
     <!-- enddd -->
     <!-- undefeated-section-start -->
     <section class="undefeated-wrapper pt-lg-0">
@@ -113,21 +27,21 @@
                             <div class="project-details d-flex d-lg-block flex-column align-items-center">
                                 <div class="d-flex mt-md-5 mt-lg-0 mt-4 one-kk">
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h3 class="fw-bold">1K+</h3>
+                                        <h1 class="fw-bold text-dark">1K+</h1>
                                         <p>Global Expertise with 1K+ Successful Projects</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5">
-                                        <h3 class="fw-bold">17+</h3>
+                                        <h1 class="fw-bold text-dark">17+</h1>
                                         <p class="mb-0">Executing Excellence Worldwide for 17+ Years and Counting</p>
                                     </div>
                                 </div>
                                 <div class="d-flex mt-0 one-kk">
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0 ">
-                                        <h3 class="fw-bold">120+</h3>
+                                        <h1 class="fw-bold text-dark">120+</h1>
                                         <p>120+ Experts, One Mission: To Deliver Outstanding Results For You</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h3 class="fw-bold">$82M</h3>
+                                        <h1 class="fw-bold text-dark">$82M</h1>
                                         <p class="mb-0">An Accomplished Company with a Turnover of $82 Million</p>
                                     </div>
                                 </div>
@@ -324,59 +238,41 @@
         </div>
     </section>
     <!-- team-members-start -->
-    <section class="team-members">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center mb-lg-5">
-                        <h2 class="fs-md-2 mt-3">Team Members</h2>
-                        <p class="text-mutedd">A break from all your worries sure would help a lot and you know <br>
-                            then a
-                            tale of a fateful trip this tropic port</p>
-                    </div>
-                </div>
-                @foreach($team_members as $member)
+{{--    <section class="team-members">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12">--}}
+{{--                    <div class="text-center mb-lg-5">--}}
+{{--                        <h2 class="fs-md-2 mt-3">Team Members</h2>--}}
+{{--                        <p class="text-mutedd">A break from all your worries sure would help a lot and you know <br>--}}
+{{--                            then a--}}
+{{--                            tale of a fateful trip this tropic port</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @foreach($team_members as $member)--}}
 
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">
-                    <div class="members-profile h-100">
-                        <div class="p-4 ">
-                            <img class="profile-placeholder" src="{{asset('storage/'.$member->image)}}" alt="{{$member->name}}">
-                            <h6 class="text-capitalize">{{$member->name}}</h6>
-                            <p class="text-center"> {{$member->detail}}
-                            </p>
-                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+{{--                <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 mb-xl-0 mb-4">--}}
+{{--                    <div class="members-profile h-100">--}}
+{{--                        <div class="p-4 ">--}}
+{{--                            <img class="profile-placeholder" src="{{asset('storage/'.$member->image)}}" alt="{{$member->name}}">--}}
+{{--                            <h6 class="text-capitalize">{{$member->name}}</h6>--}}
+{{--                            <p class="text-center"> {{$member->detail}}--}}
+{{--                            </p>--}}
+{{--                            <img class="tripple-icons" src="/assets/customer/images/tripple-icons.png" alt="Not Found">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- team-members-end -->
-    <!-- Key-projects-start -->
-    <section class="key-project pb-0">
-        <div class="container-fluid">
-            <div class="col-lg-12">
-                <div class="text-center mb-lg-5">
-                    <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                    <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
-                </div>
-            </div>
-        </div>
-        <div class="key-slider mb-0">
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
-            <div>
-                <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-            </div>
 
-        </div>
-    </section>
+    <!-- Key-projects-start -->
+
+    <x-Customer.KeyProject/>
     <!--___________________ key-project-end_________________ -->
+
     <!-- _____________________Our clint Says start______________________ -->
 @include('customer.layout2.client_testimonials')
 
@@ -553,7 +449,7 @@
                     }
                 }
             ]
-        })      
+        })
     })
         window.addEventListener('click', function (e) {
             if ($('.navbar-collapse').hasClass('show')) {

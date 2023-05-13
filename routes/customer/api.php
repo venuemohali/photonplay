@@ -40,3 +40,4 @@ Route::post('submit-inquery', [InqueryController::class, 'store'])->name('inquer
 Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name('success.response');
 Route::any('cancel-response', [CartController::class, 'checkoutCancel'])->name('cancel.response');
 Route::get('solution/{slug}', [ContactUsController::class, 'vmsSubPage'])->name('vms.sub.page');
+Route::get('signages/{slug}', [ContactUsController::class, 'signagesSubPage'])->name('signages.sub.page');

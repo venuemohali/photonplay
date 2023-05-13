@@ -42,25 +42,25 @@
 <!-- JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
 <script>
-    // document.onreadystatechange = function() {
-    //     if (document.readyState !== "complete") {
-    //         // document.querySelector(
-    //             // "body").style.visibility = "hidden";
-    //         document.querySelector(
-    //             "#basic-2").style.visibility = "hidden";
-    //
-    //         document.querySelector(
-    //             "#loader").style.visibility = "visible";
-    //     } else {
-    //         document.querySelector(
-    //             "#loader").style.display = "none";
-    //         document.querySelector(
-    //             "body").style.visibility = "visible";
-    //         document.querySelector(
-    //             "#basic-2").style.visibility = "visible";
-    //
-    //     }
-    // };
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            // document.querySelector(
+                // "body").style.visibility = "hidden";
+            document.querySelector(
+                "#basic-2").style.visibility = "hidden";
+
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+            document.querySelector(
+                "#basic-2").style.visibility = "visible";
+
+        }
+    };
 
 
     // $("").click(function(){
@@ -70,5 +70,36 @@
     // });
 
 
+
+</script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder: 'Hello Photon Play Systems',
+            tabsize: 2,
+            height: 500,
+            callbacks: {
+                onImageUpload: function(files) {
+                    var formData = new FormData();
+                    formData.append('photo', files[0]);
+                    formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                    $.ajax({
+                        url: '{{ route('upload-photo-summernote') }}',
+                        method: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(data) {
+                            $('#summernote').summernote('insertImage', data.url);
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error(textStatus + ': ' + errorThrown);
+                        }
+                    });
+                }
+            }
+        });
+
+    });
 
 </script>

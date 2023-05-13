@@ -43,7 +43,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     integrators,
                     Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
                 </div>
-              
+
             </div>
             <!-- <div class="footer-item mb-0 mb-md-5 footer-item-three">
                 <h2>SHOP</h2>
@@ -117,7 +117,10 @@ $blogs = Blog::select('slug','title')->take(4)->get();
     </footer>
        <div class="container-fluid">
           <div class="sec-copyright py-3 text-center m-auto d-flex justify-content-between align-items-center">
-              <p>Terms | Privacy | Shipping | Refund/Return Policy</p>
+              <p>
+                 <a href="{{route('customer.show_page_policy','term-conditions')}}"> Terms </a>
+                  |    <a href="{{route('customer.show_page_policy','privacy-policy')}}">Privacy </a> |    <a href="{{route('customer.show_page_policy','shipping')}}">Shipping </a>|    <a href="{{route('customer.show_page_policy','return-policy')}}">Refund/Return Policy</a>
+              </p>
               <p>© 2023 Photonplay Systems Inc. All right reserved</p>
           </div>
        </div>

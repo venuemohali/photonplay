@@ -2,7 +2,7 @@
     <table style="width: 100%;">
         <tr>
             <td>
-                <img src="https://www.photonplay.com/img/logo-dark.png"  style="width:100%;" alt="Logo"/>
+                <img src="https://www.photonplay.com/img/logo-dark.png"  style="max-height: 80px;" alt="Logo"/>
             </td>
         </tr>
     </table>

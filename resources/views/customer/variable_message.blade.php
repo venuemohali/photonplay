@@ -67,14 +67,14 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="text-start p-4 list-unsorted">
                                     <div class="roundedd-imagese">
-                                        <img src="{{ asset('assets/customer/images/congation.png') }}" alt="Not Found"
+                                        <img src="{{asset('storage/'.$i->cover_image)}}" alt="Not Found"
                                             class="img-fluid">
                                     </div>
                                     <div class="my-3 list-bacgunded px-4 py-4">
                                         <h5 class="fw-bold text-capitalize">{{ $i->title }}</h5>
                                         <p>{{ substr($i->description, 0, 60) }} ... </p>
                                         <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;">
-                                            <h6 class="text-colorr">Explore More >></h6>
+                                            <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;"><h6 class="text-colorr">Explore More >></h6></a>
                                         </a>
                                     </div>
                                 </div>

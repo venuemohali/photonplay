@@ -15,7 +15,7 @@ class CreateContentPagesTable extends Migration
     {
         Schema::create('content_pages', function (Blueprint $table) {
             $table->id();
-            $table->enum('page_name',['about-us','term-conditions','privacy-policy'])->unique();
+            $table->enum('page_name',['about-us','term-conditions','privacy-policy','shipping','return-policy'])->unique();
             $table->string('title');
             $table->string('image');
             $table->text('description');

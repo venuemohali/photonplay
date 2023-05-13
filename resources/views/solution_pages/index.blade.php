@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Manage Specilization')
+@section('title', 'Manage Pages')
 
 @section('css')
 
@@ -26,13 +26,6 @@
         <!-- All Client Table Start -->
         <div class="row">
             <div class="col-12">
-                {{-- <div class="card">
-                    <div class="card-header d-flex">
-                    <h5 class="card-title">All Pages</h5>
-                    <a href="#" class="btn btn-primary ms-auto d-flex align-items-center">
-                        <i data-feather="plus-circle"> </i>
-                        Add Pages</a>
-                </div> --}}
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
                             <table class="display" id="basic-2">
@@ -63,11 +56,6 @@
             </div>
         </div>
         <!-- All Client Table End -->
-
-
-
-
-
 
     @endsection
 

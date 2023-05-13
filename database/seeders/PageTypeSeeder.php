@@ -24,6 +24,7 @@ class PageTypeSeeder extends Seeder
             'Signages - Emergency Exit Sign, Emergency Telephone Sign',
             'Passenger Information Display System',
             'Bus Signs',
+            'Lane Control System (LCS)'
         ];
 
         foreach($data as $i){

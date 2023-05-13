@@ -33,7 +33,7 @@
 
                     <div class="card-body ">
 
-                        <form method="POST" action="#" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('admin.sub.page.gallery')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="page_id" value="{{$id}}">
                             <div class="row mb-3 form-group  d-flex align-items-center">
