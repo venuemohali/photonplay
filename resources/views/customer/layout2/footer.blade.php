@@ -102,7 +102,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         <a href="mailto:{{$setting->sales_email}}"><img src="{{asset('assets\customer\images\message.png')}}" /> {{$setting->sales_email}}</a>
                         @endif
                     </div>
-                    <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>
+{{--                    <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>--}}
                     <ul class="social-media pt-md-4 py-4 ps-0 w-100">
                     <li><a class="" href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
                     <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
