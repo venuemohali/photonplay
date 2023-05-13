@@ -37,7 +37,7 @@
                                         <div class="thumb-image-item mb-3">
                                             <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div> 
+                                        </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -51,18 +51,17 @@
                         <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
                                 @foreach ($page->specs as $spec)
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne1">
-                                        <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
-                                            <!-- <p class="accordion-button  shadow-none te-3 p-0 mb-1 shadow-none bg-white">Optics </p> -->
-                                            {{$spec->spec}}
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-                                            {{$spec->description}}
+                                    <div class="accordion-item border-0 position-inherit ">
+                                        <h2 class="accordion-header" id="flush-headingOne{{$spec->id}}">
+                                            <button class="accordion-button collapsed optic bg-white te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$spec->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$spec->id}}">
+                                                {{$spec->spec}}
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne{{$spec->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne{{$spec->id}}" data-bs-parent="#accordionFlushExample1">
+                                            <div class="accordion-body pt-0">
+                                                {!! $spec->description !!}
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                 @endforeach
                                 <div class="stone-accordian position-absolute d-flex align-items-center ">
@@ -70,6 +69,30 @@
                                 </div>
                             </div>
                         </div>
+
+{{--                        <div class="circle-floow foloowers position-relative">--}}
+{{--                            <div class="accordion accordion-flush" id="accordionFlushExample1">--}}
+
+{{--                            @foreach ($page->specs as $spec)--}}
+{{--                                <div class="accordion-item border-0 position-inherit ">--}}
+{{--                                    <h2 class="accordion-header" id="flush-headingOne1">--}}
+{{--                                        <button class="accordion-button collapsed optic bg-white shadow-none te-3 pb-2 shadow-none text-dark" type="button" data-toggle="collapse" data-target="#flush-collapseOne{{$spec->id}}" aria-expanded="false" aria-controls="flush-collapseOne1">--}}
+{{--                                            <!-- <p class="accordion-button  shadow-none te-3 p-0 mb-1 shadow-none bg-white">Optics </p> -->--}}
+{{--                                            {{$spec->spec}}--}}
+{{--                                        </button>--}}
+{{--                                    </h2>--}}
+{{--                                    <div id="flush-collapseOne{{$spec->spec}}" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">--}}
+{{--                                        <div class="accordion-body pt-0">--}}
+{{--                                            {!!  $spec->description!!}--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    </div>--}}
+{{--                                @endforeach--}}
+{{--                                <div class="stone-accordian position-absolute d-flex align-items-center ">--}}
+{{--                                    <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
@@ -84,7 +107,11 @@
             <div class="feature-list">
                 <!-- <ul class=" m-0 p-0 "> -->
                 <div class="d-lg-flex justify-content-between">
-                    <ul class="w-100">
+                    <ul class="w-100 m-0 p-0">
+                       @php
+                        $break_point=(int)(count($page->features)/2);
+                        $sr=1;
+                       @endphp
                         @foreach($page->features as $feature)
                             <li>
                                 <div class="content-feature">
@@ -92,6 +119,17 @@
                                     <span>{{$feature->description}}</span>
                                 </div>
                             </li>
+                            @if($sr==$break_point)
+                                   </ul>
+                                    <ul class="w-100 m-0 p-0">
+
+                                    @php
+                                    $sr=1;
+                                    @endphp
+                            @endif
+                              @php
+                              $sr++;
+                              @endphp
                         @endforeach
                     </ul>
                 </div>

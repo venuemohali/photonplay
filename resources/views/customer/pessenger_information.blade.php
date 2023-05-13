@@ -37,7 +37,7 @@
                                         <div class="thumb-image-item mb-3">
                                             <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div> 
+                                        </div>
                                         @empty
 
                                         @endforelse
@@ -64,7 +64,7 @@
                                     <div id="flush-collapseOne1" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
                                         <div class="accordion-body pt-0">
 
-                                            {!! $spec->description !!}
+                                            {{$spec->description}}
                                         </div>
                                     </div>
                                 </div>
