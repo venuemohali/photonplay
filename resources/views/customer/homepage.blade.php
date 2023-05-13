@@ -81,8 +81,10 @@
                             </div>
                             <div class="mask-layer common-wdth inner-col text-center">
                                 <img src="/assets/customer/images/KEPLER-US-12.png" alt="Not Found" class="">
-                                <a href="{{route('customer.radar.sign',$product->id)}}" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4">Shop
+                               <div>
+                               <a href="{{route('customer.radar.sign',$product->id)}}" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4">Shop
                                     Now</a>
+                               </div>
                             </div>
                             <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
                                 <div class="ms-md-5">
@@ -138,7 +140,16 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                     <a href="{{route('customer.solution.highway')}}" style="text-decoration: none;">
-                    <div class="members-profile h-100">
+                    <div class="application-item">
+                        <img src="{{ asset('assets/customer/images/Highway-Icons.png') }}" alt="image">
+                        <div class="content-application-items members-profile h-100">
+                            <h6 class="text-uppercase text-dark">Highways </h6>
+                            <p class="mb-0 text-center"> 
+                            Drive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/images/highway-Icon.png" alt="Not Found">
                             <h6 class="text-uppercase">Highways</h6>
@@ -146,12 +157,21 @@
                             Drive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow and enhance road safety. 
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                     </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0 gap-5">
                 <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
-                    <div class="members-profile h-100">
+                <div class="application-item">
+                <img src="{{ asset('assets/customer/images/Tunnels-Icons.png') }}" alt="image">
+                        <div class="content-application-items members-profile h-100">
+                            <h6 class="text-uppercase text-dark">Tunnels </h6>
+                            <p class="mb-0 text-center">
+                            Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/images/tunnels-Icon.png" alt="Not Found">
                             <h6 class="text-uppercase">Tunnels</h6>
@@ -159,12 +179,21 @@
                             Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management. 
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                 </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                 <a href="{{route('customer.solution.city')}}" style="text-decoration: none;">
-                    <div class="members-profile h-100">
+                <div class="application-item">
+                <img src="{{ asset('assets/customer/images/Smart-cities-icon.png') }}" alt="image">
+                        <div class="content-application-items members-profile h-100 application-item">
+                            <h6 class="text-uppercase text-dark">Smart Cities </h6>
+                            <p class="mb-0 text-center">
+                            Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/customer/images/Smart-cities-icon.png"
                                  alt="Not Found">
@@ -173,12 +202,20 @@
                             From intelligent traffic management to efficient public transportation, we provide innovative solutions that improve urban mobility and reduce environmental impact.
                            </p>
                         </div>
-                    </div>
+                    </div> -->
                 </a>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4 mb-xl-0">
                 <a href="{{route('customer.solution.tunnel')}}" style="text-decoration: none;">
-                    <div class="members-profile h-100">
+                <div class="application-item">
+                <img src="{{ asset('assets/customer/images/Transits-Icons.png') }}" alt="image">
+                        <div class="content-application-items members-profile h-100 application-item">
+                            <h6 class="text-uppercase text-dark">Transits</h6>
+                            <p class="mb-0 text-center">
+                            Navigating tunnels becomes easier and safer with our intelligent ITS solutions that offer comprehensive monitoring, ventilation control, and incident management. 
+                            </p>
+                        </div>
+                    <!-- <div class="members-profile h-100">
                         <div class="p-4 ">
                             <img class="profile-placeholderss mb-5" src="/assets/images/Transits-Icon-bus.png" alt="Not Found">
                             <h6 class="text-uppercase">Transits</h6>
@@ -186,7 +223,7 @@
                             Our ITS solutions for transit authorities offer real-time information to commuters, improving the overall transit experience. 
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                 </a>
                 </div>
             </div>
