@@ -40,25 +40,25 @@
 <!-- JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
 <script>
-    // document.onreadystatechange = function() {
-    //     if (document.readyState !== "complete") {
-    //         // document.querySelector(
-    //             // "body").style.visibility = "hidden";
-    //         document.querySelector(
-    //             "#basic-2").style.visibility = "hidden";
-    //
-    //         document.querySelector(
-    //             "#loader").style.visibility = "visible";
-    //     } else {
-    //         document.querySelector(
-    //             "#loader").style.display = "none";
-    //         document.querySelector(
-    //             "body").style.visibility = "visible";
-    //         document.querySelector(
-    //             "#basic-2").style.visibility = "visible";
-    //
-    //     }
-    // };
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            // document.querySelector(
+                // "body").style.visibility = "hidden";
+            document.querySelector(
+                "#basic-2").style.visibility = "hidden";
+
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+            document.querySelector(
+                "#basic-2").style.visibility = "visible";
+
+        }
+    };
 
 
     // $("").click(function(){

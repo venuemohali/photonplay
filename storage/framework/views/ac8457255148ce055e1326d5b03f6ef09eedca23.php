@@ -67,7 +67,7 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="text-start p-4 list-unsorted">
                                     <div class="roundedd-imagese">
-                                        <img src="<?php echo e(asset('assets/customer/images/congation.png')); ?>" alt="Not Found"
+                                        <img src="<?php echo e(asset('storage/'.$i->cover_image)); ?>" alt="Not Found"
                                             class="img-fluid">
                                     </div>
                                     <div class="my-3 list-bacgunded px-4 py-4">

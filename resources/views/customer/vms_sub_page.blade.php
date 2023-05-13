@@ -33,22 +33,12 @@
                             <div class="thumb-image">
                                 <div class="row">
                                     <div class="col-4">
+                                        @foreach ($page->images as $image)
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('assets/customer/images/black-box.png')}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
+                                        </div> 
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -161,31 +151,13 @@
         <div class="container">
             <div class="px-4">
                 <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                    @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$gallery->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -197,57 +169,7 @@
     <!-- Contact form end -->
 
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+@include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
@@ -261,8 +183,8 @@
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}'/></button>",
             arrows: true,
             responsive: [{
                     breakpoint: 1024,
@@ -336,8 +258,8 @@
             infinite: false,
             speed: 300,
             slidesToShow: 4,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [{
@@ -366,8 +288,8 @@
             infinite: false,
             speed: 300,
             slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
             responsive: [{

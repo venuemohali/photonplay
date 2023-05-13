@@ -95,12 +95,12 @@ class ContactUsController extends Controller
         return view('customer.variable_message', compact('page'));
     }
     public function variableSpeedLimit(){
-        $page = Page::where('page_type_id', Page::VSLS)->get();
+        $page = Page::with('specs','images','features', 'galleries')->where('page_type_id', Page::VSLS)->first();
         // dd($page);
-        return view('customer.variable_speed_limit');
+        return view('customer.variable_speed_limit', compact('page'));
     }
     public function pasengerInformationDisplay(){
-        $page = Page::with('specs','images','features')->where('page_type_id', Page::PIDS)->first();
+        $page = Page::with('specs','images','features', 'galleries')->where('page_type_id', Page::PIDS)->first();
         // dd($page);
         return view('customer.pessenger_information', compact('page'));
     }
@@ -113,7 +113,9 @@ class ContactUsController extends Controller
     }
 
     public function laneControlSystem(){
-        return view('customer.lane_control_system');
+        $page = Page::with('specs','images','features','galleries')->where('page_type_id', Page::LCS)->first();
+        // dd($page);
+        return view('customer.lane_control_system', compact('page'));
     }
 
     public function pvmsICop($id){
@@ -123,13 +125,13 @@ class ContactUsController extends Controller
     }
 
     public function vmsSubPage($slug){
-        $page = Page::with('specs','images','features')->where('slug', $slug)->where('page_type_id', Page::VMS)->first();
+        $page = Page::with('specs','images','features','galleries')->where('slug', $slug)->where('page_type_id', Page::VMS)->first();
         // dd($page);
         return view('customer.vms_sub_page', compact('page'));
     }
 
     public function signagesSubPage($slug){
-        $page = Page::with('specs','images','features')->where('slug', $slug)->where('page_type_id', Page::SIGNAGES)->first();
+        $page = Page::with('specs','images','features','galleries')->where('slug', $slug)->where('page_type_id', Page::SIGNAGES)->first();
         // dd($page);
         return view('customer.signages_sub_page', compact('page'));
     }
