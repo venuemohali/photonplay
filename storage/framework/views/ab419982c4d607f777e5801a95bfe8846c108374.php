@@ -47,8 +47,11 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="type">
+                                        <option value="" selected disabled> --Select Type-- </option>
                                         <option value="1">Homepage</option>
                                         <option value="2">Key Project</option>
+                                        <option value="3">Radar Speed Sign</option>
+                                        <option value="4">Portable Variable Message Sign</option>
                                     </select>
 
                                     <?php $__errorArgs = ['sub_tagline'];

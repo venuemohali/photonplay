@@ -57,16 +57,8 @@
                                                 <?php elseif($item->type==2): ?>
                                                     Key Projects
                                                 <?php elseif($item->type==3): ?>
-                                                        Solution-Highways
-                                                <?php elseif($item->type==4): ?>
-                                                        Solution-Smart Cities
-                                                <?php elseif($item->type==5): ?>
-                                                        Solution-Tunnels
-                                                <?php elseif($item->type==6): ?>
-                                                        Solution-Transit
-                                                <?php elseif($item->type==7): ?>
                                                         Radar Speed Sign
-                                                <?php elseif($item->type==8): ?>
+                                                <?php elseif($item->type==4): ?>
                                                         Portable Variable Message Sign
                                                 <?php endif; ?>
                                                 </p>

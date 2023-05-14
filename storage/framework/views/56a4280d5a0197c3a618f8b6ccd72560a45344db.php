@@ -39,7 +39,7 @@
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
                         <h2 class="fs-md-2 mt-3">Our Products</h2>
-                        <h6 class="fs-6 text-colorr">Our product offers innovative solutions to meet your needs and
+                        <h6 class="fs-6 text-colorr text-uppercase">Our product offers innovative solutions to meet your needs and exceed your expectations.
                         </h6>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                                         Radar Speed Sign
                                     </span>
                                     <span class="d-block"><?php echo e($product->title); ?></span>
-                                    <div class="d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-center align-items-center my-2">
                                         <img src="<?php echo e(asset('assets\customer\images\star.svg')); ?>" alt="Not Found" class="img-fluid"
                                             width="14px">
                                         <img src="<?php echo e(asset('assets\customer\images\star.svg')); ?>" alt="Not Found" class="img-fluid"
@@ -166,11 +166,14 @@
                     <div class="col-md-6">
                         <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
                             <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="flush-headingOne">
+                                <h2 class="accordion-header">
                                     <button
-                                        class="accordion-button  collapsed bg-white shadow-none py-3 pb-2 shadow-none"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                        class="accordion-button collapsed bg-white shadow-none py-3 pb-2 shadow-none"
+                                        type="button" 
+                                        data-bs-toggle="collapse" 
+                                        data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false" 
+                                        aria-controls="flush-collapseOne">
                                         Dimensions and weight
                                     </button>
                                 </h2>
