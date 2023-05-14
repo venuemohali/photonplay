@@ -49,45 +49,20 @@
 
                 <div class="col-lg-10">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imageses">
-                                    <img src="<?php echo e(asset('assets/customer/images/Layer1.png')); ?>" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 listed-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Way Finders</h5>
-                                    <p>These signs identify the location of emergency exits as well as exits going to
-                                        different destinations outside the tunnel.</p>
-                                    <h6 class="text-colorr mb-0 mt-5">Explore More >></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imageses">
-                                    <img src="<?php echo e(asset('assets/customer/images/Layer2.png')); ?>" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 listed-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Emergency Exit Sign</h5>
-                                    <p>These signs indicate how far the safety exit is to the left and right within the
-                                        tunnel, as well as how far they still have to walk.</p>
-                                    <h6 class="text-colorr mb-0 mt-5">Explore More >></h6>
+                        <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="text-start p-4 list-unsorted">
+                                    <div class="roundedd-imageses">
+                                        <img src="<?php echo e(asset('assets/customer/images/Layer1.png')); ?>" alt="Not Found" class="img-fluid">
+                                    </div>
+                                    <div class="my-3 listed-bacgunded px-4 py-4">
+                                        <h5 class="fw-bold text-capitalize"><?php echo e($page->title); ?></h5>
+                                        <p><?php echo e(substr($page->description, 0, 60)); ?> ...</p>
+                                        <a href="<?php echo e(route('customer.signages.sub.page', $page->slug)); ?>" style="text-decoration: none;"><h6 class="text-colorr mb-0 mt-5">Explore More >></h6></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="text-start p-4 list-unsorted">
-                                <div class="roundedd-imageses">
-                                    <img src="<?php echo e(asset('assets/customer/images/Layer3.png')); ?>" alt="Not Found" class="img-fluid">
-                                </div>
-                                <div class="my-3 listed-bacgunded px-4 py-4">
-                                    <h5 class="fw-bold text-capitalize">Emergency Telephone Sign</h5>
-                                    <p>An emergency telephone sign is a sort of tunnel signage that indicates where
-                                        emergency phones may be found</p>
-                                    <h6 class="text-colorr mt-3">Explore More >></h6>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>

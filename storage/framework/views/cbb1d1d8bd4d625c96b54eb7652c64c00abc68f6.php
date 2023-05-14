@@ -16,7 +16,8 @@
         </form>
         <div class="header-logo-wrapper col-auto p-0">
             <div class="logo-wrapper"><a href="<?php echo e(url('/')); ?>"><img class="img-fluid"
-                        src="<?php echo e(asset('assets/images/logo/logo.png')); ?>" alt=""></a></div>
+                        src="<?php echo e(asset('assets/images/logo/logo.png')); ?>" alt="">
+                </a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
             </div>
         </div>

@@ -42,7 +42,7 @@
 <header class="header bg-white py-3 sticky-top">
         <nav class="navbar navbar-expand-lg custome-mega-amenu">
             <div class="container">
-                <a class="navbar-brand" href="{{route('customer.homePage')}}"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
+                <a class="navbar-brand" href="{{route('customer.homePage')}}"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Photon Plays System"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

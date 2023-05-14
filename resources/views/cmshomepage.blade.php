@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="col-md-4  mb-3">
-                                <a href="#" class="btn btn-primary btn-lg btn-block w-100  d-flex align-items-center justify-content-center">
+                                <a href="{{route('admin.manage.solution.pages') }}" class="btn btn-primary btn-lg btn-block w-100  d-flex align-items-center justify-content-center">
                                     <i data-feather="bookmark"></i>
                                     Website Pages</a>
                             </div>

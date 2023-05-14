@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('title', 'Notifications'); ?>
 
 <?php $__env->startSection('css'); ?>
@@ -164,37 +166,7 @@ unset($__errorArgs, $__bag); ?>
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $('#summernote').summernote({
-                placeholder: 'Hello Photon Play Systems',
-                tabsize: 2,
-                height: 500,
-                callbacks: {
-                    onImageUpload: function(files) {
-                        var formData = new FormData();
-                        formData.append('photo', files[0]);
-                        formData.append('_token', '<?php echo e(csrf_token()); ?>'); // Add CSRF token to the form data
-                        $.ajax({
-                            url: '<?php echo e(route('upload-photo-summernote')); ?>',
-                            method: 'POST',
-                            data: formData,
-                            processData: false,
-                            contentType: false,
-                            success: function(data) {
-                                $('#summernote').summernote('insertImage', data.url);
-                            },
-                            error: function(jqXHR, textStatus, errorThrown) {
-                                console.error(textStatus + ': ' + errorThrown);
-                            }
-                        });
-                    }
-                }
-            });
 
-        });
-
-    </script>
 
 
 <?php $__env->stopSection(); ?>

@@ -76,7 +76,7 @@
                             <li> Radar Speed Signs</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <a href="<?php echo e(route('customer.variable.message')); ?>" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="<?php echo e(asset('assets/customer/images/Dot-Patternc.jpg')); ?>" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                             <li> Point head <span> - details</span></li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <a href="<?php echo e(route('customer.variable.speed.limit')); ?>" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="<?php echo e(asset('assets/customer/images/Dot-Patternc.jpg')); ?>" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -338,49 +338,7 @@
     </section>
     <!--system-bus-end  -->
     <!--form-export-start  -->
-    <section class="contact-form">
-        <div class="text-center pb-4">
-            <h2 class="fs-md-2 mt-3">Talk to our Experts</h2>
-            <p>Contact our team of expert to suggest you the best product for your ITS project</p>
-        </div>
-        <div class="container">
-            <div class="col-md-10 mx-auto">
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Company Name / Organization*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Country*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="First Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Last Name*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Email Address*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="password" id="inputPassword5" placeholder="Phone Number*"
-                            class="form-control rounded-0 mb-4" aria-describedby="passwordHelpBlock">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="form-control rounded-0 mb-4" rows="4" placeholder="Message"
-                            aria-describedby="passwordHelpBlock"></textarea>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary px-5 fw-bold rounded-pill">Send </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php echo $__env->make('customer.layout2.get_in_touch', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- _____________________ourclint-last-end___________________ -->
 <?php echo $__env->make('customer.layout2.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
