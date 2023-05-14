@@ -64,7 +64,7 @@
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
-            @include('layouts.sidebar')
+            @include(' layouts.sidebar')
             <!-- Page Sidebar Ends-->
             <div class="page-body">
                 <div class="container-fluid">
