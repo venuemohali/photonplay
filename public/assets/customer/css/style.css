@@ -181,7 +181,7 @@ h2 {
 .nav-link:focus,
 .nav-link:hover {
     color: #000;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .accordion-collapse {
@@ -1046,8 +1046,11 @@ ul.slick-dots {
 
 .contact-info .contact-info-item a img {
     margin-right: 10px;
-    height: 20px;
-    width: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    min-width: 20px;
+    max-width: 20px;
 }
 
 .social-media {
@@ -1705,6 +1708,7 @@ input:focus {
     min-width: 150px;
     max-height: 150px;
     min-height: 150px;
+    object-fit: cover;
 }
 
 .clints-content-gallery .branding-diss img {
@@ -1889,8 +1893,12 @@ input:focus {
 
 .application-item img {
     max-width: 160px;
+    min-width: 160px;
+    max-height: 160px;
+    min-height: 160px;
     margin: 0 auto -85px;
     display: block;
+    object-fit: cover;
 }
 
 .application-item .content-application-item {
@@ -2069,6 +2077,17 @@ input:focus {
 .slide-images-key {
     max-height: 650px;
     min-height: 650px;
+}
+
+.bus-radious img {
+    width: 100%;
+    height: 100%;
+    /* max-width: 150px;
+    min-width: 150px; */
+    max-height: 150px;
+    min-height: 150px;
+    object-fit: cover;
+
 }
 
 @media (min-width: 1600px) {

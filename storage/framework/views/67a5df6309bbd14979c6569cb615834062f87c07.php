@@ -15,11 +15,11 @@ $setting = Setting::first();
                     <div class="contact-info">
                         <div class="contact-info-item">
                             <?php if($setting): ?>
-                            <a href="tel:<?php echo e($setting->sales_phone); ?>"><img src="<?php echo e(asset('assets\customer\images\phone.svg')); ?>" /> <?php echo e($setting->sales_phone); ?></a>
+                            <a href="tel:<?php echo e($setting->sales_phone); ?>"><img src="<?php echo e(asset('assets\customer\images\phone-color.png')); ?>" /> <?php echo e($setting->sales_phone); ?></a>
 
-                            <a href="tel:<?php echo e($setting->support_phone ?? ''); ?>"><img src="<?php echo e(asset('assets\customer\images\phone.svg')); ?>" /> <?php echo e($setting->support_phone); ?></a>
+                            <a href="tel:<?php echo e($setting->support_phone ?? ''); ?>"><img src="<?php echo e(asset('assets\images\phone-color.png')); ?>" /> <?php echo e($setting->support_phone); ?></a>
 
-                            <a href="mailto:<?php echo e($setting->sales_email ?? ''); ?>"><img src="<?php echo e(asset('assets\customer\images\message.png')); ?>" /> <?php echo e($setting->sales_email); ?></a>
+                            <a href="mailto:<?php echo e($setting->sales_email ?? ''); ?>"><img src="<?php echo e(asset('assets\images\message-color.png')); ?>" /> <?php echo e($setting->sales_email); ?></a>
                             <?php endif; ?>
                         </div>
                     </div>

@@ -202,7 +202,7 @@
                 <!-- <div class="col-lg-12">
                     <div class="row justify-content-center"> -->
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
@@ -226,7 +226,7 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
@@ -238,9 +238,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                            <img src="{{asset('assets/images/VSLS.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Vehicle Actuated Speed Display </p>
@@ -250,9 +250,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                        <img src="{{asset('assets/images/VSLS.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
@@ -262,9 +262,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
@@ -274,9 +274,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
@@ -286,9 +286,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
@@ -298,9 +298,9 @@
                     </div>
                 </div>
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">  
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>

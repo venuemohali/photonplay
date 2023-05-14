@@ -91,7 +91,7 @@
 
 
     <!-- Application -->
-    <section class="application-section pt-0 pb-">
+    <section class="application-section">
         <div class="container">
             <h2 class="fs-md-2 mt-0 mb-2 text-center text-uppercase">Special Applications</h2>
             <p class="text-center mb-4">Variable signs for special needs in work zones safety and speed calming
