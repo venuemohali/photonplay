@@ -102,11 +102,6 @@
                                             <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
 
                                         <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
-
-
-
-
-
                                     </div>
                                 </div>
                             </div>

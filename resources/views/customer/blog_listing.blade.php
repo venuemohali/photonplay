@@ -8,7 +8,7 @@
 <!-- Banner Sec End -->
 <section class="blog-content-list position-relative">
     <div class="social-icons position-absolute start-0">
-        <img src="./assets/images/social-media iconss.png" alt="">
+        <!-- <img src="./assets/images/social-media iconss.png" alt=""> -->
     </div>
     <div class="container">
         <div class="row">
@@ -39,7 +39,7 @@
                         {!! $blogs->links() !!}
                     </div>
             </div>
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-4 col-md-12 position-sticky top-0 h-100">
                 <div class="search mb-5 position-relative">
                     <input type="text" placeholder="Search" class="border-0 ">
 {{--                    <img src="./assets/images/search-копия.png" alt="Not Found" class="position-absolute" width="16" height="16">--}}

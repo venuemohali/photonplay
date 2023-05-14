@@ -50,7 +50,7 @@ class lcsSeeder extends Seeder
             ]
         ];
 
-        foreach($data as $i){
+        foreach ($data as $i) {
             PageSpec::create($i);
         }
 
@@ -77,7 +77,7 @@ class lcsSeeder extends Seeder
             ],
         ];
 
-        foreach($data1 as $i){
+        foreach ($data1 as $i) {
             PageFeature::create($i);
         }
     }

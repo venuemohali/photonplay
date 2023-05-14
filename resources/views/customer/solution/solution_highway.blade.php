@@ -12,7 +12,7 @@
                     <h6 class="text-white">
                     Experience improved traffic flow and safer journeys with our <br> cutting-edge ITS solutions tailored to highways and tunnels.
                     </h6>
-                    <button class="btn btn-primary rounded-0 mt-3">GET QUOTE</button>
+                    <button class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</button>
                   </div>
                 </div>
                         </div>

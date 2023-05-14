@@ -195,30 +195,22 @@
         <
     </section>
 
-
-<section class="key-project pb-0">
-    <div class="container-fluid">
-        <div class="col-lg-12">
-            <div class="text-center mb-lg-5">
-                <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
-            </div>
-        </div>
-    </div>
-    <div class="key-slider mb-0">
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-
-    </div>
-</section>
 <!--___________________ key-project-end_________________ -->
+    <?php if (isset($component)) { $__componentOriginal715b16687332b2193104fde678aace8e3b94590d = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Customer\KeyProject::class, []); ?>
+<?php $component->withName('Customer.KeyProject'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal715b16687332b2193104fde678aace8e3b94590d)): ?>
+<?php $component = $__componentOriginal715b16687332b2193104fde678aace8e3b94590d; ?>
+<?php unset($__componentOriginal715b16687332b2193104fde678aace8e3b94590d); ?>
+<?php endif; ?>
+<!--___________________ key-project-end_________________ -->
+
+
 <!-- _____________________Our clint Says start______________________ -->
 
 <?php echo $__env->make('customer.layout2.client_testimonials', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

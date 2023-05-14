@@ -1,76 +1,7 @@
 <?php echo $__env->make('customer.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<section class="banner-two pt-0">
-        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="banner-two">
-                        <div class="banner-image d-flex align-items-end justify-content-around h-100">
-                            <div class="slider-heading">
-                                <h1 class="mb-lg-3">iCop | RADAR SPEED SIGN</h1>
-                                <h6>No.1 In Traffic Claming Solution</h6>
-                                <p class="mb-0">Best Safety Score with standout visibility and features,</p>
-                                <p>reduction in accidents, and keeping riders safe.</p>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="banner-two">
-                        <div class="banner-image d-flex align-items-end justify-content-around h-100">
-                            <div class="slider-heading">
-                                <h1 class="mb-lg-3">iCop | RADAR SPEED SIGN</h1>
-                                <h6>No.1 In Traffic Claming Solution</h6>
-                                <p class="mb-0">Best Safety Score with standout visibility and features,</p>
-                                <p>reduction in accidents, and keeping riders safe.</p>
-                            </div>
 
-                        </div>
 
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="banner-two">
-                        <div class="banner-image d-flex align-items-end justify-content-around h-100">
-                            <div class="slider-heading">
-                                <h1 class="mb-lg-3">iCop | RADAR SPEED SIGN</h1>
-                                <h6>No.1 In Traffic Claming Solution</h6>
-                                <p class="mb-0">Best Safety Score with standout visibility and features,</p>
-                                <p>reduction in accidents, and keeping riders safe.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button> -->
-        </div>
-    </section>
     <!-- Photon play radar-start -->
     <section class="portable px-lg-5">
         <div class="container">
@@ -108,7 +39,7 @@
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
                         <h2 class="fs-md-2 mt-3">Our Products</h2>
-                        <h6 class="fs-6 text-colorr">Our product offers innovative solutions to meet your needs and
+                        <h6 class="fs-6 text-colorr text-uppercase">Our product offers innovative solutions to meet your needs and exceed your expectations.
                         </h6>
                     </div>
                 </div>
@@ -126,7 +57,7 @@
                                         Radar Speed Sign
                                     </span>
                                     <span class="d-block"><?php echo e($product->title); ?></span>
-                                    <div class="d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-center align-items-center my-2">
                                         <img src="<?php echo e(asset('assets\customer\images\star.svg')); ?>" alt="Not Found" class="img-fluid"
                                             width="14px">
                                         <img src="<?php echo e(asset('assets\customer\images\star.svg')); ?>" alt="Not Found" class="img-fluid"
@@ -235,11 +166,14 @@
                     <div class="col-md-6">
                         <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
                             <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="flush-headingOne">
+                                <h2 class="accordion-header">
                                     <button
-                                        class="accordion-button  collapsed bg-white shadow-none py-3 pb-2 shadow-none"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                        class="accordion-button collapsed bg-white shadow-none py-3 pb-2 shadow-none"
+                                        type="button" 
+                                        data-bs-toggle="collapse" 
+                                        data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false" 
+                                        aria-controls="flush-collapseOne">
                                         Dimensions and weight
                                     </button>
                                 </h2>

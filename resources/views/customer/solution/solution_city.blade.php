@@ -3,46 +3,24 @@
     <!-- header-end -->
     <!-- banner-start -->
     <section class="banner-inner pt-0 pb-0">
-        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="banner">
                         <div class="security-imageses p-2">
-                        </div>
-                    </div>
+                        <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
+                  <div>
+                  <h2 class="text-uppercase fs-2 text-white fw-normal">SMART CITIES SOLUTIONS</h2>
+                    <h6 class="text-white mt-3">
+                    Transform urban mobility and drive sustainable growth with our comprehensive ITS solutions
+ <br> that enable seamless integration and smarter decision-making for cities of the future.
+                    </h6>
+                    <button class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</button>
+                  </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="banner">
-                        <div class="security-imageses p-2">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="banner">
-                        <div class="security-imageses p-2">
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
     </section>
 
     <!-- Multiple Size Options-start -->
@@ -201,7 +179,7 @@
                 <!-- <div class="col-lg-12">
                     <div class="row justify-content-center"> -->
                 <div class="col-lg-3">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
                         </div>
@@ -213,7 +191,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
                         </div>
@@ -225,7 +203,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
                         </div>
@@ -237,7 +215,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="inner-bus text-center py-5 px-3 h-100">
+                    <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
                         </div>
