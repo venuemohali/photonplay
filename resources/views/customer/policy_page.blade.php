@@ -8,13 +8,9 @@
                <h4 class="text-dark">  {{$record->title}}</h4>
                 <hr/>
             </div>
-
             <div class="col-lg-12 col-md-12">
                 {!!  $record->description!!}
             </div>
-
-
-
         </div>
     </div>
 </section>

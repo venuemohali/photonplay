@@ -5,7 +5,7 @@
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
         </div>
         <div class="logo-icon-wrapper" style="padding: 15px 30px;"><a href="<?php echo e(route('admin.dashboard')); ?>"> <h4> P</h4> </a></div>
-        
+
         <nav class="sidebar-main">
             <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
             <div id="sidebar-menu">
@@ -91,6 +91,15 @@
                                     <li class="p-2"><a href="<?php echo e(route('admin.show_page_content','return-policy')); ?>" class="link-dark rounded">5. Refund/Return Policy</a></li>
                                 </ul>
                             </div>
+
+                        </li>
+
+                        <li class="sidebar-list">
+
+                            <a class="sidebar-link sidebar-title link-nav <?php echo e(Request::is('admin/contact-us') ? 'active':''); ?>" href="<?php echo e(route('admin.contact_us_index')); ?>">
+                                <i data-feather="mail"></i>
+                                <span>Contact Us</span>
+                            </a>
 
                         </li>
 

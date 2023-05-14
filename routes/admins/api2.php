@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminContactusController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ClientsLogosController;
 use App\Http\Controllers\ContentPageController;
@@ -113,3 +114,9 @@ Route::put('/cms/banners/{id}', [BannerController::class,'update'])
 
 
 Route::delete('/cms/banners/{id}', [BannerController::class,'destroy'])->name("banners_delete");
+
+
+
+Route::get('/contact-us', [AdminContactusController::class,'index'])->name("contact_us_index");
+
+
