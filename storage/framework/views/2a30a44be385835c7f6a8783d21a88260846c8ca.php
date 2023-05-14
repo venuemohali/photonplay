@@ -124,4 +124,5 @@ $blogs = Blog::select('slug','title')->take(4)->get();
               <p>© 2023 Photonplay Systems Inc. All right reserved</p>
           </div>
        </div>
+
 <?php /**PATH D:\photon_main\main_photo\photonplay\resources\views/customer/layout2/footer.blade.php ENDPATH**/ ?>
