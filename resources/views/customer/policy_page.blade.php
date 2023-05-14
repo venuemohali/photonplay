@@ -7,9 +7,6 @@
             <div class="col-lg-12 col-md-12 mb-2">
                <h4 class="text-dark">  {{$record->title}}</h4>
                 <hr/>
-                @if(isset($record->image))
-               <img src="{{asset('storage/'.$record->image)}}"  class="img-fluid w-100 shadow-lg"/>
-                @endif
             </div>
 
             <div class="col-lg-12 col-md-12">
