@@ -17,7 +17,7 @@ class SocialLoginController extends Controller
 
     public function handleGoogleCallback(){
         try {
-            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+            Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
             $user = Socialite::driver('google')->user();
             $finduser = Customer::where('provider_id', $user->id)->first();
 
