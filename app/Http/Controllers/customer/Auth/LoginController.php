@@ -68,7 +68,7 @@ class LoginController extends Controller
 
     public function register(Request $request)
     {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $stripe = Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:customers',
