@@ -175,3 +175,4 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
 });
 
 Route::post('/upload-photo', [CommonController::class, 'upload'])->name('upload-photo-summernote');
+Route::get('photonplay-optimize', [CommonController::class, 'optimize']);
