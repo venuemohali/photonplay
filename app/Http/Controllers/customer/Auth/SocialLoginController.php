@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 use Stripe;
 
@@ -23,7 +24,7 @@ class SocialLoginController extends Controller
 
             if($finduser){
                 Auth::guard('customer')->login($finduser);
-
+                Session::put('user', Auth::guard('customer')->user());
                 return redirect()->intended('radar-speed-signs');
 
             }else{
@@ -43,6 +44,7 @@ class SocialLoginController extends Controller
                 }
 
                 Auth::guard('customer')->login($newUser);
+                Session::put('user', Auth::guard('customer')->user());
 
                 return redirect()->intended('radar-speed-signs');
             }
