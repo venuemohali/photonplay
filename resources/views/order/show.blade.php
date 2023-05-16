@@ -1,3 +1,6 @@
+@php
+use App\Models\ProductSpcializationOption;
+@endphp
 @extends('user-master')
 
 @section('title', 'Show Orders')
@@ -77,7 +80,18 @@
                                         <td>{{ $prod->product_id }}</td>
                                         <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found" /></td>
                                         <td>{{ $prod->title }}</td>
-                                        <td>{{ $prod->option_ids }}</td>
+                                        <td>
+                                            @foreach (explode(',',$prod->option_ids) as $option)
+                                                @php
+                                                $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
+                                                
+                                                @endphp
+                                                @foreach ($options as $opp)
+                                                    {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br> 
+                                                @endforeach
+                                            @endforeach
+                                           
+                                        </td>
                                         <td>{{ $prod->quantity }}</td>
                                         <td>${{$prod->price}}/-</td>
                                     </tr>
