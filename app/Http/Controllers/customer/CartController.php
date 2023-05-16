@@ -148,7 +148,7 @@ class CartController extends Controller
     public function placeOrder(Request $request){
         try{
             $orderId ='#'.mt_rand(1111, 99999);
-            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+            $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
                header('Content-Type: application/json');
                $price = \Stripe\Price::create([
                    'unit_amount' => $request->grand_total * 100,
@@ -208,7 +208,7 @@ class CartController extends Controller
     }
 
     public function checkoutSuccess(Request $request){
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+       $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
             $orderId = $request->order_id;
             $order =  Order::where('order_number',$orderId)->first();
             $checkout =  \Stripe\Checkout\Session::retrieve($order->trx_id);
