@@ -64,6 +64,7 @@ class LoginController extends Controller
 
     public function register(Request $request)
     {
+        $sessionId = Session::getId();
         $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
         $request->validate([
             'name' => 'required',
@@ -81,7 +82,8 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+        $session = Session::put('user', Auth::guard('customer')->user());
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
         notify()->success('Your account has been registered successfully');
         return redirect()->route('customer.loginForm');
     }

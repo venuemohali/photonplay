@@ -44,7 +44,8 @@
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                12
+
+                                  <img src="{{asset('assets/images/signup_radar2.webp')}}" class="w-100" />
                               </div>
                               <div class="carousel-item">
                                     12
