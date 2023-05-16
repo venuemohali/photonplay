@@ -39,6 +39,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $sessionId = Session::getId();
         $request->validate([
             'email' => 'required',
             'password' => 'required',
@@ -51,14 +52,9 @@ class LoginController extends Controller
             return redirect("/");
         }
 
-        Session::put('user', Auth::guard('customer')->user());
-        notify()->success('Login Successfully');
-        if($request->p == 1){
-            Cart::where('session_id', $request->s)->update(['user_id' => Session::get('user')->id]);
-            return redirect()->route('customer.shopping.bag');
-        }else{
-            return redirect()->intended('radar-speed-signs');
-        }
+        $session = Session::put('user', Auth::guard('customer')->user());
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        return redirect()->intended('radar-speed-signs');
     }
 
     public function registerForm()

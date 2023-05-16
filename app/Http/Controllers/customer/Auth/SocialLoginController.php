@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\customer\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,7 @@ class SocialLoginController extends Controller
 
     public function handleGoogleCallback(){
         try {
+            $sessionId = Session::getId();
             Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
             $user = Socialite::driver('google')->user();
             $finduser = Customer::where('provider_id', $user->id)->first();
@@ -25,6 +27,7 @@ class SocialLoginController extends Controller
             if($finduser){
                 Auth::guard('customer')->login($finduser);
                 Session::put('user', Auth::guard('customer')->user());
+                Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
                 return redirect()->intended('radar-speed-signs');
 
             }else{
@@ -45,7 +48,7 @@ class SocialLoginController extends Controller
 
                 Auth::guard('customer')->login($newUser);
                 Session::put('user', Auth::guard('customer')->user());
-
+                Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
                 return redirect()->intended('radar-speed-signs');
             }
 
