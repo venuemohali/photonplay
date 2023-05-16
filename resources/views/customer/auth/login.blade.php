@@ -44,15 +44,16 @@
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                             </div>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    12
+                                <div class="carousel-item  active">
+                              <img src="{{asset('assets/images/login_traffic.webp')}}" class="w-100"  />
                                 </div>
-                                <div class="carousel-item">
-                                    12
-                                </div>
-                                <div class="carousel-item">
-                                    12
-                                </div>
+{{--                                <div class="carousel-item">--}}
+{{--                                    <img src="https://pbs.twimg.com/media/FsnPfg4WIAAz5Ve?format=jpg&name=large" class="w-100"  />--}}
+
+{{--                                </div>--}}
+{{--                                <div class="carousel-item">--}}
+{{--                                    12--}}
+{{--                                </div>--}}
                             </div>
 
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
