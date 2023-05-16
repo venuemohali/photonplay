@@ -39,6 +39,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $sessionId = Session::getId();
         $request->validate([
             'email' => 'required',
             'password' => 'required',
@@ -53,12 +54,14 @@ class LoginController extends Controller
 
         Session::put('user', Auth::guard('customer')->user());
         notify()->success('Login Successfully');
-        if($request->p == 1){
-            Cart::where('session_id', $request->s)->update(['user_id' => Session::get('user')->id]);
-            return redirect()->route('customer.shopping.bag');
-        }else{
-            return redirect()->intended('radar-speed-signs');
-        }
+//        if($request->p == 1){
+//
+//            return redirect()->route('customer.shopping.bag');
+//        }else{
+//            return redirect()->intended('radar-speed-signs');
+//        }
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        return redirect()->intended('radar-speed-signs');
     }
 
     public function registerForm()
@@ -68,6 +71,7 @@ class LoginController extends Controller
 
     public function register(Request $request)
     {
+        $sessionId = Session::getId();
         $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
         $request->validate([
             'name' => 'required',
@@ -85,7 +89,8 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+        Session::put('user', Auth::guard('customer')->user());
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
         notify()->success('Your account has been registered successfully');
         return redirect()->route('customer.loginForm');
     }
