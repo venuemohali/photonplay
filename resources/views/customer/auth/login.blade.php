@@ -45,7 +45,7 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item  active">
-                              <img src="{{asset('assets/images/login_traffic.webp')}}" class="w-100"   style="height: 100%;object-fit: cover;"/>
+                              <img src="{{asset('assets/images/radar_road.webp')}}" class="w-100"   style="height: 100%;object-fit: cover;"/>
                                 </div>
 {{--                                <div class="carousel-item">--}}
 {{--                                    <img src="https://pbs.twimg.com/media/FsnPfg4WIAAz5Ve?format=jpg&name=large" class="w-100"  />--}}

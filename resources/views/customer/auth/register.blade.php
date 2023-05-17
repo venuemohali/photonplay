@@ -39,20 +39,20 @@
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>--}}
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>--}}
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
 
-                                  <img src="{{asset('assets/images/signup_radar2.webp')}}" class="w-100" style="height: 100%;object-fit: cover;"/>
+                                  <img src="{{asset('assets/images/highways_log.webp')}}" class="w-100" style="height: 100%;object-fit: cover;"/>
                               </div>
-                              <div class="carousel-item">
-                                    12
-                              </div>
-                              <div class="carousel-item">
-                                12
-                              </div>
+{{--                              <div class="carousel-item">--}}
+{{--                                    12--}}
+{{--                              </div>--}}
+{{--                              <div class="carousel-item">--}}
+{{--                                12--}}
+{{--                              </div>--}}
                             </div>
 
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
