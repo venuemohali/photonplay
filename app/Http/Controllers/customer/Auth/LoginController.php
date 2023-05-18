@@ -128,7 +128,7 @@ class LoginController extends Controller
 
             return redirect()->route('home');
         }
-        }catch(QueryException $e) {
+        }catch(\Illuminate\Database\QueryException $e) {
             if ($e->errorInfo[1] == 1062) {
                 return back()->with('error', 'This email has been registered by normal signup.');
             } else {
