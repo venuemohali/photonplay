@@ -41,3 +41,6 @@
 <meta name="language" content="English">
 <meta name="revisit-after" content="7 days">
 <meta name="author" content="Photonplay">
+
+<meta property="og:image" content="{{asset('assets\customer\images\logo-dark.png')}}">
+<meta property="twitter:image" content="{{asset('assets\customer\images\logo-dark.png')}}">
