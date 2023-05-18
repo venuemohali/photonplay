@@ -54,7 +54,6 @@ class SocialLoginController extends Controller
 
         }
         catch (\Exception $e) {
-//            dd($e->getMessage());
             return redirect('/login')->with('error', 'This email has been registered by normal signup.');
         }
     }
