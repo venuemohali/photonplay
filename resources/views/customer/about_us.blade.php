@@ -2,7 +2,8 @@
 
 $seo_meta=[
     "title"=>"About us",
-    "description"=>"PhotonPlay is a financially independent, global technology company established in 2006 with wholly-owned subsidiaries in the USA, Norway, and Australia."
+    "description"=>"PhotonPlay is a financially independent, global technology company established in 2006 with wholly-owned subsidiaries in the USA, Norway, and Australia.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
 ];
 
     ?>
