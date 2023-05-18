@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12 position-sticky top-0 h-100">
                     <div class="search mb-5 position-relative">
                         <input type="text" placeholder="Search" class="border-0 ">
                         <i class="bi bi-search"></i>

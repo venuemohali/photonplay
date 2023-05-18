@@ -3,8 +3,8 @@
 <body>
     <div class="container-cus pt-lg-5 pt-3">
         <div class="login-sec">
-            <div class="form-section p-3"  style="height: 100vh;">
-                <div class="d-flex form-section-inner"  style="height: 100%;">
+            <div class="form-section p-3" >
+                <div class="d-flex form-section-inner" >
                     <div class="login-parent">
                         <div class="login-parent-inner">
                             <h2 class="mb-lg-5 mb-4">Enter your <br />Email</h2>
@@ -20,17 +20,14 @@
 
                         </div>
                     </div>
-                    <div class="slider d-none d-lg-block" style="height: 95vh;">
+                    <div class="slider d-none d-lg-block" >
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
-{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>--}}
-{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>--}}
-{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>--}}
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
 
-                                    <img src="{{asset('assets/customer/images/forgot_pass.webp')}}"  class="w-100"   style="height: 100%;object-fit: cover;"/>
+                                    <img src="{{asset('assets/customer/images/forgot_pass.webp')}}"  class="w-100" style="height: 100%;object-fit: cover;"/>
                                 </div>
 
                             </div>

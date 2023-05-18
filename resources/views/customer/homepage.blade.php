@@ -338,18 +338,20 @@
                             </p>
                         </div>
                     </div> -->
+                </div>
                 </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form pt-3">
+    <section class="contact-form pt-3" id="inquiry">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-md-6 mx-auto">
                     <form action="{{route('customer.inquery.submit')}}" method="post">
                         @csrf
+                        <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                         <div class="row bg-grant p-lg-5  p-3">
                         <div class="col-lg-12">
                             <div class="text-start text-white pb-4">
