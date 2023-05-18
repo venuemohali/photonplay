@@ -1,3 +1,11 @@
+<?php
+
+$seo_meta=[
+    "title"=>"About us",
+    "description"=>"PhotonPlay is a financially independent, global technology company established in 2006 with wholly-owned subsidiaries in the USA, Norway, and Australia."
+];
+
+    ?>
 @include('customer.layout2.header')
     <!-- header-end -->
     <!-- banner-text-start -->
