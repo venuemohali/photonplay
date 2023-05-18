@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"{$page->title}",
+    "description"=>"{$page->description}",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 
 <body>
@@ -37,7 +44,7 @@
                                         <div class="thumb-image-item mb-3">
                                             <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div> 
+                                        </div>
                                         @empty
 
                                         @endforelse

@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Variable Message Signs (VMS)",
+    "description"=>"Photonplay’s outperforming VMS signs are highly reliable and rugged components of traffic management ecosystem for motorways, tunnels and urban traffic management systems.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
+
 @include('customer.layout2.header')
 
 <body>

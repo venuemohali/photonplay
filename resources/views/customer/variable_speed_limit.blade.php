@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"{$page->title}",
+    "description"=>"{$page->description}",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 <body>
 
@@ -37,9 +44,9 @@
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
                                         </div>
                                         @empty
-                                            
+
                                         @endforelse
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </section>
@@ -170,7 +177,7 @@
     <!-- contact form -->
 @include('customer.layout2.get_in_touch')
     <!-- Contact form end -->
-   
+
     <!-- _____________________ourclint-last-start___________________ -->
 @include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->

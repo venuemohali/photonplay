@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Portable Variable Message Signs (VMS)",
+    "description"=>"Photonplay’s outperforming VMS signs are highly reliable and rugged components of traffic management ecosystem for motorways, tunnels and urban traffic management systems.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
+
 @include('customer.layout2.header')
 <!-- banner-start -->
     <section class="banner-threee position-relative pt-0">
@@ -67,7 +75,6 @@
             <div class="row">
                 <div class="col-lg-6 ">
                     <div class="radar-icop">
-                        <h6 class="fs-6 mb-3">photonplay’s</h6>
                         <h1 class="mb-">Portable Variable <br> Message Signs (VMS) </h1>
                         <span class="text-uppercase">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span>
                         <p class="mt-4 mb-lg-0 mb-5">
@@ -94,7 +101,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
-                        <h6 class="fs-6 text-colorr">photonplay’s </h6>
                         <h2 class="fs-md-2 fs-lg-1 mt-3 fw-bold">iCop Series</h2>
                     </div>
                 </div>
@@ -117,13 +123,13 @@
                             </ul>
                         </div>
                     </div>
-                </div>  
+                </div>
             </a>
 @endforeach
 
 @empty
-    
-@endforelse  
+
+@endforelse
             </div>
         </div>
     </section>

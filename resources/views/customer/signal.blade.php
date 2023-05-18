@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"SIGNAGES",
+    "description"=>"Tunnel signage is a crucial component of tunnel safety since it assists vehicles in securely and effectively navigating tunnels.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 <body>
 
