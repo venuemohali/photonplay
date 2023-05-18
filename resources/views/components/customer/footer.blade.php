@@ -62,5 +62,6 @@
 <section class="sec-copyright py-3 border-top px-2 text-center">
     <div>Photon Play Systems - © 2023 All Rights Reserved <a href="#">Privacy Policy</a></div>
 </section>
+
 </body>
 </html>

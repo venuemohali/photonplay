@@ -10,41 +10,47 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 class PasswordController extends Controller
 {
     public function forepassPasswordForm()
     {
+
+        $loginuser_validate=Session::get('user');
+        if($loginuser_validate){
+            return redirect("radar-speed-signs");
+        }
         return view('customer.auth.forgot_password_form');
     }
 
     public function forgotPassword(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'email' => 'required|exists:customers'
         ]);
+
+        if($validator->fails()){
+            return redirect()->back()->with('error',  $validator->errors()->first());
+        }
 
         $token = Str::random(64);
 
         DB::table('password_resets')->insert([
-            'email' => $request->email, 
+            'email' => $request->email,
             'token' => $token,
             'created_at' => Carbon::now()
         ]);
 
-        // Mail::send('email.reset-password-mail', ['token' => $token], function ($message) use ($request) {
-        //     $message->to($request->email);
-        //     $message->subject('Reset Password');
-        // });
         $data = [
             'token' => $token,
             'email' => $request->email,
             'created_at' => now(),
         ];
         ResetPasswordJob::dispatch($data);
-        notify()->success('We have e-mailed your password reset link!');
-        return back();
+        return redirect()->back()->with('success', "We have e-mailed your password reset link!");
     }
 
     public function resetPassword($token)

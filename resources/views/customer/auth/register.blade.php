@@ -19,7 +19,7 @@
                                     <input type="email" name="email" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
                                 <label for="">Password</label>
-                                <div class="input-group input-cus-group mb-1">
+                                <div class="input-group input-cus-group mb-4">
                                     <input type="password" name="password" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
                                     <span class="input-group-text toggle-password">
                                      <i class="bi bi-eye"></i>
@@ -38,7 +38,7 @@
                     <div class="slider d-none d-lg-block" style="height: 95vh;">
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>--}}
 {{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>--}}
 {{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>--}}
                             </div>

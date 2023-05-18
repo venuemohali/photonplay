@@ -32,6 +32,12 @@ class LoginController extends Controller
 
     public function loginForm(Request $request)
     {
+
+        $loginuser_validate=Session::get('user');
+        if($loginuser_validate){
+            return redirect("radar-speed-signs");
+        }
+
         $p = $request->p;
         $s = $request->s;
         return view('customer.auth.login', compact('p', 's'));
@@ -40,25 +46,30 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $sessionId = Session::getId();
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'email' => 'required',
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
-        if (!Auth::guard('customer')->attempt($credentials)) {
-            // return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
-            notify()->error('Email or Password doesnt match');
-            return redirect("/");
+        if($validator->fails()){
+            return redirect()->back()->with('error',  $validator->errors()->first());
         }
 
+        $credentials = $request->only('email', 'password');
+        if (!Auth::guard('customer')->attempt($credentials)) {
+            return redirect()->back()->with('error', "You have entered invalid credentials");
+        }
         $session = Session::put('user', Auth::guard('customer')->user());
         Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
-        return redirect()->intended('radar-speed-signs');
+        return redirect()->intended('radar-speed-signs')->with('success', ' Logged in successfully !');
     }
 
     public function registerForm()
     {
+        $loginuser_validate=Session::get('user');
+        if($loginuser_validate){
+            return redirect("radar-speed-signs");
+        }
         return view('customer.auth.register');
     }
 
@@ -66,26 +77,30 @@ class LoginController extends Controller
     {
         $sessionId = Session::getId();
         $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
-        $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:customers',
             'password' => 'required|min:6',
         ]);
 
+        if($validator->fails()){
+            return redirect()->back()->with('error',  $validator->errors()->first());
+        }
+
         $customer = \Stripe\Customer::create([
             'email' => $request->email,
             'name' => $request->name,
         ]);
-        Customer::create([
+        $customer = Customer::create([
             'stripe_id' => $customer->id,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        $session = Session::put('user', Auth::guard('customer')->user());
+        $session = Session::put('user', $customer);
         Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
-        notify()->success('Your account has been registered successfully');
-        return redirect()->route('customer.loginForm');
+        return redirect()->route('customer.loginForm')->with('success', 'Your account has been registered successfully');
     }
 
     public function redirect($provider)

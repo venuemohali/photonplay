@@ -124,4 +124,39 @@ $blogs = Blog::select('slug','title')->take(4)->get();
               <p>© 2023 Photonplay Systems Inc. All right reserved</p>
           </div>
        </div>
+<script>
+    @if (session()->has('success'))
+    Toastify({
+        text: '{{ session('success') }}',
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "green",
+            color:"text",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+    @endif
 
+    @if (session()->has('error'))
+    Toastify({
+        text: '{{ session('error') }}',
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "#FF3333",
+            color:"text",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+    @endif
+
+</script>
