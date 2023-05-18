@@ -49,19 +49,13 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
                         <!-- <span class="text-capitalize d-block">Three Size Options To Choose From</span> -->
-                        <p>Viewed by millions of eyes everyday, guiding way to millions of motorist to drive them back
-                            home safely every day, Photonplay is contributing its part to the humanity in it own way by
-                            enhanced road and traffic safety.
+                        <p style="text-align: justify;">
+                            Variable Message Signs play a crucial role in displaying messages, warning signals, and information about specific events to commuters on roads. At Photonplay, our Variable Message Signs (VMS) enhance road and traffic safety by guiding millions of motorists every day. Our VMS product range includes a variety of highly reliable and rugged solutions designed specifically for traffic guidance and information purposes.
 
                         </p>
-                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
-                        <ul class="ps-3">
-                            <li> Smart City VMS</li>
-                            <li> Full Color</li>
-                            <li> Solar VMS</li>
-                            <li> Mobile VMS</li>
-                            <li> Radar Speed Signs</li>
-                        </ul>
+                        <p style="text-align: justify;">
+                            Explore our VMS product range and choose from our Standard VMS, Solar VMS, and Smart City VMS solutions. Each of our solutions is designed to cater to the unique needs of traffic management systems. Our VMS signs are built with the latest technology and advanced features to ensure the highest level of performance and reliability. Click Explore Products to learn more and enhance road and traffic safety with our Variable Message Signs.
+                        </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -70,10 +64,12 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/vms_squre.webp') }}" alt="Not Found" class="img-fluid shadow-none">
+
                     </div>
                 </div>
             </div>
+
 
             <div class="row py-lg-5 py-0 align-items-center">
                 <!-- option-two -->
@@ -82,19 +78,13 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         <h4>Variable Speed Limit Sign (VSLS) </h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
-                            conditions</span> -->
-                        <p>Variable Speed Limit Signs (VSLS) are highly capable and innovative, creating instant
-                            awareness of speed limits centrally controlled from ITS systems . Full matrix display area
-                            able to display speed limits and graphics, allowing virtually any speed to be displayed.
+
+                        <p style="text-align: justify;">
+                            The Variable Speed Limit Sign (VSLS) is a revolutionary solution that generates instant recognition of centrally regulated speed limits from ITS systems. Our VSLS features a full matrix display area that allows speed limits and graphics to display practically any speed. Drive confidently on the highways with our advanced ITS solutions, including the VSLS, designed to improve traffic flow and enhance road safety. Our systems provide real-time information and analytics for better decision-making and efficient operations.
                         </p>
-                        <ul class="ps-3">
-                            <!-- <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li> -->
-                        </ul>
+                    <p style="text-align: justify;">
+                        Our VSLS is perfect for applications on roads, highways, and tunnels, providing a fully competent solution for generating instant recognition of speed limits. Improve road safety and traffic flow with the advanced features of our Variable Speed Limit Sign. Explore our VSLS for safer and more efficient highways.
+                    </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -103,7 +93,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/vsls_squre.webp') }}" alt="Not Found" class="img-fluid shadow-none">
                     </div>
                 </div>
             </div>
@@ -114,19 +104,12 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                     <div class="multiple-option pb-0">
                         <h4>Portaible Variable Message Sign (PVMS) </h4>
 
-                        <p>Photonplay's Portable Variable Message Signs (VMS) are one of the key elements of dynamic
-                            traffic management systems. Depending on the traffic situation, signs are efficiently used
-                            to warn and guide about traffic congestion, routing information, speed limits, road work
-                            zones, accidents and other incidents on highways, expressways and arterial roads of cities.
+                        <p style="text-align: justify;">
+                            Our Portable Variable Message Signs (PVMS) offer flexible and efficient traffic management solutions. Easily transportable and with a range of display options, they enhance road safety and traffic flow. Our advanced ITS solutions provide real-time information and analytics for better decision-making.
                         </p>
-                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
-                        <ul class="ps-3">
-                            <li> Smart City VMS</li>
-                            <li> Full Color</li>
-                            <li> Solar VMS</li>
-                            <li> Mobile VMS</li>
-                            <li> Radar Speed Signs</li>
-                        </ul>
+                     <p style="text-align: justify;">
+                         Our PVMS is ideal for applications on roads, highways, and tunnels, providing a highly reliable and rugged solution for traffic guidance and information purposes. Explore our PVMS solutions and discover how we can help you enhance road safety and traffic flow with our advanced ITS technology.
+                     </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -135,7 +118,8 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/pvms.webp') }}" alt="Not Found" class="img-fluid shadow-none">
+
                     </div>
                 </div>
             </div>
@@ -146,19 +130,10 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                     <div class="multiple-option pb-0">
                         <h4>Vehicle Actuated Speed Display (VASD) </h4>
                         <h6 class="mb-3">Your detail Line here</h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
-                            conditions</span> -->
-                        <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... </p>
-                        <ul class="ps-3">
 
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                        </ul>
+                        <p style="text-align: justify;">
+                            Looking to revolutionize traffic management? Look no further than our Vehicle Actuated Speed Display (VASD). Our cutting-edge solution generates instant recognition of vehicle speed and displays the information to the driver using a full matrix display area. The VASD is highly reliable and efficient, making it ideal for roads, highways, and tunnels. Let us help you enhance road safety and traffic flow with our advanced ITS technology. Explore our VASD solutions today!
+                        </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -167,39 +142,12 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/vasd.webp') }}" alt="VASD" class="img-fluid shadow-none">
+
                     </div>
                 </div>
             </div>
-            <!-- <div class="row py-lg-5 py-0 align-items-center">
-                option-two
 
-            <div class="col-lg-6">
-                <div class="multiple-option pb-0">
-                    <h4>Lane Control System (LCS) </h4>
-                    <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                        Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                        Brief lines here...... Brief lines here...... Brief lines here...... </p>
-                    <ul class="ps-3">
-
-                        <li> Point head <span> - details</span></li>
-                        <li> Point head <span> - details</span></li>
-                        <li> Point head <span> - details</span></li>
-                        <li> Point head <span> - details</span></li>
-                        <li> Point head <span> - details</span></li>
-                    </ul>
-                    <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                        <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
-                        <img src="./assets/images/Dot-Patternc.jpg" alt="Not Found" class="img-fluid" width="80">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="img-left">
-                    <img src="./assets/images/BG-area.png" alt="Not Found" class="img-fluid">
-                </div>
-            </div>
-        </div> -->
         </div>
         </div>
         </div>
@@ -209,48 +157,54 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
     <section class="bus-sign">
         <div class="container">
             <div class="responsive">
-                <!-- <div class="col-lg-12">
-                    <div class="row justify-content-center"> -->
+
                 <div class="text-center mx-2">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                            <img src="{{asset('assets/images/solutions/vms_squre.webp') }}" alt="VASD" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Variable Message Sign </p>
                             <p class=""> (VMS)</p>
+                            <a href="{{route('customer.variable.message')}}">
                             <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mx-2">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                            <img src="{{asset('assets/images/solutions/vsls_squre.webp') }}" alt="VSLS" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Variable Speed Limit Sign </p>
                             <p>(VSLS) </p>
+                            <a href="{{route('customer.variable.speed.limit')}}">
                             <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mx-2">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid m-auto">
+                            <img src="{{asset('assets/images/solutions/pvms.webp') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Portable Variable Message Sign </p>
                             <p class="">(PVMS) </p>
+                           <a href="{{route('customer.portable.variable.message.signs')}}">
                             <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                           </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="text-center mx-2">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/images/VSLS.png') }}" alt="not-found" class="img-fluid m-auto">
+                            <img src="{{asset('assets/images/solutions/vasd.webp') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Vehicle Actuated Speed Display </p>
@@ -259,69 +213,9 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         </div>
                     </div>
                 </div>
-                <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
-                        <div class="bus-radious">
-                        <img src="{{asset('assets/images/VSLS.png') }}" alt="not-found" class="img-fluid m-auto">
-                        </div>
-                        <div class="mt-4">
-                            <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
-                        <div class="bus-radious">
-                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
-                        </div>
-                        <div class="mt-4">
-                            <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
-                        <div class="bus-radious">
-                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
-                        </div>
-                        <div class="mt-4">
-                            <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
-                        <div class="bus-radious">
-                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
-                        </div>
-                        <div class="mt-4">
-                            <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
-                        <div class="bus-radious">
-                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
-                        </div>
-                        <div class="mt-4">
-                            <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
-                        </div>
-                    </div>
-                </div>
+
             </div>
-            <!-- </div>
-                </div> -->
+
         </div>
         </div>
     </section>
