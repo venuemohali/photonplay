@@ -21,6 +21,6 @@ class InqueryController extends Controller
         }
        Inquery::create($request->except('_token'));
 
-       return redirect($request->url.'#inquiry')->with('success', 'Inquery Successfully Submitted');
+       return redirect($request->url.'#inquiry')->with('success', 'Inquiry successfully submitted.');
     }
 }
