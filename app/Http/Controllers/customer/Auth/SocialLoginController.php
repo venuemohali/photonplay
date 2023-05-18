@@ -52,15 +52,10 @@ class SocialLoginController extends Controller
                 return redirect()->intended('radar-speed-signs');
             }
 
-        }catch(\Illuminate\Database\QueryException $e) {
-            if ($e->errorInfo[1] == 1062) {
-                return back()->with('error', 'This email has been registered by normal signup.');
-            } else {
-                return back()->with('error', $e->getMessage());
-            }
         }
         catch (\Exception $e) {
-            dd($e->getMessage());
+//            dd($e->getMessage());
+            return back()->with('error', 'This email has been registered by normal signup.');
         }
     }
 }
