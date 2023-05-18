@@ -35,7 +35,7 @@
 
                         </div>
                     </div>
-                    <div class="slider d-none d-lg-block h-100" style="height: 95vh;">
+                    <div class="slider d-none d-lg-block h-100" >
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
 
