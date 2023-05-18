@@ -124,7 +124,7 @@ $seo_meta=[
                         @foreach($page->features as $feature)
                             <li>
                                 <div class="content-feature" style="width: 300px;">
-                                    <strong>{{$sr}}{{ $feature->feature}}</strong>
+                                    <strong>{{ $feature->feature}}</strong>
                                     <span>{{$feature->description}}</span>
                                 </div>
                             </li>
