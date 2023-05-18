@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Customer;
 use Illuminate\Auth\Events\Validated;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -124,8 +125,7 @@ class LoginController extends Controller
                 'provider'      => $provider,
             ]);
 
-            }
-            catch (\Illuminate\Database\QueryException $e) {
+            }catch (QueryException $e) {
                 if ($e->errorInfo[1] == 1062) {
                     return back()->with('error', 'This email has been registered by normal signup.');
                 } else {
