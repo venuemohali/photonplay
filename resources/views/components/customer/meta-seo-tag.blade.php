@@ -21,12 +21,12 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{url()}}">
+<meta property="og:url" content="{{\Illuminate\Support\Facades\URL::full()}}">
 
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="{{url()}}">
+<meta property="twitter:url" content="{{\Illuminate\Support\Facades\URL::full()}}">
 
 
 <!-- Static -->
