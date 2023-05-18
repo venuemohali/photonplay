@@ -42,7 +42,7 @@ $seo_meta=[
                 <div class="col-lg-10">
                     <div>
                         <p>
-                            Viewed by millions of eyes everyday, guiding way to millions of motorist to drive them back
+                            Viewed by millions of eyes every day, guiding way to millions of motorist to drive them back
                             home safely every day, Photonplay is contributing its part to the humanity in it own way by
                             enhanced road and traffic safety.
                         </p>
