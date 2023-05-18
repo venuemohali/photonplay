@@ -42,5 +42,5 @@
 <meta name="revisit-after" content="7 days">
 <meta name="author" content="Photonplay">
 
-<meta property="og:image" content="{{asset('assets\customer\images\logo-dark.png')}}">
-<meta property="twitter:image" content="{{asset('assets\customer\images\logo-dark.png')}}">
+<meta property="og:image" content="{{asset('assets\customer\images\KEPLER-US-12.png')}}">
+<meta property="twitter:image" content="{{asset('assets\customer\images\KEPLER-US-12.png')}}">
