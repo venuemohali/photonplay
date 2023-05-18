@@ -768,7 +768,8 @@ div#accordionFlushExample1 {
 .slider {
     /* max-width: calc(100% - 636px); */
     width: 100%;
-    background: var(--primary-color);
+    height: 100%;
+    background: transparent;
     border-radius: 10px;
 }
 
