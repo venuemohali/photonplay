@@ -71,13 +71,14 @@ $seo_meta=[
                                         </div>
                                     </div>
                                 @endforeach
+
                                 <div class="stone-accordian position-absolute d-flex align-items-center ">
                                     <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
                                 </div>
                             </div>
                         </div>
 
-{{--                        <div class="circle-floow foloowers position-relative">--}}
+{{--                        <div class="circle-floow fo loowers position-relative">--}}
 {{--                            <div class="accordion accordion-flush" id="accordionFlushExample1">--}}
 
 {{--                            @foreach ($page->specs as $spec)--}}
