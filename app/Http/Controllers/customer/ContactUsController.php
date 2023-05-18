@@ -136,4 +136,8 @@ class ContactUsController extends Controller
         return view('customer.signages_sub_page', compact('page'));
     }
 
+    public function addPvmsProductForm(){
+        return view('customer.add_pvms_product');
+    }
+
 }
