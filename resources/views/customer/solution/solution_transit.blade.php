@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Transit Solutions",
+    "description"=>"Revolutionize public transportation systems with our advanced ITS solutions that offer
+real-time data, enhanced safety features, and improved passenger experience.",
+    "keywords"=>"Passenger Information Display System (PIDS),Bus Signs,"
+];
+?>
 @include('customer.layout2.header')
     <!-- header-end -->
     <!-- banner-start -->
@@ -72,7 +80,7 @@
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4>Bus  Signs </h4>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
                             Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......

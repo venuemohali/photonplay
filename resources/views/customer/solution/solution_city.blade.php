@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Smart City Solutions",
+    "description"=>"Transform urban mobility and drive sustainable growth with our comprehensive ITS solutions
+that enable seamless integration and smarter decision-making for cities of the future.",
+    "keywords"=>"Radar Speed Sign,Portaible Variable Message Sign (PVMS),Variable Message Sign (VMS),LEDTickers"
+];
+?>
 @include('customer.layout2.header')
 
     <!-- header-end -->
@@ -73,7 +81,7 @@
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4>Portaible Variable Message Sign (PVMS) </h4>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Photonplay's Portable Variable Message Signs (VMS) are one of the key elements of dynamic
                             traffic management systems. Depending on the traffic situation, signs are efficiently used
@@ -142,7 +150,7 @@
                     <div class="multiple-option pb-0">
                         <h4>LED Tickers </h4>
                         <h6 class="mb-3">Your detail Line here</h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
                             Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......

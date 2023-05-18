@@ -1,8 +1,18 @@
+<?php
+$seo_meta=[
+    "title"=>"Highways Solutions",
+    "description"=>"Experience improved traffic flow and safer journeys with our
+cutting-edge ITS solutions tailored to highways and tunnels.",
+    "keywords"=>"Variable Message Sign (VMS),Variable Speed Limit Sign (VSLS),Portaible Variable Message Sign (PVMS),Vehicle Actuated Speed Display (VASD)"
+];
+?>
+
+
 @include('customer.layout2.header')
     <!-- header-end -->
     <!-- banner-start -->
     <section class="banner-inner pt-0 pb-0">
-      
+
             </div>
                     <div class="banner">
                         <div class="highyway-imageses p-2">
@@ -72,7 +82,7 @@
                         <h4>Variable Speed Limit Sign (VSLS) </h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Variable Speed Limit Signs (VSLS) are highly capable and innovative, creating instant
                             awareness of speed limits centrally controlled from ITS systems . Full matrix display area
@@ -136,7 +146,7 @@
                     <div class="multiple-option pb-0">
                         <h4>Vehicle Actuated Speed Display (VASD) </h4>
                         <h6 class="mb-3">Your detail Line here</h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
                             Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
@@ -300,7 +310,7 @@
                 <div class="text-center mx-2">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">  
+                        <img src="{{asset('assets/images/Smart-cities-icon.png') }}" alt="not-found" class="img-fluid m-auto">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
@@ -320,7 +330,7 @@
     @include('customer.layout2.get_in_touch')
     <!-- _____________________ourclint-last-end___________________ -->
 @include('customer.layout2.footer')
- 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

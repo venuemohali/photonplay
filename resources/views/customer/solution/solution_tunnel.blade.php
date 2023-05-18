@@ -1,9 +1,19 @@
+<?php
+$seo_meta=[
+    "title"=>"Tunnel Solutions",
+    "description"=>"Navigate through tunnels with ease and confidence with our advanced
+ITS solutions designed for optimal safety and efficiency..",
+    "keywords"=>"Variable Message Sign (VMS),Variable Speed Limit Sign (VSLS),Way Finders,Signages"
+];
+?>
+
+
 @include('customer.layout2.header')
 
     <!-- header-end -->
     <!-- banner-start -->
     <section class="banner-inner pt-0 pb-0">
-        
+
             <div class="carousel-inner">
                 <div class="">
                     <div class="banner">
@@ -75,7 +85,7 @@
                         <h4>Variable Speed Limit Sign (VSLS) </h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Variable Speed Limit Signs (VSLS) are highly capable and innovative, creating instant
                             awareness of speed limits centrally controlled from ITS systems . Full matrix display area
@@ -137,7 +147,7 @@
                     <div class="multiple-option pb-0">
                         <h4>Signages </h4>
                         <h6 class="mb-3">Your detail Line here</h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
+                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
                         <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
                             Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
