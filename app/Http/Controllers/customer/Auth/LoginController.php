@@ -110,13 +110,14 @@ class LoginController extends Controller
     }
     public function Callback($provider)
     {
+        try{
         $userSocial =   Socialite::driver($provider)->stateless()->user();
         $users       =   User::where(['email' => $userSocial->getEmail()])->first();
         if ($users) {
             Auth::login($users);
             return redirect('/');
         } else {
-            try{
+
             $user = Customer::create([
                 'name'          => $userSocial->getName(),
                 'email'         => $userSocial->getEmail(),
@@ -125,17 +126,14 @@ class LoginController extends Controller
                 'provider'      => $provider,
             ]);
 
-            }catch (QueryException $e) {
-                if ($e->errorInfo[1] == 1062) {
-                    return back()->with('error', 'This email has been registered by normal signup.');
-                } else {
-                    return back()->with('error', $e->getMessage());
-                }
-            }
-            catch(\Exception $ex){
-                return redirect()->back()->with('error', 'This email has been registered by normal signup');
-            }
             return redirect()->route('home');
+        }
+        }catch(QueryException $e) {
+            if ($e->errorInfo[1] == 1062) {
+                return back()->with('error', 'This email has been registered by normal signup.');
+            } else {
+                return back()->with('error', $e->getMessage());
+            }
         }
     }
 
