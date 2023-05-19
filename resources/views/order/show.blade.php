@@ -34,14 +34,15 @@ use App\Models\ProductSpcializationOption;
                         <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
-                                <select class="form-select  shadow-none m-2">
-                                    <option value="Pending"> Pending</option>
-                                    <option  value="payment_received"> Payment Received</option>
-                                     <option value="Pending"> Pending</option>
-                                    <option  value="payment_received"> Payment Received</option>
-                                     <option value="Pending"> Pending</option>
-                                    <option  value="payment_received"> Payment Received</option>
+                            <form id="myForm">
+                                    @csrf
+                                <select class="form-select" id="myForm"  shadow-none m-2">
+                                    <option value="out for delivery">Out for delivery</option>
+                                    <option value="delevered">Delivered</option>
+                                    <option value="delivery delayed">Delivery delayed</option>
+                                    <option value="delivery cancelled">Delivery cancelled</option>
                                 </select>
+                            </form>
 
                             </span>
                         </h4>
@@ -84,13 +85,13 @@ use App\Models\ProductSpcializationOption;
                                             @foreach (explode(',',$prod->option_ids) as $option)
                                                 @php
                                                 $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
-                                                
+
                                                 @endphp
                                                 @foreach ($options as $opp)
-                                                    {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br> 
+                                                    {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br>
                                                 @endforeach
                                             @endforeach
-                                           
+
                                         </td>
                                         <td>{{ $prod->quantity }}</td>
                                         <td>${{$prod->price}}/-</td>
@@ -187,3 +188,38 @@ use App\Models\ProductSpcializationOption;
 @section('script')
 
 @endsection
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+$('#myForm').on('click', function() {
+    console.log('hello');
+    // if ($(this).prop("checked") == true) {
+    //     var checked = true;
+
+    // } else if ($(this).prop("checked") == false) {
+    //     var checked = false;
+
+    // }
+    // var headers = {
+    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    // };
+    // var data = {
+
+    //     'id': $(this).val(),
+    //     "status": checked
+
+    // };
+    // console.log(data);
+    // {{-- $.ajax({
+    //        type:'POST',
+    //        url:'{{route('admin.product.visibility')}}',
+    //        headers: headers,
+    //        data:data,
+    //        success:function(data) {
+    //         //
+    //         }
+    // }); --}}
+});
+</script>
+

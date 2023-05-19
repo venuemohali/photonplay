@@ -84,7 +84,7 @@ Route::delete('/cms/clients/{id}', [ClientsLogosController::class,'destroy'])->n
 Route::get('/orders', [OrderController::class,'index'])->name("orders_index");
 Route::get('/orders/{id}', [OrderController::class,'show'])->name("orders_show");
 
-
+Route::post('change-order-status', [OrderController::class,'changeOrderStatus'])->name('order.status.submit');
 
 
 
