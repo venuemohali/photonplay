@@ -116,6 +116,7 @@ class PagesController extends Controller
     }
 
     public function store(Request $request){
+        dd($request->sub_page_id);
         $request->validate([
             'cover_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
@@ -155,5 +156,80 @@ class PagesController extends Controller
                 }
             }}
         return redirect()->back()->with('success', 'Gallery Image are successfully uploaded');
+    }
+
+    public function addPvmsProductForm(){
+        $page = Page::with('specs','images','features','galleries')->where('page_type_id', Page::PVMS)->first();
+        return view('customer.add_pvms_product', compact('page'));
+    }
+
+    public function storePvmsProductForm(Request $request){
+        $page1 = Page::create([
+            'page_type_id' => 3,
+            'title' => $request->title,
+            'description' => 'Enter your description',
+            'schema' => 'enter your schema',
+        ]);
+
+        $data = [
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Dimensions and weight',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Display',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Power',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Construction',
+                'description' => '',
+            ]
+        ];
+
+        foreach($data as $i){
+            PageSpec::create($i);
+        }
+
+        $data1 = [
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Batteries',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Capacity',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Solar Panel',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Power Options',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Battery Charger',
+                'description' => '',
+            ],
+        ];
+
+        foreach($data1 as $i){
+            PageFeature::create($i);
+        }
+
+        return redirect()->route('admin.manage.solution.sub.page', Page::PVMS);
     }
 }

@@ -75,7 +75,7 @@
                                 <label for="meta_title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Meta Title') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{$page->meta_title}}" required autocomplete="meta_title" autofocus>
+                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{$page->meta_title}}"  autocomplete="meta_title" autofocus>
 
                                     @error('meta_title')
                                     <span class="invalid-feedback" role="alert">

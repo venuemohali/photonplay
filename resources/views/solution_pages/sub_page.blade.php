@@ -30,10 +30,10 @@
                     <div class="card">
                             <div class="card-header d-flex">
                             <h5 class="card-title">All Products</h5>
-                            <a href="{{route('customer.add.pvms.products')}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                            <a href="{{route('admin.add.pvms.products')}}" class="btn btn-primary ms-auto d-flex align-items-center">
                                 <i data-feather="plus-circle"> </i>
                                 Add Product</a>
-                        </div> 
+                        </div>
                 @endif
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
