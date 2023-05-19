@@ -219,38 +219,3 @@ use App\Models\ProductSpcializationOption;
 
 @endsection
 
-
-        <script>
-
-
-// $('#myForm').on('click', function() {
-//     console.log('hello');
-    // if ($(this).prop("checked") == true) {
-    //     var checked = true;
-
-    // } else if ($(this).prop("checked") == false) {
-    //     var checked = false;
-
-    // }
-    // var headers = {
-    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    // };
-    // var data = {
-
-    //     'id': $(this).val(),
-    //     "status": checked
-
-    // };
-    // console.log(data);
-    // {{-- $.ajax({
-    //        type:'POST',
-    //        url:'{{route('admin.product.visibility')}}',
-    //        headers: headers,
-    //        data:data,
-    //        success:function(data) {
-    //         //
-    //         }
-    // }); --}}
-});
-</script>
-
