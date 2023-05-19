@@ -40,6 +40,7 @@ use App\Models\ProductSpcializationOption;
                                     <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
                                     <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
                                 </select>
+                                 <div id="message"></div>
                             </span>
                         </h4>
                         <div class="shadow-sm p-3">
@@ -202,7 +203,7 @@ use App\Models\ProductSpcializationOption;
                         data: { status: selectedStatus },
                         success: function(response) {
                             console.log('Status saved successfully.');
-                            console.log(response);
+                            $('#message').text('Status updated. Status changed to: ' + selectedStatus);
                         },
                         error: function(xhr, status, error) {
                             console.log('Error saving status: ' + error);
