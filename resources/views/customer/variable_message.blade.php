@@ -152,15 +152,15 @@ $seo_meta=[
                             class="img-fluid bg-white">
                     </div>
                 </div>
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 d-flex align-items-center ">
                     <div class="radar-icop">
-                        <h6 class="fs-6 mb-3 text-dark">GANTRY DESIGNS & MOUNTING</h6>
+                        <h4 class="fs-6 mb-3 text-dark">GANTRY DESIGNS & MOUNTING</h4>
                         <p class="mt-4 mb-lg-0 mb-5">
-                            VMS as the most visible product on a ITS Road, Design and aesthetics are on the most
+                            VMS as the most visible product on an ITS Road, Design and aesthetics are on the most
                             important part along with the functionality, hundreds of designs to choose from. Free
                             Consultation on Gantry design and approvals by our dedicated team of CAD engineers
                         </p>
-                        <button class="btn btn-primary rounded-0">EXPLORE NOW</button>
+
                     </div>
                 </div>
             </div>
