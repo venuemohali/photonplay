@@ -48,6 +48,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
+<a href="#" id="scrollToTopButton" title="Scroll to Top"  style="
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      z-index: 99;">
+    <i class="bi bi-arrow-up-circle" style="font-size: 36px;"></i>
+</a>
 <div>
 <header class="header bg-white py-3 sticky-top">
         <nav class="navbar navbar-expand-lg custome-mega-amenu">
