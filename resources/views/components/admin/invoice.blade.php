@@ -58,7 +58,7 @@
 
     </th>
     <td colspan="3">
-        <p> {$order->order_notes??'Order notes not available.'}}</p>
+        <p> {{$order->order_notes??'Order notes not available.'}}</p>
     </td>
 </tr>
         </table>
