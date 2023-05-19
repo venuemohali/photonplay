@@ -64,7 +64,8 @@ use App\Models\ProductSpcializationOption;
                         <p> Trasaction No. : <span>
                                 {{$order->trx_id}}</span> </p>
                         <p>  <b> Order Note: </b>  {{$order->order_notes??'Order notes not available.'}}</p>
-                            <a href="{{route('admin.generate_order_invoice',$order->id)}}" target="_blank"><i class="bi bi-receipt"></i> </a>
+                            <a href="{{route('admin.generate_order_invoice',$order->id)}}" target="_blank">
+                                <i data-feather="printer"></i>  </a>
                         </div>
                     </div>
                     <div class="card-body">
