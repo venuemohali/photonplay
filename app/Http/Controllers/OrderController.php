@@ -27,4 +27,8 @@ class OrderController extends Controller
 
         return view('order.show',compact('order'));
     }
+
+    public function changeOrderStatus(Request $request){
+        dd($request->all());
+    }
 }
