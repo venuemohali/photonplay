@@ -178,14 +178,7 @@ use App\Models\ProductSpcializationOption;
         <!-- All Client Table End -->
 
 
-
-@endsection
-
-@section('script')
-
-@endsection
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
             $(document).ready(function() {
@@ -215,9 +208,16 @@ use App\Models\ProductSpcializationOption;
                             console.log('Error saving status: ' + error);
                         }
                     });
-                 });
+                });
             });
         </script>
+
+
+        @endsection
+
+@section('script')
+
+@endsection
 
 
         <script>
