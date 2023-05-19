@@ -37,10 +37,20 @@ use App\Models\ProductSpcializationOption;
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
                                 <select class="form-select" id="myForm" name="delivery_status" class="shadow-none m-2">
-                                    <option value="out_for_delivery" {{$order->delivery_status=="out_for_delivery"?"selected":""}}>Out for delivery</option>
+                                    <option value="pending" {{$order->delivery_status=="pending"?"selected":""}}>Pending</option>
+                                    <option value="processing" {{$order->delivery_status=="processing"?"selected":""}}>Processing</option>
+                                    <option value="shipped" {{$order->delivery_status=="shipped"?"selected":""}}>Shipped</option>
                                     <option value="delivered" {{$order->delivery_status=="delivered"?"selected":""}}>Delivered</option>
-                                    <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
-                                    <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
+                                     <option value="completed" {{$order->delivery_status=="completed"?"selected":""}}>Completed </option>
+                                     <option value="cancelled" {{$order->delivery_status=="cancelled"?"selected":""}}>Cancelled</option>
+
+
+                                     <option value="refunded" {{$order->delivery_status=="refunded"?"selected":""}}>Refunded</option>
+                                     <option value="on_hold" {{$order->delivery_status=="on_hold"?"selected":""}}>On Hold</option>
+
+                                     <option value="returned" {{$order->delivery_status=="returned"?"selected":""}}>Returned</option>
+                                        <option value="partially_shipped" {{$order->delivery_status=="partially_shipped"?"selected":""}}> Partially Shipped</option>
+
                                 </select>
 
                             </span>
