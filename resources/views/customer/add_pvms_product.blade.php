@@ -52,9 +52,8 @@
                                 <div class="col-md-12 ">
                                     <h6> Product Information</h6>
                                 </div>
-                                <form method="POST" action="{{route('admin.product.store')}}">
+                                <form method="POST" action="{{route('admin.pvms.product.store')}}">
                                     @csrf
-                                   
                                     <div class="row mb-3 form-group">
                                         <label for="title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Name') }}</label>
 
@@ -69,7 +68,7 @@
                                         </div>
 
                                     </div>
-                                 
+
                                                             <div class="row mb-0">
                                                                 <div class="col-md-6 offset-md-4">
                                                                     <button type="submit" class="btn btn-primary">

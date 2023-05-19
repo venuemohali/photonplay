@@ -104,32 +104,28 @@ $seo_meta=[
                         <h2 class="fs-md-2 fs-lg-1 mt-3 fw-bold">iCop Series</h2>
                     </div>
                 </div>
-@forelse ($products as $product)
-@foreach ($product->products as $item)
-            <a href="{{route('customer.pvms.i.cop', $item->id)}}" class="text-decoration-none">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="text-start p-4 list-unsorted">
-                        <div class="roundedd-image">
-                            <img src="{{asset('assets\customer\images\Photonplay-MTO.png')}}" alt="Not Found" class="img-fluid">
-                        </div>
-                        <div class="my-3 list-bacgund px-4 py-4">
-                            <h5 class="fw-bold text-capitalize">{{$item->title}}</h5>
-                            <ul>
-                                <li>Batteries - 8</li>
-                                <li> Capacity - 6V, 230Ah each</li>
-                                <li> Solar Panel - 180W, 12V</li>
-                                <li> Power Options - Solar/AC</li>
-                                <li> Battery charger - 15A</li>
-                            </ul>
-                        </div>
+<div class="row">
+    @foreach ($products as $item)
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="{{route('customer.pvms.i.cop', $item->id)}}" class="text-decoration-none">
+                <div class="text-start p-4 list-unsorted">
+                    <div class="roundedd-image">
+                        <img src="{{asset('assets\customer\images\Photonplay-MTO.png')}}" alt="Not Found" class="img-fluid">
+                    </div>
+                    <div class="my-3 list-bacgund px-4 py-4">
+                        <h5 class="fw-bold text-capitalize">{{$item->title}}</h5>
+                        <ul>
+                            @foreach ($item->features as $feature)
+                            <li>{{$feature->feature }} - {{$feature->description}}</li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </a>
+            </div>
 @endforeach
+</div>
 
-@empty
-
-@endforelse
             </div>
         </div>
     </section>

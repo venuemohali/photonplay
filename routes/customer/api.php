@@ -41,4 +41,4 @@ Route::any('success-response', [CartController::class, 'checkoutSuccess'])->name
 Route::any('cancel-response', [CartController::class, 'checkoutCancel'])->name('cancel.response');
 Route::get('solution/{slug}', [ContactUsController::class, 'vmsSubPage'])->name('vms.sub.page');
 Route::get('signages/{slug}', [ContactUsController::class, 'signagesSubPage'])->name('signages.sub.page');
-Route::get('add-pvms-products', [ContactUsController::class, 'addPvmsProductForm'])->name('add.pvms.products');
+

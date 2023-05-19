@@ -14,6 +14,8 @@ class Page extends Model
 
     const VMS = 1;
     const VSLS = 2;
+
+    const PVMS = 3;
     const SIGNAGES = 7;
     const PIDS = 8;
     const LCS = 10;
