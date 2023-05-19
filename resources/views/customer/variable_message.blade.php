@@ -304,11 +304,11 @@ $seo_meta=[
                 ]
             })
         })
-        window.addEventListener('click', function (e) {
-            if ($('.navbar-collapse').hasClass('show')) {
-                $('.navbar-toggler').click();
-            }
-        })
+        // window.addEventListener('click', function (e) {
+        //     if ($('.navbar-collapse').hasClass('show')) {
+        //         $('.navbar-toggler').click();
+        //     }
+        // })
     </script>
 
     <script>
@@ -347,16 +347,16 @@ $seo_meta=[
             $(this).parent().siblings().removeClass('active');
         });
 
-        $('.toggler-mega').click(function() {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active')
-                $('.mega-menu').slideUp();
-            } else {
-                $(this).addClass('active');
-                $('.mega-menu').slideDown();
-            }
-
-        })
+        // $('.toggler-mega').click(function() {
+        //     if ($(this).hasClass('active')) {
+        //         $(this).removeClass('active')
+        //         $('.mega-menu').slideUp();
+        //     } else {
+        //         $(this).addClass('active');
+        //         $('.mega-menu').slideDown();
+        //     }
+        //
+        // })
         $('.mega-menu-parent > h4').click(function() {
             var bodyColor = $('.drop-downs').attr("style");
             // console.log(bodyColor)
