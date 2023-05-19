@@ -22,7 +22,8 @@ that enable seamless integration and smarter decision-making for cities of the f
                     Transform urban mobility and drive sustainable growth with our comprehensive ITS solutions
  <br> that enable seamless integration and smarter decision-making for cities of the future.
                     </h6>
-                    <button class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</button>
+                    <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
+
                   </div>
                 </div>
                         </div>

@@ -21,7 +21,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
                     Revolutionize public transportation systems with our advanced ITS solutions that offer
  <br> real-time data, enhanced safety features, and improved passenger experience.
                     </h6>
-                    <button class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</button>
+                      <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
                   </div>
                 </div>
                         </div>
