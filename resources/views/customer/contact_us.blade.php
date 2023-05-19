@@ -61,7 +61,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-10 pe-lg-0">
+                        <div class="col-lg-10  pe-lg-0">
                             <div class="about-undeafeted text-dark">
                                 <div class="text-center">
                                 <h4 class="text-uppercase text-dark mb-4">Reach Our Team </h4>
