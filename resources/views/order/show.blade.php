@@ -31,6 +31,8 @@ use App\Models\ProductSpcializationOption;
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
+                        <p class="text-success">  <div id="message"></div> </p>
+                        <p class="text-danger">  <div id="errormessage"></div> </p>
                         <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
@@ -40,7 +42,7 @@ use App\Models\ProductSpcializationOption;
                                     <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
                                     <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
                                 </select>
-                                 <div id="message"></div>
+
                             </span>
                         </h4>
                         <div class="shadow-sm p-3">
@@ -207,6 +209,8 @@ use App\Models\ProductSpcializationOption;
                         },
                         error: function(xhr, status, error) {
                             console.log('Error saving status: ' + error);
+                            $('#errormessage').text('Error saving status: ' + error);
+
                         }
                     });
                 });
