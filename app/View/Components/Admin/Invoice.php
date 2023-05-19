@@ -17,10 +17,10 @@ class Invoice extends Component
     public function __construct($order)
     {
         $order_detail=Order::with(['orderedProducts','user'])->find($order);
-        foreach($order->orderedProducts as $prd){
-            $prd["title"]=Product::find($prd->product_id)->title;
-            $prd["cover_image"]=Product::find($prd->product_id)->cover_image;
-        }
+//        foreach($order->orderedProducts as $prd){
+//            $prd["title"]=Product::find($prd->product_id)->title;
+//            $prd["cover_image"]=Product::find($prd->product_id)->cover_image;
+//        }
 
        $this->order=$order_detail;
     }
