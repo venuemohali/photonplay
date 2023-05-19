@@ -1,3 +1,13 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
 <div>
     <div class="shadow-sm p-3">
         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
@@ -71,7 +81,7 @@
         <div class="shadow-lg p-4 ">
             <h2> Customer </h2>
             <hr/>
-            <table class="table table-bordered table-hover">
+            <table style="width: 100%" border="1">
                 <thead>
                 <tr>
                     <th>User Id</th>
@@ -100,7 +110,7 @@
         <div class="shadow-lg p-4 ">
             <h2> Billing Address </h2>
             <hr/>
-            <table class="table table-bordered table-hover">
+            <table  style="width: 100%" border="1">
                 <thead>
                 <tr>
                     <th>Billing Street</th>
