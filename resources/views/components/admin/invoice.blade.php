@@ -19,7 +19,7 @@
         <div class="shadow-lg p-4 ">
             <h2> Product </h2>
             <hr/>
-            <table class="table table-bordered  table-hover" style="width: 100%;">
+            <table style="width: 100%;" border="1">
                 <thead>
                 <tr>
                     <th>Product Id</th>
@@ -35,7 +35,7 @@
                 @foreach($order->orderedProducts as $prod)
                     <tr>
                         <td>{{ $prod->product_id }}</td>
-                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found" /></td>
+                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="empty_image" /></td>
                         <td>{{ $prod->title }}</td>
                         <td>
                             @foreach (explode(',',$prod->option_ids) as $option)
