@@ -108,7 +108,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         @endif
                     </div>
 {{--                    <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>--}}
-                    <ul class="social-media pt-md-4 py-4 ps-0 w-100">
+                    <ul class="social-media w-100">
                     <li><a class="" href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
                     <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>

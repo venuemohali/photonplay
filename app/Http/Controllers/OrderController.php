@@ -6,10 +6,39 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\OrderedProduct;
 use App\Models\Product;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return JsonResponse
+     */
+    public function change_status_order(Request $request, $id){
+        $order=Order::find($id);
+        if(isset($request->status)){
+            $order->delivery_status=$request->status;
+            $order->save();
+
+            return response()->json([
+                "success"=>true,
+                "status"=>$request->status,
+                "message"=>"Status Updated",
+            ]);
+        }
+
+        return response()->json([
+            "success"=>false,
+            "status"=>'error',
+            "message"=>"Sorry, unable to change status !",
+        ]);
+
+    }
+
+
     public function index(Request $request){
         $orders=Order::with(['orderedProducts','user'])->select('id','order_number','grand_total','status','payment_status','billing_city','created_at')->get();
 

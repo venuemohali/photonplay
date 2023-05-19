@@ -34,16 +34,12 @@ use App\Models\ProductSpcializationOption;
                         <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
-                            <form id="myForm">
-                                    @csrf
-                                <select class="form-select" id="myForm"  shadow-none m-2">
-                                    <option value="out for delivery">Out for delivery</option>
-                                    <option value="delevered">Delivered</option>
-                                    <option value="delivery delayed">Delivery delayed</option>
-                                    <option value="delivery cancelled">Delivery cancelled</option>
+                                <select class="form-select" id="myForm" name="delivery_status" class="shadow-none m-2">
+                                    <option value="out_for_delivery" {{$order->delivery_status=="out_for_delivery"?"selected":""}}>Out for delivery</option>
+                                    <option value="delivered" {{$order->delivery_status=="delivered"?"selected":""}}>Delivered</option>
+                                    <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
+                                    <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
                                 </select>
-                            </form>
-
                             </span>
                         </h4>
                         <div class="shadow-sm p-3">
@@ -182,44 +178,44 @@ use App\Models\ProductSpcializationOption;
         <!-- All Client Table End -->
 
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-@endsection
+        <script>
+            $(document).ready(function() {
+
+                // Event handler for select element change
+                $('#myForm').change(function() {
+                    var selectedStatus = $(this).val(); // Get the selected value
+                    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+                    // Set the CSRF token in AJAX request headers
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken
+                        }
+                    });
+
+                    // AJAX request to save the status
+                    $.ajax({
+                        url: '{{route('admin.change_status_order_product',$order->id)}}',
+                        method: 'put', // or 'GET' depending on your API
+                        data: { status: selectedStatus },
+                        success: function(response) {
+                            console.log('Status saved successfully.');
+                            console.log(response);
+                        },
+                        error: function(xhr, status, error) {
+                            console.log('Error saving status: ' + error);
+                        }
+                    });
+                });
+            });
+        </script>
+
+
+        @endsection
 
 @section('script')
 
 @endsection
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-
-$('#myForm').on('click', function() {
-    console.log('hello');
-    // if ($(this).prop("checked") == true) {
-    //     var checked = true;
-
-    // } else if ($(this).prop("checked") == false) {
-    //     var checked = false;
-
-    // }
-    // var headers = {
-    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    // };
-    // var data = {
-
-    //     'id': $(this).val(),
-    //     "status": checked
-
-    // };
-    // console.log(data);
-    // {{-- $.ajax({
-    //        type:'POST',
-    //        url:'{{route('admin.product.visibility')}}',
-    //        headers: headers,
-    //        data:data,
-    //        success:function(data) {
-    //         //
-    //         }
-    // }); --}}
-});
-</script>
 

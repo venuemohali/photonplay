@@ -123,3 +123,5 @@ Route::get('/change-inquiry-status/{id}', [AdminContactusController::class,'chan
 
 Route::delete('/delete-inquiry-status/{id}', [AdminContactusController::class,'destroy'])->name("contact_us_delete_inquiry");
 
+Route::put('/order-status-change/{id}', [OrderController::class,'change_status_order'])
+    ->name("change_status_order_product");
