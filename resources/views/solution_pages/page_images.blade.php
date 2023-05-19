@@ -56,7 +56,7 @@
                                 </div>
 
                                 <div class="col-md-4">
-                                    <a href="#" > Download </a>
+                                    <a href="{{route('admin.manage.solution.download.pdf', ['brochure' => $brochure->brochure])}}" > Download </a>
                                 </div>
 
                             </div>
