@@ -65,19 +65,19 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                             <div class="about-undeafeted text-dark">
                                 <div class="text-center">
                                 <h4 class="text-uppercase text-dark mb-4">Reach Our Team </h4>
-                                <p class="text-uppercase">We love the questions & feedback and we are always happy to help! <br/> Here are some ways to contact us.</p>
+                                <p class="text-uppercase">We love the questions & feedback, and we are always happy to help! <br/> Here are some ways to contact us.</p>
                                 </div>
                                <div class="justify-content-around d-flex">
-                                <div>
+                                <div class="m-2">
                                     <h5 class="text-upercase"><u>Talk to Sales</u></h5>
                                     <p>Chat with our sales team to discover how <br> our product can work best for you.</p>
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
-                                <div>
+                                   <div class="m-2">
                                     <h5 class="text-upercase"><u>Contact Customer Support</u></h5>
                                     <p>We are waiting to help you and your team  <br> – so don't hesitate to reach out!</p>
-                                  <button class="btn btn-primary text-uppercase rounded-0 py-0">CONTACT SUPPORT</button>
+{{--                                  <button class="btn btn-primary text-uppercase rounded-0 py-0">CONTACT SUPPORT</button>--}}
                                 </div>
                                </div>
 
@@ -164,7 +164,27 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                         <div class="col-lg-10 pe-lg-0">
                             <div class="row">
                             <!-- <div class="col-lg- mb-5"> -->
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
+                                    <h5 class="text-upercase"><u>INDIA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
+                                        <p class="">Photonplay Systems (P) Ltd.
+                                            <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
+                                    </div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
+                                    <h5 class="text-upercase"><u>CANADA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
+                                        <p class="">Photonplay Systems Ltd. <br>23 Overstone road, Georgetown, Ontario, <br> L7G 0M9 Canada.Photonplay Systems Ltd</p>
+                                    </div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
                                     <h5 class="text-upercase"><u>AUSTRALIA</u></h5>
                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
                                     <p class=""> Photonplay Systems Pty Ltd.
@@ -172,17 +192,12 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
-                                    <h5 class="text-upercase"><u>CANADA</u></h5>
-                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
-                                    <p class="">Photonplay Systems Ltd. <br>23 Overstone road, Georgetown, Ontario, <br> L7G 0M9 Canada.Photonplay Systems Ltd</p>
-</div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
-                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
-                                </div>
+
+
+
                                <!-- </div> -->
                                <!-- <div class="col-lg-"> -->
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
                                     <h5 class="text-upercase"><u>EUROPE</u></h5>
                                     <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
                                     <p class="">Photonplay Systems AS
@@ -191,15 +206,8 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4">
-                                    <h5 class="text-upercase"><u>INDIA</u></h5>
-                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
-                                    <p class="">Photonplay Systems (P) Ltd.
-                                     <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
-</div>
-                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
-                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
-                                </div>
+
+
                                <!-- </div> -->
                             </div>
 </div>
@@ -223,32 +231,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
 
 <!-- end -->
 <!-- Key-projects-start -->
-<section class="key-project pb-0 bg-white">
-    <div class="container-fluid">
-        <div class="col-lg-12">
-            <div class="text-center mb-lg-5">
-                <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions
-                   </p>
-                <p>
-                    are Changing the Game!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="key-slider mb-0">
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-
-    </div>
-</section>
+<x-Customer.KeyProject/>
 <!--___________________ key-project-end_________________ -->
 
 <!-- _____________________Our clint Says start______________________ -->
@@ -301,20 +284,23 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
 <!-- _____________________latest News end______________________ -->
 <!-- _____________________ourclint-last-start___________________ -->
 @include('customer.layout2.our_clients')
-    @include('customer.layout2.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
+@include('customer.layout2.footer')
 
+
+
+<script src="/assets/customer/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/customer/js/jquery.js"></script>
+<script src="/assets/customer/slick/slick.min.js"></script>
+<script>
+    $(document ).ready( function(){
         $('.clint-wrapperr').slick({
             dots: false,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             arrows: true,
             responsive: [
                 {
@@ -384,20 +370,35 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                 // instead of a settings object
             ]
         });
-        $('.clints-content').slick({
+        $('.clints-content-banner').slick({
+            dots: false,
+            infinite: false,
+            // speed: 3000,
+            slidesToShow: 1,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            fade:true,
+        })
+        $('.clints-content-branding').slick({
             dots: false,
             infinite: false,
             speed: 300,
-            slidesToShow: 4,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",
+            slidesToShow: 5,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
             slidesToScroll: 1,
             arrows: true,
+            autoplay:true,
+            // fade:true,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 6,
                     }
                 },
                 {
@@ -414,15 +415,138 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                 }
             ]
         })
-        window.addEventListener('click', function (e) {
-            if (window.innerWidth > 992) {
-                if ($('.navbar-collapse').hasClass('show')) {
-                    $('.navbar-toggler').click();
-                }
-            }
+    })
+    window.addEventListener('click', function (e) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    })
+</script>
 
-        })
 
+
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>--}}
+
+{{--    <script>--}}
+
+{{--        $('.clint-wrapperr').slick({--}}
+{{--            dots: false,--}}
+{{--            infinite: true,--}}
+{{--            speed: 300,--}}
+{{--            slidesToShow: 3,--}}
+{{--            slidesToScroll: 3,--}}
+{{--            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",--}}
+{{--            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",--}}
+{{--            arrows: true,--}}
+{{--            responsive: [--}}
+{{--                {--}}
+{{--                    breakpoint: 1024,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 2,--}}
+{{--                        slidesToScroll: 2,--}}
+{{--                        infinite: true,--}}
+{{--                        arrows: false,--}}
+{{--                        dots: true--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 600,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                        slidesToScroll: 1,--}}
+{{--                        arrows: false,--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 480,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                        slidesToScroll: 1,--}}
+{{--                        arrows: false,--}}
+{{--                    }--}}
+{{--                }--}}
+{{--                // You can unslick at a given breakpoint now by adding:--}}
+{{--                // settings: "unslick"--}}
+{{--                // instead of a settings object--}}
+{{--            ]--}}
+{{--        });--}}
+{{--        $('.key-slider').slick({--}}
+{{--            dots: true,--}}
+{{--            infinite: false,--}}
+{{--            speed: 300,--}}
+{{--            slidesToShow: 1,--}}
+{{--            slidesToScroll: 1,--}}
+{{--            arrows: false,--}}
+{{--            responsive: [--}}
+{{--                {--}}
+{{--                    breakpoint: 1024,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                        slidesToScroll: 1,--}}
+{{--                        infinite: true,--}}
+{{--                        dots: true--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 600,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                        slidesToScroll: 1--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 480,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                        slidesToScroll: 1--}}
+{{--                    }--}}
+{{--                }--}}
+{{--                // You can unslick at a given breakpoint now by adding:--}}
+{{--                // settings: "unslick"--}}
+{{--                // instead of a settings object--}}
+{{--            ]--}}
+{{--        });--}}
+{{--        $('.clints-content').slick({--}}
+{{--            dots: false,--}}
+{{--            infinite: false,--}}
+{{--            speed: 300,--}}
+{{--            slidesToShow: 4,--}}
+{{--            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./assets/images/left-chevron.png'/></button>",--}}
+{{--            nextArrow: "<button type='button' class='slick-next pull-right'><img src='./assets/images/right-chevron.png'/></button>",--}}
+{{--            slidesToScroll: 1,--}}
+{{--            arrows: true,--}}
+{{--            responsive: [--}}
+{{--                {--}}
+{{--                    breakpoint: 1024,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 3,--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 600,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 480,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                    }--}}
+{{--                }--}}
+{{--            ]--}}
+{{--        })--}}
+{{--        window.addEventListener('click', function (e) {--}}
+{{--            if (window.innerWidth > 992) {--}}
+{{--                if ($('.navbar-collapse').hasClass('show')) {--}}
+{{--                    $('.navbar-toggler').click();--}}
+{{--                }--}}
+{{--            }--}}
+
+{{--        })--}}
+<script>
         // Hover attribute
         $('.dropdown .dropdown-toggle').mouseenter(function () {
             if (window.innerWidth > 991) {
@@ -485,3 +609,5 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
         //     console.log(this)
         // })
     </script>
+
+

@@ -19,7 +19,7 @@ $seo_meta=[
                 <div class="text-center">
                     <h4 class="text-white">SIGNAGES</h4>
                     <p class="text-white">Highly visible and innovative, creating instant awareness of local speed limit</p>
-                    <button class="btn btn-primary rounded-0">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>
