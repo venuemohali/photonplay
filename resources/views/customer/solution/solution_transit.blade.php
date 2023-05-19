@@ -52,6 +52,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
                          Our team provides software for all parameters and settings, allowing for easy manual or remote operation. We work closely with our customers to ensure product viability and design, and our team manages prototyping, development, and implementation from start to finish. Let us help you improve train safety and enhance commuter experiences with our innovative PIDS solutions.
 
                      </p>
+                        <h6> Application</h6>
                         <ul class="ps-3">
                             <li> Bus</li>
                             <li> Rail Transits</li>
