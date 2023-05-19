@@ -11,4 +11,127 @@
         <a href="{{route('admin.generate_order_invoice',$order->id)}}" target="_blank">
             <i data-feather="printer"></i>  </a>
     </div>
+
+
+    <div class="dt-ext table-responsive">
+
+        <h2> </h2>
+        <div class="shadow-lg p-4 ">
+            <h2> Product </h2>
+            <hr/>
+            <table class="table table-bordered  table-hover" style="width: 100%;">
+                <thead>
+                <tr>
+                    <th>Product Id</th>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Options</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($order->orderedProducts as $prod)
+                    <tr>
+                        <td>{{ $prod->product_id }}</td>
+                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found" /></td>
+                        <td>{{ $prod->title }}</td>
+                        <td>
+                            @foreach (explode(',',$prod->option_ids) as $option)
+                                @php
+                                    $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
+
+                                @endphp
+                                @foreach ($options as $opp)
+                                    {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br>
+                                @endforeach
+                            @endforeach
+
+                        </td>
+                        <td>{{ $prod->quantity }}</td>
+                        <td>${{$prod->price}}/-</td>
+                    </tr>
+                @endforeach
+                <tr>
+                    <td>
+
+                    </td>
+                    <td colspan="4">
+                    </td>
+                    <td>
+                        ${{$order->grand_total}} /-
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br/>
+
+        <div class="shadow-lg p-4 ">
+            <h2> Customer </h2>
+            <hr/>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Stripe Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>{{$order->user->id }}</td>
+                    <td>{{$order->user->stripe_id}}</td>
+                    <td>{{ $order->user->name }}</td>
+                    <td>{{ $order->user->email }}</td>
+                    <td>{{ $order->user->phone_number }}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <div class="shadow-lg p-4 ">
+            <h2> Billing Address </h2>
+            <hr/>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>Billing Street</th>
+                    <th>Billing Flat Suite</th>
+                    <th>Billing City</th>
+                    <th>Billing State</th>
+                    <th>Billing Countryr</th>
+                    <th>Billing Postcode</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{$order->billing_street }}</td>
+                    <td>{{$order->billing_flat_suite}}</td>
+                    <td>{{ $order->billing_city }}</td>
+                    <td>{{ $order->billing_state}}</td>
+                    <td>{{ $order->billing_country }}</td>
+                    <td>{{ $order->billing_postcode }}</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            <div class="shadow-sm p-3">
+                <p>  <b> Address Note: </b>  {{$order->address}}</p>
+            </div>
+
+        </div>
+
+    </div>
 </div>
+
+
+
