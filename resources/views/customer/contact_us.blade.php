@@ -67,9 +67,9 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                 <h4 class="text-uppercase text-dark mb-4">Reach Our Team </h4>
                                 <p class="text-uppercase">We love the questions & feedback, and we are always happy to help! <br/> Here are some ways to contact us.</p>
                                 </div>
-                               <div class="justify-content-around d-flex">
-                                <div class="m-2">
-                                    <h5 class="text-upercase"><u>Talk to Sales</u></h5>
+                               <div class="justify-content-around flex-column flex-md-row d-flex">
+                                <div class="m-2  mb-md-2 mb-4">
+                                    <h5 class="text-uppercase"><u>Talk to Sales</u></h5>
                                     <p>Chat with our sales team to discover how <br> our product can work best for you.</p>
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
@@ -104,7 +104,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                 <div class="map-messanger shadow p-5 my-4">
                                     <h6 class="mb-4">Send us a message</h6>
                                     <div class="">
-                                        <div class="d-flex justify-content-between ">
+                                        <div class="d-flex justify-content-between flex-column flex-md-row">
                                             <div class="placeholder-names">
                                                 <span class="d-block text-secondary">Full Name</span>
                                                 <b><input name="first_name" type="text" placeholder="Jimmy Newtron" class="border-0 shadow-none">
@@ -120,7 +120,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex justify-content-between my-4">
+                                        <div class="d-flex justify-content-between flex-column flex-md-row my-4">
                                             <div class="placeholder-names">
                                                 <span class="d-block text-secondary">Phone Number</span>
                                                 <b><input name="phone_number" type="text" placeholder="+12 3456 789" class="border-0 shadow-none">
@@ -156,7 +156,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
         </div>
     </section>
 <!-- area-section-start -->
-<section class="dealership">
+<section class="dealership" style="padding-bottom: 0!important; ">
 <div class="container">
             <div class="row bodered-classes pb-4">
                 <div class="col-lg-12">
