@@ -35,10 +35,10 @@ use App\Models\ProductSpcializationOption;
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
                                 <select class="form-select" id="myForm" name="delivery_status" class="shadow-none m-2">
-                                    <option value="out_for_delivery">Out for delivery</option>
-                                    <option value="delivered">Delivered</option>
-                                    <option value="delivery_delayed">Delivery delayed</option>
-                                    <option value="delivery_cancelled">Delivery cancelled</option>
+                                    <option value="out_for_delivery" {{$order->delivery_status=="out_for_delivery"?"selected":""}}>Out for delivery</option>
+                                    <option value="delivered" {{$order->delivery_status=="delivered"?"selected":""}}>Delivered</option>
+                                    <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
+                                    <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
                                 </select>
                             </span>
                         </h4>
