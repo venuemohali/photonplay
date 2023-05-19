@@ -1,6 +1,6 @@
 <div>
     <center>
-    <h1> Photonplay  System Pvt. Ltd.</h1>
+    <h1> Photonplay Systems Pvt. Ltd.</h1>
         <hr/>
     </center>
 </div>
