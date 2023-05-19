@@ -49,7 +49,7 @@ use App\Models\ProductSpcializationOption;
                         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
                                     {{ucfirst($order->payment_status)}} </span>   </p>
                             <p> Order Status : <span class="p-1">
-                                    {{upper($order->delivery_status)}} </span>   </p>
+                                    {{strtoupper($order->delivery_status)}} </span>   </p>
 
                         <p> Trasaction No. : <span>
                                 {{$order->trx_id}}</span> </p>
