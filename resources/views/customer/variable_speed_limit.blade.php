@@ -14,7 +14,7 @@ $seo_meta=[
             <div class="slider-content ">
                 <div class="image-smart">
                     <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('storage/'.$page->cover_image)}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}" alt="alt" class="d-block mx-auto img-fluid" style="max-height: 300px;">
 
                 </div>
                 <div class="text-center pt-4">
