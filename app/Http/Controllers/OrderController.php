@@ -14,8 +14,9 @@ class OrderController extends Controller
 
     public function generateInvoice(Request $request,$id)
     {
+        $order=Order::find($id);
         $pdf = PDF::loadView('reports.invoice',['id' => $id]);
-        return $pdf->download('invoice.pdf');
+        return $pdf->download('invoice'.$order->order_number.'.pdf');
     }
 
     /**
