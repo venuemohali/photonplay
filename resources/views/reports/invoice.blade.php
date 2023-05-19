@@ -1,6 +1,6 @@
 <div>
     <center>
-        <img src="{{ asset('assets/images/logo/logo.png') }}" style="max-height: 70px;" />
+        <img src="{{ asset('assets/customer/images/logo-dark.webp') }}" style="max-height: 70px;" />
         <h3> Photonplay Systems Pvt. Ltd.</h3>
         <hr/>
     </center>
