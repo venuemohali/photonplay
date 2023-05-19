@@ -119,7 +119,7 @@
                     <th>Billing Flat Suite</th>
                     <th>Billing City</th>
                     <th>Billing State</th>
-                    <th>Billing Countryr</th>
+                    <th>Billing Country</th>
                     <th>Billing Postcode</th>
                 </tr>
                 </thead>
