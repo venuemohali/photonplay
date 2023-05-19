@@ -91,7 +91,7 @@
                 @foreach($order->orderedProducts as $prod)
                     <tr>
                         <td>{{ $prod->product_id }}</td>
-                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="empty_image" /></td>
+                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="empty_image" style="max-height: 70px;max-width:100px; " /></td>
                         <td>{{ $prod->title }}</td>
                         <td>
                             @foreach (explode(',',$prod->option_ids) as $option)
