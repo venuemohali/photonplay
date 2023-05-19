@@ -82,6 +82,18 @@ $seo_meta=[
                             aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
                             aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                            aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+                            aria-label="Slide 2"></button>
+
 
                 </div>
                 <div class="carousel-inner">
@@ -230,6 +242,187 @@ $seo_meta=[
                                 </div>
                             </div>
                         </div>
+
+                        <div class="carousel-item">
+                            <div class="products-two d-lg-flex justify-content-between">
+                                <div class="common-wdth common-wdth_ inner-col align-self-center">
+                                    <h6>EMERGENCY TELEPHONE SIGN
+                                    </h6>
+                                    {{--                                <p class="mb-0">{{$product->title}}</p>--}}
+                                </div>
+                                <div class="mask-layer common-wdth inner-col text-center">
+                                    <img src="/assets/customer/images/products_home/emergency_phone.webp" alt="Portable Variable
+                                        Message Signs" class="">
+                                    <div>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                    </div>
+                                </div>
+                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                    <div class="ms-md-5">
+                                        <h6 class="text-capitalize">Description</h6>
+                                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <div class="social-two">
+                                            <p class="text-capitalize fs-5">share:</p>
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                                <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                                <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="products-two d-lg-flex justify-content-between">
+                                <div class="common-wdth common-wdth_ inner-col align-self-center">
+                                    <h6> Passenger Information Display System (PIDS)
+                                    </h6>
+                                    {{--                                <p class="mb-0">{{$product->title}}</p>--}}
+                                </div>
+                                <div class="mask-layer common-wdth inner-col text-center">
+                                    <img src="/assets/customer/images/products_home/pids_product.webp" alt="Portable Variable
+                                        Message Signs" class="">
+                                    <div>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                    </div>
+                                </div>
+                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                    <div class="ms-md-5">
+                                        <h6 class="text-capitalize">Description</h6>
+                                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <div class="social-two">
+                                            <p class="text-capitalize fs-5">share:</p>
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                                <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                                <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="products-two d-lg-flex justify-content-between">
+                                <div class="common-wdth common-wdth_ inner-col align-self-center">
+                                    <h6>VARIABLE MESSAGE SIGNS (VMS)
+                                    </h6>
+                                    {{--                                <p class="mb-0">{{$product->title}}</p>--}}
+                                </div>
+                                <div class="mask-layer common-wdth inner-col text-center">
+                                    <img src="/assets/customer/images/products_home/vms_product.webp" alt="Portable Variable
+                                        Message Signs" class="">
+                                    <div>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                    </div>
+                                </div>
+                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                    <div class="ms-md-5">
+                                        <h6 class="text-capitalize">Description</h6>
+                                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <div class="social-two">
+                                            <p class="text-capitalize fs-5">share:</p>
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                                <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                                <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="products-two d-lg-flex justify-content-between">
+                                <div class="common-wdth common-wdth_ inner-col align-self-center">
+                                    <h6> Variable Speed Limit Signs (VSLS)
+                                    </h6>
+                                    {{--                                <p class="mb-0">{{$product->title}}</p>--}}
+                                </div>
+                                <div class="mask-layer common-wdth inner-col text-center">
+                                    <img src="/assets/customer/images/products_home/vsls_product.webp" alt="VSLS" class="">
+                                    <div>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                    </div>
+                                </div>
+                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                    <div class="ms-md-5">
+                                        <h6 class="text-capitalize">Description</h6>
+                                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <div class="social-two">
+                                            <p class="text-capitalize fs-5">share:</p>
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                                <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                                <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="products-two d-lg-flex justify-content-between">
+                                <div class="common-wdth common-wdth_ inner-col align-self-center">
+                                    <h6> LED Tickers
+                                    </h6>
+                                    {{--                                <p class="mb-0">{{$product->title}}</p>--}}
+                                </div>
+                                <div class="mask-layer common-wdth inner-col text-center">
+                                    <img src="/assets/customer/images/products_home/caterpiller.webp" alt=" LED Tickers" class="">
+                                    <div>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                    </div>
+                                </div>
+                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                    <div class="ms-md-5">
+                                        <h6 class="text-capitalize">Description</h6>
+                                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <div class="social-two">
+                                            <p class="text-capitalize fs-5">share:</p>
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',1)">  <img src="/assets/customer/images/facebook2.png" class="ms-0" alt="facebook"></a>
+
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',2)">
+                                                <img src="/assets/customer/images/twitter2.png" alt="Twitter"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',3)">
+                                                <img src="/assets/customer/images/instagram2.png" alt="LinkedIn"></a>
+
+                                            <a href="#" onclick="shareOnSocialMedia('{{ url()->current() }}',4)">  <img src="/assets/customer/images/pintrest2.png" alt="Pinterest"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
 
 

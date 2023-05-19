@@ -34,9 +34,9 @@
 
                     <div class="card-body ">
                             <div class="d-flex justify-content-center mb-4">
-                                <img src="https://stagingserver.photonplay.com/assets/customer/images/zero-mentence.png"  class="img-fluid"/>
+                                <img src="{{asset('storage/'.$page->cover_image)}}"  class="img-fluid"/>
                             </div>
-
+                        subPages
                         <form method="POST" action="{{route('admin.manage.solution.store')}}"  enctype="multipart/form-data" >
                             @csrf
                             <input type="hidden" name="sub_page_id" value="{{$page->id}}">

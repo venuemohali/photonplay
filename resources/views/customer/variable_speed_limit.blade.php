@@ -14,7 +14,8 @@ $seo_meta=[
             <div class="slider-content ">
                 <div class="image-smart">
                     <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}" alt="alt" class="d-block mx-auto img-fluid">
+
                 </div>
                 <div class="text-center pt-4">
                     <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>

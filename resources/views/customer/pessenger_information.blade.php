@@ -15,7 +15,7 @@ $seo_meta=[
             <div class="slider-content ">
                 <div class="imaged m-auto">
                     <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('assets/customer/images/PIDS.webp')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}" alt="alt" class="d-block mx-auto img-fluid">
                 </div>
                 <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
                 <div class="text-center pt-4">

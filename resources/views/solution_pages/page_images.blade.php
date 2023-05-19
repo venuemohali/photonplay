@@ -38,12 +38,12 @@
                             @csrf
                             <input type="hidden" name="page_id" value="{{$id}}">
                             <div class="row mb-3 form-group  d-flex align-items-center">
-                                <label for="category" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Cover Image') }}</label>
+                                <label for="brochure" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Brochure') }}</label>
 
                                 <div class="col-md-3">
-                                    <input type="file" name="cover_image" class="form-control" >
+                                    <input type="file" name="brochure" class="form-control" >
 
-                                    @error('category_selected')
+                                    @error('brochure')
                                     <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -51,14 +51,12 @@
                                 </div>
                                 <div class="col-md-3">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Upload Cover Image') }}
+                                        {{ __('Upload PDF') }}
                                     </button>
                                 </div>
 
                                 <div class="col-md-4">
-                                    <div style="height: 300px;width: 300px;" class="border d-flex align-items-center justify-content-center">
-
-                                    </div>
+                                    <a href="#" > Download </a>
                                 </div>
 
                             </div>
