@@ -301,10 +301,11 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
 <!-- _____________________latest News end______________________ -->
 <!-- _____________________ourclint-last-start___________________ -->
 @include('customer.layout2.our_clients')
-    @include('customer.layout2.footer')
+@include('customer.layout2.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <script>
 
         $('.clint-wrapperr').slick({
@@ -485,3 +486,5 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
         //     console.log(this)
         // })
     </script>
+
+
