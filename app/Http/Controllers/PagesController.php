@@ -231,4 +231,14 @@ class PagesController extends Controller
 
         return redirect()->route('admin.manage.solution.sub.page', Page::PVMS);
     }
+
+    public function deleteSubPage($id){
+        $page = Page::find($id);
+        $page->specs()->delete();
+        $page->images()->delete();
+        $page->features()->delete();
+        $page->galleries()->delete();
+        $page->delete();
+        return redirect()->back()->with('success', 'Sub Page Successfully deleted');
+    }
 }

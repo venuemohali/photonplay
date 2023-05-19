@@ -41,7 +41,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Sub Pages<th>                                        <th>Options</th>
+                                        <th>Sub Pages</th>                                        <th>Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -52,6 +52,10 @@
                                                 <td>
                                                     <a href="{{route('admin.manage.solution.create.sub.page', $page->id)}}">
                                                         <i data-feather="eye"></i></a>
+                                                @if($id == 3)
+                                                    <a style="color:red;" href="{{route('admin.manage.solution.delete.sub.page', $page->id)}}">
+                                                        <i data-feather="trash"></i></a>
+                                                @endif
                                                 </td>
                                             </tr>
                                         @endforeach

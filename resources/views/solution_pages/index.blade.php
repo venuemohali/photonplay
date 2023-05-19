@@ -32,7 +32,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Pages<th>                                        <th>Options</th>
+                                        <th>Pages</th>                                        <th>Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
