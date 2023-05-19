@@ -9,16 +9,61 @@
 </style>
 <div>
     <div class="shadow-sm">
-        <p>  Order No: {{$order->order_number}}</p>
-        <p>  Order Date & Time: {{$order->created_at}}</p>
-        <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
-                                    {{ucfirst($order->payment_status)}} </span>   </p>
-        <p> Order Status : <span class="p-1">
-                                    {{strtoupper($order->delivery_status)}} </span>   </p>
+        <table width="100%" border="1">
+<tr>
+ <th>
+     Order No:
+ </th>
+    <td>
+        <p>   {{$order->order_number}}</p>
+    </td>
 
-        <p> Transaction No. : <span>
+    <th>
+        Order Date & Time:
+    </th>
+    <td>
+        <p>   {{$order->created_at}}</p>
+    </td>
+</tr>
+
+            <tr>
+                <th>
+                    Payment Status :
+                </th>
+                <td>
+                    <p>  <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
+                                    {{ucfirst($order->payment_status)}} </span>   </p>
+                </td>
+
+                <th>
+                    Order Status :
+                </th>
+                <td>
+                    <p>  <span class="p-1">
+                                    {{strtoupper($order->delivery_status)}} </span>   </p>
+                </td>
+            </tr>
+            <tr>
+                <th >
+                    Transaction No. :
+                </th>
+                <td colspan="3">
+                    <p>  <span>
                                 {{$order->trx_id}}</span> </p>
-        <p>  <b> Order Note: </b>  {{$order->order_notes??'Order notes not available.'}}</p>
+                </td>
+            </tr>
+<tr>
+    <th>
+        Order Note:
+
+    </th>
+    <td colspan="3">
+        <p> {$order->order_notes??'Order notes not available.'}}</p>
+    </td>
+</tr>
+        </table>
+
+
         <a href="{{route('admin.generate_order_invoice',$order->id)}}" target="_blank">
             <i data-feather="printer"></i>  </a>
     </div>
