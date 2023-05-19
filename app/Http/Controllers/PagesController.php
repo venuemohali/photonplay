@@ -9,7 +9,10 @@ use App\Models\PageImage;
 use App\Models\PageSpec;
 use App\Models\PageType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use PDF;
+use Dompdf\Dompdf;
 
 class PagesController extends Controller
 {
@@ -32,7 +35,9 @@ class PagesController extends Controller
 
 
     public function createImagesSubPage($id){
-        return view('solution_pages.page_images', compact('id'));
+        $brochure = Page::find($id);
+        // dd($brochure);
+        return view('solution_pages.page_images', compact('id','brochure'));
     }
 
     public function createGallerySubPage($id){
@@ -83,16 +88,16 @@ class PagesController extends Controller
 
     public function updateSingleImage(Request $request){
         $request->validate([
-            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:5048',
+            'brochure' => 'required',
         ]);
         $product=Page::find($request->page_id);
-        $image_path = $request->file('cover_image')->store('image', 'public');
+        $image_path = $request->file('brochure')->store('brochure', 'public');
 
         $product->update([
-            'cover_image' => $image_path,
+            'brochure' => $image_path,
         ]);
 
-        return redirect()->back()->with('success', 'Cover Image successfully updated');
+        return redirect()->back()->with('success', 'Brochure successfully updated');
     }
 
     public function updateMultiImage(Request $request){
@@ -240,5 +245,17 @@ class PagesController extends Controller
         $page->galleries()->delete();
         $page->delete();
         return redirect()->back()->with('success', 'Sub Page Successfully deleted');
+    }
+
+    public function downloadPdf(Request $request){
+        // dd($request->brochure);
+            // $file_path = asset('storage/'.$request->brochure);
+            // $headers = [
+            //     'Content-Type : application/pdf',
+            //     'Content-Disposition: attachment; filename='.$file_path, 
+            // ];
+            $file_path = storage_path('app\public/'.$request->brochure);
+
+            return response()->download($file_path);
     }
 }

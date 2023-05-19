@@ -116,7 +116,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('store-sub-page-gallery', [PagesController::class, 'subPageGallery'])->name('sub.page.gallery');
         Route::get('add-pvms-products', [PagesController::class, 'addPvmsProductForm'])->name('add.pvms.products');
         Route::post('store-pvms-products', [PagesController::class, 'storePvmsProductForm'])->name('pvms.product.store');
-
+        Route::get('download-pdf', [PagesController::class, 'downloadPdf'])->name('manage.solution.download.pdf');
 
     });
 });
