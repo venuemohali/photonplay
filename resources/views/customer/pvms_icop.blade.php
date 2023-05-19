@@ -102,128 +102,52 @@ $seo_meta=[
         </div>
     </section>
     <!-- SPECIFICATION Sec Accordion -->
+
+    <!-- Banner Sec End -->
+
+    <!-- Desc and specification -->
     <section class="sepeicification bg-light position-relative">
-        <div class="message-sign text-center text-primary">
-            <h6>iCop | Portable Variable Message Sign’s</h6>
-        </div>
-        <div class="heading-sec">
-            <h2 class="fs-2 mt-3">SPECIFICATION</h2>
-        </div>
         <div class="container pb-lg-5">
             <div class="accodion-wrapper pb-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="accordion accordion-flush position-relative" id="accordionFlushExample">
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button
-                                        class="accordion-button  collapsed bg-white shadow-none py-3 pb-2 shadow-none"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" aria-controls="flush-collapseOne">
-                                        Dimensions and weight
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body pt-0"> <code
-                                            class="d-block">Overall Length - <span>5000 mm </span></code>
-                                        <code class="d-block"> Overall Width - <span>2350 mm</span></code>
-                                        <code class="d-block">Operational Height - <span>4625 mm</span></code>
-                                        <code class="d-block">Travelling Height - <span>3250 mm</span></code>
-                                        <code class="d-block">Weight -<span>1132 kgs</span></code>
-                                        <code class="d-block"></code>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button
-                                        class="accordion-button collapsed bg-white shadow-none ty-3 pb-2 shadow-none"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                        aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Display
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body pt-0">Placeholder content for this accordion, which is
-                                        <code class="d-block"> Overall Width - <span>2350 mm</span></code>
-                                        <code class="d-block">Operational Height - <span>4625 mm</span></code>
-                                        <code class="d-block">Travelling Height - <span>3250 mm</span></code>
-                                        <code class="d-block">Weight -<span>1132 kgs</span></code>
-                                        <code class="d-block"></code>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button
-                                        class="accordion-button collapsed bg-white shadow-none tex3 pb-2 shadow-none"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                        aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Power
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body pt-0"><code
-                                            class="d-block"> Overall Width - <span>2350 mm</span></code>
-                                        <code class="d-block">Operational Height - <span>4625 mm</span></code>
-                                        <code class="d-block">Travelling Height - <span>3250 mm</span></code>
-                                        <code class="d-block">Weight -<span>1132 kgs</span></code>
-                                        <code class="d-block"></code>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end position-absolute circle-stone">
-                                    <img src="./assets/images/circle_stone.png" alt="not-found" class="img-fluid">
-                                </div>
-                            </div>
+                        <div>
+                            <h4 class="text-capitalize">Description</h4>
+                            <p>
+                                {{$product->description}}
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="circle-floow position-relative">
+                        <div class="">
+                            <h4>Specification</h4>
+                        </div>
+                        <div class="circle-floow foloowers position-relative">
                             <div class="accordion accordion-flush" id="accordionFlushExample1">
-                                <div class="accordion-item border-0 position-inherit ">
-                                    <h2 class="accordion-header" id="flush-headingOne1">
-                                        <button
-                                            class="accordion-button collapsed bg-white shadow-none te-3 pb-2 shadow-none text-dark"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1"
-                                            aria-expanded="false" aria-controls="flush-collapseOne1">
-                                            Warranty
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne1" class="accordion-collapse collapse show"
-                                        aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
-                                        <div class="accordion-body pt-0">
-                                            <p class="accordion-button shadow-none te-3 p-0 mb-1 shadow-none bg-white">
-                                                Construction</p>
-                                            <code
-                                                class="d-block"> Trailer: <span>All welded structural steel</span></code>
-                                            <code
-                                                class="d-block">Display cabinet: <span>Aluminium sheet and welded channels</span></code>
-                                            <code
-                                                class="d-block">Finish:  <span>Hydraulic lift raises display cabinet, operated with toggle switch</span></code>
-                                            <code class="d-block">Hydraulics: <span>1132 kgs</span></code>
-                                            <code
-                                                class="d-block">Axle Capacity: <span>3500 lbs , 82" Round Tube , 4 " Drop Trailer Axle</span></code>
-                                            <code
-                                                class="d-block">Tires: <span>15 " Tyre with Overall Diameter : 27.5" , Capacity 1820 lbs each , Load</span></code>
-                                            <code class="d-block">Range : <span>C (6-Ply Rating)</span></code>
-                                            <code class="d-block"></code>
+                                @foreach ($product->specs as $spec)
+                                    <div class="accordion-item border-0 position-inherit ">
+                                        <h2 class="accordion-header" id="flush-headingOne{{$spec->id}}">
+                                            <button class="accordion-button collapsed optic bg-white te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$spec->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$spec->id}}">
+                                                {{$spec->spec}}
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne{{$spec->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne{{$spec->id}}" data-bs-parent="#accordionFlushExample1">
+                                            <div class="accordion-body pt-0">
+                                                {!! $spec->description !!}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
 
-                            </div>
-                            <div class="stone-accordian position-absolute d-flex align-items-center ">
-                                <img src="./assets/images/object.png" class="img-fluid circle-image d-none d-md-block"
-                                    alt="not-found">
+                                <div class="stone-accordian position-absolute d-flex align-items-center ">
+                                    <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
             </div>
-            <img class="dotted-imag img-fluid d-none d-md-inline" src="./assets/images/dotted-tran.png" alt="not-found">
     </section>
     <!-- Dimension section -->
     <section class="dimention-sec">
