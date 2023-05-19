@@ -39,12 +39,14 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="">
                 </div>
                 <div class="description">
+                    <p style="text-align: justify">
                     PHOTONPLAY is a family owned, India based design, develop and manufacturing of Systems for the ITS
                     industry since 2006. With subsidiary offices in US, Australia and Norway plus distribution facility
                     in
                     the US and representatives all over the world, PHOTONPLAY has satisfied customers (System
                     integrators,
                     Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
+                    </p>
                 </div>
 
             </div>
