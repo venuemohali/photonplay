@@ -198,7 +198,7 @@ use App\Models\ProductSpcializationOption;
                     // AJAX request to save the status
                     $.ajax({
                         url: '{{route('admin.change_status_order_product',$order->id)}}',
-                        method: 'get', // or 'GET' depending on your API
+                        method: 'put', // or 'GET' depending on your API
                         data: { status: selectedStatus },
                         success: function(response) {
                             console.log('Status saved successfully.');
