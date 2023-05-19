@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"{$product->title}",
+    "description"=>"{$product->description}",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 <!-- banner-start -->
     <section class="banner-inner pt-0 pb-0">

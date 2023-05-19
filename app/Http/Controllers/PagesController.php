@@ -116,7 +116,6 @@ class PagesController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->sub_page_id);
         $request->validate([
             'cover_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);

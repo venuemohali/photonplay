@@ -1,7 +1,7 @@
 <?php
 $seo_meta=[
-    "title"=>"{$page->title}",
-    "description"=>"{$page->description}",
+    "title"=>"ICOP",
+    "description"=>"ICOP",
     "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
 ];
 ?>
