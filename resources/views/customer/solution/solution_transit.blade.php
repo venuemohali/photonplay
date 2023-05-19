@@ -124,7 +124,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
                                     </div>
                                     <div class="mt-4">
                                         <p class="mb-2">Bus Signs </p>
-                                        <p class="visibility-hidden">Display System (PIDS)</p>
+                                        <p>Display System (PIDS)</p>
                                         <a href="#">
                                         <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
                                         </a>
