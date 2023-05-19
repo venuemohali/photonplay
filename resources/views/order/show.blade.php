@@ -31,8 +31,8 @@ use App\Models\ProductSpcializationOption;
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <p class="text-success">  <div id="message"></div> </p>
-                        <p class="text-danger">  <div id="errormessage"></div> </p>
+                          <div id="message" class="text-success"></div>
+                         <div id="errormessage" class="text-success"></div>
                         <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
