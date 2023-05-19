@@ -7,9 +7,8 @@
         padding: 8px;
     }
 </style>
-
 <div>
-    <div class="shadow-sm p-3">
+    <div class="shadow-sm">
         <p>  Order No: {{$order->order_number}}</p>
         <p>  Order Date & Time: {{$order->created_at}}</p>
         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
