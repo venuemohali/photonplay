@@ -48,21 +48,15 @@ that enable seamless integration and smarter decision-making for cities of the f
                         <h4 class="text-capitalize mb-4">Radar Speed Sign</h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
-                        <!-- <span class="text-capitalize d-block">Three Size Options To Choose From</span> -->
-                        <p>Viewed by millions of eyes everyday, guiding way to millions of motorist to drive them back
-                            home safely every day, Photonplay is contributing its part to the humanity in it own way by
-                            enhanced road and traffic safety.
+
+                        <p style="text-align: justify">
+                            Our Radar Speed Signs provide an effective solution for managing speed on the roads. Using advanced radar technology, these signs detect the speed of vehicles and display it to the driver, encouraging them to slow down and improve road safety.
 
                         </p>
-                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
-                        <ul class="ps-3">
-                            <li> Smart City VMS</li>
-                            <li> Full Color</li>
-                            <li> Solar VMS</li>
-                            <li> Mobile VMS</li>
-                            <li> Radar Speed Signs</li>
+                        <p style="text-align: justify">
+                            Our Radar Speed Signs are highly reliable and durable, making them ideal for use on highways, roads, and tunnels. They can be easily installed in any location and offer a range of display options to suit different traffic management needs. Explore our range of Radar Speed Signs and discover how they can help you enhance road safety with our advanced ITS technology.
+                        </p>
 
-                        </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.radar.speed.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -71,7 +65,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/radar_speed.webp') }}" alt="Not Found" class="img-fluid shadow-none">
                     </div>
                 </div>
             </div>
@@ -83,19 +77,10 @@ that enable seamless integration and smarter decision-making for cities of the f
                         <h4>Portaible Variable Message Sign (PVMS) </h4>
                         <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
                             conditions</span> -->
-                        <p>Photonplay's Portable Variable Message Signs (VMS) are one of the key elements of dynamic
-                            traffic management systems. Depending on the traffic situation, signs are efficiently used
-                            to warn and guide about traffic congestion, routing information, speed limits, road work
-                            zones, accidents and other incidents on highways, expressways and arterial roads of cities.
+                        <p style="text-align: justify;">
+                            Our PVMS offers flexible and efficient solutions for traffic management. These portable signs can be easily transported to different locations and offer a range of display options to suit a variety of traffic management needs. Ideal for applications on roads, highways, and tunnels, our PVMS provides a highly reliable and rugged solution for traffic guidance and information purposes. With real-time information and analytics, our systems provide better decision-making and efficient operations. At Photonplay, we are committed to providing cutting-edge technology for a better future. Let us help you create safer and more efficient roads with our PVMS solutions.
                         </p>
-                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
-                        <ul class="ps-3">
-                            <li> iCop City Guard 1</li>
-                            <li> iCop City Guard 2</li>
-                            <li> iCop Knight</li>
-                            <li> iCop Hign Runner (MTO)</li>
 
-                        </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -104,7 +89,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/pvms_smart_city.webp') }}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -117,20 +102,14 @@ that enable seamless integration and smarter decision-making for cities of the f
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
                         </h6>
                         <!-- <span class="text-capitalize d-block">Three Size Options To Choose From</span> -->
-                        <p>Viewed by millions of eyes everyday, guiding way to millions of motorist to drive them back
-                            home safely every day, Photonplay is contributing its part to the humanity in it own way by
-                            enhanced road and traffic safety.
+                        <p style="text-align: justify;">
+                            Photonplay's Variable Message Signs (VMS) display messages, warning signals, and information about specific events to commuters on roads. Our VMS solutions enhance road safety by guiding motorists with accurate and real-time information.
+                        </p>
+                        <p style="text-align: justify;">
+                            Drive with confidence with our VMS. Our advanced VMS technology provides flexible and efficient solutions for traffic management. With a range of display options to suit various traffic needs, our VMS is the ideal solution for enhancing road safety and traffic flow. Click on the "Explore Now" button to learn more about our VMS products.
 
                         </p>
-                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
-                        <ul class="ps-3">
-                            <li> Smart City VMS</li>
-                            <li> Full Color</li>
-                            <li> Solar VMS</li>
-                            <li> Mobile VMS</li>
-                            <!-- <li> Radar Speed Signs</li> -->
 
-                        </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -139,7 +118,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/vms_smart.webp') }}" alt="Not Found" class="img-fluid shadow-none">
                     </div>
                 </div>
             </div>
@@ -148,21 +127,18 @@ that enable seamless integration and smarter decision-making for cities of the f
 
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
-                        <h4>LED Tickers </h4>
-                        <h6 class="mb-3">Your detail Line here</h6>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather
-                            conditions</span> -->
-                        <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... </p>
-                        <ul class="ps-3">
+                        <h4>LED Tickers </h4>
+                      <p style="text-align: justify;">
+                          Our LED Tickers provide a dynamic way to display information in real-time. With a variety of customizable options, our Tickers can be tailored to suit the needs of any industry, including finance, sports, and news.
+                      </p>
+                        <p style="text-align: justify;">
 
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                        </ul>
+                          Designed for both indoor and outdoor use, our Tickers are durable, energy-efficient, and easy to install. They can be integrated with existing systems or operated as standalone displays, making them a versatile solution for businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify;">
+
+                        Explore our range of LED Tickers and discover how they can help you engage your audience, increase visibility, and enhance your brand image.
+                      </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -171,7 +147,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/led_ticker.webp') }}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -189,43 +165,49 @@ that enable seamless integration and smarter decision-making for cities of the f
                 <div class="col-lg-3">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                            <img src="{{asset('assets/images/solutions/radar_speed.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Radar Speed Sign </p>
                             <p class="visibility-hidden">Display System (PIDS)</p>
+                            <a href="{{route('customer.radar.speed.signs')}}">
                             <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                            <img src="{{asset('assets/images/solutions/pvms_smart_city.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Portable Variable Message Sign </p>
                             <p>(PVMS) </p>
+                            <a href="{{route('customer.portable.variable.message.signs')}}">
                             <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                            <img src="{{asset('assets/images/solutions/vms_smart.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Variable Message Sign (VMS) </p>
                             <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            <a href="{{route('customer.variable.message')}}">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Variable Message Sign (VMS)" class="img-fluid mt-5">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="inner-bus text-center py-4 px-3 h-100">
                         <div class="bus-radious">
-                            <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                            <img src="{{asset('assets/images/solutions/led_ticker.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">LED Tickers </p>
