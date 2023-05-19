@@ -215,7 +215,7 @@ use App\Models\ProductSpcializationOption;
                             console.log('Error saving status: ' + error);
                         }
                     });
-                });
+                 });
             });
         </script>
 
@@ -223,8 +223,8 @@ use App\Models\ProductSpcializationOption;
         <script>
 
 
-$('#myForm').on('click', function() {
-    console.log('hello');
+// $('#myForm').on('click', function() {
+//     console.log('hello');
     // if ($(this).prop("checked") == true) {
     //     var checked = true;
 
