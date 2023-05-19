@@ -11,7 +11,7 @@
 <div>
     <div class="shadow-sm p-3">
         <p>  Order No: {{$order->order_number}}</p>
-        <p>  Order Date: {{$order->created_at}}</p>
+        <p>  Order Date & Time: {{$order->created_at}}</p>
         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
                                     {{ucfirst($order->payment_status)}} </span>   </p>
         <p> Order Status : <span class="p-1">
