@@ -231,32 +231,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
 
 <!-- end -->
 <!-- Key-projects-start -->
-<section class="key-project pb-0 bg-white">
-    <div class="container-fluid">
-        <div class="col-lg-12">
-            <div class="text-center mb-lg-5">
-                <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions
-                   </p>
-                <p>
-                    are Changing the Game!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="key-slider mb-0">
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-        <div>
-            <img src="/assets/customer/images/pexels-luna.jpg" alt="Not-Found" class="img-fluid">
-        </div>
-
-    </div>
-</section>
+<x-Customer.KeyProject/>
 <!--___________________ key-project-end_________________ -->
 
 <!-- _____________________Our clint Says start______________________ -->
