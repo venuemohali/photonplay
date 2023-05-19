@@ -21,13 +21,21 @@ class OrderController extends Controller
         $order=Order::find($id);
         if(isset($request->status)){
             $order->delivery_status=$request->status;
-            $order>save();
+            $order->save();
+
+            return response()->json([
+                "success"=>true,
+                "status"=>$request->status,
+                "message"=>"Status Updated",
+            ]);
         }
+
         return response()->json([
-            "success"=>true,
-            "status"=>$request->status,
-            "message"=>"Status Updated",
+            "success"=>false,
+            "status"=>'error',
+            "message"=>"Sorry, unable to change status !",
         ]);
+
     }
 
 
