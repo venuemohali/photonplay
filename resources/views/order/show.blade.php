@@ -189,9 +189,18 @@ use App\Models\ProductSpcializationOption;
 
         <script>
             $(document).ready(function() {
+
                 // Event handler for select element change
                 $('#myForm').change(function() {
                     var selectedStatus = $(this).val(); // Get the selected value
+                    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+                    // Set the CSRF token in AJAX request headers
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken
+                        }
+                    });
 
                     // AJAX request to save the status
                     $.ajax({
