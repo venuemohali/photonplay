@@ -19,7 +19,7 @@ $seo_meta=[
                     <h6 class="text-center text-white fw-normal mt-3 mb-3">Lane Control System (LCS)</h6>
                 </div>
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>

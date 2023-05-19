@@ -12,7 +12,7 @@
                 </div>
                 <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>

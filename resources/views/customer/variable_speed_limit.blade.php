@@ -17,7 +17,7 @@ $seo_meta=[
                     <img src="{{asset('assets/customer/images/banner-image-smart-city.png')}}" alt="alt" class="d-block mx-auto img-fluid">
                 </div>
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
                     <a href="">SMART CITY VMS</a>
                 </div>
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@
     <!-- contact form -->
 @include('customer.layout2.get_in_touch')
     <!-- Contact form end -->
-   
+
     <!-- _____________________ourclint-last-start___________________ -->
     <section class="our-clints-last">
         <div class="mb-lg-5 text-center">
