@@ -335,11 +335,12 @@
                         </div>
                         <div class="mega-menu-items">
                             <!-- <ul><li>NEWS & EVENTS</li></ul> -->
-                            <h4>NEWS & EVENTS</h4>
+
+                            <a class="nav-link text-uppercase" href="{{route('customer.blog')}}"> <h4>NEWS & EVENTS</h4></a>
                         </div>
                         <div class="mega-menu-items">
                             <!-- <ul><li>CONTACT</li></ul> -->
-                            <h4>CONTACT</h4>
+                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}"><h4>CONTACT</h4></a>
                         </div>
 
                         <form class=" d-flex mt-lg-0 mt-4 align-items-center" role="search">
