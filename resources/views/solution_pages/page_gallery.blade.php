@@ -27,7 +27,7 @@
                     <div class="card-header">
                         <h5>Create/Edit Model </h5>
                     </div>
-                    <div class="container">x`
+                    <div class="container">
                         <x-Admin.PageNavigator :page="5" :pid="$id"/>
                     </div>
 
