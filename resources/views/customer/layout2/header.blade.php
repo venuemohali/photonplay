@@ -260,12 +260,12 @@
                                                 Sign (VMS)</a>
                                         </li>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2 text-wrap"
-                                                href="#">Variable
+                                                href="{{route('customer.variable.speed.limit')}}">Variable
                                                 Speed Limit
                                                 Sign
                                                 (VSLS)</a></li>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                href="#">Portable
+                                                href="{{route('customer.portable.variable.message.signs')}}">Portable
                                                 Variable
                                                 Message Sign
                                                 (PVMS) </a></li>
@@ -280,10 +280,10 @@
                                     <ul>
                                         <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
                                                 Speed Sign </a></li>
-                                        <li><a href="#"
+                                        <li><a href="{{route('customer.portable.variable.message.signs')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
                                                 Variable Message Sign (PVMS)</a></li>
-                                        <li><a href="#"
+                                        <li><a href="{{route('customer.variable.message')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Message Sign (VMS) </a></li>
                                         <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">LED
@@ -294,26 +294,26 @@
                                 <div class="mega-menu-item">
                                     <h4 class="text-uppercase">Tunnels</h4>
                                     <ul>
-                                        <li><a href="#"
+                                        <li><a href="{{route('customer.variable.message')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Message
                                                 Sign (VMS)</a>
                                         </li>
-                                        <li><a href="#"
+                                        <li><a href="{{route('customer.variable.speed.limit')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Speed
                                                 Limit Sign
                                                 (VSLS)</a></li>
-                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
-                                                Finders
-                                            </a>
-                                        </li>
-                                        <li><a href="#"
+{{--                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way--}}
+{{--                                                Finders--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+                                        <li><a href="{{route('customer.signal')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
                                                 – Emergency
                                                 Exit Sign ,
                                                 Emergency Telephone Sign</a></li>
-                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
+                                        <li><a href="{{route('customer.lane.control.system')}}" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
                                                 Control
                                                 System (LCS) </a>
                                         </li>
@@ -322,7 +322,7 @@
                                 <div class="mega-menu-item">
                                     <h4 class="text-uppercase">TRANSIT</h4>
                                     <ul>
-                                        <li><a href="#"
+                                        <li><a href="{{route('customer.pasenger.information.display.system')}}"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Passenger
                                                 Information Display
                                                 System <br> (PIDS) </a></li>
