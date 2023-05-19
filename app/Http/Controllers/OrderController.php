@@ -8,9 +8,15 @@ use App\Models\OrderedProduct;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-
+use PDF;
 class OrderController extends Controller
 {
+
+    public function generateInvoice(Request $request,$id)
+    {
+        $pdf = PDF::loadView('reports.invoice');
+        return $pdf->download('invoice.pdf');
+    }
 
     /**
      * @param Request $request
