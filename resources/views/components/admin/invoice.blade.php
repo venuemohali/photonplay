@@ -9,7 +9,7 @@
 </style>
 <div>
     <div class="shadow-sm">
-        <table width="100%" border="1">
+        <table width="100%" border="1" cellpadding="0">
 <tr>
  <th>
      Order No:
