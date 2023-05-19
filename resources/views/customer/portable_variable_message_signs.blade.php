@@ -110,7 +110,7 @@ $seo_meta=[
                 <a href="{{route('customer.pvms.i.cop', $item->id)}}" class="text-decoration-none">
                 <div class="text-start p-4 list-unsorted">
                     <div class="roundedd-image">
-                        <img src="{{asset('assets\customer\images\Photonplay-MTO.png')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('storage/'.$item->cover_image)}}" alt="Not Found" class="img-fluid">
                     </div>
                     <div class="my-3 list-bacgund px-4 py-4">
                         <h5 class="fw-bold text-capitalize">{{$item->title}}</h5>
