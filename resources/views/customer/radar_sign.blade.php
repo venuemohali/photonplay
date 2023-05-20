@@ -33,7 +33,7 @@ foreach($specilization->options as $option){
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <form action="{{route('customer.store.shopping.bag')}}" method="post ">
+                <form action="{{route('customer.store.shopping.bag')}}" method="post">
                     @csrf
                     <div id="dynamic_specs">
 
