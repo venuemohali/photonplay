@@ -60,8 +60,12 @@ $seo_meta=[
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="text-start p-4 list-unsorted">
                                     <div class="roundedd-imageses">
-                                        <img src="{{asset('assets/customer/images/Layer1.png')}}" alt="Not Found" class="img-fluid">
+                                        <img src="{{asset('storage/'.$page->cover_image)}}" alt="{{$page->title}}"
+                                             class="img-fluid">
                                     </div>
+
+
+
                                     <div class="my-3 listed-bacgunded px-4 py-4">
                                         <h5 class="fw-bold text-capitalize">{{$page->title}}</h5>
                                         <p>{{substr($page->description, 0, 60)}} ...</p>

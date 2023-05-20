@@ -101,45 +101,47 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <form action="{{route('customer.inquery.submit')}}" method="post">
                                 @csrf
+                                <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                                 <div class="map-messanger shadow p-5 my-4">
                                     <h6 class="mb-4">Send us a message</h6>
                                     <div class="">
                                         <div class="d-flex justify-content-between flex-column flex-md-row">
-                                            <div class="placeholder-names">
+                                            {{-- placeholder-names : apply this class in below div if need bold placeholder--}}
+                                            <div class="">
                                                 <span class="d-block text-secondary">Full Name</span>
-                                                <b><input name="first_name" type="text" placeholder="Jimmy Newtron" class="border-0 shadow-none">
+                                                <b><input name="first_name" type="text" placeholder="Jimmy Newtron" class="form-control  shadow-none" required>
                                                 </b>
                                             </div>
                                             <div>
-                                                <div class="placeholder-names">
+                                                <div class="">
                                                     <span class="d-block text-secondary">Email Address</span>
                                                     <span class="d-block text-secondary"></span>
-                                                    <b><input name="email" type="text" placeholder="jimmynewtron@mail.com" class="border-0 shadow-none">
+                                                    <b><input name="email" type="text" placeholder="jimmynewtron@mail.com" class="form-control shadow-none" required>
                                                     </b>
 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between flex-column flex-md-row my-4">
-                                            <div class="placeholder-names">
+                                            <div class="">
                                                 <span class="d-block text-secondary">Phone Number</span>
-                                                <b><input name="phone_number" type="text" placeholder="+12 3456 789" class="border-0 shadow-none">
+                                                <b><input name="phone_number" type="text" placeholder="+12 3456 789" class="form-control shadow-none" required>
                                                 </b>
                                             </div>
-                                            <div class="placeholder-names">
+                                            <div class="">
                                                 <span class="d-block text-secondary">Company Name</span>
-                                                <b><input name="company_name" type="text" placeholder="Workgroup Studios" class="border-0 shadow-none">
+                                                <b><input name="company_name" type="text" placeholder="Workgroup Studios" class="form-control shadow-none" required>
                                                 </b>
                                             </div>
 
                                         </div>
                                         <div class="message-last py-5">
-                                            <textarea name="message" class="form-control rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="textHelpBlock"></textarea>
+                                            <textarea name="message" class="form-control shadow-none rounded-0 mb-4" rows="4" placeholder="Message" aria-describedby="textHelpBlock" required></textarea>
                                         </div>
 
                                         <div class="d-flex align-items-center justify-content-between pt-5">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required
                                                     checked>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Accept terms & conditions
