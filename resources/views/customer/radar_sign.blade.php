@@ -48,7 +48,7 @@ foreach($specilization->options as $option){
                         <div>
                             <div class="p-2">
                                 <div class="img-leften  d-flex justify-content-center">
-                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 570px;">
+                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;">
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ foreach($specilization->options as $option){
                             <div>
                                 <div class="p-2">
                                     <div class="img-leften d-flex justify-content-center">
-                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 570px;">
+                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">
                                     </div>
 
                                 </div>
@@ -91,7 +91,7 @@ foreach($specilization->options as $option){
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
-                        <span>( 150+ Customers Revddddddddddddiews)</span>
+                        <span>( 150+ Customers Reviews)</span>
                     </div>
                     <p class="fw-bold fs-5">${{$product->price}}</p>
                     <div>
