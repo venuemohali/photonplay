@@ -47,39 +47,22 @@ foreach($specilization->options as $option){
                     <div class="responsive-two">
                         <div>
                             <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid">
+                                <div class="img-leften  d-flex justify-content-center">
+                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 570px;">
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
+                        @foreach($product->images as $im_g)
+                            <div>
+                                <div class="p-2">
+                                    <div class="img-leften d-flex justify-content-center">
+                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 570px;">
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                             </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                     <div class="slider-nav">
                         <div>
@@ -138,7 +121,7 @@ foreach($specilization->options as $option){
                              <div class="d-flex align-items-center justify-content-between">
                            <div class="selected-anc d-flex border-1 p-2" >
 
-                           <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" style="background-color: transparent;">
+                           <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" required style="background-color: transparent;">
                                       <option selected>--Select Color--</option>
                                   <option value="Yellow">Yellow </option>
                                   <option value="Blue"> Blue</option>
@@ -154,7 +137,7 @@ foreach($specilization->options as $option){
                             <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
     <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
 
-</div>
+                            </div>
 </div>
 <p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
 Shipping:7-10 Working Days.
