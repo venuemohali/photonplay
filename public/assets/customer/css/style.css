@@ -2235,7 +2235,7 @@ input:focus {
 
     .application-item img {
         max-width: 100%;
-        margin: auto;
+        margin: 0 auto -85px;
         padding: 20px;
     }
 
