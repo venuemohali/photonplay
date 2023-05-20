@@ -714,7 +714,7 @@
         </div>
         <div class="container">
             <div class="px-4">
-                <div class="clints-content   mb-0 d-flex align-items-center">
+                <div class="clints-content mb-0 d-flex align-items-center">
                     <div>
                         <div class="px-2 branding-diss">
                             <img src="/assets/customer/images/brand-logo.png" class="d-block mx-auto" />

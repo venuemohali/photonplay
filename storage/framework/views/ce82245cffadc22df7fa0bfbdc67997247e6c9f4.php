@@ -23,21 +23,50 @@
     <link href="/assets/customer/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/assets/customer/slick/slick-theme.css" />
     <link rel="stylesheet" href="/assets/customer/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>Home Page</title>
+    
+    <?php if (isset($component)) { $__componentOriginalccd674d1afd3e872ae26e0944f3adb8ec820e8e4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Customer\MetaSeoTag::class, ['seodata' => $seo_meta??0]); ?>
+<?php $component->withName('Customer.MetaSeoTag'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalccd674d1afd3e872ae26e0944f3adb8ec820e8e4)): ?>
+<?php $component = $__componentOriginalccd674d1afd3e872ae26e0944f3adb8ec820e8e4; ?>
+<?php unset($__componentOriginalccd674d1afd3e872ae26e0944f3adb8ec820e8e4); ?>
+<?php endif; ?>
+    
+
     <style>
         .product-pvms-icop:hover{
             transform: scale(2);
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
+<a href="#" id="scrollToTopButton" title="Scroll to Top"  style="
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      z-index: 99;">
+    <i class="bi bi-arrow-up-circle" style="font-size: 36px;"></i>
+</a>
 <div>
 <header class="header bg-white py-3 sticky-top">
         <nav class="navbar navbar-expand-lg custome-mega-amenu">
@@ -243,12 +272,12 @@
                                                 Sign (VMS)</a>
                                         </li>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2 text-wrap"
-                                                href="#">Variable
+                                                href="<?php echo e(route('customer.variable.speed.limit')); ?>">Variable
                                                 Speed Limit
                                                 Sign
                                                 (VSLS)</a></li>
                                         <li><a class="text-wrap dropdown-item px-0 text-uppercase mb-2"
-                                                href="#">Portable
+                                                href="<?php echo e(route('customer.portable.variable.message.signs')); ?>">Portable
                                                 Variable
                                                 Message Sign
                                                 (PVMS) </a></li>
@@ -263,10 +292,10 @@
                                     <ul>
                                         <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Radar
                                                 Speed Sign </a></li>
-                                        <li><a href="#"
+                                        <li><a href="<?php echo e(route('customer.portable.variable.message.signs')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Portable
                                                 Variable Message Sign (PVMS)</a></li>
-                                        <li><a href="#"
+                                        <li><a href="<?php echo e(route('customer.variable.message')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Message Sign (VMS) </a></li>
                                         <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">LED
@@ -277,26 +306,26 @@
                                 <div class="mega-menu-item">
                                     <h4 class="text-uppercase">Tunnels</h4>
                                     <ul>
-                                        <li><a href="#"
+                                        <li><a href="<?php echo e(route('customer.variable.message')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Message
                                                 Sign (VMS)</a>
                                         </li>
-                                        <li><a href="#"
+                                        <li><a href="<?php echo e(route('customer.variable.speed.limit')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Variable
                                                 Speed
                                                 Limit Sign
                                                 (VSLS)</a></li>
-                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Way
-                                                Finders
-                                            </a>
-                                        </li>
-                                        <li><a href="#"
+
+
+
+
+                                        <li><a href="<?php echo e(route('customer.signal')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase text-wrap mb-2">Signages
                                                 – Emergency
                                                 Exit Sign ,
                                                 Emergency Telephone Sign</a></li>
-                                        <li><a href="#" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
+                                        <li><a href="<?php echo e(route('customer.lane.control.system')); ?>" class="text-wrap dropdown-item px-0 text-uppercase mb-2">Lane
                                                 Control
                                                 System (LCS) </a>
                                         </li>
@@ -305,7 +334,7 @@
                                 <div class="mega-menu-item">
                                     <h4 class="text-uppercase">TRANSIT</h4>
                                     <ul>
-                                        <li><a href="#"
+                                        <li><a href="<?php echo e(route('customer.pasenger.information.display.system')); ?>"
                                                 class="text-wrap dropdown-item px-0 text-uppercase mb-2">Passenger
                                                 Information Display
                                                 System <br> (PIDS) </a></li>
@@ -318,11 +347,12 @@
                         </div>
                         <div class="mega-menu-items">
                             <!-- <ul><li>NEWS & EVENTS</li></ul> -->
-                            <h4>NEWS & EVENTS</h4>
+
+                            <a class="nav-link text-uppercase" href="<?php echo e(route('customer.blog')); ?>"> <h4>NEWS & EVENTS</h4></a>
                         </div>
                         <div class="mega-menu-items">
                             <!-- <ul><li>CONTACT</li></ul> -->
-                            <h4>CONTACT</h4>
+                            <a class="nav-link text-uppercase" href="<?php echo e(route('customer.contact.us')); ?>"><h4>CONTACT</h4></a>
                         </div>
 
                         <form class=" d-flex mt-lg-0 mt-4 align-items-center" role="search">
@@ -345,9 +375,9 @@
         </div>
     </header>
 <!-- </html> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
 
 $('.clint-wrapperr').slick({

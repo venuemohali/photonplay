@@ -70,7 +70,7 @@ $seo_meta=[
                     <h6 class="fs-6 text-colorr">Empowering Smarter Mobility with Innovative Product Solutions that Exceed Expectations.</h6>
                 </div>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide">
+            <div id="carouselExampleIndicators" class="carousel slide" data-interval="3000" data-bs-ride="carousel">
                 <div class="carousel-indicators mb-0 bg-transparent">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
