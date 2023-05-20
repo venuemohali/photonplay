@@ -114,8 +114,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
-                    <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\images\social05.png')}}" /></a></li>
-                    <li><a class="" href=""><img src="{{asset('assets\images\social06.png')}}" /></a></li>
+
                 </ul>
                 </div>
             </div>
