@@ -31,7 +31,7 @@ class CreateOrdersTable extends Migration
             $table->string('billing_country')->nullable();
             $table->string('billing_postcode')->nullable();
             $table->string('address')->nullable();
-            $table->string('order_notes')->nullable();
+            $table->text('order_notes')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });
