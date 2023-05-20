@@ -122,10 +122,9 @@ foreach($specilization->options as $option){
                            <div class="selected-anc d-flex border-1 p-2" >
 
                            <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" required style="background-color: transparent;">
-                                      <option selected>--Select Color--</option>
                                   <option value="Yellow">Yellow </option>
-                                  <option value="Blue"> Blue</option>
-                                  <option value="Black"> Black</option>
+                                  <option value="Amber"> Amber </option>
+                                  <option value="White"> White </option>
                            </select>
                            </div>
 
