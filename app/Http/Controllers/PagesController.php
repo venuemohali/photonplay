@@ -249,7 +249,7 @@ class PagesController extends Controller
 
     public function downloadPdf(Request $request){
         // dd($request->brochure);
-            // $file_path = asset('storage/'.$request->brochure);
+            // $file_path = asset('storage/app/public/'.$request->brochure);
             // $headers = [
             //     'Content-Type : application/pdf',
             //     'Content-Disposition: attachment; filename='.$file_path, 
