@@ -65,6 +65,7 @@ class CartController extends Controller
     }
 
     public function addShoppingBag(Request $request){
+        // dd($request->all());
         $specPrice = 0;
         if(isset($request->dynamic_spec)){
             foreach($request->dynamic_spec as $specs){
@@ -106,6 +107,7 @@ class CartController extends Controller
                     'category' => $request->category,
                     'quantity' => $request->quantity,
                     'cover_image' => $request->cover_image,
+                    'color' => $request->color,
                 ]);
             }
 
@@ -198,6 +200,7 @@ class CartController extends Controller
                        'option_ids' => $carts->option_ids,
                        'quantity' => $carts->quantity,
                        'price' => $carts->price,
+                       'color' => $carts->color,
                    ]);
                }
 

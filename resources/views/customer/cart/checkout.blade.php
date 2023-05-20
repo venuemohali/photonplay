@@ -69,7 +69,7 @@
                         @endif
                         <li class="d-flex justify-content-between">
                             <span class="text"><b>Grand Total</b></span>
-                            <span class="text-amount">${{$grand_total = ($total - $discount) + $shipping + $gst}}</span>
+                            <span class="text-amount">${{$grand_total = ($discounted = $total - $discount) + $shipping + (($discounted  * $gst) / 100)}}</span>
                         </li>
                     </ul>
 

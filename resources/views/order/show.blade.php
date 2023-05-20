@@ -84,6 +84,7 @@ use App\Models\ProductSpcializationOption;
                                     <th>Product Name</th>
                                     <th>Options</th>
                                     <th>Quantity</th>
+                                    <th>Color</th>
                                     <th>Price</th>
 
                                 </tr>
@@ -107,6 +108,7 @@ use App\Models\ProductSpcializationOption;
 
                                         </td>
                                         <td>{{ $prod->quantity }}</td>
+                                        <td>{{ $prod->color }}</td>
                                         <td>${{$prod->price}}/-</td>
                                     </tr>
                                 @endforeach
@@ -114,7 +116,7 @@ use App\Models\ProductSpcializationOption;
                                     <td>
 
                                     </td>
-                                    <td colspan="4">
+                                    <td colspan="5">
                                     </td>
                                     <td>
                                         ${{$order->grand_total}} /-
