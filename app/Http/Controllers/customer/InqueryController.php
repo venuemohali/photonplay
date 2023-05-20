@@ -12,7 +12,9 @@ class InqueryController extends Controller
     public function store(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'first_name'=>'max:20',
+            'last_name'=>'max:20'
         ]);
 
         if($validator->fails()){
