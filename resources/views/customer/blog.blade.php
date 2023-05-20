@@ -8,7 +8,7 @@
     <!-- Banner Sec End -->
     <section class="blog-content-list position-relative pb-4">
         <div class="social-icons position-absolute start-0">
-            <img src="./assets/images/social-media iconss.png" alt="">
+            <img src="./assets/images/soxcial-media iconss.png" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -494,4 +494,46 @@
             });
         });
     });
+</script>
+
+
+
+<script>
+    $('.clints-content-branding').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay:true,
+        // fade:true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+    window.addEventListener('click', function (e) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    })
 </script>
