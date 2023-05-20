@@ -99,6 +99,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 
         Route::get('create-sub-page/{id}', [PagesController::class, 'createSubPage'])->name('manage.solution.create.sub.page');
+        Route::get('delete-sub-page/{id}', [PagesController::class, 'deleteSubPage'])->name('manage.solution.delete.sub.page');
         Route::get('create-specification-page/{id}', [PagesController::class, 'createSpecificationSubPage'])->name('manage.solution.create.specification.page');
         Route::get('create-features-page/{id}', [PagesController::class, 'createFeaturesSubPage'])->name('manage.solution.create.features.page');
         Route::get('create-images-page/{id}', [PagesController::class, 'createImagesSubPage'])->name('manage.solution.create.images.page');
@@ -113,8 +114,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('store-sub-page-image', [PagesController::class, 'updateSingleImage'])->name('manage.solution.update.single.image');
         Route::any('store-sub-page-multi-image', [PagesController::class, 'updateMultiImage'])->name('manage.solution.update.multi.image');
         Route::post('store-sub-page-gallery', [PagesController::class, 'subPageGallery'])->name('sub.page.gallery');
-
-
+        Route::get('add-pvms-products', [PagesController::class, 'addPvmsProductForm'])->name('add.pvms.products');
+        Route::post('store-pvms-products', [PagesController::class, 'storePvmsProductForm'])->name('pvms.product.store');
+        Route::get('download-pdf', [PagesController::class, 'downloadPdf'])->name('manage.solution.download.pdf');
 
     });
 });
@@ -175,3 +177,4 @@ Route::group(['as' => 'customer.', 'namespace' => 'App\Http\Controllers\customer
 });
 
 Route::post('/upload-photo', [CommonController::class, 'upload'])->name('upload-photo-summernote');
+Route::get('photonplay-optimize', [CommonController::class, 'optimize']);

@@ -26,20 +26,22 @@
         <!-- All Client Table Start -->
         <div class="row">
             <div class="col-12">
-                {{-- <div class="card">
-                    <div class="card-header d-flex">
-                    <h5 class="card-title">All Sub Pages</h5>
-                    <a href="#" class="btn btn-primary ms-auto d-flex align-items-center">
-                        <i data-feather="plus-circle"> </i>
-                        Add Sub Page</a>
-                </div> --}}
+                @if ($id == 3)
+                    <div class="card">
+                            <div class="card-header d-flex">
+                            <h5 class="card-title">All Products</h5>
+                            <a href="{{route('admin.add.pvms.products')}}" class="btn btn-primary ms-auto d-flex align-items-center">
+                                <i data-feather="plus-circle"> </i>
+                                Add Product</a>
+                        </div>
+                @endif
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
                             <table class="display" id="basic-2">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Sub Pages<th>                                        <th>Options</th>
+                                        <th>Sub Pages</th>                                        <th>Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,6 +52,10 @@
                                                 <td>
                                                     <a href="{{route('admin.manage.solution.create.sub.page', $page->id)}}">
                                                         <i data-feather="eye"></i></a>
+                                                @if($id == 3)
+                                                    <a style="color:red;" href="{{route('admin.manage.solution.delete.sub.page', $page->id)}}">
+                                                        <i data-feather="trash"></i></a>
+                                                @endif
                                                 </td>
                                             </tr>
                                         @endforeach

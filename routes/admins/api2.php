@@ -84,7 +84,7 @@ Route::delete('/cms/clients/{id}', [ClientsLogosController::class,'destroy'])->n
 Route::get('/orders', [OrderController::class,'index'])->name("orders_index");
 Route::get('/orders/{id}', [OrderController::class,'show'])->name("orders_show");
 
-
+Route::post('change-order-status', [OrderController::class,'changeOrderStatus'])->name('order.status.submit');
 
 
 
@@ -118,5 +118,12 @@ Route::delete('/cms/banners/{id}', [BannerController::class,'destroy'])->name("b
 
 
 Route::get('/contact-us', [AdminContactusController::class,'index'])->name("contact_us_index");
+Route::get('/contact-us/{id}', [AdminContactusController::class,'show'])->name("contact_us_show");
+Route::get('/change-inquiry-status/{id}', [AdminContactusController::class,'change_status'])->name("contact_us_change_status");
 
+Route::delete('/delete-inquiry-status/{id}', [AdminContactusController::class,'destroy'])->name("contact_us_delete_inquiry");
 
+Route::put('/order-status-change/{id}', [OrderController::class,'change_status_order'])
+    ->name("change_status_order_product");
+
+Route::get('/reports/order/invoice/{id}', [OrderController::class,'generateInvoice'])->name("generate_order_invoice");

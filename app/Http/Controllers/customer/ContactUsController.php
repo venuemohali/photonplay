@@ -105,9 +105,7 @@ class ContactUsController extends Controller
         return view('customer.pessenger_information', compact('page'));
     }
     public function portableVariableMessageSigns(){
-        $products = Category::with('products', 'products.specilizations.options.specializationoptions')->where('title','Portable Variable Signs')->whereHas('products', function($query) {
-            $query->where('status', 'Listed');
-        })->get();
+        $products = $page = Page::with('specs','images','features','galleries')->where('page_type_id', Page::PVMS)->get();
         // dd($products);
         return view('customer.portable_variable_message_signs', compact('products'));
     }
@@ -119,7 +117,7 @@ class ContactUsController extends Controller
     }
 
     public function pvmsICop($id){
-        $product = Product::with('category')->find($id);
+        $product = Page::with('specs','images','features','galleries')->find($id);
         // dd($product);
         return view('customer.pvms_icop', compact('product'));
     }
@@ -135,5 +133,6 @@ class ContactUsController extends Controller
         // dd($page);
         return view('customer.signages_sub_page', compact('page'));
     }
+
 
 }

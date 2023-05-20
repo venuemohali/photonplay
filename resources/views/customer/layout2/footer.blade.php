@@ -7,8 +7,11 @@ $categories = Category::select('title')->take(3)->get();
 $blogs = Blog::select('slug','title')->take(4)->get();
 @endphp
 
+
+
+
 <!-- _____________________ourclint-last-end___________________ -->
-    <section class="subscribe-section">
+    <section class="subscribe-section" id="subscribed">
         <div class="container">
             <div class="row">
                 <div class="subscribe-wrapper text-center">
@@ -16,6 +19,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         New Products</h3>
                     <form action="{{route('customer.newsletter.store')}}" class="subscribr-form" method="post">
                         @csrf
+                        <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                         <div class="col-lg-4 mx-auto">
                             <div class="d-flex border-bottom">
                                 <input type="text" placeholder="Enter your email address..."
@@ -36,12 +40,14 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="">
                 </div>
                 <div class="description">
+                    <p style="text-align: justify">
                     PHOTONPLAY is a family owned, India based design, develop and manufacturing of Systems for the ITS
                     industry since 2006. With subsidiary offices in US, Australia and Norway plus distribution facility
                     in
                     the US and representatives all over the world, PHOTONPLAY has satisfied customers (System
                     integrators,
                     Govt Authorities, OEMs and corporates) in over 30 countries worldwide.
+                    </p>
                 </div>
 
             </div>
@@ -103,13 +109,12 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         @endif
                     </div>
 {{--                    <a href="{{route('customer.contact.us')}}" class="btn btn-primary mt-3">Contact Now</a>--}}
-                    <ul class="social-media pt-md-4 py-4 ps-0 w-100">
+                    <ul class="social-media w-100">
                     <li><a class="" href="{{$setting->facebook ?? ''}}"><img src="{{asset('assets\customer\images\facebook.svg')}}" /></a></li>
                     <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
-                    <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\images\social05.png')}}" /></a></li>
-                    <li><a class="" href=""><img src="{{asset('assets\images\social06.png')}}" /></a></li>
+
                 </ul>
                 </div>
             </div>
@@ -124,3 +129,39 @@ $blogs = Blog::select('slug','title')->take(4)->get();
               <p>© 2023 Photonplay Systems Inc. All right reserved</p>
           </div>
        </div>
+<script>
+    @if (session()->has('success'))
+    Toastify({
+        text: '{{ session('success') }}',
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "green",
+            color:"text",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+    @endif
+
+    @if (session()->has('error'))
+    Toastify({
+        text: '{{ session('error') }}',
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "#FF3333",
+            color:"text",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+    @endif
+
+</script>

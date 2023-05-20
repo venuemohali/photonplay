@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"SIGNAGES",
+    "description"=>"Tunnel signage is a crucial component of tunnel safety since it assists vehicles in securely and effectively navigating tunnels.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 <body>
 
@@ -12,7 +19,7 @@
                 <div class="text-center">
                     <h4 class="text-white">SIGNAGES</h4>
                     <p class="text-white">Highly visible and innovative, creating instant awareness of local speed limit</p>
-                    <button class="btn btn-primary rounded-0">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
                 </div>
             </div>
         </div>
@@ -53,8 +60,12 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="text-start p-4 list-unsorted">
                                     <div class="roundedd-imageses">
-                                        <img src="{{asset('assets/customer/images/Layer1.png')}}" alt="Not Found" class="img-fluid">
+                                        <img src="{{asset('storage/'.$page->cover_image)}}" alt="{{$page->title}}"
+                                             class="img-fluid">
                                     </div>
+
+
+
                                     <div class="my-3 listed-bacgunded px-4 py-4">
                                         <h5 class="fw-bold text-capitalize">{{$page->title}}</h5>
                                         <p>{{substr($page->description, 0, 60)}} ...</p>

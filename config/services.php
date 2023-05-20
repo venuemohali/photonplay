@@ -48,7 +48,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://127.0.0.1:8000/google/callback',
+        'redirect' => 'https://stagingserver.photonplay.com/google/callback',
+        // 'redirect' => 'http://127.0.0.1:8001/google/callback',
+    ],
+    'stripe' => [
+        'stripe_key' => env('STRIPE_KEY'),
+        'stripe_secret' => env('STRIPE_SECRET'),
     ],
 
 ];

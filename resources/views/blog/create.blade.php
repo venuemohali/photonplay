@@ -163,14 +163,13 @@
             </div>
         </div>
         <script>
+
             $(document).ready(function() {
-                $('#summernote').summernote({
+                $('#summernote').summernote(
+                    {
                     placeholder: 'Hello Photon Play Systems',
                     tabsize: 2,
                     height: 500,
-                    // toolbar: [
-                    //     ['insert', ['picture']]
-                    // ],
                     callbacks: {
                         onImageUpload: function(files) {
                             var formData = new FormData();
@@ -191,11 +190,10 @@
                             });
                         }
                     }
-                });
+                }
+
+                );
             });
-
-
-
         </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>

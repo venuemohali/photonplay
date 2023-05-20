@@ -438,7 +438,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .about-wrapper {
-    background-image: url("../images/aboutBAnner.png");
+    background-image: url("../images/aboutBAnner1.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -468,7 +468,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .banner-imageses {
-    background-image: url("../images/solution-trash.png");
+    background-image: url("../images/solution-trash.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -478,7 +478,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .tunels-imageses {
-    background-image: url("../images/tunels-bg.png");
+    background-image: url("../images/tunels-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -488,7 +488,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .security-imageses {
-    background-image: url("../images/hong-kong-aerial-night.png");
+    background-image: url("../images/hong-kong-aerial-night.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -498,7 +498,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .highyway-imageses {
-    background-image: url("../images/shanghai-overpass-night.png");
+    background-image: url("../images/shanghai-overpass-night.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -768,7 +768,8 @@ div#accordionFlushExample1 {
 .slider {
     /* max-width: calc(100% - 636px); */
     width: 100%;
-    background: var(--primary-color);
+    height: 100%;
+    background: transparent;
     border-radius: 10px;
 }
 

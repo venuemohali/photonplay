@@ -1,6 +1,6 @@
 @extends('user-master')
 
-@section('title', 'Manage contact us')
+@section('title', 'Manage Inquiry')
 
 @section('css')
 
@@ -33,11 +33,11 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Company Name</th>
+                                    <th>Inquiry Id</th>
+                                    <th>Name</th>
                                     <th>Country</th>
                                     <th>Subject</th>
                                     <th>Email </th>
-                                    <th>Phone</th>
                                     <th>Options</th>
                                 </tr>
                                 </thead>
@@ -45,14 +45,16 @@
                                 @foreach ($records as $item)
                                     <tr id="Item-{{$item->id}}">
                                         <td>{{$Sr++}}</td>
-                                        <td>{{$item->coupon_name}}</td>
-                                        <td>{{$item->value }}{{$item->type==1?"$":"%"}}</td>
-                                        <td>{{$item->status==1?"Active":"Expired"}}</td>
-                                        <td>{{$item->expiry_date}}</td>
+                                        <td>{{$item->id}}</td>
+                                        <td>{{$item->first_name}}</td>
+                                        <td>{{$item->country }}</td>
+                                        <td>{{$item->subject}}</td>
+                                        <td>{{$item->email}}</td>
                                         <td>
-                                            <a href="{{route('admin.coupons.edit', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
-                                                <i data-feather="edit"></i>
+                                            <a href="{{route('admin.contact_us_show', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Edit">
+                                                <i data-feather="eye"></i>
                                             </a>
+
                                             <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
                                                 <i data-feather="trash-2"></i>
                                             </a>
@@ -77,7 +79,7 @@
 
                                                             $.ajax({
                                                                 type:'DELETE',
-                                                                url:'{{url('admin/coupons/'.$item->id)}}',
+                                                                url:'{{route('admin.contact_us_delete_inquiry',$item->id)}}',
                                                                 data:'_token = {{ @csrf_token() }}',
                                                                 success:function(data) {
                                                                     $("#Item-{{$item->id}}").hide();

@@ -34,9 +34,7 @@
 
                     <div class="card-body ">
                             <div class="d-flex justify-content-center mb-4">
-                                <img src="https://stagingserver.photonplay.com/assets/customer/images/zero-mentence.png"  class="img-fluid"/>
                             </div>
-
                         <form method="POST" action="{{route('admin.manage.solution.store')}}"  enctype="multipart/form-data" >
                             @csrf
                             <input type="hidden" name="sub_page_id" value="{{$page->id}}">
@@ -75,7 +73,7 @@
                                 <label for="meta_title" class="col-md-2 col-form-label text-md-end"><span>* </span>{{ __('Meta Title') }}</label>
 
                                 <div class="col-md-10">
-                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{$page->meta_title}}" required autocomplete="meta_title" autofocus>
+                                    <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{$page->meta_title}}"  autocomplete="meta_title" autofocus>
 
                                     @error('meta_title')
                                     <span class="invalid-feedback" role="alert">

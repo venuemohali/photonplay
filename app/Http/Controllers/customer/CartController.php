@@ -65,6 +65,7 @@ class CartController extends Controller
     }
 
     public function addShoppingBag(Request $request){
+        // dd($request->all());
         $specPrice = 0;
         if(isset($request->dynamic_spec)){
             foreach($request->dynamic_spec as $specs){
@@ -85,6 +86,7 @@ class CartController extends Controller
                     'product_id' => $request->product_id,
                     'price' => $request->price + $specPrice,
                     'title' => $request->title,
+                    'color' => $request->color,
                     'category' => $request->category,
                     'quantity' => $request->quantity,
                     'cover_image' => $request->cover_image,
@@ -105,6 +107,7 @@ class CartController extends Controller
                     'category' => $request->category,
                     'quantity' => $request->quantity,
                     'cover_image' => $request->cover_image,
+                    'color' => $request->color,
                 ]);
             }
 
@@ -148,7 +151,7 @@ class CartController extends Controller
     public function placeOrder(Request $request){
         try{
             $orderId ='#'.mt_rand(1111, 99999);
-            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+            $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
                header('Content-Type: application/json');
                $price = \Stripe\Price::create([
                    'unit_amount' => $request->grand_total * 100,
@@ -197,6 +200,7 @@ class CartController extends Controller
                        'option_ids' => $carts->option_ids,
                        'quantity' => $carts->quantity,
                        'price' => $carts->price,
+                       'color' => $carts->color,
                    ]);
                }
 
@@ -208,7 +212,7 @@ class CartController extends Controller
     }
 
     public function checkoutSuccess(Request $request){
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+       $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
             $orderId = $request->order_id;
             $order =  Order::where('order_number',$orderId)->first();
             $checkout =  \Stripe\Checkout\Session::retrieve($order->trx_id);

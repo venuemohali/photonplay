@@ -105,12 +105,12 @@
                                 </li>
                                 <li class="d-flex justify-content-between">
                                     <span class="text text-capitalize">Tax/GST</span>
-                                    <span class="text-amount">${{$gst = $taxes->gst ?? 00.00}}</span>
+                                    <span class="text-amount">{{floor($gst = $taxes->gst) ?? 0}}%</span>
                                 </li>
 
                                 <li class="d-flex justify-content-between active">
                                     <span class="text text-capitalize fw-bold">Order total</span>
-                                    <span class="text-amount">${{$grand_total + $shipping + $gst}}</span>
+                                    <span class="text-amount">${{$grand_total + $shipping + (($grand_total * $gst) / 100)}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -140,7 +140,7 @@
     </div>
 </section>
 
-@include('customer.layouts.footer')
+@include('customer.layout2.footer')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   $(document).ready(function(){

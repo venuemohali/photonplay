@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Transit Solutions",
+    "description"=>"Revolutionize public transportation systems with our advanced ITS solutions that offer
+real-time data, enhanced safety features, and improved passenger experience.",
+    "keywords"=>"Passenger Information Display System (PIDS),Bus Signs,"
+];
+?>
 @include('customer.layout2.header')
     <!-- header-end -->
     <!-- banner-start -->
@@ -13,7 +21,7 @@
                     Revolutionize public transportation systems with our advanced ITS solutions that offer
  <br> real-time data, enhanced safety features, and improved passenger experience.
                     </h6>
-                    <button class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</button>
+                      <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
                   </div>
                 </div>
                         </div>
@@ -37,21 +45,17 @@
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4>Passenger Information Display System <br> (PIDS)</h4>
-                        <!-- <span class="text-capitalize d-block">Three Size Options To Choose From</span> -->
-                        <p>Viewed by millions of eyes everyday, guiding way to millions of motorist to drive them back
-                            home safely every day, Photonplay is contributing its part to the humanity in it own way by
-                            enhanced road and traffic safety.</p>
+                     <p style="text-align: justify;">
+                         Our Passenger Information Display Systems (PIDS) offer highly reliable and customizable solutions for train signaling and commuter information. With advanced technology and versatile display options, our PIDS are visible even in sunny conditions and function 24/7 for up to 20 years. Our PIDS products include concourse displays, Metro platform displays, and major overview train information displays.
+                     </p>
+                        <p style="text-align: justify;">
+                         Our team provides software for all parameters and settings, allowing for easy manual or remote operation. We work closely with our customers to ensure product viability and design, and our team manages prototyping, development, and implementation from start to finish. Let us help you improve train safety and enhance commuter experiences with our innovative PIDS solutions.
 
-                        <p> The product range starting from Platform Displays for Metro trains, Concourse displays and
-                            big summary display charts for train information at a glance. Photonplay’s PIDs signs are
-                            highly reliable and rugged components of a Train Signalling system</p>
+                     </p>
+                        <h6> Application</h6>
                         <ul class="ps-3">
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-
+                            <li> Bus</li>
+                            <li> Rail Transits</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.pasenger.information.display.system')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
@@ -61,7 +65,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/pids_solution.webp') }}" alt="Not Found" class="img-fluid shadow-none">
                     </div>
                 </div>
             </div>
@@ -71,20 +75,13 @@
 
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
-                        <h4>Bus  Signs </h4>
-                        <!-- <span class="text-capitalize d-block">Designed to withstand extreme weather 
-                            conditions</span> -->
-                        <p>Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... Brief lines here......
-                            Brief lines here...... Brief lines here...... Brief lines here...... </p>
-                        <ul class="ps-5">
-
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                            <li> Point head <span> - details</span></li>
-                        </ul>
+                        <h4>Bus Signs </h4>
+                     <p style="text-align: justify;">
+                         Our Bus Signs are an essential component of intelligent transportation systems, designed to provide real-time information to commuters and improve their overall transit experience. Our LED bus signs are highly visible, even in bright sunlight, and can display various types of information, including bus routes, arrival times, and other important information. With our customizable solutions, we can tailor our bus signs to fit the unique needs of your transit system. Trust in our
+                        </p>
+                        <p style="text-align: justify;">
+                         advanced ITS technology to enhance the efficiency and safety of your bus transportation system. Let us help you transform your transit system with our innovative and reliable Bus Signs.
+                     </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
@@ -93,7 +90,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/BG-area.png') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/bussign_solution.webp') }}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -112,22 +109,26 @@
                             <div class="d-flex justify-content-between gap-4">
                                 <div class="inner-bus text-center w-50 py-5">
                                     <div class="bus-radious">
-                                        <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                                        <img src="{{asset('assets/images/solutions/pids_solution.webp') }}" alt="not-found" class="img-fluid">
                                     </div>
                                     <div class="mt-4">
                                         <p class="mb-2">Passenger Information </p>
                                         <p>Display System (PIDS)</p>
+                                        <a href="{{route('customer.pasenger.information.display.system')}}">
                                         <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="inner-bus text-center w-50 py-5">
                                     <div class="bus-radious">
-                                        <img src="{{asset('assets/customer/images/bus-bg.png') }}" alt="not-found" class="img-fluid">
+                                        <img src="{{asset('assets/images/solutions/bussign_solution.webp') }}" alt="not-found" class="img-fluid">
                                     </div>
                                     <div class="mt-4">
-                                        <p class="mb-2">Bus Signs </p>
-                                        <p class="visibility-hidden">Display System (PIDS)</p>
+                                        <p class="mb-2">Bus Signs </p>
+                                        <p>Display System (PIDS)</p>
+                                        <a href="#">
                                         <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                                        </a>
                                     </div>
                                 </div>
                             </div>

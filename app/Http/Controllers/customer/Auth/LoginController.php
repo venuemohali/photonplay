@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Customer;
 use Illuminate\Auth\Events\Validated;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -32,6 +33,12 @@ class LoginController extends Controller
 
     public function loginForm(Request $request)
     {
+
+        $loginuser_validate=Session::get('user');
+        if($loginuser_validate){
+            return redirect("radar-speed-signs");
+        }
+
         $p = $request->p;
         $s = $request->s;
         return view('customer.auth.login', compact('p', 's'));
@@ -39,55 +46,62 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $request->validate([
+        $sessionId = Session::getId();
+        $validator = Validator::make($request->all(), [
             'email' => 'required',
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
-        if (!Auth::guard('customer')->attempt($credentials)) {
-            // return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
-            notify()->error('Email or Password doesnt match');
-            return redirect("/");
+        if($validator->fails()){
+            return redirect()->back()->with('error',  $validator->errors()->first());
         }
 
-        Session::put('user', Auth::guard('customer')->user());
-        notify()->success('Login Successfully');
-        if($request->p == 1){
-            Cart::where('session_id', $request->s)->update(['user_id' => Session::get('user')->id]);
-            return redirect()->route('customer.shopping.bag');
-        }else{
-            return redirect()->intended('radar-speed-signs');
+        $credentials = $request->only('email', 'password');
+        if (!Auth::guard('customer')->attempt($credentials)) {
+            return redirect()->back()->with('error', "You have entered invalid credentials");
         }
+        $session = Session::put('user', Auth::guard('customer')->user());
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        return redirect()->intended('radar-speed-signs')->with('success', ' Logged in successfully !');
     }
 
     public function registerForm()
     {
+        $loginuser_validate=Session::get('user');
+        if($loginuser_validate){
+            return redirect("radar-speed-signs");
+        }
         return view('customer.auth.register');
     }
 
     public function register(Request $request)
     {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        $request->validate([
+        $sessionId = Session::getId();
+        $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
+
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:customers',
             'password' => 'required|min:6',
         ]);
 
+        if($validator->fails()){
+            return redirect()->back()->with('error',  $validator->errors()->first());
+        }
+
         $customer = \Stripe\Customer::create([
             'email' => $request->email,
             'name' => $request->name,
         ]);
-        Customer::create([
+        $customer = Customer::create([
             'stripe_id' => $customer->id,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        notify()->success('Your account has been registered successfully');
-        return redirect()->route('customer.loginForm');
+        $session = Session::put('user', $customer);
+        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        return redirect()->route('customer.loginForm')->with('success', 'Your account has been registered successfully');
     }
 
     public function redirect($provider)
@@ -96,12 +110,14 @@ class LoginController extends Controller
     }
     public function Callback($provider)
     {
+        try{
         $userSocial =   Socialite::driver($provider)->stateless()->user();
         $users       =   User::where(['email' => $userSocial->getEmail()])->first();
         if ($users) {
             Auth::login($users);
             return redirect('/');
         } else {
+
             $user = Customer::create([
                 'name'          => $userSocial->getName(),
                 'email'         => $userSocial->getEmail(),
@@ -109,7 +125,15 @@ class LoginController extends Controller
                 'provider_id'   => $userSocial->getId(),
                 'provider'      => $provider,
             ]);
+
             return redirect()->route('home');
+        }
+        }catch(\Illuminate\Database\QueryException $e) {
+            if ($e->errorInfo[1] == 1062) {
+                return back()->with('error', 'This email has been registered by normal signup.');
+            } else {
+                return back()->with('error', $e->getMessage());
+            }
         }
     }
 

@@ -1,6 +1,14 @@
+<?php
+$seo_meta=[
+"title"=>"iCop | RADAR SPEED SIGN - No.1 In Traffic Claiming Solution",
+"description"=>" The sign acts like a Variable Message Sign to display graphics and text along with white Alert Flashing Lights . The sign acts as a Smart Traffic data collector and analyzer. It is a cloud controlled and highly secured Radar Speed Sign.",
+"keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+
+?>
 @include('customer.layouts.header')
 {{--Radar Banner Start--}}
-
+<x-Customer.Radar.RadarBanner/>
 {{--Radar Banner End--}}
     <!-- Photon play radar-start -->
     <section class="portable px-lg-5">
@@ -50,7 +58,7 @@
                             <div class="inner-product bg-white">
                                 <div class="w-100 h-100 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
                                     background-size: cover;">
-                                    <img class=""  src="" alt="">
+{{--                                    <img class=""  src="" alt="">--}}
                                 </div>
                                 <div class="speed-sign text-center mt-3">
                                     <span class="d-block weight-font">
@@ -169,10 +177,10 @@
                                 <h2 class="accordion-header">
                                     <button
                                         class="accordion-button collapsed bg-white shadow-none py-3 pb-2 shadow-none"
-                                        type="button" 
-                                        data-bs-toggle="collapse" 
+                                        type="button"
+                                        data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false" 
+                                        aria-expanded="false"
                                         aria-controls="flush-collapseOne">
                                         Dimensions and weight
                                     </button>

@@ -1,3 +1,11 @@
+<?php
+$seo_meta=[
+    "title"=>"Portable Variable Message Signs (VMS)",
+    "description"=>"Photonplay’s outperforming VMS signs are highly reliable and rugged components of traffic management ecosystem for motorways, tunnels and urban traffic management systems.",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
+
 @include('customer.layout2.header')
 <!-- banner-start -->
     <section class="banner-threee position-relative pt-0">
@@ -67,7 +75,6 @@
             <div class="row">
                 <div class="col-lg-6 ">
                     <div class="radar-icop">
-                        <h6 class="fs-6 mb-3">photonplay’s</h6>
                         <h1 class="mb-">Portable Variable <br> Message Signs (VMS) </h1>
                         <span class="text-uppercase">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span>
                         <p class="mt-4 mb-lg-0 mb-5">
@@ -94,36 +101,31 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center mb-lg-5">
-                        <h6 class="fs-6 text-colorr">photonplay’s </h6>
                         <h2 class="fs-md-2 fs-lg-1 mt-3 fw-bold">iCop Series</h2>
                     </div>
                 </div>
-@forelse ($products as $product)
-@foreach ($product->products as $item)
-            <a href="{{route('customer.pvms.i.cop', $item->id)}}" class="text-decoration-none">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="text-start p-4 list-unsorted">
-                        <div class="roundedd-image">
-                            <img src="{{asset('assets\customer\images\Photonplay-MTO.png')}}" alt="Not Found" class="img-fluid">
-                        </div>
-                        <div class="my-3 list-bacgund px-4 py-4">
-                            <h5 class="fw-bold text-capitalize">{{$item->title}}</h5>
-                            <ul>
-                                <li>Batteries - 8</li>
-                                <li> Capacity - 6V, 230Ah each</li>
-                                <li> Solar Panel - 180W, 12V</li>
-                                <li> Power Options - Solar/AC</li>
-                                <li> Battery charger - 15A</li>
-                            </ul>
-                        </div>
+<div class="row">
+    @foreach ($products as $item)
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="{{route('customer.pvms.i.cop', $item->id)}}" class="text-decoration-none">
+                <div class="text-start p-4 list-unsorted">
+                    <div class="roundedd-image">
+                        <img src="{{asset('storage/'.$item->cover_image)}}" alt="Not Found" class="img-fluid">
                     </div>
-                </div>  
+                    <div class="my-3 list-bacgund px-4 py-4">
+                        <h5 class="fw-bold text-capitalize">{{$item->title}}</h5>
+                        <ul>
+                            @foreach ($item->features as $feature)
+                            <li>{{$feature->feature }} - {{$feature->description}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </a>
+            </div>
 @endforeach
+</div>
 
-@empty
-    
-@endforelse  
             </div>
         </div>
     </section>

@@ -2,9 +2,9 @@
 
 <body>
     <div class="container-cus pt-lg-5 pt-3">
-        <div class="login-sec px-2">
-            <div class="form-section p-3">
-                <div class="d-flex flex-lg-row form-section-inner">
+        <div class="login-sec px-2"  >
+            <div class="form-section p-3"  >
+                <div class="d-flex flex-lg-row form-section-inner" >
                     <div class="login-parent">
                         <div class="login-parent-inner">
                             <h2 class="mb-lg-5 mb-4">Create account</h2>
@@ -19,7 +19,7 @@
                                     <input type="email" name="email" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
                                 </div>
                                 <label for="">Password</label>
-                                <div class="input-group input-cus-group mb-1">
+                                <div class="input-group input-cus-group mb-4">
                                     <input type="password" name="password" class="form-control input-cus" aria-label="Dollar amount (with dot and two decimal places)">
                                     <span class="input-group-text toggle-password">
                                      <i class="bi bi-eye"></i>
@@ -35,33 +35,24 @@
 
                         </div>
                     </div>
-                    <div class="slider d-none d-lg-block">
+                    <div class="slider d-none d-lg-block h-100" >
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                12
+
+                                  <img src="{{asset('assets/customer/images/4957136_4957136.webp')}}" class="w-100" style="height: 100%;object-fit: cover;"/>
                               </div>
-                              <div class="carousel-item">
-                                    12
-                              </div>
-                              <div class="carousel-item">
-                                12
-                              </div>
+{{--                              <div class="carousel-item">--}}
+{{--                                    12--}}
+{{--                              </div>--}}
+{{--                              <div class="carousel-item">--}}
+{{--                                12--}}
+{{--                              </div>--}}
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
                           </div>
                     </div>
                 </div>
@@ -69,7 +60,7 @@
         </div>
     </div>
 
-    @include('customer.layouts.footer')
+    @include('customer.layout2.footer')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var eye = document.querySelector('.toggle-password');

@@ -52,7 +52,7 @@
                                     <li class="d-flex justify-content-between py-3">
                                         <span class="text">{{$product->product->title}} x {{$product->quantity}} </span>
                                         <span class="text-amount">${{$product->price}}</span>
-                                    </li> 
+                                    </li>
                                     @endforeach
                                     <li class="d-flex justify-content-between py-3">
                                         <span class="text text-capitalize">Cart Subtotal</span>
@@ -119,7 +119,7 @@
             </div>
         </div>
     </section>
-    @include('customer.layouts.footer')
+    @include('customer.layout2.footer')
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/slick/slick.min.js"></script>

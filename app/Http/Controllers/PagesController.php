@@ -9,7 +9,10 @@ use App\Models\PageImage;
 use App\Models\PageSpec;
 use App\Models\PageType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use PDF;
+use Dompdf\Dompdf;
 
 class PagesController extends Controller
 {
@@ -32,7 +35,9 @@ class PagesController extends Controller
 
 
     public function createImagesSubPage($id){
-        return view('solution_pages.page_images', compact('id'));
+        $brochure = Page::find($id);
+        // dd($brochure);
+        return view('solution_pages.page_images', compact('id','brochure'));
     }
 
     public function createGallerySubPage($id){
@@ -83,16 +88,16 @@ class PagesController extends Controller
 
     public function updateSingleImage(Request $request){
         $request->validate([
-            'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:5048',
+            'brochure' => 'required',
         ]);
         $product=Page::find($request->page_id);
-        $image_path = $request->file('cover_image')->store('image', 'public');
+        $image_path = $request->file('brochure')->store('brochure', 'public');
 
         $product->update([
-            'cover_image' => $image_path,
+            'brochure' => $image_path,
         ]);
 
-        return redirect()->back()->with('success', 'Cover Image successfully updated');
+        return redirect()->back()->with('success', 'Brochure successfully updated');
     }
 
     public function updateMultiImage(Request $request){
@@ -155,5 +160,102 @@ class PagesController extends Controller
                 }
             }}
         return redirect()->back()->with('success', 'Gallery Image are successfully uploaded');
+    }
+
+    public function addPvmsProductForm(){
+        $page = Page::with('specs','images','features','galleries')->where('page_type_id', Page::PVMS)->first();
+        return view('customer.add_pvms_product', compact('page'));
+    }
+
+    public function storePvmsProductForm(Request $request){
+        $page1 = Page::create([
+            'page_type_id' => 3,
+            'title' => $request->title,
+            'description' => 'Enter your description',
+            'schema' => 'enter your schema',
+        ]);
+
+        $data = [
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Dimensions and weight',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Display',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Power',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'spec' => 'Construction',
+                'description' => '',
+            ]
+        ];
+
+        foreach($data as $i){
+            PageSpec::create($i);
+        }
+
+        $data1 = [
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Batteries',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Capacity',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Solar Panel',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Power Options',
+                'description' => '',
+            ],
+            [
+                'page_id' => $page1->id,
+                'feature' => 'Battery Charger',
+                'description' => '',
+            ],
+        ];
+
+        foreach($data1 as $i){
+            PageFeature::create($i);
+        }
+
+        return redirect()->route('admin.manage.solution.sub.page', Page::PVMS);
+    }
+
+    public function deleteSubPage($id){
+        $page = Page::find($id);
+        $page->specs()->delete();
+        $page->images()->delete();
+        $page->features()->delete();
+        $page->galleries()->delete();
+        $page->delete();
+        return redirect()->back()->with('success', 'Sub Page Successfully deleted');
+    }
+
+    public function downloadPdf(Request $request){
+        // dd($request->brochure);
+            // $file_path = asset('storage/app/public/'.$request->brochure);
+            // $headers = [
+            //     'Content-Type : application/pdf',
+            //     'Content-Disposition: attachment; filename='.$file_path, 
+            // ];
+            $file_path = storage_path('app\public/'.$request->brochure);
+
+            return response()->download($file_path);
     }
 }

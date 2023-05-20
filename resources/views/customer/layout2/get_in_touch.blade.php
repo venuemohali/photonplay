@@ -2,7 +2,7 @@
 use App\Models\Setting;
 $setting = Setting::first();
 @endphp
-<section class="contact-form bg-light">
+<section class="contact-form bg-light" id="inquiry">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -32,6 +32,7 @@ $setting = Setting::first();
                 </div>
                 <form action="{{route('customer.inquery.submit')}}" method="post">
                     @csrf
+                    <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                     <div class="row">
                         <div class="col-md-6">
                             <input name="company_name" type="text" id="inputtext5" placeholder="Company Name / Organization*" class="form-control rounded-0 mb-4" aria-describedby="textHelpBlock">

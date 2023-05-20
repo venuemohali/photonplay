@@ -69,7 +69,7 @@
                         @endif
                         <li class="d-flex justify-content-between">
                             <span class="text"><b>Grand Total</b></span>
-                            <span class="text-amount">${{$grand_total = ($total - $discount) + $shipping + $gst}}</span>
+                            <span class="text-amount">${{$grand_total = ($discounted = $total - $discount) + $shipping + (($discounted  * $gst) / 100)}}</span>
                         </li>
                     </ul>
 
@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-@include('customer.layouts.footer')
+@include('customer.layout2.footer')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

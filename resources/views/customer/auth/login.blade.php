@@ -1,12 +1,11 @@
 @include('customer.layouts.header')
-
 <body>
 
     <!-- header-end -->
     <div class="container-cus pt-lg-5 pt-3">
         <div class="login-sec">
-            <div class="form-section p-3">
-                <div class="d-flex form-section-inner">
+            <div class="form-section p-3" >
+                <div class="d-flex form-section-inner" >
                     <div class="login-parent">
                         <div class="login-parent-inner">
                             <h2 class="mb-lg-5 mb-4">Login in to <br />Your account</h2>
@@ -36,33 +35,34 @@
 
                         </div>
                     </div>
-                    <div class="slider d-none d-lg-block">
+                    <div class="slider d-none d-lg-block"  >
                         <div id="carouselExampleCaptions" data-bs-interval="false" data-bs-ride="false" data-bs-pause="hover" class="carousel slide">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>--}}
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>--}}
+{{--                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>--}}
                             </div>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    12
+                                <div class="carousel-item  active">
+                              <img src="{{asset('assets/customer/images/login.webp')}}"         class="w-100" style="height: 100%;object-fit: cover;"/>
                                 </div>
-                                <div class="carousel-item">
-                                    12
-                                </div>
-                                <div class="carousel-item">
-                                    12
-                                </div>
+{{--                                <div class="carousel-item">--}}
+{{--                                    <img src="https://pbs.twimg.com/media/FsnPfg4WIAAz5Ve?format=jpg&name=large" class="w-100"  />--}}
+
+{{--                                </div>--}}
+{{--                                <div class="carousel-item">--}}
+{{--                                    12--}}
+{{--                                </div>--}}
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+{{--                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">--}}
+{{--                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
+{{--                                <span class="visually-hidden">Previous</span>--}}
+{{--                            </button>--}}
+{{--                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">--}}
+{{--                                <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
+{{--                                <span class="visually-hidden">Next</span>--}}
+{{--                            </button>--}}
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    @include('customer.layouts.footer')
+    @include('customer.layout2.footer')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var eye = document.querySelector('.toggle-password');
@@ -88,6 +88,10 @@
         });
 
     </script>
+
+
+
+
     @push('head')
 
     @endpush

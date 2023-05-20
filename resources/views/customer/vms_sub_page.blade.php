@@ -1,3 +1,10 @@
+<?php
+$seo_meta=[
+    "title"=>"{$page->title}",
+    "description"=>"{$page->description}",
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+?>
 @include('customer.layout2.header')
 
 <body>
@@ -8,11 +15,13 @@
             <div class="slider-content ">
                 <div class="imaged m-auto">
                     <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('assets/customer/images/PIDS.webp')}}" alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block mx-auto img-fluid">
                 </div>
+
                 <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
                 <div class="text-center pt-4">
-                    <button class="btn btn-primary rounded-0 ">GET QUOTE</button>
+                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
+
                 </div>
             </div>
         </div>
@@ -32,14 +41,16 @@
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
-                                    <div class="col-4">
+
                                         @foreach ($page->images as $image)
+                                        <div class="col-4">
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 150px;">
+{{--                                       15   <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">--}}
+                                        </div>
                                         </div>
                                         @endforeach
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -64,13 +75,14 @@
                                         </div>
                                     </div>
                                 @endforeach
+
                                 <div class="stone-accordian position-absolute d-flex align-items-center ">
                                     <img src="{{asset('assets/customer/images/object.png')}}" class="img-fluid circle-image d-none d-md-block" alt="not-found">
                                 </div>
                             </div>
                         </div>
 
-{{--                        <div class="circle-floow foloowers position-relative">--}}
+{{--                        <div class="circle-floow fo loowers position-relative">--}}
 {{--                            <div class="accordion accordion-flush" id="accordionFlushExample1">--}}
 
 {{--                            @foreach ($page->specs as $spec)--}}
@@ -97,7 +109,9 @@
                 </div>
                 <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
             </div>
+        </div>
     </section>
+</body>
     <!-- Desc and specificatio  end -->
 
     <!-- Feature -->
@@ -111,20 +125,21 @@
                        @php
                         $break_point=(int)(count($page->features)/2);
                         $sr=1;
+
                        @endphp
+
                         @foreach($page->features as $feature)
                             <li>
-                                <div class="content-feature">
-                                    <strong>{{$feature->feature}}</strong>
+                                <div class="content-feature" style="width: 300px;">
+                                    <strong>{{ $feature->feature}}</strong>
                                     <span>{{$feature->description}}</span>
                                 </div>
                             </li>
                             @if($sr==$break_point)
                                    </ul>
                                     <ul class="w-100 m-0 p-0">
-
                                     @php
-                                    $sr=1;
+                                    $sr=0;
                                     @endphp
                             @endif
                               @php
@@ -175,7 +190,7 @@
                     <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
-                    <button class="btn btn-primary rounded-0">Download Now</button>
+                    <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
                 </div>
             </div>
         </div>
