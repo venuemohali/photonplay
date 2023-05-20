@@ -164,7 +164,7 @@ $seo_meta=[
                     <h4 class="text-white text-center">STANDARD VMS - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
-                    <button class="btn btn-primary rounded-0">Download Now</button>
+                    <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
                 </div>
             </div>
         </div>

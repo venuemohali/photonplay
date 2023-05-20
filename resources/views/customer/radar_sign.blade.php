@@ -47,39 +47,22 @@ foreach($specilization->options as $option){
                     <div class="responsive-two">
                         <div>
                             <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid">
+                                <div class="img-leften  d-flex justify-content-center">
+                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;">
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
+                        @foreach($product->images as $im_g)
+                            <div>
+                                <div class="p-2">
+                                    <div class="img-leften d-flex justify-content-center">
+                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften">
-                                    <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                     <div class="slider-nav">
                         <div>
@@ -108,7 +91,7 @@ foreach($specilization->options as $option){
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
                         <img src="{{asset('assets\customer\images\star.svg')}}" alt="Not Found" class="img-fluid" width="14px">
-                        <span>( 150+ Customers Revddddddddddddiews)</span>
+                        <span>( 150+ Customers Reviews)</span>
                     </div>
                     <p class="fw-bold fs-5">${{$product->price}}</p>
                     <div>
@@ -136,19 +119,12 @@ foreach($specilization->options as $option){
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
                              <div class="d-flex align-items-center justify-content-between">
-                           <div class="selected-anc d-flex border-1 p-2" style="border: 1px solid black;">
-                            <!-- <label for="select-color" class="form-select shadow-none border">Open this select menu</label> -->
-                               <i class="bi bi-check-circle-fill" style="font-size: 35px;color: blue;margin-right: 10px;"></i>
-                           <select class="form-select shadow-none border" id="select-color" aria-label="Default select example" style="background-color: transparent;border:none;">
-    {{--                                  <option selected>Open this select menu</option>--}}
-                                  <option value="1">
-                                      <span>
-                                         d <i class="bi bi-check-circle-fill" style="color: yellow;" ></i>
-                                          Yellow
-                                      </span>
-                                  </option>
-                                  <option value="2">  <i class="bi bi-check-circle-fill"></i> Two</option>
-                                  <option value="3">  <i class="bi bi-check-circle-fill"></i> Three</option>
+                           <div class="selected-anc d-flex border-1 p-2" >
+
+                           <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" required style="background-color: transparent;">
+                                  <option value="Yellow">Yellow </option>
+                                  <option value="Amber"> Amber </option>
+                                  <option value="White"> White </option>
                            </select>
                            </div>
 
@@ -160,7 +136,7 @@ foreach($specilization->options as $option){
                             <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
     <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
 
-</div>
+                            </div>
 </div>
 <p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
 Shipping:7-10 Working Days.
@@ -254,13 +230,13 @@ Shipping:7-10 Working Days.
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane mt-3 fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                            {!! $product->description!!}}
+                            {!! $product->description!!}
                         </div>
-                    <div class="tab-pane fade mt-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> {!!$product->specification!!}}</div>
-                    <div class="tab-pane fade mt-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">   {!!$product->feature!!}}</div>
-                    <div class="tab-pane fade mt-3" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0"> {!!$product->power_option!!}} </div>
-                    <div class="tab-pane fade mt-3" id="contact-tab-panel" role="tabpanel" aria-labelledby="visibility-tab " tabindex="0">  {!!$product->visibility!!}} </div>
-                    <div class="tab-pane fade mt-3" id="deal-tab" role="tabpanel" aria-labelledby="deal-tabish" tabindex="0"> {!!$product->ideal_for!!}}</div>
+                    <div class="tab-pane fade mt-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> {!!$product->specification!!}</div>
+                    <div class="tab-pane fade mt-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">   {!!$product->feature!!}</div>
+                    <div class="tab-pane fade mt-3" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0"> {!!$product->power_option!!} </div>
+                    <div class="tab-pane fade mt-3" id="contact-tab-panel" role="tabpanel" aria-labelledby="visibility-tab " tabindex="0">  {!!$product->visibility!!} </div>
+                    <div class="tab-pane fade mt-3" id="deal-tab" role="tabpanel" aria-labelledby="deal-tabish" tabindex="0"> {!!$product->ideal_for!!}</div>
                 </div>
             </div>
         </div>

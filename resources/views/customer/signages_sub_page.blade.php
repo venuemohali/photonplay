@@ -86,14 +86,30 @@
             <div class="feature-list">
                 <!-- <ul class=" m-0 p-0 "> -->
                 <div class="d-lg-flex justify-content-between">
-                    <ul class="w-100">
+                    <ul class="w-100 m-0 p-0">
+                        @php
+                            $break_point=(int)(count($page->features)/2);
+                            $sr=1;
+
+                        @endphp
+
                         @foreach($page->features as $feature)
                             <li>
-                                <div class="content-feature">
-                                    <strong>{{$feature->feature}}</strong>
+                                <div class="content-feature" style="width: 300px;">
+                                    <strong>{{ $feature->feature}}</strong>
                                     <span>{{$feature->description}}</span>
                                 </div>
                             </li>
+                            @if($sr==$break_point)
+                    </ul>
+                    <ul class="w-100 m-0 p-0">
+                        @php
+                            $sr=0;
+                        @endphp
+                        @endif
+                        @php
+                            $sr++;
+                        @endphp
                         @endforeach
                     </ul>
                 </div>
@@ -139,7 +155,7 @@
                     <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
-                    <button class="btn btn-primary rounded-0">Download Now</button>
+                    <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
                 </div>
             </div>
         </div>

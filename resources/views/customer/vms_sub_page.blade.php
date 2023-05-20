@@ -41,14 +41,16 @@ $seo_meta=[
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
-                                    <div class="col-4">
+
                                         @foreach ($page->images as $image)
+                                        <div class="col-4">
                                         <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 150px;">
+{{--                                       15   <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">--}}
+                                        </div>
                                         </div>
                                         @endforeach
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -107,7 +109,9 @@ $seo_meta=[
                 </div>
                 <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
             </div>
+        </div>
     </section>
+</body>
     <!-- Desc and specificatio  end -->
 
     <!-- Feature -->
@@ -186,7 +190,7 @@ $seo_meta=[
                     <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
-                    <button class="btn btn-primary rounded-0">Download Now</button>
+                    <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
 
 
 <!-- _____________________ourclint-last-end___________________ -->
-    <section class="subscribe-section">
+    <section class="subscribe-section" id="subscribed">
         <div class="container">
             <div class="row">
                 <div class="subscribe-wrapper text-center">
@@ -19,6 +19,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                         New Products</h3>
                     <form action="{{route('customer.newsletter.store')}}" class="subscribr-form" method="post">
                         @csrf
+                        <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                         <div class="col-lg-4 mx-auto">
                             <div class="d-flex border-bottom">
                                 <input type="text" placeholder="Enter your email address..."
@@ -113,8 +114,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
                     <li><a class="" href="{{$setting->twitter  ?? ''}}"><img src="{{asset('assets\customer\images\twitter.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->linkedin ?? ''}}"><img src="{{asset('assets\customer\images\linkdin.jpg')}}" /></a></li>
                     <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\customer\images\instagram.png')}}" /></a></li>
-                    <li><a class="" href="{{$setting->instagram ?? ''}}"><img src="{{asset('assets\images\social05.png')}}" /></a></li>
-                    <li><a class="" href=""><img src="{{asset('assets\images\social06.png')}}" /></a></li>
+
                 </ul>
                 </div>
             </div>

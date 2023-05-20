@@ -29,7 +29,7 @@ class SettingsController extends Controller
             'company_location' => 'required|max:255',
             'company_name' => 'required|max:255',
             'company_address' => 'required|max:255',
-            'company_phone' => 'required|max:15',
+            'company_phone' => 'required|max:25',
             'company_email' => 'required|max:100',
         ]);
         $record=Setting::where('type',1)->first();

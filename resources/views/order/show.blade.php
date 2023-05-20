@@ -31,24 +31,41 @@ use App\Models\ProductSpcializationOption;
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
+                          <div id="message" class="bg-success text-white"></div>
+                         <div id="errormessage" class="bg-danger text-white"></div>
                         <h4 class="card-title p-1 d-flex justify-content-around align-items-center m-2 p-2">
                             <span>   Order : {{$order->order_number}}</span>
                             <span>
                                 <select class="form-select" id="myForm" name="delivery_status" class="shadow-none m-2">
-                                    <option value="out_for_delivery" {{$order->delivery_status=="out_for_delivery"?"selected":""}}>Out for delivery</option>
+                                    <option value="pending" {{$order->delivery_status=="pending"?"selected":""}}>Pending</option>
+                                    <option value="processing" {{$order->delivery_status=="processing"?"selected":""}}>Processing</option>
+                                    <option value="shipped" {{$order->delivery_status=="shipped"?"selected":""}}>Shipped</option>
                                     <option value="delivered" {{$order->delivery_status=="delivered"?"selected":""}}>Delivered</option>
-                                    <option value="delivery_delayed" {{$order->delivery_status=="delivery_delayed"?"selected":""}}>Delivery delayed</option>
-                                    <option value="delivery_cancelled" {{$order->delivery_status=="delivery_cancelled"?"selected":""}}>Delivery cancelled</option>
+                                     <option value="completed" {{$order->delivery_status=="completed"?"selected":""}}>Completed </option>
+                                     <option value="cancelled" {{$order->delivery_status=="cancelled"?"selected":""}}>Cancelled</option>
+
+
+                                     <option value="refunded" {{$order->delivery_status=="refunded"?"selected":""}}>Refunded</option>
+                                     <option value="on_hold" {{$order->delivery_status=="on_hold"?"selected":""}}>On Hold</option>
+
+                                     <option value="returned" {{$order->delivery_status=="returned"?"selected":""}}>Returned</option>
+                                        <option value="partially_shipped" {{$order->delivery_status=="partially_shipped"?"selected":""}}> Partially Shipped</option>
+
                                 </select>
+
                             </span>
                         </h4>
                         <div class="shadow-sm p-3">
                         <p> Payment Status : <span class="{{$order->payment_status=='paid'?'text-success':'text-warning'}} p-1">
                                     {{ucfirst($order->payment_status)}} </span>   </p>
+                            <p> Order Status : <span class="p-1">
+                                    {{strtoupper($order->delivery_status)}} </span>   </p>
 
                         <p> Trasaction No. : <span>
                                 {{$order->trx_id}}</span> </p>
                         <p>  <b> Order Note: </b>  {{$order->order_notes??'Order notes not available.'}}</p>
+                            <a href="{{route('admin.generate_order_invoice',$order->id)}}" target="_blank">
+                                <i data-feather="printer"></i>  </a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -75,7 +92,7 @@ use App\Models\ProductSpcializationOption;
                                 @foreach($order->orderedProducts as $prod)
                                     <tr>
                                         <td>{{ $prod->product_id }}</td>
-                                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found" /></td>
+                                        <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found"  style="max-height: 100px;max-width: 100px;"/></td>
                                         <td>{{ $prod->title }}</td>
                                         <td>
                                             @foreach (explode(',',$prod->option_ids) as $option)
@@ -202,10 +219,12 @@ use App\Models\ProductSpcializationOption;
                         data: { status: selectedStatus },
                         success: function(response) {
                             console.log('Status saved successfully.');
-                            console.log(response);
+                            $('#message').text('Status updated. Status changed to: ' + selectedStatus);
                         },
                         error: function(xhr, status, error) {
                             console.log('Error saving status: ' + error);
+                            $('#errormessage').text('Error saving status: ' + error);
+
                         }
                     });
                 });

@@ -125,3 +125,5 @@ Route::delete('/delete-inquiry-status/{id}', [AdminContactusController::class,'d
 
 Route::put('/order-status-change/{id}', [OrderController::class,'change_status_order'])
     ->name("change_status_order_product");
+
+Route::get('/reports/order/invoice/{id}', [OrderController::class,'generateInvoice'])->name("generate_order_invoice");
