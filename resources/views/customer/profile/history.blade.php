@@ -5,7 +5,7 @@
             <div class="col-lg-10">
                 <div class="row">
                 <x-customer.profile-sidebar />
-                    
+
                     <div class="col-lg-8  col-md-6 col-12">
                         <div class="overview-wrapper">
                             <h5 class="btn-light fs-5 py-3 ">HISTORY</h5>
@@ -15,7 +15,7 @@
                                     <img src="{{asset('assets\customer\images\delivery.png')}}" alt="Not Found" class="me-2">
                                     <div>
                                         <p class="text-grey mb-0">Order Number :  {{$order->order_number}}</p>
-                                        <p class="text-grey mb-0">Delivered</p>
+                                        <p class="text-grey mb-0">{{strtoupper($order->delivery_status}})</p>
                                         <span class="text-grey">{{date('M-d-Y', strtotime($order->created_at))}}</span>
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                 @endforeach
                             </div>
                             @empty
-                                
+
                             @endforelse
                         </div>
                         <div class="my-4">
