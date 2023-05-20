@@ -13,8 +13,8 @@ class InqueryController extends Controller
 
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
-            'first_name'=>'max:20',
-            'last_name'=>'max:20'
+            'first_name'=>'max:50',
+            'last_name'=>'max:50'
         ]);
 
         if($validator->fails()){
