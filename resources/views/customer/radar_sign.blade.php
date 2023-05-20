@@ -33,7 +33,7 @@ foreach($specilization->options as $option){
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <form action="{{route('customer.store.shopping.bag')}}" method="post">
+                <form action="{{route('customer.store.shopping.bag')}}" method="post ">
                     @csrf
                     <div id="dynamic_specs">
 
@@ -64,7 +64,7 @@ foreach($specilization->options as $option){
                                 <div class="img-leften">
                                     <img src="{{asset('assets\customer\images\Product-sign.png')}}" alt="Not Found" class="img-fluid">
                                 </div>
-                            </div>
+                             </div>
                         </div>
                         <div>
                             <div class="p-2">
@@ -136,19 +136,13 @@ foreach($specilization->options as $option){
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
                              <div class="d-flex align-items-center justify-content-between">
-                           <div class="selected-anc d-flex border-1 p-2" style="border: 1px solid black;">
-                            <!-- <label for="select-color" class="form-select shadow-none border">Open this select menu</label> -->
-                               <i class="bi bi-check-circle-fill" style="font-size: 35px;color: blue;margin-right: 10px;"></i>
-                           <select class="form-select shadow-none border" id="select-color" aria-label="Default select example" style="background-color: transparent;border:none;">
-    {{--                                  <option selected>Open this select menu</option>--}}
-                                  <option value="1">
-                                      <span>
-                                         d <i class="bi bi-check-circle-fill" style="color: yellow;" ></i>
-                                          Yellow
-                                      </span>
-                                  </option>
-                                  <option value="2">  <i class="bi bi-check-circle-fill"></i> Two</option>
-                                  <option value="3">  <i class="bi bi-check-circle-fill"></i> Three</option>
+                           <div class="selected-anc d-flex border-1 p-2" >
+
+                           <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" style="background-color: transparent;">
+                                      <option selected>--Select Color--</option>
+                                  <option value="Yellow">Yellow </option>
+                                  <option value="Blue"> Blue</option>
+                                  <option value="Black"> Black</option>
                            </select>
                            </div>
 
