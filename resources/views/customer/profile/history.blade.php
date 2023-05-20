@@ -22,6 +22,7 @@
                                 @foreach($order->orderedProducts as $product)
                                 <div class="d-flex align-items-center p-2 my-4 border">
                                     <div class="inner-card-wrapper me-3">
+                                        <img src="{{asset('storage/'.$product->product->cover_image)}}">
                                     </div>
                                     <div>
                                         <p class="text-uppercase mb-1">{{$product->product->title}}</p>
