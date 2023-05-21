@@ -18,11 +18,11 @@ $seo_meta=[
                 <div class="imaged m-auto">
                     <img src="{{ asset('assets/customer/images/banner-image-smart-city.png') }}" alt="alt"
                         class="d-block mx-auto img-fluid">
-                    <div class="d-flex mt-4 justify-content-center gap-4 align-items-end">
+                    <div class="d-flex mt-4 justify-content-center gap-3 align-items-end">
                         <img src="{{ asset('assets/customer/images/zero-mentence.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid">
+                            class="d-block mx-auto img-fluid w-75">
                         <img src="{{ asset('assets/customer/images/dawrka.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid">
+                            class="d-block mx-auto img-fluid w-75">
                     </div>
                 </div>
                 <div class="text-center mt-4 pt-3">
