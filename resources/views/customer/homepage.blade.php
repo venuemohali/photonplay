@@ -774,7 +774,7 @@ $seo_meta=[
         $('.clints-content-branding').slick({
             dots: false,
             infinite: true,
-            speed: 300,
+            speed: 700,
             slidesToShow: 5,
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
@@ -786,21 +786,22 @@ $seo_meta=[
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 3,
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 576,
                     settings: {
                         slidesToShow: 1,
                     }
                 },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
+               
             ]
         })
     })
