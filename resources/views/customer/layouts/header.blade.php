@@ -47,7 +47,7 @@ $productLists = Product::take(5)->get();
 
 <!-- <title>login</title> -->
 <body>
-<header class="header bg-white py-3">
+<header class="header bg-white py-3 sticky-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
