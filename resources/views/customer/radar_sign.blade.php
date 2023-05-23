@@ -178,7 +178,8 @@ Shipping:7-10 Working Days.
                     <div class=" px-4 py-lg-0 py-4">
                         <span class="one-thoshand" id="total_price">${{$product->price}}</span>
                     </div>
-                    <button type="submit" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4">Buy Now</button>
+                    <button type="submit" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Buy Now</button>
+                    <button class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Add to Cart</button>
                 </div>
             </div>
             </form>
