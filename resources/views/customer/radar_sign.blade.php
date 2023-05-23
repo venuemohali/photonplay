@@ -172,9 +172,9 @@ Shipping:7-10 Working Days.
             </div>
             <div class=" col-lg-4 col-md-4">
                 <div class="d-md-flex  justify-content-end mt-lg-0 mt-4 buy-right align-items-center">
-                    <a class="btn btn-primary d-flex align-items-center m-2" onclick="increment()" style="height: 20px;">+</a>
+                    <a class="btn btn-dark d-flex align-items-center m-2" onclick="increment()" style="height: 20px;">+</a>
                     <input id=demoInput type=number class="text-center " name="quantity" value="1" min=1 max=100>
-                    <a class="btn btn-primary m-2 d-flex align-items-center" onclick="decrement()" style="height: 20px;">-</a>
+                    <a class="btn btn-dark m-2 d-flex align-items-center" onclick="decrement()" style="height: 20px;">-</a>
                     <div class=" px-4 py-lg-0 py-4">
                         <span class="one-thoshand" id="total_price">${{$product->price}}</span>
                     </div>
