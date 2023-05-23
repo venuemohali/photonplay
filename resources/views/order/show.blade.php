@@ -101,10 +101,11 @@ use App\Models\ProductSpcializationOption;
                                                 $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
 
                                                 @endphp
+                                            @endforeach
                                                 @foreach ($options as $opp)
                                                     {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br>
                                                 @endforeach
-                                            @endforeach
+
 
                                         </td>
                                         <td>{{ $prod->quantity }}</td>
