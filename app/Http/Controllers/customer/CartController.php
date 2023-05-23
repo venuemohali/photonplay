@@ -7,6 +7,7 @@ use App\Models\Cart;
 use App\Models\Coupon;
 use App\Models\Order;
 use App\Models\OrderedProduct;
+use App\Models\UserAddress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
@@ -122,6 +123,8 @@ class CartController extends Controller
     }
 
     public function checkout(Request $request){
+        $addresses = UserAddress::where('user_id', Session::get('user')->id)->get();
+        // dd($addresses);
         $coupon_name = $request->coupon_s;
         $discount = $request->discount_s;
         $taxes = DB::table('settings')->select('shipping_time','gst')->first();
@@ -130,7 +133,7 @@ class CartController extends Controller
             foreach($cart_table as $cart_t){
                 $total += ($cart_t->price * $cart_t->quantity);
             }
-        return view('customer.cart.checkout', compact('taxes','cart_table','total','coupon_name','discount'));
+        return view('customer.cart.checkout', compact('taxes','cart_table','total','coupon_name','discount', 'addresses'));
     }
 
     public function removeCartItem($id){
@@ -229,5 +232,10 @@ class CartController extends Controller
 
     public function checkoutCancel(){
         return redirect()->route('customer.shopping.bag');
+    }
+
+    public function getSavedAddress($addressId){
+        $address = UserAddress::find($addressId);
+        return response()->json($address);
     }
 }

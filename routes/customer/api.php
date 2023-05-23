@@ -42,3 +42,4 @@ Route::any('cancel-response', [CartController::class, 'checkoutCancel'])->name('
 Route::get('solution/{slug}', [ContactUsController::class, 'vmsSubPage'])->name('vms.sub.page');
 Route::get('signages/{slug}', [ContactUsController::class, 'signagesSubPage'])->name('signages.sub.page');
 
+Route::get('get-saved-address/{addressId}', [CartController::class, 'getSavedAddress'])->name('get-saved-address');

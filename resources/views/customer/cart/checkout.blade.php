@@ -23,18 +23,23 @@
 
                     <h3>billing details</h3>
                     <div class="mb-3">
-                        <select name="billing_address" class="form-select">
-                                 <option value="" selected> --Select Saved Address-- </option>
-                                <option value=""> H.no 509... India </option>
+                        <select name="billing_address" id="saved_address" class="form-select">
+                                <option value="" selected> --Select Saved Address-- </option>
+                            @forelse ($addresses as $address)
+                                <option value="{{$address->id}}">{{$address->street_number . ' ... ' . $address->country}}</option>
+                            @empty
+                                <option value="">No addresses saved.</option>
+                            @endforelse
+
                         </select>
                     </div>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number" required>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite" >
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number" id="billing_street" value="" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite" id="billing_flat_suite" value="">
                     <input type="text" class="form-control rounded-0 px-3" name="billing_city"
-                    placeholder="City" required>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_state" placeholder="State" required>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_country" placeholder="Country" required>
-                    <input type="text" class="form-control rounded-0 px-3" name="billing_postcode" placeholder="Postcode" required>
+                    placeholder="City" id="billing_city" value="" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_state" placeholder="State" id="billing_state" value="" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_country" placeholder="Country" id="billing_country" value="" required>
+                    <input type="text" class="form-control rounded-0 px-3" name="billing_postcode" id="billing_postcode" value="" placeholder="Postcode" required>
                     <textarea name="address" class="form-control rounded-0 mt-2" rows="5"
                         placeholder="Your address here..." required></textarea>
                     {{-- <h3 class="mt-5 mb-2">SHIPPING ADDRESS</h3> --}}
@@ -96,4 +101,31 @@
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
     })
+
+    $(document).ready(function() {
+        $('#saved_address').on('click', function() {
+            var addressId = $('#saved_address').val();
+            var url = "{{ route('customer.get-saved-address', ":id") }}";
+            url = url.replace(':id', addressId);
+
+            $.ajax({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                url : url,
+                type : 'GET',
+                dataType : 'json',
+                success : function(result){
+                    // console.log(result);
+                    $('#billing_street').val(result.street_number);
+                    $('#billing_flat_suite').val(result.flat_suite);
+                    $('#billing_city').val(result.city);
+                    $('#billing_state').val(result.state);
+                    $('#billing_country').val(result.country);
+                    $('#billing_postcode').val(result.postcode);
+                }
+            });
+        });
+    });
+
 </script>
