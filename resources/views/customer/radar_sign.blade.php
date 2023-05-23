@@ -119,14 +119,34 @@ foreach($specilization->options as $option){
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
                              <div class="d-flex align-items-center justify-content-between">
-                           <div class="selected-anc d-flex border-1 p-2" >
+                           <input type="hidden" name="color" value="Amber" id="colorchoose">
+                                 <div class="selected-anc d-flex border-1 p-2 shadow-smm " >
+                               <i class="bi bi-check-circle-fill p-1" style="font-size: 36px;color:#ffbf00;"></i>
 
-                           <select class="form-select shadow-none" name="color" id="select-color" aria-label="Default select example" required style="background-color: transparent;">
-                                  <option value="Yellow">Yellow </option>
-                                  <option value="Amber"> Amber </option>
-                                  <option value="White"> White </option>
+                           <select class="form-select shadow-none" name="colorselected" id="select-color" aria-label="Default select example" required style="background-color: transparent; border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;">
+                                 <option value="#ffbf00"> Amber </option>
+                                  <option value="#ffff00">Yellow </option>
+                                  <option value="#ffffff"> White </option>
                            </select>
                            </div>
+
+                                 <script>
+                                     const selectElement = document.getElementById('select-color');
+                                     const iconElement = document.querySelector('.bi-check-circle-fill');
+                                     const colorHolderElement = document.querySelector('#colorchoose');
+
+                                     selectElement.addEventListener('change', function() {
+                                         const selectedOption = this.options[this.selectedIndex];
+                                         const selectedText = selectedOption.text;
+                                         const selectedColor = this.value;
+                                         colorHolderElement.value=selectedText;
+                                         iconElement.style.color = selectedColor;
+                                     });
+                                 </script>
 
                             <div class="d-flex justify-content-center align-items-center">
                             <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
