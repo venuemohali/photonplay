@@ -235,6 +235,9 @@ class CartController extends Controller
     }
 
     public function getSavedAddress($addressId){
+        if($addressId == 0){
+            return response()->json(null);
+        }
         $address = UserAddress::find($addressId);
         return response()->json($address);
     }

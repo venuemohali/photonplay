@@ -24,11 +24,11 @@
                     <h3>billing details</h3>
                     <div class="mb-3">
                         <select name="billing_address" id="saved_address" class="form-select">
-                                <option value="" selected> --Select Saved Address-- </option>
+                                <option value="0" selected> --Select Saved Address-- </option>
                             @forelse ($addresses as $address)
                                 <option value="{{$address->id}}">{{$address->street_number . ' ... ' . $address->country}}</option>
                             @empty
-                                <option value="">No addresses saved.</option>
+                                <option value="0">No addresses saved.</option>
                             @endforelse
 
                         </select>
