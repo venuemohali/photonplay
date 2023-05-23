@@ -161,8 +161,8 @@ Shipping:7-10 Working Days.
             <!-- <div class=" px-3"> -->
             <div class="col-lg-8 col-md-8">
                 <div class="d-flex align-items-md-center order-summery ">
-                    <span class="border-1 border-right d-block  pe-lg-5 pe-4">Order
-                        Summary</span>
+{{--                    <span class="border-1 border-right d-block  pe-lg-5 pe-4">Order--}}
+{{--                        Summary</span>--}}
                     <div class="border-left  ">
                         <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">{{$product->category->title}} | {{$product->title}}</p>
                         <p class="mb-0 opacity-50">{{$product->color}} | {{$product->warranty}}
@@ -172,9 +172,9 @@ Shipping:7-10 Working Days.
             </div>
             <div class=" col-lg-4 col-md-4">
                 <div class="d-md-flex  justify-content-end mt-lg-0 mt-4 buy-right align-items-center">
-                    <a class="btn" onclick="increment()">+</a>
-                    <input id=demoInput type=number name="quantity" value="1" min=1 max=100>
-                    <a class="btn" onclick="decrement()">-</a>
+                    <a class="btn btn-dark m-2" onclick="increment()">+</a>
+                    <input id=demoInput type=number class="text-center " name="quantity" value="1" min=1 max=100>
+                    <a class="btn btn-dark m-2" onclick="decrement()">-</a>
                     <div class=" px-4 py-lg-0 py-4">
                         <span class="one-thoshand" id="total_price">${{$product->price}}</span>
                     </div>
