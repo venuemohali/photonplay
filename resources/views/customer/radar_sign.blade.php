@@ -224,7 +224,7 @@ Shipping:7-10 Working Days.
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link text-dark" id="deal-tabish" data-bs-toggle="tab" data-bs-target="#deal-tab" type="button" role="tab" aria-controls="deal-tab" aria-selected="false">
-                            Deal For
+                            Ideal For
                         </button>
                     </li>
                 </ul>
