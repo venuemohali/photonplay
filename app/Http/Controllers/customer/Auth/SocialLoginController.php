@@ -48,7 +48,10 @@ class SocialLoginController extends Controller
 
                 Auth::guard('customer')->login($newUser);
                 Session::put('user', Auth::guard('customer')->user());
-                Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+                $cart = Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+                if($cart){
+                    return redirect()->intended('shopping-bag')->with('success', ' Logged in successfully !');
+                }
                 return redirect()->intended('radar-speed-signs');
             }
 
