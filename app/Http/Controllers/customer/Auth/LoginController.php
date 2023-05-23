@@ -104,7 +104,10 @@ class LoginController extends Controller
             'password' => Hash::make($request->password),
         ]);
         $session = Session::put('user', $customer);
-        Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        $cart = Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
+        if($cart){
+            return redirect()->intended('shopping-bag')->with('success', ' Logged in successfully !');
+        }
         return redirect()->route('customer.loginForm')->with('success', 'Your account has been registered successfully');
     }
 
