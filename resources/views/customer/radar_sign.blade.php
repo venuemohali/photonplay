@@ -199,7 +199,7 @@ Shipping:7-10 Working Days.
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link text-dark active ms-0" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                            description
+                            Description
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
