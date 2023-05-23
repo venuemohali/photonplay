@@ -79,6 +79,17 @@ body .text-primary {
     text-decoration: none;
 }
 
+.product_highlight {
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+.product_highlight:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+}
+
 .container-cus {
     padding: 0 15px;
     margin: 0 auto;

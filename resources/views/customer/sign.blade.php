@@ -53,10 +53,10 @@ $seo_meta=[
                 </div>
                 <div class="responsive">
                     @foreach ($products as $product)
-                    <div>
+                    <div >
                         <div class="p-2">
-                            <div class="inner-product bg-white">
-                                <div class="w-100 h-100 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
+                            <div class="product_highlight inner-product bg-white">
+                                <div class=" w-100 h-100 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
                                     background-size: cover;">
 {{--                                    <img class=""  src="" alt="">--}}
                                 </div>
