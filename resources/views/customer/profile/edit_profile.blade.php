@@ -6,7 +6,7 @@
                 <div class="col-lg-10">
                     <div class="row">
                         <x-customer.profile-sidebar />
-                       
+
                         <div class="col-lg-8  col-md-6 col-12">
                             <div class="overview-wrapper">
                                 <h5 class="btn-light fs-5 py-3 ">Profile Details</h5>
@@ -41,4 +41,4 @@
             </div>
         </div>
     </section>
-    @include('customer.layouts.footer')
+    @include('customer.layout2.footer')

@@ -22,6 +22,12 @@
                     @csrf
 
                     <h3>billing details</h3>
+                    <div class="mb-3">
+                        <select name="billing_address" class="form-select">
+                                 <option value="" selected> --Select Saved Address-- </option>
+                                <option value=""> H.no 509... India </option>
+                        </select>
+                    </div>
                     <input type="text" class="form-control rounded-0 px-3" name="billing_street" placeholder="Street Number" required>
                     <input type="text" class="form-control rounded-0 px-3" name="billing_flat_suite" placeholder="Flat/Suite" >
                     <input type="text" class="form-control rounded-0 px-3" name="billing_city"

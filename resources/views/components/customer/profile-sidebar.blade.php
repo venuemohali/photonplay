@@ -14,7 +14,7 @@
                                 <div class="py-3 border-bottom border-1">
                                     <span class="text-capitalize">account</span>
                                     <a href="{{route('customer.edit.profile')}}" style="text-decoration: none"><p class="mb-0 text-grey">Profile </p></a>
-                                    <a href="{{route('customer.edit.saved.card')}}" style="text-decoration: none"><p class="mb-0">Saved Cards</p></a>
+
                                     <a href="{{route('customer.address')}}" style="text-decoration: none"><p class="mb-0">Addresses</p></a>
 
                                     <a href="{{route('customer.logout')}}" style="text-decoration: none"><p class="mb-0 ">Logout</p></a>
