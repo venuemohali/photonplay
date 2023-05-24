@@ -5,7 +5,7 @@
             <div>
                 <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
-                        <h1>{{$banner->tagline}}</h1>
+                        <h2>{{$banner->tagline}}</h2>
                         <h6 class="text-white">{{$banner->sub_tagline}}</h6>
                         <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
                     </div>
