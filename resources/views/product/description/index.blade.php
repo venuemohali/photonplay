@@ -175,7 +175,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_description').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
@@ -206,7 +206,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_specification').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
