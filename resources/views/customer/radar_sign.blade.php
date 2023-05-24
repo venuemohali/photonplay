@@ -342,12 +342,13 @@ let totalPrice=0
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
                     },
                 });
-                console.log(radio.innerHTML)
+                // console.log(radio.innerHTML)
             }else {
                let val= dict[radio.id];
-               if(val==radio.value){
-                   delete dict[radio.id];
-               }
+            //    if(val==radio.value){
+            //        delete dict[radio.id];
+            //    }
+            //    console.log(val);
                $.ajax({
                     url: '{{ route('customer.specification.ajax') }}',
                     type: 'GET',
