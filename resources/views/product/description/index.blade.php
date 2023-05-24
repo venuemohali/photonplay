@@ -50,7 +50,7 @@
                                             <label for="meta_description" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Description') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  id="summernote"  name="description" class="form-control summernote"  >{{ old('description') ??  $product->description ?? ''}}</textarea>
+                                                <textarea  id="summernote"  name="description" class="form-control summernote_description"  >{{ old('description') ??  $product->description ?? ''}}</textarea>
 
                                                 @error('description')
                                                 <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                                             <label for="specification" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Specification') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  id="specification"  name="specification" class="form-control summernote"  >{{ old('specification') ??  $product->specification ?? ''}}</textarea>
+                                                <textarea  id="specification"  name="specification" class="form-control summernote_specification"  >{{ old('specification') ??  $product->specification ?? ''}}</textarea>
 
                                                 @error('specification')
                                                 <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
                                             <label for="feature" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Feature') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea   id="feature"  name="feature" class="form-control summernote"  >{{ old('feature') ??  $product->feature ?? ''}}</textarea>
+                                                <textarea   id="feature"  name="feature" class="form-control summernote_feature"  >{{ old('feature') ??  $product->feature ?? ''}}</textarea>
 
                                                 @error('feature')
                                                 <span class="invalid-feedback" role="alert">
@@ -93,7 +93,7 @@
                                             <label for="power_option" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Power Option') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea   id="power_option"  name="power_option" class="form-control summernote"   >{{ old('power_option') ??  $product->power_option ?? ''}}</textarea>
+                                                <textarea   id="power_option"  name="power_option" class="form-control summernote_power_option"   >{{ old('power_option') ??  $product->power_option ?? ''}}</textarea>
 
                                                 @error('meta_keywords')
                                                 <span class="invalid-feedback" role="alert">
@@ -107,7 +107,7 @@
                                             <label for="visibility" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Visibility') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  id="summernote"  name="visibility" class="form-control summernote" >{{ old('visibility') ??  $product->visibility ?? ''}}</textarea>
+                                                <textarea  id="summernote"  name="visibility" class="form-control summernote_visibility" >{{ old('visibility') ??  $product->visibility ?? ''}}</textarea>
 
                                                 @error('visibility')
                                                 <span class="invalid-feedback" role="alert">
@@ -120,7 +120,7 @@
                                             <label for="ideal_for" class="col-md-3 col-form-label text-md-end"><span>* </span>{{ __('Ideal for') }}</label>
 
                                             <div class="col-md-8">
-                                                <textarea  id="ideal_for" name="ideal_for" class="form-control summernote" >{{ old('ideal_for') ??  $product->ideal_for ?? ''}}</textarea>
+                                                <textarea  id="ideal_for" name="ideal_for" class="form-control summernote_ideal_for" >{{ old('ideal_for') ??  $product->ideal_for ?? ''}}</textarea>
 
                                                 @error('ideal_for')
                                                 <span class="invalid-feedback" role="alert">
@@ -158,7 +158,7 @@
     </div>
     <script>
         $(document).ready(function() {
-            $('.summernote').summernote(
+            $('.summernote_description').summernote(
                 {
                     placeholder: 'Hello Photon Play Systems',
                     tabsize: 2,
@@ -188,6 +188,162 @@
             );
 
         });
+        $(document).ready(function() {
+            $('.summernote_specification').summernote(
+                {
+                    placeholder: 'Hello Photon Play Systems',
+                    tabsize: 2,
+                    height: 500,
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            var formData = new FormData();
+                            formData.append('photo', files[0]);
+                            formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                            $.ajax({
+                                url: '{{ route('upload-photo-summernote') }}',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $('#summernote').summernote('insertImage', data.url);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error(textStatus + ': ' + errorThrown);
+                                }
+                            });
+                        }
+                    }
+                }
+
+            );
+
+        });
+        $(document).ready(function() {
+            $('.summernote_feature').summernote(
+                {
+                    placeholder: 'Hello Photon Play Systems',
+                    tabsize: 2,
+                    height: 500,
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            var formData = new FormData();
+                            formData.append('photo', files[0]);
+                            formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                            $.ajax({
+                                url: '{{ route('upload-photo-summernote') }}',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $('#summernote').summernote('insertImage', data.url);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error(textStatus + ': ' + errorThrown);
+                                }
+                            });
+                        }
+                    }
+                }
+
+            );
+
+        });
+        $(document).ready(function() {
+            $('.summernote_power_option').summernote(
+                {
+                    placeholder: 'Hello Photon Play Systems',
+                    tabsize: 2,
+                    height: 500,
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            var formData = new FormData();
+                            formData.append('photo', files[0]);
+                            formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                            $.ajax({
+                                url: '{{ route('upload-photo-summernote') }}',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $('#summernote').summernote('insertImage', data.url);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error(textStatus + ': ' + errorThrown);
+                                }
+                            });
+                        }
+                    }
+                }
+
+            );
+
+        });
+        $(document).ready(function() {
+            $('.summernote_visibility').summernote(
+                {
+                    placeholder: 'Hello Photon Play Systems',
+                    tabsize: 2,
+                    height: 500,
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            var formData = new FormData();
+                            formData.append('photo', files[0]);
+                            formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                            $.ajax({
+                                url: '{{ route('upload-photo-summernote') }}',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $('#summernote').summernote('insertImage', data.url);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error(textStatus + ': ' + errorThrown);
+                                }
+                            });
+                        }
+                    }
+                }
+
+            );
+
+        });
+        $(document).ready(function() {
+            $('.summernote_ideal_for').summernote(
+                {
+                    placeholder: 'Hello Photon Play Systems',
+                    tabsize: 2,
+                    height: 500,
+                    callbacks: {
+                        onImageUpload: function(files) {
+                            var formData = new FormData();
+                            formData.append('photo', files[0]);
+                            formData.append('_token', '{{ csrf_token() }}'); // Add CSRF token to the form data
+                            $.ajax({
+                                url: '{{ route('upload-photo-summernote') }}',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $('#summernote').summernote('insertImage', data.url);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.error(textStatus + ': ' + errorThrown);
+                                }
+                            });
+                        }
+                    }
+                }
+
+            );
+
+        });
+
 
     </script>
 
