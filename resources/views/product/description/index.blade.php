@@ -237,7 +237,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_feature').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
@@ -268,7 +268,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_power_option').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
@@ -299,7 +299,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_visibility').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
@@ -330,7 +330,7 @@
                                 processData: false,
                                 contentType: false,
                                 success: function(data) {
-                                    $('#summernote').summernote('insertImage', data.url);
+                                    $('.summernote_ideal_for').summernote('insertImage', data.url);
                                 },
                                 error: function(jqXHR, textStatus, errorThrown) {
                                     console.error(textStatus + ': ' + errorThrown);
