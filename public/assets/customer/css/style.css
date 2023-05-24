@@ -259,6 +259,12 @@ h1 {
     color: #ffffff;
     font-weight: 600;
 }
+.title_home_page_banner {
+    font-size: 44px;
+    /* line-height: 94px; */
+    color: #ffffff;
+    font-weight: 600;
+}
 
 h2 {
     font-size: 24px;
