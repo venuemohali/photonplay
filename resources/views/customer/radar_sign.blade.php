@@ -33,7 +33,7 @@ foreach($specilization->options as $option){
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <form action="{{route('customer.store.shopping.bag')}}" method="post">
+                <form id="myForm" action="{{route('customer.store.shopping.bag')}}" method="post">
                     @csrf
                     <div id="dynamic_specs">
 
@@ -152,9 +152,10 @@ foreach($specilization->options as $option){
                             <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
                             <div class="borded-bang"></div>
                             <img src="{{ URL::to('/') }}/assets/images/mesenges.png" class="mx-3"/>
-                            <div class="borded-bang"></div>
-                            <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
-    <!-- <img src={}"http://127.0.0.1:8000/public/assets/images/verifyyellow.png"> -->
+                            {{-- <div class="borded-bang"></div>
+                            <button id="add_to_cart">
+                                <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
+                            </button> --}}
 
                             </div>
 </div>
@@ -199,7 +200,7 @@ Shipping:7-10 Working Days.
                         <span class="one-thoshand" id="total_price">${{$product->price}}</span>
                     </div>
                     <button type="submit" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Buy Now</button>
-                    <button class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Add to Cart</button>
+                    <button type="button" id="add_to_cart" value="add_to_cart" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Add to Cart</button>
                 </div>
             </div>
             </form>
@@ -393,4 +394,24 @@ let totalPrice=0
             // });
 
         }
+        $(document).ready(function() {
+            $('#add_to_cart').click(function() {
+                var formData = $('#myForm').serialize(); // Serialize the form data
+                var url = "{{ route('customer.store.shopping.bag', ['p' => 1]) }}";
+                $.ajax({
+                url: url, // Replace with your API endpoint
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    // Handle the success response from the server
+                    // console.log(response);
+                    location.reload();
+                },
+                error: function(xhr, status, error) {
+                    // Handle the error response from the server
+                    // console.log(error);
+                }
+                });
+            });
+        });
 </script>

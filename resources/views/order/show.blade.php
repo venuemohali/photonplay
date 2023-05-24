@@ -1,5 +1,6 @@
 @php
 use App\Models\ProductSpcializationOption;
+use Illuminate\Support\Facades\Log;
 @endphp
 @extends('user-master')
 
@@ -97,9 +98,10 @@ use App\Models\ProductSpcializationOption;
                                         <td>{{ $prod->title }}</td>
                                         <td>
                                             @foreach (explode(',',$prod->option_ids) as $option)
+
                                                 @php
                                                 $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
-
+                                                {{Log::info($options);}}
                                                 @endphp
                                                 @foreach ($options as $opp)
                                                     {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br>

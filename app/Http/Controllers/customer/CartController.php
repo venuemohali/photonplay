@@ -113,6 +113,9 @@ class CartController extends Controller
             }
 
         }
+        if($request->p == 1){
+            return redirect()->back()->with('success', 'Item added to cart successfully!');
+        }
         return redirect()->route('customer.shopping.bag');
     }
 
