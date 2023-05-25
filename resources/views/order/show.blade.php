@@ -92,9 +92,6 @@ use Illuminate\Support\Facades\Log;
                                 </thead>
                                 <tbody>
                                 @foreach($order->orderedProducts as $prod)
-                                @php
-                                dd($prod);
-                                @endphp
                                     <tr>
                                         <td>{{ $prod->product_id }}</td>
                                         <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found"  style="max-height: 100px;max-width: 100px;"/></td>
@@ -103,8 +100,7 @@ use Illuminate\Support\Facades\Log;
                                             @foreach (explode(',',$prod->option_ids) as $option)
 
                                                 @php
-                                                $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
-                                                {{Log::info($options);}}
+                                                $options = ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->where('product_id',$prod->product_id)->get();
                                                 @endphp
                                                 @foreach ($options as $opp)
                                                     {{$opp->product_specilization->specilization->title}} : {{$opp->specializationoptions->option}}(${{$opp->specialization_price}}) <br>
