@@ -92,6 +92,9 @@ use Illuminate\Support\Facades\Log;
                                 </thead>
                                 <tbody>
                                 @foreach($order->orderedProducts as $prod)
+                                @php
+                                dd($prod);
+                                @endphp
                                     <tr>
                                         <td>{{ $prod->product_id }}</td>
                                         <td><img src="{{asset("storage/".$prod->cover_image)}}" alt="Image not found"  style="max-height: 100px;max-width: 100px;"/></td>
