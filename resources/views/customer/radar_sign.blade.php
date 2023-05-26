@@ -294,8 +294,12 @@ let totalPrice=0
         inputV.stepUp();
         let innerPrice=document.getElementById("total_price")
         const totl=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
-        if(!totalPrice) totalPrice=totl
-        innerPrice.innerHTML=`$${totl+totalPrice}`
+        if(!totalPrice) totalPrice=totl-selectedValue.reduce((a,b)=>a+b,0)
+        console.log(selectedValue.reduce((a,b)=>a+b,0))
+        console.log(selectedValue)
+        console.log(totalPrice)
+        console.log(totl)
+        innerPrice.innerHTML=`$${totl+totalPrice+selectedValue.reduce((a,b)=>a+b,0)}`
     }
 
     function decrement() {
@@ -309,12 +313,13 @@ let totalPrice=0
 
         if(!totalPrice) totalPrice=totl
 
-        innerPrice.innerHTML=`$${totl-totalPrice}`
+        innerPrice.innerHTML=`$${totl-totalPrice-selectedValue.reduce((a,b)=>a+b,0)}`
         // if(!totalPrice) totalPrice=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
         // document.getElementById('demoInput').stepDown();
     }
 
     var dict = {};
+const selectedValue=[]
     function GetSelected(radio) {
             var chected = new Array();
             if(radio.checked){
@@ -338,7 +343,7 @@ let totalPrice=0
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
                         let inputV=document.getElementById('demoInput')
-
+selectedValue.push(Number(radio.title))
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
                     },
                 });
@@ -365,7 +370,8 @@ let totalPrice=0
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
                         let inputV=document.getElementById('demoInput')
-
+                        let find=selectedValue.indexOf(Number(radio.title))
+                        selectedValue.splice(find,1)
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-(Number(radio.title)*(Number(inputV.value)))}`
                     },
                 });
