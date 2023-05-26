@@ -288,43 +288,31 @@ Shipping:7-10 Working Days.
         autoplay: true,
         arrows: false
     });
-let totalPrice=0
+    let totalPrice=0
     function increment() {
         let inputV=document.getElementById('demoInput')
         inputV.stepUp();
         let innerPrice=document.getElementById("total_price")
         const totl=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
         if(!totalPrice) totalPrice=totl-selectedValue.reduce((a,b)=>a+b,0)
-        console.log(selectedValue.reduce((a,b)=>a+b,0))
-        console.log(selectedValue)
-        console.log(totalPrice)
-        console.log(totl)
         innerPrice.innerHTML=`$${totl+totalPrice+selectedValue.reduce((a,b)=>a+b,0)}`
     }
-
     function decrement() {
         let inputV=document.getElementById('demoInput')
         console.log(inputV.value)
         if(inputV.value==1) return
         inputV.stepDown();
-
         let innerPrice=document.getElementById("total_price")
         const totl=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
-
         if(!totalPrice) totalPrice=totl
-
         innerPrice.innerHTML=`$${totl-totalPrice-selectedValue.reduce((a,b)=>a+b,0)}`
-        // if(!totalPrice) totalPrice=Number(innerPrice.innerHTML.slice(1,innerPrice.length))
-        // document.getElementById('demoInput').stepDown();
     }
 
     var dict = {};
-const selectedValue=[]
+    const selectedValue=[]
     function GetSelected(radio) {
             var chected = new Array();
             if(radio.checked){
-                // console.log(radio.value)
-                // return
                 dict[radio.id] = radio.value;
                 $.ajax({
                     url: '{{ route('customer.specification.ajax') }}',
@@ -334,7 +322,6 @@ const selectedValue=[]
                     },
                     data: {dict: dict},
                     success: function(response) {
-                        // console.log(response);
                         $('#dynamic_specs').html("");
                         var input = document.createElement("input");
                         input.type = "hidden";
@@ -343,17 +330,12 @@ const selectedValue=[]
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
                         let inputV=document.getElementById('demoInput')
-selectedValue.push(Number(radio.title))
+                        selectedValue.push(Number(radio.title))
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
                     },
                 });
-                // console.log(radio.innerHTML)
             }else {
                let val= dict[radio.id];
-            //    if(val==radio.value){
-            //        delete dict[radio.id];
-            //    }
-            //    console.log(val);
                $.ajax({
                     url: '{{ route('customer.specification.ajax') }}',
                     type: 'GET',
@@ -376,10 +358,8 @@ selectedValue.push(Number(radio.title))
                     },
                 });
             }
-            // console.log('specfications', dict);
 
         const checkboxes = document.querySelectorAll(`input[name="${radio.id}"]`);
-            // console.log(checkboxes);
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener('click', () => {
                 if (checkbox.checked) {
@@ -391,15 +371,6 @@ selectedValue.push(Number(radio.title))
                 }
             });
         });
-
-
-        // $("[name='chklistitem']").each(function (index, data) {
-            //     if (data.checked) {
-            //
-            //         chected.push(data.value +"---"+data.nextSibling.textContent);
-            //     }
-            // });
-
         }
         $(document).ready(function() {
             $('#add_to_cart').click(function() {
@@ -411,12 +382,10 @@ selectedValue.push(Number(radio.title))
                 data: formData,
                 success: function(response) {
                     // Handle the success response from the server
-                    // console.log(response);
                     location.reload();
                 },
                 error: function(xhr, status, error) {
                     // Handle the error response from the server
-                    // console.log(error);
                 }
                 });
             });

@@ -411,18 +411,21 @@ $seo_meta=[
         });
 
         $('.toggler-mega').click(function() {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active')
-                $('.mega-menu').slideUp();
-            } else {
-                $(this).addClass('active');
+            console.log($(this)?.['0'].className)
+                if ($(this)?.['0'].className.includes('active')) {
+                    $(this)?.['0'].className.replace('active','')
                 $('.mega-menu').slideDown();
+                console.log('chla')
+            } else {
+                    $(this).className+=' active'
+                console.log('chla2')
+                // $(this).addClass('active');
+                $('.mega-menu').slideUp();
             }
 
         })
         $('.mega-menu-parent > h4').click(function() {
             var bodyColor = $('.drop-downs').attr("style");
-            // console.log(bodyColor)
             if (bodyColor === 'display: block;') {
                 $('.drop-downs').slideUp(200);
                 $('.mega-menu-item').removeClass('active');
