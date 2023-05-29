@@ -447,39 +447,7 @@ $('.key-slider').slick({
     ]
 });
 
-$('.clints-content-branding').slick({
-    dots: false,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 5,
-    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
-    nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay:true,
-    // fade:true,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-            }
-        },
 
-    ]
-});
 $('.clints-content').slick({
     dots: false,
     infinite: false,
