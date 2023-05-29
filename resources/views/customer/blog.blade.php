@@ -150,11 +150,11 @@
                    @foreach($relatedBlogRecords as $relatedBlog)
 
                     <div>
-                        <div class="px-2 branding-diss">
+                        <div class="px-2  ">
                             <img src="{{asset("storage/".$relatedBlog->image)}}" class="d-block mx-auto w-100" />
                             <div class="py-4">
                                 <h6 class="text-uppercase mb-0">{{$relatedBlog->title}}</h6>
-                                <span class="text-lights">May 21, 2015 / {{$relatedBlog->author}} </span>
+                                <span class="text-lights">{{$relatedBlog->created_at}}  / {{$relatedBlog->author}} </span>
                             </div>
                         </div>
                     </div>
