@@ -65,7 +65,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/pids_solution.webp') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/pids_solution.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/bussign_solution.webp') }}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/images/solutions/bussign_solution.webp') }}" alt="Not Found" class="img-fluid h-75 w-75">
                     </div>
                 </div>
             </div>
