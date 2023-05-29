@@ -44,7 +44,14 @@ class ContactUsController extends Controller
     }
 
     public function blog_listing(){
-        $blogs=Blog::paginate(5);
+        $blogs=Blog::select();
+
+        if(isset($request->category)){
+            $blogs_category_ids=BlogCategory::where('slug',$request->category)->pluck('id')->toArray();
+            $blogs=$blogs->$blogs->whereIn('blog_category_id',$blogs_category_ids);
+        }
+
+        $blogs=$blogs->paginate(5);
         foreach ($blogs as $blog){
             $date = Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at);
             $blog_created_date = $date->format('d F, Y');
