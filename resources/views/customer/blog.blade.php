@@ -66,7 +66,7 @@ $seo_meta=[
                     </div>
 
 
-
+<hr/>
 {{--                    <div--}}
 {{--                        class="d-flex justify-content-between align-items-center border-0 border-top border-bottom py-4 mb-4">--}}
 {{--                        <div class="d-flex justify-content-between align-items-center"> <img--}}
