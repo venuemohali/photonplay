@@ -54,7 +54,13 @@ class ContactUsController extends Controller
         $categories=BlogCategory::take(5)->get();
         $latestBlogRecords = Blog::latest()->take(3)->get();
 
-        return view('customer.blog_listing',compact('blogs','categories','latestBlogRecords'));
+        // Group posts by month-year
+        $groupedPosts = Blog::selectRaw('DATE_FORMAT(created_at, "%M %Y") as month_year, COUNT(*) as count')
+            ->groupBy('month_year')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('customer.blog_listing',compact('blogs','categories','latestBlogRecords','groupedPosts'));
     }
 
     /**
