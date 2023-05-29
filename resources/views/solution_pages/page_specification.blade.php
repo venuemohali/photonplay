@@ -52,7 +52,7 @@
                                     <tr>
                                         <td>{{$spec->id}}</td>
                                         <td>{{$spec->spec}}</td>
-                                        <td>{{$spec->description}}</td>
+                                        <td>{!! $spec->description  !!}</td>
                                         <td>
                                             <a href="{{route('admin.manage.solution.edit.specification.page', $spec->id)}}">
                                                 <i data-feather="edit"></i></a>
