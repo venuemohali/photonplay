@@ -91,7 +91,7 @@ $seo_meta=[
                             <ul class="m-0 p-0">
 
                                 @foreach($categories as $category)
-                                    <li><a href="/blog?category={{$category->slug}}">{{$category->category}}</a></li>
+                                    <li><a href="/blog?category={{$category->slug}}" class="text-decoration-none">{{$category->category}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
