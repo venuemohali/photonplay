@@ -172,7 +172,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                     <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
                                         <p class=""> Photonplay Systems Pty Ltd.
                                             <br> 4 Perrin circuit Tarneit, Vic-3029 Australia.</p></div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/> +61(02) 8015 2100</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
@@ -182,7 +182,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                     <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
                                         <p class="">Photonplay Systems Ltd. <br>23 Overstone road, Georgetown, Ontario, <br> L7G 0M9 Canada.Photonplay Systems Ltd</p>
                                     </div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>  (800) 966-9329 </span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
@@ -197,7 +197,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                     <p class="">Photonplay Systems AS
                                       <br> Hilton 157 2040 klofta Ullensaker municipality</p>
                                         </div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>   +44-203-608-7507</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
@@ -207,7 +207,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                         <p class="">Photonplay Systems (P) Ltd.
                                             <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
                                     </div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+91 989 969 0347</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
@@ -223,8 +223,8 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
     <h5 class="text-upercase"><u>DEALERSHIP / TRADE INQUIRIES</u></h5>
     <p class="dealership-perra">Larry Kaura, Global Trade Manager</p>
     <div>
-    <span class="text-dark"><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+1  (800) 966-9329</span>
-    <span class="text-dark"><img src="{{asset('assets\customer\images\message.png')}}" class="mx-2"/> sales@photonplay.com</span>
+    <span class="text-dark"><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+91 989 969 0347</span>
+    <span class="text-dark"><img src="{{asset('assets\customer\images\message.png')}}" class="mx-2"/>larry@photonplay.com</span>
     </div>
     </div>
 </section>
