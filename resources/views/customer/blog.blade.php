@@ -32,6 +32,7 @@ $seo_meta=[
                                     {{$tag}},
                                 @endforeach
                             </div>
+                            <hr/>
                             {!! $blog->body !!}
                         </div>
 
