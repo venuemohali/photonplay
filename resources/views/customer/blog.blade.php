@@ -25,8 +25,8 @@ $seo_meta=[
                     <div class="post-item mb-5">
                         <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 img-fluid w-100">
                         <div class="pb-3 post-info border-0">
-                            <h2 class="text-uppercase"> {{$blog->title}} </h2>
-                            <div>
+                            <h2 class="text-uppercase mb-3"> {{$blog->title}} </h2>
+                            <div class="mb-4">
                               {{$blog_created_date}} by {{$blog->author}}
                                 @foreach($tags as $tag)
                                     {{$tag}},
