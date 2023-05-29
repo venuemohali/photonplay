@@ -85,9 +85,10 @@
                                 SOLUTIONS <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found" class="ms-1 mb-">
                             </a>
 
-                            <ul class="dropdown-menu mega-menu">
-                                <li class="d-flex flex-wrap gap-5">
-                                    <div class="col-md-2">
+                            <ul class="dropdown-menu mega-menu" >
+                                <li class="d-flex justify-content-center flex-wrap ">
+
+                                    <div class="col-md-3" >
                                         <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.highway')}}">Highways</a></h4>
                                         <ul>
                                             <li>
@@ -115,7 +116,7 @@
                                                     (VASD) </a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <ul>
                                             <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.city')}}">Smart
                                                     Cities</a>
@@ -140,7 +141,7 @@
                                             </ul>
                                         </ul>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <ul>
                                             <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.tunnel')}}">Tunnels</a>
                                             </h4>
@@ -173,7 +174,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <ul>
                                             <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.transit')}}">TRANSIT</a>
                                             </h4>
