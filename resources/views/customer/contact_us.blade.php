@@ -92,7 +92,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
     <!-- map-Contact-start -->
     <section class="map-wrapper pt-0">
         <div class="container-fluid">
-            <div class="row justify-content-center" id="#inquiry">
+            <div class="row justify-content-center" id="inquiry">
                 <div class="col-lg-10">
                     <div class="inner-map" >
                         <iframe class="w-75 py-5"
