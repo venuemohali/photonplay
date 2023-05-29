@@ -103,6 +103,9 @@ $seo_meta=[
                     <div class="sidebar-item">
                         <div class="side-bar-title">Archive</div>
                         <ul class="m-0 p-0">
+                            @foreach($groupedPosts as $postarchive)
+                                <li><a hre="">{{$postarchive->month_year}} ({{$postarchive->count}})</a></li>
+                            @endforeach
                             <li><a hre="">May 2023</a></li>
                             <li><a hre="">April 2023</a></li>
                             <li><a hre="">March 2023</a></li>
