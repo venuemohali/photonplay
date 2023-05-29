@@ -43,7 +43,7 @@ class ContactUsController extends Controller
         return view('customer.blog');
     }
 
-    public function blog_listing(){
+    public function blog_listing(Request $request){
         $blogs=Blog::select();
 
         if(isset($request->category)){
