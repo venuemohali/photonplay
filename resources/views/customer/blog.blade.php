@@ -28,9 +28,9 @@ $seo_meta=[
                             <h2 class="text-uppercase mb-3"> {{$blog->title}} </h2>
                             <div class="mb-4">
                               {{$blog_created_date}} by {{$blog->author}}
-                                @foreach($tags as $tag)
-                                    {{$tag}},
-                                @endforeach
+{{--                                @foreach($tags as $tag)--}}
+{{--                                    {{$tag}},--}}
+{{--                                @endforeach--}}
                             </div>
                             <hr/>
                             {!! $blog->body !!}
