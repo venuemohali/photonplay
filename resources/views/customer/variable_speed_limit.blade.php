@@ -255,6 +255,8 @@ $seo_meta=[
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
+            autoplay: true,           // Enable auto-scroll
+            autoplaySpeed: 2000,      // Set auto-scroll speed (in milliseconds)
             responsive: [
                 {
                     breakpoint: 1024,
@@ -275,7 +277,7 @@ $seo_meta=[
                     }
                 }
             ]
-        })
+        });
 
         window.addEventListener('click', function (e) {
             if (window.innerWidth > 992) {
