@@ -93,7 +93,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/vsls_squre.webp') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/vsls_squre.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/pvms.webp') }}" alt="Not Found" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/pvms.webp') }}" alt="Not Found" class="img-fluid h-75 w-75 shadow-none">
 
                     </div>
                 </div>
@@ -142,7 +142,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/vasd.webp') }}" alt="VASD" class="img-fluid shadow-none">
+                        <img src="{{asset('assets/images/solutions/vasd.webp') }}" alt="VASD" class="img-fluid shadow-none h-75 w-75">
 
                     </div>
                 </div>
