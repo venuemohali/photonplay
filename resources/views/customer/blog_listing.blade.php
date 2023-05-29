@@ -34,7 +34,7 @@ $seo_meta=[
                             <a href="{{route("customer.blog_show",$s_blog->slug)}}" class="text-decoration-none text-secondary">READ MORE</a>
                             <div class="post-action-fire">
                                 <ul class="d-flex p-0 m-0 align-items-center">
-                                    <a href="{{route('customer.blog_show',$blog->slug)}}" class="text-decoration-none">
+                                    <a href="{{route('customer.blog_show',$s_blog->slug)}}" class="text-decoration-none">
                                     <li class="text-secondary">  <i class="bi bi-suit-heart-fill"></i> {{$s_blog->likes}}</li>
                                     </a>
                                 </ul>
