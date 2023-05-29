@@ -165,24 +165,30 @@ $seo_meta=[
                 <div>
                     <h6 class="mb-4 text-uppercase">Related Posts</h6>
                 </div>
-                <div class="rules-content mb-0 border-0 border-bottom pb-5">
-                    <div>
-                   @foreach($relatedBlogRecords as $relatedBlog)
-                        <a href="{{route('customer.blog_show',$relatedBlog->slug)}}" class="text-decoration-none">
-                    <div>
-{{--               below class removed: branding-diss--}}
-                        <div class="px-2 ">
-                            <img src="{{asset("storage/".$relatedBlog->image)}}" class="d-block mx-auto w-100" />
-                            <div class="py-4">
-                                <h6 class="text-uppercase mb-0">{{$relatedBlog->title}}</h6>
-                                <span class="text-lights">{{$relatedBlog->created_at}}  / {{$relatedBlog->author}} </span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row">
+                    @foreach($relatedBlogRecords as $relatedBlog)
+                     <div class="col-md-4">
+                         <a href="{{route('customer.blog_show',$relatedBlog->slug)}}" class="text-decoration-none">
+                             <div>
+                                 {{--               below class removed: branding-diss--}}
+                                 <div class="px-2 ">
+                                     <img src="{{asset("storage/".$relatedBlog->image)}}" class="d-block mx-auto w-100" />
+                                     <div class="py-4">
+                                         <h6 class="text-uppercase mb-0">{{$relatedBlog->title}}</h6>
+                                         <span class="text-lights">{{$relatedBlog->created_at}}  / {{$relatedBlog->author}} </span>
+                                     </div>
+                                 </div>
+                             </div>
 
-                        </a>
+                         </a>
+                     </div>
+
 
                     @endforeach
+
+                </div>
+                <div class="rules-content mb-0 border-0 border-bottom pb-5">
+                    <div>
                     </div>
                 </div>
             </div>
