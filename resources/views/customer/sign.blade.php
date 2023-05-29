@@ -296,7 +296,7 @@ $seo_meta=[
                 <!-- option-one -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/your_speed.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/your_speed.webp')}}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -325,7 +325,7 @@ $seo_meta=[
                 <!-- option-two -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/key-speed.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/key-speed.webp')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -357,7 +357,7 @@ $seo_meta=[
                 <!-- option-three -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/Data-analysis-cloud-radar-sign.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/Data-analysis-cloud-radar-sign.webp')}}" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -418,7 +418,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/trans-canada.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -453,7 +453,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/ballon-HOLDER.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/ballon-HOLDER.webp')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -484,7 +484,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/trans-canada.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
