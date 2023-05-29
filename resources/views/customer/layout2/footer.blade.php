@@ -64,11 +64,11 @@ $blogs = Blog::select('slug','title')->take(4)->get();
             <div class="footer-item mb-0 mb-md-5 footer-item-2">
                 <h2>QUICK LINKS</h2>
                 <ul class="p-0">
-                    <li><a href="" class="text-capitalize">Home</a></li>
-                    <li><a href="" class="text-capitalize">About us</a></li>
-                    <li><a href="" class="text-capitalize">Contact us</a></li>
-                    <li><a href="" class="text-capitalize">News & Events</a></li>
-                    <li><a href="" class="text-capitalize">Sitemap</a></li>
+                    <li><a href="/" class="text-capitalize">Home</a></li>
+                    <li><a href="{{route('customer.about.us')}}" class="text-capitalize">About us</a></li>
+                    <li><a href="{{route('customer.contact.us')}}" class="text-capitalize">Contact us</a></li>
+                    <li><a href="{{route('customer.blog')}}" class="text-capitalize">News & Events</a></li>
+                    <li><a href="/sitemap.xml" class="text-capitalize">Sitemap</a></li>
                     <!-- @forelse ($categories as $category)
                     <li><a>{{$category->title}}</a></li>
                     @empty
