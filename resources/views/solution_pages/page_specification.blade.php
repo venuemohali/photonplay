@@ -52,7 +52,9 @@
                                     <tr>
                                         <td>{{$spec->id}}</td>
                                         <td>{{$spec->spec}}</td>
-                                        <td>{!! $spec->description  !!}</td>
+                                        <td>
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($spec->description), 20, '...') }}
+                                           </td>
                                         <td>
                                             <a href="{{route('admin.manage.solution.edit.specification.page', $spec->id)}}">
                                                 <i data-feather="edit"></i></a>
