@@ -39,6 +39,7 @@ class ContactUsController extends Controller
      * @return Application|Factory|View
      */
     public function blog(){
+
         return view('customer.blog');
     }
 
@@ -83,7 +84,14 @@ class ContactUsController extends Controller
         $like=BlogLike::where('session_id',$request->getSession()->getId())
             ->where('blog_id',$blog->id)->exists();
         $count=BlogLike::where('blog_id',$blog->id)->count();
-        return view('customer.blog',compact('blog','tags','blog_created_date','categories','latestBlogRecords','relatedBlogRecords','like','count'));
+
+        // Group posts by month-year
+        $groupedPosts = Blog::selectRaw('DATE_FORMAT(created_at, "%M %Y") as month_year, COUNT(*) as count')
+            ->groupBy('month_year')
+            ->orderBy('month_year', 'desc')
+            ->get();
+
+        return view('customer.blog',compact('blog','tags','blog_created_date','categories','latestBlogRecords','relatedBlogRecords','like','count','groupedPosts'));
     }
 
     public function signal(){
