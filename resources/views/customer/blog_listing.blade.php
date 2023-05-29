@@ -60,7 +60,7 @@ $seo_meta=[
                         <div class="side-bar-title">Categories</div>
                         <ul class="m-0 p-0">
                             @foreach($categories as $category)
-                                <li><a href="/blogs/category/{{$category->slug}}">{{$category->category}}</a></li>
+                                <li class=" "><a href="/blog?category={{$category->slug}}" class="text-decoration-none text-uppercase">{{$category->category}}</a></li>
                             @endforeach
 
                         </ul>
