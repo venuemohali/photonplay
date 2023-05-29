@@ -314,105 +314,105 @@ $seo_meta=[
         {{--    ]--}}
         {{--})--}}
 
-        $('.clints-content-gallery').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        })
+{{--        $('.clints-content-gallery').slick({--}}
+{{--            dots: false,--}}
+{{--            infinite: false,--}}
+{{--            speed: 300,--}}
+{{--            slidesToShow: 3,--}}
+{{--            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",--}}
+{{--            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",--}}
+{{--            slidesToScroll: 1,--}}
+{{--            arrows: true,--}}
+{{--            responsive: [--}}
+{{--                {--}}
+{{--                    breakpoint: 1024,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 3,--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 600,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 480,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 1,--}}
+{{--                    }--}}
+{{--                }--}}
+{{--            ]--}}
+{{--        })--}}
 
-        window.addEventListener('click', function (e) {
-            if (window.innerWidth > 992) {
-                if ($('.navbar-collapse').hasClass('show')) {
-                    $('.navbar-toggler').click();
-                }
-            }
+{{--        window.addEventListener('click', function (e) {--}}
+{{--            if (window.innerWidth > 992) {--}}
+{{--                if ($('.navbar-collapse').hasClass('show')) {--}}
+{{--                    $('.navbar-toggler').click();--}}
+{{--                }--}}
+{{--            }--}}
 
-        })
+{{--        })--}}
 
-        // Hover attribute
-        $('.dropdown .dropdown-toggle').mouseenter(function () {
-            if (window.innerWidth > 991) {
-                $(this).addClass('show');
-                $(this).attr({
-                    'aria-expanded': true
-                })
-                $(this).siblings('.dropdown-menu').addClass('show');
-                $(this).siblings('.dropdown-menu').attr({
-                    'data-bs-popper': "static"
-                })
-            }
+{{--        // Hover attribute--}}
+{{--        $('.dropdown .dropdown-toggle').mouseenter(function () {--}}
+{{--            if (window.innerWidth > 991) {--}}
+{{--                $(this).addClass('show');--}}
+{{--                $(this).attr({--}}
+{{--                    'aria-expanded': true--}}
+{{--                })--}}
+{{--                $(this).siblings('.dropdown-menu').addClass('show');--}}
+{{--                $(this).siblings('.dropdown-menu').attr({--}}
+{{--                    'data-bs-popper': "static"--}}
+{{--                })--}}
+{{--            }--}}
 
-        });
-        $('.dropdown-menu').mouseleave(function () {
-            if (window.innerWidth > 991) {
-                $(this).removeAttr('data-bs-popper');
-                $(this).siblings('.nav-link ').removeClass('show');
-                $(this).removeClass('show');
-                $(this).siblings('.nav-link').attr({
-                    'aria-expanded': false
-                });
-            }
+{{--        });--}}
+{{--        $('.dropdown-menu').mouseleave(function () {--}}
+{{--            if (window.innerWidth > 991) {--}}
+{{--                $(this).removeAttr('data-bs-popper');--}}
+{{--                $(this).siblings('.nav-link ').removeClass('show');--}}
+{{--                $(this).removeClass('show');--}}
+{{--                $(this).siblings('.nav-link').attr({--}}
+{{--                    'aria-expanded': false--}}
+{{--                });--}}
+{{--            }--}}
 
-        })
-        $('.mega-menu h4').click(function () {
-            // $(this).siblings('ul').slideDown();
-            if ($(this).parent().hasClass('active')) {
-                $(this).parent().removeClass('active')
-            } else {
-                $(this).parent().addClass('active');
-            }
-            $(this).parent().siblings().removeClass('active');
-        });
+{{--        })--}}
+{{--        $('.mega-menu h4').click(function () {--}}
+{{--            // $(this).siblings('ul').slideDown();--}}
+{{--            if ($(this).parent().hasClass('active')) {--}}
+{{--                $(this).parent().removeClass('active')--}}
+{{--            } else {--}}
+{{--                $(this).parent().addClass('active');--}}
+{{--            }--}}
+{{--            $(this).parent().siblings().removeClass('active');--}}
+{{--        });--}}
 
-        $('.toggler-mega').click(function () {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active')
-                $('.mega-menu').slideUp();
-            } else {
-                $(this).addClass('active');
-                $('.mega-menu').slideDown();
-            }
+{{--        $('.toggler-mega').click(function () {--}}
+{{--            if ($(this).hasClass('active')) {--}}
+{{--                $(this).removeClass('active')--}}
+{{--                $('.mega-menu').slideUp();--}}
+{{--            } else {--}}
+{{--                $(this).addClass('active');--}}
+{{--                $('.mega-menu').slideDown();--}}
+{{--            }--}}
 
-        })
-        $('.mega-menu-parent > h4').click(function () {
-            var bodyColor = $('.drop-downs').attr("style");
-            // console.log(bodyColor)
-            if (bodyColor === 'display: block;') {
-                $('.drop-downs').slideUp(200);
-                $('.mega-menu-item').removeClass('active');
-                // $('.toggler-mega').removeClass('active')
-                return;
-            }
-            $('.drop-downs').slideDown(200);
+{{--        })--}}
+{{--        $('.mega-menu-parent > h4').click(function () {--}}
+{{--            var bodyColor = $('.drop-downs').attr("style");--}}
+{{--            // console.log(bodyColor)--}}
+{{--            if (bodyColor === 'display: block;') {--}}
+{{--                $('.drop-downs').slideUp(200);--}}
+{{--                $('.mega-menu-item').removeClass('active');--}}
+{{--                // $('.toggler-mega').removeClass('active')--}}
+{{--                return;--}}
+{{--            }--}}
+{{--            $('.drop-downs').slideDown(200);--}}
 
-        })
-        // $('.mega-menu .col-md-2 > h4').click( function(){
-        //     $(this).siblings('ul').slideDown();
-        //     console.log(this)
-        // })
-    </script>
+{{--        })--}}
+{{--        // $('.mega-menu .col-md-2 > h4').click( function(){--}}
+{{--        //     $(this).siblings('ul').slideDown();--}}
+{{--        //     console.log(this)--}}
+{{--        // })--}}
+{{--    </script>--}}
