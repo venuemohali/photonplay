@@ -1,3 +1,12 @@
+<?php
+
+$seo_meta=[
+    "title"=>$blog->title,
+    "description"=>\Illuminate\Support\Str::limit(strip_tags($blog->body), 200, '...') ,
+    "keywords"=>"photonplay, radar speed sign, variable message signs, driver feedback"
+];
+
+?>
 @include('customer.layout2.header')
 
     <!-- Banner sec -->
