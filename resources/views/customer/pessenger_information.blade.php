@@ -192,59 +192,8 @@ $seo_meta=[
     <!-- contact form -->
     @include('customer.layout2.get_in_touch')
     <!-- Contact form end -->
-
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
@@ -327,6 +276,41 @@ $seo_meta=[
                 // instead of a settings object
             ]
         });
+
+        $('.clints-content-branding').slick({
+            dots: false,
+            infinite: true,
+            speed: 700,
+            slidesToShow: 5,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay:true,
+            // fade:true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+
+            ]
+        });
+
 
         $('.clints-content').slick({
             dots: false,
