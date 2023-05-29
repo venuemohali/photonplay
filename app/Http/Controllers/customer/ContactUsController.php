@@ -55,7 +55,7 @@ class ContactUsController extends Controller
         }
 
         $blogs=$blogs->paginate(5);
-        dd($blogs);
+
         foreach ($blogs as $blog){
             $date = Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at);
             $blog_created_date = $date->format('d F, Y');
