@@ -273,9 +273,10 @@ $seo_meta=[
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end position-absolute circle-stone">
-                                    <img src="./assets/images/circle_stone.png" alt="not-found" class="img-fluid">
+                                    <img src="{{asset('/assets/images/circle_stone.png')}}" alt="not-found" class="img-fluid">
                                 </div>
                             </div>
+
                             <div class="accordion-item border-0">
                                 <h2 class="accordion-header" id="flush-headingTwos">
                                     <button
