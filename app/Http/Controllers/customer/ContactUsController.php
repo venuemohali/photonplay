@@ -17,6 +17,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use function Webmozart\Assert\Tests\StaticAnalysis\integer;
 
 class ContactUsController extends Controller
 {
@@ -49,7 +50,7 @@ class ContactUsController extends Controller
         if(isset($request->category)){
             $blogs_category_id=BlogCategory::where('slug',$request->category)->first();
             dd($blogs_category_id);
-            $blogs=$blogs->where('blog_category_id',$blogs_category_id);
+            $blogs=$blogs->where('blog_category_id',integer($blogs_category_id));
         }
 
         $blogs=$blogs->paginate(5);
