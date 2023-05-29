@@ -69,7 +69,7 @@ $seo_meta=[
                                     <div class="my-3 listed-bacgunded px-4 py-4">
                                         <h5 class="fw-bold text-capitalize">{{$page->title}}</h5>
                                         <p>{{substr($page->description, 0, 60)}} ...</p>
-                                        <a href="{{route('customer.signages.sub.page', $page->slug)}}" style="text-decoration: none;"><h6 class="text-colorr mb-0 mt-5">Explore More >></h6></a>
+                                        <a href="{{route('customer.signages.sub.page', $page->slug)}}" style="text-decoration: none;"><h6 class="text-colorr mb-0 mt-5">Know More >></h6></a>
                                     </div>
                                 </div>
                             </div>

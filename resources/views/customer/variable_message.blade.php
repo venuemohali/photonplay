@@ -82,7 +82,7 @@ $seo_meta=[
                                         <h5 class="fw-bold text-capitalize">{{ $i->title }}</h5>
                                         <p>{{ substr($i->description, 0, 60) }} ... </p>
                                         <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;">
-                                            <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;"><h6 class="text-colorr">Explore More >></h6></a>
+                                            <a href="{{route('customer.vms.sub.page', $i->slug)}}" style="text-decoration: none;"><h6 class="text-colorr">Know More >></h6></a>
                                         </a>
                                     </div>
                                 </div>
