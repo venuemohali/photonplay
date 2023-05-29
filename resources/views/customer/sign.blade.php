@@ -296,7 +296,7 @@ $seo_meta=[
                 <!-- option-one -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/your_speed.webp')}}" alt="" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/your_speed.webp')}}" alt="" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -325,7 +325,7 @@ $seo_meta=[
                 <!-- option-two -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/key-speed.webp')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/key-speed.webp')}}" alt="Not Found" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -357,7 +357,7 @@ $seo_meta=[
                 <!-- option-three -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/Data-analysis-cloud-radar-sign.webp')}}" alt="" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/Data-analysis-cloud-radar-sign.webp')}}" alt="" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -378,7 +378,7 @@ $seo_meta=[
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
-                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid " width="80">
                         </div>
                     </div>
                 </div>
@@ -388,7 +388,7 @@ $seo_meta=[
                 <!-- option-four -->
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/iMAGE-HOLDER.jpg')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/iMAGE-HOLDER.jpg')}}" alt="Not Found" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -418,7 +418,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid h-75 w-75" >
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -443,7 +443,7 @@ $seo_meta=[
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="#our_products" class="btn btn-primary text-uppercase rounded-2">Shop Now</a>
-                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg')}}" alt="Not Found" class="img-fluid " width="80">
                         </div>
                     </div>
                 </div>
@@ -453,7 +453,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/ballon-HOLDER.webp')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/ballon-HOLDER.webp')}}" alt="Not Found" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -484,7 +484,7 @@ $seo_meta=[
             <div class="row py-4">
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid">
+                        <img src="{{asset('assets/customer/images/trans-canada.webp')}}" alt="Not Found" class="img-fluid h-75 w-75">
                     </div>
                 </div>
                 <div class="col-lg-6">
