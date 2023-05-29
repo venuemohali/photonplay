@@ -81,10 +81,12 @@ $seo_meta=[
                 </div>
 
                 <div class="col-lg-4 col-md-12 position-sticky top-0 h-100">
+                  <form method="get" action="{{route('customer.search_photon_things')}}">
                     <div class="search mb-5 position-relative">
-                        <input type="text" placeholder="Search" class="border-0 ">
+                        <input type="text" name="search" placeholder="Search" class="border-0 ">
                         <i class="bi bi-search"></i>
                     </div>
+                  </form>
                     <div class="sec-sidebar">
                         <div class="sidebar-item">
                             <div class="side-bar-title">categoriEs</div>
