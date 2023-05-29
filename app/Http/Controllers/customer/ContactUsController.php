@@ -47,9 +47,9 @@ class ContactUsController extends Controller
         $blogs=Blog::select();
 
         if(isset($request->category)){
-            $blogs_category_ids=BlogCategory::where('slug',$request->category)->pluck('id')->toArray();
+            $blogs_category_id=BlogCategory::where('slug',$request->category)->first();
 //            dd($blogs_category_ids);
-            $blogs=$blogs->whereIn('blog_category_id',$blogs_category_ids);
+            $blogs=$blogs->where('blog_category_id',$blogs_category_id);
 
         }
 
