@@ -273,7 +273,7 @@ $seo_meta=[
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end position-absolute circle-stone">
-                                    <img src="{{asset('/assets/images/circle_stone.png')}}" alt="not-found" class="img-fluid">
+                                    <img src="{{asset('/assets/customer/images/circle_stone.png')}}" alt="not-found" class="img-fluid">
                                 </div>
                             </div>
 
