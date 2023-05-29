@@ -77,7 +77,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                    <div class="m-2">
                                     <h5 class="text-upercase"><u>Contact Customer Support</u></h5>
                                     <p>We are waiting to help you and your team  <br> – so don't hesitate to reach out!</p>
-{{--                                  <button class="btn btn-primary text-uppercase rounded-0 py-0">CONTACT SUPPORT</button>--}}
+                                  <a  href="#inquiry" class="btn btn-primary text-uppercase rounded-0 py-0">CONTACT SUPPORT</a>
                                 </div>
                                </div>
 
@@ -92,9 +92,9 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
     <!-- map-Contact-start -->
     <section class="map-wrapper pt-0">
         <div class="container-fluid">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" id="#inquiry">
                 <div class="col-lg-10">
-                    <div class="inner-map">
+                    <div class="inner-map" >
                         <iframe class="w-75 py-5"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13686.924581218746!2d75.88485906787676!3d30.950072544206556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a84a965aaa167%3A0x5b0c9401857ab0e8!2sMeharban%2C%20Punjab%20141007!5e0!3m2!1sen!2sin!4v1681919215477!5m2!1sen!2sin"
                             height="700" style="border:0;" allowfullscreen="" loading="lazy"
