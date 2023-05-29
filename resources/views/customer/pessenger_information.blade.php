@@ -159,7 +159,7 @@ $seo_meta=[
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
+                    <h4 class="text-white text-center">Passenger Information Display System (PIDS)- Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
                     <button class="btn btn-primary rounded-0">Download Now</button>
