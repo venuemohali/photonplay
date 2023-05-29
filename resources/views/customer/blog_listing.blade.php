@@ -63,7 +63,7 @@ $seo_meta=[
                         </ul>
                     </div>
                     <div class="sidebar-item">
-                        <div class="side-bar-title text-uppercase">RECENT POSTeS</div>
+                        <div class="side-bar-title text-uppercase">RECENT POSTS</div>
                         <ul class="m-0 p-0 latest-post">
                             @foreach($latestBlogRecords as $lt_blog)
                                 <li>
