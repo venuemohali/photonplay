@@ -287,7 +287,7 @@
     <!-- _____________________ourclint-last-start___________________ -->
     <section class="our-clints-last">
         <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">GALLARY</h2>
+            <h2 class="fs-md-2 mt-3">GALLERY</h2>
         </div>
         <div class="container">
             <div class="px-4">
