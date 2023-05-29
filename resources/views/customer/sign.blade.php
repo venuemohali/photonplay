@@ -165,8 +165,9 @@ $seo_meta=[
         </div>
         <div class="heading-sec">
             <h2 class="fs-md-2 mt-3">Multi Functional Display</h2>
-            <p>Multi Functional Display</p>
-            <p>Full matrix-based Digital Speed Limit Sign with multi-functiona</p>
+            <p class="text-light">Acts like a Messenger and a Speed Sign</p>
+            <p class="text-light">Full matrix-based Digital Speed Limit Sign with multi-functional display in 4</p>
+            <p class="text-light"> colors with high bright in-built warning FLASHING LIGHTS.</p>
         </div>
         <div class="container pb-lg-5">
             <div class="accodion-wrapper pb-5">
