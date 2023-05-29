@@ -321,6 +321,7 @@ a.nav-link.dropdown-toggle.show img,
 /* banner */
 .banner {
     height: 550px;
+    backdrop-filter: blur(10px);
 }
 
 .products {
