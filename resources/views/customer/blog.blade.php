@@ -148,9 +148,10 @@
                 <div class="rules-content mb-0 d-flex align-items-center border-0 border-bottom pb-5">
 
                    @foreach($relatedBlogRecords as $relatedBlog)
-
+                        <a href="{{route('customer.blog_show',$relatedBlog->slug)}}" class="text-decoration-none">
                     <div>
-                        <div class="px-2  ">
+{{--               below class removed: branding-diss--}}
+                        <div class="px-2 ">
                             <img src="{{asset("storage/".$relatedBlog->image)}}" class="d-block mx-auto w-100" />
                             <div class="py-4">
                                 <h6 class="text-uppercase mb-0">{{$relatedBlog->title}}</h6>
@@ -158,6 +159,8 @@
                             </div>
                         </div>
                     </div>
+
+                        </a>
 
                     @endforeach
 
