@@ -97,7 +97,7 @@ $seo_meta=[
                     Areas</div>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary">Get Quote</button>
+                <a href="#inquiry" class="btn btn-primary">Get Quote</a>
             </div>
         </div>
     </section>
