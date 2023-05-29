@@ -30,7 +30,7 @@ $seo_meta=[
                                 <div class="fs-6 mt-md-4">
                                     <p class="text-dark">No. 1 in Traffic Calming Solution</p>
                                 </div>
-                                <a href="{{asset("storage/".$brochure->brochure)}} " type="button"
+                                <a href="{{asset("storage/".$product->brochure)}} " type="button"
                                     class="py-2 rounded border-0 px-4 mt-5 bg-white outline-0 btn-light">Download
                                     Brochure <img class="fs-4 ms-2" width="10" src="{{asset('assets\customer\images\downarrow.png')}}"
                                         alt=""></a>
