@@ -57,11 +57,11 @@ $seo_meta=[
                                 <ul class="d-flex p-0 m-0 align-items-center">
                                     <!-- <li class="text-secondary"> <img src="./assets/images/chat-gpt.png" />21 </li> -->
                                     <li class="text-secondary" ><span id="like-totals">{{$count}} </span>  </li>
-                                        <a href="{{route('customer.blog_show',$blog->slug)}}" class="text-decoration-none">
+
                                     <li class="text-secondary d-flex align-items-center">
                                         <i id="like-unlike-btn" class="bi bi-suit-heart{{$like?"-fill text-danger":""}}"  style="font-size: 25px;"></i>
                                     </li>
-                                        </a>
+
                                 </ul>
                             </div>
                         </div>
