@@ -58,7 +58,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
-                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
+                            <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid h-75 w-75" width="80">
                         </div>
                     </div>
                 </div>
