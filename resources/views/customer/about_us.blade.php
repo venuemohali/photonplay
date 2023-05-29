@@ -13,7 +13,7 @@ $seo_meta=[
     <section class="pt-0 pb-sm-4 pb-lg-5">
         <div class="banner">
             <div class="about-wrapper d-flex justify-content-center align-items-center">
-                <h3 class="text-dark"> About us</h3>
+                <h2 class="text-dark"> About us</h2>
             </div>
         </div>
         <!-- </div> -->
