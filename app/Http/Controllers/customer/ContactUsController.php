@@ -50,7 +50,7 @@ class ContactUsController extends Controller
         if(isset($request->category)){
             $blogs_category_id=BlogCategory::where('slug',$request->category)->first();
 
-            $blogs=$blogs->where('blog_category_id',integer($blogs_category_id));
+            $blogs=$blogs->where('blog_category_id',int($blogs_category_id));
 
         }
 
