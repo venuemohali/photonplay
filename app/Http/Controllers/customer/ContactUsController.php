@@ -54,6 +54,11 @@ class ContactUsController extends Controller
             }
         }
 
+        if(isset($request->tags)){
+            $blogs=$blogs->where('keywords', 'LIKE', '%' . $request->tags . '%');
+        }
+
+
         $blogs=$blogs->paginate(5);
 
         foreach ($blogs as $blog){
