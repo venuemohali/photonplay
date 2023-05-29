@@ -806,7 +806,7 @@ $seo_meta=[
 
             ]
         })
-    })
+    });
         window.addEventListener('click', function (e) {
             if ($('.navbar-collapse').hasClass('show')) {
                 $('.navbar-toggler').click();
