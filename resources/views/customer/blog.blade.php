@@ -161,7 +161,7 @@ $seo_meta=[
                 <div>
                     <h6 class="mb-4 text-uppercase">Related Posts</h6>
                 </div>
-                <div class="rules-content mb-0 d-flex align-items-center border-0 border-bottom pb-5">
+                <div class="rules-content mb-0 border-0 border-bottom pb-5">
                     <div>
                    @foreach($relatedBlogRecords as $relatedBlog)
                         <a href="{{route('customer.blog_show',$relatedBlog->slug)}}" class="text-decoration-none">
