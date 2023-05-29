@@ -67,7 +67,7 @@ $seo_meta=[
                         <ul class="m-0 p-0 latest-post">
                             @foreach($latestBlogRecords as $lt_blog)
                                 <li>
-                                    <a hre="{{route('customer.blog_show',$lt_blog->slug)}}" class="d-flex align-items-center text-decoration-none text-secondary">
+                                    <a href="{{route('customer.blog_show',$lt_blog->slug)}}" class="d-flex align-items-center text-decoration-none text-secondary">
                                         <img src="{{asset("storage/".$lt_blog->image)}}" />
                                         <div class="latest-post-content ms-2">
                                             <h4>{{$lt_blog->title}}</h4>
