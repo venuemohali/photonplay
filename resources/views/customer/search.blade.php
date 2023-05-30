@@ -67,6 +67,14 @@ $seo_meta=[
                                         <a href="{{route('customer.pasenger.information.display.system')}}" class="btn btn-primary">
                                             Know More
                                         </a>
+                                    @elseif($item['id']==9)
+                                        <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary">
+                                            Know More
+                                        </a>
+                                    @elseif($item['id']==1)
+                                        <a href="{{route('customer.lane.control.syste')}}" class="btn btn-primary">
+                                            Know More
+                                        </a>
                                     @else
                                         <a href="/solution/{{$item['slug']}}" class="btn btn-primary">
                                             Know More
