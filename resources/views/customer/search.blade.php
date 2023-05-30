@@ -59,6 +59,10 @@ $seo_meta=[
                                         <a href="/pvms-i-cop/{{$item['id']}}" class="btn btn-primary">
                                             Know More
                                         </a>
+                                    @elseif($item['id']==2)
+                                        <a href="{{route('customer.pasenger.information.display.system')}}" class="btn btn-primary">
+                                            Know More
+                                        </a>
                                     @else
                                         <a href="/solution/{{$item['slug']}}" class="btn btn-primary">
                                             Know More
