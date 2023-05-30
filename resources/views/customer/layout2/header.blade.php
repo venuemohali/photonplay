@@ -72,10 +72,10 @@
                             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.homePage')}}">Home</a>
+                            <a class="nav-link text-uppercase {{Request::is('/') ? 'active':''}}" href="{{route('customer.homePage')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.about.us')}}">COMPANY</a>
+                            <a class="nav-link text-uppercase  {{Request::is('about-us') ? 'active':''}}" href="{{route('customer.about.us')}}">COMPANY</a>
                         </li>
                         <!-- hjgjhkl -->
 
@@ -200,10 +200,10 @@
 
                             </div> -->
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.blog')}}">NEWS & EVENTS</a>
+                            <a class="nav-link text-uppercase {{Request::is('blog') ? 'active':''}}" href="{{route('customer.blog')}}">NEWS & EVENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT</a>
+                            <a class="nav-link text-uppercase {{Request::is('contact-us') ? 'active':''}}" href="{{route('customer.contact.us')}}">CONTACT</a>
                         </li>
                     </ul>
                     <form class=" d-flex mt-lg-0 mt-4 align-items-center" role="search" method="get" action="{{route('customer.search_photon_things')}}">
