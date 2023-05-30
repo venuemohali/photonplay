@@ -2,7 +2,7 @@
 #
 
 Dear User,
-Your #{{$body['order_number']}} order status is {{$body['message']}}.
+Your {{$body['order_number']}} order status is {{$body['message']}}.
 
 Thanks,<br>
 {{ config('app.name') }}
