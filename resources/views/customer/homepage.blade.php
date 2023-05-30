@@ -13,9 +13,9 @@ $seo_meta=[
 
     <!-- enddd -->
     <!-- undefeated-section-start -->
-    <section class="undefeated-wrapper pt-lg-0">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
+    <section class="undefeated-wrapper pt-lg-0 shadow-lg">
+        <div class="container " >
+            <div class="row justify-content-center align-items-center ">
                 <div class="col-lg-10">
                     <div class="row align-items-center">
                         <div class="col-lg-6 pe-lg-0">
