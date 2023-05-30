@@ -100,7 +100,7 @@
                                         <th>City</th>
                                         <th>Status</th>
                                         <th>Payment Status </th>
-                                        <th>Delivery Status </th>
+
                                         <th>Created at</th>
                                         <th>Options</th>
 
@@ -111,14 +111,15 @@
                                         <tr id="Item-{{$item->id}}">
                                             <td>{{$Sr++}}</td>
                                             <td>{{$item->order_number}}</td>
+
                                             <td>${{$item->grand_total}}/-</td>
                                             <td>{{$item->billing_city}}</td>
 
-                                            <td><span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span></td>
+                                            <td>
+{{--                                                <span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span>--}}
+                                                {{strtoupper($item->delivery_status??'')}}
+                                            </td>
                                             <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
-
-                                            <td>Stat</td>
-
                                             <td>{{$item->created_at}}</td>
                                             <td>
                                                 <a href="{{route('admin.orders_show', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Show">
