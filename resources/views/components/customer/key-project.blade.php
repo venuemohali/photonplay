@@ -1,4 +1,4 @@
-<section class="key-project pb-0">
+<section class="key-project pb-0 key-wrap">
     <div class="container-fluid">
         <div class="col-lg-12">
             <div class="text-center mb-lg-5">

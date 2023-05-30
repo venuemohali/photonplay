@@ -14,13 +14,19 @@ $seo_meta=[
         <div class="container">
             <div class="slider-content ">
                 <div class="imaged m-auto">
-                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block mx-auto img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block img-fluid">
+                  <div class="city-wrap">
+                      <h2 class=" text-white fw-normal mb-1">{{$page->title}}</h2>
+                      <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
+                          <br>LOCAL SPEED LIMIT</h5>
+                      <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
+                  </div>
+{{--                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block mx-auto img-fluid">--}}
                 </div>
 
-                <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>
+{{--                <h5 class="text-center text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF LOCAL SPEED LIMIT</h5>--}}
                 <div class="text-center pt-4">
-                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
+{{--                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>--}}
 
                 </div>
             </div>
