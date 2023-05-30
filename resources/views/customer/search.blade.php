@@ -72,7 +72,7 @@ $seo_meta=[
                                             Know More
                                         </a>
                                     @elseif($item['id']==1)
-                                        <a href="{{route('customer.lane.control.syste')}}" class="btn btn-primary">
+                                        <a href="{{route('customer.lane.control.system')}}" class="btn btn-primary">
                                             Know More
                                         </a>
                                     @else
