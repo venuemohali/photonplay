@@ -64,9 +64,9 @@
                                             <a href="{{route('admin.orders_show', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Show">
                                                 <i data-feather="eye"></i>
                                             </a>
-                                            <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
-                                                <i data-feather="trash-2"></i>
-                                            </a>
+{{--                                            <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">--}}
+{{--                                                <i data-feather="trash-2"></i>--}}
+{{--                                            </a>--}}
                                             <script>
                                                 $('#Delete-{{$item->id}}').click(function(){
                                                     console.log("hello");
