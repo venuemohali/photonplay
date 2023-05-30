@@ -10,6 +10,7 @@ use App\Models\OrderedProduct;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use PDF;
 class OrderController extends Controller
 {
