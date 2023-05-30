@@ -220,7 +220,7 @@ $seo_meta=[
         </div>
         <div class="container">
             <div class="px-4">
-                <div class="clints-content-gallery mb-0 d-flex align-items-center">
+                <div class="clints-content-gallery1 mb-0 d-flex align-items-center">
                     @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
@@ -243,9 +243,9 @@ $seo_meta=[
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>--}}
     <script>
         $('.clint-wrapperr').slick({
             dots: false,
@@ -353,36 +353,36 @@ $seo_meta=[
             ]
         })
 
-        {{--$('.clints-content-gallery').slick({--}}
-        {{--    dots: false,--}}
-        {{--    infinite: false,--}}
-        {{--    speed: 300,--}}
-        {{--    slidesToShow: 3,--}}
-        {{--    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",--}}
-        {{--    nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",--}}
-        {{--    slidesToScroll: 1,--}}
-        {{--    arrows: true,--}}
-        {{--    autoplay:true,--}}
-        {{--    responsive: [{--}}
-        {{--            breakpoint: 1024,--}}
-        {{--            settings: {--}}
-        {{--                slidesToShow: 3,--}}
-        {{--            }--}}
-        {{--        },--}}
-        {{--        {--}}
-        {{--            breakpoint: 600,--}}
-        {{--            settings: {--}}
-        {{--                slidesToShow: 1,--}}
-        {{--            }--}}
-        {{--        },--}}
-        {{--        {--}}
-        {{--            breakpoint: 480,--}}
-        {{--            settings: {--}}
-        {{--                slidesToShow: 1,--}}
-        {{--            }--}}
-        {{--        }--}}
-        {{--    ]--}}
-        {{--})--}}
+        $('.clints-content-gallery1').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay:true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
 
         window.addEventListener('click', function(e) {
             if (window.innerWidth > 992) {
