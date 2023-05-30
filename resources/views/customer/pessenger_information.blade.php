@@ -200,7 +200,7 @@ $seo_meta=[
                     @foreach ($page->galleries as $gallery)
                     <div>
                         <div class="px-2 branding-diss">
-                            <img src="{{asset('storage/'.$gallery->image)}}" class="d-block mx-auto" />
+                            <img src="{{asset('storage/'.$gallery->image)}}"  onclick="showModal('{{asset('storage/'.$gallery->image)}}')"  class="d-block mx-auto" />
                         </div>
                     </div>
                     @endforeach
