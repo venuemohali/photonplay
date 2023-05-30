@@ -96,7 +96,7 @@
                         <td>
                             @foreach (explode(',',$prod->option_ids) as $option)
                                 @php
-                                    $options = \App\Models\ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->get();
+                                    $options = \App\Models\ProductSpcializationOption::with('specializationoptions','product_specilization.specilization')->where('specialization_option_id', $option)->where('product_id',$prod->product_id)->get();
 
                                 @endphp
                                 @foreach ($options as $opp)
