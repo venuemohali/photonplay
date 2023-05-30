@@ -38,11 +38,7 @@ $seo_meta=[
 </style>
 <body>
 <!-- Modal Overlay and Image -->
-<div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
-    <div id="modalContent" class="modal-content">
-        <img id="myImage" src="path_to_your_image.jpg" alt="Image">
-    </div>
-</div>
+
 
 <script>
     function showModal() {
@@ -99,6 +95,13 @@ $seo_meta=[
                                         <div class="thumb-image-item mb-3">
                                             <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 200px;width: 200px;">
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal()" class="zoom-in">
+                                        </div>
+
+
+                                        <div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
+                                            <div id="modalContent" class="modal-content">
+                                                <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image">
+                                            </div>
                                         </div>
 
                                     </div>
