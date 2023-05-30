@@ -54,7 +54,7 @@ $seo_meta=[
                                        Shop Now
                                     </a>
                                 @elseif($item['type']==3)
-                                    <a href="/soution/{{$item['slug']}}" class="btn btn-primary">
+                                    <a href="/solution/{{$item['slug']}}" class="btn btn-primary">
                                         Know More
                                     </a>
                                 @endif
