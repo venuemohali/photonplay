@@ -92,7 +92,7 @@ $seo_meta=[
                         <div class="side-bar-title">Archive</div>
                         <ul class="m-0 p-0">
                             @foreach($groupedPosts as $postarchive)
-                                <li><a href="/blog?months={{$postarchive->month_year)}}" class="text-decoration-none">{{$postarchive->month_year}} ({{$postarchive->count}})</a></li>
+                                <li><a href="/blog?months={{$postarchive->month_year}}" class="text-decoration-none">{{$postarchive->month_year}} ({{$postarchive->count}})</a></li>
                             @endforeach
 
                         </ul>
