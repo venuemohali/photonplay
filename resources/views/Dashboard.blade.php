@@ -100,6 +100,8 @@
                                         <th>City</th>
                                         <th>Status</th>
                                         <th>Payment Status </th>
+                                        <th>Delivery Status </th>
+
                                         <th>Created at</th>
                                         <th>Options</th>
 
@@ -116,6 +118,8 @@
 
                                             <td><span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span></td>
                                             <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
+                                            <td>{{strtoupper($item->delivery_status)}}</td>
+
                                             <td>{{$item->created_at}}</td>
                                             <td>
                                                 <a href="{{route('admin.orders_show', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Show">
@@ -170,7 +174,7 @@
 
 
 
-        
+
         <script type="text/javascript">
             var session_layout = '{{ session()->get('layout') }}';
         </script>
