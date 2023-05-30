@@ -42,7 +42,8 @@ $seo_meta=[
                             @endif
 
                             <p>
-                                {{$item['description']}}
+
+                                {{ \Illuminate\Support\Str::limit(strip_tags($item['description']), 200, '...') }}
                             </p>
                                 @if($item['type']==2)
                                     <a href="{{route("customer.blog_show",$item['slug'])}}" class="btn btn-primary">
