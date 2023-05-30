@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\OrderStatusMail;
 use App\Models\Order;
 use App\Models\OrderedProduct;
 use App\Models\Product;
@@ -26,10 +27,11 @@ class OrderController extends Controller
      */
     public function change_status_order(Request $request, $id){
         $order=Order::find($id);
+        $userEmail = Customer::where('id', $order->user_id)->value('email');
         if(isset($request->status)){
             $order->delivery_status=$request->status;
             $order->save();
-
+            Mail::to($userEmail)->send(new OrderStatusMail($request->status));
             return response()->json([
                 "success"=>true,
                 "status"=>$request->status,
