@@ -27,7 +27,7 @@ $seo_meta=[
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-8 pe-lg-0">
                             <div class="about-undeafeted text-dark text-center">
-                                <h4 class="text-uppercase text-dark mb-4">About us </h4>
+{{--                                <h4 class="text-uppercase text-dark mb-4">About us </h4>--}}
                                 <p class="text-uppercase">Driving Smarter Transportation Solutions for 16+ Years</p>
                                 <p class="mb-4">
                                     At PhotonPlay, we are a family-owned Indian company that has been delivering intelligent transportation systems (ITS) to clients worldwide for over 16 years. Our focus on creating safer, more efficient, and sustainable mobility solutions has earned us a reputation as a trusted partner for system integrators, government authorities, OEMs, and corporations across 30+ countries.
