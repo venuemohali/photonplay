@@ -6,67 +6,18 @@ $seo_meta=[
 ];
 ?>
 @include('customer.layout2.header')
-<style>
-    /* Modal Overlay */
-    .modal-overlay {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
 
-    /* Center the Image */
-    .modal-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-    /* Hide the Image by Default */
-    .modal-content img {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-</style>
 <body>
 <!-- Modal Overlay and Image -->
 
-
-<script>
-    function showModal(imgurl) {
-        var modalOverlay = document.getElementById("modalOverlay");
-        var modalContent = document.getElementById("modalContent");
-        var image = document.getElementById("myImage");
-        image.src=imgurl;
-        modalOverlay.style.display = "block";
-        image.style.display = "block";
-        modalContent.style.width = image.width + "px";
-        modalContent.style.height = image.height + "px";
-    }
-
-    function hideModal() {
-        var modalOverlay = document.getElementById("modalOverlay");
-        var image = document.getElementById("myImage");
-        modalOverlay.style.display = "none";
-        image.style.display = "none";
-    }
-</script>
 
     <!-- Banner sec -->
     <section class="banner-sec-smart-city py-4">
         <div class="container">
             <div class="slider-content ">
                 <div class="image-smart">
-                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title}}</h2>
-                    <img src="{{asset('storage/'.$page->cover_image)}}" alt="alt" class="d-block mx-auto img-fluid" style="max-height: 300px;">
+                    <h2 class="text-center text-white fw-normal mb-5">{{$page->title??''}}</h2>
+                    <img src="{{asset('storage/'.($page->cover_image??''))}}" alt="alt" class="d-block mx-auto img-fluid" style="max-height: 300px;">
 
                 </div>
                 <div class="text-center pt-4">
@@ -95,7 +46,7 @@ $seo_meta=[
 
                                         <div class="thumb-image-item mb-3">
                                             <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 200px;width: 200px;">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal({{asset('storage/'.$image->image)}})" class="zoom-in">
+                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
                                         </div>
 
 

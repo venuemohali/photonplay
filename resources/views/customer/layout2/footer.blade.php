@@ -165,3 +165,27 @@ $blogs = Blog::select('slug','title')->take(4)->get();
     @endif
 
 </script>
+
+
+
+<script>
+    function showModal(imgurl) {
+        var modalOverlay = document.getElementById("modalOverlay");
+        var modalContent = document.getElementById("modalContent");
+        var image = document.getElementById("myImage");
+        image.src=imgurl;
+        image.style.height="400px"
+        modalOverlay.style.display = "block";
+        image.style.display = "block";
+        modalContent.style.width = image.width + "px";
+        modalContent.style.height = image.height + "px";
+    }
+
+    function hideModal() {
+        var modalOverlay = document.getElementById("modalOverlay");
+        var image = document.getElementById("myImage");
+        modalOverlay.style.display = "none";
+        image.style.display = "none";
+    }
+</script>
+
