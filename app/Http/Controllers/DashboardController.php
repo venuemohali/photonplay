@@ -17,8 +17,8 @@ class DashboardController extends Controller
         $category = Category::count();
         $products = Product::count();
         $orders = Order::where(['status' => 'complete'])->count();
-
+        $Sr=1;
         $orderr = Order::where(['status' => 'complete'])->get();
-        return view('Dashboard', compact('users', 'category', 'products', 'orders', 'orderr'));
+        return view('Dashboard', compact('users', 'category', 'products', 'orders', 'orderr','Sr'));
     }
 }
