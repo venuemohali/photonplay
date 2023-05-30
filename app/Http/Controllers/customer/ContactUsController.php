@@ -58,6 +58,22 @@ class ContactUsController extends Controller
             $blogs=$blogs->where('keywords', 'LIKE', '%' . $request->tags . '%');
         }
 
+        if(isset($request->months)){
+            // Get the "month" parameter from the URL
+            $monthParam = request()->query('months');
+
+            // Extract the month and year values from the parameter
+            $monthYear = urldecode($monthParam);
+            $monthYear = explode(' ', $monthYear);
+            $month = date('m', strtotime($monthYear[0]));
+            $year = $monthYear[1];
+            $blogs = $blogs->whereMonth('created_at', $month)
+                ->whereYear('created_at', $year)
+                ->get();
+
+            dd($blogs);
+        }
+
 
         $blogs=$blogs->paginate(5);
 

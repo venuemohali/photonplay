@@ -87,24 +87,12 @@ $seo_meta=[
                             @endforeach
                         </ul>
                     </div>
-{{--                    <div class="sidebar-item">--}}
-{{--                        <div class="side-bar-title">Tags</div>--}}
-{{--                        <div class="tags">--}}
-{{--                            <div class="mb-3">--}}
-{{--                                <span>design</span>--}}
-{{--                                <span>development</span>--}}
-{{--                                <span>ui</span>--}}
-{{--                            </div>--}}
-{{--                            <span>photography</span>--}}
-{{--                            <span>template</span>--}}
-{{--                            <div class="mt-3"> <span>branding</span></div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+
                     <div class="sidebar-item">
                         <div class="side-bar-title">Archive</div>
                         <ul class="m-0 p-0">
                             @foreach($groupedPosts as $postarchive)
-                                <li><a href="{{route('customer.blog',$postarchive->month_year)}}" class="text-decoration-none">{{$postarchive->month_year}} ({{$postarchive->count}})</a></li>
+                                <li><a href="/blog?months={{$postarchive->month_year)}}" class="text-decoration-none">{{$postarchive->month_year}} ({{$postarchive->count}})</a></li>
                             @endforeach
 
                         </ul>
