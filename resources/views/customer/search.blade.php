@@ -53,7 +53,10 @@ $seo_meta=[
                                     <a href="{{route("customer.radar.sign",$item['id'])}}" class="btn btn-primary">
                                        Shop Now
                                     </a>
-
+                                @elseif($item['type']==3)
+                                    <a href="/soution/{{$item['slug']}}" class="btn btn-primary">
+                                        Know More
+                                    </a>
                                 @endif
                         </div>
                         <div class="post-action d-flex justify-content-between">

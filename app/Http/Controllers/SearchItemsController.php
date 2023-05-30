@@ -51,20 +51,20 @@ class SearchItemsController extends Controller
         }
 
 
-//        $pages = Page::where('title', 'LIKE', '%'.$query.'%')->orWhere('description', 'LIKE', '%'.$query.'%')->get();
-//
-//        foreach ($pages as $page){
-//            $data1=array();
-//            $data1['sr']=$Sr++;
-//            $data1['type']=3;
-//            $data1['title']=$page->title;
-//            $data1['description']=$page->description;
-//            $data1['image']=$page->cover_image;
-//            $data1['id']=$page->id;
-//            $data1['slug']=$page->slug;
-//            $data1['created_at']=$page->created_at;
-//            array_push($data,$data1);
-//        }
+        $pages = Page::where('title', 'LIKE', '%'.$query.'%')->orWhere('description', 'LIKE', '%'.$query.'%')->get();
+
+        foreach ($pages as $page){
+            $data1=array();
+            $data1['sr']=$Sr++;
+            $data1['type']=3;
+            $data1['title']=$page->title;
+            $data1['description']=$page->description;
+            $data1['image']=$page->cover_image;
+            $data1['id']=$page->id;
+            $data1['slug']=$page->slug;
+            $data1['created_at']=$page->created_at;
+            array_push($data,$data1);
+        }
 
         $perPage = 10;
         $collection = new Collection($data);
