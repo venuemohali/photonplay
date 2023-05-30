@@ -42,14 +42,25 @@ $seo_meta=[
                             <div class="thumb-image">
                                 <div class="row">
 
-                                        @foreach ($page->images as $image)
+                                    @forelse ($page->images as $image)
                                         <div class="col-4">
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 150px;">
-{{--                                       15   <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">--}}
+
+                                            <div class="thumb-image-item mb-3">
+                                                <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 200px;width: 200px;">
+                                                <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
+                                            </div>
+
+
+                                            <div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
+                                                <div id="modalContent" class="modal-content">
+                                                    <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image">
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        </div>
-                                        @endforeach
+                                    @empty
+
+                                    @endforelse
 
                                 </div>
                             </div>

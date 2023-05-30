@@ -41,10 +41,21 @@ $seo_meta=[
                                 <div class="row">
                                     <div class="col-4">
                                         @forelse ($page->images as $image)
-                                        <div class="thumb-image-item mb-3">
-                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
-                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                        </div>
+                                            <div class="col-4">
+
+                                                <div class="thumb-image-item mb-3">
+                                                    <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="height: 200px;width: 200px;">
+                                                    <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
+                                                </div>
+
+
+                                                <div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
+                                                    <div id="modalContent" class="modal-content">
+                                                        <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image">
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         @empty
 
                                         @endforelse

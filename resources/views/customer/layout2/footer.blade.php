@@ -177,7 +177,7 @@ $blogs = Blog::select('slug','title')->take(4)->get();
         image.style.height="400px"
         modalOverlay.style.display = "block";
         image.style.display = "block";
-        modalContent.style.width = image.width + "px";
+        // modalContent.style.width = image.width + "px";
         modalContent.style.height = image.height + "px";
     }
 
