@@ -149,9 +149,12 @@ foreach($specilization->options as $option){
                                  </script>
 
                             <div class="d-flex justify-content-center align-items-center">
-                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>
-                            <div class="borded-bang"></div>
-                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png" class="mx-3"/>
+{{--                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>--}}
+{{--                            <div class="borded-bang"></div>--}}
+                                <a href="{{route('customer.contact.us')}}" class="text-decoration-none">
+                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png"
+                                 class="mx-3"/>
+                                </a>
                             {{-- <div class="borded-bang"></div>
                             <button id="add_to_cart">
                                 <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
