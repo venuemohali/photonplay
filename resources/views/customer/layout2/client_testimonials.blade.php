@@ -18,7 +18,7 @@
                     <!-- <div class=""> -->
 
                     @foreach($client_says as $says)
-                        <div class="col-lg-4">
+                        <div class="col-lg-4" style="height: 470px;">
                             <div class="members-profile h-100 mx-3 h-100">
                                 <div class="p-4 position-re lative h-100 inner-max-width">
                                     <div class="qutess position-absolute top-0 translate-middle">
