@@ -51,7 +51,7 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
         <div class="banner">
             <div class="about-wrapper">
                 <div class="about-wrapper d-flex justify-content-center align-items-center">
-                    <h1 class="text-dark soft-text " style="text-shadow: 2px 2px 2px #CE5937;">Contact us</h1>
+                    <h1 class="text-dark soft-text text-white " style="text-shadow: 2px 2px 2px #CE5937;">Contact us</h1>
                 </div>
             </div>
         </div>
