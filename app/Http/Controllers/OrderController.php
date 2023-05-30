@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Mail\OrderStatusMail;
+use App\Models\Customer;
 use App\Models\Order;
 use App\Models\OrderedProduct;
 use App\Models\Product;
@@ -49,7 +50,7 @@ class OrderController extends Controller
 
 
     public function index(Request $request){
-        $orders=Order::with(['orderedProducts','user'])->select('id','order_number','grand_total','status','payment_status','billing_city','created_at')->get();
+        $orders=Order::with(['orderedProducts','user'])->select('id','order_number','grand_total','status','payment_status','billing_city','created_at')->orderBy('id', 'desc')->get();
 
         $Sr=1;
         return view('order.index',compact('orders','Sr'));
