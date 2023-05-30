@@ -41,8 +41,8 @@ $seo_meta=[
                                     <div class="col-4">
                                         <div class="row">
 
-                                        @forelse ($page->images as $image)
-                                                <div class="col-md-4">
+                                                 @forelse ($page->images as $image)
+                                                <div class="col-md-3">
                                                     <div class="thumb-image-item mb-3">
                                                         <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
                                                         <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
