@@ -38,22 +38,18 @@ $seo_meta=[
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
+                                    @forelse ($page->images as $image)
                                     <div class="col-4">
-                                        <div class="row">
 
-                                                 @forelse ($page->images as $image)
-                                                <div class="col-md-3">
-                                                    <div class="thumb-image-item mb-3">
-                                                        <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
-                                                        <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
-                                                    </div>
-                                                    @empty
-
-                                                    @endforelse
-                                                </div>
+                                        <div class="thumb-image-item mb-3">
+                                            <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid">
+                                            <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" class="zoom-in">
                                         </div>
 
                                     </div>
+                                    @empty
+
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
