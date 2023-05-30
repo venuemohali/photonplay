@@ -16,7 +16,7 @@ $seo_meta=[
         <div class="container">
             <div class="slider-content ">
                 <div class="imaged m-auto">
-                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block img-fluid">
+                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block img-fluid h-75">
                     <div class="city-wrap">
                         <h2 class=" text-white fw-normal mb-1">{{$page->title}}</h2>
                         <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
