@@ -61,6 +61,7 @@ class SearchItemsController extends Controller
             $data1['description']=$page->description;
             $data1['image']=$page->cover_image;
             $data1['id']=$page->id;
+            $data1['page_type_id']=$page->page_type_id;
             $data1['slug']=$page->slug;
             $data1['created_at']=$page->created_at;
             array_push($data,$data1);

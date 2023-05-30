@@ -54,9 +54,17 @@ $seo_meta=[
                                        Shop Now
                                     </a>
                                 @elseif($item['type']==3)
-                                    <a href="/solution/{{$item['slug']}}" class="btn btn-primary">
-                                        Know More
-                                    </a>
+
+                                    @if($item['page_type_id']==3)
+                                        <a href="/pvms-i-cop/{{$item['id']}}" class="btn btn-primary">
+                                            Know More
+                                        </a>
+                                    @else
+                                        <a href="/solution/{{$item['slug']}}" class="btn btn-primary">
+                                            Know More
+                                        </a>
+                                    @endif
+
                                 @endif
                         </div>
                         <div class="post-action d-flex justify-content-between">
