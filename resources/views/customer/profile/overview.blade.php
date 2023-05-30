@@ -14,7 +14,7 @@
                                     <div class="order-address text-center bg-white p-4 border">
                                         <img src="{{asset('assets\customer\images\delivery-copy.png')}}" alt="Not Found" class="mb-4">
                                         <h6>Orders</h6>
-                                        <p>Check your order status</p>
+                                        <p> <a href="/edit-history"> Check your order status </a></p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border">
                                         <img src="{{asset('assets\customer\images\address-review.png')}}" alt="Not Found" class="mb-4">
