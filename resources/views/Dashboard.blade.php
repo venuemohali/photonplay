@@ -92,17 +92,73 @@
                             <div class="dt-ext table-responsive">
                                 <table class="display" id="basic-2">
                                     <thead>
-                                        <tr>
-                                            <th class="all">#</th>
-                                            <th class="all">Order ID</th>
-                                            <th class="all">Name</th>
-                                            <th class="desktop tablet">Email</th>
-                                            <th class="desktop tablet">Status</th>
-                                            <th class="all">Options</th>
-                                        </tr>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order No.</th>
+
+                                        <th>Grand Total</th>
+                                        <th>City</th>
+                                        <th>Status</th>
+                                        <th>Payment Status </th>
+                                        <th>Created at</th>
+                                        <th>Options</th>
+
+                                    </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach ($orderr as $item)
+                                        <tr id="Item-{{$item->id}}">
+                                            <td>{{$Sr++}}</td>
+                                            <td>{{$item->order_number}}</td>
 
+                                            <td>${{$item->grand_total}}/-</td>
+                                            <td>{{$item->billing_city}}</td>
+
+                                            <td><span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span></td>
+                                            <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
+                                            <td>{{$item->created_at}}</td>
+                                            <td>
+                                                <a href="{{route('admin.orders_show', $item->id)}}" class="text-warning p-1" data-toggle="tooltip" title="Show">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                                <a id="Delete-{{$item->id}}" class="text-danger pointer p-1" data-toggle="tooltip" title="Delete">
+                                                    <i data-feather="trash-2"></i>
+                                                </a>
+                                                <script>
+                                                    $('#Delete-{{$item->id}}').click(function(){
+                                                        console.log("hello");
+                                                        Swal.fire({
+                                                            title: 'Are you sure?',
+                                                            text: "You won't be able to revert this!",
+                                                            icon: 'question',
+                                                            showCancelButton: true,
+                                                            confirmButtonColor: '#3085d6',
+                                                            cancelButtonColor: '#d33',
+                                                            confirmButtonText: 'Yes, delete it!'
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                $.ajaxSetup({
+                                                                    headers: {
+                                                                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                                    }
+                                                                });
+
+                                                                $.ajax({
+                                                                    type:'DELETE',
+                                                                    url:'{{url('admin/coupons/'.$item->id)}}',
+                                                                    data:'_token = {{ @csrf_token() }}',
+                                                                    success:function(data) {
+                                                                        $("#Item-{{$item->id}}").hide();
+                                                                    }
+                                                                });
+
+                                                            }
+                                                        });
+                                                    });
+                                                </script>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>

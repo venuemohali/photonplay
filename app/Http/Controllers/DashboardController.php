@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Customer;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,10 +13,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $users = User::count();
+        $users = Customer::count();
         $category = Category::count();
         $products = Product::count();
-        $orders = 10;
-        return view('Dashboard', compact('users', 'category', 'products', 'orders'));
+        $orders = Order::where(['status' => 'complete'])->count();
+
+        $orderr = Order::where(['status' => 'complete'])->get();
+        return view('Dashboard', compact('users', 'category', 'products', 'orders', 'orderr'));
     }
 }
