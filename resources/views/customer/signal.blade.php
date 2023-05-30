@@ -129,42 +129,7 @@ $seo_meta=[
     @include('customer.layout2.get_in_touch')
     <!-- Contact form end -->
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">GALLERY</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content-gallery mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2">
-                            <img src="{{asset('assets/customer/images/gray-box.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- _____________________ourclint-last-end___________________ -->
 
 
