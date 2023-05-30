@@ -267,7 +267,53 @@ Shipping:7-10 Working Days.
         </div>
     </div>
 </section>
-
+<section class="icop-series pt-4">
+    <div class="container"  id="our_products">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center mb-lg-5">
+                    <h2 class="fs-md-2 mt-3">More Products</h2>
+                    <h6 class="fs-6 text-colorr text-uppercase">Our product offers innovative solutions to meet your needs and exceed your expectations.
+                    </h6>
+                </div>
+            </div>
+            <div class="responsive">
+                @foreach ($productLists as $product)
+                    <div >
+                        <div class="p-2">
+                            <div class="product_highlight inner-product bg-white">
+                                <div class=" w-100 h-100 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
+                                    background-size: cover;">
+                                    {{--                                    <img class=""  src="" alt="">--}}
+                                </div>
+                                <div class="speed-sign text-center mt-3">
+                                    <span class="d-block weight-font">
+                                        Radar Speed Sign
+                                    </span>
+                                    <span class="d-block">{{$product->title}}</span>
+                                    <div class="d-flex justify-content-center align-items-center my-2">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                             width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                             width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                             width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                             width="14px">
+                                        <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
+                                             width="14px">
+                                    </div>
+                                    <span class="d-block weight-font">{{$product->price}}</span>
+                                    <a href="{{route('customer.radar.sign', $product->id)}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
 @include('customer.layout2.footer')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
@@ -393,4 +439,42 @@ Shipping:7-10 Working Days.
                 });
             });
         });
+</script>
+<script>
+    $('.responsive').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 </script>
