@@ -67,12 +67,9 @@ class ContactUsController extends Controller
             $monthYear = explode(' ', $monthYear);
             $month = date('m', strtotime($monthYear[0]));
             $year = $monthYear[1];
-            dd($month."- ".$year);
+
             $blogs = $blogs->whereMonth('created_at', $month)
-                ->whereYear('created_at', $year)
-                ->get();
-
-
+                ->whereYear('created_at', $year);
         }
 
 
