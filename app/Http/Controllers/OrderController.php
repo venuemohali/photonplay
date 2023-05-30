@@ -33,7 +33,11 @@ class OrderController extends Controller
         if(isset($request->status)){
             $order->delivery_status=$request->status;
             $order->save();
-            Mail::to($userEmail)->send(new OrderStatusMail($request->status));
+            $body = [
+                'message' => $request->message,
+                'order_number' => $order->order_number,
+            ];
+            Mail::to($userEmail)->send(new OrderStatusMail($body));
             return response()->json([
                 "success"=>true,
                 "status"=>$request->status,

@@ -1,8 +1,8 @@
 @component('mail::message')
-# Order Status Mail
+#
 
 Dear User,
-Your current order status is {{$message}}.
+Your #{{$body['order_number']}} order status is {{$body['message']}}.
 
 Thanks,<br>
 {{ config('app.name') }}

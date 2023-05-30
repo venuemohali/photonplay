@@ -16,10 +16,10 @@ class OrderStatusMail extends Mailable
      *
      * @return void
      */
-    public $message;
-    public function __construct($message)
+    public $body;
+    public function __construct($body)
     {
-        $this->message = $message;
+        $this->body = $body;
     }
 
     /**
@@ -29,6 +29,6 @@ class OrderStatusMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.order-status-mail')->with('message', $this->message);
+        return $this->markdown('mail.order-status-mail')->with('body', $this->body);
     }
 }
