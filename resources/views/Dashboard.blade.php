@@ -117,7 +117,7 @@
                                             <td><span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span></td>
                                             <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
 
-                                            <td>{{strtoupper($item->delivery_status??'')}}</td>
+                                            <td>Stat</td>
 
                                             <td>{{$item->created_at}}</td>
                                             <td>
