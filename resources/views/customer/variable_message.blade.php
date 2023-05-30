@@ -15,14 +15,14 @@ $seo_meta=[
     <section class="banner-sec-smart-city py-5">
         <div class="container">
             <div class="slider-content">
-                <div class="imaged m-auto">
+                <div class=" m-auto" >
                     <img src="{{ asset('assets/customer/images/banner-image-smart-city.png') }}" alt="alt"
                         class="d-block mx-auto img-fluid">
                     <div class="d-flex mt-4 justify-content-center gap-3 align-items-end">
                         <img src="{{ asset('assets/customer/images/zero-mentence.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid w-75">
+                            class="d-block mx-auto img-fluid " >
                         <img src="{{ asset('assets/customer/images/dawrka.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid w-75">
+                            class="d-block mx-auto img-fluid "  style="height: 80px;">
                     </div>
                 </div>
                 <div class="text-center mt-4 pt-3">
