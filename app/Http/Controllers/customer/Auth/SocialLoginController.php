@@ -51,7 +51,7 @@ class SocialLoginController extends Controller
 
                 Auth::guard('customer')->login($newUser);
                 Session::put('user', Auth::guard('customer')->user());
-                $cart = Cart::where('session_id', Session::get('user')->id)->update(['user_id' => Session::get('user')->id]);
+                $cart = Cart::where('session_id', $sessionId)->update(['user_id' => Session::get('user')->id]);
                 if($cart){
                     return redirect()->intended('shopping-bag')->with('success', ' Logged in successfully !');
                 }
