@@ -86,7 +86,7 @@
                             </a>
 
                             <ul class="dropdown-menu mega-menu" >
-                                <li class="d-flex justify-content-center flex-wrap ">
+                                <li class="d-flex justify-content-between flex-wrap p-3">
 
                                     <div class="col-md-3" >
                                         <h4><a class="dropdown-item px-0 text-uppercase" href="{{route('customer.solution.highway')}}">Highways</a></h4>

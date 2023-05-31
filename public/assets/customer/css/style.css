@@ -858,7 +858,13 @@ div#accordionFlushExample1 {
 .our-product {
     background-color: #f9f9fa;
 }
-
+ul.dropdown-menu.mega-menu{
+    position:fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+}
 .weight-font {
     color: #544e5d;
     font-weight: 600;
@@ -1814,7 +1820,6 @@ input:focus {
     font-weight: 600;
     text-align: center;
 }
-
 .drop-downs {
     display: none;
     position: relative;
@@ -2683,6 +2688,9 @@ input:focus {
         left: 0;
         width: 100%;
         top: 96px;
+        right: 0;
+        margin: auto;
+        width: 75%;
     }
 
     section {
