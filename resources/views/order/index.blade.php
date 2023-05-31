@@ -41,7 +41,7 @@
 
                                     <th>Grand Total</th>
                                     <th>City</th>
-                                    <th>Status</th>
+                                    <th>Delivery Status</th>
                                     <th>Payment Status </th>
                                     <th>Created at</th>
                                     <th>Options</th>
@@ -57,7 +57,7 @@
                                         <td>${{$item->grand_total}}/-</td>
                                         <td>{{$item->billing_city}}</td>
 
-                                        <td><span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span></td>
+                                        <td>{{$item->delivery_status ? strtoupper($item->delivery_status) : 'Pending'}}</td>
                                         <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
                                         <td>{{$item->created_at}}</td>
                                         <td>
