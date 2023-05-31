@@ -98,7 +98,7 @@
 
                                         <th>Grand Total</th>
                                         <th>City</th>
-                                        <th>Status</th>
+                                        <th>Delivery Status</th>
                                         <th>Payment Status </th>
 
                                         <th>Created at</th>
@@ -116,7 +116,7 @@
                                             <td>{{$item->billing_city}}</td>
 
                                             <td>
-                                                <span class="{{$item->status=='complete'?'bg-success p-2':''}}">{{$item->status}}</span>
+                                                <span class="{{$item->delivery_status}}">{{$item->status}}</span>
 
                                             </td>
                                             <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
