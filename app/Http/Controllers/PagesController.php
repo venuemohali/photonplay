@@ -122,7 +122,7 @@ class PagesController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'cover_image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'cover_image' => 'nullable|image|mimes:jpg,png,jpeg,webp,gif,svg|max:2048',
         ]);
 
         $sub_page = Page::find($request->sub_page_id);
@@ -252,7 +252,7 @@ class PagesController extends Controller
             // $file_path = asset('storage/app/public/'.$request->brochure);
             // $headers = [
             //     'Content-Type : application/pdf',
-            //     'Content-Disposition: attachment; filename='.$file_path, 
+            //     'Content-Disposition: attachment; filename='.$file_path,
             // ];
             $file_path = storage_path('app\public/'.$request->brochure);
 
