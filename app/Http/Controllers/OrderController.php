@@ -55,7 +55,7 @@ class OrderController extends Controller
 
 
     public function index(Request $request){
-        $orders=Order::with(['orderedProducts','user'])->select('id','order_number','grand_total','status','payment_status','billing_city','created_at')->orderBy('id', 'desc')->get();
+        $orders=Order::with(['orderedProducts','user'])->orderBy('id', 'desc')->get();
 
         $Sr=1;
         return view('order.index',compact('orders','Sr'));
