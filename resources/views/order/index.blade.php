@@ -57,7 +57,7 @@
                                         <td>${{$item->grand_total}}/-</td>
                                         <td>{{$item->billing_city}}</td>
 
-                                        <td>{{isset($item->delivery_status) ? strtoupper($item->delivery_status) : 'Pending'}}</td>
+                                        <td>{{$item->delivery_status!=NULL?strtoupper($item->delivery_status) : 'Pending'}}</td>
                                         <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
                                         <td>{{$item->created_at}}</td>
                                         <td>
