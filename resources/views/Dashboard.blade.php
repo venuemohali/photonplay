@@ -116,7 +116,7 @@
                                             <td>{{$item->billing_city}}</td>
 
                                             <td>
-                                                <span class="{{$item->delivery_status}}">{{$item->status}}</span>
+                                                {{$item->delivery_status}}
 
                                             </td>
                                             <td><span class="{{$item->payment_status=='paid'?'bg-success p-2':''}}">{{$item->payment_status}}</span></td>
