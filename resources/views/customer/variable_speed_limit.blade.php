@@ -21,7 +21,7 @@ $seo_meta=[
                         <h2 class=" text-white fw-normal mb-1">{{$page->title}}</h2>
                         <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
                             <br>LOCAL SPEED LIMIT</h5>
-                        <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
+                        <a  href="#inquiry" class="btn btn-primary rounded-0 " style="width: 150px;">GET QUOTE</a>
                     </div>
                     {{--                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block mx-auto img-fluid">--}}
                 </div>
