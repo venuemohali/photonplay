@@ -17,7 +17,7 @@ $seo_meta=[
             <div class="slider-content">
                 <div class=" m-auto" >
                     <img src="{{ asset('assets/customer/images/banner-image-smart-city.png') }}" alt="alt"
-                        class="d-block mx-auto img-fluid">
+                        class="d-block mx-auto img-fluid" >
                     <div class="d-flex mt-4 justify-content-center gap-3 align-items-end">
                         <img src="{{ asset('assets/customer/images/zero-mentence.png') }}" alt="alt"
                             class="d-block mx-auto img-fluid " >
