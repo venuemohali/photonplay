@@ -54,7 +54,7 @@ $seo_meta=[
                                             <div class="col-4">
 
                                                 <div class="thumb-image-item mb-3">
-                                                    <img src="{{asset('storage/'.$image->image)}}" alt="" class="img-fluid" style="max-height: 300px;">
+                                                    <img src="{{asset('storage/'.$image->image)}}" alt=""  style="max-height: 300px;">
                                                     <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
                                                 </div>
 
