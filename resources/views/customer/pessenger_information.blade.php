@@ -104,56 +104,12 @@ $seo_meta=[
                 </div>
                 <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
             </div>
+        </div>
     </section>
     <!-- Desc and specificatio  end -->
 
     <!-- Feature -->
-    <section class="sec-feature">
-        <div class="container">
-            <h2 class="fs-md-2 mt-3 text-center">Feature</h2>
-            <div class="feature-list">
-                <!-- <ul class=" m-0 p-0 "> -->
-                <div class="d-lg-flex justify-content-between">
-                        <div class="row">
-
-
-
-                        @php
-                            $break_point=(int)(count($page->features)/2);
-                            $sr=1;
-
-                        @endphp
-
-                        @foreach($page->features as $feature)
-                            <div class="col-md-6">
-
-
-                                <ul class="w-100 m-0 p-0">
-                            <li>
-                                <div class="content-feature" style="width: 300px;">
-                                    <strong>{{ $feature->feature}}</strong>
-                                    <span>{{$feature->description}}</span>
-                                </div>
-                            </li>
-                            @if($sr==$break_point)
-                            </div>
-                            <div class="col-md-6">
-                        @php
-                            $sr=0;
-                        @endphp
-                        @endif
-                        @php
-                            $sr++;
-                        @endphp
-                            </ul>
-                        @endforeach
-                        </div>
-                        </div>
-                </div>
-                <!-- </ul> -->
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.features_page')
     <!-- Feature end -->
 
     <!-- Application -->

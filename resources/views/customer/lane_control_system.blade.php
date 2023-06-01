@@ -51,7 +51,6 @@ $seo_meta=[
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
-                                    <div class="col-4">
                                         @forelse ($page->images as $image)
                                             <div class="col-4">
 
@@ -71,7 +70,6 @@ $seo_meta=[
                                         @empty
 
                                         @endforelse
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -106,48 +104,13 @@ $seo_meta=[
                 </div>
                 <img class="dotted-imag img-fluid d-none d-md-inline" src="{{asset('assets/customer/images/dotted-tran.png')}}" alt="not-found">
             </div>
-    </section>
-    <!-- Desc and specificatio  end -->
-
-    <!-- Feature -->
-    <section class="sec-feature">
-        <div class="container">
-            <h2 class="fs-md-2 mt-3 text-center">Feature</h2>
-            <div class="feature-list">
-                <!-- <ul class=" m-0 p-0 "> -->
-                <div class="d-lg-flex justify-content-between">
-                    <ul class="w-100 m-0 p-0">
-                        @php
-                            $break_point=(int)(count($page->features)/2);
-                            $sr=1;
-
-                        @endphp
-
-                        @foreach($page->features as $feature)
-                            <li>
-                                <div class="content-feature" style="width: 300px;">
-                                    <strong>{{ $feature->feature}}</strong>
-                                    <span>{{$feature->description}}</span>
-                                </div>
-                            </li>
-                            @if($sr==$break_point)
-                    </ul>
-                    <ul class="w-100 m-0 p-0">
-                        @php
-                            $sr=0;
-                        @endphp
-                        @endif
-                        @php
-                            $sr++;
-                        @endphp
-                        @endforeach
-                    </ul>
-                </div>
-                <!-- </ul> -->
-            </div>
         </div>
     </section>
+    <!-- Desc and specificatio  end -->
+    <!-- Feature -->
+    @include('customer.layout2.features_page')
     <!-- Feature end -->
+
 
     <!-- Application -->
     <section class="application-section">
@@ -262,96 +225,56 @@ $seo_meta=[
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>--}}
     <script>
-        $('.clint-wrapperr').slick({
+        $('.clints-content-branding').slick({
+            dots: false,
+            infinite: true,
+            speed: 700,
+            slidesToShow: 5,
+            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/assets/customer/images/left-chevron.png'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right'><img src='/assets/customer/images/right-chevron.png'/></button>",
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay:true,
+            // fade:true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+
+            ]
+        });
+        $('.clints-content-gallery').slick({
             dots: false,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
-            slidesToScroll: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
-            arrows: true,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        arrows: false,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-        $('.key-slider').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-
-        $('.clints-content').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 4,
             prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
             nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
             slidesToScroll: 1,
             arrows: true,
-            responsive: [{
+            autoplay: true,           // Enable auto-scroll
+            autoplaySpeed: 2000,      // Set auto-scroll speed (in milliseconds)
+            responsive: [
+                {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
@@ -370,39 +293,9 @@ $seo_meta=[
                     }
                 }
             ]
-        })
+        });
 
-        $('.clints-content-gallery').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}}/></button>",
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        })
-
-        window.addEventListener('click', function(e) {
+        window.addEventListener('click', function (e) {
             if (window.innerWidth > 992) {
                 if ($('.navbar-collapse').hasClass('show')) {
                     $('.navbar-toggler').click();
@@ -412,7 +305,7 @@ $seo_meta=[
         })
 
         // Hover attribute
-        $('.dropdown .dropdown-toggle').mouseenter(function() {
+        $('.dropdown .dropdown-toggle').mouseenter(function () {
             if (window.innerWidth > 991) {
                 $(this).addClass('show');
                 $(this).attr({
@@ -425,7 +318,7 @@ $seo_meta=[
             }
 
         });
-        $('.dropdown-menu').mouseleave(function() {
+        $('.dropdown-menu').mouseleave(function () {
             if (window.innerWidth > 991) {
                 $(this).removeAttr('data-bs-popper');
                 $(this).siblings('.nav-link ').removeClass('show');
@@ -436,7 +329,7 @@ $seo_meta=[
             }
 
         })
-        $('.mega-menu h4').click(function() {
+        $('.mega-menu h4').click(function () {
             // $(this).siblings('ul').slideDown();
             if ($(this).parent().hasClass('active')) {
                 $(this).parent().removeClass('active')
@@ -446,7 +339,7 @@ $seo_meta=[
             $(this).parent().siblings().removeClass('active');
         });
 
-        $('.toggler-mega').click(function() {
+        $('.toggler-mega').click(function () {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active')
                 $('.mega-menu').slideUp();
@@ -456,7 +349,7 @@ $seo_meta=[
             }
 
         })
-        $('.mega-menu-parent > h4').click(function() {
+        $('.mega-menu-parent > h4').click(function () {
             var bodyColor = $('.drop-downs').attr("style");
             // console.log(bodyColor)
             if (bodyColor === 'display: block;') {
