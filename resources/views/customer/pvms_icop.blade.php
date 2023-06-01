@@ -74,33 +74,7 @@ $seo_meta=[
         </button> -->
         </div>
     </section>
-    <!-- Portable Variable Message Sign’s -->
-    <section class="portable px-lg-5">
-        <div class="container-fluid">
-            <div class="message-sign d-flex  justify-content-center">
-                <h6 class="">iCop | Portable Variable Message Sign’s</h6>
 
-            </div>
-            <div class="heading-sec">
-                <h2 class="fs-2 mt-3">APPLICATIONS</h2>
-            </div>
-            <div class="d-flex mb-5 message-box gap-3 mt-3 flex-xl-nowrap flex-wrap justify-content-center">
-                <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Cities
-                    and Counties</div>
-                <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Highways
-                    Constructions</div>
-                <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Ministry of
-                    Transportation</div>
-                <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Smart
-                    Work Zones</div>
-                <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Special
-                    Areas</div>
-            </div>
-            <div class="text-center">
-                <a href="#inquiry" class="btn btn-primary">Get Quote</a>
-            </div>
-        </div>
-    </section>
     <!-- SPECIFICATION Sec Accordion -->
 
     <!-- Banner Sec End -->
@@ -169,6 +143,35 @@ $seo_meta=[
             </div>
         </div>
     </section>
+
+
+<!-- Portable Variable Message Sign’s -->
+<section class="portable px-lg-5">
+    <div class="container-fluid">
+        <div class="message-sign d-flex  justify-content-center">
+            <h6 class="">iCop | Portable Variable Message Sign’s</h6>
+
+        </div>
+        <div class="heading-sec">
+            <h2 class="fs-2 mt-3">APPLICATIONS</h2>
+        </div>
+        <div class="d-flex mb-5 message-box gap-3 mt-3 flex-xl-nowrap flex-wrap justify-content-center">
+            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Cities
+                and Counties</div>
+            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Highways
+                Constructions</div>
+            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Ministry of
+                Transportation</div>
+            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Smart
+                Work Zones</div>
+            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Special
+                Areas</div>
+        </div>
+        <div class="text-center">
+            <a href="#inquiry" class="btn btn-primary">Get Quote</a>
+        </div>
+    </div>
+</section>
     <section class="connectivity bg-light">
         <div class="container">
             <h3 class="text-center fs-2">Connectivity with Sign</h3>
