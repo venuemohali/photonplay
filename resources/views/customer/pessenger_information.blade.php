@@ -363,35 +363,35 @@ $seo_meta=[
             ]
         })
 
-        $('.clints-content-gallery').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
-            prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}} /></button>",
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        })
+        {{--$('.clints-content-gallery').slick({--}}
+        {{--    dots: false,--}}
+        {{--    infinite: false,--}}
+        {{--    speed: 300,--}}
+        {{--    slidesToShow: 3,--}}
+        {{--    prevArrow: "<button type='button' class='slick-prev pull-left'><img src='{{asset('assets/customer/images/left-chevron.png')}}/></button>",--}}
+        {{--    nextArrow: "<button type='button' class='slick-next pull-right'><img src='{{asset('assets/customer/images/right-chevron.png')}} /></button>",--}}
+        {{--    slidesToScroll: 1,--}}
+        {{--    arrows: true,--}}
+        {{--    responsive: [{--}}
+        {{--            breakpoint: 1024,--}}
+        {{--            settings: {--}}
+        {{--                slidesToShow: 3,--}}
+        {{--            }--}}
+        {{--        },--}}
+        {{--        {--}}
+        {{--            breakpoint: 600,--}}
+        {{--            settings: {--}}
+        {{--                slidesToShow: 1,--}}
+        {{--            }--}}
+        {{--        },--}}
+        {{--        {--}}
+        {{--            breakpoint: 480,--}}
+        {{--            settings: {--}}
+        {{--                slidesToShow: 1,--}}
+        {{--            }--}}
+        {{--        }--}}
+        {{--    ]--}}
+        {{--})--}}
 
         window.addEventListener('click', function(e) {
             if (window.innerWidth > 992) {
