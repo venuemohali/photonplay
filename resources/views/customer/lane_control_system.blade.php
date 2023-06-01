@@ -171,57 +171,7 @@ $seo_meta=[
     <!-- Contact form end -->
 
     <!-- _____________________ourclint-last-start___________________ -->
-    <section class="our-clints-last">
-        <div class="mb-lg-5 text-center">
-            <h2 class="fs-md-2 mt-3">Our Clients</h2>
-        </div>
-        <div class="container">
-            <div class="px-4">
-                <div class="clints-content mb-0 d-flex align-items-center">
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/adani.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/afkons.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/ASHOKA.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="px-2 branding-diss">
-                            <img src="{{asset('assets/customer/images/CTU.png')}}" class="d-block mx-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('customer.layout2.our_clients')
     <!-- _____________________ourclint-last-end___________________ -->
 
     @include('customer.layout2.footer')
