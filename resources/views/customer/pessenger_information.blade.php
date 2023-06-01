@@ -51,7 +51,7 @@ $seo_meta=[
                                 <div class="row">
 
                                         @forelse ($page->images as $image)
-                                            <div class="col-4">
+                                            <div class="col-md-4">
 
                                                 <div class="thumb-image-item mb-3" style="width: 200px;height: 200px;">
                                                     <img src="{{asset('storage/'.$image->image)}}" alt=""  style="max-height: 100%;object-fit: cover;">
