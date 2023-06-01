@@ -49,7 +49,7 @@ $seo_meta=[
                             </p>
                             <div class="thumb-image">
                                 <div class="row">
-                                    <div class="col-4">
+
                                         @forelse ($page->images as $image)
                                             <div class="col-4">
 
@@ -69,7 +69,7 @@ $seo_meta=[
                                         @empty
 
                                         @endforelse
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
