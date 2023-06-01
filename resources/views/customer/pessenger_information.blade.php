@@ -114,7 +114,10 @@ $seo_meta=[
             <div class="feature-list">
                 <!-- <ul class=" m-0 p-0 "> -->
                 <div class="d-lg-flex justify-content-between">
-                    <ul class="w-100 m-0 p-0">
+                        <div class="row">
+
+
+
                         @php
                             $break_point=(int)(count($page->features)/2);
                             $sr=1;
@@ -122,6 +125,10 @@ $seo_meta=[
                         @endphp
 
                         @foreach($page->features as $feature)
+                            <div class="col-md-6">
+
+
+                                <ul class="w-100 m-0 p-0">
                             <li>
                                 <div class="content-feature" style="width: 300px;">
                                     <strong>{{ $feature->feature}}</strong>
@@ -129,8 +136,8 @@ $seo_meta=[
                                 </div>
                             </li>
                             @if($sr==$break_point)
-                    </ul>
-                    <ul class="w-100 m-0 p-0">
+                            </div>
+                            <div class="col-md-6">
                         @php
                             $sr=0;
                         @endphp
@@ -138,8 +145,10 @@ $seo_meta=[
                         @php
                             $sr++;
                         @endphp
+                            </ul>
                         @endforeach
-                    </ul>
+                        </div>
+                        </div>
                 </div>
                 <!-- </ul> -->
             </div>
