@@ -53,8 +53,8 @@ $seo_meta=[
                                         @forelse ($page->images as $image)
                                             <div class="col-4">
 
-                                                <div class="thumb-image-item mb-3">
-                                                    <img src="{{asset('storage/'.$image->image)}}" alt=""  style="max-height: 300px;">
+                                                <div class="thumb-image-item mb-3" style="width: 200px;height: 200px;">
+                                                    <img src="{{asset('storage/'.$image->image)}}" alt=""  style="max-height: 100%;object-fit: cover;">
                                                     <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
                                                 </div>
 
