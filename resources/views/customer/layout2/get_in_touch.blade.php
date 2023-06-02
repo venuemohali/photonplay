@@ -15,11 +15,13 @@ $setting = Setting::first();
                     <div class="contact-info">
                         <div class="contact-info-item">
                             @if ($setting)
-                            <a href="tel:{{$setting->sales_phone}}"><img src="{{asset('assets\customer\images\phone-color.png')}}" /> {{$setting->sales_phone}}</a>
+                            <a href="tel:{{$setting->sales_phone}}" class="text-decoration-none"> <i class="bi bi-telephone-inbound-fill text-primary"></i> &nbsp {{$setting->sales_phone}}</a>
 
-                            <a href="tel:{{$setting->support_phone ?? ''}}"><img src="{{asset('assets\images\phone-color.png')}}" /> {{$setting->support_phone}}</a>
+                            <a href="tel:{{$setting->support_phone ?? ''}}" class="text-decoration-none">
+                                <i class="bi bi-telephone-inbound-fill text-primary"></i> &nbsp{{$setting->support_phone}}</a>
 
-                            <a href="mailto:{{$setting->sales_email ?? ''}}"><img src="{{asset('assets\images\message-color.png')}}" /> {{$setting->sales_email}}</a>
+                            <a href="mailto:{{$setting->sales_email ?? ''}}" class="text-decoration-none">
+                                <i class="bi bi-envelope-fill text-primary"></i> &nbsp {{$setting->sales_email}}</a>
                             @endif
                         </div>
                     </div>
