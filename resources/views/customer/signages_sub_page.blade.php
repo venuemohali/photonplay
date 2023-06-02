@@ -75,6 +75,7 @@
                                     <div class="accordion-item border-0 position-inherit ">
                                         <h2 class="accordion-header" id="flush-headingOne{{$spec->id}}">
                                             <button class="accordion-button collapsed optic bg-white te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$spec->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$spec->id}}">
+                                            <button class="accordion-button collapsed optic bg-white te-3 pb-2 shadow-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$spec->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$spec->id}}">
                                                 {{$spec->spec}}
                                             </button>
                                         </h2>
@@ -137,7 +138,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <h4 class="text-white text-center">SMART CITY VMS - Brochure</h4>
+                    <h4 class="text-white text-center">{{$page->title}} - Brochure</h4>
                 </div>
                 <div class="col-md-6 text-center">
                     <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
