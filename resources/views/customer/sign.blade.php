@@ -65,7 +65,7 @@ $seo_meta=[
                                         Radar Speed Sign
                                     </span>
                                     <span class="d-block">{{$product->title}}</span>
-                                    <div class="d-flex justify-content-center align-items-center my-2">
+                                    <div class="d-flex justify-content-center align-items-center my-2 gap-1">
                                         <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                         <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
