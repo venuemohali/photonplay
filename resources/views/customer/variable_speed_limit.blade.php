@@ -346,6 +346,7 @@ $seo_meta=[
 
         $('.toggler-mega').click(function () {
             if ($(this).hasClass('active')) {
+                console.log($(this).hasClass('active'))
                 $(this).removeClass('active')
                 $('.mega-menu').slideUp();
             } else {

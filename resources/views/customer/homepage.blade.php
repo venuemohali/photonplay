@@ -145,7 +145,7 @@ $seo_meta=[
                                 <div class="mask-layer common-wdth inner-col text-center">
                                     <img src="/assets/customer/images/products_home/way_finder_main.webp" alt="Not Found" class="">
                                     <div>
-                                        <a href="signages/way-finders" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/way-finders" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4">  Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -178,7 +178,7 @@ $seo_meta=[
                                     <img src="/assets/customer/images/products_home/pvms_main.webp" alt="Portable Variable
                                         Message Signs" class="">
                                     <div>
-                                        <a href="portable-variable-message-signs" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="portable-variable-message-signs" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -213,7 +213,7 @@ $seo_meta=[
                                     <img src="/assets/customer/images/products_home/emergency_exit.webp" alt="Portable Variable
                                         Message Signs" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -246,7 +246,7 @@ $seo_meta=[
                                     <img src="/assets/customer/images/products_home/emergency_phone.webp" alt="Portable Variable
                                         Message Signs" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -279,7 +279,7 @@ $seo_meta=[
                                     <img src="/assets/customer/images/products_home/pids_product.webp" alt="Portable Variable
                                         Message Signs" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -314,7 +314,7 @@ $seo_meta=[
                                     <img src="/assets/customer/images/products_home/vms_product.webp" alt="Portable Variable
                                         Message Signs" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -347,7 +347,7 @@ $seo_meta=[
                                 <div class="mask-layer common-wdth inner-col text-center">
                                     <img src="/assets/customer/images/products_home/vsls_product.webp" alt="VSLS" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
@@ -380,7 +380,7 @@ $seo_meta=[
                                 <div class="mask-layer common-wdth inner-col text-center">
                                     <img src="/assets/customer/images/products_home/caterpiller.webp" alt=" LED Tickers" class="">
                                     <div>
-                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Show Now</a>
+                                        <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
                                 <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">

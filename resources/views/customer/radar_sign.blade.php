@@ -105,7 +105,7 @@ foreach($specilization->options as $option){
                                     <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
                                     @foreach($specilization->options as $option)
                                         <p> <input type="checkbox" name="{{$specilization->id}}"
-                                                   id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
+                                                   id="{{$specilization->id}}" type="button" title="{{$specilization->specilization->title+' '+ $option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
                                         </p>
                                     @endforeach
                                     <!-- <p class="mb-0"><input type="checkbox"> 6 Days
@@ -379,7 +379,8 @@ Shipping:7-10 Working Days.
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
                         let inputV=document.getElementById('demoInput')
-                        selectedValue.push(Number(radio.title))
+                        const price_name= radio.title.split(" ")
+                        selectedValue.push({[`${price_name[0]}`]:price_name[1]})
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
                     },
                 });
@@ -401,7 +402,9 @@ Shipping:7-10 Working Days.
                         document.getElementById("dynamic_specs").appendChild(input);
                         let innerPrice=document.getElementById("total_price")
                         let inputV=document.getElementById('demoInput')
-                        let find=selectedValue.indexOf(Number(radio.title))
+                        const price_name= radio.title.split(" ")
+                        // selectedValue.push({[`${price_name[0]}`]:price_name[1]})
+                        let find=selectedValue.findIndex((res)=>res?.[`${price_name[0]}`]===)
                         selectedValue.splice(find,1)
                         innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-(Number(radio.title)*(Number(inputV.value)))}`
                     },
