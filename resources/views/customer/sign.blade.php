@@ -77,7 +77,7 @@ $seo_meta=[
                                         <img src="{{ asset('assets\customer\images\star.svg') }}" alt="Not Found" class="img-fluid"
                                             width="14px">
                                     </div>
-                                    <span class="d-block weight-font">{{$product->price}}</span>
+                                    <span class="d-block weight-font">${{$product->price}}</span>
                                     <a href="{{route('customer.radar.sign', $product->id)}}" class="btn btn-primary text-capitalize mt-3">Shop Now</a>
                                 </div>
                             </div>
