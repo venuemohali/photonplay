@@ -66,7 +66,7 @@ $seo_meta=[
         <div class="container overflow-hidden pb-4 pt-0">
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
-                    <h2 class="fs-md-2 mt-3 text-uppercase">Our Products</h2>
+                    <h2 class="fs-md-2 mt-3 text-uppercase">Products</h2>
                     <h6 class="fs-6 text-colorr">Empowering Smarter Mobility with Innovative Product Solutions that Exceed Expectations.</h6>
                 </div>
             </div>
