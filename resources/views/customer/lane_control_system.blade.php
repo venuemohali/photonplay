@@ -136,7 +136,7 @@ $seo_meta=[
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <h4 class="text-white text-center text-capitalize">{{$page->title}} - Brochure</h4>
+                    <h4 class="text-white text-center text-capitalize">{{$page->title}} - BROCHURE</h4>
                 </div>
                 <div class="col-md-6 text-center">
                     <a href="{{asset('storage/'.$page->brochure)}}" class="btn btn-primary rounded-0" download="">Download Now</a>
