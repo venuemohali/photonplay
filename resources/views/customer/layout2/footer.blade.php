@@ -7,9 +7,6 @@ $categories = Category::select('title')->take(3)->get();
 $blogs = Blog::select('slug','title')->take(4)->get();
 @endphp
 
-
-
-
 <!-- _____________________ourclint-last-end___________________ -->
     <section class="subscribe-section" id="subscribed">
         <div class="container">

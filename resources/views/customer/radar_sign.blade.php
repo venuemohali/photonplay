@@ -9,11 +9,11 @@ $seo_meta=[
 
 
 @php
-foreach($product->specilizations as $specilization){
-foreach($specilization->options as $option){
-    //dd($option);
-}
-}
+    foreach($product->specilizations as $specilization){
+    foreach($specilization->options as $option){
+        //dd($option);
+    }
+    }
 @endphp
 @include('customer.layouts.header')
 
@@ -100,78 +100,78 @@ foreach($specilization->options as $option){
 
                             {{-- Loop to Start Specifications--}}
                             @foreach ($product->specilizations as $specilization)
-                            <div class="col-md-6 mb-3">
-                                <div class="specification p-3 ">
-                                    <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
-                                    @foreach($specilization->options as $option)
-                                        <p> <input type="checkbox" name="{{$specilization->id}}"
-                                                   id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
-                                        </p>
-                                    @endforeach
-                                    <!-- <p class="mb-0"><input type="checkbox"> 6 Days
+                                <div class="col-md-6 mb-3">
+                                    <div class="specification p-3 ">
+                                        <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
+                                        @foreach($specilization->options as $option)
+                                            <p> <input type="checkbox" name="{{$specilization->id}}"
+                                                       id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
+                                            </p>
+                                        @endforeach
+                                        <!-- <p class="mb-0"><input type="checkbox"> 6 Days
                                             (+$50)
                                         </p> -->
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
                             {{-- Loop to end Specifications--}}
 
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
-                             <div class="d-flex align-items-center justify-content-between">
-                           <input type="hidden" name="color" value="Amber" id="colorchoose">
-                                 <div class="selected-anc d-flex border-1 p-2 shadow-smm " >
-                               <i class="bi bi-check-circle-fill p-1" style="font-size: 36px;color:#ffbf00;"></i>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <input type="hidden" name="color" value="Amber" id="colorchoose">
+                                    <div class="selected-anc d-flex border-1 p-2 shadow-smm " >
+                                        <i class="bi bi-check-circle-fill p-1" style="font-size: 36px;color:#ffbf00;"></i>
 
-                           <select class="form-select shadow-none" name="colorselected" id="select-color" aria-label="Default select example" required style="background-color: transparent; border: none;
+                                        <select class="form-select shadow-none" name="colorselected" id="select-color" aria-label="Default select example" required style="background-color: transparent; border: none;
     border-radius: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;">
-                                 <option value="#ffbf00"> Amber </option>
-                                  <option value="#ffff00">Yellow </option>
-                                  <option value="#ffffff"> White </option>
-                           </select>
-                           </div>
+                                            <option value="#ffbf00"> Amber </option>
+                                            <option value="#ffff00">Yellow </option>
+                                            <option value="#ffffff"> White </option>
+                                        </select>
+                                    </div>
 
-                                 <script>
-                                     const selectElement = document.getElementById('select-color');
-                                     const iconElement = document.querySelector('.bi-check-circle-fill');
-                                     const colorHolderElement = document.querySelector('#colorchoose');
+                                    <script>
+                                        const selectElement = document.getElementById('select-color');
+                                        const iconElement = document.querySelector('.bi-check-circle-fill');
+                                        const colorHolderElement = document.querySelector('#colorchoose');
 
-                                     selectElement.addEventListener('change', function() {
-                                         const selectedOption = this.options[this.selectedIndex];
-                                         const selectedText = selectedOption.text;
-                                         const selectedColor = this.value;
-                                         colorHolderElement.value=selectedText;
-                                         iconElement.style.color = selectedColor;
-                                     });
-                                 </script>
+                                        selectElement.addEventListener('change', function() {
+                                            const selectedOption = this.options[this.selectedIndex];
+                                            const selectedText = selectedOption.text;
+                                            const selectedColor = this.value;
+                                            colorHolderElement.value=selectedText;
+                                            iconElement.style.color = selectedColor;
+                                        });
+                                    </script>
 
-                            <div class="d-flex justify-content-center align-items-center">
-{{--                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>--}}
-{{--                            <div class="borded-bang"></div>--}}
-                                <a href="{{route('customer.contact.us')}}" class="text-decoration-none">
-                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png"
-                                 class="mx-3"/>
-                                </a>
-                            {{-- <div class="borded-bang"></div>
-                            <button id="add_to_cart">
-                                <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
-                            </button> --}}
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        {{--                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>--}}
+                                        {{--                            <div class="borded-bang"></div>--}}
+                                        <a href="{{route('customer.contact.us')}}" class="text-decoration-none">
+                                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png"
+                                                 class="mx-3"/>
+                                        </a>
+                                        {{-- <div class="borded-bang"></div>
+                                        <button id="add_to_cart">
+                                            <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
+                                        </button> --}}
 
+                                    </div>
+                                </div>
+                                <p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
+                                    Shipping:7-10 Working Days.
+                                </p>
                             </div>
-</div>
-<p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
-Shipping:7-10 Working Days.
-</p>
-                            </div>
-                        </dsiv>
+                            </dsiv>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -185,8 +185,8 @@ Shipping:7-10 Working Days.
             <!-- <div class=" px-3"> -->
             <div class="col-lg-8 col-md-8">
                 <div class="d-flex align-items-md-center order-summery ">
-{{--                    <span class="border-1 border-right d-block  pe-lg-5 pe-4">Order--}}
-{{--                        Summary</span>--}}
+                    {{--                    <span class="border-1 border-right d-block  pe-lg-5 pe-4">Order--}}
+                    {{--                        Summary</span>--}}
                     <div class="border-left  ">
                         <p class="fw-bold fs-5 mb-0 py-lg-0 py-3">{{$product->category->title}} | {{$product->title}}</p>
                         <p class="mb-0 opacity-50">{{$product->color}} | {{$product->warranty}}
@@ -255,8 +255,8 @@ Shipping:7-10 Working Days.
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane mt-3 fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                            {!! $product->description!!}
-                        </div>
+                        {!! $product->description!!}
+                    </div>
                     <div class="tab-pane fade mt-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> {!!$product->specification!!}</div>
                     <div class="tab-pane fade mt-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">   {!!$product->feature!!}</div>
                     <div class="tab-pane fade mt-3" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0"> {!!$product->power_option!!} </div>
@@ -360,56 +360,53 @@ Shipping:7-10 Working Days.
     var dict = {};
     const selectedValue=[]
     function GetSelected(radio) {
-            var chected = new Array();
-            if(radio.checked){
-                dict[radio.id] = radio.value;
-                $.ajax({
-                    url: '{{ route('customer.specification.ajax') }}',
-                    type: 'GET',
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    data: {dict: dict},
-                    success: function(response) {
-                        $('#dynamic_specs').html("");
-                        var input = document.createElement("input");
-                        input.type = "hidden";
-                        input.name = "dynamic_spec[]";
-                        input.value = response;
-                        document.getElementById("dynamic_specs").appendChild(input);
-                        let innerPrice=document.getElementById("total_price")
-                        let inputV=document.getElementById('demoInput')
-                        const price_name= radio.title.split(" ")
-                        selectedValue.push({[`${price_name[0]}`]:price_name[1]})
-                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
-                    },
-                });
-            }else {
-               let val= dict[radio.id];
-               $.ajax({
-                    url: '{{ route('customer.specification.ajax') }}',
-                    type: 'GET',
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    data: {dict: dict},
-                    success: function(response) {
-                        $('#dynamic_specs').html("");
-                        var input = document.createElement("input");
-                        input.type = "hidden";
-                        input.name = "spec[]";
-                        input.value = response;
-                        document.getElementById("dynamic_specs").appendChild(input);
-                        let innerPrice=document.getElementById("total_price")
-                        let inputV=document.getElementById('demoInput')
-                        const price_name= radio.title.split(" ")
-                        // selectedValue.push({[`${price_name[0]}`]:price_name[1]})
-                        let find=selectedValue.findIndex((res)=>res?.[`${price_name[0]}`]===)
-                        selectedValue.splice(find,1)
-                        innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-(Number(radio.title)*(Number(inputV.value)))}`
-                    },
-                });
-            }
+        var chected = new Array();
+        if(radio.checked){
+            dict[radio.id] = radio.value;
+            $.ajax({
+                url: '{{ route('customer.specification.ajax') }}',
+                type: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {dict: dict},
+                success: function(response) {
+                    $('#dynamic_specs').html("");
+                    var input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "dynamic_spec[]";
+                    input.value = response;
+                    document.getElementById("dynamic_specs").appendChild(input);
+                    let innerPrice=document.getElementById("total_price")
+                    let inputV=document.getElementById('demoInput')
+                    selectedValue.push(Number(radio.title))
+                    innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))+(Number(radio.title)*Number(inputV.value))}`
+                },
+            });
+        }else {
+            let val= dict[radio.id];
+            $.ajax({
+                url: '{{ route('customer.specification.ajax') }}',
+                type: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {dict: dict},
+                success: function(response) {
+                    $('#dynamic_specs').html("");
+                    var input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "spec[]";
+                    input.value = response;
+                    document.getElementById("dynamic_specs").appendChild(input);
+                    let innerPrice=document.getElementById("total_price")
+                    let inputV=document.getElementById('demoInput')
+                    let find=selectedValue.indexOf(Number(radio.title))
+                    selectedValue.splice(find,1)
+                    innerPrice.innerHTML=`$${Number(innerPrice.innerHTML.slice(1,innerPrice.length))-(Number(radio.title)*(Number(inputV.value)))}`
+                },
+            });
+        }
 
         const checkboxes = document.querySelectorAll(`input[name="${radio.id}"]`);
         checkboxes.forEach((checkbox) => {
@@ -423,12 +420,12 @@ Shipping:7-10 Working Days.
                 }
             });
         });
-        }
-        $(document).ready(function() {
-            $('#add_to_cart').click(function() {
-                var formData = $('#myForm').serialize(); // Serialize the form data
-                var url = "{{ route('customer.store.shopping.bag', ['p' => 1]) }}";
-                $.ajax({
+    }
+    $(document).ready(function() {
+        $('#add_to_cart').click(function() {
+            var formData = $('#myForm').serialize(); // Serialize the form data
+            var url = "{{ route('customer.store.shopping.bag', ['p' => 1]) }}";
+            $.ajax({
                 url: url, // Replace with your API endpoint
                 type: 'POST',
                 data: formData,
@@ -439,9 +436,9 @@ Shipping:7-10 Working Days.
                 error: function(xhr, status, error) {
                     // Handle the error response from the server
                 }
-                });
             });
         });
+    });
 </script>
 <script>
     $('.responsive').slick({
