@@ -519,14 +519,24 @@ $seo_meta=[
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
+<style>
+    .slick-prev,
+    .slick-next {
+        font-size: 50px; /* Increase the font size to make the arrows larger */
+        /* Additional styles for the arrows */
+    }
+</style>
+<script>
         $('.responsive').slick({
             dots: true,
             infinite: false,
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 4,
-            arrows: false,
+            arrows: true,
+            prevArrow: "<button type='button' class='slick-prev pull-left' ><img src='/assets/customer/images/left-arrow.webp'  style='height: 30px;'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right' ><img src='/assets/customer/images/right-arrow.webp' style='height: 30px;text-shadow: grey '/></button>",
+
             responsive: [
                 {
                     breakpoint: 1024,
