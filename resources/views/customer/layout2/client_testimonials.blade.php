@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="text-center mb-lg-5">
                     <h2 class="fs-md-2 mt-3">Our Client Says</h2>
-                    <p class="text-mutedd"> See What Our Satisfied Clients Have to Say About Our Innovative ITS Solutions</p>
+                    <p class="fs-6"> See What Our Satisfied Clients Have to Say About Our Innovative ITS Solutions</p>
                 </div>
             </div>
             <div class="col-lg-10">
