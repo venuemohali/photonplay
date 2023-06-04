@@ -75,7 +75,7 @@ $seo_meta=[
     $previousPost = $blog->previous(); // Retrieve the previous blog post
 @endphp
     <!-- Next and Previous Links -->
-                    <div class="blog-navigation">
+                    <div class="d-flex justify-content-between">
                         @if($previousPost)
                             <a href="{{ route('customer.blog_show', $previousPost->slug) }}">Previous</a>
                         @endif
