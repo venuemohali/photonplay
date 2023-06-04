@@ -12,7 +12,7 @@ $seo_meta=[
     <!-- Banner sec -->
     <section class="inner-banner-bg">
         <h3 class="text-white text-center mb-0">NEWS & EVENTS</h3>
-        <h6 class="text-white text-center text-uppercase mt-2">{{$blog->title}}</h6>
+        <h1 class="text-white text-center text-uppercase mt-2">{{$blog->title}}</h1>
     </section>
     <!-- Banner Sec End -->
     <section class="blog-content-list position-relative pb-4">
