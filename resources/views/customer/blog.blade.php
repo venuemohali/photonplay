@@ -202,7 +202,7 @@ $seo_meta=[
                     @endforeach
 
                 </div>
-                <div class="rules-content mb-0 border-0 border-bottom pb-5">
+                <div class="rules-content mb-0 border-0 border-bottom">
                     <div>
                     </div>
                 </div>
