@@ -31,7 +31,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
     </section>
 
     <!-- Multiple Size Options-start -->
-    <section class="option-chose veriants p-1 m-1">
+    <section class="option-chose veriants p-1 mb-1 mt-4">
         <div class="container option-chose-rows">
 {{--            <div class="text-center pb-4">--}}
 {{--                <h2 class="fs-md-2 mt-3">Transit </h2>--}}
