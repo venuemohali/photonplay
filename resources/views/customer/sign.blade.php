@@ -14,11 +14,11 @@ $seo_meta=[
     <section class="portable px-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 ">
+                <div class="col-lg-12 ">
                     <div class="radar-icop">
 {{--                        <h6 class="fs-6 mb-3">photonplay’s</h6>--}}
 {{--                        <h1 class="mb-">RADAR SPEED SIGN <br> iCop Series </h1>--}}
-                        <span class="text-uppercase">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span>
+                        <h4 class="text-uppercase text-center">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT !</h4>
                         <p class="mt-4">
                             The sign has all the standard features combined in one product to make it industry's best
                             Radar
@@ -30,12 +30,12 @@ $seo_meta=[
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 ">
-                    <div class="radar-icop-image d-flex justify-content-center align-items-center">
-                        <div class="bg-colored"></div>
-                        <img src="{{ asset('assets\customer\images\iCop icon.png') }}" alt="Not Found" class="img-fluid">
-                    </div>
-                </div>
+{{--                <div class="col-lg-6 ">--}}
+{{--                    <div class="radar-icop-image d-flex justify-content-center align-items-center">--}}
+{{--                        <div class="bg-colored"></div>--}}
+{{--                        <img src="{{ asset('assets\customer\images\iCop icon.png') }}" alt="Not Found" class="img-fluid">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
