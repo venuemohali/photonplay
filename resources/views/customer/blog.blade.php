@@ -174,7 +174,7 @@ $seo_meta=[
         </div>
     </section>
     <!-- related posted-start -->
-    <section class="content-rules pt-0">
+    <section class="content-rules pt-0 p-0 m-0">
         <div class="container">
             <div class="px-4 col-lg-8">
                 <div>
@@ -201,6 +201,8 @@ $seo_meta=[
 
                     @endforeach
 
+                </div>
+                <div class="rules-content mb-0 border-0 border-bottom">
                 </div>
             </div>
         </div>
