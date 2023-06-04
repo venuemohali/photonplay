@@ -255,6 +255,16 @@ h2 {
     min-height: 52px;
 }
 
+.inquiryform-backgroundsection {
+    background-image: url("../images/home_form_bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+}
+
 h1 {
     font-size: 44px;
     /* line-height: 94px; */

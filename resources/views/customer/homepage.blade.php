@@ -530,7 +530,7 @@ $seo_meta=[
 <!-- Contact form end -->
 
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form pt-3 " id="inquiry"  style="background-color:   background: #f9f9fa;">
+    <section class="contact-form pt-3 inquiryform-backgroundsection " id="inquiry" >
         <div class="container">
             <div class="row align-items-end">
                 <div class="com-md-3">
