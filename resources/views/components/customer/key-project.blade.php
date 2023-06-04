@@ -3,7 +3,7 @@
         <div class="col-lg-12">
             <div class="text-center mb-lg-5">
                 <h2 class="fs-md-2 mt-3">Key Projects</h2>
-                <p class="text-mutedd">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
+                <p class="fs-6">Our Key Projects Across the Globe - Discover How Our Innovative Solutions are Changing the Game!</p>
             </div>
         </div>
     </div>

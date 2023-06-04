@@ -413,6 +413,15 @@ a.nav-link.dropdown-toggle.show img,
     object-fit: cover;
 }
 
+/*.key-project h6 {*/
+/*    font-size: 18px;*/
+/*    letter-spacing: 0px;*/
+/*    !* line-height: 43px; *!*/
+/*    color: #232323;*/
+/*    !*font-weight: 600;*!*/
+/*}*/
+
+
 .members-profile h6 {
     font-size: 18px;
     letter-spacing: 0px;
