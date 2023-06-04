@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="py-4 border-top border-bottom">
-                                <h3 class="text-center mb-0 text-success">Thank you. Your order has been received.</h3>
+                                <h1 class="text-center mb-0 text-success">Thank you. Your order has been received.</h1>
                             </div>
                         </div>
                         <div class="col-lg-12">
