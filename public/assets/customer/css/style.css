@@ -2231,6 +2231,13 @@ input:focus {
     font-size: 12px;
 }
 
+.tagskeyslinks {
+    font-size: 10px;
+    border: grey 1px solid;
+    padding: 5px;
+    margin: 2px;
+}
+
 .search ::placeholder {
     font-size: 14px;
     color: #404040;

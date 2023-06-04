@@ -129,7 +129,7 @@ $seo_meta=[
                                 <div class="mb-3">
                                     <?php $i=1;?>
                                 @foreach($tags as $tag)
-                                        <span style="font-size: 10px;border: grey 1px solid;">
+                                        <span >
                                             <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none">{{$tag}}</a></span>
                                     @if($i%3==0)
                                 </div>
