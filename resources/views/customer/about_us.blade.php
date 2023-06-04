@@ -13,7 +13,7 @@ $seo_meta=[
     <section class="pt-0 pb-sm-4 pb-lg-5">
         <div class="banner ">
             <div class="about-wrapper d-flex justify-content-center align-items-center">
-                <h1 class="text-white " style="text-shadow: 2px 2px 2px #CE5937;"> About us</h1>
+                <h1 class="text-white" style="text-shadow: 2px 2px 2px #CE5937;"> About us</h1>
                 <p class="text-uppercase">Driving Smarter Transportation Solutions for 16+ Years</p>
             </div>
         </div>
