@@ -2236,6 +2236,7 @@ input:focus {
     border: grey 1px solid;
     padding: 5px;
     margin: 2px;
+    color: black;
 }
 
 .search ::placeholder {
