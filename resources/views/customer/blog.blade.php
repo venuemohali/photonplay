@@ -40,10 +40,10 @@ $seo_meta=[
                             <div class="sec-sidebar">
                                 <div class="sidebar-item">
                                     <!-- <div class="side-bar-title">Tags</div> -->
-                                    <div class="tags">
+                                    <div >
 
                                         @foreach($tags as $tag)
-                                            <span >    <a href="/blog?tags={{strtolower($tag)}}" class="btn btn-outline-primary"> {{$tag}} </a></span>
+                                            <span >    <a href="/blog?tags={{strtolower($tag)}}" class="btn btn-primary"> {{$tag}} </a></span>
                                         @endforeach
 
 {{--                                        <span>development</span>--}}
