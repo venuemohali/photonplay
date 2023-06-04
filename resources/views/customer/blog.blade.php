@@ -42,6 +42,7 @@ $seo_meta=[
                                     <!-- <div class="side-bar-title">Tags</div> -->
                                     <div class="tags">
 
+
                                         @foreach($tags as $tag)
                                             <span>    <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none"> {{$tag}} </a></span>
                                         @endforeach
@@ -130,7 +131,7 @@ $seo_meta=[
                                     <?php $i=1;?>
                                 @foreach($tags as $tag)
                                         <span class="tagskeyslinks">
-                                            <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none">{{$tag}}</a></span>
+                                            <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none " style="color: white">{{$tag}}</a></span>
                                     @if($i%3==0)
                                 </div>
                                             <div class="mb-3">
