@@ -43,7 +43,7 @@ $seo_meta=[
                                     <div class="tags">
 
                                         @foreach($tags as $tag)
-                                            <span class="btn btn-primary">    <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none text-white"> {{$tag}} </a></span>
+                                            <span class="btn btn-outline-primary">    <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none text-white"> {{$tag}} </a></span>
                                         @endforeach
 
 {{--                                        <span>development</span>--}}
