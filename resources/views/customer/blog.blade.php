@@ -77,11 +77,11 @@ $seo_meta=[
     <!-- Next and Previous Links -->
                     <div class="blog-navigation">
                         @if($previousPost)
-                            <a href="{{ route('customer.blog_show', ['post' => $previousPost->slug]) }}">Previous</a>
+                            <a href="{{ route('customer.blog_show', $previousPost->slug) }}">Previous</a>
                         @endif
 
                         @if($nextPost)
-                            <a href="{{ route('customer.blog_show', ['post' => $nextPost->slug]) }}">Next</a>
+                            <a href="{{ route('customer.blog_show',$nextPost->slug) }}">Next</a>
                         @endif
                     </div>
 <hr/>
