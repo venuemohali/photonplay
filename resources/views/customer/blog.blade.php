@@ -125,7 +125,7 @@ $seo_meta=[
                         </div>
                         <div class="sidebar-item">
                             <div class="side-bar-title">Tags</div>
-                            <div >
+                            <div class="tags">
                                 <div class="mb-3">
                                     <?php $i=1;?>
                                 @foreach($tags as $tag)
