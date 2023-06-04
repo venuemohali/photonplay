@@ -1735,12 +1735,22 @@ input:focus {
     max-width: 40px;
     min-width: 40px;
 }
+
 .our-clints-last h2 {
     font-size: 40px;
     letter-spacing: -1px;
     color: #232323;
     font-weight: 600;
 }
+
+
+.homepageh2title{
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #232323;
+    font-weight: 600;
+}
+
 /* our-clints-end */
 /* latest-wrapper-start */
 

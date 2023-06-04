@@ -2,7 +2,8 @@
 use App\Models\Client;
 $clients = Client::get();
 @endphp
-<section class="our-clints-last">
+
+<section class="{{Request::is('/') ||  Route::currentRouteName() === 'customer.about.us'? 'our-clints-last':''}} ">
         <div class="mb-lg-5 text-center">
             <h2 class="fs-md-2 mt-3">Our Clients</h2>
         </div>

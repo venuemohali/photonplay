@@ -530,7 +530,7 @@ $seo_meta=[
 <!-- Contact form end -->
 
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form pt-3 " id="inquiry" >
+    <section class="contact-form pt-3 " id="inquiry"  style="background-color:   background: #f9f9fa;">
         <div class="container">
             <div class="row align-items-end">
                 <div class="com-md-3">
@@ -541,8 +541,8 @@ $seo_meta=[
                         @csrf
                         <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
                         <div class="row bg-grant p-lg-5  p-3 mb-0" >
-                        <div class="col-lg-12 ">
-                            <div class="text-start text-white pb-4">
+                        <div class="col-lg-12 d-flex justify-content-center ">
+                            <div class="text-center text-white pb-4">
                                 <h4 class="mt-3">Request a Quote</h4>
                                 <p>Ready to work together? Build a project with us!</p>
                             </div>
@@ -564,7 +564,7 @@ $seo_meta=[
                             <textarea name="message" class="form-control rounded-2 mb-4 " rows="4" placeholder="Message"
                                       aria-describedby="passwordHelpBlock"></textarea>
                         </div>
-                        <div class="text-start">
+                        <div class="text-center">
                             <button type="submit" class="btn text-colorr bg-white px-5 fw-bold py-3 rounded-pill">Contact</button>
                         </div>
                         </div>
