@@ -526,7 +526,7 @@ $seo_meta=[
     </section>
 
 <!-- contact form -->
-@include('customer.layout2.get_in_touch')
+{{--@include('customer.layout2.get_in_touch')--}}
 <!-- Contact form end -->
 
     <!-- ______________Our Solution End-----______________ -->
@@ -624,7 +624,7 @@ $seo_meta=[
             <div class="row">
                 <div class="col-lg-12">
                     <div class="mb-5">
-                        <h2 class="fs-md-2 mt-3">Latest News</h2>
+                        <h2 class="fs-md-2 mt-3 ">Latest News</h2>
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <p class="text-mutedd">
                                 "Stay Up-to-Date on the Latest Innovations and Industry News in Transportation with Our Latest News Section.

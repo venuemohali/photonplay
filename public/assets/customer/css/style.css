@@ -1678,6 +1678,15 @@ input:focus {
     bottom: 6px;
 }
 
+
+.key-project h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #232323;
+    font-weight: 600;
+}
+
+
 .slick-dots li button:before {
     background: #ffffff;
     border: 3px solid #036eb1;
@@ -1709,6 +1718,15 @@ input:focus {
     right: 16px;
 }
 
+.our-clints h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #232323;
+    font-weight: 600;
+}
+
+
+
 .clint-wrapperr .slick-list {
     padding-top: 18px;
 }
@@ -1717,9 +1735,21 @@ input:focus {
     max-width: 40px;
     min-width: 40px;
 }
-
+.our-clints-last h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #232323;
+    font-weight: 600;
+}
 /* our-clints-end */
 /* latest-wrapper-start */
+
+.latest-wrapper h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #232323;
+    font-weight: 600;
+}
 .inner-cqategory {
     border-radius: 20px;
     background: #fff;
@@ -2340,6 +2370,8 @@ input:focus {
     .bg-grant {
         margin-bottom: 0px;
     }
+
+
 
     .tokoyo-banner h1 {
         font-size: 24px;
