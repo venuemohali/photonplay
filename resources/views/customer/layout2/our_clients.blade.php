@@ -12,7 +12,7 @@ $clients = Client::get();
                 <div class="clints-content-branding mb-0 d-flex align-items-center justify-content-center gap-1">
                    @for($i=0;$i<2;$i++)
                     @forelse ($clients as $client)
-                    <div class="bg-white" style="max-height: 150px;">
+                    <div class="bg--behance" style="max-height: 150px;">
                         <div class="px-2 branding-diss" id="{{$client->index}}">
                             <img src="{{asset('storage/'.$client->image)}}" class="d-block mx-auto" />
                         </div>
