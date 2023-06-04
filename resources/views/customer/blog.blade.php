@@ -178,7 +178,7 @@ $seo_meta=[
         <div class="container">
             <div class="px-4 col-lg-8">
                 <div>
-                    <h6 class="mb-4 text-uppercase">Related Posts</h6>
+                    <h5 class="mb-4 text-uppercase">Related Posts</h5>
                 </div>
                 <div class="row">
                     @foreach($relatedBlogRecords as $relatedBlog)
