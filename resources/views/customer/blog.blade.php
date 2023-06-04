@@ -77,11 +77,11 @@ $seo_meta=[
     <!-- Next and Previous Links -->
                     <div class="d-flex justify-content-between">
                         @if($previousPost)
-                            <a href="{{ route('customer.blog_show', $previousPost->slug) }}">Previous</a>
+                            <a href="{{ route('customer.blog_show', $previousPost->slug) }}" class="btn btn-primary">Previous</a>
                         @endif
 
                         @if($nextPost)
-                            <a href="{{ route('customer.blog_show',$nextPost->slug) }}">Next</a>
+                            <a href="{{ route('customer.blog_show',$nextPost->slug) }}" class="btn btn-primary">Next</a>
                         @endif
                     </div>
 <hr/>
