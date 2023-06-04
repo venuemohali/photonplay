@@ -68,8 +68,22 @@ $seo_meta=[
                             </div>
                         </div>
                     </div>
+@php
+    // Assuming you have a $currentPost variable representing the current blog post
 
+    $nextPost = $blog->next(); // Retrieve the next blog post
+    $previousPost = $blog->previous(); // Retrieve the previous blog post
+@endphp
+    <!-- Next and Previous Links -->
+                    <div class="blog-navigation">
+                        @if($previousPost)
+                            <a href="{{ route('customer.blog_show', ['post' => $previousPost->slug]) }}">Previous</a>
+                        @endif
 
+                        @if($nextPost)
+                            <a href="{{ route('customer.blog_show', ['post' => $nextPost->slug]) }}">Next</a>
+                        @endif
+                    </div>
 <hr/>
 {{--                    <div--}}
 {{--                        class="d-flex justify-content-between align-items-center border-0 border-top border-bottom py-4 mb-4">--}}
