@@ -125,11 +125,11 @@ $seo_meta=[
                         </div>
                         <div class="sidebar-item">
                             <div class="side-bar-title">Tags</div>
-                            <div class="p-1 m-1" style="font-size: 10px;border: grey 1px solid;" >
+                            <div class="p-1 m-1"  >
                                 <div class="mb-3">
                                     <?php $i=1;?>
                                 @foreach($tags as $tag)
-                                        <span>
+                                        <span style="font-size: 10px;border: grey 1px solid;">
                                             <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none">{{$tag}}</a></span>
                                     @if($i%3==0)
                                 </div>
