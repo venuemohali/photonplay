@@ -25,7 +25,7 @@ $seo_meta=[
                     <div class="post-item mb-5">
                         <img src="{{asset("storage/".$blog->image)}}" alt="" class="mb-4 img-fluid w-100">
                         <div class="pb-3 post-info border-0">
-                            <h1 class="text-uppercase mb-3 text-dark"> {{$blog->title}} </h1>
+                            <h2 class="text-uppercase mb-3"> {{$blog->title}} </h2>
                             <div class="mb-4">
                               {{$blog_created_date}} by {{$blog->author}}
 {{--                                @foreach($tags as $tag)--}}
@@ -40,10 +40,10 @@ $seo_meta=[
                             <div class="sec-sidebar">
                                 <div class="sidebar-item">
                                     <!-- <div class="side-bar-title">Tags</div> -->
-                                    <div >
+                                    <div class="tags">
 
                                         @foreach($tags as $tag)
-                                            <span >    <a href="/blog?tags={{strtolower($tag)}}" class="btn btn-primary"> {{$tag}} </a></span>
+                                            <span>    <a href="/blog?tags={{strtolower($tag)}}" class="text-decoration-none"> {{$tag}} </a></span>
                                         @endforeach
 
 {{--                                        <span>development</span>--}}
