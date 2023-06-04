@@ -112,7 +112,7 @@ $seo_meta=[
                                     Now</a>
                                </div>
                             </div>
-                            <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                            <div class="d-lg-flex align-self-center common-wdth inner-col">
                                 <div class="ms-md-5">
                                     <h6 class="text-capitalize">Description</h6>
 {{--                                    <p>{!! substr(strip_tags($product->description), 0, 100) !!}</p>--}}
@@ -148,7 +148,7 @@ $seo_meta=[
                                         <a href="signages/way-finders" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4">  Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -181,7 +181,7 @@ $seo_meta=[
                                         <a href="portable-variable-message-signs" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -216,7 +216,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -249,7 +249,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -282,7 +282,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -317,7 +317,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -350,7 +350,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -383,7 +383,7 @@ $seo_meta=[
                                         <a href="signages/emergency-exit-sign" class="btn btn-primary text-capitalize  py-0 px-3 m-auto mt-3 mb-4"> Know More</a>
                                     </div>
                                 </div>
-                                <div class="d-lg-flex align-items-start flex-column common-wdth inner-col">
+                                <div class="d-lg-flex align-self-center common-wdth inner-col">
                                     <div class="ms-md-5">
                                         <h6 class="text-capitalize">Description</h6>
                                         <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -524,16 +524,24 @@ $seo_meta=[
             </div>
         </div>
     </section>
+
+<!-- contact form -->
+@include('customer.layout2.get_in_touch')
+<!-- Contact form end -->
+
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form pt-3" id="inquiry">
+    <section class="contact-form pt-3 " id="inquiry" >
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-md-6 mx-auto">
+                <div class="com-md-3">
+
+                </div>
+                <div class="col-md-6 mx-auto bg-primary mb-0 pb-0" >
                     <form action="{{route('customer.inquery.submit')}}" method="post">
                         @csrf
                         <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
-                        <div class="row bg-grant p-lg-5  p-3">
-                        <div class="col-lg-12">
+                        <div class="row bg-grant p-lg-5  p-3 mb-0" >
+                        <div class="col-lg-12 ">
                             <div class="text-start text-white pb-4">
                                 <h4 class="mt-3">Request a Quote</h4>
                                 <p>Ready to work together? Build a project with us!</p>
@@ -562,11 +570,11 @@ $seo_meta=[
                         </div>
                     </form>
                 </div>
-                <div class="col-md-5">
-                    <div class="imge-qutes h-100">
-                        <img src="/assets/customer/images/businessman.jpg" alt="Not Found">
-                    </div>
-                </div>
+{{--                <div class="col-md-5">--}}
+{{--                    <div class="imge-qutes h-100">--}}
+{{--                        <img src="/assets/customer/images/businessman.jpg" alt="Not Found">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
