@@ -15,13 +15,13 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
 
             </div>
                     <div class="banner">
-                        <div class="highyway-imageses p-2">
-                        <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
-                  <div>
-                  <h2 class="text-uppercase fs-2 text-white fw-normal">Highways Solutions</h2>
-                    <h6 class="text-white">
-                    Experience improved traffic flow and safer journeys with our <br> cutting-edge ITS solutions tailored to highways and tunnels.
-                    </h6>
+                        <div class="highyway-imageses p-2" >
+                                <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
+                                <div>
+                          <h2 class="text-uppercase fs-2 text-white fw-normal" >Highways Solutions</h2>
+                            <h6 class="text-white">
+                            Experience improved traffic flow and safer journeys with our <br> cutting-edge ITS solutions tailored to highways and tunnels.
+                            </h6>
                       <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
                   </div>
                 </div>
@@ -34,12 +34,12 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants">
         <div class="container option-chose-rows">
-            <div class="text-center pb-4">
-                <h2 class="fs-md-2 mt-3 text-capitalize">Highways Solutions </h2>
-                <p class="mb-2">Experience improved traffic flow and safer journeys with our cutting-edge ITS solutions
-                </p>
-                <p> tailored to highways and tunnels.</p>
-            </div>
+{{--            <div class="text-center pb-4">--}}
+{{--                <h2 class="fs-md-2 mt-3 text-capitalize">Highways Solutions </h2>--}}
+{{--                <p class="mb-2">Experience improved traffic flow and safer journeys with our cutting-edge ITS solutions--}}
+{{--                </p>--}}
+{{--                <p> tailored to highways and tunnels.</p>--}}
+{{--            </div>--}}
             <div class="row align-items-center">
                 <!-- option-one -->
 
@@ -57,14 +57,14 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                             Explore our VMS product range and choose from our Standard VMS, Solar VMS, and Smart City VMS solutions. Each of our solutions is designed to cater to the unique needs of traffic management systems. Our VMS signs are built with the latest technology and advanced features to ensure the highest level of performance and reliability. Click Explore Products to learn more and enhance road and traffic safety with our Variable Message Signs.
                         </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">Know More</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid " width="80">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/vms_squre.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
+                        <img src="{{asset('assets/images/solutions/vms_smart.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
 
                     </div>
                 </div>
@@ -86,7 +86,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         Our VSLS is perfect for applications on roads, highways, and tunnels, providing a fully competent solution for generating instant recognition of speed limits. Improve road safety and traffic flow with the advanced features of our Variable Speed Limit Sign. Explore our VSLS for safer and more efficient highways.
                     </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">Know More</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -111,7 +111,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                          Our PVMS is ideal for applications on roads, highways, and tunnels, providing a highly reliable and rugged solution for traffic guidance and information purposes. Explore our PVMS solutions and discover how we can help you enhance road safety and traffic flow with our advanced ITS technology.
                      </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">Know More</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -135,7 +135,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                             Looking to revolutionize traffic management? Look no further than our Vehicle Actuated Speed Display (VASD). Our cutting-edge solution generates instant recognition of vehicle speed and displays the information to the driver using a full matrix display area. The VASD is highly reliable and efficient, making it ideal for roads, highways, and tunnels. Let us help you enhance road safety and traffic flow with our advanced ITS technology. Explore our VASD solutions today!
                         </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <button class="btn btn-primary text-uppercase rounded-2">Know More</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -167,7 +167,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                             <p class="mb-2">Variable Message Sign </p>
                             <p class=""> (VMS)</p>
                             <a href="{{route('customer.variable.message')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>
@@ -181,7 +181,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                             <p class="mb-2">Variable Speed Limit Sign </p>
                             <p>(VSLS) </p>
                             <a href="{{route('customer.variable.speed.limit')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>
@@ -195,7 +195,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                             <p class="mb-2">Portable Variable Message Sign </p>
                             <p class="">(PVMS) </p>
                            <a href="{{route('customer.portable.variable.message.signs')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                            </a>
                         </div>
                     </div>
@@ -209,7 +209,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         <div class="mt-4">
                             <p class="mb-2">Vehicle Actuated Speed Display </p>
                             <p class="">(VASD)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                         </div>
                     </div>
                 </div>

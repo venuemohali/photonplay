@@ -471,7 +471,7 @@ a.nav-link.dropdown-toggle.show img,
 }
 
 .banner .about-wrapper {
-    background-image: url("../images/contact_about.webp");
+    background-image: url("../images/aboutbannerblur.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -500,45 +500,140 @@ a.nav-link.dropdown-toggle.show img,
     height: 100%;
 }
 
-.banner .banner-imageses {
+/*.banner .banner-imageses {*/
+/*    background-image: url("../images/solution-trash.webp");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*    height: 100%;*/
+/*}*/
+.banner-imageses{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.banner-imageses::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("../images/solution-trash.webp");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    background-size: cover;
+    filter: blur(5px); /* Adjust the blur intensity as desired */
+    z-index: -1;
+}
+
+
+/*.banner .tunels-imageses {*/
+/*    background-image: url("../images/tunels-bg.webp");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*    height: 100%;*/
+/*}*/
+
+.tunels-imageses{
+    position: relative;
+    overflow: hidden;
     height: 100%;
 }
 
-.banner .tunels-imageses {
+.tunels-imageses::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("../images/tunels-bg.webp");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    background-size: cover;
+    filter: blur(5px); /* Adjust the blur intensity as desired */
+    z-index: -1;
+}
+
+/*.banner .security-imageses {*/
+/*    background-image: url("../images/hong-kong-aerial-night.webp");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*    height: 100%;*/
+/*}*/
+
+.security-imageses{
+    position: relative;
+    overflow: hidden;
     height: 100%;
 }
 
-.banner .security-imageses {
+
+.security-imageses::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("../images/hong-kong-aerial-night.webp");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    background-size: cover;
+    filter: blur(5px); /* Adjust the blur intensity as desired */
+    z-index: -1;
+}
+
+.highyway-imageses {
+    position: relative;
+    overflow: hidden;
     height: 100%;
 }
 
-.banner .highyway-imageses {
+.highyway-imageses::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("../images/shanghai-overpass-night.webp");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    background-size: cover;
-    height: 100%;
+    filter: blur(8px); /* Adjust the blur intensity as desired */
+    z-index: -1;
 }
+
+/*.banner .highyway-imageses {*/
+/*    background-image:url("../images/shanghai-overpass-night.webp");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*    z-index: -3;*/
+/*    height: 100%;*/
+/*    filter: blur(10px);*/
+/*}*/
+
+/* .highyway-imageses:before {*/
+/*    content: "";*/
+/*    background: inherit;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+
+/*     !* Adjust the blur intensity as desired *!*/
+/*}*/
+
 
 .circle-dotted {
     top: -30px;

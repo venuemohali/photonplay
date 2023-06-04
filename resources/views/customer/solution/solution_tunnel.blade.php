@@ -38,11 +38,11 @@ ITS solutions designed for optimal safety and efficiency..",
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants">
         <div class="container option-chose-rows">
-            <div class="text-center pb-4">
-                <h2 class="fs-md-2 mt-3 text-capitalize">Tunnels solutions </h2>
-                <p class="mb-2">Navigate through tunnels with ease and confidence with our advanced ITS solutions </p>
-                <p> designed for optimal safety and efficiency.</p>
-            </div>
+{{--            <div class="text-center pb-4">--}}
+{{--                <h2 class="fs-md-2 mt-3 text-capitalize">Tunnels solutions </h2>--}}
+{{--                <p class="mb-2">Navigate through tunnels with ease and confidence with our advanced ITS solutions </p>--}}
+{{--                <p> designed for optimal safety and efficiency.</p>--}}
+{{--            </div>--}}
             <div class="row align-items-center">
                 <!-- option-one -->
 
@@ -64,7 +64,7 @@ ITS solutions designed for optimal safety and efficiency..",
                             <li> SMART CITY VMS </li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -96,7 +96,7 @@ ITS solutions designed for optimal safety and efficiency..",
                         </p>
 
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.variable.speed.limit')}}" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid " width="80">
                         </div>
                     </div>
@@ -127,7 +127,7 @@ ITS solutions designed for optimal safety and efficiency..",
                             <li> Emergency Telephone Sign</li>
                         </ul>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="/signages" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="/signages" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -155,7 +155,7 @@ ITS solutions designed for optimal safety and efficiency..",
                         </p>
 
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="/lane-control-system" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="/lane-control-system" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -186,7 +186,7 @@ ITS solutions designed for optimal safety and efficiency..",
                             <p class="mb-2">Variable Message Sign </p>
                             <p class=""> (VMS)</p>
                             <a href="/variable-sign-language">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ ITS solutions designed for optimal safety and efficiency..",
                             <p class="mb-2">Variable Speed Limit Sign </p>
                             <p>(VSLS) </p>
                             <a href="/variable-speed-limit-signs">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>
@@ -212,10 +212,9 @@ ITS solutions designed for optimal safety and efficiency..",
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Signages </p>
-                            <p class="visibility-hidden">SIGN</p>
-
+                            <p class="">SIGN</p>
                             <a href="/signages">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>
@@ -227,9 +226,9 @@ ITS solutions designed for optimal safety and efficiency..",
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Lane Control System  </p>
-                            <p class="visibility-hidden">(LCS)</p>
+                            <p class="">(LCS)</p>
                             <a href="lane-control-system">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5 m-auto">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid m-auto">
                             </a>
                         </div>
                     </div>

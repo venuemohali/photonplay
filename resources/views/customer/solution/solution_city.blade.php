@@ -35,12 +35,12 @@ that enable seamless integration and smarter decision-making for cities of the f
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants">
         <div class="container option-chose-rows">
-            <div class="text-center pb-4">
-                <h2 class="fs-md-2 mt-3 text-capitalize">Smart Cities </h2>
-                <p class="mb-2">Transform urban mobility and drive sustainable growth with our comprehensive ITS
-                    solutions</p>
-                <p> that enable seamless integration and smarter decision-making for cities of the future.</p>
-            </div>
+{{--            <div class="text-center pb-4">--}}
+{{--                <h2 class="fs-md-2 mt-3 text-capitalize">Smart Cities </h2>--}}
+{{--                <p class="mb-2">Transform urban mobility and drive sustainable growth with our comprehensive ITS--}}
+{{--                    solutions</p>--}}
+{{--                <p> that enable seamless integration and smarter decision-making for cities of the future.</p>--}}
+{{--            </div>--}}
             <div class="row align-items-center">
                 <!-- option-one -->
 
@@ -59,7 +59,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                         </p>
 
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.radar.speed.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.radar.speed.signs')}}" class="btn btn-primary text-uppercase rounded-2">BUY NOW</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -83,7 +83,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                         </p>
 
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.portable.variable.message.signs')}}" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -112,7 +112,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                         </p>
 
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                            <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -141,7 +141,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                         Explore our range of LED Tickers and discover how they can help you engage your audience, increase visibility, and enhance your brand image.
                       </p>
                         <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                            <button class="btn btn-primary text-uppercase rounded-2">KNOW MORE</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -170,9 +170,9 @@ that enable seamless integration and smarter decision-making for cities of the f
                         </div>
                         <div class="mt-4">
                             <p class="mb-2">Radar Speed Sign </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
+                            <p class="">Display System</p>
                             <a href="{{route('customer.radar.speed.signs')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid">
                             </a>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ that enable seamless integration and smarter decision-making for cities of the f
                             <p class="mb-2">Portable Variable Message Sign </p>
                             <p>(PVMS) </p>
                             <a href="{{route('customer.portable.variable.message.signs')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid">
                             </a>
                         </div>
                     </div>
@@ -197,10 +197,10 @@ that enable seamless integration and smarter decision-making for cities of the f
                             <img src="{{asset('assets/images/solutions/vms_smart.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
-                            <p class="mb-2">Variable Message Sign (VMS) </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
+                            <p class="mb-2">Variable Message Sign</p>
+                            <p class="">(VMS)</p>
                             <a href="{{route('customer.variable.message')}}">
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Variable Message Sign (VMS)" class="img-fluid mt-5">
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Variable Message Sign (VMS)" class="img-fluid ">
                             </a>
                         </div>
                     </div>
@@ -211,9 +211,9 @@ that enable seamless integration and smarter decision-making for cities of the f
                             <img src="{{asset('assets/images/solutions/led_ticker.webp') }}" alt="not-found" class="img-fluid">
                         </div>
                         <div class="mt-4">
-                            <p class="mb-2">LED Tickers </p>
-                            <p class="visibility-hidden">Display System (PIDS)</p>
-                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid mt-5">
+                            <p class="">LED Tickers </p>
+                            <p class="">Display System (PIDS)</p>
+                            <img src="{{asset('assets/customer/images/next-bus.png') }}" alt="Not Found" class="img-fluid">
                         </div>
                     </div>
                 </div>

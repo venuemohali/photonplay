@@ -31,14 +31,14 @@ real-time data, enhanced safety features, and improved passenger experience.",
     </section>
 
     <!-- Multiple Size Options-start -->
-    <section class="option-chose veriants">
+    <section class="option-chose veriants p-1 m-1">
         <div class="container option-chose-rows">
-            <div class="text-center pb-4">
-                <h2 class="fs-md-2 mt-3">Transit </h2>
-                <p class="mb-2">Revolutionize public transportation systems with our advanced ITS solutions that offer
-                </p>
-                <p>real-time data, enhanced safety features, and improved passenger experience.</p>
-            </div>
+{{--            <div class="text-center pb-4">--}}
+{{--                <h2 class="fs-md-2 mt-3">Transit </h2>--}}
+{{--                <p class="mb-2">Revolutionize public transportation systems with our advanced ITS solutions that offer--}}
+{{--                </p>--}}
+{{--                <p>real-time data, enhanced safety features, and improved passenger experience.</p>--}}
+{{--            </div>--}}
             <div class="row align-items-center">
                 <!-- option-one -->
 
@@ -57,8 +57,8 @@ real-time data, enhanced safety features, and improved passenger experience.",
                             <li> Bus</li>
                             <li> Rail Transits</li>
                         </ul>
-                        <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <a href="{{route('customer.pasenger.information.display.system')}}" class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</a>
+                        <div class="d-block d-flex align-items-center justify-content-between dotted-imagess">
+                            <a href="{{route('customer.pasenger.information.display.system')}}" class="btn btn-primary text-uppercase rounded-2">KNOW MORE</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -82,8 +82,8 @@ real-time data, enhanced safety features, and improved passenger experience.",
                         <p style="text-align: justify;">
                          advanced ITS technology to enhance the efficiency and safety of your bus transportation system. Let us help you transform your transit system with our innovative and reliable Bus Signs.
                      </p>
-                        <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
-                            <button class="btn btn-primary text-uppercase rounded-2">EXPLORE NOW</button>
+                        <div class="d-block  d-flex align-items-center justify-content-between dotted-imagess">
+                            <button class="btn btn-primary text-uppercase rounded-2">KNOW MORE</button>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid" width="80">
                         </div>
                     </div>
@@ -100,7 +100,7 @@ real-time data, enhanced safety features, and improved passenger experience.",
     </section>
     <!-- Multiple Size Options-end -->
     <!--system-bus-start  -->
-    <section class="bus-sign">
+    <section class="bus-sign" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

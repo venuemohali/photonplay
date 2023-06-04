@@ -54,7 +54,10 @@
       bottom: 50px;
       right: 20px;
       z-index: 99;">
-    <i class="bi bi-arrow-up-circle" style="font-size: 36px;"></i>
+    <span class="bg-white">
+
+    </span>
+    <i class="bi bi-arrow-up-circle bg-white text-primary p-2" style="font-size: 36px;border-radius: 20px 20px 20px 20px;"></i>
 </a>
 <div>
 <header class="header bg-white py-3 sticky-top">

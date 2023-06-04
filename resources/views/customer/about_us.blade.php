@@ -11,11 +11,11 @@ $seo_meta=[
     <!-- header-end -->
     <!-- banner-text-start -->
     <section class="pt-0 pb-sm-4 pb-lg-5">
-        <div class="banner ">
+        <div class="banner">
             <div class="about-wrapper d-flex justify-content-center align-items-center">
                <div>
-                   <h1 class="text-white text-center"> About us</h1>
-                   <h6 class="text-uppercase text-white text-center">Driving Smarter Transportation Solutions for 16+ Years</h6>
+                   <h1 class="text-white text-center " style="text-shadow: black 2px 2px;"> About us</h1>
+                   <h6 class="text-uppercase text-white text-center "  style="text-shadow: black 1px 1px;" >Driving Smarter Transportation Solutions for 16+ Years</h6>
                </div>
 
             </div>
