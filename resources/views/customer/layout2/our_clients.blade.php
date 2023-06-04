@@ -13,7 +13,7 @@ $clients = Client::get();
                    @for($i=0;$i<2;$i++)
                     @forelse ($clients as $client)
                     <div>
-                        <div class="px-2 branding-diss shadow-lg" id="{{$client->index}}">
+                        <div class="px-2 branding-diss shadow-lg border-2" id="{{$client->index}}">
                             <img src="{{asset('storage/'.$client->image)}}" class="d-block mx-auto" />
                         </div>
                     </div>
