@@ -2239,6 +2239,15 @@ input:focus {
     border-radius: 10px;
 }
 
+.closeImage {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
 .inner-banner-bg::before {
     content: "";
     position: absolute;
