@@ -59,7 +59,7 @@ $seo_meta=[
                                         </div>
 
 
-                                        <div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
+                                        <div id="modalOverlay" class="modal-overlay" onclick="hideModal()"  style="height: 500px;width: 500px;">
                                             <div id="modalContent" class="modal-content">
                                                 <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image" class="image-size">
                                             </div>
