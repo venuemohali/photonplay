@@ -15,22 +15,22 @@ $seo_meta=[
     <section class="banner-sec-smart-city py-5">
         <div class="container">
             <div class="slider-content">
-                <div class=" m-auto" >
-                    <img src="{{ asset('assets/customer/images/banner-image-smart-city.png') }}" alt="alt"
-                        class="d-block mx-auto img-fluid" >
-                    <div class="d-flex mt-4 justify-content-center gap-3 align-items-end">
-                        <img src="{{ asset('assets/customer/images/zero-mentence.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid " >
-                        <img src="{{ asset('assets/customer/images/dawrka.png') }}" alt="alt"
-                            class="d-block mx-auto img-fluid "  style="height: 80px;">
+
+                <div class="imaged m-auto">
+                    <div class="city-wrap">
+                        <h2 class=" text-white fw-normal mb-1">Variable Message Signs (VMS)</h2>
+                        <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
+                            <br>LOCAL SPEED LIMIT</h5>
+                        <a  href="#inquiry" class="btn btn-primary rounded-0 p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
                     </div>
+                    <div class=" m-auto " >
+                        <img src="{{ asset('assets/customer/images/vms_land.webp') }}" alt="alt"
+                             class="d-block mx-auto img-fluid product-feature-model-image" >
+                    </div>
+{{--                    <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block img-fluid h-75 " >--}}
                 </div>
-                <div class="text-center mt-4 pt-3">
-                    <h2 class="text-uppercase fs-2 text-white fw-normal">Variable Message Signs (vms)</h2>
-                    <h6 class="text-white">Highly visible and innovative, creating instant awareness of local speed
-                        limit</h6>
-                    <a href="#inquiry" class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
-                </div>
+
+
             </div>
         </div>
     </section>
