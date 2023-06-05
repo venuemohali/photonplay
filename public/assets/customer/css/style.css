@@ -2243,11 +2243,9 @@ input:focus {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
-    color: darkred;
-    padding: 1px;
-    background-color: whitesmoke;
+    color: #fff;
     cursor: pointer;
 }
 .inner-banner-bg::before {
