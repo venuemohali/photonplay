@@ -97,10 +97,13 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
             <div class="row justify-content-center" id="inquiry">
                 <div class="col-lg-10">
                     <div class="inner-map" >
-                        <iframe class="w-75 py-5"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13686.924581218746!2d75.88485906787676!3d30.950072544206556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a84a965aaa167%3A0x5b0c9401857ab0e8!2sMeharban%2C%20Punjab%20141007!5e0!3m2!1sen!2sin!4v1681919215477!5m2!1sen!2sin"
-                            height="700" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                       <iframe class="w-75 py-5" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=23%20Overstone%20road,%20Georgetown,%20Ontario,%20L7G%200M9%20Canada+(Photonplay%20Systems%20Ltd)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"  height="700" style="border:0;" allowfullscreen="" loading="lazy"
+                               referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+{{--                        <iframe class="w-75 py-5"--}}
+{{--                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13686.924581218746!2d75.88485906787676!3d30.950072544206556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a84a965aaa167%3A0x5b0c9401857ab0e8!2sMeharban%2C%20Punjab%20141007!5e0!3m2!1sen!2sin!4v1681919215477!5m2!1sen!2sin"--}}
+{{--                            height="700" style="border:0;" allowfullscreen="" loading="lazy"--}}
+{{--                            referrerpolicy="no-referrer-when-downgrade"></iframe>--}}
                             <form action="{{route('customer.inquery.submit')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
@@ -169,15 +172,6 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                             <div class="row">
                             <!-- <div class="col-lg- mb-5"> -->
 
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
-                                    <h5 class="text-upercase"><u>AUSTRALIA</u></h5>
-                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
-                                        <p class=""> Photonplay Systems Pty Ltd.
-                                            <br> 4 Perrin circuit Tarneit, Vic-3029 Australia.</p></div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/> +61(02) 8015 2100</span>
-                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
-                                </div>
-
 
                                 <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
                                     <h5 class="text-upercase"><u>CANADA</u></h5>
@@ -185,6 +179,27 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                         <p class="">Photonplay Systems Ltd. <br>23 Overstone road, Georgetown, Ontario, <br> L7G 0M9 Canada.Photonplay Systems Ltd</p>
                                     </div>
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>  (800) 966-9329 </span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+
+
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
+                                    <h5 class="text-upercase"><u>INDIA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
+                                        <p class="">Photonplay Systems (P) Ltd.
+                                            <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
+                                    </div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+91 989 969 0347</span>
+                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
+                                </div>
+
+
+                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
+                                    <h5 class="text-upercase"><u>AUSTRALIA</u></h5>
+                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
+                                        <p class=""> Photonplay Systems Pty Ltd.
+                                            <br> 4 Perrin circuit Tarneit, Vic-3029 Australia.</p></div>
+                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/> +61(02) 8015 2100</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
@@ -200,16 +215,6 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
                                       <br> Hilton 157 2040 klofta Ullensaker municipality</p>
                                         </div>
                                     <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>   +44-203-608-7507</span>
-                                    <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
-                                </div>
-
-                                <div class="col-lg-6 col-md-12 mb-lg-5 mb-md-4 mb-4">
-                                    <h5 class="text-upercase"><u>INDIA</u></h5>
-                                    <div class="d-flex align-items-start"> <img src="{{asset('assets\images\pin-map.png')}}"  class="me-2 mb-2"/>
-                                        <p class="">Photonplay Systems (P) Ltd.
-                                            <br> Advant Navis Business Park, B 1010, Noida-Greater Noida Expy, <br> Sector 142, Noida, Uttar Pradesh 201305, India</p>
-                                    </div>
-                                    <span><img src="{{asset('assets\customer\images\phone.svg')}}" class="me-2 mb-2"/>+91 989 969 0347</span>
                                     <span class="d-block"><img src="{{asset('assets\customer\images\message.png')}}" class="me-2"/> sales@photonplay.com</span>
                                 </div>
 
