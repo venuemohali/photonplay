@@ -2248,6 +2248,12 @@ input:focus {
     color: #fff;
     cursor: pointer;
 }
+
+.image-size{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
 .inner-banner-bg::before {
     content: "";
     position: absolute;
