@@ -796,6 +796,15 @@ a.nav-link.dropdown-toggle.show img,
     padding-top: 0px;
 }
 
+.product-feature-model-image{
+    max-height: 350px;
+}
+
+.get-quote-button-header-model{
+    width: 140px;
+    height: 50px;
+}
+
 .accordion-body code span {
     color: #000;
 }

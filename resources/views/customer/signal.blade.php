@@ -13,13 +13,23 @@ $seo_meta=[
     <section class="banner-sec-smart-city py-4">
         <div class="container">
             <div class="slider-content">
-                <div class="image">
-                    <img src="{{asset('assets/customer/images/Variable_Message_Signs.png')}}" alt="alt" class="d-block mx-auto img-fluid">
-                </div>
-                <div class="text-center">
-                    <h4 class="text-white">SIGNAGES</h4>
-                    <p class="text-white">Highly visible and innovative, creating instant awareness of local speed limit</p>
-                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>
+{{--                <div class="image">--}}
+{{--                    <img src="" alt="alt" class="d-block mx-auto img-fluid">--}}
+{{--                </div>--}}
+{{--                <div class="text-center">--}}
+{{--                    <h4 class="text-white">SIGNAGES</h4>--}}
+{{--                    <p class="text-white">Highly visible and innovative, creating instant awareness of local speed limit</p>--}}
+{{--                    <a  href="#inquiry" class="btn btn-primary rounded-0 ">GET QUOTE</a>--}}
+{{--                </div>--}}
+
+                <div class="imaged m-auto">
+                    <div class="city-wrap">
+                        <h2 class=" text-white fw-normal mb-1">SIGNAGES</h2>
+                        <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
+                            <br>LOCAL SPEED LIMIT</h5>
+                        <a  href="#inquiry" class="btn btn-primary rounded-0 p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
+                    </div>
+                    <img src="{{asset('assets/customer/images/Variable_Message_Signs.png')}}"  alt="alt" class="d-block img-fluid h-75 product-feature-model-image" >
                 </div>
             </div>
         </div>
