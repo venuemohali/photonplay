@@ -2054,8 +2054,31 @@ input:focus {
 }
 
 /* Smart city */
-.banner-sec-smart-city {
+/*.banner-sec-smart-city {*/
+/*    background-image: url(../images/aerial-view-shanghai-overpass-night.png);*/
+/*}*/
+
+
+
+.banner-sec-smart-city{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.banner-sec-smart-city::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url(../images/aerial-view-shanghai-overpass-night.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur intensity as desired */
+    z-index: -1;
 }
 
 .thumb-image-item {
@@ -2190,11 +2213,33 @@ input:focus {
     max-width: 420px;
 }
 
-.inner-banner-bg {
-    background-image: url(../images/inner-banner-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+/*.inner-banner-bg {*/
+/*    background-image: url(../images/inner-banner-bg.png);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
+.inner-banner-bg{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 }
+
+
+.inner-banner-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/inner-banner-bg.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur intensity as desired */
+    z-index: -1;
+}
+
 
 .post-item .post-info {
     border-bottom: 1px solid #6c6c6c;
