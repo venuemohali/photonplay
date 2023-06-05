@@ -779,11 +779,12 @@ a.nav-link.dropdown-toggle.show img,
     background: var(--primary-color);
     min-height: 115px;
     min-width: 180px;
-    font-size: 15px;
+    font-size: 18px;
     width: 20%;
     font-weight: 600;
     line-height: 35px;
     text-align: center;
+    box-shadow: 5px 10px #888888;
 }
 
 /* accordian-start */
