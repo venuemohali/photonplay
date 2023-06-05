@@ -2246,6 +2246,8 @@ input:focus {
     font-size: 24px;
     font-weight: bold;
     color: darkred;
+    padding: 2px;
+    background-color: whitesmoke;
     cursor: pointer;
 }
 .inner-banner-bg::before {
