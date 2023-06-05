@@ -2226,6 +2226,19 @@ input:focus {
 }
 
 
+/* ==================================== Scroll Bar ==================================== */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #036eb1;;
+    border-radius: 10px;
+}
+
 .inner-banner-bg::before {
     content: "";
     position: absolute;
