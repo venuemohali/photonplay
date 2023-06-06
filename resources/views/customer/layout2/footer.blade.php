@@ -167,13 +167,13 @@ $blogs = Blog::select('slug','title')->take(4)->get();
 
 <script>
     function showModal(imgurl) {
-        alert("hello");
+        alert("hello chnaged");
         var modalOverlay = document.getElementById("modalOverlay");
         var modalContent = document.getElementById("modalContent");
         var image = document.getElementById("myImage");
         image.src=imgurl;
-        image.style.width="500";
-        image.style.height="500";
+        image.style.width="500px";
+        image.style.height="500px";
         modalOverlay.style.display = "block";
         image.style.display = "block";
         modalContent.style.width = image.width + "px";
