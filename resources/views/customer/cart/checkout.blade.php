@@ -85,6 +85,9 @@
                     </ul>
 
                     <input type="hidden" name="grand_total" value="{{$grand_total}}">
+                    <input type="hidden" name="cart_subtotal" value="{{$total}}">
+                    <input type="hidden" name="gst" value="{{$gst}}">
+                    <input type="hidden" name="shipping" value="{{$shipping}}">
                     <button type="submit" id="checkout-button" class="btn btn-primary">Checkout & Pay</button>
                 </form>
 
