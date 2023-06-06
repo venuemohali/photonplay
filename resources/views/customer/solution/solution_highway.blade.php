@@ -35,7 +35,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
     </section>
 
     <!-- Multiple Size Options-start -->
-    <section class="option-chose veriants ">
+    <section class="option-chose veriants mb-0 pb-0">
         <div class="container option-chose-rows">
 {{--            <div class="text-center pb-4">--}}
 {{--                <h2 class="fs-md-2 mt-3 text-capitalize">Highways Solutions </h2>--}}
@@ -172,12 +172,12 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
     </section>
     <!-- Multiple Size Options-end -->
     <!--system-bus-start  -->
-    <section class="bus-sign">
+    <section class="bus-sign mt-0 pt-0">
         <div class="container">
             <div class="responsive">
 
                 <div class="text-center mx-2">
-                    <div class="inner-bus text-center py-4 px-3 h-100">
+                    <div class="inner-bus text-center px-3 h-100">
                         <div class="bus-radious">
                             <img src="{{asset('assets/images/solutions/vms_squre.webp') }}" alt="VASD" class="img-fluid m-auto">
                         </div>
