@@ -58,9 +58,6 @@ $seo_meta=[
                                             <img src="{{asset('assets/customer/images/zoom-in.png')}}" alt="" onclick="showModal('{{asset('storage/'.$image->image)}}')" class="zoom-in">
                                         </div>
 
-
-
-
                                     </div>
                                     @empty
 
