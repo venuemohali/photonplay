@@ -63,8 +63,9 @@ ITS solutions designed for optimal safety and efficiency..",
 
             <div class="row align-items-center">
                 <!-- option-one -->
-                <h2 class="fs-md-2 mt-3 text-capitalize text-center">Our Products</h2>
-                <div class="col-lg-6">
+                <h2 class="title-text-h2  m-3 text-capitalize text-center ">Our Products </h2>
+
+                <div class="col-lg-6 mt-3">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Variable Message Sign (VMS)</h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit

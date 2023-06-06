@@ -48,8 +48,8 @@ $seo_meta=[
                                         <p>120+ Experts, One Mission: To Deliver Outstanding Results For You</p>
                                     </div>
                                     <div class="order-address text-center bg-white p-4 border px-5 border-top-0">
-                                        <h1 class="fw-bold text-dark">$82M</h1>
-                                        <p class="mb-0">An Accomplished Company with a Turnover of $82 Million</p>
+                                        <h1 class="fw-bold text-dark">50+</h1>
+                                        <p class="mb-0">Endless Choices, 50+ Products to Explore</p>
                                     </div>
                                 </div>
                             </div>

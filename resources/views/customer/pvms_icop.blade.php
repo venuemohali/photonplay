@@ -156,7 +156,7 @@ $seo_meta=[
             <h2 class="fs-2 mt-3">APPLICATIONS</h2>
         </div>
         <div class="d-flex mb-5 message-box gap-3 mt-3 flex-xl-nowrap flex-wrap justify-content-center">
-            <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Cities
+            <div class="app-box  p-2 text-white  d-flex align-items-center justify-content-center"> Cities
                 and Counties</div>
             <div class="app-box p-2 text-white  d-flex align-items-center justify-content-center"> Highways
                 Constructions</div>
@@ -168,7 +168,7 @@ $seo_meta=[
                 Areas</div>
         </div>
         <div class="text-center">
-            <a href="#inquiry" class="btn btn-primary">Get Quote</a>
+            <a href="#inquiry" class="btn-primary-rounded">Get Quote</a>
         </div>
     </div>
 </section>

@@ -50,8 +50,9 @@ real-time data, enhanced safety features, and improved passenger experience.",
             </div>
             <div class="row align-items-center">
                 <!-- option-one -->
-                <h2 class="fs-md-2 mt-3 text-capitalize text-center mb-3">Our Products</h2>
-                <div class="col-lg-6">
+                <h2 class="title-text-h2  m-3 text-capitalize text-center ">Our Products </h2>
+
+                <div class="col-lg-6 mt-3">
                     <div class="multiple-option pb-0">
                         <h4>Passenger Information Display System <br> (PIDS)</h4>
                      <p style="text-align: justify;">

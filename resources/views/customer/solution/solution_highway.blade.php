@@ -43,7 +43,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
 {{--                </p>--}}
 {{--                <p> tailored to highways and tunnels.</p>--}}
 {{--            </div>--}}
-            <div class="d-flex justify-content-center ">
+            <div class="d-flex justify-content-center mb-3 ">
                 <div class="w-75">
                     <p class="text-center" >
                         Derive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow, and enhance road safety. our system provide real time information and analytics to enable  better decision-making and efficient operations.
@@ -51,10 +51,11 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
 
                 </div>
             </div>
-            <div class="row align-items-center ">
+            <div class="row align-items-center">
                 <!-- option-one -->
-                <h2 class="fs-md-2 mt-3 text-capitalize text-center">Our Products </h2>
-                <div class="col-lg-6">
+                <h2 class="title-text-h2  m-3 text-capitalize text-center ">Our Products </h2>
+
+                <div class="col-lg-6 mt-3">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Variable Message Sign (VMS)</h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit

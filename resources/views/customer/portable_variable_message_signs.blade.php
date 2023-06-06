@@ -8,76 +8,129 @@ $seo_meta=[
 
 @include('customer.layout2.header')
 <!-- banner-start -->
-    <section class="banner-threee position-relative pt-0">
-        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="false" data-interval="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="banner-three">
-                        <div class=" d-flex align-items-center justify-content-around h-100">
-                            <div class="slider-heading">
-                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="banner-three">
-                        <div class=" d-flex align-items-center justify-content-around h-100">
-                            <div class="slider-heading">
-                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="banner-three">
-                        <div class=" d-flex align-items-center justify-content-around h-100">
-                            <div class="slider-heading">
-                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->
+
+<section class="banner-inner pt-0 pb-0">
+    <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            {{--                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"--}}
+            {{--                    aria-label="Slide 2"></button>--}}
+            {{--                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"--}}
+            {{--                    aria-label="Slide 3"></button>--}}
+        </div>
+        <div class="carousel-inner">
+            @for ($i=1; $i<=3; $i++)
+                <div class="carousel-item active">
+                    <div class="banner">
+                        <div
+                            class="banner-image d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-around p-2">
+                            <div class="position-relative heading-banner ">
+                                <h2 class="">Portable Variable
+                                    Message Signs (VMS)
+                                    <p class="mb-0"><span> MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span></p>
+                                </h2>
+                                <div class="fs-6 mt-md-4">
+                                    <p class="text-dark">No. 1 in Traffic Calming Solution</p>
+                                    <a  href="#inquiry"  class="btn-primary-rounded">GET QUOTE</a>
+                                </div>
+
+                                <div class="zigzack d-flex justify-content-start"><img src="{{asset('assets\customer\images\ziczac.png')}}"
+                                                                                       class="img-fluid d-none d-md-block" alt="not-found"></div>
+                                <div
+                                    class="circle-dotted position-absolute w-100 d-none d-md-flex align-items-center justify-content-start">
+                                    <img src="{{asset('assets\customer\images\circles.png')}}" alt="Not Found" class="img-fluid">
+                                </div>
                             </div>
+                            <!-- <div class="position-absolute top-50 start-0 translate-middle"> -->
+                            <img src="{{asset('assets\customer\images\MTO.png')}}" alt="Not Found" class="img-fluid mt-3 mt-sm-0">
+                            <!-- </div> -->
+                            <img src="{{asset('assets\customer\images\circlecolor.png')}}" alt="Not Found"
+                                 class="img-fluid d-none d-md-block">
+                            <!-- <img src="./assets/images/sky-sights.jpg" alt="Not Found"> -->
                         </div>
+
                     </div>
                 </div>
-            </div>
+            @endfor
+
         </div>
-        <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button> -->
-        </div>
-    </section>
+
+    </div>
+</section>
+
+
+{{--    <section class="banner-threee position-relative pt-0">--}}
+{{--        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="false" data-interval="true">--}}
+{{--            <div class="carousel-indicators">--}}
+{{--                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"--}}
+{{--                    aria-current="true" aria-label="Slide 1"></button>--}}
+{{--                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"--}}
+{{--                    aria-label="Slide 2"></button>--}}
+{{--                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"--}}
+{{--                    aria-label="Slide 3"></button>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-inner">--}}
+{{--                <div class="carousel-item active">--}}
+{{--                    <div class="banner-three">--}}
+{{--                        <div class=" d-flex align-items-center justify-content-around h-100">--}}
+{{--                            <div class="slider-heading">--}}
+{{--                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="carousel-item">--}}
+{{--                    <div class="banner-three">--}}
+{{--                        <div class=" d-flex align-items-center justify-content-around h-100">--}}
+{{--                            <div class="slider-heading">--}}
+{{--                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
+{{--                <div class="carousel-item">--}}
+{{--                    <div class="banner-three">--}}
+{{--                        <div class=" d-flex align-items-center justify-content-around h-100">--}}
+{{--                            <div class="slider-heading">--}}
+{{--                                <!-- <img src="./assets/images/MTO.png" alt="Not Found" class="img-fluid"> -->--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <button class="carousel-control-prev" data-bs-target="#carouselExampleDark" type="button"--}}
+{{--            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">--}}
+{{--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
+{{--            <span class="visually-hidden">Previous</span>--}}
+{{--        </button>--}}
+{{--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"--}}
+{{--            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">--}}
+{{--            <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
+{{--            <span class="visually-hidden">Next</span>--}}
+{{--        </button>--}}
+{{--        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">--}}
+{{--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
+{{--            <span class="visually-hidden">Previous</span>--}}
+{{--        </button>--}}
+{{--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">--}}
+{{--            <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
+{{--            <span class="visually-hidden">Next</span>--}}
+{{--        </button> -->--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- Photon play radar-start -->
     <section class="portable px-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 ">
-                    <div class="radar-icop">
-                        <h1 class="mb-">Portable Variable <br> Message Signs (VMS) </h1>
-                        <span class="text-uppercase">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span>
-                        <p class="mt-4 mb-lg-0 mb-5">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="radar-icop w-75 ">
+{{--                        <h1 class="mb-">Portable Variable <br> Message Signs (VMS) </h1>--}}
+{{--                        <span class="text-uppercase">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT</span>--}}
+                        <p class="mt-4 mb-lg-0 mb-5 text-center">
                             Photonplay's Portable Variable Message Signs (VMS) are one of the key elements of dynamic
                             traffic management systems. Depending on the traffic situation, signs are efficiently used
                             to warn and guide about traffic congestion, routing information, speed limits, road work
@@ -85,12 +138,12 @@ $seo_meta=[
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 ">
-                    <div class="radar-icop-images d-flex justify-content-center align-items-center">
-                        <div class="bg-colored"></div>
-                        <img src="{{asset('assets\customer\images\converted.png')}}" alt="Not Found" class="img-fluid bg-white">
-                    </div>
-                </div>
+{{--                <div class="col-lg-6 ">--}}
+{{--                    <div class="radar-icop-images d-flex justify-content-center align-items-center">--}}
+{{--                        <div class="bg-colored"></div>--}}
+{{--                        <img src="{{asset('assets\customer\images\converted.png')}}" alt="Not Found" class="img-fluid bg-white">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>

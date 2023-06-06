@@ -37,6 +37,16 @@ that enable seamless integration and smarter decision-making for cities of the f
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants">
         <div class="container option-chose-rows">
+
+            <div class="d-flex justify-content-center ">
+                <div class="w-75">
+                    <p class="text-center" >
+                        Derive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow, and enhance road safety. our system provide real time information and analytics to enable  better decision-making and efficient operations.
+                    </p>
+
+                </div>
+            </div>
+
 {{--            <div class="text-center pb-4">--}}
 {{--                <h2 class="fs-md-2 mt-3 text-capitalize">Smart Cities </h2>--}}
 {{--                <p class="mb-2">Transform urban mobility and drive sustainable growth with our comprehensive ITS--}}
@@ -45,8 +55,9 @@ that enable seamless integration and smarter decision-making for cities of the f
 {{--            </div>--}}
             <div class="row align-items-center">
                 <!-- option-one -->
+                <h2 class="title-text-h2  m-3 text-capitalize text-center ">Our Products </h2>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6 mt-3">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Radar Speed Sign</h4>
                         <h6 class="mb-3">Highly visible and innovative, creating instant awareness of local speed limit
