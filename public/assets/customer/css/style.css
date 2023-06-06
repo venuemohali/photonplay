@@ -2087,7 +2087,9 @@ input:focus {
     background-color: white;
     margin-left: 1px;
     border: 1px;
-    width: 200px;height: 200px;
+    width: 200px;
+    height: 200px;
+    padding: 1px;
 }
 
 .thumb-image-item .zoom-in {
