@@ -68,7 +68,7 @@ $seo_meta=[
 
                                         <div id="modalOverlay" class="modal-overlay" onclick="hideModal()">
                                             <div id="modalContent" class="modal-content">
-                                                <span class="closeImage btn btn-danger"  onclick="hideModal()">x</span> <!-- Add the close symbol here -->
+                                                <span class="closeImage "  onclick="hideModal()">x</span> <!-- Add the close symbol here -->
                                                 <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image" class="image-size">
                                             </div>
                                         </div>
