@@ -86,7 +86,7 @@
                                 <ul class="order-details p-0 mb-5">
                                     <li class="d-flex justify-content-between border-0 ">
                                         <span class="text-amount text-uppercase">Address : </span>
-                                        <span class="text">{{$orders->address}}</span>
+                                        <span class="text">{{$orders->billing_street .' '. $orders->billing_flat_suite .' '. $orders->billing_city .' '. $orders->billing_state .' '. $orders->billing_country .' '.( $orders->billing_postcode)}}</span>
                                     </li>
                                     <li class="d-flex justify-content-between border-0">
                                         <span class="text-amount text-uppercase">email : </span>
@@ -95,21 +95,6 @@
                                     <li class="d-flex justify-content-between border-0">
                                         <span class="text-amount text-uppercase">phone : </span>
                                         <span class="text">{{$orders->user->phone_number}}</span>
-                                    </li>
-                                </ul>
-                                <ul class="order-details p-0 mb-5">
-                                    <h3 class="text-uppercase">billing details</h3>
-                                    <li class="d-flex justify-content-between border-0 ">
-                                        <span class="text-amount text-uppercase">Name : </span>
-                                        <span class="text">Customer Address</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between border-0">
-                                        <span class="text-amount text-uppercase">Email : </span>
-                                        <span class="text">info@companyname.com</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between border-0">
-                                        <span class="text-amount text-uppercase">phone : </span>
-                                        <span class="text">(+000) 00000 00000</span>
                                     </li>
                                 </ul>
                             </div>

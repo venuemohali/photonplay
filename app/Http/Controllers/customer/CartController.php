@@ -66,7 +66,7 @@ class CartController extends Controller
     }
 
     public function addShoppingBag(Request $request){
-        // dd($request->all());
+//         dd($request->all());
         $specPrice = 0;
         if(isset($request->dynamic_spec)){
             foreach($request->dynamic_spec as $specs){
@@ -156,6 +156,7 @@ class CartController extends Controller
 
     public function placeOrder(Request $request){
         try{
+//            dd($request->all());
             $orderId ='#'.mt_rand(1111, 99999);
             $stripe = Stripe\Stripe::setApiKey(config('services.stripe.stripe_secret'));
                header('Content-Type: application/json');
