@@ -18,6 +18,7 @@ $seo_meta=[
                     <div class="radar-icop">
 {{--                        <h6 class="fs-6 mb-3">photonplay’s</h6>--}}
 {{--                        <h1 class="mb-">RADAR SPEED SIGN <br> iCop Series </h1>--}}
+
                         <h4 class="text-uppercase text-center">MOST CAPABLE AND HIGHLY-EQUIPPED RADAR SPEED SIGN EVER BUILT !</h4>
                         <p class="mt-4">
                             The sign has all the standard features combined in one product to make it industry's best

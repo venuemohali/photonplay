@@ -971,7 +971,7 @@ div#accordionFlushExample1 {
     background-image: url("../images/banner-radar.webp");
     background-size: cover;
     background-position: center;
-    filter: blur(4px); /* Adjust the blur intensity as desired */
+    filter: blur(8px); /* Adjust the blur intensity as desired */
     z-index: -1;
 }
 
