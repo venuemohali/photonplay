@@ -2084,6 +2084,10 @@ input:focus {
 .thumb-image-item {
     position: relative;
     margin-right: 10px;
+    background-color: white;
+    margin-left: 1px;
+    border: 1px;
+    width: 200px;height: 200px;
 }
 
 .thumb-image-item .zoom-in {
