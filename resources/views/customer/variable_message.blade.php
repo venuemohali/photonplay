@@ -12,16 +12,16 @@ $seo_meta=[
 
     <!-- iCop Series Features Start -->
     <!-- Banner sec -->
-    <section class="banner-sec-smart-city py-5">
-        <div class="container">
+    <section class="banner-sec-smart-city py-5" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
+        <div class="container" >
             <div class="slider-content">
 
                 <div class="imaged m-auto">
                     <div class="city-wrap">
-                        <h2 class=" text-white fw-normal mb-1">Variable Message Signs (VMS)</h2>
+                        <h2 class=" text-white fw-normal mb-1 title-text-h2">Variable Message Signs (VMS)</h2>
                         <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
                             <br>LOCAL SPEED LIMIT</h5>
-                        <a  href="#inquiry" class="btn btn-primary rounded-0 p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
+                        <a  href="#inquiry" class="btn-primary-rounded  p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
                     </div>
                     <div class=" m-auto " >
                         <img src="{{ asset('assets/customer/images/vms_land.webp') }}" alt="alt"
@@ -41,7 +41,7 @@ $seo_meta=[
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
                     <h2 class="text-center mb-2"> Variable Message Signs (VMS) </h2>
-                    <div class="shadow-lg p-4 m-2">
+                    <div class="p-4 m-2">
                         <p>
                             Viewed by millions of eyes every day, guiding way to millions of motorist to drive them back
                             home safely every day, Photonplay is contributing its part to the humanity in it own way by
