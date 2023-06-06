@@ -3,15 +3,15 @@
 <body>
 
     <!-- Banner sec -->
-    <section class="banner-sec-smart-city py-4">
+    <section class="banner-sec-smart-city py-4" >
         <div class="container">
             <div class="slider-content ">
                 <div class="imaged m-auto">
                     <div class="city-wrap">
-                        <h2 class=" text-white fw-normal mb-1">{{$page->title}}</h2>
+                        <h2 class=" text-white fw-normal mb-1 title-text-h2">{{$page->title}}</h2>
                         <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
                             <br>LOCAL SPEED LIMIT</h5>
-                        <a  href="#inquiry" class="btn btn-primary rounded-0 p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
+                        <a  href="#inquiry" class="btn-primary-rounded p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
                     </div>
                     <img src="{{asset('storage/'.$page->cover_image)}}"  alt="alt" class="d-block img-fluid h-75 product-feature-model-image" >
                 </div>
