@@ -59,16 +59,18 @@ $seo_meta=[
                                         </div>
 
 
-                                        <div id="modalOverlay" class="modal-overlay d-flex justify-content-center" onclick="hideModal()"  style="height: 500px;width: 500px;">
-                                            <div id="modalContent" class="modal-content">
-                                                <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image" class="image-size">
-                                            </div>
-                                        </div>
+
 
                                     </div>
                                     @empty
 
                                     @endforelse
+
+                                        <div id="modalOverlay" class="modal-overlay d-flex justify-content-center" onclick="hideModal()"  style="height: 500px;width: 500px;">
+                                            <div id="modalContent" class="modal-content">
+                                                <img id="myImage" src="{{asset('assets/customer/images/zoom-in.png')}}" alt="Image" class="image-size">
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
