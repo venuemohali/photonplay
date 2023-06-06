@@ -18,16 +18,30 @@ ITS solutions designed for optimal safety and efficiency..",
                 <div class="">
                     <div class="banner">
                         <div class="tunels-imageses p-2">
-                        <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
-                  <div>
-                  <h2 class="text-uppercase fs-2 text-white fw-normal">TUNNELS SOLUTIONS</h2>
-                    <h6 class="text-white mt-3">
-                    Navigate through tunnels with ease and confidence with our advanced
- <br> ITS solutions designed for optimal safety and efficiency.
-                    </h6>
-                      <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
-                  </div>
-                </div>
+                            <div class="text-center  d-flex align-items-center justify-content-center h-100" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
+                                <div class="d-flex justify-content-center ">
+                                    <div class="w-75">
+                                        <h1 class="text-uppercase text-white title-text-h1" >TUNNELS SOLUTIONS</h1>
+                                        <h6 class="text-white text-center mb-4" >
+                                            Navigate through tunnels with ease and confidence with our advanced
+                                            ITS solutions designed for optimal safety and efficiency.
+                                        </h6>
+                                        <a  href="#inquiry"  class="btn-primary-rounded">GET QUOTE</a>
+                                    </div>
+                                </div>
+                            </div>
+
+{{--                                <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">--}}
+{{--                                          <div>--}}
+{{--                                          <h2 class="text-uppercase fs-2 text-white fw-normal">TUNNELS SOLUTIONS</h2>--}}
+{{--                                            <h6 class="text-white mt-3">--}}
+{{--                                            Navigate through tunnels with ease and confidence with our advanced--}}
+{{--                                            <br> ITS solutions designed for optimal safety and efficiency.--}}
+{{--                                            </h6>--}}
+{{--                                              <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>--}}
+{{--                                          </div>--}}
+{{--                                </div>--}}
+
                         </div>
                     </div>
                 </div>
@@ -38,14 +52,18 @@ ITS solutions designed for optimal safety and efficiency..",
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants">
         <div class="container option-chose-rows">
-{{--            <div class="text-center pb-4">--}}
-{{--                <h2 class="fs-md-2 mt-3 text-capitalize">Tunnels solutions </h2>--}}
-{{--                <p class="mb-2">Navigate through tunnels with ease and confidence with our advanced ITS solutions </p>--}}
-{{--                <p> designed for optimal safety and efficiency.</p>--}}
-{{--            </div>--}}
+            <div class="d-flex justify-content-center ">
+                <div class="w-75">
+                    <p class="text-center" >
+                        Derive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow, and enhance road safety. our system provide real time information and analytics to enable  better decision-making and efficient operations.
+                    </p>
+
+                </div>
+            </div>
+
             <div class="row align-items-center">
                 <!-- option-one -->
-
+                <h2 class="fs-md-2 mt-3 text-capitalize text-center">Our Products</h2>
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Variable Message Sign (VMS)</h4>

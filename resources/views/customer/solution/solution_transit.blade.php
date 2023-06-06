@@ -40,15 +40,17 @@ real-time data, enhanced safety features, and improved passenger experience.",
     <!-- Multiple Size Options-start -->
     <section class="option-chose veriants p-1 mb-1 mt-4">
         <div class="container option-chose-rows">
-{{--            <div class="text-center pb-4">--}}
-{{--                <h2 class="fs-md-2 mt-3">Transit </h2>--}}
-{{--                <p class="mb-2">Revolutionize public transportation systems with our advanced ITS solutions that offer--}}
-{{--                </p>--}}
-{{--                <p>real-time data, enhanced safety features, and improved passenger experience.</p>--}}
-{{--            </div>--}}
+            <div class="d-flex justify-content-center ">
+                <div class="w-75">
+                    <p class="text-center" >
+                        Derive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow, and enhance road safety. our system provide real time information and analytics to enable  better decision-making and efficient operations.
+                    </p>
+
+                </div>
+            </div>
             <div class="row align-items-center">
                 <!-- option-one -->
-
+                <h2 class="fs-md-2 mt-3 text-capitalize text-center mb-3">Our Products</h2>
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4>Passenger Information Display System <br> (PIDS)</h4>
