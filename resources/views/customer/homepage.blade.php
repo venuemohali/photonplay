@@ -530,11 +530,12 @@ $seo_meta=[
 <!-- Contact form end -->
 
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form pt-3 inquiryform-backgroundsection " id="inquiry" >
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="com-md-3">
+    <section class="contact-form p-3 pt-4 inquiryform-backgroundsection " id="inquiry" >
+        <div class="d-flex justify-content-center align-items-center">
 
+        <div class="container">
+            <div class="row">
+                <div class="com-md-3">
                 </div>
                 <div class="col-md-6 mx-auto bg-primary mb-0 pb-0" >
                     <form action="{{route('customer.inquery.submit')}}" method="post">
@@ -576,6 +577,8 @@ $seo_meta=[
 {{--                    </div>--}}
 {{--                </div>--}}
             </div>
+        </div>
+
         </div>
     </section>
     <!-- team-members-start -->

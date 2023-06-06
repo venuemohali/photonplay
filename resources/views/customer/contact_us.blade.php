@@ -49,11 +49,21 @@ our product can work best for you, +1 (800) 966-9329 or sales@photonplay.com.",
      <!-- banner-text-start -->
      <section class="pt-0 pb-sm-4 pb-lg-5">
         <div class="banner">
-            <div class="about-wrapper">
-                <div class="about-wrapper d-flex justify-content-center align-items-center">
-                    <h1 class="text-dark soft-text text-white "  style="text-shadow: black 2px 2px;">Contact us</h1>
+
+            <div class="about-wrapper" >
+                <div class="d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
+                    <div >
+                        <h1 class="text-white text-center" style="font-size: 60px;"  > Contact us</h1>
+                    </div>
                 </div>
+
             </div>
+
+{{--            <div class="about-wrapper">--}}
+{{--                <div class="about-wrapper d-flex justify-content-center align-items-center">--}}
+{{--                    <h1 class="text-dark soft-text text-white "  style="text-shadow: black 2px 2px;">Contact us</h1>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
         <!-- </div> -->
     </section>
