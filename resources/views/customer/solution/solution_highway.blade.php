@@ -15,16 +15,19 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
 
             </div>
                     <div class="banner">
-                        <div class="highyway-imageses p-2" >
-                                <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
-                                <div>
-                          <h2 class="text-uppercase fs-2 text-white fw-normal" >Highways Solutions</h2>
-                            <h6 class="text-white">
-                            Experience improved traffic flow and safer journeys with our <br> cutting-edge ITS solutions tailored to highways and tunnels.
-                            </h6>
-                      <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
-                  </div>
-                </div>
+                        <div class="highyway-imageses" >
+                            <div class="text-center  d-flex align-items-center justify-content-center h-100" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
+                                   <div class="d-flex justify-content-center ">
+                                        <div class="w-75">
+                                          <h1 class="text-uppercase text-white title-text-h1" >Highways Solutions</h1>
+                                            <h6 class="text-white text-center mb-4" >
+                                                Experience improved traffic flow and safer journeys with our
+                                                cutting-edge ITS solutions tailored to highways and tunnels.
+                                            </h6>
+                                      <a  href="#inquiry"  class="btn-primary-rounded">GET QUOTE</a>
+                                        </div>
+                                   </div>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -32,7 +35,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
     </section>
 
     <!-- Multiple Size Options-start -->
-    <section class="option-chose veriants">
+    <section class="option-chose veriants ">
         <div class="container option-chose-rows">
 {{--            <div class="text-center pb-4">--}}
 {{--                <h2 class="fs-md-2 mt-3 text-capitalize">Highways Solutions </h2>--}}
@@ -40,9 +43,17 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
 {{--                </p>--}}
 {{--                <p> tailored to highways and tunnels.</p>--}}
 {{--            </div>--}}
-            <div class="row align-items-center">
-                <!-- option-one -->
+            <div class="d-flex justify-content-center ">
+                <div class="w-75">
+                    <p class="text-center" >
+                        Derive with confidence on the highways with our advanced ITS solutions designed to improve traffic flow, and enhance road safety. our system provide real time information and analytics to enable  better decision-making and efficient operations.
+                    </p>
 
+                </div>
+            </div>
+            <div class="row align-items-center ">
+                <!-- option-one -->
+                <h4 class="text-uppercase text-center mt-3" >Our Products</h4>
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Variable Message Sign (VMS)</h4>
@@ -56,7 +67,13 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                         <p style="text-align: justify;">
                             Explore our VMS product range and choose from our Standard VMS, Solar VMS, and Smart City VMS solutions. Each of our solutions is designed to cater to the unique needs of traffic management systems. Our VMS signs are built with the latest technology and advanced features to ensure the highest level of performance and reliability. Click Explore Products to learn more and enhance road and traffic safety with our Variable Message Signs.
                         </p>
-                        <div class="d-block mt-md-5 d-flex align-items-center justify-content-between dotted-imagess">
+                        <p class="mb-0 fs-6">EXPLORE PRODUCTS:</p>
+                        <ul class="ps-3">
+                            <li> STANDARD VMS</li>
+                            <li> SOLAR VMS</li>
+                            <li> SMART CITY VMS </li>
+                        </ul>
+                        <div class="d-block d-flex align-items-center justify-content-between dotted-imagess">
                             <a href="{{route('customer.variable.message')}}" class="btn btn-primary text-uppercase rounded-2">Know More</a>
                             <img src="{{asset('assets/customer/images/Dot-Patternc.jpg') }}" alt="Not Found" class="img-fluid " width="80">
                         </div>
@@ -64,7 +81,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
                 </div>
                 <div class="col-lg-6">
                     <div class="img-left">
-                        <img src="{{asset('assets/images/solutions/vms_smart.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
+                        <img src="{{asset('/assets/customer/images/vms_land.webp') }}" alt="Not Found" class="img-fluid shadow-none h-75 w-75">
 
                     </div>
                 </div>

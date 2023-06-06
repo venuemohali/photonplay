@@ -15,7 +15,7 @@ $seo_meta=[
             <div class="about-wrapper" >
                 <div class="d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
                        <div >
-                           <h1 class="text-white text-center" style="font-size: 60px;"  > About Us</h1>
+                           <h1 class="text-white text-center title-text-h1"   > About Us</h1>
                            <h6 class=" text-white text-center" >Driving Smarter Transportation Solutions for 16+ Years</h6>
                        </div>
                 </div>

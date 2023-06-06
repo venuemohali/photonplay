@@ -13,18 +13,25 @@ real-time data, enhanced safety features, and improved passenger experience.",
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="banner">
-                        <div class="banner-imageses p-2">
-                        <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
-                  <div>
-                  <h2 class="text-uppercase fs-2 text-white fw-normal">TRANSIT SOLUTIONS</h2>
-                    <h6 class="text-white mt-3">
-                    Revolutionize public transportation systems with our advanced ITS solutions that offer
- <br> real-time data, enhanced safety features, and improved passenger experience.
-                    </h6>
-                      <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
-                  </div>
-                </div>
+                        <div class="banner-imageses">
+
+
+                            <div class="text-center  d-flex align-items-center justify-content-center h-100" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
+                                <div class="d-flex justify-content-center ">
+                                    <div class="w-75">
+                                        <h1 class="text-uppercase text-white title-text-h1" >TRANSIT SOLUTIONS</h1>
+                                        <h6 class="text-white text-center mb-4" >
+                                            Revolutionize public transportation systems with our advanced ITS solutions that offer
+                                             real-time data, enhanced safety features, and improved passenger experience.
+                                        </h6>
+                                        <a  href="#inquiry"  class="btn-primary-rounded">GET QUOTE</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
+                        //
                     </div>
                 </div>
             </div>

@@ -14,18 +14,20 @@ that enable seamless integration and smarter decision-making for cities of the f
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="banner">
-                        <div class="security-imageses p-2">
-                        <div class="text-center mt-4 pt-3 d-flex align-items-center justify-content-center h-100">
-                  <div>
-                  <h2 class="text-uppercase fs-2 text-white fw-normal">SMART CITIES SOLUTIONS</h2>
-                    <h6 class="text-white mt-3">
-                    Transform urban mobility and drive sustainable growth with our comprehensive ITS solutions
- <br> that enable seamless integration and smarter decision-making for cities of the future.
-                    </h6>
-                    <a  href="#inquiry"  class="btn btn-primary rounded-0 mt-3 py-0">GET QUOTE</a>
+                        <div class="security-imageses">
 
-                  </div>
-                </div>
+                            <div class="text-center  d-flex align-items-center justify-content-center h-100" style="background-color: rgba(0, 0, 0, 0.4); height: 100%;">
+                                <div class="d-flex justify-content-center ">
+                                    <div class="w-75">
+                                        <h1 class="text-uppercase text-white title-text-h1" >SMART CITIES SOLUTIONS</h1>
+                                        <h6 class="text-white text-center mb-4" >
+                                            Transform urban mobility and drive sustainable growth with our comprehensive ITS solutions
+                                             that enable seamless integration and smarter decision-making for cities of the future.
+                                        </h6>
+                                        <a  href="#inquiry"  class="btn-primary-rounded">GET QUOTE</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
