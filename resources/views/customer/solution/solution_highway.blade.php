@@ -53,7 +53,7 @@ cutting-edge ITS solutions tailored to highways and tunnels.",
             </div>
             <div class="row align-items-center ">
                 <!-- option-one -->
-                <h4 class="text-uppercase text-center mt-3" >Our Products</h4>
+                <h2 class="fs-md-2 mt-3 text-capitalize text-center">Our Products </h2>
                 <div class="col-lg-6">
                     <div class="multiple-option pb-0">
                         <h4 class="text-capitalize mb-4">Variable Message Sign (VMS)</h4>
