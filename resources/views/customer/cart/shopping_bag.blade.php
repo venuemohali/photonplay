@@ -35,6 +35,7 @@
                     <tbody>
 
                         @forelse ($cart_table as $key => $cart)
+
                         <tr>
                             <td class="border border-end">
                                 <div class="d-flex align-items-center p-1">

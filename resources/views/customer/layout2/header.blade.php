@@ -54,10 +54,8 @@
       bottom: 50px;
       right: 20px;
       z-index: 99;">
-    <span class="bg-white">
 
-    </span>
-    <i class="bi bi-arrow-up-circle bg-white text-primary p-2" style="font-size: 36px;border-radius: 20px 20px 20px 20px;"></i>
+    <i class="bi bi-arrow-up-circle bg-danger text-primary m-0 p-0" style="font-size: 36px;"></i>
 </a>
 <div>
 <header class="header bg-white py-3 sticky-top">
@@ -421,6 +419,8 @@ $('.key-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 2000, // Set autoplay speed (in milliseconds)
     responsive: [
         {
             breakpoint: 1024,
