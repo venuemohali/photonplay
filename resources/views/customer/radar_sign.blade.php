@@ -530,11 +530,11 @@ $seo_meta=[
             // $('#main-img img').attr('src', $src);
             $(this).toggleClass("radar-item-box-highlight");
             // Get the image instance under radar-item-box
-            let $image = $(this).find('img');
-            let big_img=$('#big-img-radar-product').attr('src');
-            let $src = image.attr('src');
-            big_img=src;
-            $('#big-img-radar-product').attr('src',$src)
+            let image = $(this).find('img');
+            // let big_img=$('#big-img-radar-product').attr('src');
+            let src = image.attr('src');
+            // big_img=src;
+            $('#big-img-radar-product').attr('src',src)
             // alert(src);
 
         });
