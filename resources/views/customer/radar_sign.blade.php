@@ -526,7 +526,8 @@ $seo_meta=[
     // CODE TO CHANGE IMAGE ON HOVER
     $( document ).ready(function() {
         $('.radar-item-box').hover(function () {
-            $(this).toggleClass("radar-item-box-highlight");
+            $('.radar-item-box').removeClass("radar-item-box-highlight");
+            $(this).addClass("radar-item-box-highlight");
             let image = $(this).find('img');
             let src = image.attr('src');
             $('#big-img-radar-product').attr('src',src)
