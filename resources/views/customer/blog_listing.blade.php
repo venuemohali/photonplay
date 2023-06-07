@@ -21,7 +21,7 @@ $seo_meta=[
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 @foreach($blogs as $s_blog)
-                    <div class="post-item mb-4">
+                    <div class="post-item mb-4 border-1">
                         <a href="{{route("customer.blog_show",$s_blog->slug)}}" > <img src="{{asset("storage/".$s_blog->image)}}" alt="" class="mb-4 img-fluid w-100"> </a>
                         <div class="mb-4 pb-4 post-info">
                             <a href="{{route("customer.blog_show",$s_blog->slug)}}"   class="text-decoration-none">   <h2 class="text-uppercase"> <b>   {{$s_blog->title}} </b></h2></a>
