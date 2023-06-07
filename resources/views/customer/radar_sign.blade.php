@@ -52,7 +52,7 @@ $seo_meta=[
                             <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
                             <input type="hidden" name="price" id="price" value="{{$product->price}}">
                             <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
-                            <div class="">
+                            <div class="desktop-display">
                                 <div>
                                     <div class="radar-item-box">
                                         <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
@@ -78,16 +78,20 @@ $seo_meta=[
                                         </div>
                                     </div>
                                 </div>
-                                @foreach($product->images as $im_g)
+                                <div class="mobile-display">
                                     <div>
-                                        <div class="p-2">
-                                            <div class="img-leften d-flex justify-content-center">
-                                                <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">
-                                            </div>
-
+                                        <div class="radar-item-box">
+                                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
                                         </div>
                                     </div>
-                                @endforeach
+                                    @foreach($product->images as $im_g)
+                                        <div>
+                                            <div class="radar-item-box">
+                                                <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
 
                             </div>
                         </div>
