@@ -1566,6 +1566,22 @@ ul.slick-dots {
     border: 1px solid #686868;
 }
 
+.radar-item-box {
+    margin: 15px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.radar-item-box-highlight {
+    border:2px solid grey;
+}
+.radar-item-box img {
+    background-repeat: no-repeat;
+    background-size: cover;max-height: 95%;
+}
+
 .responsive-two {}
 
 /* END Stepper From */

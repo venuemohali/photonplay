@@ -30,54 +30,98 @@ $seo_meta=[
 <!-- End Varient Section -->
 <!-- Our Product-start -->
 <section class="our-product pt-lg-4 pt-5">
+    <form id="myForm" action="{{route('customer.store.shopping.bag')}}" method="post">
+        @csrf
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
+        <input type="hidden" name="title" id="title" value="{{$product->title}}">
+        <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
+        <input type="hidden" name="price" id="price" value="{{$product->price}}">
+        <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row ">
             <div class="col-lg-6">
-                <form id="myForm" action="{{route('customer.store.shopping.bag')}}" method="post">
-                    @csrf
                     <div id="dynamic_specs">
-
                     </div>
-                    <meta name="csrf-token" content="{{ csrf_token() }}">
-                    <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
-                    <input type="hidden" name="title" id="title" value="{{$product->title}}">
-                    <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
-                    <input type="hidden" name="price" id="price" value="{{$product->price}}">
-                    <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
-                    <div class="responsive-two">
-                        <div>
-                            <div class="p-2">
-                                <div class="img-leften  d-flex justify-content-center">
-                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;">
-                                </div>
-                            </div>
-                        </div>
-                        @foreach($product->images as $im_g)
-                            <div>
-                                <div class="p-2">
-                                    <div class="img-leften d-flex justify-content-center">
-                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
+                            <input type="hidden" name="title" id="title" value="{{$product->title}}">
+                            <input type="hidden" name="category" id="category" value="{{$product->category->title}}">
+                            <input type="hidden" name="price" id="price" value="{{$product->price}}">
+                            <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
+                            <div class="">
+                                @foreach($product->images as $im_g)
+                                    <div>
+                                        <div class="radar-item-box">
+                                            <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid">
+                                        </div>
                                     </div>
-
-                                </div>
+                                @endforeach
                             </div>
-                        @endforeach
+                        </div>
 
+
+                        <div class="col-md-9 bg-white">
+                            <div class="responsive-two">
+                                <div>
+                                    <div class="p-2">
+                                        <div class="img-leften  d-flex justify-content-center">
+                                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;" id="big-img-radar-product">
+                                        </div>
+                                    </div>
+                                </div>
+                                @foreach($product->images as $im_g)
+                                    <div>
+                                        <div class="p-2">
+                                            <div class="img-leften d-flex justify-content-center">
+                                                <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="slider-nav">
-                        <div>
-                            <div class="slider-item"></div>
-                        </div>
-                        <div>
-                            <div class="slider-item"></div>
-                        </div>
-                        <div>
-                            <div class="slider-item"></div>
-                        </div>
-                        <div>
-                            <div class="slider-item"></div>
-                        </div>
-                    </div>
+
+{{--                    <div class="responsive-two">--}}
+{{--                        <div>--}}
+{{--                            <div class="p-2">--}}
+{{--                                <div class="img-leften  d-flex justify-content-center">--}}
+{{--                                    <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        @foreach($product->images as $im_g)--}}
+{{--                            <div>--}}
+{{--                                <div class="p-2">--}}
+{{--                                    <div class="img-leften d-flex justify-content-center">--}}
+{{--                                        <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid" style="max-height: 500px;">--}}
+{{--                                    </div>--}}
+
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+
+{{--                    </div>--}}
+{{--                    <div class="slider-nav">--}}
+{{--                        <div>--}}
+{{--                            <div class="slider-item"></div>--}}
+{{--                        </div>--}}
+{{--                        <div>--}}
+{{--                            <div class="slider-item"></div>--}}
+{{--                        </div>--}}
+{{--                        <div>--}}
+{{--                            <div class="slider-item"></div>--}}
+{{--                        </div>--}}
+{{--                        <div>--}}
+{{--                            <div class="slider-item"></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
             </div>
             <div class="col-lg-6">
                 <div class="multiple-optionn pb-0 pt-lg-0 pt-5 pb-0">
@@ -174,7 +218,7 @@ $seo_meta=[
         </div>
     </div>
 
-
+    </form>
     </div>
     <!-- order summery-end -->
 </section>
@@ -206,7 +250,7 @@ $seo_meta=[
                     <button type="button" id="add_to_cart" value="add_to_cart" class="btn btn-dark rounded-0 text-nowrap align-self-center px-4 m-2">Add to Cart</button>
                 </div>
             </div>
-            </form>
+
 
             <!-- </div> -->
         </div>
@@ -477,4 +521,22 @@ $seo_meta=[
             // instead of a settings object
         ]
     });
+
+
+    // CODE TO CHANGE IMAGE ON HOVER
+    $( document ).ready(function() {
+        $('.radar-item-box').hover(function () {
+            // var $src = $(this).attr('bigsrc');
+            // $('#main-img img').attr('src', $src);
+            $(this).toggleClass("radar-item-box-highlight");
+            // Get the image instance under radar-item-box
+            let image = $(this).find('img');
+            let big_img=$('.big-img-radar-product').attr('src');
+            let src = image.attr('src');
+            big_img=src;
+            // alert(src);
+
+        });
+    });
+
 </script>
