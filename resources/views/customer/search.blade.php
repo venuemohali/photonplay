@@ -31,7 +31,7 @@ $seo_meta=[
                 </form>
                 <hr/>
                 @forelse($data_page as $item)
-                    <div class="post-item mb-4" style="background-image: url({{asset("storage/".$s_blog->image)}});">
+                    <div class="post-item mb-4" style="background-image: url({{asset("storage/".$item['image'])}});">
                         <img src="{{asset("storage/".$item['image'])}}" class="mb-4" style="max-height: 300px;">
                         <div class="mb-4 pb-4 post-info">
                             @if($item['type']==2)
