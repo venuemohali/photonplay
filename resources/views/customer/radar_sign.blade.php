@@ -21,7 +21,7 @@ $seo_meta=[
 <section class="pt-0 pb-0">
     <ul class="list-style-ul pt-2 m-0 pb-2 d-flex justify-content-center align-items-center flex-wrap">
         @forelse ($productLists as $list)
-            <a href="{{route('customer.radar.sign', $list->id)}}" style="text-decoration: none;" class="gap-1"><span class="p-2  {{ request()->url() == route('customer.radar.sign', [$list->id]) ? 'bg-dark text-white' : '' }}
+            <a href="{{route('customer.radar.sign', $list->id)}}"  class="gap-1 text-decoration-none text-dark"><span class="p-2  {{ request()->url() == route('customer.radar.sign', [$list->id]) ? 'bg-dark text-white' : '' }}
  m-2">{{$list->title}}</span></a>
         @empty
 
@@ -136,8 +136,14 @@ $seo_meta=[
 {{--                    </div>--}}
             </div>
             <div class="col-lg-6">
+
                 <div class="multiple-optionn pb-0 pt-lg-0 pt-5 pb-0">
+                    <a href="{{route('customer.contact.us')}}" class="text-decoration-none" style="float:right;">
+                        <img src="{{ URL::to('/') }}/assets/images/mesenges.png"
+                             class="mx-3"/>
+                    </a>
                     <h4>{{$product->category->title}}</h4>
+
                     <span class="text-capitalize d-block">
                         {{$product->title}}
                     </span>
@@ -228,19 +234,7 @@ $seo_meta=[
                                         });
                                     </script>
 
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        {{--                            <img src="{{ URL::to('/') }}/assets/images/heartbeat.png" class="mx-2"/>--}}
-                                        {{--                            <div class="borded-bang"></div>--}}
-                                        <a href="{{route('customer.contact.us')}}" class="text-decoration-none">
-                                            <img src="{{ URL::to('/') }}/assets/images/mesenges.png"
-                                                 class="mx-3"/>
-                                        </a>
-                                        {{-- <div class="borded-bang"></div>
-                                        <button id="add_to_cart">
-                                            <img src="{{ URL::to('/') }}/assets/images/add-to-cart (2).png" class="mx-2"/>
-                                        </button> --}}
 
-                                    </div>
                                 </div>
                                 <p class="mt-4">Comes with multiple power option such as Standalone Salar powered operations. <br>
                                     Shipping:7-10 Working Days.
