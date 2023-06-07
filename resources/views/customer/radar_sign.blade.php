@@ -21,7 +21,8 @@ $seo_meta=[
 <section class="pt-0 pb-0">
     <ul class="list-style-ul pt-2 m-0 pb-2 d-flex justify-content-center align-items-center flex-wrap">
         @forelse ($productLists as $list)
-            <a href="{{route('customer.radar.sign', $list->id)}}" style="text-decoration: none;"><li class="p-4">{{$list->title}}</li></a>
+            <a href="{{route('customer.radar.sign', $list->id)}}" style="text-decoration: none;" class="gap-1"><span class="p-2  {{ request()->url() == route('customer.radar.sign', [$list->id]) ? 'bg-dark text-white' : '' }}
+ m-2">{{$list->title}}</span></a>
         @empty
 
         @endforelse
