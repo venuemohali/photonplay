@@ -1605,6 +1605,11 @@ ul.slick-dots {
         background-color: white;
     }
 
+    .select-bold-radar {
+        font-weight: bold;
+        border-width: 2px;
+        border-style: solid;
+    }
     /* Add your mobile-specific styles here */
     .desktop-display {
         display: none;

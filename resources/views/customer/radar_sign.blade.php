@@ -155,14 +155,17 @@ $seo_meta=[
 
                             {{-- Loop to Start Specifications--}}
                             @foreach ($product->specilizations as $specilization)
-                                <div class="col-md-6 mb-3">
-                                    <div class="specification p-3 ">
-                                        <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>
-                                        @foreach($specilization->options as $option)
-                                            <p> <input type="checkbox" name="{{$specilization->id}}"
-                                                       id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})
-                                            </p>
-                                        @endforeach
+                                <div class="col-md-8 bg-transparent" >
+                                    <div class="">
+                                        <select class="form-select mb-3 " name="{{$specilization->id}}"
+                                                id="{{$specilization->id}}" style="border: 2px solid black;font-weight: bold;">
+                                            <option selected disabled>{{$specilization->specilization->title}} </option>
+                                            @foreach($specilization->options as $option)
+
+                                            <option value="{{$option->id}}">{{$option->specializationoptions->option}} (+${{$option->specialization_price}}) </option>
+                                            @endforeach
+                                        </select>
+
                                         <!-- <p class="mb-0"><input type="checkbox"> 6 Days
                                             (+$50)
                                         </p> -->
@@ -170,6 +173,27 @@ $seo_meta=[
                                 </div>
                             @endforeach
                             {{-- Loop to end Specifications--}}
+
+
+{{--                            --}}{{-- Loop to Start Specifications--}}
+{{--                            @foreach ($product->specilizations as $specilization)--}}
+{{--                                <div class="col-md-6 mb-3">--}}
+{{--                                    <div class="specification p-3 ">--}}
+{{--                                        <h6> <img src="{{asset('assets\customer\images\low-battery.png')}}" alt="Not Found" class="me-2 "> {{$specilization->specilization->title}} </h6>--}}
+{{--                                        @foreach($specilization->options as $option)--}}
+{{--                                            <p> <input type="checkbox" name="{{$specilization->id}}"--}}
+{{--                                                       id="{{$specilization->id}}" type="button" title="{{$option->specialization_price}}" value="{{$option->id}}" onclick="GetSelected(this)" > {{$option->specializationoptions->option}} (+${{$option->specialization_price}})--}}
+{{--                                            </p>--}}
+{{--                                        @endforeach--}}
+{{--                                        --}}
+{{--                                        --}}
+{{--                                        <!-- <p class="mb-0"><input type="checkbox"> 6 Days--}}
+{{--                                            (+$50)--}}
+{{--                                        </p> -->--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
+{{--                            --}}{{-- Loop to end Specifications--}}
 
                             <div class="mt-4">
                                 <h6 class="text-dark fw-bold">Faceplate (Select color):</h6>
