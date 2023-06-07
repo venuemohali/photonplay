@@ -1929,6 +1929,7 @@ input:focus {
     letter-spacing: -1px;
     color: #232323;
     font-weight: 600;
+     text-transform: uppercase;
 }
 
 .inner-cqategory {

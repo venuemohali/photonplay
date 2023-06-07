@@ -530,14 +530,14 @@ $seo_meta=[
 <!-- Contact form end -->
 
     <!-- ______________Our Solution End-----______________ -->
-    <section class="contact-form p-3 pt-4 inquiryform-backgroundsection " id="inquiry" >
+    <section class="contact-form p-3 inquiryform-backgroundsection " id="inquiry" >
         <div class="d-flex justify-content-center align-items-center">
 
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <div class="com-md-3">
                 </div>
-                <div class="col-md-6 mx-auto bg-primary mb-0 pb-0" >
+                <div class="col-md-6 mx-auto mb-0 p-4" >
                     <form action="{{route('customer.inquery.submit')}}" method="post">
                         @csrf
                         <input type="hidden" name="url" value="{{\Illuminate\Support\Facades\URL::full()}}">
