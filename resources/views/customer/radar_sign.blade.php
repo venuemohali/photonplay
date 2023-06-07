@@ -74,7 +74,7 @@ $seo_meta=[
                                 <div>
                                     <div class="p-2">
                                         <div class="img-leften  d-flex justify-content-center align-items-center">
-                                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 500px;" id="big-img-radar-product">
+                                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Not Found" class="img-fluid" style="max-height: 600px;" id="big-img-radar-product">
                                         </div>
                                     </div>
                                 </div>
