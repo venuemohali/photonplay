@@ -51,7 +51,7 @@
 <body>
 <a href="#" id="scrollToTopButton" title="Scroll to Top"  style="
       position: fixed;
-      bottom: 50px;
+      bottom: 70px;
       right: 20px;
       z-index: 99;">
 <img src="{{asset('/assets/images/arrow-up.png')}}" height="50px;"/>
