@@ -79,17 +79,17 @@ $seo_meta=[
                                     </div>
                                 </div>
                                 <div class="mobile-display d-flex flex-column">
-                                    <div>
+
                                         <div class="radar-item-box">
                                             <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
                                         </div>
-                                    </div>
+
                                     @foreach($product->images as $im_g)
-                                        <div>
+
                                             <div class="radar-item-box">
                                                 <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid">
                                             </div>
-                                        </div>
+
                                     @endforeach
                                 </div>
 
