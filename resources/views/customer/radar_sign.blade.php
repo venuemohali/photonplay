@@ -53,11 +53,6 @@ $seo_meta=[
                             <input type="hidden" name="price" id="price" value="{{$product->price}}">
                             <input type="hidden" name="cover_image" id="cover_image" value="{{$product->cover_image}}">
                             <div class="desktop-display">
-                                <div>
-                                    <div class="radar-item-box">
-                                        <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
-                                    </div>
-                                </div>
                                 @foreach($product->images as $im_g)
                                     <div>
                                         <div class="radar-item-box">
@@ -65,6 +60,11 @@ $seo_meta=[
                                         </div>
                                     </div>
                                 @endforeach
+                                    <div>
+                                        <div class="radar-item-box">
+                                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
+                                        </div>
+                                    </div>
                             </div>
                         </div>
 
@@ -87,16 +87,15 @@ $seo_meta=[
 
                 <div class="mobile-display">
                     <div class="d-flex flex-row flex-wrap">
-                        <div class="radar-item-box">
-                            <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
-                        </div>
                         @foreach($product->images as $im_g)
 
                             <div class="radar-item-box">
                                 <img src="{{asset('storage/'.$im_g->image)}}" alt="Image" class="img-fluid">
                             </div>
-
                         @endforeach
+                            <div class="radar-item-box">
+                                <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
+                            </div>
                     </div>
                 </div>
 
