@@ -1597,7 +1597,7 @@ ul.slick-dots {
 @media screen and (max-width: 767px) {
 
     .radar-item-box {
-        margin: 15px;
+        margin-left: 10px;
         height: 60px;
         display: flex;
         justify-content: center;
