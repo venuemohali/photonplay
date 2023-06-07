@@ -185,5 +185,47 @@ $blogs = Blog::select('slug','title')->take(4)->get();
         modalOverlay.style.display = "none";
         image.style.display = "none";
     }
+
+    $('.key-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 4000, // Set autoplay speed (in milliseconds)
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(slick.$slides.get(currentSlide)).removeClass('bounceOut');
+        $(slick.$slides.get(nextSlide)).addClass('bounceIn');
+    });
 </script>
 
