@@ -526,16 +526,12 @@ $seo_meta=[
     // CODE TO CHANGE IMAGE ON HOVER
     $( document ).ready(function() {
         $('.radar-item-box').hover(function () {
-            // var $src = $(this).attr('bigsrc');
-            // $('#main-img img').attr('src', $src);
-            $(this).toggleClass("radar-item-box-highlight");
-            // Get the image instance under radar-item-box
+            $(this).removeClass("radar-item-box-highlight");
+            $(this).addClass("radar-item-box-highlight");
             let image = $(this).find('img');
-            // let big_img=$('#big-img-radar-product').attr('src');
             let src = image.attr('src');
-            // big_img=src;
             $('#big-img-radar-product').attr('src',src)
-            // alert(src);
+
 
         });
     });
