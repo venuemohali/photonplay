@@ -54,8 +54,7 @@
       bottom: 50px;
       right: 20px;
       z-index: 99;">
-
-    <i class="bi bi-arrow-up-circle bg-danger text-primary m-0 p-0" style="font-size: 36px;"></i>
+<img src="{{asset('/assets/images/arrow-up.png')}}" height="50px;"/>
 </a>
 <div>
 <header class="header bg-white py-3 sticky-top">

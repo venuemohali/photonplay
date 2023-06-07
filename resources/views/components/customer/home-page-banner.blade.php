@@ -6,8 +6,8 @@
                 <div class="clider-content-wrapper w-100 position-relative">
                     <div class="slider-content position-absolute top-50 start-50 translate-middle text-center">
                         <h1 class="title_home_page_banner">{{$banner->tagline}}</h1>
-                        <h6 class="text-white">{{$banner->sub_tagline}}</h6>
-                        <a href="{{route('customer.about.us')}}" class="btn btn-primary text-capitalize py-0 px-4 m-auto mt-4 mb-4 rounded-0" >About US</a>
+                        <h6 class="text-white mb-3">{{$banner->sub_tagline}}</h6>
+                        <a href="{{route('customer.about.us')}}" class="btn-primary-rounded text-capitalize" >About US</a>
                     </div>
                     <img src="{{asset('storage/'.$banner->image)}}" alt="Not-Found" class="img-fluid w-100">
                 </div>
