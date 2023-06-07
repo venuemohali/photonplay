@@ -78,7 +78,7 @@ $seo_meta=[
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mobile-display">
+                                <div class="mobile-display d-flex flex-column flex-wrap">
                                     <div>
                                         <div class="radar-item-box">
                                             <img src="{{ asset('storage/'. $product->cover_image) }}" alt="Image" class="img-fluid">
