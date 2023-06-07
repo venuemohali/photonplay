@@ -1594,7 +1594,7 @@ ul.slick-dots {
 }
 
 /* Styles for mobile display */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     /* Add your mobile-specific styles here */
     .desktop-display {
         display: none;
