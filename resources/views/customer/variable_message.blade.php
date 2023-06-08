@@ -17,13 +17,12 @@ $seo_meta=[
             <div class="slider-content">
 
                 <div class="imaged m-auto">
-                    <div class="city-wrap">
+                    <div class="city-wrap flex-wrap">
                         <h2 class=" text-white fw-normal mb-1 title-text-h2">Variable Message Signs (VMS)</h2>
-                        <h5 class=" text-white fw-normal mt-2 mb-2">HIGHLY VISIBLE AND INNOVATIVE, CREATING INSTANT AWARENESS OF
-                            <br>LOCAL SPEED LIMIT</h5>
+                        <h5 class=" text-white fw-normal mt-2 mb-2 ">Highly visible and innovative, creating instant awareness of <br/>local speed limit</h5>
                         <a  href="#inquiry" class="btn-primary-rounded  p-0 m-0 d-flex align-items-center justify-content-center get-quote-button-header-model" >GET QUOTE</a>
                     </div>
-                    <div class=" m-auto " >
+                    <div class=" m-auto desktop-display " >
                         <img src="{{ asset('assets/customer/images/vms_land.webp') }}" alt="alt"
                              class="d-block mx-auto img-fluid product-feature-model-image" >
                     </div>
