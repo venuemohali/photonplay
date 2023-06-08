@@ -98,10 +98,10 @@ $seo_meta=[
                             <div class="members-profile h-100">
                                 <div class="p-4 ">
 
-                                    <h1 class="text-capitalize text-dark"> $82M
+                                    <h1 class="text-capitalize text-dark">50+
                                     </h1>
                                     <p class="mb-0 text-center">
-                                        An Accomplished Company with a Turnover of $82 Million
+                                        Endless Choices, 50+ Products to Explore
                                     </p>
                                 </div>
                             </div>
