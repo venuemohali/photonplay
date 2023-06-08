@@ -534,10 +534,8 @@ $seo_meta=[
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 4,
-            arrows: true,
-            prevArrow: "<button type='button' class='slick-prev pull-left desktop-display' ><img src='/assets/customer/images/left-arrow.webp'  style='height: 30px;'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right desktop-display' ><img src='/assets/customer/images/right-arrow.webp' style='height: 30px;text-shadow: grey '/></button>",
-
+            infinite: true,
+            speed: 1000,
             responsive: [
                 {
                     breakpoint: 1024,
@@ -545,7 +543,10 @@ $seo_meta=[
                         slidesToShow: 2,
                         slidesToScroll: 2,
                         infinite: true,
-                        dots: true
+                        dots: true,
+                        arrows: true,
+                        prevArrow: "<button type='button' class='slick-prev pull-left desktop-display' ><img src='/assets/customer/images/left-arrow.webp'  style='height: 30px;'/></button>",
+                        nextArrow: "<button type='button' class='slick-next pull-right desktop-display' ><img src='/assets/customer/images/right-arrow.webp' style='height: 30px;text-shadow: grey '/></button>",
                     }
                 },
                 {
