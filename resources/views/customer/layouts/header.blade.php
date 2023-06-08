@@ -50,8 +50,8 @@ $productLists = Product::take(5)->get();
             position: fixed;
             top: 0;
             left: -100%; /* Start offscreen */
-            width: 80%;
-            max-width: 300px; /* Adjust to your preference */
+            width: 60%;
+            max-width: 200px; /* Adjust to your preference */
             height: 100%;
             background: #f0f0f0;
             transition: left 0.3s ease;
@@ -193,7 +193,7 @@ $productLists = Product::take(5)->get();
 
             <li class="nav-item" style="border-bottom: 1px solid black;">
                 <a class="p-2 mt-2" href="/">
-                    <img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found">
+                    <img src="{{asset('assets\customer\images\logo-dark.png')}}" class="img-fluid" alt="Not Found">
                 </a>
             </li>
             <li class="nav-item" style="border-bottom: 1px solid black;">
