@@ -37,12 +37,57 @@ $productLists = Product::take(5)->get();
 
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     {{--            Start meta--}}
     <x-Customer.MetaSeoTag :seodata="$seo_meta??0"/>
     {{--        End    Start meta--}}
 
+    <style>
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%; /* Start offscreen */
+            width: 80%;
+            max-width: 300px; /* Adjust to your preference */
+            height: 100%;
+            background: #f0f0f0;
+            transition: left 0.3s ease;
+        }
+
+        #mobile-menu.open {
+            left: 0; /* Slide in from the left */
+        }
+
+        #mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #mobile-menu li {
+            padding: 10px;
+        }
+
+        #mobile-menu li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+
+    </style>
 </head>
 
 <!-- <title>login</title> -->
@@ -51,11 +96,16 @@ $productLists = Product::take(5)->get();
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+{{--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"--}}
+{{--                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"--}}
+{{--                    aria-expanded="false" aria-label="Toggle navigation">--}}
+{{--                  --}}
+{{--                </button>--}}
+
+                <button id="menu-toggle" class="mobile-display">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse header-font navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-5 gap-2 px-4">
                         <li class="nav-item">
@@ -136,5 +186,69 @@ $productLists = Product::take(5)->get();
                 </div>
             </div>
         </nav>
+
+    <nav id="mobile-menu">
+        <div class="container">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+            <li class="nav-item" style="border-bottom: 1px solid black;">
+                <a class="p-2 mt-2" href="/">
+                    <img src="{{asset('assets\customer\images\logo-dark.png')}}" alt="Not Found">
+                </a>
+            </li>
+            <li class="nav-item" style="border-bottom: 1px solid black;">
+                <a class="nav-link text-uppercasen" href="{{route('customer.homePage')}}">HOME</a>
+            </li>
+            <li class="nav-item" style="border-bottom: 1px solid black;">
+                <a class="nav-link text-uppercase  {{Request::is('radar-speed-signs') ? 'active':''}}" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
+            </li>
+
+            <li class="nav-item dropdown position-relative solution-pos" style="border-bottom: 1px solid black;">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    PRODUCTS
+                </a>
+                <ul class="dropdown-menu bg-light borderes">
+                    @forelse ($productLists as $list)
+                        <li><a class="dropdown-item px-lg-3 px-0 pb-4 pb-lg-3" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
+                    @empty
+
+                    @endforelse
+
+                </ul>
+                <div class="position-absolute down-image">
+                    <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
+                </div>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT US</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+<script>
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var overlay = document.createElement('div');
+    overlay.className = 'overlay';
+
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+        if (mobileMenu.classList.contains('open')) {
+            document.body.appendChild(overlay);
+            overlay.addEventListener('click', closeMenu);
+        } else {
+            document.body.removeChild(overlay);
+            overlay.removeEventListener('click', closeMenu);
+        }
+    });
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        document.body.removeChild(overlay);
+        overlay.removeEventListener('click', closeMenu);
+    }
+
+</script>
+
     </header>
 
