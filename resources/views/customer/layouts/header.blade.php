@@ -209,7 +209,7 @@ $productLists = Product::take(5)->get();
                 <a class="nav-link text-uppercase  {{Request::is('radar-speed-signs') ? 'active':''}}" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
             </li>
 
-            <li class="nav-item mobile-menu-items dropdown position-relative solution-pos" >
+            <li class="nav-item mobile-menu-items dropdown position-relative" >
                 <span class="d-flex justify-content-between">
                 PRODUCTS
                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
