@@ -1617,6 +1617,14 @@ ul.slick-dots {
     .mobile-display {
         display: block;
     }
+
+
+    .title_home_page_banner {
+        font-size: 24px;
+        /* line-height: 94px; */
+        color: #ffffff;
+        font-weight: 600;
+    }
 }
 
 
