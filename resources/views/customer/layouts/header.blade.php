@@ -50,7 +50,7 @@ $productLists = Product::take(5)->get();
             position: fixed;
             top: 0;
             left: -100%; /* Start offscreen */
-            width: 60%;
+            width: 80%;
             max-width: 200px; /* Adjust to your preference */
             height: 100%;
             background: #f0f0f0;
