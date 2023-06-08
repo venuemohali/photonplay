@@ -102,9 +102,9 @@ $productLists = Product::take(5)->get();
 {{--                  --}}
 {{--                </button>--}}
 
-                <button id="menu-toggle" class="mobile-display">
+                <a id="menu-toggle" class="mobile-display">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </a>
 
                 <div class="collapse header-font navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-5 gap-2 px-4">
@@ -187,14 +187,20 @@ $productLists = Product::take(5)->get();
             </div>
         </nav>
 
-    <nav id="mobile-menu">
+    <nav id="mobile-menu"  >
         <div class="container">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
-            <li class="nav-item" style="border-bottom: 1px solid black;">
+            <li class="nav-item d-flex justify-content-between"  style="border-bottom: 1px solid black;">
                 <a class="p-2 mt-2" href="/">
                     <img src="{{asset('assets\customer\images\logo-dark.png')}}" class="img-fluid" alt="Not Found">
                 </a>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-arrow-left-square text-primary" style="font-size: 36px;" onclick="closeMenu()"></i>
+                </div>
+
+
+
             </li>
             <li class="nav-item" style="border-bottom: 1px solid black;">
                 <a class="nav-link text-uppercasen" href="{{route('customer.homePage')}}">HOME</a>
