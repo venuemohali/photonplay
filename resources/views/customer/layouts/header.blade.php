@@ -84,6 +84,7 @@ $productLists = Product::take(5)->get();
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             display: none;
+            z-index: 999; /* Ensure the overlay is on top of other elements */
         }
 
 
@@ -239,9 +240,11 @@ $productLists = Product::take(5)->get();
     menuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('open');
         if (mobileMenu.classList.contains('open')) {
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
             document.body.appendChild(overlay);
             overlay.addEventListener('click', closeMenu);
         } else {
+            document.body.style.overflow = ''; // Enable scrolling
             document.body.removeChild(overlay);
             overlay.removeEventListener('click', closeMenu);
         }
@@ -249,6 +252,7 @@ $productLists = Product::take(5)->get();
 
     function closeMenu() {
         mobileMenu.classList.remove('open');
+        document.body.style.overflow = ''; // Enable scrolling
         document.body.removeChild(overlay);
         overlay.removeEventListener('click', closeMenu);
     }
