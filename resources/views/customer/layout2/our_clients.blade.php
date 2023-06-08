@@ -8,7 +8,7 @@ $clients = Client::get();
             <h2 class="fs-md-2 mt-3">Our Clients</h2>
         </div>
         <div class="container">
-            <div class="px-4">
+            <div class="px-2">
                 <div class="clints-content-branding mb-0 d-flex align-items-center justify-content-center">
                    @for($i=0;$i<2;$i++)
                     @forelse ($clients as $client)
