@@ -57,7 +57,7 @@ $seo_meta=[
                     <div >
                         <div class="p-2">
                             <div class="product_highlight inner-product bg-white">
-                                <div class=" w-100 h-100 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
+                                <div class=" w-75 h-75 light-product m-auto" style="background: url('{{ asset('storage/'. $product->cover_image) }}') no-repeat center;
                                     background-size: cover;">
 {{--                                    <img class=""  src="" alt="">--}}
                                 </div>
@@ -535,8 +535,8 @@ $seo_meta=[
             slidesToShow: 4,
             slidesToScroll: 4,
             arrows: true,
-            prevArrow: "<button type='button' class='slick-prev pull-left' ><img src='/assets/customer/images/left-arrow.webp'  style='height: 30px;'/></button>",
-            nextArrow: "<button type='button' class='slick-next pull-right' ><img src='/assets/customer/images/right-arrow.webp' style='height: 30px;text-shadow: grey '/></button>",
+            prevArrow: "<button type='button' class='slick-prev pull-left desktop-display' ><img src='/assets/customer/images/left-arrow.webp'  style='height: 30px;'/></button>",
+            nextArrow: "<button type='button' class='slick-next pull-right desktop-display' ><img src='/assets/customer/images/right-arrow.webp' style='height: 30px;text-shadow: grey '/></button>",
 
             responsive: [
                 {
