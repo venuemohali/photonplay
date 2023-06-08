@@ -1539,6 +1539,7 @@ ul.slick-dots {
     font-weight: 400;
 }
 
+
 .slider-nav .slider-item {
     /* width: 165px; */
     border-radius: 5px;
@@ -3142,4 +3143,8 @@ input:focus {
     display: none;
     width: 100%;
     height: 100%;
+}
+
+.mobile-menu-items {
+     border-bottom: 1px solid #d0cbcb;
 }

@@ -53,7 +53,7 @@ $productLists = Product::take(5)->get();
             width: 80%;
             max-width: 300px; /* Adjust to your preference */
             height: 100%;
-            background: #f0f0f0;
+            background: #fffefe;
             transition: left 0.3s ease;
         }
 
@@ -191,29 +191,33 @@ $productLists = Product::take(5)->get();
         <div class="container">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
-            <li class="nav-item d-flex justify-content-between"  style="border-bottom: 1px solid black;">
-                <a class="p-2 mt-2" href="/">
-                    <img src="{{asset('assets\customer\images\logo-dark.png')}}" class="img-fluid" alt="Not Found">
-                </a>
+            <li class="nav-item d-flex justify-content-between mobile-menu-items"  >
+               <span class="mt-3">
+                        <h5> <i class="bi bi-list"></i> Navigation</h5>
+                    </span>
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-arrow-left-square text-primary" style="font-size: 36px;" onclick="closeMenu()"></i>
+                    <i class="bi bi-arrow-left-circle-fill text-dark" style="font-size: 36px;" onclick="closeMenu()"></i>
                 </div>
 
 
 
             </li>
-            <li class="nav-item" style="border-bottom: 1px solid black;">
+            <li class="nav-item mobile-menu-items">
                 <a class="nav-link text-uppercasen" href="{{route('customer.homePage')}}">HOME</a>
             </li>
-            <li class="nav-item" style="border-bottom: 1px solid black;">
+            <li class="nav-item mobile-menu-items">
                 <a class="nav-link text-uppercase  {{Request::is('radar-speed-signs') ? 'active':''}}" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
             </li>
 
-            <li class="nav-item dropdown position-relative solution-pos" style="border-bottom: 1px solid black;">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    PRODUCTS
+            <li class="nav-item mobile-menu-items dropdown position-relative solution-pos" >
+                <span class="d-flex justify-content-between">
+                PRODUCTS
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="true">
+                   <i class="bi bi-plus-lg" style="color: grey;"></i>
                 </a>
+                </span>
+
                 <ul class="dropdown-menu bg-light borderes">
                     @forelse ($productLists as $list)
                         <li><a class="dropdown-item px-lg-3 px-0 pb-4 pb-lg-3" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
@@ -222,10 +226,8 @@ $productLists = Product::take(5)->get();
                     @endforelse
 
                 </ul>
-                <div class="position-absolute down-image">
-                    <img src="{{asset('assets\customer\images\Down-Arrow.png')}}" alt="Not Found">
-                </div>
-            <li class="nav-item">
+
+            <li class="nav-item mobile-menu-items">
                 <a class="nav-link text-uppercase" href="{{route('customer.contact.us')}}">CONTACT US</a>
             </li>
         </ul>
