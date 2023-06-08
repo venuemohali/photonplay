@@ -1631,7 +1631,6 @@ ul.slick-dots {
     }
 
     .image-client-logo {
-        -webkit-transform:scale(1.5); /* or some other value */
         transform:scale(1.5);
     }
 }
