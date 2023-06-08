@@ -209,18 +209,15 @@ $productLists = Product::take(5)->get();
                 <a class="nav-link text-uppercase  {{Request::is('radar-speed-signs') ? 'active':''}}" href="{{route('customer.radar.speed.signs')}}">THE SIGN</a>
             </li>
 
-            <li class="nav-item mobile-menu-items dropdown position-relative" >
+            <li class="nav-item mobile-menu-items" >
                 <span class="d-flex justify-content-between">
-                PRODUCTS
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="true">
-                   <i class="bi bi-plus-lg" style="color: grey;"></i>
-                </a>
+                <span>PRODUCTS </span>
+                  <span id="openclose_products_inside_menu">  <i class="bi bi-plus-lg"   style="color: grey;"></i></span>
                 </span>
 
-                <ul class="dropdown-menu bg-light borderes">
+                <ul class="item-radar-signs-menu p-2" style="display: none;">
                     @forelse ($productLists as $list)
-                        <li><a class="dropdown-item px-lg-3 px-0 pb-4 pb-lg-3" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
+                        <li class=""><a class="btn text-decoration-none" href="{{route('customer.radar.sign', $list->id)}}">{{$list->title}}</a></li>
                     @empty
 
                     @endforelse
@@ -255,6 +252,12 @@ $productLists = Product::take(5)->get();
         document.body.removeChild(overlay);
         overlay.removeEventListener('click', closeMenu);
     }
+
+    $(document).ready(function() {
+        $('#openclose_products_inside_menu').click(function() {
+            $('.item-radar-signs-menu').toggle();
+        });
+    });
 
 </script>
 
